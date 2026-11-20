@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>灰度迷你比特币信托 2026-11-21 · 投资研究档案</title>
+<style>
+
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+  .card p {margin:12px 0}
+  .card .sources {font-size:12px; line-height:1.9; color:var(--text-secondary); margin-top:18px}
+  a {color:#265c44; text-underline-offset:3px}
+  .sidebar a {overflow-wrap:anywhere}
+  .card-note,.figure-note {font-size:12px; color:var(--text-secondary); line-height:1.6}
+  .summary-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .summary-item .label {font-size:12px; color:var(--text-secondary); margin:0}
+  .summary-item .value {font-size:clamp(17px,2.1vw,24px); margin:6px 0; overflow-wrap:anywhere}
+  .table-scroll {max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:16px 0}
+  .table-scroll table {display:table; margin:0; overflow:visible; border-collapse:collapse}
+  caption {text-align:left; font-weight:650; padding:0 0 8px; color:var(--text-secondary); font-size:13px}
+  table th[scope="row"] {font-size:13px; font-weight:600; text-align:left; padding:10px 12px; border-bottom:1px solid var(--border-light); color:#244f3a}
+  table th,table td {vertical-align:top; text-align:left; line-height:1.55}
+  thead th {white-space:normal}
+  tbody tr:nth-child(even) th {background:var(--bg-stripe)}
+  .card small {font-size:12px; color:var(--text-secondary)}
+  svg[role="img"] {display:block; width:100%; height:auto; max-width:760px; margin:8px auto 0}
+  .axis-label {font-family:system-ui,sans-serif; font-size:12px; fill:#476450}
+  .plot-label {font-family:system-ui,sans-serif; font-size:14px; font-weight:650; fill:#204e38}
+  .chart-legend {justify-content:flex-start}
+  #reliability {border-left:4px solid var(--accent)}
+  @media(max-width:640px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.table-scroll table{min-width:410px}.chart{padding:12px 6px}.card .sources{font-size:12px}.summary-item{padding:12px 5px}.chart-title small{display:block;margin-left:0}}
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/btc/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">BTC <span>·</span> 2026-11-21 <span>·</span> PC 完整版</div><h1>灰度迷你比特币信托</h1><p>2026-11-21 中文投资研究报告 · NYSE Arca · 美元 · 行情截至美东 11 月 20 日常规收盘</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、11 月 20 日收盘与产品速览</a></li><li><a href="#business">二、一股信托如何对应比特币</a></li><li><a href="#core-metric">三、逐日核对净值与折溢价</a></li><li><a href="#financials">四、三季度财务与每股含币量</a></li><li><a href="#flows">五、净资产缩水 10.38 亿美元，份额减少 57 万股</a></li><li><a href="#history">六、把本轮跌幅放回全年</a></li><li><a href="#macro">七、通胀、实际利率与黄金对照</a></li><li><a href="#policy">八、政策风险与最新申报</a></li><li><a href="#execution">九、定价和交收在哪些环节可能失灵</a></li><li><a href="#valuation">十、估值分母与压力情景</a></li><li><a href="#review">十一、11 月 10 日研究判断复核</a></li><li><a href="#analysts">十二、机构研究与公开讨论</a></li><li><a href="#bull-bear">十三、多空分歧与可证伪条件</a></li><li><a href="#conclusion">十四、核心判断与后续检验</a></li><li><a href="#data-notes">数据说明</a></li><li><a href="#disclosures">披露原件与公开来源</a></li></ul></aside><main class="main-content report-body">
+<div class="card" id="reliability"><h2>数据可靠性声明</h2>
+<p>行情截至美东 2026 年 11 月 20 日 16:00，对应北京时间 11 月 21 日 05:00。美元计价。灰度当日产品页和历史工作簿分别披露市场价格、净值、持币量和基准。收盘价经交易完成后的历史日线交叉核对，交易所最终归档文件尚待核对。研究对象限定为 NYSE Arca 上市的 Grayscale Bitcoin Mini Trust ETF。</p>
+<p><span class="src-badge src-s">一手</span>发行人、交易所、SEC 及政府直接发布的数据　<span class="src-badge src-2">二手</span>完成日线及资金流汇总　<span class="src-badge src-3">三方</span>研究机构及公开讨论　<span class="src-badge src-e">推算</span>依据文中算式复核　<span class="src-badge src-t">时效</span>标注统计截止日。</p>
+<p>第三季度财务覆盖至 9 月 30 日，11 月 5 日提交。11 月 16 日新增三份营销类申报。11 月 20 日的净资产、发行份额及每股净值取自灰度当日披露。行业资金流量另引 Farside 汇总。披露文档的本地阅读和官方原文见<a href="#disclosures">文末披露索引</a>。</p>
+<p class="sources"><a href="https://etfs.grayscale.com/btc">灰度产品页</a> · <a href="https://stockanalysis.com/etf/btc/history/">Stock Analysis 常规日线</a> · <a href="https://data.sec.gov/submissions/CIK0002015034.json">SEC 申报记录</a></p>
+</div>
+<div class="card" id="snapshot"><h2>一、11 月 20 日收盘与产品速览</h2>
+<div class="summary-grid"><div class="summary-item"><div class="label">2026-11-20 · 11/20 美股常规收盘</div>
+<div class="value">25.78 美元</div>
+<div class="card-note">NYSE Arca · 每股市价</div>
+</div>
+<div class="summary-item"><div class="label">2026-11-20 · 每股 NAV</div>
+<div class="value">25.79 美元</div>
+<div class="card-note">灰度 · 基准口径</div>
+</div>
+<div class="summary-item"><div class="label">同日收盘折溢价</div>
+<div class="value">−0.04%</div>
+<div class="card-note">市价较 NAV 低 0.01 美元</div>
+</div>
+<div class="summary-item"><div class="label">基金持币总量</div>
+<div class="value">62,004.6153</div>
+<div class="card-note">BTC · 2026-11-20</div>
+</div>
+<div class="summary-item"><div class="label">每股对应比特币</div>
+<div class="value">0.00044194</div>
+<div class="card-note">BTC/股 · 2026-11-20</div>
+</div>
+<div class="summary-item"><div class="label">年度发起人费率</div>
+<div class="value">0.15%</div>
+<div class="card-note">15 个基点 · 按日计提</div>
+</div>
+</div>
+<p><strong>2026-11-20 常规收盘 25.78 美元/股。按发行人确认的 11 月 9 日收盘 33.05 美元重算，市价下跌 22.00%，同期官方每股 NAV 下跌 21.97%。</strong>收盘比净值少一美分，给出了此次跌幅的尺度。另一项变化发生在一级市场，发行份额从 140,869,963 股减为 140,299,963 股。三季度的净申购已经不能描述这一段交易日。</p>
+<div class="table-scroll"><table><caption>产品与计价单位</caption><thead><tr><th scope="col">核对项</th><th scope="col">截至日期及读数</th><th scope="col">在本报告中的用途</th></tr></thead>
+<tbody><tr><th scope="row">发行主体</th><td>Grayscale Bitcoin Mini Trust ETF。CIK 0002015034，CUSIP 389930207</td><td>特拉华州法定信托。NYSE Arca 挂牌代码 BTC，2024-07-31 开始交易。</td></tr>
+<tr><th scope="row">二级市场证券</th><td>2026-11-20 · 25.78 美元/股</td><td>美东常规收盘。单日变动 −1.62 美元，前一交易日收盘 27.40 美元。</td></tr>
+<tr><th scope="row">估值基准</th><td>2026-11-20 · 58,346.25 美元/BTC</td><td>CoinDesk Bitcoin Benchmark Rate（CBBR）。发起人按每个业务日纽约时间 16:00 估值，或在此后可行时尽快完成计算。</td></tr>
+<tr><th scope="row">发行份额</th><td>2026-11-20 · 140,299,963 股</td><td>持币总量与每股含币量之间的分母。申购和赎回会改变它。</td></tr>
+<tr><th scope="row">信托净资产</th><td>2026-11-20 · 3,617,736,787 美元</td><td>灰度非 GAAP AUM，对应基准估值。GAAP 口径 3,618,719,560 美元。</td></tr>
+<tr><th scope="row">分配与资产</th><td>分配频率为无。实物持有比特币</td><td>另有独立上市信托 GBTC。BTC-USD 指现货美元报价，一周七天交易，单位为美元/枚。</td></tr></tbody></table>
+</div>
+<p class="sources"><a href="https://etfs.grayscale.com/btc">灰度 11/20 产品数据</a> · <a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">灰度官方历史工作簿</a> · <a href="https://stockanalysis.com/etf/btc/history/">Stock Analysis · Close</a> · <a href="https://www.nyse.com/publicdocs/nyse/markets/nyse-arca/rule-interpretations/2024/NYSE_Arca_RB-24-131.pdf">NYSE Arca 上市通告</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/0002015034-26-000010-index.htm">SEC 身份与季报索引</a></p>
+</div>
+<div class="card" id="business"><h2>二、一股信托如何对应比特币</h2>
+<h3>2.1 份额、篮子与托管</h3>
+<p>一股代表信托净资产的一小部分权益。信托被动持有比特币，产品目标是反映持币价值扣除费用和负债后的变化。普通持有人可在交易时段转让份额，向信托创设或赎回份额的通道只对获授权的参与人开放。季度文件约定每篮 10,000 股，11 月 20 日一个篮子按公布每股含量约对应 4.4194 枚 BTC。</p>
+<div class="table-scroll"><table><caption>同一笔需求经过的三个环节</caption><thead><tr><th scope="col">环节</th><th scope="col">谁交付什么</th><th scope="col">应观察的数据</th></tr></thead>
+<tbody><tr><th scope="row">交易所买卖</th><td>买方和卖方在交易所交换美元和已有份额。</td><td>价格、买卖报价差和深度。同一份额可多次易手，成交额无法直接测量信托净申购。</td></tr>
+<tr><th scope="row">一级市场申赎</th><td>授权参与人提交整篮订单，可选现金或实物。现金订单有流动性提供方参与比特币买卖。</td><td>已发行份额、每篮含币量、订单结算。低于净值时买入份额并赎回篮子，价差足以覆盖成本才有经济动力。</td></tr>
+<tr><th scope="row">估值与保管</th><td>灰度旗下发起人负责产品。BNY 为行政管理人，Coinbase Custody 为托管人，Anchorage Digital Bank 为可用的额外托管人。</td><td>基准定价时点、日终持币、托管及结算公告。额外托管安排没有披露逐家余额，不能据此假设资产平均分放。</td></tr></tbody></table>
+</div>
+<h3>2.2 按日计费如何影响长期跟踪</h3>
+<p>发起人费以美元按日计提，按日以比特币后付。币价持平时，实际付出的币会压低每股可代表的币数。按 58,346.25 美元/BTC 和 0.00044194 BTC/股作静态换算，一年的 15 个基点约合每股 0.0387 美元。若币价改变，美元费用也会变。</p>
+<p>日常托管、行政及营销等常规支出由发起人在约定范围内承担。特殊费用和税项另受合同条款限制。市场持有人还面对成交价差及可能的交易成本。因此，年度费率能解释一部分长期跟踪差，不能充当每次成交的全部成本。信托不运用杠杆或衍生品来达到投资目标。</p>
+<p class="sources"><a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">10-Q 附注 1、2 与发起人费</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526041204/btc-20260202.htm">2026-02-06 申赎机制 8-K</a> · <a href="https://etfs.grayscale.com/btc">灰度服务机构及费率</a></p>
+</div>
+<div class="card" id="core-metric"><h2>三、逐日核对净值与折溢价</h2>
+<p>若下跌是由份额流动性失灵造成，市价会比同一时刻的净值跌得更多。11 月 9 日到 20 日的十个常规收盘提供了直接检验。单日收盘偏离介于 −7 与 +4 个基点，绝对偏离中位数约 4 个基点。市价下跌 7.27 美元/股，其中官方净值下降 7.26 美元/股，端点价差再扩大 0.01 美元/股。</p>
+<figure class="chart"><figcaption class="chart-title">收盘价与每股 NAV 同步下行 <small>2026-11-09 至 11-20 · 美元/股</small></figcaption><div class="chart-legend"><span><i style="background:#245d47"></i>NAV</span><span><i style="background:#ad5b20"></i>收盘价</span></div><svg role="img" viewbox="0 0 634 210"><title id="price-title">2026 年 11 月 9 日至 20 日，ETF 收盘价和 NAV，美元/股</title><desc id="price-desc">两条线始于 33.05 美元，11 月 11 日短暂回升。11 月 20 日市价 25.78 美元、净值 25.79 美元。横轴按日历等比例，逐日数字见下表。</desc><line stroke="#d4e1d9" x1="52" x2="575" y1="163" y2="163"></line><text class="axis-label" text-anchor="end" x="43" y="167">25</text><line stroke="#d4e1d9" x1="52" x2="575" y1="133.6" y2="133.6"></line><text class="axis-label" text-anchor="end" x="43" y="137.6">27</text><line stroke="#d4e1d9" x1="52" x2="575" y1="104.2" y2="104.2"></line><text class="axis-label" text-anchor="end" x="43" y="108.2">29</text><line stroke="#d4e1d9" x1="52" x2="575" y1="74.80000000000001" y2="74.80000000000001"></line><text class="axis-label" text-anchor="end" x="43" y="78.80000000000001">31</text><line stroke="#d4e1d9" x1="52" x2="575" y1="45.400000000000006" y2="45.400000000000006"></line><text class="axis-label" text-anchor="end" x="43" y="49.400000000000006">33</text><polyline fill="none" points="53.0,44.7 100.3,51.7 147.5,45.8 194.8,66.9 242.1,83.2 383.9,108.2 431.2,115.2 478.5,124.2 525.7,127.4 573.0,151.4" stroke="#245d47" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></polyline><polyline fill="none" points="53.0,44.7 100.3,51.6 147.5,45.8 194.8,67.2 242.1,83.5 383.9,108.0 431.2,115.1 478.5,124.5 525.7,127.7 573.0,151.5" stroke="#ad5b20" stroke-dasharray="4 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></polyline><circle cx="53" cy="44.66500000000005" fill="#ad5b20" r="2.8"></circle><circle cx="100.27272727272728" cy="51.57400000000003" fill="#ad5b20" r="2.8"></circle><circle cx="147.54545454545456" cy="45.84100000000002" fill="#ad5b20" r="2.8"></circle><circle cx="194.8181818181818" cy="67.156" fill="#ad5b20" r="2.8"></circle><circle cx="242.0909090909091" cy="83.473" fill="#ad5b20" r="2.8"></circle><circle cx="383.9090909090909" cy="108.02200000000002" fill="#ad5b20" r="2.8"></circle><circle cx="431.1818181818182" cy="115.07799999999997" fill="#ad5b20" r="2.8"></circle><circle cx="478.4545454545455" cy="124.48599999999999" fill="#ad5b20" r="2.8"></circle><circle cx="525.7272727272727" cy="127.72000000000003" fill="#ad5b20" r="2.8"></circle><circle cx="573" cy="151.534" fill="#ad5b20" r="2.8"></circle><text class="plot-label" x="55" y="26">33.05</text><text class="plot-label" text-anchor="end" x="568" y="136">25.78</text><text class="axis-label" text-anchor="middle" x="53" y="192">11/9</text><text class="axis-label" text-anchor="middle" x="147.54545454545456" y="192">11/11</text><text class="axis-label" text-anchor="middle" x="242.0909090909091" y="192">11/13</text><text class="axis-label" text-anchor="middle" x="383.9090909090909" y="192">11/16</text><text class="axis-label" text-anchor="middle" x="478.4545454545455" y="192">11/18</text><text class="axis-label" text-anchor="middle" x="573" y="192">11/20</text></svg><p class="figure-note">两条线在美元尺度上几乎重合。11/13 至 11/16 的连线跨过周末，中间没有 ETF 常规收盘观测。</p></figure>
+<figure class="chart"><figcaption class="chart-title">同一窗口的收盘折溢价 <small>2026-11-09 至 11-20 · 基点，1 基点 = 0.01%</small></figcaption><svg role="img" viewbox="0 0 634 193"><title id="prem-title">2026 年 11 月折溢价，基点</title><desc id="prem-desc">十个常规收盘观察位于负七至正四个基点之间，最后一天为负四个基点。横轴按日历定位。</desc><line stroke="#d4e1d9" x1="52" x2="575" y1="46" y2="46"></line><text class="axis-label" text-anchor="end" x="43" y="50">+5</text><line stroke="#d4e1d9" x1="52" x2="575" y1="85" y2="85"></line><text class="axis-label" text-anchor="end" x="43" y="89">0</text><line stroke="#d4e1d9" x1="52" x2="575" y1="124" y2="124"></line><text class="axis-label" text-anchor="end" x="43" y="128">-5</text><line stroke="#d4e1d9" x1="52" x2="575" y1="163" y2="163"></line><text class="axis-label" text-anchor="end" x="43" y="167">-10</text><line stroke="#758c7d" x1="52" x2="575" y1="85" y2="85"></line><polyline fill="none" points="53.0,85.0 100.3,61.6 147.5,85.0 194.8,131.8 242.1,139.6 383.9,61.6 431.2,53.8 478.5,139.6 525.7,139.6 573.0,116.2" stroke="#487763" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline><circle cx="53" cy="85" fill="#245d47" r="3.8"></circle><circle cx="100.27272727272728" cy="61.6" fill="#245d47" r="3.8"></circle><circle cx="147.54545454545456" cy="85" fill="#245d47" r="3.8"></circle><circle cx="194.8181818181818" cy="131.8" fill="#aa5841" r="3.8"></circle><circle cx="242.0909090909091" cy="139.60000000000002" fill="#aa5841" r="3.8"></circle><circle cx="383.9090909090909" cy="61.6" fill="#245d47" r="3.8"></circle><circle cx="431.1818181818182" cy="53.8" fill="#245d47" r="3.8"></circle><circle cx="478.4545454545455" cy="139.60000000000002" fill="#aa5841" r="3.8"></circle><circle cx="525.7272727272727" cy="139.60000000000002" fill="#aa5841" r="3.8"></circle><circle cx="573" cy="116.2" fill="#aa5841" r="3.8"></circle><text class="axis-label" text-anchor="middle" x="53" y="185">11/9</text><text class="axis-label" text-anchor="middle" x="147.54545454545456" y="185">11/11</text><text class="axis-label" text-anchor="middle" x="242.0909090909091" y="185">11/13</text><text class="axis-label" text-anchor="middle" x="383.9090909090909" y="185">11/16</text><text class="axis-label" text-anchor="middle" x="478.4545454545455" y="185">11/18</text><text class="axis-label" text-anchor="middle" x="573" y="185">11/20</text></svg></figure>
+<div class="table-scroll"><table><caption>逐日观测 · 发行人日表，价格取美元/股，份额取股</caption><thead><tr><th scope="col">交易日（2026）</th><th scope="col">常规收盘</th><th scope="col">官方 NAV</th><th scope="col">折溢价</th><th scope="col">发行份额</th></tr></thead>
+<tbody><tr><th scope="row">11-09</th><td>33.05</td><td>33.05</td><td>0.00%</td><td>140,869,963</td></tr>
+<tr><th scope="row">11-10</th><td>32.58</td><td>32.57</td><td>+0.03%</td><td>140,869,963</td></tr>
+<tr><th scope="row">11-11</th><td>32.97</td><td>32.97</td><td>0.00%</td><td>140,869,963</td></tr>
+<tr><th scope="row">11-12</th><td>31.52</td><td>31.54</td><td>−0.06%</td><td>140,869,963</td></tr>
+<tr><th scope="row">11-13</th><td>30.41</td><td>30.43</td><td>−0.07%</td><td>140,869,963</td></tr>
+<tr><th scope="row">11-16</th><td>28.74</td><td>28.73</td><td>+0.03%</td><td>140,869,963</td></tr>
+<tr><th scope="row">11-17</th><td>28.26</td><td>28.25</td><td>+0.04%</td><td>140,639,963</td></tr>
+<tr><th scope="row">11-18</th><td>27.62</td><td>27.64</td><td>−0.07%</td><td>140,679,963</td></tr>
+<tr><th scope="row">11-19</th><td>27.40</td><td>27.42</td><td>−0.07%</td><td>140,299,963</td></tr>
+<tr><th scope="row">11-20</th><td>25.78</td><td>25.79</td><td>−0.04%</td><td>140,299,963</td></tr></tbody></table>
+</div>
+<p>11 月 20 日市场价下降 5.91%，净值下降 5.94%。当日折价从前一天的 7 个基点收窄至 4 个基点。用单日跌幅识别套利机制是否运作，会误读这组三个数字。发行人未给出该日可用的 30 日买卖价差中位数，日终的 4 个基点也无法描述盘中任意规模订单的成交条件。</p>
+<p class="sources"><a href="https://etfs.grayscale.com/btc">灰度日度表现与价差字段</a> · <a href="https://etfs.grayscale.com/btc?tab=performance">官方历史图表</a> · <a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">Daily Performance 工作表</a> · <a href="https://stockanalysis.com/etf/btc/history/">收盘交叉核对</a></p>
+</div>
+<div class="card" id="financials"><h2>四、三季度财务与每股含币量</h2>
+<h3>4.1 三季度净资产增加的两个来源</h3>
+<p>2026 年 11 月 5 日 16:01 美东时间，SEC 接受截至 9 月 30 日的未经审计 10-Q。三季度期间信托没有投资收入，仍发生 161.9 万美元的发起人费。当期运作使净资产增加 14.800 亿美元，几乎全部来自持币市值重估。另有约 6.023 亿美元的份额创设，增加了信托资产和份额。这两项在报表中分开列示。</p>
+<div class="table-scroll"><table><caption>信托净资产变动 · 同季度比较，金额均为百万美元</caption><thead><tr><th scope="col">项目</th><th scope="col">2025 年三季度</th><th scope="col">2026 年三季度</th><th scope="col">经济含义</th></tr></thead>
+<tbody><tr><th scope="row">投资收入</th><td>0.000</td><td>0.000</td><td>持币没有票息或股息来源。</td></tr>
+<tr><th scope="row">发起人费用</th><td>1.996</td><td>1.619</td><td>费用为正数列示，计算运作结果时扣减。</td></tr>
+<tr><th scope="row">已实现损益</th><td>+23.993</td><td>−0.142</td><td>包括为支付费用或赎回处置比特币所结转的价差。</td></tr>
+<tr><th scope="row">未实现增减值</th><td>+263.511</td><td>+1,481.722</td><td>对期末仍持有的币重新估值，金额随市场逆转而变动。</td></tr>
+<tr><th scope="row">运作引起净资产变动</th><td>+285.508</td><td>+1,479.961</td><td>2026 年合计为 1,481.722 − 0.142 − 1.619。</td></tr>
+<tr><th scope="row">资本性份额交易净额</th><td>+431.707</td><td>+602.284</td><td>2026 年创设 19,970,000 股，赎回 0 股。</td></tr>
+<tr><th scope="row">期初 → 期末净资产</th><td>4,743.906 → 5,461.121</td><td>3,188.712 → 5,270.957</td><td>沿用 GAAP 报表千美元原值换算。</td></tr></tbody></table>
+</div>
+<p>期末资产负债表只列比特币资产，应付发起人费及总负债均列零。季报说明现金主要在现金申赎流程中临时使用，按会计准则获豁免列示现金流量表。把上述 14.800 亿美元当作经营现金或可分配利润，会给这类信托套上错误的估值分母。前三季度合计运作净增只有 10.466 百万美元，也表明单季重估收益受起算日期影响很大。</p>
+<h3>4.2 数量增加与每股损耗可以同时发生</h3>
+<div class="table-scroll"><table><caption>币数与份额 · 期间末对照</caption><thead><tr><th scope="col">指标</th><th scope="col">2025-12-31</th><th scope="col">2026-06-30</th><th scope="col">2026-09-30</th><th scope="col">2026-11-20</th></tr></thead>
+<tbody><tr><th scope="row">持币（BTC）</th><td>48,474.9366</td><td>54,280.4005</td><td>63,087.3389</td><td>62,004.6153</td></tr>
+<tr><th scope="row">发行份额（股）</th><td>109,539,963</td><td>122,749,963</td><td>142,719,963</td><td>140,299,963</td></tr>
+<tr><th scope="row">每股持币（BTC/股）</th><td>0.00044253</td><td>0.00044220</td><td>0.00044204</td><td>0.00044194</td></tr>
+<tr><th scope="row">主要市场 GAAP 净值（美元/股）</th><td>38.74</td><td>25.98</td><td>36.93</td><td>25.79</td></tr>
+<tr><th scope="row">统计底稿</th><td>年末资产表</td><td>二季报</td><td>三季报</td><td>发行人当日产品页</td></tr></tbody></table>
+</div>
+<p>三季度持币增加约 8,806.94 枚，每股持币量却从约 0.00044220 降到 0.00044204 BTC。创设带来的币对应新发份额，原有份额不能分享整笔新增资产。前三季度已交付 60.95012406 枚 BTC 支付费用。从 9 月 30 日至 11 月 20 日，以未截位的总币数除以份额测算，每股含币量下降约 0.021%，与 51 天按年费率 0.15% 折算的约 0.021% 相近。</p>
+<p>9 月 30 日主要市场比特币价格为 83,550.15 美元，CBBR 为 83,552.93 美元。前者对应 GAAP 净资产 5,270,956,631 美元，后者对应运营净资产 5,271,132,014 美元。两者折算到每股份额恰好都显示 36.93 美元。6 月 30 日两个口径分别列示 25.98 与 25.97 美元，差异可以显现在美分位。</p>
+<p class="sources"><a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526071952/btc-20251231.htm">2025 年 10-K</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000008/btc-20260630.htm">2026 年二季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">2026 年三季报财务报表、附注与两种 NAV</a> · <a href="https://etfs.grayscale.com/btc">11/20 基金资料</a></p>
+</div>
+<div class="card" id="flows"><h2>五、净资产缩水 10.38 亿美元，份额减少 57 万股</h2>
+<p>灰度公布的非 GAAP 净资产从 11 月 9 日的 46.560 亿美元降至 11 月 20 日的 36.177 亿美元，降幅 22.30%。这段时间发行份额收缩 0.40%。如果把净资产降幅全部当成持有人撤资，会把底层比特币跌价的影响一并计入。</p>
+<div class="table-scroll"><table><caption>11 月 9 日收盘至 20 日收盘 · 变动拆解</caption><thead><tr><th scope="col">项目</th><th scope="col">变动（百万美元）</th><th scope="col">占规模降幅</th><th scope="col">含义</th></tr></thead>
+<tbody><tr><th scope="row">单位净值变化</th><td>−1,019.44</td><td>98.19%</td><td>按期末 140,299,963 股计算每股精确净资产变化。</td></tr>
+<tr><th scope="row">发行份额变化</th><td>−18.84</td><td>1.81%</td><td>少 570,000 股，按期初的精确单位净值计量。</td></tr>
+<tr><th scope="row">非 GAAP 净资产合计</th><td>−1,038.28</td><td>100.00%</td><td>由 4,656.01 降至 3,617.74 百万美元，两项相加闭合。</td></tr></tbody></table>
+</div>
+<p>11 月 9 日至 16 日，期末份额维持在 140,869,963 股。17 日少 23 万股，18 日增加 4 万股，19 日减少 38 万股，20 日份额与前一日相同。仅 11 月 19 日至 20 日，资产规模便从 38.477 亿美元降至 36.177 亿美元。两日份额相同，使这一次重估可以直接观察。逐日净额仍可能掩盖日内方向相反的申赎。</p>
+<h3>5.1 行业汇总与单只信托的差别</h3>
+<div class="table-scroll"><table><caption>按 Farside 各交易日加总 · 百万美元，负值为净流出</caption><thead><tr><th scope="col">窗口</th><th scope="col">本信托 BTC</th><th scope="col">美国现货比特币 ETF 合计</th><th scope="col">观察</th></tr></thead>
+<tbody><tr><th scope="row">11/02–11/06 · 五个交易日</th><td>−52.6</td><td>−1,281.7</td><td>可逐日复算上期所引行业周度流出。</td></tr>
+<tr><th scope="row">11/09–11/13 · 五个交易日</th><td>0.0</td><td>−1,065.3</td><td>汇总样本流出超过十亿美元，本产品列净额为零。</td></tr>
+<tr><th scope="row">11/16–11/19 · 四个交易日</th><td>−16.0</td><td>−1,120.8</td><td>截至周四的累计值。11/20 仍有产品字段待填。</td></tr></tbody></table>
+</div>
+<p>Farside 将 BTC 与 GBTC 分列。11 月 20 日读取到的表中，BTC 一栏初列 −12.9 百万美元，当天发行人表列份额未变。订单归属日、结算日或汇总修订可能造成差别，现有字段无法逐笔配对。本期不把该初值并入完整周总，也不使用同期规模差替代资金流。</p>
+<p>季度申购确实扩大过信托规模。Q3 结束后，10-Q 封面显示 11 月 2 日发行份额已经回落到 142,399,963 股，到 11 月 20 日进一步减少 210 万股。需要修正的是上期关于需求延续的判断。公开的一级市场申赎记录既无法识别最终持有人，也不能说明二级市场的卖方是否长期持有。</p>
+<p class="sources"><a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">灰度日度份额与非 GAAP AUM</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">三季报封面与净资产变动表</a> · <a href="https://farside.co.uk/bitcoin-etf-flow-all-data/">Farside 各产品逐日净流量</a></p>
+</div>
+<div class="card" id="history"><h2>六、把本轮跌幅放回全年</h2>
+<p>11 月 20 日的 25.79 美元，是 2025 年 12 月 31 日至 2026 年 11 月 20 日、灰度工作簿所列 225 个业务日日终 NAV 中的最低值。此前 1 月 14 日的窗口高点为 43.22 美元，至本期末回落 40.33%。这一定义只覆盖所画窗口与每日净值，不能当作信托成立以来的最低成交价。</p>
+<figure class="chart"><figcaption class="chart-title">2025 年末以来的每股运营 NAV <small>至 2026-11-20 · 美元/股 · 灰度 225 个日终记录</small></figcaption><svg role="img" viewbox="0 0 634 210"><title id="long-title">2025-12-31 至 2026-11-20 每个估值日的 NAV，美元/股</title><desc id="long-desc">期初 38.74 美元，1 月 14 日达到窗口高点 43.22，6 月末 25.97，9 月末回升到 36.93，最后一个观察值 25.79，为窗口最低。</desc><line stroke="#d4e1d9" x1="52" x2="572" y1="165.7" y2="165.7"></line><text class="axis-label" text-anchor="end" x="43" y="169.7">25</text><line stroke="#d4e1d9" x1="52" x2="572" y1="134.2" y2="134.2"></line><text class="axis-label" text-anchor="end" x="43" y="138.2">30</text><line stroke="#d4e1d9" x1="52" x2="572" y1="102.7" y2="102.7"></line><text class="axis-label" text-anchor="end" x="43" y="106.7">35</text><line stroke="#d4e1d9" x1="52" x2="572" y1="71.2" y2="71.2"></line><text class="axis-label" text-anchor="end" x="43" y="75.2">40</text><line stroke="#d4e1d9" x1="52" x2="572" y1="39.70000000000002" y2="39.70000000000002"></line><text class="axis-label" text-anchor="end" x="43" y="43.70000000000002">45</text><polyline fill="none" points="52.0,79.1 55.2,73.1 60.0,60.6 61.6,65.4 63.2,69.6 64.8,69.9 66.4,71.8 71.3,68.4 72.9,59.9 74.5,50.9 76.1,57.8 77.7,56.9 84.1,73.5 85.7,72.0 87.3,74.2 88.9,74.0 93.7,79.2 95.3,74.3 96.9,75.1 98.5,88.8 100.1,89.5 105.0,106.0 106.6,110.3 108.2,118.8 109.8,145.9 111.4,128.0 116.2,125.9 117.8,131.6 119.4,135.0 121.0,141.1 122.6,131.6 129.0,134.3 130.6,138.6 132.2,136.2 133.9,134.5 138.7,143.6 140.3,143.5 141.9,130.4 143.5,135.3 145.1,140.4 149.9,130.4 151.5,133.0 153.1,119.4 154.7,124.6 156.3,133.3 161.1,130.9 162.7,128.0 164.3,126.3 166.0,126.8 167.6,124.8 172.4,117.0 174.0,115.4 175.6,125.2 177.2,127.4 178.8,127.6 183.6,126.2 185.2,130.0 186.8,125.8 188.4,132.4 190.0,139.2 194.8,138.0 196.4,134.3 198.0,133.3 199.7,136.5 206.1,128.8 207.7,130.9 209.3,124.4 210.9,122.2 212.5,119.0 217.3,118.7 218.9,116.2 220.5,114.1 222.1,113.2 223.7,107.4 228.5,110.5 230.1,114.1 231.8,103.4 233.4,106.5 235.0,106.8 239.8,109.0 241.4,110.5 243.0,112.7 244.6,110.3 246.2,104.8 251.0,100.2 252.6,95.8 254.2,96.2 255.8,99.9 257.4,99.8 262.2,94.9 263.9,98.0 265.5,101.4 267.1,96.3 268.7,102.8 273.5,109.0 275.1,109.3 276.7,107.0 278.3,106.9 279.9,112.1 286.3,111.6 287.9,114.4 289.5,118.9 291.1,118.6 296.0,123.9 297.6,135.9 299.2,141.1 300.8,146.2 302.4,155.2 307.2,146.7 308.8,150.3 310.4,150.8 312.0,146.2 313.6,146.1 318.4,137.7 320.0,140.4 321.6,144.2 323.2,148.0 329.7,143.8 331.3,149.6 332.9,156.4 334.5,158.2 336.1,157.0 340.9,155.1 342.5,159.6 344.1,156.1 345.7,152.1 352.1,145.7 353.7,145.5 355.3,149.8 356.9,147.1 358.5,145.2 363.4,149.9 365.0,143.5 366.6,142.3 368.2,144.3 369.8,144.6 374.6,141.9 376.2,138.2 377.8,139.6 379.4,142.7 381.0,144.5 385.8,142.4 387.4,145.4 389.0,146.2 390.6,142.9 392.2,148.0 397.1,145.5 398.7,144.4 400.3,142.7 401.9,143.8 403.5,142.4 408.3,145.0 409.9,146.4 411.5,146.7 413.1,146.8 414.7,148.0 419.5,144.2 421.1,143.3 422.7,132.7 424.3,120.9 426.0,108.7 430.8,103.9 432.4,103.4 434.0,104.7 435.6,100.6 437.2,107.2 442.0,103.5 443.6,108.0 445.2,107.9 446.8,95.5 448.4,100.9 454.8,104.8 456.4,105.3 458.0,108.4 459.7,108.0 464.5,103.2 466.1,111.2 467.7,111.5 469.3,110.0 470.9,97.1 475.7,82.4 477.3,83.1 478.9,87.9 480.5,88.2 482.1,89.3 486.9,91.0 488.5,90.5 490.1,90.5 491.8,87.5 493.4,88.5 498.2,84.5 499.8,84.8 501.4,91.0 503.0,95.7 504.6,94.1 509.4,92.7 511.0,91.5 512.6,95.6 514.2,94.0 515.8,96.3 520.6,95.5 522.2,93.5 523.9,88.1 525.5,96.5 527.1,97.2 531.9,100.7 533.5,98.5 535.1,96.2 536.7,98.4 538.3,109.4 543.1,109.8 544.7,106.6 546.3,100.3 547.9,111.3 549.5,112.2 554.3,115.0 556.0,118.0 557.6,115.5 559.2,124.5 560.8,131.5 565.6,142.2 567.2,145.2 568.8,149.1 570.4,150.5 572.0,160.7" stroke="#32664c" stroke-width="2.2"></polyline><circle cx="74.46913580246914" cy="50.914000000000016" fill="#32664c" r="3.8"></circle><text class="plot-label" x="78.46913580246914" y="40.914000000000016">43.22</text><circle cx="572" cy="160.723" fill="#a14d39" r="3.8"></circle><text class="plot-label" text-anchor="end" x="572" y="147.723">25.79</text><text class="axis-label" text-anchor="middle" x="52" y="192">12/31</text><text class="axis-label" text-anchor="middle" x="196.44444444444446" y="192">03/31</text><text class="axis-label" text-anchor="middle" x="342.4938271604938" y="192">06/30</text><text class="axis-label" text-anchor="middle" x="490.14814814814815" y="192">09/30</text><text class="axis-label" text-anchor="middle" x="572" y="192">11/20</text></svg><p class="figure-note">按日历天数定位。折线连接每个估值日。无估值的周末及假日没有观测点。</p></figure>
+<div class="table-scroll"><table><caption>同口径的起止对照 · 非 GAAP 净资产为百万美元</caption><thead><tr><th scope="col">估值日</th><th scope="col">每股 NAV（美元）</th><th scope="col">发行份额（百万股）</th><th scope="col">净资产（百万美元）</th></tr></thead>
+<tbody><tr><th scope="row">2025-12-31</th><td>38.74</td><td>109.540</td><td>4,243.94</td></tr>
+<tr><th scope="row">2026-03-31</th><td>29.99</td><td>116.810</td><td>3,502.88</td></tr>
+<tr><th scope="row">2026-06-30</th><td>25.97</td><td>122.750</td><td>3,187.99</td></tr>
+<tr><th scope="row">2026-09-30</th><td>36.93</td><td>142.720</td><td>5,271.13</td></tr>
+<tr><th scope="row">2026-10-26</th><td>35.31</td><td>142.830</td><td>5,043.43</td></tr>
+<tr><th scope="row">2026-11-20</th><td>25.79</td><td>140.300</td><td>3,617.74</td></tr></tbody></table>
+</div>
+<p>起点不同，得到的需求图景也不同。从 2025 年末至本期末，每股 NAV 下降 33.43%，发行份额却增加 28.08%，因此基金净资产只减少 14.76%。若从 6 月 30 日开始比较，11 月 20 日每股 NAV 仅低 0.69%，发行份额高 14.30%，总净资产反而高 13.48%。而最近的 11 月 9–20 日，净值与份额同时下降。</p>
+<p>围绕同一个 25–26 美元的每股净值水平，一种路径可以是长期币价接近而累计申购明显，另一种路径可以是近期有人赎回、现有持有人随币价承受损失。比较信托是否扩大，应首先指定开始日期，再分别读每股净值和份额。单看某日 AUM 或交易屏幕上的份额价格，无法回答两个问题。</p>
+<p class="sources"><a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">灰度每日完整序列</a> · <a href="https://etfs.grayscale.com/btc">发行人本期净值</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000008/btc-20260630.htm">六月底两种净值口径</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">九月底两种净值口径</a></p>
+</div>
+<div class="card" id="macro"><h2>七、通胀、实际利率与黄金对照</h2>
+<h3>7.1 10 月 CPI 与美联储会议纪要</h3>
+<p>美国劳工统计局在 11 月 10 日美东 08:30 发布 10 月 CPI。整体 CPI 季调环比上涨 0.4%，较 9 月的 0.6% 放缓。剔除食品和能源的核心 CPI 环比上涨 0.3%，与 9 月一致。因 2025 年 10 月缺少对应基数，官方没有给出这两项的常规同比涨幅。这个月度读数不足以确认价格压力已消退。</p>
+<p>11 月 18 日发布的纪要对应 10 月 27–28 日 FOMC 会议。当次表决以 10 票对 2 票维持联邦基金利率目标区间 3.75%–4.00%，两名反对委员主张提高 25 个基点。几乎所有与会者认为，在各自基准展望下，进一步上调政策利率可能适当。12 月 8–9 日会议尚待召开，研究以正式决定和收益率曲线记录政策环境。</p>
+<div class="table-scroll"><table><caption>11 月 9 日至 20 日的跨市场背景</caption><thead><tr><th scope="col">可观察变量</th><th scope="col">11 月 9 日</th><th scope="col">11 月 20 日</th><th scope="col">区间变化</th></tr></thead>
+<tbody><tr><th scope="row">美国 10 年期名义国债收益率</th><td>4.88%</td><td>4.92%</td><td>+4 个基点。区间内 11/13 为 5.15%。</td></tr>
+<tr><th scope="row">美国 10 年期实际国债收益率</th><td>2.66%</td><td>2.77%</td><td>+11 个基点。国债实际收益率曲线的固定期限读数。</td></tr>
+<tr><th scope="row">实物黄金信托 GLD 常规收盘（美元/股）</th><td>379.53</td><td>322.87</td><td>−14.93%。作为黄金证券的同期市场价格对照。</td></tr>
+<tr><th scope="row">灰度 BTC 常规收盘（美元/股）</th><td>33.05</td><td>25.78</td><td>−22.00%。相对 GLD 落后约 7.07 个百分点。</td></tr></tbody></table>
+</div>
+<p>比特币没有合同约定的现金收益。实际利率升高，会抬高放弃有息资产的机会成本。当风险承受能力下降时，黄金与比特币也可能同时遭到出售。这个窗口中，两种证券同跌，比特币敞口跌幅更大。相较上期所见的黄金反弹，方向发生变化。十个美股交易日仍不足以识别长期相关性，更无法把某一天的跌幅逐项分摊给美联储、美元或科技股。</p>
+<p>两份证券按同一纽约常规收盘时间取值，用各自起点的美元/股计算区间涨跌。GLD 的单股定价含其自身费用及交易偏差。如果问题换成一枚比特币折合多少金衡盎司，就需要同一时刻的币价及美元/金衡盎司报价，不能把上表的两种每股价格相除。</p>
+<p class="sources"><a href="https://www.bls.gov/news.release/archives/cpi_11102026.htm">BLS · 11/10 发布的 10 月 CPI</a> · <a href="https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm">美联储 · 10 月会议纪要</a> · <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">FOMC 官方日历</a> · <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_real_yield_curve&amp;field_tdr_date_value_month=202611">财政部实际收益率</a> · <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">财政部名义收益率</a> · <a href="https://www.spdrgoldshares.com/usa/gld/">SPDR 黄金信托</a> · <a href="https://stockanalysis.com/etf/gld/history/">GLD 完成日线</a></p>
+</div>
+<div class="card" id="policy"><h2>八、政策风险与最新申报</h2>
+<p>对这份信托，直接影响每股价值传递的制度安排是申赎是否可结算、托管是否可用、指数是否可计算。币股的股票指数调整和宏观政策影响底层市场需求，制度效力和传导路径不同。</p>
+<div class="table-scroll"><table><caption>法律或文件状态截至 2026-11-20</caption><thead><tr><th scope="col">事项／影响</th><th scope="col">有日期的事实</th><th scope="col">后续传导与观察</th></tr></thead>
+<tbody><tr><th scope="row">申赎资格与机制／直接</th><td>SEC 于 2025-07-29 允许相关加密 ETP 采用实物申赎。本信托 2026-02-06 的 8-K 与 11-05 的 10-Q 均列现金及实物订单。</td><td>若受理暂停、篮子结算延迟或授权参与人减少，净值偏离及报价成本可能扩大。查产品公告与申报。</td></tr>
+<tr><th scope="row">定价方法／直接</th><td>3 月 16 日披露基准切换，自 4 月 1 日由 XBX 换为 CBBR。CBBR 综合多个交易平台，按成交量与异常价格等规则计算。</td><td>跨 4/1 的历史回报使用衔接后的基准。若指数或成分交易平台故障，先核估值时点、替代价格与披露。</td></tr>
+<tr><th scope="row">法律结构／直接</th><td>信托份额通过注册声明发行，按商品类信托份额在 NYSE Arca 上市。该产品未按美国《1940 年投资公司法》注册。</td><td>普通开放式基金的全部保护不能直接类推。托管、定价、超常费用及终止处置须回到本信托条款判断。</td></tr>
+<tr><th scope="row">营销程序／运营</th><td>11 月 5 日生效的广告审查与备案协议由关联方 Grayscale Securities 承接相应审核。Foreside 保留其他职责。11 月 16 日提交三份 FWP 广告材料。</td><td>相关服务费由发起人承担。此次公告更新的是宣传合规流程。当日费率、指数及份额仍由各自披露确认。</td></tr>
+<tr><th scope="row">币股指数调整／间接</th><td>MSCI 11 月 11 日公布 11 月审议结果，非经营公司方法首次实施涉及 Strategy A、Metaplanet 及 Yellow Cake，11 月 30 日收盘实施。</td><td>首先影响被剔除证券的指数权重和被动股票交易。只有在企业融资或其持币决策随之改变时，才可能传导到比特币市场。</td></tr></tbody></table>
+</div>
+<p>持续监测的顺序是信托申赎或托管公告、基准与估值异常、外部融资需求变化。若交易所暂停份额交易而现货持续交易，恢复交易时可能出现价格跳空。这个风险与 MSCI 是否调整某家公司的指数权重需要分别记录。</p>
+<p class="sources"><a href="https://www.nyse.com/publicdocs/nyse/markets/nyse-arca/rule-interpretations/2024/NYSE_Arca_RB-24-131.pdf">NYSE Arca 上市身份</a> · <a href="https://www.sec.gov/newsroom/press-releases/2025-101-sec-permits-kind-creations-redemptions-crypto-etps">SEC 实物申赎许可</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526041204/btc-20260202.htm">信托申赎 8-K</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526108384/btc-20260316.htm">基准切换 8-K</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-ex10_3.htm">11/5 营销审查协议</a> · <a href="https://data.sec.gov/submissions/CIK0002015034.json">11/16 FWP 目录</a> · <a href="https://www.msci.com/downloads/web/msci-com/indexes/quarterly-index-review/insights-from-msci-november-2026-index-review.pdf">MSCI 11 月审议结果与实施日</a></p>
+</div>
+<div class="card" id="execution"><h2>九、定价和交收在哪些环节可能失灵</h2>
+<p>2026 年 11 月 20 日，收盘价与官方净值仅相差一美分。要判断这种贴合在什么条件下会消失，可以沿着授权参与人申报订单、流动性提供方调币以及发起人计算净值的顺序逐环检查。</p>
+<div class="table-scroll"><table><caption>三种运营风险对应的可核条款</caption><thead><tr><th scope="col">环节</th><th scope="col">条款及时间</th><th scope="col">异常时会看到什么</th></tr></thead>
+<tbody><tr><th scope="row">订单截止与交割</th><td>2025 年 10-K 列示，现金订单的纽约时间截止点为 13:59:59，实物为 15:59:59。三季报列有 T+1 或 T+2 结算安排（T 为订单日）。</td><td>临近收盘的现货冲击发生在现金订单截止之后，即使有价格差，套利者仍可能承担跨日结算、调币和库存成本。</td></tr>
+<tr><th scope="row">基准中断与备用估值</th><td>3 月 16 日 8-K 列出顺序。CBBR 无法取得或发起人善意认定价格不准确时，先联系指数方。问题未解决，则依次采用 Coin Metrics 实时报价、主要市场报价、发起人善意估值。前两项备用市场报价以纽约 16:00 为准。</td><td>若同日市价仍有交易但 NAV 改用备用价格，价差可能部分来自估值源改变。须先核对启用时点，再比较前后折溢价。</td></tr>
+<tr><th scope="row">托管与执行风险</th><td>10-K 说明金库保管以冷存储为主。转入主经纪商交易余额的资产可能汇集保管或在连接的场所持有。其披露的 Coinbase 集团犯罪损失保险覆盖约定情形，所有客户资产总值显著高于保险限额。</td><td>压力时要核查转移是否完成、主经纪商或交易场所是否限制服务，以及潜在损失有无足额赔付。不能把“有保单”换算成单只信托的全额保障。</td></tr></tbody></table>
+</div>
+<p>报价差和收盘折溢价也会给出不同信号。以 25.79 美元净值为例，买一卖一在净值两侧，即使两侧报价距离较远，其中一笔恰在净值附近成交也会产生很小的收盘折价。反过来，一个特定时点的异常成交可以拉大收盘价差，而一级市场结算并未改变。逐笔买卖深度、整个交易日的价差分布、篮子履约状态，比一次收盘更能辨认是哪一条链路承压。</p>
+<p>2024 年上市通告反映当时的现金申赎制度。后续的 SEC 许可与 2026 年本信托 8-K 已纳入实物订单。讨论当前条款时以较新的正式申报为准。上述限制描述可能影响履约的机制，截至本期并无所引材料证明 11 月出现托管损失或启用备用估值。</p>
+<p class="sources"><a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526071952/btc-20251231.htm">10-K · 申赎截止、保险与托管</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">10-Q · 订单结算</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526108384/btc-20260316.htm">8-K · 指数故障时的替代顺序</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526041204/btc-20260202.htm">8-K · 两种申赎方式</a></p>
+</div>
+<div class="card" id="valuation"><h2>十、估值分母与压力情景</h2>
+<h3>10.1 25.79 美元如何从持币数量算出</h3>
+<p class="quote"><strong>每股运营 NAV</strong> =（信托持币量 × 当日 CBBR ＋ 其他资产 − 负债）÷ 当日发行份额。<br/><strong>11 月 20 日</strong>　62,004.6153 BTC ÷ 140,299,963 股 = 0.0004419432 BTC/股。用公布到八位小数的 0.00044194 × 58,346.25 美元/BTC，得到 25.78554 美元/股，按美分显示为 25.79。</p>
+<p>直接用运营净资产 3,617,736,787 美元除以 140,299,963 股，得到 25.78573 美元/股。与持币乘法的尾数差来自这里使用的展示精度。灰度按已显示市价和 NAV 列示 −0.04% 折价。用 25.78 ÷ 25.79 − 1 可复算为 −0.0388%。同日 GAAP AUM 为 3,618,719,560 美元，比基准口径多 982,773 美元，虽也显示每股 25.79，但总额并不相同。</p>
+<p>比特币每枚变动 1,000 美元，在每股币量固定时，净值约变动 0.442 美元/股。作为历史参照，6 月 30 日 CBBR 为 58,731.82 美元，当日运营 NAV 为 25.97 美元。11 月 20 日的 CBBR 比该观察值低 0.66%。这一比较回答两次估值的相对位置，不能给六月读数赋予价格下限的含义。</p>
+<h3>10.2 币价与交易折价分别受压时，每股是多少</h3>
+<div class="table-scroll"><table><caption>以 2026-11-20 为基点的静态试算 · 金额为美元，保留两位小数</caption><thead><tr><th scope="col">CBBR 变动</th><th scope="col">基准（美元/BTC）</th><th scope="col">理论 NAV（美元/股）</th><th scope="col">另加 0.50% 折价的市价（美元/股）</th></tr></thead>
+<tbody><tr><th scope="row">−20%</th><td>46,677.00</td><td>20.63</td><td>20.53</td></tr>
+<tr><th scope="row">−10%</th><td>52,511.63</td><td>23.21</td><td>23.09</td></tr>
+<tr><th scope="row">0%</th><td>58,346.25</td><td>25.79</td><td>25.66</td></tr>
+<tr><th scope="row">+10%</th><td>64,180.88</td><td>28.36</td><td>28.22</td></tr>
+<tr><th scope="row">+20%</th><td>70,015.50</td><td>30.94</td><td>30.79</td></tr></tbody></table>
+</div>
+<p>在基准不动的一行，把市价相对净值的折价假设扩大到 0.50%，理论市价约为 25.66 美元。在基准跌 20% 的一行，相同折价下理论市价约为 20.53 美元。过去十个交易日的收盘折价最深为 0.07%，因此 0.50% 表示额外的交易压力。这五行固定每股币数，未计新费用或异常负债，不含发生概率或未来时间表。</p>
+<h3>10.3 长期跟踪使用相同区间的净值回报</h3>
+<div class="table-scroll"><table><caption>灰度月末业绩 · 截至 2026-10-31，各列覆盖同一期间</caption><thead><tr><th scope="col">回报窗口</th><th scope="col">二级市场价格</th><th scope="col">运营 NAV</th><th scope="col">灰度基准</th></tr></thead>
+<tbody><tr><th scope="row">1 个月</th><td>−8.20%</td><td>−8.12%</td><td>−8.11%</td></tr>
+<tr><th scope="row">3 个月</th><td>+21.97%</td><td>+22.01%</td><td>+22.05%</td></tr>
+<tr><th scope="row">年初至今</th><td>−12.42%</td><td>−12.42%</td><td>−12.30%</td></tr>
+<tr><th scope="row">过去一年</th><td>−30.23%</td><td>−30.17%</td><td>−30.05%</td></tr></tbody></table>
+</div>
+<p>截至 10 月末，过去一年 NAV 回报落后基准 0.12 个百分点，市价落后净值另有 0.06 个百分点。前者包含费用、计算精度等影响，后者受起止两端折溢价影响。11 月 20 日那一天的折价衡量日终价差，和一年期的跟踪差具有不同分母与时间跨度。</p>
+<p class="sources"><a href="https://etfs.grayscale.com/btc">灰度基准、GAAP 及 10 月末回报</a> · <a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">灰度 Historical Performance</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000008/btc-20260630.htm">6 月末 CBBR 与运营净值</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526108384/btc-20260316.htm">基准计算方法</a></p>
+</div>
+<div class="card" id="review"><h2>十一、11 月 10 日研究判断复核</h2>
+<p>上期报告以美东 11 月 9 日行情为起点。当时，官方产品数据引用到 10 月 26 日，最近一期财务是 9 月底的 10-Q。本次取得覆盖比较期的灰度原始日表，使价格、净值和份额三条判断都可以用同一只信托的数据重做。</p>
+<div class="table-scroll"><table><caption>历史假设与新增事实</caption><thead><tr><th scope="col">上期关注的问题</th><th scope="col">本轮可复核事实</th><th scope="col">判断如何改变</th></tr></thead>
+<tbody><tr><th scope="row">市场急跌是否伴随结构性折价？</th><td>11/09 灰度市价与 NAV 均为 33.05 美元，11/20 分别为 25.78 和 25.79。十个收盘最大绝对偏离 7 个基点。</td><td>维持在已观察收盘时点跟踪贴近净值的判断，证据由异步现货估算更新为发行人同日净值。</td></tr>
+<tr><th scope="row">Q3 的零赎回和份额增长是否延续？</th><td>Q3 净增 1,997 万股。9/30 至 11/20 减少 242 万股，其中 11/9 至 20 日减少 57 万股。</td><td>撤回从季度总额推断持有人类型的判断。最新窗口已经出现份额净收缩。</td></tr>
+<tr><th scope="row">上一期关注的币价支撑带是否仍有解释力？</th><td>11/20 官方 16:00 基准为 58,346.25 美元/BTC，已低于上期讨论的约 73,000 美元区域，也略低于 6 月末同口径 CBBR。</td><td>旧区间已被其后的价格穿过。用可计量的每股敞口衡量后续冲击。上述区间不能约束损失。</td></tr>
+<tr><th scope="row">行业流出是否有第二周确认？</th><td>11/9–13 完整周行业净流出 10.653 亿美元，同期 BTC 产品列净额为零。11/16–19 产品和行业均为净流出。</td><td>行业压力持续，产品级申赎与行业方向仍需逐日分辨。</td></tr>
+<tr><th scope="row">CPI 及指数审议结果如何？</th><td>11/10 发布核心 CPI 环比 +0.3%。11/11 公布 MSCI 剔除名单。11/18 公布 10 月会议纪要。</td><td>两个原本待定的事件已有结果。指数调整尚待月底实施，下一次 FOMC 利率决定仍未发生。</td></tr></tbody></table>
+</div>
+<p>结论的证据强度也有变化。十日收盘序列足以检查这段时间的日终定价，仍不足以说明市场在极端时点也有足够深度。后续若出现连续数日的净值偏离和申赎受阻，应优先重新检验产品结构。单纯的币价下跌只会验证其底层敞口。</p>
+<p class="sources"><a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">灰度每日市价、份额与净值</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">三季报季度申赎</a> · <a href="https://farside.co.uk/bitcoin-etf-flow-all-data/">产品与行业流量</a> · <a href="https://www.msci.com/downloads/web/msci-com/indexes/quarterly-index-review/insights-from-msci-november-2026-index-review.pdf">MSCI 11 月审议</a></p>
+</div>
+<div class="card" id="analysts"><h2>十二、机构研究与公开讨论</h2>
+<div class="table-scroll"><table><caption>观点来自哪里，能检验什么</caption><thead><tr><th scope="col">发布者与日期</th><th scope="col">公开观点或读数</th><th scope="col">证据边界</th></tr></thead>
+<tbody><tr><th scope="row">灰度研究主管 Zach Pandl · 11/16</th><td>在署名评论中，将稳定币兑回法币、AI 相关风险敞口下降以及周末订单簿较薄列为回撤的可能渠道。</td><td>发起人对底层市场的解释，有商业利益关系。检验这些渠道需要稳定币流量或交易深度数据。</td></tr>
+<tr><th scope="row">CoinShares 研究主管 James Butterfill · 11/20</th><td>他观察到多头头寸平仓、市场流动性较薄。文中举例的买卖价差来自贝莱德的 IBIT。</td><td>作为市场情景参考。对本信托应看自己的报价深度和价差。该评论没有给出 BTC 份额的估值模型。</td></tr>
+<tr><th scope="row">Alternative.me · 11/09、11/19、11/20（UTC 日期）</th><td>比特币市场恐惧与贪婪指数分别为 29、10 和 12 分（满分 100），11/20 属极度恐惧区间。</td><td>指标描述底层市场情绪。11/20 从 10 回到 12 的同时信托再跌 5.91%，短期价格方向并不由该分数确定。</td></tr>
+<tr><th scope="row">r/Bitcoin · 11/20 公开日帖</th><td>讨论者对紧缩预期是否已计入币价存在分歧，也有参与者关注当日波动。</td><td>单帖为自愿发言样本，不能据此计算持有人观点比例、申赎概率或价位。</td></tr></tbody></table>
+</div>
+<p>运营主体是被动持币信托，二级市场的企业盈利预测和分析师 EPS 并无对应分母。截至本期，在发行人资料与该 CIK 的 EDGAR 文件中，未核实到该信托针对三季报单独举行的业绩电话会或授权实录。表内机构研究均可追溯至发布方。当期财务和合同解释取自正式申报。</p>
+<p class="sources"><a href="https://www.grayscale.com/the-stack/crypto-retreat-offers-entry-point-fundamentals-still-solid">灰度署名研究 · 11/16</a> · <a href="https://etp.coinshares.com/corp/insights/research-data/market-update-20-11-2026/">CoinShares 市场评论 · 11/20</a> · <a href="https://alternative.me/crypto/fear-and-greed-index/">情绪指数方法与归属</a> · <a href="https://api.alternative.me/fng/?limit=0">指数历史观察</a> · <a href="https://www.reddit.com/r/Bitcoin/comments/1y0wtpv/daily_discussion_november_20_2026/">r/Bitcoin 11/20 公开讨论</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/0002015034-26-000010-index.htm">季度披露目录</a></p>
+</div>
+<div class="card" id="bull-bear"><h2>十三、多空分歧与可证伪条件</h2>
+<div class="two-col"><div class="box-green"><h4>支持跟踪机制的证据</h4><p>市场和净值在急跌中仍接近。11 月 9 日至 20 日，同日收盘折溢价仅在 −0.07% 与 +0.04% 之间。即使指数估值大幅下移，套利通道在这些日终观察中仍有约束力。</p>
+<p>截至 10 月末，一年期 NAV 与基准回报相差 0.12 个百分点。单位币量变化也与年费水平相近。持有实物、费用可测，使一股背后的经济权益能够逐日核算。</p>
+</div>
+<div class="box-red"><h4>削弱需求与流动性的证据</h4><p>日终定价贴近净值也会完整传递币价风险。十个交易日，持有人面对的是约 22% 的价格下跌。曾在三季度大量创设的份额到 11 月已收缩，行业流出亦连续两周超过 10 亿美元。</p>
+<p>周末现货仍在交易。订单深度快速下降、托管转移变慢或申赎受限时，折价可能增大。一个以美分公布的收盘净值无法说明盘中大额订单可按同样的价格成交。</p>
+</div>
+</div>
+<h3>13.1 三种判断分别对应什么证据</h3>
+<div class="table-scroll"><table><caption>把不同投资框架落实到这只信托</caption><thead><tr><th scope="col">分析角度</th><th scope="col">在本产品上的具体问题</th><th scope="col">能改变答案的观察</th></tr></thead>
+<tbody><tr><th scope="row">格雷厄姆 · 资产核对</th><td>用可核验的每股底层资产衡量份额价格。比特币本身没有合同本金或清算价格下限。</td><td>同日 NAV 与市价持续偏离，或币量、份额和净值无法按同一日期对账。</td></tr>
+<tr><th scope="row">芒格 · 逆向检验</th><td>假定“下跌来自信托折价”成立，理应看到市价比净值跌得更多。十日数据只显示约 0.03 个百分点的累计差。</td><td>收盘偏离持续扩大并伴随篮子处理异常，将改写对这段机制的外推。</td></tr>
+<tr><th scope="row">马克斯 · 分清风险来源</th><td>单日波动与持币永久受损含义不同。币价可波动，份额代表的币量也可能发生独立的异常损耗。</td><td>若扣除已知费用和资本变化后每股币量出现台阶式下降，应复核额外负债或托管事件。</td></tr>
+<tr><th scope="row">达利欧 · 同一约束下的资产表现</th><td>实际利率上升和风险偏好变化可同时作用于黄金和比特币，弹性由各市场自身决定。</td><td>当利率与风险资产方向背离时，需转向具体的流量、杠杆和市场深度验证。</td></tr></tbody></table>
+</div>
+<p class="sources"><a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">发行人每日观测</a> · <a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">三季报资产与风险</a> · <a href="https://farside.co.uk/bitcoin-etf-flow-all-data/">行业基金流量</a> · <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_real_yield_curve&amp;field_tdr_date_value_month=202611">实际利率系列</a></p>
+</div>
+<div class="card" id="conclusion"><h2>十四、核心判断与后续检验</h2>
+<p><strong>2026 年 11 月 20 日，BTC 在 NYSE Arca 的美股常规收盘为 25.78 美元/股，比 11 月 9 日经复核的 33.05 美元下跌 22.00%。同一期间每股 NAV 从 33.05 跌至 25.79 美元，跌幅 21.97%。11/20 收盘折价 0.04%。本期维持信托在这些交易日收盘贴近净值的判断，并将三季度的净申购趋势更新为本窗口净减少 57 万股。</strong></p>
+<p>规模缩减和需求收缩确实同时发生，但量级不同。按期初单位净值计量份额变动，可解释约 1.81% 的规模降幅，其余约 98.19% 对应单位净值变化。一次日终折价不会保护持有人免受底层币价下跌。资金流持续为负，也不足以证明信托已脱离净值。</p>
+<div class="table-scroll"><table><caption>四个待检验情景 · 无概率权重</caption><thead><tr><th scope="col">情景</th><th scope="col">首先可见的事实</th><th scope="col">进一步辨别</th></tr></thead>
+<tbody><tr><th scope="row">市场继续重估底层资产</th><td>CBBR 与 NAV 同向变动，收盘折溢价仍围绕零波动。</td><td>以每 1,000 美元/BTC 约传递 0.442 美元/股复核敏感性。</td></tr>
+<tr><th scope="row">份额需求改善</th><td>多个交易日出现净创设，累计份额增长。每股币量符合费用轨迹。</td><td>区分底层基准反弹带来的 AUM 增长与新增的份额数量。</td></tr>
+<tr><th scope="row">底层下跌、赎回延续</th><td>基准与份额同跌，行业多个完整交易日继续净流出。</td><td>用精确单位净值和发行份额拆解两部分影响，并检查折价有无一并扩大。</td></tr>
+<tr><th scope="row">定价或交收机制受压</th><td>基准相对稳定，市价却连续明显偏离 NAV，或出现申赎暂停、估值延迟、托管公告。</td><td>以两个独立来源复核定价时刻，核对赎回处理及每股币量，再判断偏离是否源于结构变化。</td></tr></tbody></table>
+</div>
+<h3>14.1 哪些信号会推翻当前解释</h3>
+<p><strong>先看同日收盘折溢价是否持续异常。</strong>本期十日的最大绝对偏离为 7 个基点。若绝对偏离连续三个美股交易日超过 50 个基点，同时出现申赎受限或异常结算，则应重新检验“价格变化主要由净值解释”。50 个基点是压力测试参数，不属于发行人标准。若只有盘后一笔报价，不能触发这项比较。</p>
+<p><strong>再看每股持币的对账与一级市场方向。</strong>将同日持币总量除以已发行份额，和上一次的计算结果比对。持续超过费用可解释幅度的损耗，需要在附注里找到额外费用、负债或资产处置。需求变化则用连续几个完整交易周的份额与已结算创设、赎回核验。若份额回升，上述收缩只能描述本期。</p>
+<p><strong>外部背景以独立观察更新。</strong>月底 MSCI 调整的实际实施、12 月 FOMC 正式决定、财政部实际收益率及完整行业申赎表，都可能改变底层市场解释。它们不能直接替代当天的 CBBR、信托净值和托管数量。</p>
+<p class="sources"><a href="https://etfs.grayscale.com/btc">灰度产品与 11/20 估值</a> · <a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">历史工作簿</a> · <a href="https://stockanalysis.com/etf/btc/history/">完整常规交易日历史</a> · <a href="https://data.sec.gov/submissions/CIK0002015034.json">SEC 持续申报</a></p>
+</div>
+<div class="card" id="data-notes"><h2>数据说明</h2>
+<h3>口径与计算</h3>
+<p>价格统一为美元。文中“股”指 NYSE Arca 交易的信托份额，“BTC”在币数或美元/BTC 表达式中指比特币。11/20 常规收盘时间为美东 16:00，收盘记录于美东 18:37 核对。发行人 Market Price 与完成日线 Close 一致，均取未复权收盘。持币量、每股 NAV 及 CBBR 取发行人同日数字。现货交易所 UTC 日线、盘中参考值及盘后成交具有不同的计时边界。</p>
+<p>折溢价 =（常规收盘/同日公布每股 NAV − 1）× 100%，正数为溢价。区间价格变动按期末/期初 − 1 计算。用公布到美分的一对数字复算，与采用未舍入净资产除以份额得到的结果可能相差数个基点。11 月 20 日收盘二手来源均为 25.78 美元，不同供应商的最终成交量存在差异，本文没有用这些成交量推断净流入。</p>
+<p>净资产变动使用同一非 GAAP 序列。令 S 为发行份额、V 为未按美分截位的 AUM/S，0 和 1 分别代表 11 月 9 日和 20 日。分解为 (S₁ − S₀) × V₀ ＋ S₁ × (V₁ − V₀)。其中 V₀ = 4,656,012,869.12 ÷ 140,869,963，V₁ = 3,617,736,787 ÷ 140,299,963。精确拆出 −18.8396 与 −1,019.4365 百万美元。两项是同一总额按明确顺序的归因，若调换计算顺序，交叉项也会换边。它们不等于逐笔订单实际交收的现金。</p>
+<p>三季报财务表原单位为千美元，本文财务表换算为百万美元。股数和 BTC 枚数未按千缩放。敏感性表用未四舍五入的基准及 0.00044194 BTC/股逐格运算，最后才按美分四舍五入。现金余额、运作净增、申购额及资产规模各取自己的报表项。</p>
+<h3>与上一历史日期的衔接</h3>
+<p>上一期研究日期是 2026 年 11 月 10 日，当时行情锚点为 11 月 9 日。旧稿列收盘 32.94 美元，按其原样计算到本期会得到约 −21.74%。灰度历史日表和完成日线均列 33.05 美元，故正文采用 33.05 为可比基准，区间 −22.00%。11 月 10 日当天的收盘 32.58 美元发生在旧稿之后，也不能充当起点。</p>
+<p>旧稿用 10 月 26 日每股含币量和 11 月 9 日现货日线近似估值，曾列 11 月 9 日折价约 0.06%。在发行人同日官方 NAV 可得后，该日市场价和 NAV 均为 33.05 美元，按公布精度折溢价为 0.00%。上期 Q3 零赎回这一事实仍成立。据其推断最终持有人身份及投资期限超出了申报能提供的信息。</p>
+<h3>数据时限与已知局限</h3>
+<p>2026-11-20 的官方日表已同时公布净值与市场价，NYSE Arca 上市通告仅用来确认证券身份。Farside 当日行业数据尚有空项。不同日表可按订单或结算进度更新。第三季度报表止于 9 月末，它的损益不可滚动充当 11 月业绩。官网工作簿随发行人更新。正文标出的历史日期、口径和 SEC 文件编号共同界定本期取值。</p>
+<p class="sources"><a href="https://etfs.grayscale.com/btc">Grayscale · 发行人收盘及 NAV</a> · <a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">发行人历史工作簿</a> · <a href="https://stockanalysis.com/etf/btc/history/">Stock Analysis · 常规收盘</a> · <a href="https://finance.yahoo.com/quote/BTC/history/">Yahoo Finance · 历史未复权收盘</a> · <a href="https://markets.ft.markitdigital.com/data/etfs/tearsheet/historical?s=BTC:PCQ:USD">Financial Times / Markit · 历史收盘</a></p>
+</div>
+<div class="card" id="disclosures"><h2>披露原件与公开来源</h2>
+<div class="table-scroll"><table><caption>原始披露｜提交日期、覆盖事项与相邻出处</caption><thead><tr><th scope="col">提交日</th><th scope="col">文件与覆盖事项</th><th scope="col">阅读链接</th></tr></thead>
+<tbody><tr><th scope="row">2026-11-16</th><td>FWP · 广告材料（本期新增）<br/><small>15 秒广告脚本及风险说明。SEC 完整提交原件内含配图编码，可在官方图文版阅读。</small></td><td><a href="../../../sources/btc/SEC_Filings/BTC_FWP_2026-11-16_0001193125-26-463354.html">本地阅读</a>　<a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526463354/0001193125-26-463354.txt">SEC 官方原文</a></td></tr>
+<tr><th scope="row">2026-11-05</th><td>10-Q 附件 10.3（本期新增）<br/><small>广告审查与备案代理协议，查看关联方职责、生效日及适用主体。</small></td><td><a href="../../../sources/btc/SEC_Filings/BTC_2026-Q3_10-Q_EX-10.3_2026-11-05.htm">本地阅读</a>　<a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-ex10_3.htm">SEC 官方原文</a></td></tr>
+<tr><th scope="row">2026-11-05</th><td>10-Q · 截至 9 月 30 日<br/><small>2026 年第三季度及前九个月的财务报表、季度申赎、两种净值。</small></td><td><a href="../../../sources/btc/SEC_Filings/BTC_2026-Q3_10-Q_2026-11-05.htm">本地阅读</a>　<a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">SEC 官方原文</a></td></tr>
+<tr><th scope="row">2026-08-04</th><td>10-Q · 截至 6 月 30 日<br/><small>二季度与上半年持币、费用、申赎及基准价格。</small></td><td><a href="../../../sources/btc/SEC_Filings/BTC_2026-Q2_10-Q_2026-08-04.htm">本地阅读</a>　<a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000008/btc-20260630.htm">SEC 官方原文</a></td></tr>
+<tr><th scope="row">2026-03-16</th><td>8-K · 估值基准<br/><small>4 月 1 日起的 CBBR 和替代估值层级。</small></td><td><a href="../../../sources/btc/SEC_Filings/BTC_8-K_2026-03-16.htm">本地阅读</a>　<a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526108384/btc-20260316.htm">SEC 官方原文</a></td></tr>
+<tr><th scope="row">2026-02-25</th><td>10-K · 截至 2025 年 12 月 31 日<br/><small>年末持币、信托条款、托管与运营风险。</small></td><td><a href="../../../sources/btc/SEC_Filings/BTC_FY2025_10-K_2026-02-25.htm">本地阅读</a>　<a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526071952/btc-20251231.htm">SEC 官方原文</a></td></tr>
+<tr><th scope="row">2026-02-06</th><td>8-K · 2 月 2 日事项<br/><small>核对授权参与人的现金及实物订单安排。</small></td><td><a href="../../../sources/btc/SEC_Filings/BTC_8-K_2026-02-06.htm">本地阅读</a>　<a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526041204/btc-20260202.htm">SEC 官方原文</a></td></tr></tbody></table>
+</div>
+<p>11 月 16 日的三份 FWP 属同一类营销申报。表内存档选取一份完整提交，另可查看<a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526463354/gryscl_minis_doctor_15_b.htm">该份官方图文版</a>、<a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526463346/gryscl_minis_30_btc_new.htm">同日 30 秒版本</a>及<a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526463434/gryscl_minis_jerry_15_bt.htm">同日另一份 15 秒版本</a>。最近的 10-Q 文件编号为 0002015034-26-000010。</p>
+<p>发行人每日工作簿用作滚动时序的官方来源，本文链接至发行人提供的文件。机构评论及资金流表仅列发布方链接。</p>
+<p class="sources"><a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/0002015034-26-000010-index.htm">SEC · 三季报及附件清单</a> · <a href="https://data.sec.gov/submissions/CIK0002015034.json">SEC · CIK 0002015034 全部申报</a> · <a href="https://www.nyse.com/publicdocs/nyse/markets/nyse-arca/rule-interpretations/2024/NYSE_Arca_RB-24-131.pdf">NYSE Arca · 2024/7/31 首次挂牌通告</a> · <a href="https://etfs.grayscale.com/btc">灰度产品页</a> · <a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">灰度官方工作簿</a></p>
+</div>
+<div class="footnote"><p>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p>
+<p>2026 年 11 月 21 日 · Grayscale Bitcoin Mini Trust ETF（NYSE Arca · BTC）</p>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

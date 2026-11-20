@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>灰度迷你比特币信托 2026-11-21 · 移动版 · 投资研究档案</title>
+<style>
+
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+  .card p {margin:12px 0}
+  .card .sources {font-size:12px; line-height:1.9; color:var(--text-secondary); margin-top:18px}
+  a {color:#265c44; text-underline-offset:3px}
+  .sidebar a {overflow-wrap:anywhere}
+  .card-note,.figure-note {font-size:12px; color:var(--text-secondary); line-height:1.6}
+  .summary-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .summary-item .label {font-size:12px; color:var(--text-secondary); margin:0}
+  .summary-item .value {font-size:clamp(17px,2.1vw,24px); margin:6px 0; overflow-wrap:anywhere}
+  .table-scroll {max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:16px 0}
+  .table-scroll table {display:table; margin:0; overflow:visible; border-collapse:collapse}
+  caption {text-align:left; font-weight:650; padding:0 0 8px; color:var(--text-secondary); font-size:13px}
+  table th[scope="row"] {font-size:13px; font-weight:600; text-align:left; padding:10px 12px; border-bottom:1px solid var(--border-light); color:#244f3a}
+  table th,table td {vertical-align:top; text-align:left; line-height:1.55}
+  thead th {white-space:normal}
+  tbody tr:nth-child(even) th {background:var(--bg-stripe)}
+  .card small {font-size:12px; color:var(--text-secondary)}
+  svg[role="img"] {display:block; width:100%; height:auto; max-width:760px; margin:8px auto 0}
+  .axis-label {font-family:system-ui,sans-serif; font-size:12px; fill:#476450}
+  .plot-label {font-family:system-ui,sans-serif; font-size:14px; font-weight:650; fill:#204e38}
+  .chart-legend {justify-content:flex-start}
+  #reliability {border-left:4px solid var(--accent)}
+  @media(max-width:640px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.table-scroll table{min-width:410px}.chart{padding:12px 6px}.card .sources{font-size:12px}.summary-item{padding:12px 5px}.chart-title small{display:block;margin-left:0}}
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research compact"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/btc/index.html">披露资料</a><a href="index.html">PC 完整版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">BTC <span>·</span> 2026-11-21 <span>·</span> 移动精简版</div><h1>灰度迷你比特币信托</h1></header><main class="mobile-report"><section aria-labelledby="key-data"><h2 id="key-data">关键数字</h2><div class="key-numbers"><div><span>2026-11-20 · 11/20 美股常规收盘</span><strong>25.78 美元</strong></div><div><span>2026-11-20 · 每股 NAV</span><strong>25.79 美元</strong></div><div><span>同日收盘折溢价</span><strong>−0.04%</strong></div><div><span>基金持币总量</span><strong>62,004.6153</strong></div><div><span>每股对应比特币</span><strong>0.00044194</strong></div><div><span>年度发起人费率</span><strong>0.15%</strong></div></div></section><section><h2>核心图表</h2><figure class="mobile-chart"><figcaption>收盘价与每股 NAV 同步下行 2026-11-09 至 11-20 · 美元/股</figcaption><figure class="chart"><figcaption class="chart-title">收盘价与每股 NAV 同步下行 <small>2026-11-09 至 11-20 · 美元/股</small></figcaption><div class="chart-legend"><span><i style="background:#245d47"></i>NAV</span><span><i style="background:#ad5b20"></i>收盘价</span></div><svg role="img" viewbox="0 0 634 210"><title id="price-title">2026 年 11 月 9 日至 20 日，ETF 收盘价和 NAV，美元/股</title><desc id="price-desc">两条线始于 33.05 美元，11 月 11 日短暂回升。11 月 20 日市价 25.78 美元、净值 25.79 美元。横轴按日历等比例，逐日数字见下表。</desc><line stroke="#d4e1d9" x1="52" x2="575" y1="163" y2="163"></line><text class="axis-label" text-anchor="end" x="43" y="167">25</text><line stroke="#d4e1d9" x1="52" x2="575" y1="133.6" y2="133.6"></line><text class="axis-label" text-anchor="end" x="43" y="137.6">27</text><line stroke="#d4e1d9" x1="52" x2="575" y1="104.2" y2="104.2"></line><text class="axis-label" text-anchor="end" x="43" y="108.2">29</text><line stroke="#d4e1d9" x1="52" x2="575" y1="74.80000000000001" y2="74.80000000000001"></line><text class="axis-label" text-anchor="end" x="43" y="78.80000000000001">31</text><line stroke="#d4e1d9" x1="52" x2="575" y1="45.400000000000006" y2="45.400000000000006"></line><text class="axis-label" text-anchor="end" x="43" y="49.400000000000006">33</text><polyline fill="none" points="53.0,44.7 100.3,51.7 147.5,45.8 194.8,66.9 242.1,83.2 383.9,108.2 431.2,115.2 478.5,124.2 525.7,127.4 573.0,151.4" stroke="#245d47" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></polyline><polyline fill="none" points="53.0,44.7 100.3,51.6 147.5,45.8 194.8,67.2 242.1,83.5 383.9,108.0 431.2,115.1 478.5,124.5 525.7,127.7 573.0,151.5" stroke="#ad5b20" stroke-dasharray="4 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></polyline><circle cx="53" cy="44.66500000000005" fill="#ad5b20" r="2.8"></circle><circle cx="100.27272727272728" cy="51.57400000000003" fill="#ad5b20" r="2.8"></circle><circle cx="147.54545454545456" cy="45.84100000000002" fill="#ad5b20" r="2.8"></circle><circle cx="194.8181818181818" cy="67.156" fill="#ad5b20" r="2.8"></circle><circle cx="242.0909090909091" cy="83.473" fill="#ad5b20" r="2.8"></circle><circle cx="383.9090909090909" cy="108.02200000000002" fill="#ad5b20" r="2.8"></circle><circle cx="431.1818181818182" cy="115.07799999999997" fill="#ad5b20" r="2.8"></circle><circle cx="478.4545454545455" cy="124.48599999999999" fill="#ad5b20" r="2.8"></circle><circle cx="525.7272727272727" cy="127.72000000000003" fill="#ad5b20" r="2.8"></circle><circle cx="573" cy="151.534" fill="#ad5b20" r="2.8"></circle><text class="plot-label" x="55" y="26">33.05</text><text class="plot-label" text-anchor="end" x="568" y="136">25.78</text><text class="axis-label" text-anchor="middle" x="53" y="192">11/9</text><text class="axis-label" text-anchor="middle" x="147.54545454545456" y="192">11/11</text><text class="axis-label" text-anchor="middle" x="242.0909090909091" y="192">11/13</text><text class="axis-label" text-anchor="middle" x="383.9090909090909" y="192">11/16</text><text class="axis-label" text-anchor="middle" x="478.4545454545455" y="192">11/18</text><text class="axis-label" text-anchor="middle" x="573" y="192">11/20</text></svg><p class="figure-note">两条线在美元尺度上几乎重合。11/13 至 11/16 的连线跨过周末，中间没有 ETF 常规收盘观测。</p></figure></figure><figure class="mobile-chart"><figcaption>同一窗口的收盘折溢价 2026-11-09 至 11-20 · 基点，1 基点 = 0.01%</figcaption><figure class="chart"><figcaption class="chart-title">同一窗口的收盘折溢价 <small>2026-11-09 至 11-20 · 基点，1 基点 = 0.01%</small></figcaption><svg role="img" viewbox="0 0 634 193"><title id="prem-title">2026 年 11 月折溢价，基点</title><desc id="prem-desc">十个常规收盘观察位于负七至正四个基点之间，最后一天为负四个基点。横轴按日历定位。</desc><line stroke="#d4e1d9" x1="52" x2="575" y1="46" y2="46"></line><text class="axis-label" text-anchor="end" x="43" y="50">+5</text><line stroke="#d4e1d9" x1="52" x2="575" y1="85" y2="85"></line><text class="axis-label" text-anchor="end" x="43" y="89">0</text><line stroke="#d4e1d9" x1="52" x2="575" y1="124" y2="124"></line><text class="axis-label" text-anchor="end" x="43" y="128">-5</text><line stroke="#d4e1d9" x1="52" x2="575" y1="163" y2="163"></line><text class="axis-label" text-anchor="end" x="43" y="167">-10</text><line stroke="#758c7d" x1="52" x2="575" y1="85" y2="85"></line><polyline fill="none" points="53.0,85.0 100.3,61.6 147.5,85.0 194.8,131.8 242.1,139.6 383.9,61.6 431.2,53.8 478.5,139.6 525.7,139.6 573.0,116.2" stroke="#487763" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline><circle cx="53" cy="85" fill="#245d47" r="3.8"></circle><circle cx="100.27272727272728" cy="61.6" fill="#245d47" r="3.8"></circle><circle cx="147.54545454545456" cy="85" fill="#245d47" r="3.8"></circle><circle cx="194.8181818181818" cy="131.8" fill="#aa5841" r="3.8"></circle><circle cx="242.0909090909091" cy="139.60000000000002" fill="#aa5841" r="3.8"></circle><circle cx="383.9090909090909" cy="61.6" fill="#245d47" r="3.8"></circle><circle cx="431.1818181818182" cy="53.8" fill="#245d47" r="3.8"></circle><circle cx="478.4545454545455" cy="139.60000000000002" fill="#aa5841" r="3.8"></circle><circle cx="525.7272727272727" cy="139.60000000000002" fill="#aa5841" r="3.8"></circle><circle cx="573" cy="116.2" fill="#aa5841" r="3.8"></circle><text class="axis-label" text-anchor="middle" x="53" y="185">11/9</text><text class="axis-label" text-anchor="middle" x="147.54545454545456" y="185">11/11</text><text class="axis-label" text-anchor="middle" x="242.0909090909091" y="185">11/13</text><text class="axis-label" text-anchor="middle" x="383.9090909090909" y="185">11/16</text><text class="axis-label" text-anchor="middle" x="478.4545454545455" y="185">11/18</text><text class="axis-label" text-anchor="middle" x="573" y="185">11/20</text></svg></figure></figure></section><section><h2>研究速读</h2><article><h3>核心判断</h3><p>2026 年 11 月 20 日，BTC 在 NYSE Arca 的美股常规收盘为 25.78 美元/股，比 11 月 9 日经复核的 33.05 美元下跌 22.00%。同一期间每股 NAV 从 33.05 跌至 25.79 美元，跌幅 21.97%。11/20 收盘折价 0.04%。</p></article><article><h3>经营变化</h3><p>若下跌是由份额流动性失灵造成，市价会比同一时刻的净值跌得更多。11 月 9 日到 20 日的十个常规收盘提供了直接检验。单日收盘偏离介于 −7 与 +4 个基点，绝对偏离中位数约 4 个基点。市价下跌 7.27 美元/股，其中官方净值下降 7.26 美元/股，端点价差再扩大 0.01 美元/股。</p></article><article><h3>估值与风险</h3><p>每股运营 NAV =（信托持币量 × 当日 CBBR ＋ 其他资产 − 负债）÷ 当日发行份额。 11 月 20 日 62,004.6153 BTC ÷ 140,299,963 股 = 0.0004419432 BTC/股。</p></article></section><section><h2>资料与出处</h2><ul class="source-list"><li><a href="https://etfs.grayscale.com/btc">灰度产品页</a></li><li><a href="https://stockanalysis.com/etf/btc/history/">Stock Analysis 常规日线</a></li><li><a href="https://data.sec.gov/submissions/CIK0002015034.json">SEC 申报记录</a></li><li><a href="https://reporting-prod-20231113144948145500000003.s3.amazonaws.com/product-performance/9ba286d6-3067-4153-b430-81d9d7a25696.xlsx">灰度官方历史工作簿</a></li><li><a href="https://www.nyse.com/publicdocs/nyse/markets/nyse-arca/rule-interpretations/2024/NYSE_Arca_RB-24-131.pdf">NYSE Arca 上市通告</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/0002015034-26-000010-index.htm">SEC 身份与季报索引</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/2015034/000201503426000010/btc-20260930.htm">10-Q 附注 1、2 与发起人费</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/2015034/000119312526041204/btc-20260202.htm">2026-02-06 申赎机制 8-K</a></li></ul><a href="../../../sources/btc/index.html">披露资料</a></section><a class="read-complete" href="index.html">查看完整报告 <span aria-hidden="true">→</span></a></main><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>
