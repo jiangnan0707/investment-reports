@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>TransMedics 2026-11-21 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+  .chart { margin: 18px 0; }
+  .data-svg { display: block; width: 100%; height: auto; font-size: 16px; font-variant-numeric: tabular-nums; }
+  .chart-source { color: var(--text-muted); font-size: 12px; line-height: 1.65; margin-top: 8px; overflow-wrap: anywhere; }
+  .table-wrap { overflow-x: auto; margin: 18px 0; }
+  .table-wrap table { margin: 0; }
+  .table-wrap th[scope="row"] { font-weight: 600; text-align: left; color: var(--text-primary); padding: 11px 14px; border-bottom: 1px solid var(--border-light); }
+  .table-wrap tr:nth-child(even) th[scope="row"] { background: var(--bg-stripe); }
+  .table-wrap tr:last-child th[scope="row"] { border-bottom: 0; }
+  .summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .summary-item .value { overflow-wrap: anywhere; }
+  .watch-list, .source-list { padding-left: 1.4em; }
+  .watch-list li { margin: 6px 0; }
+  .card { scroll-margin-top: 16px; }
+  @media (max-width: 900px) {
+    .main-content { width: 100%; }
+  }
+  @media (max-width: 768px) {
+    .table-wrap table { display: table; min-width: 480px; }
+    .data-svg { font-size: 21px; }
+    .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .chart-legend { flex-wrap: wrap; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/tmdx/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20TransMedics%EF%BC%88TMDX%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ATransMedics%EF%BC%88TMDX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">TMDX <span>·</span> 2026-11-21 <span>·</span> PC 完整版</div><h1>TransMedics</h1><p>纳斯达克 TMDX ｜ 行情至美东 2026-11-20 收盘 ｜ 财务至 2026-09-30</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式与竞争壁垒</a></li><li><a href="#core-metric">三、核心指标与美国 OCS 移植例数</a></li><li><a href="#financials">四、最新财务与全年指引</a></li><li><a href="#cash">五、现金流、总部购置与债务</a></li><li><a href="#pipeline">六、临床项目与欧洲扩张</a></li><li><a href="#risk">七、财务质量与公司治理</a></li><li><a href="#policy">八、政策风险</a></li><li><a href="#valuation">九、估值与历史位置</a></li><li><a href="#bull-bear">十、多空核心分歧</a></li><li><a href="#analysts">十一、华尔街分析师全景</a></li><li><a href="#community">十二、社区讨论与短仓</a></li><li><a href="#conclusion">十三、综合判断框架</a></li><li><a href="#data-notes">数据说明</a></li></ul></aside><main class="main-content report-body">
+<section class="card" id="reliability"><h2>数据可靠性声明</h2><p>行情以美东 2026 年 11 月 20 日 16:00 为准（北京时间 11 月 21 日 05:00）。公司于 11 月 5 日 16:02 美东时间发布截至 9 月 30 日的三季报业绩；当日 16:30 举行业绩电话会。所有金额为美元。</p>
+<p><span class="src-badge src-s">一手</span> 交易所、公司、SEC 与监管机构　<span class="src-badge src-2">二手</span> 行情与卖方报道　<span class="src-badge src-3">三方</span> 社区观点　<span class="src-badge src-e">推算</span> 披露数计算　<span class="src-badge src-t">时效</span> 观察日期</p>
+<p><a href="#source-docs">本地披露及官方原件</a>　·　<a href="#webcasts">公司授权会议回放</a>　·　<a href="#method-price">常规收盘核验口径</a></p></section>
+<section class="card" id="snapshot"><h2>一、公司速览</h2><div class="summary-grid"><div class="summary-item"><div class="value">85.25 美元</div><div class="label">2026-11-20 · 11/20 美股常规收盘</div></div><div class="summary-item"><div class="value">−9.33%</div><div class="label">较 11/19 收盘 · −8.77 美元</div></div><div class="summary-item"><div class="value">29.61 亿美元</div><div class="label">11/20 基本股权市值 · 推算</div></div><div class="summary-item"><div class="value">23.10×</div><div class="label">四季 GAAP 稀释 EPS 合计口径</div></div><div class="summary-item"><div class="value">4.07×</div><div class="label">TTM 市销率 · 推算</div></div><div class="summary-item"><div class="value">5,139 例</div><div class="label">2025 全年 · 美国 OCS 移植</div></div></div><p class="quote"><strong>核心判断</strong>　11/20 美股常规收盘为 85.25 美元，较上期的 94.02 美元下跌 9.33%。当天公开的 Stifel 研究报道质疑四季度迄今的飞行活动能否支撑美国肝业务增速。公司尚未更新收入指引。三季度肝、心采用继续扩大，前九个月自由现金流却从 114.590 降至 25.697 百万美元。维持对临床需求的判断，把四季度常规肝移植例数和回款列为下一次检验。</p><div class="table-wrap"><table><thead><tr><th scope="col">公司与业务</th><th scope="col">截至本期可核对的事实</th></tr></thead><tbody><tr><th scope="row">TransMedics Group, Inc.</th><td>总部位于美国马萨诸塞州安多弗。器官保存系统（OCS）产生设备和一次性耗材收入，全国 OCS 项目（NOP）提供人员、获取协调和运输。</td></tr><tr><th scope="row">三季度经营</th><td>营收 203.005 百万美元，同比增 41.1%。剔除并表的 PAD 客运包机收入后，有机增速为 34.6%。</td></tr><tr><th scope="row">收盘与事件</th><td>11/5 盘后发布业绩，当天常规收盘 68.98 美元，11/6 收 88.24 美元。11/20 相对 11/5 仍高 23.59%。当天纳指综指约跌 5.3%，个股和大盘均回落。</td></tr><tr><th scope="row">验证顺序</th><td>看实际完成的移植、其中使用 NOP 的服务范围，再核对服务毛利与经营现金流。单日价格和飞行次数难以直接回答医院是否持续采用。</td></tr></tbody></table></div><p class="chart-source"><a href="https://www.nasdaq.com/market-activity/stocks/tmdx/">Nasdaq 上市交易所</a> · <a href="https://api.nasdaq.com/api/quote/TMDX/info?assetclass=stocks&amp;refresh=14960129">Nasdaq 常规收盘字段</a> · <a href="https://stockanalysis.com/stocks/tmdx/history/">Stock Analysis 日线</a> · <a href="https://investors.transmedics.com/news-releases/news-release-details/transmedics-reports-third-quarter-2026-financial-results">11/5 公司业绩公告</a> · <a href="https://www.investing.com/news/analyst-ratings/stifel-raises-transmedics-stock-price-target-on-mixed-results-93CH-5041978">Investing.com 11/20 报道</a> · <a href="https://cdn.ameriprisecontent.com/cds/alwp/marketperspectives/aftertheclose-2026-11-20a.pdf">Ameriprise 11/20 市场收盘综述</a></p></section>
+<section class="card" id="business"><h2>二、商业模式与竞争壁垒</h2>
+<h3>2.1 移植例数带来耗材收入，服务范围决定单例收入</h3>
+<p>OCS 为医生提供供体器官保存及评估能力。产品收入主要随耗材使用和设备销售变化。全国 OCS 项目（NOP）把临床人员、获取协调及运输接入移植中心的工作流程，医院可按需使用服务。地面和航空任务的组合、外包比例及合同计费都会改变单例经济性。</p>
+<figure class="chart"><figcaption class="chart-title">2025 Q3 和 2026 Q3 产品及服务收入（百万美元）</figcaption><svg class="data-svg" role="img" viewbox="0 0 640 265"><title id="chart-title-0">2025 Q3 和 2026 Q3 产品及服务收入</title><desc id="chart-desc-0">截至两个年度 9 月 30 日的三个月，单位为百万美元。产品从 87.677 增至 113.419，服务从 56.146 增至 89.586。</desc><line stroke="var(--border-light)" x1="55" x2="588" y1="220.0" y2="220.0"></line><text fill="var(--text-muted)" text-anchor="end" x="48" y="224.0">0</text><line stroke="var(--border-light)" x1="55" x2="588" y1="132.0" y2="132.0"></line><text fill="var(--text-muted)" text-anchor="end" x="48" y="136.0">100</text><line stroke="var(--border-light)" x1="55" x2="588" y1="44.0" y2="44.0"></line><text fill="var(--text-muted)" text-anchor="end" x="48" y="48.0">200</text><rect fill="var(--accent)" height="77.16" width="102" x="128" y="142.84"></rect><rect fill="#8ebca3" height="49.41" width="102" x="128" y="93.44"></rect><text fill="white" text-anchor="middle" x="179" y="186.42">87.7</text><text fill="#143621" text-anchor="middle" x="179" y="123.14">56.1</text><text fill="var(--text-primary)" text-anchor="middle" x="179" y="245">Q3 2025</text><rect fill="var(--accent)" height="99.81" width="102" x="410" y="120.19"></rect><rect fill="#8ebca3" height="78.84" width="102" x="410" y="41.36"></rect><text fill="white" text-anchor="middle" x="461" y="175.10">113.4</text><text fill="#143621" text-anchor="middle" x="461" y="85.77">89.6</text><text fill="var(--text-primary)" text-anchor="middle" x="461" y="245">Q3 2026</text><line stroke="var(--border)" stroke-dasharray="4 4" stroke-width="2" x1="230" x2="410" y1="142.84" y2="120.19"></line><line stroke="var(--border)" stroke-dasharray="4 4" stroke-width="2" x1="230" x2="410" y1="93.44" y2="41.36"></line><line stroke="var(--border)" stroke-dasharray="4 4" stroke-width="2" x1="230" x2="410" y1="220.00" y2="220.00"></line><text fill="var(--text-primary)" font-weight="700" text-anchor="middle" x="320" y="180.76">产品 +29.4%</text><text fill="var(--text-primary)" font-weight="700" text-anchor="middle" x="320" y="104.46">服务 +59.6%</text></svg>
+<div class="chart-legend"><span><i style="background:var(--accent)"></i>产品</span><span><i style="background:#8ebca3"></i>服务</span></div>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> · <a href="https://transmedicsinc.gcs-web.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">公司 Q3 业绩演示</a></p></figure>
+<div class="table-wrap"><table><thead><tr><th scope="col">Q3 2026</th><th scope="col">收入（百万美元）</th><th scope="col">毛利率</th><th scope="col">占收入</th><th scope="col">占毛利</th></tr></thead><tbody><tr><th scope="row">产品</th><td>113.419</td><td>79.2%</td><td>55.9%</td><td>75.7%</td></tr><tr><th scope="row">服务</th><td>89.586</td><td>32.2%</td><td>44.1%</td><td>24.3%</td></tr><tr><th scope="row">合并</th><td>203.005</td><td>58.5%</td><td>100%</td><td>100%</td></tr></tbody></table></div>
+<p>服务占收入 44.1%，贡献毛利 24.3%。三季度产品毛利率 79.2%，服务毛利率 32.2%，去年同期分别为 78.7% 和 27.8%。产品收入增长提高了毛利额；服务增长更快，拉低了高毛利产品的收入权重。公司披露合并毛利率为 58.5%，剔除 PAD 后为 61.1%。</p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> · <a href="https://transmedicsinc.gcs-web.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">公司 Q3 业绩演示</a> <span class="src-badge src-e">推算</span></p>
+<h3>2.2 巴菲特视角下的客户切换成本</h3>
+<p>分器官的 FDA 上市许可、积累的临床证据及嵌入医院流程的人员协同，构成复制成本。设备、耗材和服务各有替代方案。现有客户的重复采用、实际交付率与医院单例总成本能检验网络带来的优势。长期持续性还取决于设备获批范围、服务人员和机队密度能否同时支撑有利润的交付。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">替代路径</th><th scope="col">产品与所有权</th><th scope="col">对 TMDX 的检验</th></tr></thead><tbody><tr><th scope="row">常温肝灌注</th><td>OrganOx metra 获 FDA 批准。OrganOx 已由 Terumo 收购。</td><td>同为肝灌注选择，按相近适应症比较采用率与总成本。</td></tr><tr><th scope="row">肺灌注及温控运输</th><td>FDA 已有其他肺灌注产品批准。Paragonix（Getinge）提供温控保存与运输。</td><td>部分中心可重新组合设备、人员与运输，以降低总成本或匹配院内流程。</td></tr><tr><th scope="row">院内采购与独立运输</th><td>器官获取组织及医院可自行协调，按地区使用商用或按需运输。</td><td>在任务密度不足的区域，外部运力较易替代自有机队的固定成本。</td></tr></tbody></table></div>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_FY2025_10-K_2026-02-24.htm">FY2025 10-K</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMA/pma.cfm?id=P200035">FDA OrganOx metra 批件</a> · <a href="https://www.terumo.com/newsrelease/detail/20251030/6761">Terumo 完成 OrganOx 收购</a> · <a href="https://www.getinge.com/us/company/news/press-releases/2024/4897674-Getinge-completes-the-acquisition-of-Paragonix-Technologies/">Getinge 完成 Paragonix 收购</a> · <a href="https://www.accessdata.fda.gov/cdrh_docs/pdf25/P250025B.pdf">FDA TorEx Lung 审评摘要</a></p>
+<h3>2.3 运力、航油与单例服务成本</h3>
+<p>期末自有固定翼飞机 22 架，完成了三季度 <strong>86% 的 NOP 飞行任务</strong>。该分母只含需要飞行的任务。当地地面运输、外包航段、空机调位和 PAD 客运包机都会使公众观察到的航班与完成移植例数出现偏差。机队利用率还需要可用机时和实际飞行小时数。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">公司服务数据</th><th scope="col">2026 Q3 约数</th><th scope="col">同比</th><th scope="col">环比</th></tr></thead><tbody><tr><th scope="row">临床服务收入</th><td>38 百万美元</td><td>+37.1%</td><td>+5.1%</td></tr><tr><th scope="row">移植物流收入</th><td>41 百万美元</td><td>+49.5%</td><td>−2.1%</td></tr><tr><th scope="row">合计服务收入（含其他服务）</th><td>89.586 百万美元</td><td>+59.6%</td><td>+13.7%</td></tr></tbody></table></div>
+<p>航油、机组、折旧、维修、外包飞行和地面运输都进入服务成本。Q3 服务成本 60.778 百万美元，上年同期 40.561 百万美元。管理层在 11/5 电话会上说明，物流定价调整抵消了部分高燃油成本。枢纽选择、外包比率以及向客户收回成本的时间共同决定净影响。季报未披露耗油量、实际购油均价或逐份合同回收比例。</p>
+<p>EIA 11/18 发布的美国墨西哥湾岸航油现货，11/13 为 4.032、11/17 为 3.763 美元/加仑。该序列既有地域差异，也早于 11/20 收盘。固定三季度业务量和收入，若额外承担 1 百万美元未能转嫁的服务成本，服务毛利率下降约 1.12 个百分点，合并毛利率下降约 0.49 个百分点。这个假设衡量利润暴露；现有资料无法把 11/20 的价格变化归因于燃油。</p>
+<p class="chart-source"><a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a> · <a href="https://investors.transmedics.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">11/5 公司业绩演示</a> · <a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">11/5 业绩电话会 · 公司 IR</a> · <a href="https://www.eia.gov/dnav/pet/hist/EER_EPJK_PF4_RGC_DPGD.htm">EIA 航油现货，11/18 发布</a> · <span class="src-badge src-e">推算</span></p></section>
+<section class="card" id="core-metric"><h2>三、核心指标与美国 OCS 移植例数</h2>
+<figure class="chart">
+<figcaption class="chart-title">2022–2025 年美国 OCS 年度移植例数（例）</figcaption>
+<svg class="data-svg" role="img" viewbox="0 0 640 255"><title id="chart-title-1">2022–2025 年美国 OCS 年度移植例数</title><desc id="chart-desc-1">完成例数依次为 986、2,356、3,735 和 5,139 例。</desc>
+<g fill="var(--text-muted)"><line stroke="var(--border-light)" x1="60" x2="608" y1="216.00" y2="216.00"></line><text text-anchor="end" x="52" y="221.00">0</text><line stroke="var(--border-light)" x1="60" x2="608" y1="154.67" y2="154.67"></line><text text-anchor="end" x="52" y="159.67">2,000</text><line stroke="var(--border-light)" x1="60" x2="608" y1="93.33" y2="93.33"></line><text text-anchor="end" x="52" y="98.33">4,000</text><line stroke="var(--border-light)" x1="60" x2="608" y1="32.00" y2="32.00"></line><text text-anchor="end" x="52" y="37.00">6,000</text></g>
+<polyline fill="none" points="60.00,185.76 242.50,143.75 425.50,101.46 608.00,58.40" stroke="var(--accent)" stroke-linejoin="round" stroke-width="3"></polyline>
+<g fill="var(--text-muted)"><circle cx="60.00" cy="185.76" fill="var(--accent)" r="4.2"><title>2022-12-31 · 986</title></circle><text fill="var(--accent)" font-weight="700" text-anchor="start" x="60.00" y="173.76">986</text><text text-anchor="start" x="60.00" y="245">2022</text><circle cx="242.50" cy="143.75" fill="var(--accent)" r="4.2"><title>2023-12-31 · 2,356</title></circle><text fill="var(--accent)" font-weight="700" text-anchor="middle" x="242.50" y="131.75">2,356</text><text text-anchor="middle" x="242.50" y="245">2023</text><circle cx="425.50" cy="101.46" fill="var(--accent)" r="4.2"><title>2024-12-31 · 3,735</title></circle><text fill="var(--accent)" font-weight="700" text-anchor="middle" x="425.50" y="89.46">3,735</text><text text-anchor="middle" x="425.50" y="245">2024</text><circle cx="608.00" cy="58.40" fill="var(--accent)" r="4.2"><title>2025-12-31 · 5,139</title></circle><text fill="var(--accent)" font-weight="700" text-anchor="end" x="608.00" y="46.40">5,139</text><text text-anchor="end" x="608.00" y="245">2025</text></g>
+</svg><p class="chart-source"><span class="src-badge src-s">一手</span> <a href="https://investors.transmedics.com/static-files/1439715b-7311-401f-b469-ac85bb64d76b">公司 2026 股东材料</a> · <a href="https://6ix.com/deck/4w72x0ds/transmedics-group-william-blair-2026">公司 William Blair 演示</a></p>
+</figure>
+<p>2025 年美国 OCS 例数同比 +37.6%，约占公司演示口径下全美心、肺、肝移植的 26%。公司称 Q3 2026 例数再创新高，肝和心例数均实现同比及环比增长。已核对资料提供了增减方向，连续季度绝对例数仍缺。</p>
+<h3>3.1 美国移植收入揭示器官之间的分化</h3>
+<figure class="chart"><figcaption class="chart-title">2025 Q3 与 2026 Q3 美国三类器官收入（百万美元）</figcaption><svg class="data-svg" role="img" viewbox="0 0 640 250"><title id="chart-title-2">2025 Q3 与 2026 Q3 美国三类器官收入</title><desc id="chart-desc-2">单位百万美元。肝脏从 107.883 增至 150.220，心脏从 27.401 增至 33.349，肺从 3.725 降至 1.956。</desc><line stroke="var(--border-light)" x1="52" x2="610" y1="205.0" y2="205.0"></line><text fill="var(--text-muted)" text-anchor="end" x="45" y="210.0">0</text><line stroke="var(--border-light)" x1="52" x2="610" y1="126.0" y2="126.0"></line><text fill="var(--text-muted)" text-anchor="end" x="45" y="131.0">80</text><line stroke="var(--border-light)" x1="52" x2="610" y1="47.0" y2="47.0"></line><text fill="var(--text-muted)" text-anchor="end" x="45" y="52.0">160</text><rect fill="#a0b8a7" height="106.53" rx="2" width="31" x="105" y="98.47"></rect><text fill="var(--text-primary)" text-anchor="middle" x="120.5" y="90.47">107.9</text><rect fill="var(--accent)" height="148.34" rx="2" width="31" x="151" y="56.66"></rect><text fill="var(--text-primary)" text-anchor="middle" x="166.5" y="48.66">150.2</text><text fill="var(--text-muted)" text-anchor="middle" x="143" y="233">肝脏</text><rect fill="#a0b8a7" height="27.06" rx="2" width="31" x="290" y="177.94"></rect><text fill="var(--text-primary)" text-anchor="middle" x="305.5" y="169.94">27.4</text><rect fill="var(--accent)" height="32.93" rx="2" width="31" x="336" y="172.07"></rect><text fill="var(--text-primary)" text-anchor="middle" x="351.5" y="164.07">33.3</text><text fill="var(--text-muted)" text-anchor="middle" x="328" y="233">心脏</text><rect fill="#a0b8a7" height="3.68" rx="2" width="31" x="475" y="201.32"></rect><text fill="var(--text-primary)" text-anchor="middle" x="490.5" y="193.32">3.7</text><rect fill="var(--accent)" height="1.93" rx="2" width="31" x="521" y="203.07"></rect><text fill="var(--text-primary)" text-anchor="middle" x="536.5" y="195.07">2.0</text><text fill="var(--text-muted)" text-anchor="middle" x="513" y="233">肺</text></svg><div class="chart-legend"><span><i style="background:#a0b8a7"></i>Q3 2025</span><span><i style="background:var(--accent)"></i>Q3 2026</span></div><p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a></p></figure>
+<div class="table-wrap"><table><thead><tr><th scope="col">美国业务</th><th scope="col">Q3 2025</th><th scope="col">Q3 2026</th><th scope="col">同比</th></tr></thead><tbody><tr><th scope="row">肝脏</th><td>107.883</td><td>150.220</td><td>+39.24%</td></tr><tr><th scope="row">心脏</th><td>27.401</td><td>33.349</td><td>+21.71%</td></tr><tr><th scope="row">肺</th><td>3.725</td><td>1.956</td><td>−47.49%</td></tr><tr><th scope="row">其他移植相关</th><td>0</td><td>0.437</td><td>新收入</td></tr><tr><th scope="row">合计（百万美元）</th><td>139.009</td><td>185.962</td><td>+33.78%</td></tr></tbody></table></div>
+<p>美国肝脏业务占合并营收约 74%，并贡献美国移植收入同比增量约九成。心脏收入增长受 ENHANCE Part A 试验活动带动。阶段性试验病例结束后，常规临床业务留存率能检验心脏业务的增长。肺业务的美国收入仍在收缩，新试验推动常规业务需经过入组、临床结果、审批和采购。</p>
+<h3>3.2 区分例数与每例产生的收入</h3>
+<p>临床协调、运输距离及计价会改变每例收入。管理层在 11/17 指出 NOP 能改善手术安排，并解释了 Heart Part A 对采用的推动。后续优先观察按器官拆分的 OCS 完成例数、试验与常规例数、临床服务使用率和扣除直接调度成本后的每例贡献。</p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> · <a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">11/5 业绩电话会 · 公司 IR</a> · <a href="https://investors.transmedics.com/events/event-details/jefferies-global-healthcare-conference-london/">11/17 Jefferies 会议 · 公司 IR</a></p>
+<h3>3.3 三个收入口径与病例数</h3>
+<p>全球移植相关收入为 192.554 百万美元，其中美国 185.962、海外 6.592。另有 10.451 百万美元非移植收入，其中 PAD 包机 9.385。剔除 PAD 后得到有机收入 193.620 百万美元，仍含约 1.066 百万美元其他非移植收入。全部器官收入都可能包括不同组合的耗材、临床支持和运输，用收入除以某个耗材单价会高估或低估完成例数。</p>
+<p>2026 年三季度，美国肝脏收入同比增加 42.337 百万美元，占美国移植相关收入增量 46.953 百万美元的 90.2%。四季度若肝脏常规例数放缓，心肺试验和欧洲包机收入可能仍支撑合并增长；届时应分别验证各来源。</p><p class="chart-source"><a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526066953/tmdx-ex99_1.htm">2025 Q4 及全年业绩公告</a> · <a href="https://investors.transmedics.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">11/5 公司业绩演示</a></p></section>
+<section class="card" id="financials"><h2>四、最新财务与全年指引</h2>
+<h3>4.1 三季度经营利润增长，前九个月仍低于同期</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">项目（金额为百万美元，EPS 为美元/股）</th><th scope="col">Q3 2025</th><th scope="col">Q3 2026</th><th scope="col">9M 2025</th><th scope="col">9M 2026</th></tr></thead><tbody><tr><th scope="row">收入</th><td>143.823</td><td>203.005</td><td>444.730</td><td>566.886</td></tr><tr><th scope="row">营业利润</th><td>23.300</td><td>28.141</td><td>87.310</td><td>65.174</td></tr><tr><th scope="row">GAAP 营业利润率</th><td>16.2%</td><td>13.9%</td><td>19.6%</td><td>11.5%</td></tr><tr><th scope="row">净利润</th><td>24.319</td><td>17.073</td><td>84.908</td><td>39.070</td></tr><tr><th scope="row">GAAP 稀释 EPS</th><td>0.66</td><td>0.46</td><td>2.28</td><td>1.08</td></tr><tr><th scope="row">调整后稀释 EPS</th><td>0.67</td><td>0.51</td><td>2.33</td><td>1.26</td></tr></tbody></table></div>
+<p>研发及临床费用从 15.260 增至 29.182 百万美元，其中咨询与第三方服务从 3.432 增至 11.178 百万美元。销售、一般及行政费用从 46.015 增至 61.334 百万美元。二者合计增加 29.241 百万美元，吸收了当季 34.082 百万美元新增毛利的约 86%。营业利润仍增 20.8%，但营业利润率同比下降 2.3 个百分点。</p>
+<p>税前利润 24.101 百万美元，略高于同期的 23.031。所得税从收益 1.288 百万美元变成费用 7.028 百万美元，净利润同比下降 29.8%。公司调整后净利润为 18.9 百万美元，调整后稀释每股收益 0.51 美元。会计利润和现金流的方向需要分别验证。</p>
+<h3>4.2 指引提高后，四季度中点与三季度接近</h3>
+<div class="summary-grid"><div class="summary-item"><div class="value">764–774</div><div class="label">FY2026 收入指引 · 百万美元</div></div><div class="summary-item"><div class="value">197.1–207.1</div><div class="label">隐含 Q4 收入 · 百万美元 · 推算</div></div><div class="summary-item"><div class="value">12.5%–14%</div><div class="label">FY2026 调整后营业利润率预期</div></div></div>
+<p>Q4 隐含中点 202.1 百万美元，较 Q3 低约 0.4%。剔除预计约 14 百万美元 PAD 贡献，全年收入区间为 750–760 百万美元，前值为 737–757 百万美元。公司预算假设未计入 Part B 和 DENOVO 的显著 Q4 增量。<span class="src-badge src-e">推算</span></p>
+<p>剔除 PAD 后，前九个月收入为 557.501，四季度需要实现 192.499–202.499 百万美元，中点 197.499。含 PAD 的四季度中点则为 202.114。两种中点相差 4.615 百万美元，对应全年约 14 百万美元 PAD 收入减去三季度已并表的 9.385。</p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> · <a href="../../../sources/tmdx/SEC_Filings/TMDX_Q3-2026_8-K_Ex99.1_Earnings_2026-11-05.htm">11/5 业绩公告（8-K 附件）</a> · <a href="https://transmedicsinc.gcs-web.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">公司 Q3 业绩演示</a> · <a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">11/5 业绩电话会 · 公司 IR</a> · <a href="https://investors.transmedics.com/events/event-details/stifel-2026-healthcare-conference/">11/10 Stifel 会议 · 公司 IR</a> · <a href="https://investors.transmedics.com/events/event-details/jefferies-global-healthcare-conference-london/">11/17 Jefferies 会议 · 公司 IR</a></p>
+<h3>4.3 Stifel 与 Jefferies 会议透露了什么</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">美东日期</th><th scope="col">发言或披露</th><th scope="col">如何验证</th></tr></thead><tbody><tr><th scope="row">11/5 · 业绩会</th><td>公司提高全年收入指引，同时指出十月开局偏弱。</td><td>看剩余季度实际收入，以及剔除 PAD 后能否达到约 197.5 百万美元的隐含中点。</td></tr><tr><th scope="row">11/10 · Stifel 纽约会议</th><td>首席执行官 Waleed Hassanein 重申全年指引，承认十月放缓。谈及 2027 年时给出 20%–25% 的初步增长框架，其中已考虑临床项目。</td><td>季节性反弹、试验入组均待实现。把试验收入叠加到这一框架上会重复计量。</td></tr><tr><th scope="row">11/17 · Jefferies 伦敦会议</th><td>管理层说明初次给出 2027 年指引将从现有业务出发，后续依执行情况更新。</td><td>两场会议对新增项目的描述侧重点有别。正式区间、并表范围及试验假设，以全年业绩公告为准。</td></tr></tbody></table></div>
+<p>Stifel 会上，Hassanein 还举了两个例子。一家波士顿医疗系统试用供受体协调服务；另一家原本已有约 95%–97% 移植使用 OCS 的中心，新把物流交给 TransMedics。后者即使例数稳定，也能增加单例服务收入。两个客户的经历可以解释机制，不能外推为全网渗透率。</p><p>11/10 和 11/17 都发生在本期股价下跌前。两次问答补充了业务假设；公司截至 11/20 公开的 2026 年合并收入区间仍为 764–774 百万美元。</p><p class="chart-source"><a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">11/5 业绩电话会 · 公司 IR</a> · <a href="https://investors.transmedics.com/events/event-details/stifel-2026-healthcare-conference/">11/10 Stifel 会议 · 公司 IR</a> · <a href="https://investors.transmedics.com/events/event-details/jefferies-global-healthcare-conference-london/">11/17 Jefferies 会议 · 公司 IR</a> · <a href="https://stockanalysis.com/stocks/tmdx/transcripts/788425-stifel-2026-healthcare-conference-2026/">Stifel 会议公开转写</a> · <a href="https://stockanalysis.com/stocks/tmdx/transcripts/788439-jefferies-global-healthcare-conference/">Jefferies 会议公开转写</a></p></section>
+<section class="card" id="cash"><h2>五、现金流、总部购置与债务</h2>
+<h3>5.1 回款与库存削弱增长的现金转化</h3>
+<figure class="chart"><figcaption class="chart-title">2025 和 2026 年截至 9 月 30 日的九个月现金流（百万美元）</figcaption><svg class="data-svg" role="img" viewbox="0 0 640 250"><title id="chart-title-3">2025 和 2026 年截至 9 月 30 日的九个月现金流</title><desc id="chart-desc-3">单位百万美元。经营现金流由 158.327 降至 77.846，现金资本支出由 43.737 升至 52.149，自由现金流由 114.590 降至 25.697。</desc><line stroke="var(--border-light)" x1="52" x2="610" y1="205.0" y2="205.0"></line><text fill="var(--text-muted)" text-anchor="end" x="45" y="210.0">0</text><line stroke="var(--border-light)" x1="52" x2="610" y1="126.0" y2="126.0"></line><text fill="var(--text-muted)" text-anchor="end" x="45" y="131.0">90</text><line stroke="var(--border-light)" x1="52" x2="610" y1="47.0" y2="47.0"></line><text fill="var(--text-muted)" text-anchor="end" x="45" y="52.0">180</text><rect fill="#a0b8a7" height="138.98" rx="2" width="31" x="105" y="66.02"></rect><text fill="var(--text-primary)" text-anchor="middle" x="120.5" y="58.02">158.3</text><rect fill="var(--accent)" height="68.33" rx="2" width="31" x="151" y="136.67"></rect><text fill="var(--text-primary)" text-anchor="middle" x="166.5" y="128.67">77.8</text><text fill="var(--text-muted)" text-anchor="middle" x="143" y="233">经营现金流</text><rect fill="#a0b8a7" height="38.39" rx="2" width="31" x="290" y="166.61"></rect><text fill="var(--text-primary)" text-anchor="middle" x="305.5" y="158.61">43.7</text><rect fill="var(--accent)" height="45.78" rx="2" width="31" x="336" y="159.22"></rect><text fill="var(--text-primary)" text-anchor="middle" x="351.5" y="151.22">52.1</text><text fill="var(--text-muted)" text-anchor="middle" x="328" y="233">现金资本支出</text><rect fill="#a0b8a7" height="100.58" rx="2" width="31" x="475" y="104.42"></rect><text fill="var(--text-primary)" text-anchor="middle" x="490.5" y="96.42">114.6</text><rect fill="var(--accent)" height="22.56" rx="2" width="31" x="521" y="182.44"></rect><text fill="var(--text-primary)" text-anchor="middle" x="536.5" y="174.44">25.7</text><text fill="var(--text-muted)" text-anchor="middle" x="513" y="233">自由现金流</text></svg><div class="chart-legend"><span><i style="background:#a0b8a7"></i>9M 2025</span><span><i style="background:var(--accent)"></i>9M 2026</span></div><p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> <span class="src-badge src-e">推算</span></p></figure>
+<p>前九个月经营现金流从 158.327 降至 77.846 百万美元。应收账款从去年释放 17.532 百万美元转为占用 28.067，存货占用从 1.185 增至 19.357。这两项变动合计拖累同比现金流 63.771 百万美元，约占经营现金流降幅的 79.2%。后续回款和库存消化速度比单季净利更能区分扩张备货与持续占款。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">现金流（百万美元）</th><th scope="col">2025 Q3</th><th scope="col">2026 Q3</th><th scope="col">2025 前九个月</th><th scope="col">2026 前九个月</th></tr></thead><tbody><tr><th scope="row">经营活动净现金</th><td>69.573</td><td>36.004</td><td>158.327</td><td>77.846</td></tr><tr><th scope="row">付现购建固定资产</th><td>7.624</td><td>8.400</td><td>43.737</td><td>52.149</td></tr><tr><th scope="row">自由现金流</th><td>61.949</td><td>27.604</td><td>114.590</td><td>25.697</td></tr></tbody></table></div>
+<p>三季度自由现金流为正，前九个月的数值反而更低，因上半年已净流出 1.907 百万美元。三季度收现改善到足以覆盖当季资本支出，但单季和累计现金流仍低于上年同期。前九个月另付 PAD 投资净额 5.310 百万美元，属于收购投资现金流。总部新确认的融资租赁及存货转固定资产均属于非现金事项。</p><p class="chart-source"><a href="https://investors.transmedics.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">11/5 公司业绩演示</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526332843/tmdx-20260630.htm">2026 Q2 季报</a></p>
+<h3>5.2 总部付款和可转债是两笔分立的资金需求</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">事项</th><th scope="col">9/30 状态或合同数值</th><th scope="col">日期与验证点</th></tr></thead><tbody><tr><th scope="row">现金</th><td>492.962 百万美元，另列受限现金 18.438 百万美元</td><td>应结合回款、资产支出及可动用授信看期末流动性。</td></tr><tr><th scope="row">总部购置</th><td>融资租赁负债账面 351.533 百万美元，9M 新增使用权资产相关非现金负债 340.040 百万美元</td><td>10-Q 租赁附注按预计行使购置选择权，将 374.590 百万美元支付列于 2027 年。按该假设评估购置融资、余留现金和执行日期。</td></tr><tr><th scope="row">CIBC 银行贷款</th><td>未偿本金 55 百万美元，账面约 54.8 百万美元列在流动负债</td><td>2026 年 7 月开始按月还本，余款 2027 年 7 月到期。</td></tr><tr><th scope="row">可转换优先票据</th><td>本金 460 百万美元，固定票息 1.50%，初始转股价约 94 美元</td><td>2028 年 6 月 1 日到期。有条件转股条款、现金或股权结算选择，以及封顶看涨安排。</td></tr></tbody></table></div>
+<p>总部融资租赁在 Q3 产生约 3.87 百万美元账面利息。按 9 月现金静态扣除总部预计支付及银行贷款本金，剩约 63.4 百万美元。该压力测算只使用三个报表输入，实际余额还取决于经营现金流、其他支出与融资。<span class="src-badge src-e">推算</span></p>
+<p>11/20 的 85.25 美元低于票据初始转股价约 94 美元。提前转股的一项价格条件是前一季度末连续 30 个交易日内至少 20 日达到当时转股价的 130%，按初始价折算约 122.20 美元。合同还设其他条件，并允许现金、股票或组合结算。单日收盘无法决定实际稀释股数或偿债现金额。</p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> · <a href="../../../sources/tmdx/SEC_Filings/TMDX_FY2025_10-K_2026-02-24.htm">FY2025 10-K</a> · <a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">11/5 业绩电话会 · 公司 IR</a></p>
+<p>截至 9/30，现金 492.962 加受限现金 18.438 等于现金流量表期末合计 511.400 百万美元。总部的 374.590 百万美元是公司按预计行权列出的 2027 年付款。351.533 百万美元是同一融资租赁期末负债余额，两者只能在各自用途下取数。63.372 百万美元的余量是固定现金、扣一次总部付款及 55.000 百万美元银行贷款本金的静态结果，未来经营、融资、利息和其他支出均会改变它。</p><p class="chart-source"><a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526067032/tmdx-20251231.htm">2025 年报</a></p></section>
+<section class="card" id="pipeline"><h2>六、临床项目与欧洲扩张</h2>
+<h3>6.1 心肺试验以入组及临床终点验证</h3>
+<div class="timeline"><div class="tl-item"><div class="tl-date">2026 年 9 月</div><div class="tl-text">ENHANCE Heart Part A 完成 175 例入组。</div></div><div class="tl-item"><div class="tl-date">2026 年 10 月</div><div class="tl-text">FDA 批准 Part A 延续使用方案，可增 90 例。Part B 与 DENOVO 获 FDA 研究豁免批准，设计包括自有温控保存系统 CHOPS 对照。</div></div><div class="tl-item tl-future"><div class="tl-date">2027 年一季度 · 管理层预期</div><div class="tl-text">Part B 和 DENOVO 预计开始入组。11/17 的起始预计为 12–18 个月入组期，实际进展用首例与中心招募速度核对。</div></div><div class="tl-item tl-future"><div class="tl-date">2027 年下半年 · 公司目标</div><div class="tl-text">肾脏 OCS 计划启动首次人体临床使用。</div></div></div>
+<p>费雪视角下，研究能否扩大市场要看多中心临床结果、医生的重复采用与实际采购。试验期耗材和支持服务可能贡献收入。持续性要等研究结果、适应症审评、支付及常规病例数据验证。公司 11/5 提到心肺的年度潜在扩展区间 2,000–5,000 例，该估计描述未来可触达的需求。</p>
+<h3>6.2 欧洲物流先行，商业贡献看各国支付</h3>
+<p>PAD 于 7 月并表。公司持少数股权，因对其经济活动具有主导权而按可变利益实体合并，航空监管下的法律权属另行认定。三季度 PAD 包机收入约 9.4 百万美元。境外移植业务另录得 6.6 百万美元，占合并收入约 3.2%。</p>
+<p>公司披露意大利首个移植物流中标，计划在 2027 年上半年推进意大利、荷兰和比利时的 NOP。欧洲已有 OCS 业务，增量来自新器官服务和物流覆盖。Stifel 会上，财务负责人预计普通包机量可能在 2027 年上半年下降，移植物流在下半年的贡献更清晰，尚未给出金额。按国家对照支付协议、中标后的实际交付、包机转作移植物流的利用率和利润率，能衡量扩张是否带来可重复收入。</p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> · <a href="../../../sources/tmdx/SEC_Filings/TMDX_Q3-2026_8-K_Ex99.1_Earnings_2026-11-05.htm">11/5 业绩公告（8-K 附件）</a> · <a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">11/5 业绩电话会 · 公司 IR</a> · <a href="https://investors.transmedics.com/events/event-details/jefferies-global-healthcare-conference-london">Jefferies 公司会议页</a> · <a href="https://investors.transmedics.com/events/event-details/jefferies-global-healthcare-conference-london/">11/17 Jefferies 会议 · 公司 IR</a></p>
+<h3>6.3 心脏竞争的准入节点</h3><p>竞争对手 XVIVO 于 9/28 公告，美国 FDA 已收到其心脏辅助运输系统的上市前批准申请。支持申请的 PRESERVE 研究在 14 个美国中心纳入 141 人。这一事件把心脏业务的竞争观察点推进到 FDA 审评；截至本期，可核实的里程碑是提交申请。医院能否替换现有工作流程，还要看批准适用范围、采用成本和临床结局。</p>
+<p class="chart-source"><a href="https://www.xvivogroup.com/us/pressreleases/xvivo-announces-fda-receipt-of-pma-application-for-the-xvivo-heart-assist-transport-system/">XVIVO 9/28 公告</a></p></section>
+<section class="card" id="risk"><h2>七、财务质量与公司治理</h2>
+<h3>7.1 应收与营收增速接近，现金仍要看实际回款</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">项目</th><th scope="col">核对结果</th><th scope="col">后续验证</th></tr></thead><tbody><tr><th scope="row">应收账款</th><td>期末 114.935 百万美元，对比去年同期 80.702 百万美元，同比 +42.4%。</td><td>同期季度营收 +41.1%。重点看账龄、坏账和后续季度回款。</td></tr><tr><th scope="row">存货</th><td>期末 58.373 百万美元，对比去年同期 44.506 百万美元，同比 +31.2%。</td><td>库存流转记录的内控重大缺陷仍在整改，跟踪有效性测试和报废率。</td></tr><tr><th scope="row">现金与盈利</th><td>9M 经营现金流跌 50.8%，9M 自由现金流跌 77.6%。</td><td>跟踪成本投入、应收回收以及资本支出支付。</td></tr><tr><th scope="row">股权激励</th><td>前九个月股票薪酬 31.155 百万美元，上年同期 27.466 百万美元。</td><td>2026 股东批准股权激励计划增加 275 万股可用额度。看后续实际授予、归属及稀释。</td></tr></tbody></table></div>
+<p>库存控制已在二季度引入额外盘点和系统检查，公司目标是年末前完成测试及整改。SEC 季报披露，证券集体诉讼的驳回动议于 7 月被部分准许、部分驳回，余下事项进入证据开示。公司尚无法估量可能损失。</p>
+<h3>7.2 从拟售通知到实际成交</h3>
+<p>SEC 的 11/9 Form 144 记载董事 James R. Tobin 拟售 4,059 股。确认成交的证据来自 <strong>11/12 提交的 Form 4</strong>，11/9 当日成交 59 股，每股 93.96 美元，另 4,000 股加权均价 94.98 美元。两份文件描述同一数量，按所报价格合计约 38.55 万美元。</p>
+<p>截至美东 11/20 收盘后复核，发行人 SEC 提交清单的最新条目仍是该 Form 4。最近的定期财务报告是 11/5 的 10-Q，当日另有 8-K 业绩公告。11/13–11/20 在该清单中未见更新业绩、指引或资本安排的申报。上述董事申报也早于 11/20。</p><p class="chart-source"><a href="https://data.sec.gov/submissions/CIK0001756262.json">SEC 发行人申报清单</a> · <a href="https://investors.transmedics.com/news-releases/">公司新闻公告</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000195004726010898/xsl144X01/primary_doc.xml">11/9 Form 144</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526458437/xslF345X06/ownership.xml">11/12 Form 4</a></p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a> · <a href="../../../sources/tmdx/SEC_Filings/TMDX_2025-Q3_10-Q_2025-10-29.htm">2025 Q3 10-Q</a> · <a href="https://investors.transmedics.com/static-files/1439715b-7311-401f-b469-ac85bb64d76b">公司 2026 股东材料</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000195004726010898/xsl144X01/primary_doc.xml">11/9 Form 144</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526458437/xslF345X06/ownership.xml">11/12 Form 4</a></p>
+</section>
+<section class="card" id="policy"><h2>八、政策风险</h2>
+<h3>8.1 美国捐献流程和 NRP 卫生安全规则</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">政策与产品事项</th><th scope="col">已核实现状</th><th scope="col">传导强度与观察项</th></tr></thead><tbody><tr><th scope="row">循环死亡后捐献（DCD）</th><td>OPTN 多条规则已于 11/18 生效，覆盖家属告知、出现安全疑虑时暂停的机制、记录与报告。</td><td>中高。关注有多少项目推迟或取消，以及移植中心的恢复节奏。该规则对院内和器官获取环节有直接影响，OCS 例数是下游结果。</td></tr><tr><th scope="row">体内常温区域灌注（NRP）</th><td>OPTN 11 月紧急批准分阶段实施，11/13–12/28 公开征求意见，具体执行以公告为准。</td><td>中。NRP 与 OCS 的使用可能重叠，也可能是替代路线。观察适用中心的设备采用路径及项目执行时点。</td></tr><tr><th scope="row">器官获取组织（OPO）再认证</th><td>CMS-3409-F 于 11/3 刊登，2027/1/4 生效。调整指定、服务区竞争与申诉程序，保留既有分层框架。</td><td>中。观察服务区交接、采购方变化和 NOP 合同续约。</td></tr><tr><th scope="row">FDA 设备质量与市场准入</th><td>FDA 11/6 刊登事件 100063 的二级召回，涉及部分心、肝、肺灌注耗材，企业行动始于 5 月。</td><td>中。记录列示合计 25 件，关注替换、事件关闭状态及客户供货情况。FDA 另按适应症审查新产品和新用途。</td></tr><tr><th scope="row">欧洲运营与支付</th><td>现有 OCS 设备业务与意大利物流首标已经披露，NOP 收入逐国取决于采购、支付和交付。</td><td>中高。关注中标后的实际收入、当地支付条款和符合资质的航空运力。</td></tr></tbody></table></div>
+<p>临床准入和支付决定新增业务能覆盖多少病例。DCD 和 NRP 规则首先改变上游机构的流程，公司使用量取决于移植中心如何调整。OPO 变动影响合同与客户关系，欧洲各地支付和采购节奏约束海外收入兑现。</p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="https://www.hrsa.gov/optn/policies-bylaws/policies">HRSA／OPTN 现行规则日期表</a> · <a href="https://www.hrsa.gov/optn/policies-bylaws/public-comment/hrsa-directive-optn-donation-after-circulatory-death-policy-development">HRSA 循环死亡后捐献政策变更</a> · <a href="https://www.hrsa.gov/optn/news-events/news/patient-safety-driven-policy">HRSA NRP 批准与分阶段实施</a> · <a href="https://www.hrsa.gov/optn/policies-bylaws/public-comment/normothermic-regional-perfusion-policy">HRSA NRP 公开征求意见</a> · <a href="https://www.govinfo.gov/content/pkg/FR-2026-11-03/html/2026-22381.htm">CMS-3409-F 联邦公报</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=223225">FDA 心脏耗材召回记录</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=223226">FDA 肝脏耗材召回记录</a> · <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=223227">FDA 肺耗材召回记录</a> · <a href="../../../sources/tmdx/SEC_Filings/TMDX_Q3-2026_8-K_Ex99.1_Earnings_2026-11-05.htm">11/5 业绩公告（8-K 附件）</a></p>
+</section>
+<section class="card" id="valuation"><h2>九、估值与历史位置</h2><h3>9.1 每股盈利、税项和现金流给出不同读数</h3>
+<p>以美东 11/20 收盘 85.25 美元计算，基本股权市值为 2,961.064 百万美元。最近四季逐季披露的稀释每股收益合计 3.69 美元，其中 2.62 来自含一次性税收收益的 2025 年第四季度。只看 23.10 倍这一读数，容易把税收收益也视作持续盈利。</p><div class="table-wrap"><table><thead><tr><th scope="col">估值指标</th><th scope="col">11/20 读数</th><th scope="col">分子与分母</th></tr></thead><tbody><tr><th scope="row">四季 GAAP 稀释市盈率</th><td>23.10×</td><td>85.25 ÷（2.62 + 0.20 + 0.41 + 0.46），依次取 2025 Q4 至 2026 Q3 每股收益。</td></tr><tr><th scope="row">基本市值 / TTM 净利润</th><td>20.50×</td><td>2,961.064 ÷ 144.453 百万美元。股数取 11/2 实际在外股数，净利润取合并 GAAP 口径。</td></tr><tr><th scope="row">剔除单一税项的敏感性</th><td>71.95×</td><td>同一基本市值 ÷（144.453 − 103.300）。该项是 2025 Q4 递延所得税资产估值备抵转回，分母变为 41.153 百万美元。</td></tr><tr><th scope="row">TTM 市销率 / 期末市净率</th><td>4.07× / 5.38×</td><td>2,961.064 分别除以四季收入 727.650、9/30 股东权益 550.712 百万美元。</td></tr><tr><th scope="row">TTM 自由现金流收益率</th><td>1.51%</td><td>过去四季经营现金流 112.359 减现金资本支出 67.663，所得 44.696 百万美元除以基本市值。</td></tr><tr><th scope="row">卖方调整后前瞻市盈率</th><td>51.05× / 34.38×</td><td>85.25 ÷ 卖方 FY2026E / FY2027E 调整后 EPS 1.67 / 2.48 美元；后者是预测。</td></tr></tbody></table></div><p>同为盈利倍数，23.10 倍使用各季度的稀释股数及相应收益，20.50 倍使用时点基本股数和四季总净利。剔除 103.300 百万美元单项税收利益的压力读数，应与同口径的 20.50 倍比较。Q4 的净所得税收益为 83.8 百万美元，已经包含其他当期税项；两项税收数字不可重复扣除。</p><p class="chart-source"><a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526066953/tmdx-ex99_1.htm">2025 Q4 及全年业绩公告</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526206453/tmdx-20260331.htm">2026 Q1 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526332843/tmdx-20260630.htm">2026 Q2 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526067032/tmdx-20251231.htm">2025 年报</a> · <a href="https://stockanalysis.com/stocks/tmdx/forecast/">Stock Analysis 卖方汇总</a> · <span class="src-badge src-e">推算</span></p>
+<h3>9.2 固定股价后的收入和利润敏感性</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">FY2026 情景（公司指引）</th><th scope="col">下沿</th><th scope="col">中点</th><th scope="col">上沿</th></tr></thead><tbody><tr><th scope="row">含 PAD 收入（百万美元）</th><td>764</td><td>769</td><td>774</td></tr><tr><th scope="row">隐含 Q4 合并收入（百万美元）</th><td>197.114</td><td>202.114</td><td>207.114</td></tr><tr><th scope="row">按同一市值计算的全年市销率</th><td>3.88×</td><td>3.85×</td><td>3.83×</td></tr><tr><th scope="row">剔除 PAD 的 Q4 收入（百万美元）</th><td>192.499</td><td>197.499</td><td>202.499</td></tr></tbody></table></div>
+<p>收入区间仅使全年市销率相差约 0.05 倍。利润率则更能改变结果。作为压力算例，固定合并收入 769 百万美元，分别假设调整后营业利润率为 12.5% 和 14.0%，对应营业利润为 96.125 和 107.660 百万美元，差 11.535 百万美元。它还要经过利息和所得税才能变为净利。林奇式成长估值在这里首先要回答利润能否随病例增长，单一年度 PEG 容易受税项和试验进度干扰。</p><p class="chart-source"><a href="https://investors.transmedics.com/news-releases/news-release-details/transmedics-reports-third-quarter-2026-financial-results">11/5 公司业绩公告</a> · <a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">11/5 业绩电话会 · 公司 IR</a> · <a href="https://investors.transmedics.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">11/5 公司业绩演示</a> · <span class="src-badge src-e">推算</span></p>
+<h3>9.3 财报后的股价与历史参照</h3><figure class="chart"><figcaption class="chart-title">2026/11/2–11/20 · TMDX 美股常规收盘（美元/股）</figcaption><svg class="data-svg" role="img" viewbox="0 0 640 225"><title id="px-t">11 月财报前后 TMDX 日收盘价</title><desc id="px-d">单位为美元/股，横轴按自然日排列。11 月 5 日 68.98，6 日 88.24，18 日 96.43，19 日 94.02，20 日 85.25。</desc><g fill="var(--text-secondary)"><line stroke="var(--border-light)" x1="56" x2="586" y1="185.0" y2="185.0"></line><text text-anchor="end" x="45" y="190.0">60</text><line stroke="var(--border-light)" x1="56" x2="586" y1="149.5" y2="149.5"></line><text text-anchor="end" x="45" y="154.5">70</text><line stroke="var(--border-light)" x1="56" x2="586" y1="114.0" y2="114.0"></line><text text-anchor="end" x="45" y="119.0">80</text><line stroke="var(--border-light)" x1="56" x2="586" y1="78.5" y2="78.5"></line><text text-anchor="end" x="45" y="83.5">90</text><line stroke="var(--border-light)" x1="56" x2="586" y1="43.0" y2="43.0"></line><text text-anchor="end" x="45" y="48.0">100</text><text text-anchor="middle" x="56.0" y="212">11/02</text><text text-anchor="middle" x="173.8" y="212">11/06</text><text text-anchor="middle" x="291.6" y="212">11/10</text><text text-anchor="middle" x="379.9" y="212">11/13</text><text text-anchor="middle" x="497.7" y="212">11/17</text><text text-anchor="middle" x="586.0" y="212">11/20</text></g><polyline fill="none" points="56.0,161.3 85.4,158.9 114.9,139.7 144.3,153.1 173.8,84.7 262.1,65.0 291.6,75.2 321.0,71.4 350.4,71.4 379.9,73.6 468.2,70.7 497.7,64.6 527.1,55.7 556.6,64.2 586.0,95.4" stroke="var(--accent)" stroke-width="3"></polyline><circle cx="56.0" cy="161.3" fill="var(--accent)" r="3.5"><title>2026-11-02 · 66.67 美元</title></circle><circle cx="85.4" cy="158.9" fill="var(--accent)" r="3.5"><title>2026-11-03 · 67.34 美元</title></circle><circle cx="114.9" cy="139.7" fill="var(--accent)" r="3.5"><title>2026-11-04 · 72.75 美元</title></circle><circle cx="144.3" cy="153.1" fill="var(--accent)" r="3.5"><title>2026-11-05 · 68.98 美元</title></circle><circle cx="173.8" cy="84.7" fill="var(--accent)" r="3.5"><title>2026-11-06 · 88.24 美元</title></circle><circle cx="262.1" cy="65.0" fill="var(--accent)" r="3.5"><title>2026-11-09 · 93.79 美元</title></circle><circle cx="291.6" cy="75.2" fill="var(--accent)" r="3.5"><title>2026-11-10 · 90.94 美元</title></circle><circle cx="321.0" cy="71.4" fill="var(--accent)" r="3.5"><title>2026-11-11 · 92.01 美元</title></circle><circle cx="350.4" cy="71.4" fill="var(--accent)" r="3.5"><title>2026-11-12 · 92.00 美元</title></circle><circle cx="379.9" cy="73.6" fill="var(--accent)" r="3.5"><title>2026-11-13 · 91.38 美元</title></circle><circle cx="468.2" cy="70.7" fill="var(--accent)" r="3.5"><title>2026-11-16 · 92.21 美元</title></circle><circle cx="497.7" cy="64.6" fill="var(--accent)" r="3.5"><title>2026-11-17 · 93.91 美元</title></circle><circle cx="527.1" cy="55.7" fill="var(--accent)" r="3.5"><title>2026-11-18 · 96.43 美元</title></circle><circle cx="556.6" cy="64.2" fill="var(--accent)" r="3.5"><title>2026-11-19 · 94.02 美元</title></circle><circle cx="586.0" cy="95.4" fill="var(--red)" r="5"><title>2026-11-20 · 85.25 美元</title></circle><g fill="var(--text-primary)"><text font-weight="700" text-anchor="middle" x="144.3" y="174.1">68.98</text><text font-weight="700" text-anchor="middle" x="173.8" y="74.7">88.24</text><text font-weight="700" text-anchor="middle" x="524.1" y="41.7">96.43</text><text font-weight="700" text-anchor="middle" x="589.0" y="117.4">85.25</text></g></svg><p class="chart-source"><a href="https://www.nasdaq.com/market-activity/stocks/tmdx/">Nasdaq 上市交易所</a> · <a href="https://stockanalysis.com/stocks/tmdx/history/">Stock Analysis 日线</a> · <a href="https://finance.yahoo.com/quote/TMDX/history/">Yahoo Finance 日线</a></p></figure>
+<p>2024 和 2025 年末的收盘分别为 62.35 和 121.65 美元，对应当年 GAAP 稀释 EPS 1.01 和 4.87 美元，年末市盈率为 61.7 和 25.0 倍。2021–2023 年亏损，且 2025 年有大额税收利益。仅两个正盈利年末点不足以赋予当前估值可靠的历史百分位。</p>
+<p>OrganOx 和 Paragonix 分别已被 Terumo 和 Getinge 收购。两家母公司的合并倍数混有其他业务，难以直接替代 TMDX 的耗材、临床服务和自营航空组合。公司未派发普通股现金股息，股息率为 0%。</p><p class="chart-source"><a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526067032/tmdx-20251231.htm">2025 年报</a> · <a href="https://stockanalysis.com/stocks/tmdx/history/">Stock Analysis 日线</a> · <a href="https://finance.yahoo.com/quote/TMDX/history/">Yahoo Finance 日线</a></p></section>
+<section class="card" id="bull-bear"><h2>十、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green"><h3>10.1 多方依据</h3>
+<ul>
+<li>公司称美国 OCS 例数再创新高，肝、心业务同时增长。Q3 有机营收增长约 35%。</li>
+<li>更密集的 NOP 任务支持专业调度，服务毛利率同比提高约 4.4 个百分点，说明交通与现场服务有改善空间。</li>
+<li>新心肺研究和欧洲物流带来可观测的扩展路径，意大利已取得首个物流中标。</li>
+<li>Q3 营业利润增长，现金及现金口径自由现金流仍为正，能在一定程度上支持研发和资本投入。</li>
+</ul></div>
+<div class="box-red"><h3>10.2 空方依据</h3>
+<ul>
+<li>美国肝业务贡献当地移植收入增量的约九成。11/20 的卖方报道对四季度航班趋势表达保留，实际肝移植量仍待披露；心脏三季收入中还有试验因素。</li>
+<li>服务毛利率仍显著低于产品。研发支出增长和低毛利混合收入限制利润率，前九个月经营现金流走弱。</li>
+<li>总部购置假设和 2027 银行贷款到期把现金需求集中到同一年，随后还有 2028 可转债。</li>
+<li>监管落地、库存内控和设备质量均需要跟踪正式记录，欧洲支付与临床进度有不确定性。</li>
+</ul></div>
+</div>
+<p class="quote"><strong>如何裁决</strong>　先看全年剔除 PAD 收入是否落在 750–760 百万美元，再比较常规 OCS 例数、每例服务组合与收现。仅完成收入指引，尚不足以证明机队和临床网络的规模优势已经带来相称的自由现金流。</p>
+<p class="chart-source"><a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a> · <a href="https://investors.transmedics.com/news-releases/news-release-details/transmedics-reports-third-quarter-2026-financial-results">11/5 公司业绩公告</a> · <a href="https://www.investing.com/news/analyst-ratings/stifel-raises-transmedics-stock-price-target-on-mixed-results-93CH-5041978">Investing.com 11/20 报道</a></p></section>
+<section class="card" id="analysts"><h2>十一、华尔街分析师全景</h2><h3>11.1 同名机构的两类信息</h3>
+<p>11/10 的 Stifel 会议由 TransMedics 管理层发言。11/20 被公开报道的是分析师 Thomas Stephan 的研究观点。评级汇总列为维持“持有”，目标价由 70 调至 80 美元；同日的报道同时提到，该机构担心四季度迄今的飞行活动偏弱。提高机构目标价与下调对近期业务动能的评价可以同时发生。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">机构</th><th scope="col">公开记录日期（2026）</th><th scope="col">评级／目标价（美元）</th></tr></thead><tbody><tr><th scope="row">Stifel Nicolaus</th><td>11/20 刊载</td><td>持有，70 → 80</td></tr><tr><th scope="row">UBS</th><td>11/9</td><td>持有，77 → 88</td></tr><tr><th scope="row">Barclays</th><td>11/9</td><td>买入，维持 120</td></tr><tr><th scope="row">Oppenheimer</th><td>11/7</td><td>持有，未列目标价</td></tr><tr><th scope="row">J.P. Morgan</th><td>11/6</td><td>持有，73 → 85</td></tr><tr><th scope="row">Canaccord Genuity</th><td>11/6</td><td>买入，95 → 120</td></tr></tbody></table></div>
+<p>据 Investing.com 转述，Stifel 根据季度内航班跟踪估计核心业务收入约 190 百万美元。公司正式给出的只有全年区间；按全年剔除 PAD 指引推算的 Q4 中点为 197.499 百万美元。若卖方的核心定义仅剔除 PAD，两者相差约 7.5 百万美元；其样本、口径和原始模型均未公开。外包航班、地面任务和每例服务范围会改变映射。这是有日期的市场观点，不能确认为单日跌幅的原因。</p>
+<h3>11.2 机构汇总与公司承诺的边界</h3>
+<p>Stock Analysis 汇总的 11 月评级为 6 位强烈买入、3 位买入、4 位持有。页面在 11/20 列示 FY2026E／FY2027E 收入 767.14／901.23 百万美元、调整后 EPS 1.67／2.48 美元。预测年度截至各年 12/31，机构样本和更新节奏可能不同。当前没有公司正式的 2027 盈利区间。确定一家机构的立场也不足以还原其他投资者在收盘前的决策。</p>
+<p class="chart-source"><a href="https://stockanalysis.com/stocks/tmdx/forecast/">Stock Analysis 卖方汇总</a> · <a href="https://www.tipranks.com/news/the-fly/transmedics-price-target-raised-to-80-from-70-at-stifel-thefly-news">The Fly 卖方报道</a> · <a href="https://www.investing.com/news/analyst-ratings/stifel-raises-transmedics-stock-price-target-on-mixed-results-93CH-5041978">Investing.com 11/20 报道</a> · <a href="https://investors.transmedics.com/events/event-details/stifel-2026-healthcare-conference/">11/10 Stifel 会议 · 公司 IR</a> · <a href="https://investors.transmedics.com/news-releases/news-release-details/transmedics-reports-third-quarter-2026-financial-results">11/5 公司业绩公告</a> · <span class="src-badge src-2">二手</span></p></section>
+<section class="card" id="community"><h2>十二、社区讨论与短仓</h2><h3>12.1 公开讨论中的一个可检验问题</h3>
+<p>7 月一篇可追溯的个人投资者文章把耗材、飞行跟踪和体内常温区域灌注（NRP）的替代性连在一起。它提出的问题值得用经营数据检验：飞机调度更密，是否带来更多完成移植和更高的服务毛利？在 11/20 的 Reddit 和 X 检索中，可核实的独立样本不足以判断市场共识。三季度本身已经显示，临床服务收入环比增加，而移植物流收入略降。</p><p class="chart-source"><span class="src-badge src-3">三方</span> · <a href="https://www.reddit.com/r/AsymmetricAlpha/comments/1uywhfd/transmedics_tmdx_deep_dive/">7 月个人投资者讨论</a> · <a href="https://investors.transmedics.com/static-files/817e715b-4ed9-4f3e-853c-82506c3f38c8">11/5 公司业绩演示</a></p>
+<h3>12.2 空头持仓有公布时滞</h3>
+<p>Nasdaq 最近一个已公布结算日是 10/30，空头持仓为 8,877,506 股，较 10/15 的 8,769,040 股增 1.24%。以 11/2 披露的在外股数作近似分母，约为 25.6%。11/13 结算数据按 FINRA 日程在 11/24 发布；本次收盘时能看到的持仓截面还早于 11/5 业绩公告。单日卖空成交量、空头净持仓及回补是不同数据，无法从这个截面识别 11/20 的买卖方。</p><p class="chart-source"><a href="https://api.nasdaq.com/api/quote/TMDX/short-interest?assetclass=stocks">Nasdaq 半月空头持仓</a> · <a href="https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest">FINRA 发布日程</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a></p></section>
+<section class="card" id="conclusion"><h2>十三、综合判断框架</h2><p><strong>11/20 美股常规收盘为 85.25 美元，较 11/19 的 94.02 美元下跌 9.33%。</strong> 本轮新增的是市场价格与 Stifel 对四季度航班趋势的质疑；SEC 和公司 IR 未显示同期更新了经营指引。维持“移植采用增加、现金回报仍待验证”的判断。若四季度美国常规肝移植例数和收入一同走弱，即使 PAD 支撑合并收入，也要下调对主营需求持续性的判断。</p>
+<h3>13.1 四种可由数据检验的情景</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">情景</th><th scope="col">业务与资金条件</th><th scope="col">读数与判据</th></tr></thead><tbody><tr><th scope="row">扩张与现金转化同步</th><td>核心肝业务保持增长，试验及海外业务按计划展开，服务效率改善。</td><td>常规 OCS 例数、服务毛利率、经营现金流同比同步改善，总部资金安排明朗。</td></tr><tr><th scope="row">营收继续扩张，现金转化滞后</th><td>服务与临床收入增势延续，研发、总部和营运资金占用抵消增量。</td><td>营收靠近全年指引，利润率或现金流未跟上，且应收账龄与设备利用率仍需改善。</td></tr><tr><th scope="row">常规需求或执行放缓</th><td>肝脏增量缩小，心脏试验驱动减弱，欧洲付费或新试验入组延后。</td><td>实际收入落到公司区间下沿或以下，肝和心常规例数一起走弱，服务和机队利用率下探。</td></tr><tr><th scope="row">监管、质量或治理冲击</th><td>上游规则过渡、产品质量或财务内控出现超出已有披露的延误。</td><td>观察 FDA 扩大或关闭召回、DCD 实施后的实际移植量、内控披露及法院进展。</td></tr></tbody></table></div>
+<h3>13.2 观察时点与可证伪条件</h3>
+<ol class="watch-list">
+<li><strong>美国 OCS 完成例数及肝业务</strong>　以实际例数核对四季度的航班预警，将试验病例与常规需求区分。若公司继续只披露方向，则用美国肝脏收入、全美同器官移植量对照，并保留份额判断。</li>
+<li><strong>收现与机队效率</strong>　对照 Q3 服务毛利率 32.2%、9M 应收现金占用 28.067 百万美元、9M 自由现金流 25.697 百万美元。若营业扩张继续占用现金，再查看 2027 总部付款及到期贷款的资金来源。</li>
+<li><strong>近期公司信息</strong>　Piper Sandler 会议为美东 12/1 16:30（北京时间 12/2 05:30）。2026 全年业绩发布时核对 2027 正式指引和内控进展。</li>
+<li><strong>临床与欧洲</strong>　2027 年初看两个试验的首例与中心启动。上半年看欧洲逐国支付和交付，下半年看肾脏首例人体临床目标及欧洲经常性收入。</li>
+</ol>
+<p>若常规移植量连续走弱、尤其美国肝业务量与收入一起下行，便应重估临床采用带来的增长。反过来，若病例继续增加，且随后两个报告期内服务毛利率、营运资金和经营现金流也改善，目前对增长质量的保留就会减弱。季报先给收入、后给例数时，应先标记需求判断待核。</p>
+<p class="chart-source"><span class="src-badge src-s">一手</span> <a href="https://investors.transmedics.com/news-releases/news-release-details/transmedics-present-upcoming-investor-conferences">公司会议日程</a> · <a href="https://investors.transmedics.com/events/event-details/jefferies-global-healthcare-conference-london/">11/17 Jefferies 会议 · 公司 IR</a> · <a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">2026 Q3 10-Q</a></p>
+</section>
+<section class="card" id="data-notes"><h2>数据说明</h2><h3 id="method-price">数据口径与方法</h3>
+<p><strong>行情。</strong>美东 2026/11/20 16:00（北京时间 11/21 05:00），Nasdaq 接口的常规收盘字段 secondaryData.lastSalePrice 为 85.25 美元，标记 Closed。17:59:04 ET 核验时，Nasdaq 官方收盘价（NOCP）的历史日终行尚未刊出。已完成的 Stock Analysis、Yahoo Finance 与 FT/Markit 日线同报 85.25。前收 94.02，价差 −8.77 美元，日变动 85.25 ÷ 94.02 − 1 = −9.33%。</p><p class="chart-source"><a href="https://www.nasdaq.com/market-activity/stocks/tmdx/">Nasdaq 上市交易所</a> · <a href="https://api.nasdaq.com/api/quote/TMDX/info?assetclass=stocks&amp;refresh=14960129">Nasdaq 常规收盘字段</a> · <a href="https://stockanalysis.com/stocks/tmdx/history/">Stock Analysis 日线</a> · <a href="https://finance.yahoo.com/quote/TMDX/history/">Yahoo Finance 日线</a> · <a href="https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=TMDX:NMQ">FT / Markit 日线</a></p>
+<p><strong>经营与现金。</strong>Q3 是截至 9/30 的三个月，9M 是同日止九个月，TTM 是 2025 Q4 至 2026 Q3。TTM 收入 = 605.494 − 444.730 + 566.886 = 727.650 百万美元。TTM 净利 = 190.291 − 84.908 + 39.070 = 144.453 百万美元。TTM 经营现金流 = 192.840 − 158.327 + 77.846 = 112.359 百万美元，付现购建固定资产 = 59.251 − 43.737 + 52.149 = 67.663 百万美元。自由现金流 44.696 百万美元按两者之差计算，不含收购支付或融资租赁初始确认。</p>
+<p><strong>股数与估值。</strong>10-Q 封面 11/2 在外普通股 34,733,883 股，乘 85.25 美元得到 2,961.064 百万美元。四季 EPS 用逐季 GAAP 稀释 EPS 之和。分季股数加权、可转债在不同期间是否具有稀释作用以及四舍五入，会造成累计与单季数之间的差异。所有敏感性均固定其余条件。</p><p class="chart-source"><a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526067032/tmdx-20251231.htm">2025 年报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526066953/tmdx-ex99_1.htm">2025 Q4 及全年业绩公告</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526206453/tmdx-20260331.htm">2026 Q1 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526332843/tmdx-20260630.htm">2026 Q2 季报</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">2026 Q3 季报</a></p>
+<h3>与 2026/11/20 研究档案的变化</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">项目</th><th scope="col">上期依据</th><th scope="col">本期证据与判断</th></tr></thead><tbody><tr><th scope="row">市场定价</th><td>11/19 收盘 94.02 美元，TTM 市销率 4.49 倍。</td><td>11/20 收盘 85.25 美元，市销率 4.07 倍。同股数市值减少 304.616 百万美元，收入分母相同。</td></tr><tr><th scope="row">四季度需求</th><td>上期已覆盖三季报、Stifel 和 Jefferies 会议及 11/18 生效的 DCD 政策。</td><td>新增 11/20 刊载的 Stifel 评级及航班观察。提高对常规肝移植例数的关注；公司全年指引和 SEC 定期财务底稿维持原值。</td></tr><tr><th scope="row">现金质量</th><td>9M 自由现金流同比降 77.6%。</td><td>应收及存货的现金流同比变化解释经营现金流降幅的 79.2%。Q3 单季自由现金流回到正数，仍比去年同期低 55.4%。</td></tr><tr><th scope="row">估值分母</th><td>上期以年度及九个月 EPS 桥接 3.67 美元，报 25.62 倍。</td><td>维持原算法，只换收盘价是 23.23 倍；改用直接披露的四季 EPS 合计 3.69 美元，同期两价分别为 25.48 与 23.10 倍。</td></tr></tbody></table></div>
+<h3>口径复核与已知局限</h3>
+<p>2025 Q4 公告直接披露稀释 EPS 2.62 美元，采用逐季合计可避免用年度 EPS 减去九个月 EPS 来代替单季度。Form 144 只记录拟售；11/9 的实际处置另有 11/12 Form 4。11/20 的卖方信息按公开刊载日标记，原始研报签发时点及模型未独立取得。公司未给出连续季度按器官、试验状态拆分的绝对移植例数，亦未给出每例利润或航油净敞口。会议内容取公司指定活动入口及可核对的公开文字转述，未逐句复听音轨。</p>
+<h3 id="source-docs">可本地阅读的官方披露</h3>
+<ul class="source-list"><li>2026 Q3 季报 · 11/5　<a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q3_10-Q_2026-11-05.htm">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449827/tmdx-20260930.htm">SEC 官方出处</a></li><li>2026 Q3 业绩公告 · 11/5　<a href="../../../sources/tmdx/SEC_Filings/TMDX_Q3-2026_8-K_Ex99.1_Earnings_2026-11-05.htm">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526449729/tmdx-ex99_1.htm">SEC 官方出处</a></li><li>2026 Q2 季报 · 8/4　<a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q2_10-Q_2026-08-04.htm">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526332843/tmdx-20260630.htm">SEC 官方出处</a></li><li>2026 Q1 季报 · 5/5　<a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-Q1_10-Q_2026-05-05.htm">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526206453/tmdx-20260331.htm">SEC 官方出处</a></li><li>2025 Q4 及全年业绩公告 · 2026/2/24，本次补档　<a href="../../../sources/tmdx/SEC_Filings/TMDX_FY2025_8-K_Ex99.1_Earnings_2026-02-24.htm">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526066953/tmdx-ex99_1.htm">SEC 官方出处</a> <small>（<a href="../../../sources/tmdx/SEC_Filings/img64729720_0.gif">原件配图</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526066953/img64729720_0.gif">SEC 官方配图</a>）</small></li><li>2025 年报 · 2026/2/24　<a href="../../../sources/tmdx/SEC_Filings/TMDX_FY2025_10-K_2026-02-24.htm">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526067032/tmdx-20251231.htm">SEC 官方出处</a></li><li>2025 Q3 季报 · 2025/10/29　<a href="../../../sources/tmdx/SEC_Filings/TMDX_2025-Q3_10-Q_2025-10-29.htm">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312525256377/tmdx-20250930.htm">SEC 官方出处</a></li><li>Form 144 拟售通知 · 11/9　<a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-11-09_Form144.xml">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000195004726010898/xsl144X01/primary_doc.xml">SEC 官方出处</a></li><li>Form 4 实际处置申报 · 11/12　<a href="../../../sources/tmdx/SEC_Filings/TMDX_2026-11-12_Form4.xml">本地原件</a> · <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526458437/xslF345X06/ownership.xml">SEC 官方出处</a></li></ul>
+<p>2026 年 2 月 24 日业绩附件及其内嵌配图取自 <a href="https://www.sec.gov/Archives/edgar/data/1756262/000119312526066953/0001193125-26-066953.txt">SEC 当日完整提交文件</a>。本轮补存该历史披露，用于核对 5,139 例、2025 Q4 稀释每股收益和一次性税项。最近的经营申报及董事申报沿用同一标的已有的官方档案。</p>
+<h3 id="webcasts">授权电话会与公开文字来源</h3>
+<ul class="source-list"><li>11/5 业绩电话会　<a href="https://investors.transmedics.com/events/event-details/transmedics-q3-2026-earnings-conference-call">公司活动页</a> · <a href="https://app.webinar.net/4jNalmrL16e">公司指定回放</a></li><li>11/10 Stifel 会议　<a href="https://investors.transmedics.com/events/event-details/stifel-2026-healthcare-conference/">公司活动页</a> · <a href="https://event.summitcast.com/view/4aFtJriVa3BvDmNqmfSxma/guest_book?session_id=gUHswBCaYdjSYZBxaqV43y">公司指定回放</a></li><li>11/17 Jefferies 会议　<a href="https://investors.transmedics.com/events/event-details/jefferies-global-healthcare-conference-london/">公司活动页</a> · <a href="https://event.summitcast.com/view/avibSrFufLKeoLRAEgMxy6/guest_book?session_id=N9P3b3UupXWonJnhfh8cWF">公司指定回放</a></li></ul>
+<p class="chart-source"><a href="https://www.fool.com/earnings/call-transcripts/2026/11/06/transmedics-tmdx-q3-2026-earnings-call-transcript/">三季报电话会公开转写</a> · <a href="https://stockanalysis.com/stocks/tmdx/transcripts/788425-stifel-2026-healthcare-conference-2026/">Stifel 会议公开转写</a> · <a href="https://stockanalysis.com/stocks/tmdx/transcripts/788439-jefferies-global-healthcare-conference/">Jefferies 会议公开转写</a></p>
+</section>
+<footer class="footnote"><p>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p>
+<p>TransMedics Group（Nasdaq: TMDX）· 中文公开研究档案 · 2026 年 11 月 21 日</p><p class="chart-source"><a href="https://data.sec.gov/submissions/CIK0001756262.json">SEC 发行人申报清单</a> · <a href="https://investors.transmedics.com/news-releases/">公司新闻公告</a> · <a href="https://investors.transmedics.com/news-releases/news-release-details/transmedics-reports-third-quarter-2026-financial-results">11/5 公司业绩公告</a> · <a href="https://www.nasdaq.com/market-activity/stocks/tmdx/">Nasdaq 上市交易所</a> · <a href="https://stockanalysis.com/stocks/tmdx/history/">Stock Analysis 日线</a></p></footer>
+</main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20TransMedics%EF%BC%88TMDX%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ATransMedics%EF%BC%88TMDX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>
