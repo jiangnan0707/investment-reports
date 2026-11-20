@@ -66,6 +66,7 @@ body.catalog, body.research, body.source-reader {
 }
 .research a.report-request:hover { background: #153f32; text-decoration: underline; }
 .research-footer p { margin: 6px auto 14px; }
+.feedback-email { white-space: nowrap; user-select: all; color: var(--archive-ink); }
 .catalog-main, .source-index { width: min(100% - 40px, 1050px); margin: 30px auto 70px; }
 .source-index ul { margin: 18px 0; padding: 0; list-style: none; }
 .source-index li { display: flex; align-items: baseline; gap: 12px; padding: 11px; border-bottom: 1px solid var(--archive-line); }
