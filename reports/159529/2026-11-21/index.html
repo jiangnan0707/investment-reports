@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>标普消费ETF景顺 2026-11-21 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+.table-wrap{max-width:100%;overflow-x:auto}.table-wrap table{width:100%;min-width:0}.table-wrap th,.table-wrap td{overflow-wrap:anywhere;word-break:normal}.evidence{font-size:.88em;color:#52675a}.chart{margin:16px 0}.chart-title{font-weight:700;margin-bottom:6px}.bar-row{display:grid;grid-template-columns:minmax(78px,105px) 1fr 58px;align-items:center;gap:10px;margin:6px 0}.bar-track{height:9px;background:#e3eee6;border-radius:3px;overflow:hidden}.bar-fill{height:100%;background:#357755}.bar-val{font-variant-numeric:tabular-nums;text-align:right}.bar-label{width:auto}.source-end{color:#596b60;font-size:.9em;margin:20px 0}.page-layout>.main-content{min-width:0}@media(max-width:700px){.table-wrap th,.table-wrap td{font-size:13px;padding:7px 5px}.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/159529/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E6%A0%87%E6%99%AE%E6%B6%88%E8%B4%B9ETF%E6%99%AF%E9%A1%BA%EF%BC%88159529%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%A0%87%E6%99%AE%E6%B6%88%E8%B4%B9ETF%E6%99%AF%E9%A1%BA%EF%BC%88159529%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">159529 <span>·</span> 2026-11-21 <span>·</span> PC 完整版</div><h1>标普消费ETF景顺</h1><p>2026-11-21 · 跨境 ETF 研究 · 境内溢价收窄，消费股仍有科技与利率风险</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、基金与本期读数</a></li><li><a href="#core-metric">二、核心指标与交易时差</a></li><li><a href="#holdings">三、底层持仓与行业风险</a></li><li><a href="#valuation">四、估值与宏观传导</a></li><li><a href="#policy">五、申赎与跨市场日历</a></li><li><a href="#scenarios">六、多空分歧与情景</a></li><li><a href="#conclusion">七、研究结论与复核点</a></li></ul></aside><main class="main-content report-body"><div class="card" id="reliability"><h2>数据可靠性声明</h2><p>本期数据截点为北京时间 2026 年 11 月 21 日 00:05。国内 11 月 20 日收盘已确认；纽约当地 11 月 20 日交易尚在进行，美国市场只引用截至 11 月 19 日的完整交易日。份额净值、日内参考净值（IOPV）与二级市场收盘价分别列示。基金持股与净资产规模采用 9 月 30 日季末披露。</p><p>基金管理人定期报告和交易公告为一手披露。行情、IOPV 与基金净值在二级数据平台交叉核验；计算值保留两位小数。情景使用条件而非预测概率。</p><p class="evidence">本期原始披露　<a href="../../../sources/159529/Filings/159529_2026%E5%B9%B4_%E4%B8%89%E5%AD%A3%E6%8A%A5_2026-10-27.pdf">三季报原件</a> · <a href="../../../sources/159529/Filings/159529_%E4%BA%A4%E6%98%93%E4%BB%B7%E6%A0%BC%E6%BA%A2%E4%BB%B7%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA%E5%85%AC%E5%91%8A_2026-11-02.pdf">11/02 管理人公告</a> · <a href="https://www.spglobal.com/spdji/en/indices/equity/sp-500-consumer-select-15-60-index/">指数编制方</a></p></div><div class="card" id="snapshot"><h2>一、基金与本期读数</h2><div class="summary-grid"><div class="summary-item"><div class="value">1.307</div><div class="label">11/20 境内收盘（元）</div></div><div class="summary-item"><div class="value">−5.15%</div><div class="label">较前收</div></div><div class="summary-item"><div class="value">1.3036</div><div class="label">收盘 IOPV（元）</div></div><div class="summary-item"><div class="value">+0.26%</div><div class="label">收盘参考溢价</div></div><div class="summary-item"><div class="value">1.3042</div><div class="label">11/19 单位净值（元）</div></div><div class="summary-item"><div class="value">2.98 亿</div><div class="label">11/20 成交额</div></div></div><p>11 月 20 日价格跌 5.15%，收盘参考溢价缩至 0.26%。上一次专项警示所举 10 月 30 日溢价约 5.06%。两个已知时点的差距反映交易价格与参考价值逐渐靠近，不能把整日跌幅都归因于消费企业盈利变化。</p><div class="table-wrap"><table><thead><tr><th scope="col">基金结构</th><th scope="col">公开披露或截至日期</th></tr></thead><tbody><tr><td>跟踪基准</td><td>标普 500 消费精选 15/60 指数</td></tr><tr><td>跟踪路径</td><td>景顺长城直接投资美国股票。标普从可选消费精选与日常消费精选指数的成分中选出规模最大的 50 家公司，按经约束的市值加权。编制方对外概括为单家公司权重上限 15%、前五家公司合计上限 60%，调整日之间市场价格变动会使权重漂移。亚马逊的云业务、特斯拉的估值弹性和沃尔玛的门店流量因此共存于一个篮子。</td></tr><tr><td>季末净资产</td><td>9.75 亿元，2026/09/30</td></tr><tr><td>年度管理费 + 托管费</td><td>0.50% + 0.15%，不含交易摩擦及税费</td></tr><tr><td>季度净值 / 基准回报</td><td>−6.61% / −6.78%，2026 年三季度，期内收益差 +0.17 个百分点；期内差不等同于日跟踪误差波动率。</td></tr></tbody></table></div><p class="evidence">基金及行情　<a href="../../../sources/159529/Filings/159529_2026%E5%B9%B4_%E4%B8%89%E5%AD%A3%E6%8A%A5_2026-10-27.pdf">第三季度报告</a> · <a href="https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159529,day,2026-11-06,2026-11-20,15,qfq">腾讯日线</a> · <a href="https://qdiilens.com/fund/159529">收盘参考净值对照</a></p></div><div class="card" id="core-metric"><h2>二、核心指标与交易时差</h2><p>11 月 20 日收盘参考溢价 = 1.307 ÷ 1.3036 − 1 = +0.26%。境内 15:00 收盘时纽约股票常规交易尚未开始；即使两个数字都在收盘读取，IOPV 所用境外价格和汇率依然可能滞后。</p><p>若把 11/20 境内收盘硬除以 11/19 单位净值，得到 +0.21%；这只是跨日静态价差。计算 11/20 同估值日的事后折溢价，需要等该日美国市场收盘和基金净值正式披露。</p><div class="table-wrap"><table><thead><tr><th scope="col">日期</th><th scope="col">境内收盘（元）</th><th scope="col">同估值日单位净值（元）</th><th scope="col">收盘相对同日 NAV</th></tr></thead><tbody><tr><td>11-10</td><td>1.391</td><td>1.3416</td><td>+3.68%</td></tr><tr><td>11-13</td><td>1.397</td><td>1.3468</td><td>+3.73%</td></tr><tr><td>11-18</td><td>1.366</td><td>1.3330</td><td>+2.48%</td></tr><tr><td>11-19</td><td>1.378</td><td>1.3042</td><td>+5.66%</td></tr><tr><td>11-20</td><td>1.307</td><td>截点未披露</td><td>待同日净值</td></tr></tbody></table></div><p>上述日期表为事后同日对照。美国资产相同日历日的最终 NAV 包含北京时间次日凌晨的美国收盘信息。可交易时的即时成本应参照当时的买卖盘与相应 IOPV。</p><p class="evidence">行情与净值　<a href="https://gu.qq.com/sz159529">腾讯基金行情</a> · <a href="https://fundf10.eastmoney.com/jjjz_159529.html">历史单位净值</a> · <a href="https://qdiilens.com/fund/159529">IOPV 日表</a></p></div><div class="card" id="holdings"><h2>三、底层持仓与行业风险</h2><p>普通股占净值 99.22%，直接持有美股。三季度内办理申购和赎回的份额均为零，期末 8.1154 亿份；二级市场换手仍可十分活跃。</p><p>三季报采用彭博行业口径，非必需消费占净值 53.20%，必需消费 40.89%，其余直接持股分在通讯、科技。指数按标普自身分类选股，两家供应商行业边界有差异。前十大约占净值 65.22%，能否分散科技风险取决于实际业务。</p><div class="chart"><div class="chart-title">09/30 基金行业占净值比例（选列）</div><div class="bar-row"><span class="bar-label">非必需消费</span><div class="bar-track"><div class="bar-fill" style="width:53.2%"></div></div><span class="bar-val">53.20%</span></div><div class="bar-row"><span class="bar-label">必需消费</span><div class="bar-track"><div class="bar-fill" style="width:40.89%"></div></div><span class="bar-val">40.89%</span></div><div class="bar-row"><span class="bar-label">通讯</span><div class="bar-track"><div class="bar-fill" style="width:4.41%"></div></div><span class="bar-val">4.41%</span></div><div class="bar-row"><span class="bar-label">科技</span><div class="bar-track"><div class="bar-fill" style="width:0.73%"></div></div><span class="bar-val">0.73%</span></div></div><div class="table-wrap"><table><thead><tr><th scope="col">09/30 基金前十大股票</th><th scope="col">占基金净值</th></tr></thead><tbody><tr><td>亚马逊 AMZN</td><td>14.05%</td></tr><tr><td>特斯拉 TSLA</td><td>13.73%</td></tr><tr><td>沃尔玛 WMT</td><td>7.06%</td></tr><tr><td>开市客 COST</td><td>6.16%</td></tr><tr><td>宝洁 PG</td><td>5.15%</td></tr><tr><td>可口可乐 KO</td><td>5.08%</td></tr><tr><td>菲利普莫里斯 PM</td><td>4.54%</td></tr><tr><td>家得宝 HD</td><td>4.32%</td></tr><tr><td>百事 PEP</td><td>2.64%</td></tr><tr><td>麦当劳 MCD</td><td>2.49%</td></tr></tbody></table></div><p>希望理解防御成分时，可把本基金与 XLP、XLY 分开比较。XLP 更集中于必需消费，XLY 对汽车、电商和信用环境更敏感。三者的指数、上市地和交易币种不同。</p><p class="evidence">透明度与权重　<a href="../../../sources/159529/Filings/159529_2026%E5%B9%B4_%E4%B8%89%E5%AD%A3%E6%8A%A5_2026-10-27.pdf">基金原始持仓披露</a> · <a href="https://www.spglobal.com/spdji/en/indices/equity/sp-500-consumer-select-15-60-index/">指数方法及构成</a></p></div><div class="card" id="valuation"><h2>四、估值与宏观传导</h2><p>基金跟踪的 50 股组合在 11 月 19 日的统一市盈率尚未核实。State Street 披露同日 XLY 可选消费指数未来一年市盈率为 22.99 倍、XLP 日常消费为 21.20 倍；两者的编制和头部权重不同，无法由这两个数字取平均得到本基金倍数。</p><div class="table-wrap"><table><thead><tr><th scope="col">观察项</th><th scope="col">数据</th><th scope="col">日期及口径</th></tr></thead><tbody><tr><td>XLY 可选消费</td><td>22.99 倍</td><td>11/19；预测盈利分母，汽车和电商权重较大</td></tr><tr><td>XLP 日常消费</td><td>21.20 倍</td><td>11/19；预测盈利分母，食品和日用品需求较稳定</td></tr><tr><td>XLY / XLP 指数股息率</td><td>0.92% / 2.42%</td><td>11/18；成分公司的指示性股息率，基金现金分红另行公告</td></tr></tbody></table></div><div class="table-wrap"><table><thead><tr><th scope="col">驱动因素</th><th scope="col">已知条件</th><th scope="col">对基金的作用</th></tr></thead><tbody><tr><td>实际消费与价格</td><td>美国 10 月零售及餐饮销售额环比 +0.2%（误差 ±0.4 个百分点），9 月为 +0.8%。同期 CPI 环比 +0.4%，核心 CPI +0.3%。</td><td>销售额为名义值，销售与 CPI 篮子不同；要分辨提价和销量，继续看零售商同店销量及毛利。</td></tr><tr><td>利率和 AI</td><td>美联储 10 月维持 3.75%–4.00%；11 月 18 日公布会议纪要，讨论 AI 投资回报未兑现可能带来的资产重估。</td><td>汽车融资利率上行影响特斯拉需求；AWS 云增长与资本开支回报影响亚马逊，日用品需求和盈利弹性则较小。</td></tr><tr><td>人民币与美元</td><td>美元口径成分股收益须换算人民币。</td><td>人民币走强可能抵消美股回报；境内基金价格另外叠加二级市场溢价变化。</td></tr></tbody></table></div><p>以 11 月 19 日完整外汇日线为比较基点，1 美元约合 6.6676 元人民币。人民币升值会摊薄未对冲美元资产的人民币回报；举例，指数涨 3%、美元兑人民币跌 2%，两项合计约 +0.94%，尚未计费用及溢价变化。此处市场汇率仅作敏感性测算，基金按合同指定的估值汇率记账。</p><p class="evidence">估值与宏观　<a href="https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly">XLY 估值</a> · <a href="https://www.ssga.com/us/en/intermediary/etfs/state-street-consumer-staples-select-sector-spdr-etf-xlp">XLP 估值</a> · <a href="https://www.bls.gov/news.release/archives/cpi_11102026.htm">10 月 CPI</a> · <a href="https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm">10 月 FOMC 纪要</a> · <a href="https://finance.yahoo.com/quote/CNY%3DX/history/">美元兑人民币</a> · <a href="https://www.census.gov/retail/sales.html">美国零售销售</a></p></div><div class="card" id="policy"><h2>五、申赎与跨市场日历</h2><p>景顺 11 月 2 日公告指出 10 月 30 日收盘 1.363 元，收盘 IOPV 1.2973 元，对应溢价 5.06%，并提示溢价持续时可能申请临时停牌。美国 11 月 26 日感恩节休市，27 日提早收市。两市时差可能进一步降低盘中估值的参考性，境内当日申赎以管理人申赎清单为准。</p><p>二级市场成交量说明买卖双方交换了多少存量份额。一级申购允许做市商等参与者创造份额，二者不能互相替代。节前停复申赎、申购上限及现金替代比例，以当日基金申购赎回清单和管理人公告为准。</p><p class="evidence">管理人原文　<a href="../../../sources/159529/Filings/159529_%E4%BA%A4%E6%98%93%E4%BB%B7%E6%A0%BC%E6%BA%A2%E4%BB%B7%E9%A3%8E%E9%99%A9%E6%8F%90%E7%A4%BA%E5%85%AC%E5%91%8A_2026-11-02.pdf">本地 PDF</a> · <a href="https://pdf.dfcfw.com/pdf/H2_AN202611011831295504_1.pdf">同一公告在线原文</a> · <a href="https://www.nyse.com/markets/hours-calendars">纽约证券交易所交易日历</a></p></div><div class="card" id="scenarios"><h2>六、多空分歧与情景</h2><div class="table-wrap"><table><thead><tr><th scope="col">路径</th><th scope="col">可观察的触发条件</th><th scope="col">对指数、净值或价格的含义</th></tr></thead><tbody><tr><td>消费走稳</td><td>必需消费同店销量恢复，利润率平稳</td><td>消费龙头盈利有支撑，指数涨跌仍受头部成长股影响。</td></tr><tr><td>利率继续上升</td><td>贷款利率上行，车企提高促销力度</td><td>汽车与家居可选消费利润承压，估值下修与盈利下修可能叠加。</td></tr><tr><td>AI 资本开支回报不及预期</td><td>云业务盈利增速落后折旧，头部科技估值回落</td><td>亚马逊业务带来关联风险，日常消费权重提供一定缓冲。</td></tr><tr><td>境内溢价重现</td><td>美国休市、跨境申购受限，买盘集中</td><td>即使海外篮子持平，交易价格也会先偏离、再回归。</td></tr></tbody></table></div><p>11 月 19 日美股讨论同时出现消费板块承压与假日支出有韧性两种解读。它们指向不同公司和消费层级，单日帖子无法证明两类消费股与科技股票长期负相关。</p><p class="evidence">市场讨论样本　<a href="https://www.reddit.com/r/thewallstreet/comments/1y0kpty/nightly_discussion_november_19_2026/">美国消费与政策讨论</a></p></div><div class="card" id="conclusion"><h2>七、研究结论与复核点</h2><p>这只基金可以分散单一行业风险，但消费标签掩盖了科技和融资敏感度。三季度末亚马逊、特斯拉合计占净值 27.78%，接近两成八。若 AI 资本开支重估和汽车信贷同时转弱，日常消费品的稳定性只能抵消部分波动。</p><p>跟踪可选与日常消费盈利预期的差距、亚马逊云资本支出回报、汽车信贷，以及同时间的 IOPV。若必需消费表现稳健却被两家头部公司拖累，应重新评估其防御作用。</p><div class="table-wrap"><table><thead><tr><th scope="col">分析框架</th><th scope="col">本期检验</th></tr></thead><tbody><tr><td>格雷厄姆 · 安全边际</td><td>将收盘价与 IOPV、已披露 NAV 分开；准入成本下降后，还要检验底层资产盈利是否可持续。</td></tr><tr><td>达利欧 · 宏观传导</td><td>同时比较本币指数与美元兑人民币；跨币种资产回报取决于两项的乘积。</td></tr><tr><td>马克斯 · 第二层思维</td><td>判断境内价格是否提前反映境外弱势，以及申赎恢复时参考溢价能否维持。</td></tr></tbody></table></div><p>研究边界包括境外价格是否实时、估值模型的盈利分母及尚未披露的基金当期持仓。场内溢价是交易成本的一部分，溢价降低本身不足以判断底层资产的长期回报。</p></div><p class="source-end">不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p></main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E6%A0%87%E6%99%AE%E6%B6%88%E8%B4%B9ETF%E6%99%AF%E9%A1%BA%EF%BC%88159529%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%A0%87%E6%99%AE%E6%B6%88%E8%B4%B9ETF%E6%99%AF%E9%A1%BA%EF%BC%88159529%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

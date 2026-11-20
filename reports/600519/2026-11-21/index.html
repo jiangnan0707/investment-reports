@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>贵州茅台 2026-11-21 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+  .main-content a { color: var(--accent); text-underline-offset: 2px; }
+  .card p + p { margin-top: 12px; }
+  .card ul, .card ol, .footnote ul { padding-left: 1.45em; margin: 12px 0; }
+  .card li + li, .footnote li + li { margin-top: 6px; }
+  .chart svg { display: block; width: 100%; height: auto; }
+  .chart svg text { font-family: inherit; font-variant-numeric: tabular-nums; }
+  .chart-legend { flex-wrap: wrap; gap: 8px 16px; }
+  th[scope=row] { font-weight: 600; text-align: left; }
+  tbody th[scope=row] { padding: 10px 14px; border-bottom: 1px solid var(--border-light); }
+  .stacked-bar .c-sub { color: var(--text-primary); }
+  .summary-item { min-width: 0; }
+  .summary-item .value { white-space: nowrap; }
+  .intro { font-size: 16px; }
+  .chart + h3, .quote + h3, table + h3 { margin-top: 28px; }
+  @media (max-width:900px) { .main-content { width:100%; } }
+  @media (max-width:768px) {
+    table td, table th { overflow-wrap: anywhere; }
+    .intro { font-size: 14px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/600519/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">600519 <span>·</span> 2026-11-21 <span>·</span> PC 完整版</div><h1>贵州茅台</h1><p>2026-11-21 周六复核 · 11 月 20 日 A 股收盘及酒价样本 · 财务至 9 月 30 日</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、飞天价盘与现金股息</a></li><li><a href="#financials">四、最新财务数据</a></li><li><a href="#channels">五、渠道重构与产品分化</a></li><li><a href="#policy">六、政策风险</a></li><li><a href="#valuation">七、估值分析</a></li><li><a href="#bull-bear">八、多空核心分歧</a></li><li><a href="#analysts">九、券商分析师全景</a></li><li><a href="#community">十、雪球与个人投资者讨论</a></li><li><a href="#conclusion">十一、综合判断框架</a></li><li><a href="#notes">数据说明</a></li></ul></aside><main class="main-content report-body">
+<section class="card" id="reliability" style="border-left:4px solid var(--accent)"><h2>数据可靠性声明</h2>
+<p>行情截至 2026 年 11 月 20 日 A 股收盘。最新财报为 10 月 31 日披露的 2026 年三季报（未经审计）。酒价为指定日期和规格的市场样本。</p>
+<p><span class="src-badge src-s">一手</span>沪深／巨潮公告、公司公开答复及主管部门资料　<span class="src-badge src-2">二手</span>行情供应商、媒体及券商　<span class="src-badge src-3">三方</span>社区观点　<span class="src-badge src-e">推算</span>基于列明数据的计算　<span class="src-badge src-t">时效</span>时点或更新频率受限</p>
+<p>本地披露存档包括 <a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4_%E4%B8%89%E5%AD%A3%E6%8A%A5_2026-10-31.pdf">2026 年三季报</a>、<a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4_%E5%8D%8A%E5%B9%B4%E6%8A%A5_2026-08-15.pdf">2026 年半年报</a>、<a href="../../../sources/600519/Filings/600519_2025%E5%B9%B4_%E5%B9%B4%E6%8A%A5_2026-04-17.pdf">2025 年年报</a>、<a href="../../../sources/600519/Filings/600519_2025%E5%B9%B4_%E4%B8%89%E5%AD%A3%E6%8A%A5_2025-10-30.pdf">2025 年三季报</a>与<a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4%E4%B8%89%E5%AD%A3%E5%BA%A6_%E4%B8%9A%E7%BB%A9%E8%AF%B4%E6%98%8E%E4%BC%9A%E8%AE%B0%E5%BD%95_2026-11-10.html">11 月 10 日公司公开答复记录</a>。</p>
+<p><strong>本期新增</strong>　11 月 21 日为周六，权益市场与两条同年份飞天报价均以 11 月 20 日为最近观察日，和上一期一致。核对巨潮 10/31 至 11/21 公司公告列表，近期最新项目为 11/03 业绩说明会通知；针对同一份经营数据补录原始公告，拆解平台内部分流和经销空间，并增加售价、净利润与现金股息的敏感性。公司 11/10 说明会为经营解释。</p><p><a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%BB%E8%A6%81%E7%BB%8F%E8%90%A5%E6%95%B0%E6%8D%AE%E5%85%AC%E5%91%8A_2026-10-31.pdf">经营数据公告（本地）</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649906.PDF">巨潮原件</a> · <a href="../../../sources/600519/Filings/600519_%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%B0%83%E6%95%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%E9%94%80%E5%94%AE%E5%90%88%E5%90%8C%E4%BB%B7%E6%A0%BC_2026-07-18.pdf">7 月价格公告</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-07-18/1225431263.PDF">巨潮调价原件</a> · <a href="https://maotai.wgnds.com/2026%E5%B9%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%E6%95%A3%E7%93%B6">2026 年产散瓶报价明细</a> · <a href="https://maotai.wgnds.com/2026%E5%B9%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%28%E5%8E%9F%E7%AE%B1%29">同年份原箱报价明细</a> · <a href="../../../sources/600519/Filings/600519_%E5%91%A8%E6%9C%AB%E4%BB%B7%E7%9B%98%E5%8F%8A%E4%BC%B0%E5%80%BC%E5%A4%8D%E6%A0%B8_2026-11-21.json">周末核验记录</a></p></section>
+<section class="card" id="snapshot"><h2>一、公司速览</h2>
+<p class="intro">普飞散瓶流通报价只比 i 茅台平台价高 <strong>31 元</strong>，但仍比销售合同价高 <strong>301 元</strong>。直销正在改变这部分价差的分配。三季度归母净利润同比增长 3.78%，前三季度仍微降 0.25%。接下来要看的是，渠道调整能否带来持续的终端复购，并守住利润率。<span class="src-badge src-e">推算</span><span class="src-badge src-s">一手</span></p>
+<div class="summary-grid"><div class="summary-item"><div class="value">1,485.75</div><div class="label">收盘价（元） · +1.75%</div></div><div class="summary-item"><div class="value">1.857</div><div class="label">总市值（万亿元）</div></div><div class="summary-item"><div class="value">22.61×</div><div class="label">滚动市盈率</div></div><div class="summary-item"><div class="value">6.85×</div><div class="label">市净率 · 三季末净资产</div></div><div class="summary-item"><div class="value">10.84×</div><div class="label">滚动市销率 · 营业收入</div></div><div class="summary-item"><div class="value metric-positive">3.50%</div><div class="label">过去十二个月现金股息率</div></div></div>
+<div class="table-scroll"><table><thead><tr><th scope="col">项目</th><th scope="col">读数</th></tr></thead><tbody>
+<tr><th scope="row">上市与币种</th><td>上交所 A 股 600519 · 人民币</td></tr>
+<tr><th scope="row">主营与控制人</th><td>茅台酒及系列酒 · 贵州省国资委 · 茅台集团三季末持股 54.50%</td></tr>
+<tr><th scope="row">总股本及区间</th><td>三季末 12.5008 亿股 · 近 52 周盘中 1,151.01—1,568.00 元</td></tr>
+<tr><th scope="row">最新归母净利</th><td>第三季度 199.51 亿元，前三季度 644.67 亿元</td></tr>
+</tbody></table></div>
+<div class="chart"><div class="chart-title">过去一年日收盘价 <span class="src-badge src-2">二手</span></div>
+<svg aria-label="贵州茅台过去一年不复权日收盘价" role="img" viewbox="0 0 640 239"><g fill="var(--text-secondary)" font-size="14">
+<text x="58" y="20">人民币元</text><line stroke="var(--border)" x1="58" x2="600" y1="197.0" y2="197.0"></line><text text-anchor="end" x="49" y="202.0">1100</text><line stroke="var(--border)" x1="58" x2="600" y1="153.6" y2="153.6"></line><text text-anchor="end" x="49" y="158.6">1250</text><line stroke="var(--border)" x1="58" x2="600" y1="110.3" y2="110.3"></line><text text-anchor="end" x="49" y="115.3">1400</text><line stroke="var(--border)" x1="58" x2="600" y1="66.9" y2="66.9"></line><text text-anchor="end" x="49" y="71.9">1550</text><line stroke="var(--border)" x1="58" x2="600" y1="38.0" y2="38.0"></line><text text-anchor="end" x="49" y="43.0">1650</text><text text-anchor="start" x="58.0" y="225">2025-11</text><text text-anchor="middle" x="208.0" y="225">2026-03</text><text text-anchor="middle" x="389.1" y="225">2026-07</text><text text-anchor="end" x="600.0" y="225">2026-11</text>
+<polyline fill="none" points="58.0,90.9 59.5,91.0 63.9,95.2 65.4,97.4 66.9,96.1 68.4,96.6 69.9,95.7 74.3,96.4 75.8,99.9 77.3,101.9 78.8,103.3 80.3,101.6 84.7,105.0 86.2,110.0 87.7,109.5 89.2,106.8 90.7,104.3 95.1,102.8 96.6,103.9 98.1,100.7 99.6,101.3 101.1,107.4 105.5,107.9 107.0,108.0 108.5,110.0 110.0,106.2 111.5,106.2 115.9,109.7 117.4,113.2 118.9,116.9 126.3,102.8 127.8,102.2 129.3,103.5 130.8,106.7 132.2,104.8 136.7,103.6 138.2,107.1 139.7,110.8 141.2,113.5 142.6,115.5 147.1,117.2 148.6,117.9 150.1,124.4 151.6,127.6 153.0,128.5 157.5,127.0 159.0,126.7 160.5,132.3 161.9,99.4 163.4,110.0 167.9,102.5 169.4,88.6 170.9,74.1 172.3,65.5 173.8,77.0 178.3,74.1 179.8,80.0 181.2,80.1 182.7,85.2 184.2,85.6 200.6,91.0 202.0,83.8 203.5,91.1 205.0,94.4 209.5,98.7 210.9,102.7 212.4,109.9 213.9,110.6 215.4,109.7 219.9,111.1 221.3,109.7 222.8,110.3 224.3,112.6 225.8,106.3 230.3,92.9 231.7,85.7 233.2,90.4 234.7,95.0 236.2,97.3 240.6,107.9 242.1,108.2 243.6,107.3 245.1,109.9 246.6,105.6 251.0,104.5 252.5,95.8 254.0,93.1 255.5,93.0 257.0,92.9 262.9,98.7 264.4,91.5 265.9,92.8 267.4,94.7 271.8,97.8 273.3,96.7 274.8,90.8 276.3,92.1 277.8,108.2 282.2,107.1 283.7,106.8 285.2,107.5 286.7,104.8 288.2,93.4 292.6,109.3 294.1,108.8 295.6,109.9 297.1,114.7 306.0,117.5 307.5,118.6 309.0,118.1 313.4,121.5 314.9,123.4 316.4,126.4 317.9,127.0 319.3,129.7 323.8,132.5 325.3,132.2 326.8,134.8 328.3,136.0 329.7,142.0 334.2,143.3 335.7,146.9 337.2,138.3 338.7,146.1 340.1,131.7 344.6,136.4 346.1,137.1 347.6,144.4 349.0,148.4 350.5,147.0 355.0,149.9 356.5,151.9 358.0,146.2 359.4,145.3 360.9,141.5 365.4,147.5 366.9,152.0 368.4,156.5 369.8,163.8 375.8,156.1 377.3,161.6 378.7,165.9 380.2,164.6 381.7,177.2 386.2,169.5 387.7,172.3 389.1,170.1 390.6,167.2 392.1,169.7 396.6,166.1 398.0,171.3 399.5,168.3 401.0,173.2 402.5,166.7 407.0,164.9 408.4,163.8 409.9,153.3 411.4,151.0 412.9,152.8 417.4,131.2 418.8,136.9 420.3,137.7 421.8,141.5 423.3,139.9 427.7,142.2 429.2,133.4 430.7,133.1 432.2,121.3 433.7,124.6 438.1,122.1 439.6,131.0 441.1,137.3 442.6,136.7 444.1,136.5 448.5,125.1 450.0,125.7 451.5,126.8 453.0,123.2 454.5,127.0 458.9,141.2 460.4,139.8 461.9,136.9 463.4,141.6 464.9,147.0 469.3,137.8 470.8,138.0 472.3,138.4 473.8,141.4 475.3,139.9 479.7,139.3 481.2,139.3 482.7,139.9 484.2,139.5 485.7,130.5 490.1,134.6 491.6,136.5 493.1,141.8 494.6,143.5 496.1,146.4 500.5,145.6 502.0,147.1 503.5,151.3 505.0,148.7 506.4,151.6 510.9,152.9 512.4,152.5 513.9,153.3 515.4,157.4 521.3,155.4 522.8,157.8 524.3,151.1 536.1,152.0 537.6,149.9 542.1,142.7 543.6,146.4 545.1,143.2 546.5,135.4 548.0,130.8 552.5,132.0 554.0,130.0 555.5,136.4 556.9,133.8 558.4,129.1 562.9,124.7 564.4,123.0 565.8,130.3 567.3,123.6 568.8,112.6 573.3,99.0 574.8,87.1 576.2,96.8 577.7,95.2 579.2,95.0 583.7,97.3 585.2,99.0 586.6,109.6 588.1,107.3 589.6,100.1 594.1,94.7 595.5,93.6 597.0,97.9 598.5,92.9 600.0,85.5" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<circle cx="172.3" cy="65.5" fill="var(--green)" r="4.5"></circle><text fill="var(--green)" font-weight="700" text-anchor="middle" x="172.3" y="54.5">1,555.00</text><circle cx="381.7" cy="177.2" fill="var(--red)" r="4.5"></circle><text fill="var(--red)" font-weight="700" text-anchor="middle" x="381.7" y="196.2">1,168.63</text><circle cx="600.0" cy="85.5" fill="var(--green)" r="4.5"></circle><text fill="var(--green)" font-weight="700" text-anchor="end" x="600.0" y="74.5">1,485.75</text></g></svg></div>
+<p class="caveat-inline">折线使用不复权日收盘价。表中 52 周区间使用日内高低价。市值和倍数口径见文末。</p>
+<p class="caveat-inline"><a href="https://qt.gtimg.cn/q=sh600519,sz000858,sz000568,sh600809">腾讯财经 · 600519 与同业收盘</a> · <a href="https://quoteimg.cfi.cn/quote.aspx?contenttype=outline&amp;jzrq=&amp;stockid=1243">中财网 · 11 月 20 日收盘交叉核验</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649896.PDF">2026 年三季报</a> · <a href="https://web.ifzq.gtimg.cn/appstock/app/kline/kline?param=sh600519,day,2025-11-20,2026-11-20,350">腾讯财经 · 不复权日线</a></p>
+</section>
+<section class="card" id="business"><h2>二、商业模式</h2>
+<h3>2.1 产区、时间与品牌</h3>
+<p>贵州茅台通过销售茅台酒和酱香系列酒获取收入。年报披露茅台酒从生产到出厂至少经历五年，基酒须跨年份、轮次勾兑。发酵环境、可用基酒储备与品牌在宴请和礼赠中的认知共同限制复制速度。五粮液、国窖 1573、青花汾酒可以争夺相同的消费场景，尤其在礼赠预算下降时。<span class="src-badge src-s">一手</span></p>
+<h3>2.2 产品结构与毛利</h3>
+<div class="chart"><div class="chart-title">2026 年 1—9 月酒类主营收入构成 <span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></div>
+<div aria-label="茅台酒收入占86.27%，系列酒占13.73%" class="stacked-bar"><div class="c-main" style="width:86.27%">86.27%</div><div class="c-sub" style="width:13.73%">13.73%</div></div>
+<p class="caveat-inline">茅台酒 1,129.25 亿元，系列酒 179.69 亿元。</p></div>
+<div class="table-scroll"><table><thead><tr><th scope="col">业务</th><th scope="col">2025 年酒类收入占比</th><th scope="col">2025 年酒类毛利贡献</th><th scope="col">贡献减收入占比</th><th scope="col">2025 年毛利率</th></tr></thead><tbody>
+<tr><th scope="row">茅台酒（含飞天与非标）</th><td>86.8%</td><td>89.0%</td><td>+2.2 个百分点</td><td>93.53%</td></tr>
+<tr><th scope="row">系列酒（含茅台 1935）</th><td>13.2%</td><td>11.0%</td><td>−2.2 个百分点</td><td>76.11%</td></tr>
+</tbody></table></div>
+<p>系列酒能覆盖更广价格带，扩量时也会改变集团毛利结构。高价非标属于茅台酒产品档次，其价格和投放变化可压低茅台酒自身的毛利，即使飞天销售仍有韧性。</p>
+<p class="caveat-inline"><a href="https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf">2025 年年报</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649906.PDF">2026 年三季度主要经营数据公告</a> · <a href="https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html">公司官网答复实录 · 11 月 10 日</a></p>
+</section>
+<section class="card" id="core-metric"><h2>三、飞天价盘与现金股息</h2>
+<h3>3.1 合同价、平台价与流通报价</h3>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">3 月 31 日</div><div class="tl-text">普飞合同价从 1,169 元调至 1,269 元，自营体系从 1,499 元调至 1,539 元。</div></div>
+<div class="tl-item"><div class="tl-date">7 月 18 日</div><div class="tl-text">合同价升至 1,369 元，i 茅台升至 1,639 元。两次变动累计分别为 +17.11% 与 +9.34%。</div></div>
+<div class="tl-item"><div class="tl-date">11 月 10—11 日</div><div class="tl-text">王莉在说明会提出逐步转向日常售卖。随后精品、年份酒等 16 款实行全天动态补货。11 月 17 日渠道走访显示，普飞 500 毫升与 1 升仍定时投放。</div></div>
+</div>
+<div class="chart"><div class="chart-title">11 月 20 日可见的飞天价格（元／瓶）<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span></div><div class="bar-row"><div class="bar-label">销售合同价</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-main" style="width:76.06%"></div></div><div class="bar-value">1,369</div></div>
+<div class="bar-row"><div class="bar-label">i 茅台价</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-main" style="width:91.06%"></div></div><div class="bar-value">1,639</div></div>
+<div class="bar-row"><div class="bar-label">流通散瓶</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-sub" style="width:92.78%"></div></div><div class="bar-value">1,670</div></div>
+<div class="bar-row"><div class="bar-label">流通原箱</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-sub" style="width:93.33%"></div></div><div class="bar-value">1,680</div></div>
+<div class="bar-row"><div class="bar-label">终端零售均价</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-warn" style="width:97.78%"></div></div><div class="bar-value">1,760</div></div><p class="caveat-inline">同一规格为 53 度 500 毫升。合同与平台为公司公告价，流通为 2026 年产报价样本，终端为酒价内参的飞天零售采样。</p></div>
+<p>散瓶流通报价高于平台价 31 元（1.9%），高于合同价 301 元。经销商还承担资金、库存和履约成本，两个差额都只反映各环节价格。零售样本均价较 11 月 9 日的 1,776 元下跌 16 元。日常补货若扩大至普飞，定时配给减少后，批价和实际售出数量会更直接地检验消费者的支付意愿。<span class="src-badge src-e">推算</span></p>
+<p class="caveat-inline"><a href="https://static.cninfo.com.cn/finalpage/2026-03-31/1225055491.PDF">3 月调价公告</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-07-18/1225431263.PDF">7 月调价公告</a> · <a href="https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html">公司官网答复实录 · 11 月 10 日</a> · <a href="https://stock.10jqka.com.cn/20261117/c681920178.shtml">深圳商报 11 月 17 日渠道走访</a> · <a href="https://maotai.wgnds.com/">飞天流通行情 · 按年份和包装查询</a> · <a href="https://www.jiuw.cn/market">酒价内参 11 月 20 日数据（转载）</a> · <a href="https://finance.sina.com.cn/chanjing/jync/2026-11-09/doc-iniyazcy6356607.shtml">新浪酒价内参 · 11 月 9 日</a></p>
+<h3>3.2 批价回落如何挤压两层价差</h3><p>同一来源中，11 月 20 日散瓶较上一条 11 月 1 日报价低 20 元，原箱较上一条 10 月 29 日报价低 35 元。两个间隔不同，无法由此推算日跌幅。散瓶只需再跌 31 元（1.86%）便与平台挂牌价持平。合同价与平台价均取自 7 月 18 日公司公告。</p><div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>假设散瓶价（元/瓶）</th><th>较平台 1,639 元</th><th>较合同 1,369 元</th><th>观察含义</th></tr></thead><tbody><tr><td>1700</td><td>+61</td><td>+331</td><td>高于平台 61 元，需同时核实能否买到及真实走量。</td></tr><tr><td>1670</td><td>+31</td><td>+301</td><td>11/20 可观察报价；没有扣除渠道费用、运费和库存成本。</td></tr><tr><td>1639</td><td>+0</td><td>+270</td><td>市场与平台同价，配额带来的即时转售空间消失。</td></tr><tr><td>1600</td><td>-39</td><td>+231</td><td>渠道低于平台 39 元；需看企业的补货和消费者选择。</td></tr></tbody></table></div><p>合同价上调与份额向直销移动都能增加公司的每瓶实现收入。若实际动销未增长，库存和渠道费用可能吸收收益。批价触及平台价仅改变套利空间；要检验公司盈利，还要同时看到下一季酒类收入、毛利和销售收现。</p><p><a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%BB%E8%A6%81%E7%BB%8F%E8%90%A5%E6%95%B0%E6%8D%AE%E5%85%AC%E5%91%8A_2026-10-31.pdf">经营数据公告（本地）</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649906.PDF">巨潮原件</a> · <a href="../../../sources/600519/Filings/600519_%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%B0%83%E6%95%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%E9%94%80%E5%94%AE%E5%90%88%E5%90%8C%E4%BB%B7%E6%A0%BC_2026-07-18.pdf">7 月价格公告</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-07-18/1225431263.PDF">巨潮调价原件</a> · <a href="https://maotai.wgnds.com/2026%E5%B9%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%E6%95%A3%E7%93%B6">2026 年产散瓶报价明细</a> · <a href="https://maotai.wgnds.com/2026%E5%B9%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%28%E5%8E%9F%E7%AE%B1%29">同年份原箱报价明细</a> · <a href="../../../sources/600519/Filings/600519_%E5%91%A8%E6%9C%AB%E4%BB%B7%E7%9B%98%E5%8F%8A%E4%BC%B0%E5%80%BC%E5%A4%8D%E6%A0%B8_2026-11-21.json">周末核验记录</a></p><h3>3.3 已派股息与再分配能力</h3><p>过去十二个月实际派发 23.957 + 28.02423 = 51.98123 元/股，按 1,485.75 元收盘折合 3.50% 税前历史股息率。公司 11/10 表示正在制定 2026 年中期分红方案。本期查阅的公司披露尚无本次中期实施金额与派息日。</p><p><a href="../../../sources/600519/Filings/600519_2025%E5%B9%B4_%E5%B9%B4%E6%8A%A5_2026-04-17.pdf">2025 年年报</a> · <a href="https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html">公司公开答复</a> · <a href="https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600519">公司公告栏</a></p></section>
+<section class="card" id="financials"><h2>四、最新财务数据</h2>
+<h3>4.1 三季度增速回正，累计盈利近持平</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">指标（亿元）</th><th scope="col">2025 年 Q3</th><th scope="col">2026 年 Q3</th><th scope="col">同比</th><th scope="col">2026 年 1—9 月</th><th scope="col">同比</th></tr></thead><tbody>
+<tr><th scope="row">营业收入</th><td>390.64</td><td>402.67</td><td>+3.08%</td><td>1,309.71</td><td>+1.96%</td></tr>
+<tr><th scope="row">利润总额</th><td>266.25</td><td>275.79</td><td>+3.58%</td><td>890.18</td><td>−0.43%</td></tr>
+<tr><th scope="row">归母净利润</th><td>192.24</td><td>199.51</td><td>+3.78%</td><td>644.67</td><td>−0.25%</td></tr>
+<tr><th scope="row">扣非归母净利润</th><td>192.90</td><td>198.61</td><td>+2.96%</td><td>643.25</td><td>−0.55%</td></tr>
+<tr><th scope="row">销售商品、提供劳务现金流入</th><td>437.05</td><td>451.01</td><td>+3.19%</td><td>1,435.23</td><td>+3.41%</td></tr>
+<tr><th scope="row">经营活动净现金流</th><td>250.78</td><td>133.68</td><td>−46.69%</td><td>840.59</td><td>+120.07%</td></tr>
+</tbody></table></div>
+<p>三季度营业毛利率从 91.28% 降至 89.64%，下降 1.64 个百分点。同期税金及附加率下降 2.03 个百分点，销售费率上升 0.92 个百分点，归母净利率由 49.21% 升至 49.55%。利润改善对税费率变化有依赖，后续仍需看毛利和销售费用。<span class="src-badge src-e">推算</span></p>
+<p>2025 年四季度归母净利为 176.93 亿元。2026 年四季度达到 178.53 亿元，全年归母净利润即与上年大致持平，对应单季同比约 +0.9%。11 月 10 日公司讨论了量价平衡和需求疲弱，公开答复未发布量化全年盈利指引。<span class="src-badge src-e">推算</span><span class="src-badge src-s">一手</span></p>
+<h3>4.2 现金流、合同负债与应收</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">检查项</th><th scope="col">2025 年末</th><th scope="col">2026 年三季度末</th><th scope="col">变化与解释</th></tr></thead><tbody>
+<tr><th scope="row">存货（亿元）</th><td>614.27</td><td>613.91</td><td>−0.06%，包括需要贮存的基酒</td></tr>
+<tr><th scope="row">合同负债（亿元）</th><td>80.07</td><td>20.84</td><td>−73.97%，投放前打款与代售减少预收</td></tr>
+<tr><th scope="row">应收账款（亿元）</th><td>0.026</td><td>3.65</td><td>绝对增量 3.62 亿元，管理层归因于平台货款清分延至下一交易日</td></tr>
+<tr><th scope="row">应收款项融资（亿元）</th><td>44.57</td><td>6.71</td><td>与应收账款合计由约 44.60 亿元下降至 10.35 亿元</td></tr>
+<tr><th scope="row">流动比率</th><td>5.09×</td><td>7.19×</td><td>按合并流动资产及流动负债计算，含财务公司</td></tr>
+</tbody></table></div>
+<p>财务公司同业存款到期和集团成员存款变化推高前三季度合并经营现金流。同期销售收现增速为 3.41%，与单季销售收现增长 3.19% 相近。合并经营现金流在第三季度反而下降 46.69%，酒款回收变化与合并净流入的幅度明显不同。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></p>
+<p>三季末合并负债占资产约 11.9%，其中吸收存款及同业存放约 172.72 亿元。财务公司给集团成员提供存贷款，关联方资金调度和风险集中度仍需结合半年报附注与风险评估报告跟踪。以三季报前十大持股观察，茅台集团直接持股 681,282,935 股，与上年末同口径持股数一致。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></p>
+<p class="caveat-inline"><a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649896.PDF">2026 年三季报</a> · <a href="https://static.cninfo.com.cn/finalpage/2025-10-30/1224764517.PDF">2025 年三季报</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-08-15/1225475868.PDF">2026 年半年报</a> · <a href="https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf">2025 年年报</a> · <a href="https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html">公司官网答复实录 · 11 月 10 日</a></p>
+</section>
+<section class="card" id="channels"><h2>五、渠道重构与产品分化</h2>
+<h3>5.1 i 茅台的大部分增量被其他渠道下滑抵消</h3>
+<div class="chart"><div class="chart-title">主营业务各渠道收入（亿元）<span class="src-badge src-e">推算</span></div><div class="chart-legend"><span><i style="background:var(--accent)"></i>i 茅台</span><span><i style="background:#9ec3ad"></i>其他直销</span><span><i style="background:#ead6b9"></i>批发代理</span></div><svg aria-label="前三季度各渠道收入对比，i茅台增长361.4%，其他直销下降64.5%，批发代理下降21.6%" role="img" viewbox="0 0 640 288"><line stroke="var(--border)" x1="62" x2="588" y1="235.0" y2="235.0"></line><text fill="var(--text-secondary)" font-size="13" text-anchor="end" x="55" y="240.0">0</text><line stroke="var(--border)" x1="62" x2="588" y1="184.2" y2="184.2"></line><text fill="var(--text-secondary)" font-size="13" text-anchor="end" x="55" y="189.2">350</text><line stroke="var(--border)" x1="62" x2="588" y1="133.5" y2="133.5"></line><text fill="var(--text-secondary)" font-size="13" text-anchor="end" x="55" y="138.5">700</text><line stroke="var(--border)" x1="62" x2="588" y1="82.8" y2="82.8"></line><text fill="var(--text-secondary)" font-size="13" text-anchor="end" x="55" y="87.8">1,050</text><line stroke="var(--border)" x1="62" x2="588" y1="32.0" y2="32.0"></line><text fill="var(--text-secondary)" font-size="13" text-anchor="end" x="55" y="37.0">1,400</text><rect fill="var(--accent)" height="18.4" rx="1" width="110" x="118" y="216.6"></rect><rect fill="#9ec3ad" height="62.2" rx="1" width="110" x="118" y="154.4"></rect><rect fill="#ead6b9" height="105.6" rx="1" width="110" x="118" y="48.8"></rect><rect fill="var(--accent)" height="84.9" rx="1" width="110" x="412" y="150.1"></rect><rect fill="#9ec3ad" height="22.1" rx="1" width="110" x="412" y="128.0"></rect><rect fill="#ead6b9" height="82.8" rx="1" width="110" x="412" y="45.2"></rect><line stroke="var(--text-muted)" stroke-dasharray="4 4" stroke-width="1.1" x1="228" x2="412" y1="216.60" y2="150.08"></line><line stroke="var(--text-muted)" stroke-dasharray="4 4" stroke-width="1.1" x1="228" x2="412" y1="154.44" y2="128.03"></line><line stroke="var(--text-muted)" stroke-dasharray="4 4" stroke-width="1.1" x1="228" x2="412" y1="48.82" y2="45.20"></line><text fill="#fff" font-size="15" font-weight="700" text-anchor="middle" x="173" y="230.6">126.9</text><text fill="var(--text-primary)" font-size="15" font-weight="700" text-anchor="middle" x="173" y="190.3">428.6</text><text fill="var(--text-primary)" font-size="15" font-weight="700" text-anchor="middle" x="173" y="106.4">728.4</text><text fill="var(--text-secondary)" font-size="15" text-anchor="middle" x="173" y="258">2025 年 1—9 月</text><text fill="var(--text-muted)" font-size="13" text-anchor="middle" x="173" y="278">合计 1,284.0</text><text fill="#fff" font-size="15" font-weight="700" text-anchor="middle" x="467" y="197.3">585.6</text><text fill="var(--text-primary)" font-size="15" font-weight="700" text-anchor="middle" x="467" y="143.9">152.1</text><text fill="var(--text-primary)" font-size="15" font-weight="700" text-anchor="middle" x="467" y="91.4">571.2</text><text fill="var(--text-secondary)" font-size="15" text-anchor="middle" x="467" y="258">2026 年 1—9 月</text><text fill="var(--text-muted)" font-size="13" text-anchor="middle" x="467" y="278">合计 1,308.9</text><text fill="var(--text-primary)" font-size="16" font-weight="700" text-anchor="middle" x="320" y="214.2">+361.4%</text><text fill="var(--text-primary)" font-size="16" font-weight="700" text-anchor="middle" x="320" y="167.3">-64.5%</text><text fill="var(--text-primary)" font-size="16" font-weight="700" text-anchor="middle" x="320" y="99.1">-21.6%</text></svg><p class="caveat-inline">2025 与 2026 年三季报，同一金额轴。其他直销为直销收入扣除 i 茅台。</p></div>
+<p>前三季度 i 茅台增加 458.71 亿元，其他直销减少 276.52 亿元，批发代理减少 157.22 亿元。三端相抵后，酒类主营收入净增约 24.96 亿元。直销占酒类主营收入的比重从 43.27% 升至 56.36%，i 茅台占直销的比重由 22.85% 升至 79.38%。去中间环节能提高厂家对价格和客户的控制，已披露收入仍无法辨认有多少是渠道迁移、多少是新增消费。<span class="src-badge src-e">推算</span></p>
+<div class="table-scroll"><table><thead><tr><th scope="col">单季酒类收入（亿元）</th><th scope="col">2025 年 Q3</th><th scope="col">2026 年 Q3</th><th scope="col">同比</th></tr></thead><tbody>
+<tr><th scope="row">茅台酒</th><td>349.24</td><td>352.01</td><td>+0.79%</td></tr>
+<tr><th scope="row">系列酒</th><td>41.22</td><td>50.34</td><td>+22.14%</td></tr>
+<tr><th scope="row">直销</th><td>155.46</td><td>218.12</td><td>+40.31%</td></tr>
+<tr><th scope="row">其中 i 茅台</th><td>19.31</td><td>182.99</td><td>+847.48%</td></tr>
+<tr><th scope="row">批发代理</th><td>235.00</td><td>184.24</td><td>−21.60%</td></tr>
+</tbody></table></div>
+<p>系列酒贡献了约四分之三的三季度酒类收入增量，来自 2025 年同期较低基数。管理层也提到双节动销改善。茅台酒在提价后的单季收入只增约 0.8%，产品档次内的数量、实际成交价和结构仍缺细分披露。<span class="src-badge src-e">推算</span><span class="src-badge src-s">一手</span></p>
+<h3>5.2 线下经销商回报与非标价格</h3>
+<p>国内经销商前三季度新增 220 家、退出 288 家，净减 68 家至 2,285 家，变动主要在系列酒。部分产品采用代售，货权仍在公司，店端的资金占用下降，收入来源更多转向服务。11 月 19 日的酒商采访显示，受访者对精品与部分年份酒的同价竞争和库存定价承压有顾虑，当前观察范围限于受访渠道。<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span></p>
+<p>境外酒类收入 16.41 亿元，同比减少约 57.84%，占酒类主营 1.25%，境外经销商同期净减 2 家至 124 家。增量仍主要依赖国内消费者。11 月 18 日集团战略研讨会讨论了消费趋势和五年规划，上市公司的业绩判断仍以其披露数据为依据。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></p>
+<p class="caveat-inline"><a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649906.PDF">2026 年三季度主要经营数据公告</a> · <a href="https://static.cninfo.com.cn/finalpage/2025-10-30/1224764513.PDF">2025 年三季度主要经营数据公告</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-08-15/1225475868.PDF">2026 年半年报</a> · <a href="https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html">公司官网答复实录 · 11 月 10 日</a> · <a href="https://finance.sina.com.cn/chanjing/jync/2026-11-19/doc-inizhmiz6184764.shtml">酒业内参 11 月 19 日经销商采访</a> · <a href="https://www.moutai.com.cn/mtjt/2026-11/19/article_2026111915225059988.html">茅台集团 11 月 18 日战略研讨会</a></p>
+<h3>5.3 平台收入占多少，需要什么才能验证净增量</h3><p>1—9 月公司披露，直销 737.74 亿元、批发代理 571.20 亿元，两者合计酒类主营收入 1,308.94 亿元。其中 i 茅台 585.62 亿元，占直销的 79.38%、占酒类主营的 44.74%。因此把平台收入叠加在直销之上会重复计算。国内经销商减少净额 68 家，公司明确变动主要来自系列酒经销商，不能据此推定 68 家飞天核心经销商退出。</p><p><a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%BB%E8%A6%81%E7%BB%8F%E8%90%A5%E6%95%B0%E6%8D%AE%E5%85%AC%E5%91%8A_2026-10-31.pdf">公司分产品、渠道和地区原表</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649906.PDF">巨潮原件</a></p></section>
+<section class="card" id="policy"><h2>六、政策风险</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">风险项</th><th scope="col">状态与影响路径</th><th scope="col">强度与跟踪</th></tr></thead><tbody>
+<tr><th scope="row">公务接待约束</th><td>2025 年 5 月修订的《党政机关厉行节约反对浪费条例》第二十三条明确公务接待工作餐不上酒，直接影响适用范围内的公务消费。</td><td>对公务场景直接，整体敞口未披露。关注商务宴请、礼赠和春节实际动销。</td></tr>
+<tr><th scope="row">白酒消费税与计税基数</th><td>现行白酒税率为从价 20% 加每 500 毫升 0.5 元。税务总局 2026 年第 9 号公告自 6 月 1 日起实施，新增明细表和关联销售报送。</td><td>中。观察最低计税价格核定、税金及附加率及税务部门新文件。</td></tr>
+<tr><th scope="row">国资治理与关联资金</th><td>贵州省国资委为实际控制人，合并报表包含向集团成员提供服务的财务公司。</td><td>中。关注关联存贷款集中度、资金流动性与新分红规划。</td></tr>
+</tbody></table></div>
+<p>对于当前经营，公务消费和商务活动影响销量，计税基数变化影响单位利润，治理及分红变化影响股东现金回报。若动销和税后盈利同时承压，对应第十一节承压情景。</p>
+<p class="caveat-inline"><a href="https://www.gov.cn/gongbao/2025/issue_12066/material/gwygb202515.pdf">国务院公报 · 党政机关厉行节约反对浪费条例</a> · <a href="https://neimenggu.chinatax.gov.cn/nmgzzqswj/msxxgkml_19393/hlbesswj/hleswj_22779/202605/t20260521_893862.html">税务总局 2026 年第 9 号公告</a> · <a href="https://tianjin.chinatax.gov.cn/11200000000/0300/030004/03000418/20260720120457731.shtml">消费税暂行条例及税率表</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-08-15/1225475868.PDF">2026 年半年报</a> · <a href="https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf">2025 年年报</a></p>
+</section>
+<section class="card" id="valuation"><h2>七、估值分析</h2>
+<h3>7.1 滚动市盈率与历史位置</h3>
+<p>现价对应 <strong>22.61 倍</strong>滚动市盈率，处于与 2019—2025 年七个年末样本对照区间（20.97—53.75 倍）的偏低一段，低于样本中位数 34.59 倍。七个年末观测中有两个在当前倍数以下。近四季归母利润约 821.61 亿元，2025 年全年为 823.20 亿元，2024 年为 862.28 亿元。<span class="src-badge src-e">推算</span></p>
+<div class="chart"><div class="chart-title">年末价格对应的年度市盈率 <span class="src-badge src-e">推算</span></div>
+<svg aria-label="2019 至 2025 年末市盈率与 2026 年 11 月 20 日滚动市盈率" role="img" viewbox="0 0 640 239"><g fill="var(--text-secondary)" font-size="14">
+<text x="58" y="20">倍</text><line stroke="var(--border)" x1="58" x2="600" y1="197.0" y2="197.0"></line><text text-anchor="end" x="49" y="202.0">15</text><line stroke="var(--border)" x1="58" x2="600" y1="161.7" y2="161.7"></line><text text-anchor="end" x="49" y="166.7">25</text><line stroke="var(--border)" x1="58" x2="600" y1="126.3" y2="126.3"></line><text text-anchor="end" x="49" y="131.3">35</text><line stroke="var(--border)" x1="58" x2="600" y1="91.0" y2="91.0"></line><text text-anchor="end" x="49" y="96.0">45</text><line stroke="var(--border)" x1="58" x2="600" y1="55.7" y2="55.7"></line><text text-anchor="end" x="49" y="60.7">55</text><line stroke="var(--border)" x1="58" x2="600" y1="38.0" y2="38.0"></line><text text-anchor="end" x="49" y="43.0">60</text><text text-anchor="start" x="58.0" y="225">2019</text><text text-anchor="middle" x="136.8" y="225">2020</text><text text-anchor="middle" x="215.5" y="225">2021</text><text text-anchor="middle" x="293.9" y="225">2022</text><text text-anchor="middle" x="372.3" y="225">2023</text><text text-anchor="middle" x="451.6" y="225">2024</text><text text-anchor="middle" x="530.2" y="225">2025</text><text text-anchor="end" x="600.0" y="225">11-20</text>
+<polyline fill="none" points="58.0,122.6 136.8,60.1 215.5,76.5 293.9,127.8 372.3,147.5 451.6,171.6 530.2,175.9 600.0,170.1" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<circle cx="136.8" cy="60.1" fill="var(--green)" r="4.5"></circle><text fill="var(--green)" font-weight="700" text-anchor="middle" x="136.8" y="50.1">53.75</text><circle cx="530.2" cy="175.9" fill="var(--green)" r="4.5"></circle><text fill="var(--green)" font-weight="700" text-anchor="middle" x="530.2" y="195.9">20.97</text><circle cx="600.0" cy="170.1" fill="var(--green)" r="4.5"></circle><text fill="var(--green)" font-weight="700" text-anchor="end" x="600.0" y="160.1">22.61</text></g></svg></div>
+<details><summary>查看年末观测原值</summary>
+<div class="table-scroll"><table><thead><tr><th scope="col">观测日</th><th scope="col">不复权收盘价（元）</th><th scope="col">年度基本每股收益（元）</th><th scope="col">市盈率（倍）</th></tr></thead><tbody>
+<tr><th scope="row">2019-12-31</th><td>1,183.00</td><td>32.80</td><td>36.07</td></tr>
+<tr><th scope="row">2020-12-31</th><td>1,998.00</td><td>37.17</td><td>53.75</td></tr>
+<tr><th scope="row">2021-12-31</th><td>2,050.00</td><td>41.76</td><td>49.09</td></tr>
+<tr><th scope="row">2022-12-30</th><td>1,727.00</td><td>49.93</td><td>34.59</td></tr>
+<tr><th scope="row">2023-12-29</th><td>1,726.00</td><td>59.49</td><td>29.01</td></tr>
+<tr><th scope="row">2024-12-31</th><td>1,524.00</td><td>68.64</td><td>22.20</td></tr>
+<tr><th scope="row">2025-12-31</th><td>1,377.18</td><td>65.66</td><td>20.97</td></tr>
+</tbody></table></div></details>
+<p class="caveat-inline"><a href="https://qt.gtimg.cn/q=sh600519,sz000858,sz000568,sh600809">腾讯财经 · 600519 与同业收盘</a> · <a href="https://web.ifzq.gtimg.cn/appstock/app/kline/kline?param=sh600519,month,2018-12-01,2026-11-20,120">腾讯财经 · 不复权月线</a> · <a href="https://www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2021-03-31/600519_20210331_3.pdf">2020 年年报摘要 · 上交所</a> · <a href="https://dataclouds.cninfo.com.cn/shgonggao/2023/2023-03-31/ec8c022acefb11ed962efa163e26e5de.pdf">2022 年年报摘要 · 巨潮</a> · <a href="https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf">2025 年年报</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649896.PDF">2026 年三季报</a></p>
+<h3>7.2 同日同业对比</h3>
+<div class="chart"><div class="chart-title">11 月 20 日同业滚动市盈率（倍）<span class="src-badge src-2">二手</span></div><div class="bar-row"><div class="bar-label">五粮液</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-sub" style="width:92.40%"></div></div><div class="bar-value">23.10</div></div>
+<div class="bar-row"><div class="bar-label">贵州茅台</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-main" style="width:90.42%"></div></div><div class="bar-value">22.61</div></div>
+<div class="bar-row"><div class="bar-label">泸州老窖</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-sub" style="width:81.80%"></div></div><div class="bar-value">20.45</div></div>
+<div class="bar-row"><div class="bar-label">山西汾酒</div><div aria-hidden="true" class="bar-track"><div class="bar-fill c-sub" style="width:68.56%"></div></div><div class="bar-value">17.14</div></div><p class="caveat-inline">同一交易日腾讯财经滚动口径。贵州茅台另用披露股本与归母净利润复算。</p></div>
+<p>同业在高端宴请及礼赠场景有重叠，品牌组合、渠道调整和盈利基数各异。倍数接近的五粮液和茅台对应不同的盈利变化，因此倍数排序需要结合利润率和后续动销解读。</p>
+<h3>7.3 一致预期与盈利弹性</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">财年</th><th scope="col">覆盖机构</th><th scope="col">归母净利润预期（亿元）</th><th scope="col">每股收益（元）</th><th scope="col">当前价对应市盈率</th></tr></thead><tbody>
+<tr><th scope="row">2026E</th><td>44</td><td>835.81</td><td>66.85</td><td>22.23×</td></tr>
+<tr><th scope="row">2027E</th><td>44</td><td>885.45</td><td>70.82</td><td>20.98×</td></tr>
+<tr><th scope="row">2028E</th><td>42</td><td>935.88</td><td>74.85</td><td>19.85×</td></tr>
+</tbody></table></div>
+<p>按 11 月 20 日同花顺快照，2026 年一致预期的归母净利润同比约 +1.53%，相当于四季度实现 191.14 亿元，较去年四季度约高 8.03%。2027 年预期增长 5.94%，对应 PEG 约 3.74。小幅修正中期增速便会明显改变 PEG，近期增速、可持续利润率与分红政策需要结合看。<span class="src-badge src-2">二手</span><span class="src-badge src-e">推算</span></p>
+<p class="caveat-inline"><a href="https://qt.gtimg.cn/q=sh600519,sz000858,sz000568,sh600809">腾讯财经 · 600519 与同业收盘</a> · <a href="https://basic.10jqka.com.cn/48/600519/worth.html">同花顺 F10 · 盈利预测快照</a></p>
+<h3>7.4 盈利和分红分别变化时，现价对应什么</h3><p>按滚动归母约 821.61 亿元、三季末 12.5008 亿股和 1,485.75 元，保持股价固定。以下 75% 仅作分配比例假设，测算的年度现金回报与截至 11/20 的滚动已派股息口径不同。</p><div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>较滚动归母变动</th><th>假设净利润（亿元）</th><th>对应 PE</th><th>若派发 75% 的税前股息率</th></tr></thead><tbody><tr><td>-15%</td><td>698.37</td><td>26.60×</td><td>2.82%</td></tr><tr><td>-5%</td><td>780.53</td><td>23.80×</td><td>3.15%</td></tr><tr><td>+0%</td><td>821.61</td><td>22.61×</td><td>3.32%</td></tr><tr><td>+10%</td><td>903.77</td><td>20.55×</td><td>3.65%</td></tr></tbody></table></div><p>若盈利持平，按 75% 派发对应约 3.32%；若派发比例下降至 65%，约为 2.88%。保持 11/20 最近十二个月实际派发额，则滚动股息率约 3.50%。派息时间、可分配利润与当年董事会决议共同决定收到的现金。</p></section>
+<section class="card" id="bull-bear"><h2>八、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green"><h4><span class="tag tag-bull">多方</span></h4><ul>
+<li><strong>巴菲特｜品牌定价</strong>　核心产区、至少五年生产周期及品牌认知提供供给约束。普飞合同价年内两次上调，流通报价仍高于平台价。</li>
+<li><strong>费雪｜直接触达客户</strong>　i 茅台扩大企业与消费者的直接联系，缩短购买路径，日常零售可用销量和复购验证改革效果。</li>
+<li><strong>格雷厄姆｜股东现金回报</strong>　实际派发股息对应 3.50% 税前历史收益率，三季末合并负债占资产约 11.9%。</li>
+</ul></div>
+<div class="box-red"><h4><span class="tag tag-bear">空方</span></h4><ul>
+<li><strong>马克斯｜库存周期</strong>　散瓶参考价与平台价相隔 31 元，囤货收益降低时，流通端持货和补货意愿可能变化。</li>
+<li><strong>费雪｜客户与渠道证据</strong>　前三季度 i 茅台收入多增 458.71 亿元，酒类主营只多增 24.96 亿元，新增收入很大部分被其他渠道收缩抵消。</li>
+<li><strong>林奇｜成熟企业增长</strong>　前三季度归母利润略降，单季毛利率仍同比下滑。接近 23 倍滚动市盈率下，盈利增长路径会显著改变后续倍数。</li>
+</ul></div></div>
+<div class="quote"><strong>分歧如何验证</strong>　如果散瓶价靠近平台价，而同规格终端销量、回款与酒类毛利率一起企稳，直销更有可能承接真实需求。若批价走弱与季度收现、毛利率连续走弱同时发生，渠道迁移能力与品牌溢价需要分别重估。</div>
+</section>
+<section class="card" id="analysts"><h2>九、券商分析师全景</h2>
+<p>以下是截至 11 月 20 日可追溯的近期券商样本。评级和目标价按各机构原义记录，盈利预测单位为元／股。<span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span></p>
+<div class="table-scroll"><table><thead><tr><th scope="col">券商与日期</th><th scope="col">机构评级</th><th scope="col">2026E／2027E EPS</th><th scope="col">机构目标价</th><th scope="col">研报关注点</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://stock.10jqka.com.cn/20261119/c682012605.shtml">中邮证券 · 11-19</a></th><td><span class="tag tag-bull">维持买入</span></td><td>66.87／70.66</td><td>—</td><td>利润企稳，关注系列酒投放节奏</td></tr>
+<tr><th scope="row"><a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/company/rptid/848290752692/index.phtml">长江证券 · 11-18 刊载</a></th><td><span class="tag tag-bull">维持买入</span></td><td>66.57／69.25</td><td>—</td><td>直销贡献主要增量，系列酒改善</td></tr>
+<tr><th scope="row"><a href="https://pdf.dfcfw.com/pdf/H3_AP202611031831375931_1.pdf">开源证券 · 11-03</a></th><td><span class="tag tag-bull">维持买入</span></td><td>67.81／71.34</td><td>—</td><td>非标调整拖累毛利，小幅下调两年盈利</td></tr>
+<tr><th scope="row"><a href="https://pdf.dfcfw.com/pdf/H3_AP202611021831307711_1.pdf">群益证券 · 11-02</a></th><td><span class="tag tag-bull">上调至买进</span></td><td>68.12／73.30</td><td>1,610 元</td><td>维持预测，关注飞天投放与直销改革</td></tr>
+<tr><th scope="row"><a href="https://pdf.dfcfw.com/pdf/H3_AP202611021831334793_1.pdf">万联证券 · 11-02</a></th><td><span class="tag tag-hold">维持增持</span></td><td>68.95／74.88</td><td>—</td><td>强调合同价变动与渠道结构</td></tr>
+<tr><th scope="row"><a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/846803580428/index.phtml">东方证券 · 10-31</a></th><td><span class="tag tag-bull">维持买入</span></td><td>—</td><td>1,648.66 元</td><td>维持盈利预测，以现金流折现调整目标价</td></tr>
+</tbody></table></div>
+<p>这组样本的分歧主要在渠道变化转为利润的速度。纳入表内的 2027 年每股收益预测介于 69.25—74.88 元。未核到可比目标价的条目标为「—」。</p>
+</section>
+<section class="card" id="community"><h2>十、雪球与个人投资者讨论</h2>
+<p>以「飞天茅台散瓶」「i 茅台日常售卖」「茅台 1935」「普飞 53 度 500 毫升」和「600519 三季报」检索雪球、微博。可打开或通过快照核对的近两月材料里，有两篇可追溯的雪球署名长文，样本中另有新闻和研报转载。近期独立评论样本不足以判断社区整体情绪。<span class="src-badge src-3">三方</span><span class="src-badge src-t">时效</span></p>
+<ul><li>一篇雪球长文把双节价盘和终端动销视为渠道改革的正面信号。它引用的是国庆前后的数据，11 月终端和散瓶报价提供了更新的观察。</li>
+<li>另一篇雪球署名整理留意了线下自营价与平台价的分化。对这类观察，更可复核的指标是同年份、同规格的流通报价，以及平台实际放量后能否保持订单。</li></ul>
+<p class="caveat-inline"><a href="https://www.xueqiu.com/6026163700/411351380">雪球署名文章 · 惠及终端的渠道调整</a> · <a href="https://www.xueqiu.com/6820991332/411231659">雪球署名转载 · 9 月价盘复盘</a> · <a href="https://maotai.wgnds.com/">飞天流通行情 · 按年份和包装查询</a> · <a href="https://stock.10jqka.com.cn/20261117/c681920178.shtml">深圳商报 11 月 17 日渠道走访</a></p>
+</section>
+<section class="card" id="conclusion"><h2>十一、综合判断框架</h2><p>飞天仍有品牌溢价；目前窄的是流通成交与官方平台价格之间的距离。后续研究需要分清两条线：消费者实际支付和回购频率，以及上市公司将同一瓶酒从批发移到直销后保留的收入与费用。销量、回款和毛利一起改善，才支持更强的持续增长假设。</p><div class="table-wrap" style="overflow-x:auto"><table><thead><tr><th>经营情景</th><th>领先观察</th><th>财务验证</th></tr></thead><tbody><tr><td>消费恢复</td><td>春节前补货后散瓶报价和真实售出量同时回升</td><td>酒类收入和销售收现增长，毛利率、费率未显著恶化。</td></tr><tr><td>渠道切换</td><td>平台份额继续上升、流通价接近平台，新增客户与老客户迁移混合</td><td>比较全渠道酒类收入与回款；检验平台收入增长有多少被其他渠道减少抵消。</td></tr><tr><td>结构承压</td><td>非标和系列酒价承压，渠道加大服务和销售投入</td><td>酒类毛利率下降或销售费率上行，单季利润增速落后于收入。</td></tr><tr><td>需求走弱</td><td>同规格散瓶持续低于平台价，节日实际动销和经销商补货均下降</td><td>销量、销售收现与合同负债多项同向下滑，需重估逐次提价的持续性。</td></tr></tbody></table></div><p>下一期优先核对 2026 年中期分红正式方案、下一次 i 茅台普飞放量规则和四季度终端动销。按既有披露，四季度归母达到约 178.53 亿元可使年度盈利大致持平；这一比较门槛可以随业绩预告更新。</p></section>
+<section class="card" id="notes"><h2>数据说明</h2>
+<h3>① 数据口径与方法论</h3>
+<ul>
+<li><strong>行情与倍数。</strong> 11 月 20 日腾讯行情时间戳为 16:14:47，对应当日 1,485.75 元收盘价，中财网 15:00:02 收盘记录一致。三季末股本 1,250,081,601 股。滚动归母净利润为 2025 全年 823.2007 亿元加 2026 前三季 644.6743 亿元、减 2025 前三季 646.2675 亿元。市净率分母为三季末归母净资产 2,712.05 亿元，市销率分母为同法计算的滚动营业收入约 1,713.55 亿元。全部金额以未四舍五入原值计算。</li>
+<li><strong>历史估值。</strong> 以 2019—2025 年末的不复权收盘价除以对应年报的基本每股收益。年报数字于后续披露，这是回顾性年末样本。经验样本位置为 2／7（约 28.6%），可反映在七个观测点中的位置，日频点时历史分位需另建序列。</li>
+<li><strong>财报拆分。</strong> 单季渠道、销售收现、税金、成本及经营现金流，用各年三季累计对应项减半年累计对应项。毛利率、归母净利率及费率以营业收入为分母。营业总收入含财务公司利息收入，2026 年 Q3 约 410.06 亿元，前三季度 1,332.84 亿元。其他直销等于直销扣除 i 茅台。</li>
+<li><strong>股东回报。</strong> 2025 年中期每股 23.957 元（2025-12-19 派发）与末期每股 28.02423 元（2026-06-26 派发）为现金股息回溯数据。年报的合计回报含回购，财政年度股东回报与按派发日期计算的现金股息率采用各自口径。2026 半年报披露的新一轮回购约 30 亿元、218.86 万股，按总额和股数折合约 1,370.70 元／股（未含交易费用）。</li>
+<li><strong>盈利预测。</strong> 同花顺六个月窗口的 11 月 20 日快照。PEG = 2026E 市盈率 ÷ 2027E 归母净利润同比增速的百分数值。机构目标价保留其报告日期和机构模型。</li>
+</ul>
+<h3>② 与上期报告的变化</h3>
+<p>相对 11 月 20 日版本，本期没有新的股票收盘或财务期间。新增两条分规格酒价的前次观察日期、两份公司原始公告、平台占直销收入比重、价差与利润/派息敏感性分析。</p>
+<h3>③ 取数更正记录</h3>
+<ul>
+<li>2025 年末估值使用年报原值 EPS 65.66 元；当前用三季末实际股本复算滚动市盈率。市场报价页有不同净资产基准，正文市净率统一采用最新三季末归母净资产。</li>
+<li>海外经销商的新增 20 家、退出 22 家为期间发生额，净变动为 −2 家。国内新增 220 家、退出 288 家，净变动为 −68 家。</li>
+<li>11 月 20 日 2026 年产流通样本为散瓶 1,670 元和原箱 1,680 元。另一转引页面的易茅时价散瓶 1,675 元、原箱 1,695 元标的是 11 月 11 日，两组报价的日期和来源各有记录。历史散瓶和原箱一律按同规格比较。</li>
+<li>3 月 31 日调价以巨潮披露的临 2026-006 为准，该原件列明 1,169 元合同价起点。不同编号的报纸 PDF 版面出现 1,199 元说法。</li>
+</ul>
+<p class="caveat-inline"><a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649896.PDF">2026 年三季报</a> · <a href="https://static.cninfo.com.cn/finalpage/2025-10-30/1224764517.PDF">2025 年三季报</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-06-22/1225379934.PDF">2025 年年度权益分派实施公告</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-03-31/1225055491.PDF">3 月调价公告</a> · <a href="https://www.jiupaiming.com/133530.html">11 月 11 日易茅时价转引</a> · <a href="https://basic.10jqka.com.cn/48/600519/worth.html">同花顺 F10 · 盈利预测快照</a></p>
+<h3>④ 已知局限</h3>
+<p>业绩说明会为网络文字交流，本地保存公司公开的六组答复。另有现场 21 个问题，完整记录未取得。三季报未公开普飞分渠道终端销量、实际成交均价、复购率及统一渠道库存天数。流通价为调货参考，官方平台价的可购性随规则和投放而变。终端均价跨地区采样，价格层级各自反映不同环节。</p>
+<p class="caveat-inline"><a href="https://static.cninfo.com.cn/finalpage/2026-11-03/1225652625.PDF">上证路演中心文字说明会公告</a> · <a href="https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html">公司官网答复实录 · 11 月 10 日</a> · <a href="https://maotai.wgnds.com/">飞天流通行情 · 按年份和包装查询</a> · <a href="https://www.jiuw.cn/market">酒价内参 11 月 20 日数据（转载）</a></p>
+<h3>本期重新核对</h3><p><a href="https://qt.gtimg.cn/q=sh600519">腾讯不复权收盘价</a> · <a href="https://summary.jrj.com.cn/stock/sh/600519">11/20 收盘交叉核对</a> · <a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4_%E4%B8%89%E5%AD%A3%E6%8A%A5_2026-10-31.pdf">三季报原文</a> · <a href="../../../sources/600519/Filings/600519_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%BB%E8%A6%81%E7%BB%8F%E8%90%A5%E6%95%B0%E6%8D%AE%E5%85%AC%E5%91%8A_2026-10-31.pdf">三季度主要经营数据公告</a> · <a href="https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html">公司投资者说明会</a> · <a href="https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600519">上交所公告入口</a> · <a href="../../../sources/600519/Filings/600519_%E5%91%A8%E6%9C%AB%E4%BB%B7%E7%9B%98%E5%8F%8A%E4%BC%B0%E5%80%BC%E5%A4%8D%E6%A0%B8_2026-11-21.json">截止日核验记录</a></p></section>
+<footer class="footnote">
+<p><strong>免责声明</strong>　不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p>
+<p style="margin-top:8px;">2026-11-21 · 贵州茅台（600519）分析报告</p>
+</footer>
+</main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

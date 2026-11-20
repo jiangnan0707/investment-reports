@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>长鑫科技 2026-11-21 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+.chart svg{display:block;width:100%;height:auto}.bar-track,.bar-fill{display:block}.bar-label{width:140px}.bar-value{min-width:94px}.table-wrap{overflow-x:auto}.card{scroll-margin-top:16px}.mobile-contents{display:none}footer{text-align:center;color:#506158;padding:24px}@media(max-width:780px){.mobile-contents{display:block;padding:10px 15px;margin-bottom:12px;background:#fff;border:1px solid #d5e6dc}.mobile-contents a{display:block;min-height:32px}.table-wrap td,.table-wrap th{white-space:normal}.bar-row{gap:4px}.bar-label{width:34%;font-size:11px}.bar-value{min-width:74px;font-size:11px}.chart{padding:10px}.card{padding:16px}}</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/688825/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">688825 <span>·</span> 2026-11-21 <span>·</span> PC 完整版</div><h1>长鑫科技</h1><p>回购从提议进入股东会程序，估值仍取决于归母利润｜11 月 20 日收盘</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、DRAM 的量、价与单位成本</a></li><li><a href="#core-metric">三、每一百元净利润归谁</a></li><li><a href="#financials">四、现金流、再投资和盈利基数</a></li><li><a href="#capacity">五、长协谈判与新工艺兑现</a></li><li><a href="#capital">六、回购分三种用途</a></li><li><a href="#valuation">七、估值对常态盈利有多敏感</a></li><li><a href="#bull-bear">八、多空证据与情景</a></li><li><a href="#analysts">九、外部观点与证据边界</a></li><li><a href="#conclusion">十、下一次披露要验证的两件事</a></li><li><a href="#data-notes">数据说明与原始资料</a></li></ul></aside><main class="main-content report-body"><section class="card" id="reliability"><h2>数据可靠性声明</h2><p>长鑫科技集团股份有限公司，科创板代码 688825，7 月 27 日挂牌。11 月 20 日正常交易，价格按当日收盘，11 月 21 日为周六。财务数据截至 9 月 30 日，三季报未经审计。11 月 19 日董事会决议及配套公告于 20 日披露。</p><p>报告以交易所、公司定期报告和投资者活动记录为一手资料。腾讯提供行情。11 月 17 日管理层问答的细节按媒体转述列示，敏感性分析为本文测算。</p><p><a href="https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20260724_10826610.shtml">上交所上市公告</a> · <a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_20261030.pdf">2026 年三季报</a> · <a href="../../../sources/688825/Filings/688825_%E7%AC%AC%E4%BA%8C%E5%B1%8A%E8%91%A3%E4%BA%8B%E4%BC%9A%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%BC%9A%E8%AE%AE%E5%86%B3%E8%AE%AE%E5%85%AC%E5%91%8A_2026-11-20.pdf">董事会决议</a></p></section><section class="card" id="snapshot"><h2>一、公司速览</h2><div class="summary-grid"><div class="summary-item"><div class="label">11 月 20 日收盘</div><div class="value">35.16 元</div></div><div class="summary-item"><div class="label">总市值</div><div class="value">2.39 万亿元</div></div><div class="summary-item"><div class="label">PE-TTM</div><div class="value">17.15 倍</div></div><div class="summary-item"><div class="label">Q3 综合毛利率</div><div class="value">89.53%</div></div><div class="summary-item"><div class="label">Q3 归母净利润</div><div class="value">544.35 亿元</div></div><div class="summary-item"><div class="label">Q3 净利润归母占比</div><div class="value">61.17%</div></div></div><p>作为 DRAM 原厂，长鑫从价格上涨、产能释放和服务器 DDR5 占比上升中受益。股东能分享多少景气收益，还取决于生产子公司的权益结构。Q3 合并净利润环比增长 19.38%，归母仅增长 3.01%。两者的差距比一期回购的规模更能左右每股盈利。</p><p><a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_20261030.pdf">2026 年三季报</a> · <a href="https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh688825,day,2026-11-05,2026-11-20,30,">腾讯历史收盘</a></p></section><section class="card" id="business"><h2>二、DRAM 的量、价与单位成本</h2><p>公司设计、制造并销售 DRAM 晶圆、芯片和模组。DDR 系列覆盖服务器、PC，LPDDR 系列主要面向移动及低功耗场景。售出的比特数量、每比特价格和每比特成本共同决定利润。售价上行能较快反映进合同与收入，扩建晶圆厂和提高良率则需要更长时间。因此当下形成的利润率不能直接外推整个建设周期。</p><p>2026 上半年 DDR 收入约 694.72 亿元、LPDDR 约 781.91 亿元，占收入约 46.2% 和 52.0%。公司 10 月 30 日交流会确认前三季度 DDR 占比继续提高，未给出可直接据以预测 Q4 的产品单价、绝对销量或客户最低采购量。</p><p><a href="../../../sources/688825/Filings/688825_%E6%8B%9B%E8%82%A1%E8%AF%B4%E6%98%8E%E4%B9%A6_20260517.pdf">首次公开发行招股说明书</a> · <a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E5%8D%8A%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_20260829.pdf">2026 年半年报</a> · <a href="../../../sources/688825/Filings/688825_%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%9A%E7%BB%A9%E4%BA%A4%E6%B5%81%E4%BC%9A%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95_2026-10-30.pdf">10 月 30 日管理层业绩交流会记录</a></p></section><section class="card" id="core-metric"><h2>三、每一百元净利润归谁</h2><div class="chart"><div class="chart-title">第三季度合并净利润的归属</div><div class="bar-row"><span class="bar-label">归母净利润</span><span class="bar-track"><span class="bar-fill" style="width:100.00%;background:#34785a"></span></span><span class="bar-value">544.35 亿</span></div><div class="bar-row"><span class="bar-label">少数股东损益</span><span class="bar-track"><span class="bar-fill" style="width:63.47%;background:#34785a"></span></span><span class="bar-value">345.48 亿</span></div></div><p><small>合并净利润 889.83 亿元，其中少数股东损益按合并净利润减归母计算。</small></p><div class="table-wrap"><table><thead><tr><th scope="col">单季，亿元</th><th scope="col">营收</th><th scope="col">归母净利</th><th scope="col">归母净利率</th></tr></thead><tbody><tr><td>Q1</td><td>508.00</td><td>247.62</td><td>48.74%</td></tr><tr><td>Q2</td><td>995.10</td><td>528.43</td><td>53.10%</td></tr><tr><td>Q3</td><td>1,187.14</td><td>544.35</td><td>45.85%</td></tr></tbody></table></div><p>Q3 综合毛利率升至 89.53%，较 Q2 提高 1.94 个百分点；归母净利率却回落约 7.25 个百分点。由 Q3 合并净利润及其环比增幅反推，Q2 归母占合并利润约 70.9%，Q3 降至 61.2%。不同子公司的利润增量和持股比例会改变这一比例；当季未披露完整的逐厂利润桥，不能将差额全归因于单一产线。</p><p><a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_20261030.pdf">2026 年三季报</a> · <a href="../../../sources/688825/Filings/688825_%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%9A%E7%BB%A9%E4%BA%A4%E6%B5%81%E4%BC%9A%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95_2026-10-30.pdf">10 月 30 日管理层业绩交流会记录</a></p></section><section class="card" id="financials"><h2>四、现金流、再投资和盈利基数</h2><div class="table-wrap"><table><thead><tr><th scope="col">指标，亿元</th><th scope="col">2026 前三季</th><th scope="col">如何阅读</th></tr></thead><tbody><tr><td>营业收入</td><td>2,690.24</td><td>同比 +738.51%，同时受价格、出货和产品组合影响。</td></tr><tr><td>合并净利润 / 归母净利润</td><td>1,965.32 / 1,320.40</td><td>归母占 67.2%，二者不能混算市盈率。</td></tr><tr><td>经营现金净流入</td><td>2,547.51</td><td>约为合并净利润的 129.6%；这是合并口径现金流。</td></tr><tr><td>购建长期资产现金</td><td>369.98</td><td>经营净流入扣除此项约 2,177.53 亿元，含控股子公司现金。</td></tr><tr><td>研发投入 / 收入</td><td>110.71 / 4.12%</td><td>研发投入同比增长 73.03%，收入增速更高推低费用比率。</td></tr><tr><td>存货，期末 / 年初</td><td>392.27 / 285.68</td><td>增长约 37.3%。在价格转折时需要区分量产备料和滞销。</td></tr></tbody></table></div><p>IDM 需要持续资本投入。合并口径的经营现金与资本支出差额尚未扣除其他投资、少数股东权益或未来追加支出，不能直接当作上市公司可分配股利。历史基数同样关键，2025 年全年归母 18.75 亿元，2025 年前三季仍亏损 52.80 亿元，过去四季的正利润集中于本轮涨价后。</p><p><a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_20261030.pdf">2026 年三季报</a> · <a href="../../../sources/688825/Filings/688825_%E6%8B%9B%E8%82%A1%E8%AF%B4%E6%98%8E%E4%B9%A6_20260517.pdf">首次公开发行招股说明书</a> · <a href="../../../sources/688825/Filings/688825_%E4%BD%BF%E7%94%A8%E9%83%A8%E5%88%86%E8%B6%85%E5%8B%9F%E8%B5%84%E9%87%91%E6%8A%95%E8%B5%84%E5%BB%BA%E8%AE%BE%E6%96%B0%E9%A1%B9%E7%9B%AE%E5%85%AC%E5%91%8A_20260929.pdf">超募资金投资项目公告</a></p></section><section class="card" id="capacity"><h2>五、长协谈判与新工艺兑现</h2><p>10 月 30 日公司预计四季度毛利率保持相对稳定，理由包括产品结构、售价环境以及成本管理。11 月 17 日说明会现场报道提到公司与多家头部客户协商长期供货协议。协商是需求可见度的进展；客户采购量、期限、价格重议条款及生效日期仍未公开，测算未计入任何新增保底收入。</p><p>第五代工艺已披露量产，三季报披露第六代平台 DRAM 产品完成工程样片验证。要把研发优势转成现金，需要经过客户认证、良率爬坡和稳定出货。服务器 DDR5 放量也不能直接推算高带宽存储 HBM 的供货份额。若同业传统 DRAM 新增供给、价格先转弱，较高固定成本会放大利润率波动。</p><p><a href="../../../sources/688825/Filings/688825_%E7%AC%AC%E4%BA%94%E4%BB%A3%E5%B7%A5%E8%89%BA%E6%8A%80%E6%9C%AF%E5%B9%B3%E5%8F%B0%E9%87%8F%E4%BA%A7%E8%87%AA%E6%84%BF%E6%80%A7%E6%8A%AB%E9%9C%B2_20260921.pdf">第五代工艺量产公告</a> · <a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_20261030.pdf">2026 年三季报</a> · <a href="../../../sources/688825/Filings/688825_%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%9A%E7%BB%A9%E4%BA%A4%E6%B5%81%E4%BC%9A%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95_2026-10-30.pdf">10 月 30 日管理层业绩交流会记录</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-10-31/1225649704.PDF">说明会通知</a> · <a href="https://www.thepaper.cn/newsDetail_forward_34492505">11 月 17 日说明会现场报道</a></p></section><section class="card" id="capital"><h2>六、回购分三种用途</h2><div class="table-wrap"><table><thead><tr><th scope="col">拟定用途</th><th scope="col">金额区间</th><th scope="col">执行约束</th></tr></thead><tbody><tr><td>激励或员工持股</td><td>5–10 亿元</td><td>股东会通过后 12 个月内，上市满 6 个月方可实施。</td></tr><tr><td>直接注销减资</td><td>5–10 亿元</td><td>同上，并履行减资与债权人通知程序。</td></tr><tr><td>维护公司价值及股东权益</td><td>15–30 亿元</td><td>股东会通过后 3 个月内回购，完成后拟注销。</td></tr></tbody></table></div><p>11 月 19 日董事会审议通过调整方案，20 日披露，拟提交 12 月 9 日股东会。价格上限 63.78 元/股。按上限测算可购约 3,920 万至 7,839 万股。25–50 亿元相当于 11 月 20 日市值的 0.10%–0.21%，激励部分最终用途也不同。该方案的经济影响取决于表决及实际成交，63.78 元仅是授权上限。</p><p><a href="../../../sources/688825/Filings/688825_%E5%85%B3%E4%BA%8E%E8%B0%83%E6%95%B4%E4%BB%A5%E9%9B%86%E4%B8%AD%E7%AB%9E%E4%BB%B7%E4%BA%A4%E6%98%93%E6%96%B9%E5%BC%8F%E5%9B%9E%E8%B4%AD%E5%85%AC%E5%8F%B8%E8%82%A1%E4%BB%BD%E6%96%B9%E6%A1%88%E7%9A%84%E5%85%AC%E5%91%8A_2026-11-20.pdf">11 月 20 日回购方案调整公告</a> · <a href="../../../sources/688825/Filings/688825_%E7%AC%AC%E4%BA%8C%E5%B1%8A%E8%91%A3%E4%BA%8B%E4%BC%9A%E7%AC%AC%E4%B9%9D%E6%AC%A1%E4%BC%9A%E8%AE%AE%E5%86%B3%E8%AE%AE%E5%85%AC%E5%91%8A_2026-11-20.pdf">董事会决议</a> · <a href="../../../sources/688825/Filings/688825_%E5%85%B3%E4%BA%8E%E5%8F%AC%E5%BC%802026%E5%B9%B4%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%B8%B4%E6%97%B6%E8%82%A1%E4%B8%9C%E4%BC%9A%E7%9A%84%E9%80%9A%E7%9F%A5_2026-11-20.pdf">12 月 9 日股东会通知</a> · <a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%B8%B4%E6%97%B6%E8%82%A1%E4%B8%9C%E4%BC%9A%E4%BC%9A%E8%AE%AE%E8%B5%84%E6%96%99_2026-11-20.pdf">临时股东会会议资料</a></p></section><section class="card" id="valuation"><h2>七、估值对常态盈利有多敏感</h2><div class="chart"><div class="chart-title">11 月 6 日至 20 日收盘价（人民币元）</div><svg aria-label="两周不复权收盘价格走势" role="img" viewbox="0 0 550 110"><title>腾讯日 K 收盘价</title><g stroke="#c3d4c7"><line x1="50" x2="508" y1="25" y2="25"></line><line x1="50" x2="508" y1="82" y2="82"></line></g><g fill="#43574b" font-size="12"><text x="3" y="29">42.07</text><text x="3" y="86">35.16</text><text x="50" y="103">11/06</text><text x="274" y="103">11/13</text><text x="470" y="103">11/20</text></g><polyline fill="none" points="55.00,38.69 150.36,42.16 182.14,38.36 213.93,25.00 245.71,34.07 277.50,42.24 372.86,55.77 404.64,73.50 436.43,67.56 468.21,62.70 500.00,82.00" stroke="#26684c" stroke-width="2.5"></polyline><circle cx="55.00" cy="38.69" fill="#26684c" r="3"><title>2026-11-06 · 40.41 元</title></circle><circle cx="150.36" cy="42.16" fill="#26684c" r="3"><title>2026-11-09 · 39.99 元</title></circle><circle cx="182.14" cy="38.36" fill="#26684c" r="3"><title>2026-11-10 · 40.45 元</title></circle><circle cx="213.93" cy="25.00" fill="#26684c" r="3"><title>2026-11-11 · 42.07 元</title></circle><circle cx="245.71" cy="34.07" fill="#26684c" r="3"><title>2026-11-12 · 40.97 元</title></circle><circle cx="277.50" cy="42.24" fill="#26684c" r="3"><title>2026-11-13 · 39.98 元</title></circle><circle cx="372.86" cy="55.77" fill="#26684c" r="3"><title>2026-11-16 · 38.34 元</title></circle><circle cx="404.64" cy="73.50" fill="#26684c" r="3"><title>2026-11-17 · 36.19 元</title></circle><circle cx="436.43" cy="67.56" fill="#26684c" r="3"><title>2026-11-18 · 36.91 元</title></circle><circle cx="468.21" cy="62.70" fill="#26684c" r="3"><title>2026-11-19 · 37.50 元</title></circle><circle cx="500.00" cy="82.00" fill="#26684c" r="3"><title>2026-11-20 · 35.16 元</title></circle></svg></div><div class="table-wrap"><table><thead><tr><th scope="col">压力测试</th><th scope="col">归母分母（亿元）</th><th scope="col">按当前市值折算 PE</th></tr></thead><tbody><tr><td>较弱周期假设</td><td>600</td><td>39.78 倍</td></tr><tr><td>中间测试值</td><td>1,000</td><td>23.87 倍</td></tr><tr><td>过去四季实际 / 推算</td><td>1,391.95</td><td>17.15 倍</td></tr><tr><td>较强周期假设</td><td>1,600</td><td>14.92 倍</td></tr></tbody></table></div><p>11 月 20 日市值 23,868.05 亿元，较 11 月 6 日 40.41 元的收盘基准下跌 12.99%。三季报归母净资产 2,568.76 亿元，对应 PB 9.29 倍。假设市场对稳定经营给 20 倍市盈率，现价反推需要约 1,193.40 亿元年度归母盈利；在合并利润中归属于普通股股东的部分若继续下降，需要更大的合并利润才能达到同一分母。</p><p>公司上市时间不足四个月，没有足够历史构造五年市盈率分位。不同存储公司在 NAND、DRAM、HBM 及代工中的产品比重与周期位置各异，单独套用同行市盈率缺乏同口径基础。</p><p><a href="https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh688825,day,2026-11-05,2026-11-20,30,">腾讯历史收盘</a> · <a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_20261030.pdf">2026 年三季报</a> · <a href="../../../sources/688825/Filings/688825_%E6%8B%9B%E8%82%A1%E8%AF%B4%E6%98%8E%E4%B9%A6_20260517.pdf">首次公开发行招股说明书</a></p></section><section class="card" id="bull-bear"><h2>八、多空证据与情景</h2><div class="table-wrap"><table><thead><tr><th scope="col">视角</th><th scope="col">判断依据</th><th scope="col">下次复核</th></tr></thead><tbody><tr><td>经营优势</td><td>费雪视角下，客户端认证、先进制程和量产爬坡是比工程样片更高的门槛。</td><td>检查 DDR5 批量出货、第六代工程样片后续验证。</td></tr><tr><td>周期位置</td><td>马克斯视角下，89.53% 的单季毛利率同时体现供给约束与价格弹性。</td><td>观察售价、库存、同业扩产与固定成本摊销。</td></tr><tr><td>估值约束</td><td>巴菲特视角下，规模优势转化为股东可得现金取决于权益归属。</td><td>同看合并利润、归母占比、研发和建设现金支出。</td></tr></tbody></table></div><div class="table-wrap"><table><thead><tr><th scope="col">情景</th><th scope="col">可证伪的观察</th></tr></thead><tbody><tr><td>供给仍紧，长协生效</td><td>新增合同披露伴随稳定出货与盈利，毛利率接近管理层描述。</td></tr><tr><td>出货增长、单价回落</td><td>量增抵消部分降价，归母利润增速先于收入放缓。</td></tr><tr><td>价格与利用率同时下降</td><td>存货价值和产线固定成本吸收承压，现金回款恶化。</td></tr><tr><td>新制程加速成熟</td><td>良率、客户验证和量产出货连续兑现，改善单位成本。</td></tr></tbody></table></div><p>设备、材料和技术支持受出口规则及供应商集中度影响。由于公司未披露逐台设备、许可证或客户合同，当前不宜赋予具体停产或订单损失金额。</p></section><section class="card" id="analysts"><h2>九、外部观点与证据边界</h2><p>外部判断集中在先进产品的量产速度和价涨的持续时间。对于长协，首先核实签约与价格调整机制；对于第四季度，先用公司自身毛利率预期与归母占比进行交叉验证。11 月 7 日以来未取得可独立复核的新版券商预测全文，未将未经核实的目标价或散户情绪计入估值。</p><p>网络讨论常把 DDR5 的供不应求、HBM 的技术路线和终端客户长期订单连接起来。这三项需要分别以出货数据、技术验证和签署合同检验；现有公开披露主要能支持第一项的方向与工艺进展。</p><p><a href="../../../sources/688825/Filings/688825_%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%9A%E7%BB%A9%E4%BA%A4%E6%B5%81%E4%BC%9A%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95_2026-10-30.pdf">10 月 30 日管理层业绩交流会记录</a> · <a href="https://www.thepaper.cn/newsDetail_forward_34492505">11 月 17 日说明会现场报道</a></p></section><section class="card" id="conclusion"><h2>十、下一次披露要验证的两件事</h2><p>优先看 Q4 的归母利润占合并利润比例。若毛利率符合管理层预期、归母占比仍走低，则改善的经营条件可能主要惠及有外部股东的子公司；若二者稳定，再检查回款与资本开支能否支持持续的股东回报。</p><p>第二件事是长协从谈判走向可以核验的交付义务。下一个已知日期为 12 月 9 日股东会；回购表决可以验证资本配置安排，合同和量产仍需各自独立的公告或财务数据。</p><p><a href="../../../sources/688825/Filings/688825_%E5%85%B3%E4%BA%8E%E5%8F%AC%E5%BC%802026%E5%B9%B4%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%B8%B4%E6%97%B6%E8%82%A1%E4%B8%9C%E4%BC%9A%E7%9A%84%E9%80%9A%E7%9F%A5_2026-11-20.pdf">12 月 9 日股东会通知</a> · <a href="../../../sources/688825/Filings/688825_%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%9A%E7%BB%A9%E4%BA%A4%E6%B5%81%E4%BC%9A%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95_2026-10-30.pdf">10 月 30 日管理层业绩交流会记录</a></p></section><section class="card" id="data-notes"><h2>数据说明与原始资料</h2><p>① 口径。TTM 归母 ≈ 2025 全年 18.75 − 2025 前三季（−52.80）+ 2026 前三季 1,320.40 = 1,391.95 亿元。Q2 为半年累计减 Q1，Q2 合并净利润按公司披露的 Q3 环比增长率倒推，存在舍入。敏感性表其余三档为假设。</p><p>② 与 11 月 7 日的变化。上期采用 11 月 6 日 40.41 元，本期新增十个交易日收盘、第三季度业绩说明会现场报道、董事会回购决议及股东会日程。③ 来源升级。此前媒体转述的 10 月 30 日交流会，本期已归档公司投资者关系活动记录。④ 局限。11 月 17 日会议的完整公司问答逐字稿未在本次公告检索中取得，逐项长协条款、季度末实际回购进度均未披露。</p><p>公司原件 · <a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_20261030.pdf">2026 年三季报</a> · <a href="../../../sources/688825/Filings/688825_%E4%B8%89%E5%AD%A3%E5%BA%A6%E4%B8%9A%E7%BB%A9%E4%BA%A4%E6%B5%81%E4%BC%9A%E6%8A%95%E8%B5%84%E8%80%85%E5%85%B3%E7%B3%BB%E6%B4%BB%E5%8A%A8%E8%AE%B0%E5%BD%95_2026-10-30.pdf">10 月 30 日管理层业绩交流会记录</a> · <a href="../../../sources/688825/Filings/688825_%E6%8B%9B%E8%82%A1%E8%AF%B4%E6%98%8E%E4%B9%A6_20260517.pdf">首次公开发行招股说明书</a> · <a href="../../../sources/688825/Filings/688825_%E5%85%B3%E4%BA%8E%E8%B0%83%E6%95%B4%E4%BB%A5%E9%9B%86%E4%B8%AD%E7%AB%9E%E4%BB%B7%E4%BA%A4%E6%98%93%E6%96%B9%E5%BC%8F%E5%9B%9E%E8%B4%AD%E5%85%AC%E5%8F%B8%E8%82%A1%E4%BB%BD%E6%96%B9%E6%A1%88%E7%9A%84%E5%85%AC%E5%91%8A_2026-11-20.pdf">11 月 20 日回购方案调整公告</a> · <a href="../../../sources/688825/Filings/688825_2026%E5%B9%B4%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%B8%B4%E6%97%B6%E8%82%A1%E4%B8%9C%E4%BC%9A%E4%BC%9A%E8%AE%AE%E8%B5%84%E6%96%99_2026-11-20.pdf">临时股东会会议资料</a></p></section></main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

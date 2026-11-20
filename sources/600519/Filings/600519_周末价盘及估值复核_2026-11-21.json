@@ -1,0 +1,32 @@
+{
+  "reportDate": "2026-11-21",
+  "sharePriceDate": "2026-11-20",
+  "quoteTime": "16:14:47 CST",
+  "stockPriceCny": 1485.75,
+  "previousClose": 1460.21,
+  "intradayHigh": 1489.09,
+  "intradayLow": 1423.9,
+  "moutaiVintage": "2026",
+  "quoteUnit": "CNY/瓶，53%vol 500ml",
+  "marketQuoteDate": "2026-11-20",
+  "marketQuotedLoose": 1670,
+  "marketQuotedBox": 1680,
+  "loosePreviousPublishedDate": "2026-11-01",
+  "loosePreviousPublishedPrice": 1690,
+  "boxPreviousPublishedDate": "2026-10-29",
+  "boxPreviousPublishedPrice": 1715,
+  "iMoutaiRetail": 1639,
+  "salesContract": 1369,
+  "shares": 1250081601,
+  "ttmParentProfitCny100M": 821.6075,
+  "ttmCashDividendPerShareCny": 51.98123,
+  "sources": [
+    "https://qt.gtimg.cn/q=sh600519",
+    "https://maotai.wgnds.com/2026%E5%B9%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%E6%95%A3%E7%93%B6",
+    "https://maotai.wgnds.com/2026%E5%B9%B4%E9%A3%9E%E5%A4%A9%E8%8C%85%E5%8F%B0%28%E5%8E%9F%E7%AE%B1%29",
+    "https://static.cninfo.com.cn/finalpage/2026-10-31/1225649906.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-07-18/1225431263.PDF",
+    "https://www.moutai.com.cn/mtgf/2026-11/10/article_2026111021184532076.html",
+    "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=600519"
+  ]
+}

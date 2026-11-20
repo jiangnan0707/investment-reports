@@ -1,0 +1,30 @@
+{
+  "reportDate": "2026-11-21",
+  "quoteDate": "2026-11-20",
+  "quoteTime": "16:08:37 HKT",
+  "ticker": "00700",
+  "priceHkd": 344.0,
+  "previousCloseHkd": 348.4,
+  "openHkd": 341.0,
+  "highHkd": 349.6,
+  "lowHkd": 339.6,
+  "volumeShares": 41094469,
+  "turnoverHkd": 14089992865.68,
+  "hkdToCnyCentralParity": 0.85618,
+  "sharesAsOf20261031": 9092644829,
+  "ttmRevenueCnyMillion": 802950,
+  "ttmIFRSAttributableCnyMillion": 235987,
+  "ttmNonIFRSAttributableCnyMillion": 267533,
+  "ttmFCFCompanyRoundedCnyMillion": 7800,
+  "ttmMarketCapIFRSPe": 11.348165718850902,
+  "ttmMarketCapNonIFRSPe": 10.010053277518914,
+  "ttmPriceToSales": 3.335225834104823,
+  "sources": [
+    "https://qt.gtimg.cn/q=hk00700",
+    "https://stockanalysis.com/quote/hkg/0700/history/",
+    "https://fec.mofcom.gov.cn/article/zyfw/jrfw/jrfwywzn/jrfwwh/hlfxglzy/202611/9514.html",
+    "https://www.tencent.com/wp-content/uploads/2026/11/E700_3Qresults.pdf",
+    "https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23529.pdf",
+    "https://www1.hkexnews.hk/search/titleSearchServlet.do?sortDir=0&sortByOptions=DateTime&category=0&market=SEHK&stockId=7609&documentType=-1&searchType=1&fromDate=20261118&toDate=20261121&rowRange=40&lang=zh"
+  ]
+}
