@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>TransMedics 2026-11-10 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .dual-chart { display: flex; gap: 12px; flex-wrap: wrap; }
+  .dual-chart svg { flex: 1 1 300px; min-width: 280px; background: transparent; }
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; min-width: 0; overflow: hidden; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/tmdx/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+TransMedics%EF%BC%88TMDX%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ATransMedics%EF%BC%88TMDX%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-10%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">TMDX <span>·</span> 2026-11-10 <span>·</span> PC 完整版</div><h1>TransMedics</h1><p>数据截至 2026-11-09 收盘（$93.79，单日 +6.3%，财报后第二个确认收盘）· Q3 2026 财报已于 2026-11-05 盘后发布</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、OCS 移植例数：核心指标</a></li><li><a href="#financials">四、最新财务数据</a></li><li><a href="#pipeline">五、增长管线拆解</a></li><li><a href="#anomaly">六、财务异常与风险检测</a></li><li><a href="#policy">七、政策风险</a></li><li><a href="#valuation">八、估值分析</a></li><li><a href="#bull-bear">九、多空核心分歧</a></li><li><a href="#analysts">十、分析师全景</a></li><li><a href="#community">十一、社区讨论</a></li><li><a href="#conclusion">十二、综合判断框架</a></li><li><a href="#data-notes">数据说明</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+<strong>时效与口径警告：</strong>股价与估值数据以 <strong>2026-11-09 收盘（$93.79）</strong>为确认基准（腾讯行情时间戳 2026-11-09 16:00:01，与 StockAnalysis / Yahoo 日线三源一致，一手）。
+    本报告初稿生成于美东 11-09 盘中（当时以 11-06 收盘为锚）；11-09 确认收盘发布后已全面重锚——<strong>本报告全部估值倍数按 11-09 收盘 $93.79 自算</strong>。
+    财务数据为 <strong>Q3 2026 10-Q 与 8-K 财报新闻稿（2026-11-05 提交 SEC，本地已存档，一手）</strong>；Q3 业绩电话会完整转写已下载存档（stockanalysis.com/Quartr，一手转写，本期新增）。
+    <strong>上期报告（2026-11-04）预置的五项「11/5 财报裁决指标」在本期全部对账</strong>，对账表见第四章开头。
+    移植例数、渗透率等运营指标仍未在 SEC 文件中披露（管理层口径为二手）；做空数据仍为 10 月结算口径（11 月结算数据尚未发布）；
+    分析师动作截至 11-09（S&amp;P Global / MarketBeat 聚合，二手）。检索到的部分「财报后目标价上调至 $147/$169/$166」等条目经日期核对为 <strong>2025 年 11 月（Q3'25 财报后）旧文，不采信</strong>（详见「数据说明」③）。
+    本期已计入的事件（10/30 → 11/09）：<strong>10/30 CMS 发布 OPO 参保条件最终规则 CMS-3409-F</strong>（CMS 官方，一手）＋ 新 CFO 诱导性股权授予 Form 4（上期已存档）→
+    11/1 SBS Law 律所征集延续（律所投放类信源）→ 11/2 TD Cowen 重申 Buy/$120（财报前）→
+    11/3 Piper Sandler 重申 Buy/$100（财报前）、TMDX 进入「最被做空医疗股」榜单、Scorpion Capital 做空旧闻被重推（经核实原报告为 2025 年 1 月，非新报告）→
+    <strong>11/4 Argus 下调目标价至 $64 / Neutral（财报前）</strong> → <strong>11/5 Q3 财报 + 10-Q（盘后）</strong> →
+    <strong>11/6 单日 +27.9%（$88.24，成交量 395 万股 ≈ 20 日均量 3.5 倍）</strong>、Canaccord 上调至 $120、Needham 上调至 $110 →
+    11/7 J.P. Morgan 上调至 $85、Oppenheimer 重申 Hold → 11/9 UBS 上调至 $88、Barclays 重申 Buy/$120 → 11/9 收盘 $93.79（单日 +6.3%）。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> SEC文件/行情接口/电话会转写 |
+    <span class="src-badge src-2">二手</span> 聚合平台/分析师报告 |
+    <span class="src-badge src-3">三方</span> 个人投资者/社交媒体 |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>标的/TMDX-TransMedics/SEC_Filings/</code> — FY2025 10-K（2026-02-24）、FY2024 10-K、2026 Q1/Q2 10-Q、Q2 2026 8-K + Ex99.1 财报（2026-08-04）、<strong>2026 Q3 10-Q + Q3 8-K + Ex99.1 财报（2026-11-05，本期新存档）</strong>、2025 Q1–Q3 10-Q、2026-09-10 8-K（CFO 任命）、2026-10-28 Form 4（新 CFO 股权授予）、Q1/Q2/Q3 2026 业绩电话会记录（Q3 转写本期新存档），共 16 份。</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:130px;color:var(--text-muted)">公司</td><td>TransMedics Group, Inc. (NASDAQ: TMDX)</td></tr>
+<tr><td style="color:var(--text-muted)">业务</td><td>便携式体外器官温热灌注保存与转运系统（OCS）+ 国家移植运营（NOP：物流、飞行、外科服务）</td></tr>
+<tr><td style="color:var(--text-muted)">总部</td><td>美国马萨诸塞州 Andover（新总部位于 Somerville，总投入 $200M–$240M，至 2030）</td></tr>
+<tr><td style="color:var(--text-muted)">员工</td><td>898 人（FY2025 10-K）<span class="src-badge src-s">一手</span></td></tr>
+<tr><td style="color:var(--text-muted)">股价 / 市值</td><td><strong>$93.79</strong>（11-09 收盘）/ <strong>$32.6 亿</strong>（34.73M 股 × $93.79）· EV $36.3 亿 · 摊薄股本 40.8M（if-converted，含可转债）<span class="src-badge src-e">推算</span></td></tr>
+<tr><td style="color:var(--text-muted)">52 周区间</td><td>$60.105 – $156.00（现价较高点 <span class="metric-negative">-39.9%</span>，较低点 <span class="metric-positive">+56.0%</span>，处区间自下而上约 <strong>35.1%</strong> 分位）<span class="src-badge src-e">推算</span></td></tr>
+<tr><td style="color:var(--text-muted)">近一年表现</td><td><span class="metric-negative">-23.2%</span>（一年前 2025-11-11 收盘 $122.14）· YTD <span class="metric-negative">-22.9%</span>（2025 年末 $121.65）· Beta 2.10 <span class="src-badge src-e">推算</span></td></tr>
+<tr><td style="color:var(--text-muted)">做空压力</td><td>8.77M 股（与上期相同，10 月结算口径，11 月结算数据未发布），占股本 <strong>25.25%</strong>、占流通 <strong>26.08%</strong>、回补天数 <strong>11.14</strong>（StockAnalysis）<span class="src-badge src-2">二手</span></td></tr>
+<tr><td style="color:var(--text-muted)">股息</td><td>不分红（成长期公司，股息率 0%）；<strong>美股不做「股息率 vs 融资利率」分析</strong></td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">$93.79</div><div class="label">股价（11-09 收盘）</div></div>
+<div class="summary-item"><div class="value">$32.6亿</div><div class="label">市值（推算）</div></div>
+<div class="summary-item"><div class="value">22.5x</div><div class="label">PE (TTM，含一次性税利)</div></div>
+<div class="summary-item"><div class="value">56.2x</div><div class="label">PE (FY26E $1.67)</div></div>
+<div class="summary-item"><div class="value">4.48x</div><div class="label">PS (TTM)</div></div>
+<div class="summary-item"><div class="value" style="color:var(--green)">+27.9%</div><div class="label">财报次日（11-06）</div></div>
+</div>
+<div class="quote">
+<strong>估值口径陷阱（沿用上期核对，本期数值随价格与共识更新）：</strong>TTM 归母净利 $144.5M（= FY2025 $190.3M − 9M'25 $84.9M + 9M'26 $39.1M，本地 10-K/10-Q 相减）
+    中含 FY2025 Q4 一次性递延税估值备抵释放（非经常性，约 $82.8M），使 TTM PE 虚低至 22.5x；剔除后经营性 TTM PE 约 52.9x（推算）。
+    共识已随财报上修：<strong>FY2026E EPS $1.67（财报前 $1.51），对应 56.2x</strong>；若用 FY2027E EPS $2.49，则为 <strong>37.7x</strong>——
+    两者都比财报前的 44.6x / 29.9x（上期口径：11-03 收盘 × 财报前共识 $1.51 / $2.25）<strong>更高</strong>：股价两日 +36% 的幅度大于 EPS 共识的上修幅度（约 +11%），估值的分母改善小于分子扩张——财报改变了估值位置的方向。
+    PEG（stockanalysis 口径）<strong>0.87</strong>——与正文按 FY26E 自算的 ~1.1（EPS 增速口径）差异源于其分母用的多年增速口径，两数均已标注（见「数据说明」①）。
+  </div>
+<div class="stale-warning" style="background:#f2faf4;border-color:#d8f3dc;color:#1b5e20;">
+<strong>价格路径（本期新增了财报前后两段剧烈波动）：</strong>10 月自 $83.45（9/30）单边回落至 $65.99（10/30，-20.9%）→
+    财报前 3 个交易日反弹 <strong>+10.2%</strong>（11/4 收 $72.755）→ 11/5 财报日 -5.2%（收 $68.98，结果盘后发布）→
+    <strong>11/6 单日 +27.9%（$88.24，放量 395 万股）</strong>→ 11/9 再涨 +6.3%（收 $93.79），财报后两日累计 +36.0%。
+    上期报告的「悲观」情景价格带（$50–62）未再触及；「基准」带（$70–95）已在 11-06 触及上沿，11-09 收盘 $93.79 仍贴着带上沿。
+    11-06 的 +27.9% 是 TMDX 上市以来少数的单日最大涨幅之一（此前 2023-08-02 Q2 财报日 +29.9%、2025-02-26 +23.7% 量级相近）<span class="src-badge src-3">三方</span>，发生在 25% 做空占比的背景下（见第八节「周期视角」）。
+  </div>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<h3>怎么赚钱</h3>
+<p>TransMedics 是「<strong>设备 + 服务</strong>」双轮模式：OCS（Organ Care System）是 FDA 批准的首个便携式体外器官灌注平台，让捐献器官在转运途中保持温热、跳动/工作的「活」状态，替代传统冰盒冷藏（冷缺血）。收入两条腿（Q3 2026）：</p>
+<ul style="padding-left:22px;margin:12px 0;font-size:14px;">
+<li style="margin-bottom:6px;"><strong>产品收入</strong>（Q3 占 55.9%，$113.4M，+29.4%）：OCS 耗材与设备销售，毛利率 <strong>79.2%</strong>（同比 +50bps，CFO 电话会口径）<span class="src-badge src-s">一手</span>；</li>
+<li style="margin-bottom:6px;"><strong>服务收入</strong>（Q3 占 44.1%，$89.6M，<strong>+59.6%</strong>，增速主引擎）：NOP 国家移植运营——自有固定翼飞机机队（自飞覆盖率 86%，连续两季持平，达标「&gt;80%」的稳态目标）、地面物流、器官采购外科服务；毛利率 <strong>32.2%</strong>（同比 +440bps）。Q3 服务收入含 <strong>PAD Aviation 包机 $9.4M</strong>（7/1 并表，10-Q 附注一手），剔除后服务收入 +43%。</li>
+</ul>
+<div class="chart">
+<div class="chart-title">收入构成：产品 vs 服务 <small>（Q3 2025 → Q3 2026，$M，一手 10-Q）</small></div>
+<div class="bar-group">Q3 2025（产品 61.0% / 服务 39.0%）</div>
+<div class="stacked-bar">
+<div style="width:61.0%;background:var(--accent)">产品 $87.7M · 61.0%</div>
+<div style="width:39.0%;background:#9ec3ad;color:#1a3c2a">服务 $56.1M · 39.0%</div>
+</div>
+<div class="bar-group">Q3 2026（产品 55.9% / 服务 44.1%；服务含 PAD 包机 $9.4M）</div>
+<div class="stacked-bar">
+<div style="width:55.9%;background:var(--accent)">产品 $113.4M · 55.9%</div>
+<div style="width:44.1%;background:#9ec3ad;color:#1a3c2a">服务 $89.6M · 44.1%</div>
+</div>
+<div class="caveat-inline">单一期构成占比，两期各自按总收入归一。服务占比一年内 39% → 44.1%：「设备公司」向「设备 + 物流」混合体的演变仍在继续，这是结构性拉低综合毛利率的力量（Q3 综合毛利率 58.5%，PAD 单项拖累 260bps；剔除 PAD 为 61.1%、同比 +230bps——毛利率的恶化是「低毛利业务变多」，不是「原有业务变差」，两个口径必须分开读）。</div>
+</div>
+<h3>护城河（巴菲特视角）</h3>
+<div class="two-col">
+<div class="box-green">
+<h4>护城河来源</h4>
+<ol>
+<li><strong>技术 + 监管垄断（本期加固）</strong>：心/肺温热灌注领域仍无同类 FDA 获批竞品；10 月 FDA 批准 ENHANCE Heart Part B 与 DENOVO Lung 的 IDE（含 CHOPS 作为两组试验的对照臂）——公司在「OCS 温热灌注」与「CHOPS 受控低温保存」两个技术路线上各握一张牌（管理层称「two shots at goal」）；</li>
+<li><strong>网络密度（本期首次落地欧洲）</strong>：86% 自飞覆盖 + Gogo Galileo HDX 卫星联网（2027 年完成）+ <strong>10 月 PAD Aviation 赢得首个欧洲移植物流标（意大利 Emilia-Romagna）</strong>——美国 NOP 模式在欧洲的复制有了第一份合同证据；</li>
+<li><strong>临床转换成本</strong>：移植外科医生的使用习惯 + ENHANCE Part A 175 例完成入组后的真实世界反馈（管理层电话会原话：多个移植项目反馈「心脏出设备时状态更好、恢复更快、水肿更少」，并称这推动 Q3 采纳率提升）；</li>
+<li><strong>垂直整合闭环</strong>：从器官获取到植入的全链条参与，竞争对手只能攻其单点。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4>护城河裂缝</h4>
+<ol>
+<li><strong>护城河是「买来的」</strong>：服务毛利率 32.2%（虽同比改善 440bps），机队/物流是重资产低毛利，维护成本持续吞噬利润；利息费用 Q3 $7.3M，同比 +108%（融资租赁并表所致）；</li>
+<li><strong>政策依赖</strong>：NOP 模式嵌入美国器官分配体系，<strong>10/30 CMS 发布 OPO 参保条件最终规则（CMS-3409-F）</strong>，OPO 问责与绩效分层进入实施期（详见第七节）；</li>
+<li><strong>供体分母收缩</strong>：2025 年美国遗体捐献者 16,550 人，-2.5%，十多年首次下降——渗透率逻辑的天花板在动；</li>
+<li><strong>竞争摩擦未解除</strong>：XVIVO 10/22 发布 Q3 业绩（销售额 +34%，心/肝产品推进美国上市）后无新披露；SRTA 等轻资产移植物流挑战者仍在。TMDX 在心/肺线的「无同类获批竞品」状态有了明确的倒计时。</li>
+</ol>
+</div>
+</div>
+<h3>收入构成（按器官，Q3 2025 vs Q3 2026，美国移植业务）</h3>
+<div class="chart">
+<div class="chart-title">美国 OCS 器官收入：Q3 2025 → Q3 2026 <small>（$M，同比口径，一手 10-Q）</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 260">
+
+<line stroke="#cfe0d2" stroke-width="1.5" x1="50" x2="620" y1="210" y2="210"></line>
+
+<rect fill="#2d6a4f" height="91.7" width="80" x="180" y="118.3"></rect>
+<rect fill="#9ec3ad" height="23.3" width="80" x="180" y="95.0"></rect>
+<rect fill="#cf6f6f" height="3.2" width="80" x="180" y="91.8"></rect>
+
+<rect fill="#2d6a4f" height="127.7" width="80" x="400" y="82.3"></rect>
+<rect fill="#9ec3ad" height="28.3" width="80" x="400" y="54.0"></rect>
+<rect fill="#cf6f6f" height="1.7" width="80" x="400" y="52.3"></rect>
+
+<line stroke="#cfe0d2" stroke-dasharray="5,4" stroke-width="1.2" x1="260" x2="400" y1="118.3" y2="82.3"></line>
+<line stroke="#9ec3ad" stroke-dasharray="5,4" stroke-width="1.2" x1="260" x2="400" y1="95.0" y2="54.0"></line>
+<line stroke="#cf6f6f" stroke-dasharray="5,4" stroke-width="1" x1="260" x2="400" y1="91.8" y2="52.3"></line>
+
+<text fill="#1a2a1e" font-size="13" font-weight="700" text-anchor="middle" x="220" y="78">139.0</text>
+<text fill="#1a2a1e" font-size="13" font-weight="700" text-anchor="middle" x="440" y="39">185.5</text>
+
+<text fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle" x="220" y="168">107.9</text>
+<text fill="#1a3c2a" font-size="12" font-weight="600" text-anchor="middle" x="220" y="110">27.4</text>
+<text fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle" x="440" y="150">150.2</text>
+<text fill="#1a3c2a" font-size="12" font-weight="600" text-anchor="middle" x="440" y="72">33.3</text>
+
+<text fill="#2d6a4f" font-size="12.5" font-weight="700" text-anchor="middle" x="330" y="103">+39.2%</text>
+<text fill="#2d6a4f" font-size="12.5" font-weight="700" text-anchor="middle" x="330" y="60">+21.7%</text>
+
+<text fill="#6b7d6f" font-size="12" text-anchor="middle" x="220" y="232">Q3 2025</text>
+<text fill="#6b7d6f" font-size="12" text-anchor="middle" x="440" y="232">Q3 2026</text>
+
+<rect fill="#2d6a4f" height="10" width="10" x="50" y="22"></rect><text fill="#4a5a4e" font-size="11" x="65" y="31">肝 Liver</text>
+<rect fill="#9ec3ad" height="10" width="10" x="130" y="22"></rect><text fill="#4a5a4e" font-size="11" x="145" y="31">心 Heart</text>
+<rect fill="#cf6f6f" height="10" width="10" x="210" y="22"></rect><text fill="#4a5a4e" font-size="11" x="225" y="31">肺 Lung</text>
+</svg>
+<div class="caveat-inline">两柱同一坐标轴、金额口径；楔形＝该器官的收入增减。美国口径；「其他移植相关收入」$0.4M（Q3'26 新增科目）与国际收入 $6.6M 未含在内。Lung 占比约 1.0%（&lt;2%），按规则不标注数值——其同比 -47.5% 详见下表。</div>
+</div>
+<div class="table-scroll"><table>
+<thead><tr><th>器官线（美国）</th><th>Q3 2026</th><th>YoY</th><th>环比 Q2'26</th><th>占总收入</th><th>信号</th></tr></thead>
+<tbody>
+<tr><td>肝脏 Liver</td><td>$150,220K</td><td class="metric-positive">+39.2%</td><td>+1.5%</td><td>~74.0%</td><td>主引擎；集中度较 Q2（77.9%）略降</td></tr>
+<tr><td>心脏 Heart</td><td>$33,349K</td><td class="metric-positive">+21.7%</td><td>持平</td><td>~16.4%</td><td><strong>重加速</strong>（Q2 仅 +3.8%）</td></tr>
+<tr><td>肺 Lung</td><td>$1,956K</td><td class="metric-negative">-47.5%</td><td>—</td><td>~1.0%</td><td>实质萎缩（连续两季 -45% 以上）</td></tr>
+<tr><td>其他地区（欧洲等）</td><td>$6,592K</td><td class="metric-positive">+81.6%</td><td>—</td><td>~3.2%</td><td>欧洲启动元年（含 PAD 网络）</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;color:var(--text-muted);">来源：2026 Q3 10-Q 分部披露（一手）。Q2 的「Heart 增速骤降至个位数」在本季被推翻——+21.7% 是 2025 年以来 Heart 单季同比的最高读数之一；管理层将其部分归因于 ENHANCE Part A 数据带来的采纳热情（电话会原话，一手）。<strong>Liver 占比降至 74.0%，三器官结构较 Q2 更均衡，但「一肝独大」的格局未变</strong>。</p>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、OCS 移植例数：核心指标</h2>
+<div class="quote" style="margin-top:0;">
+    TMDX 的核心指标是 <strong>OCS 支持的移植例数</strong>——它直接决定耗材消耗、NOP 飞行架次与外科服务收入。
+    <strong>公司不在 SEC 文件中披露例数</strong>，只公布分部收入（10-Q 一手）；例数只能从电话会与第三方移植登记系统间接推断。
+    本期沿上期框架：以 <strong>美国 OCS 收入（剔除国际与移植无关业务）作为例数的收入代理</strong>，并在拿到具体例数引用时单独标注。
+  </div>
+<div class="summary-grid" style="grid-template-columns:repeat(5,1fr);">
+<div class="summary-item"><div class="value metric-positive">+33.8%</div><div class="label">美国 OCS 收入 YoY（例数代理）</div></div>
+<div class="summary-item"><div class="value">$186.0M</div><div class="label">美国 OCS 收入（Q3'26）</div></div>
+<div class="summary-item"><div class="value metric-positive">+21.7%</div><div class="label">Heart 收入 YoY（重加速）</div></div>
+<div class="summary-item"><div class="value metric-negative">-47.5%</div><div class="label">Lung 收入 YoY（萎缩）</div></div>
+<div class="summary-item"><div class="value">175+90</div><div class="label">ENHANCE-A 入组 + CAP 追加</div></div>
+</div>
+<h3>3.1 例数代理读数：+33.8%，连续第七个季度双位数增长</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>季度</th><th>美国 OCS 收入</th><th>YoY</th><th>备注（一手 10-Q / 电话会）</th></tr></thead>
+<tbody>
+<tr><td>Q3 2024</td><td>$102.9M</td><td class="metric-positive">+33%</td><td>肝驱动期</td></tr>
+<tr><td>Q4 2024</td><td>$118.3M</td><td class="metric-positive">+31%</td><td>—</td></tr>
+<tr><td>Q1 2025</td><td>$128.7M</td><td class="metric-positive">+30%</td><td>—</td></tr>
+<tr><td>Q2 2025</td><td>$134.4M</td><td class="metric-positive">+25%</td><td>Heart 增速开始放缓</td></tr>
+<tr><td>Q3 2025</td><td>$139.0M</td><td class="metric-positive">+35%</td><td>—</td></tr>
+<tr><td><strong>Q3 2026</strong></td><td><strong>$186.0M</strong></td><td class="metric-positive"><strong>+33.8%</strong></td><td>较 Q2'26（$172.9M）环比 +7.6%；Heart 重加速 +21.7%</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">Q3 2024–Q2 2025 各期为历期 10-Q 与上期报告已核对读数；Q3 2026 为本期 10-Q 一手。收入代理≠例数：例数还受单例收入结构（耗材 vs 飞行）影响，美国 NOP 全包模式下两者高度联动，但增速读数会有出入——管理层电话会提过的例数表述本期无新披露，故仅以收入代理为准 <span class="src-badge src-e">推算</span>。</div>
+<div class="chart">
+<div class="chart-title">美国 OCS 收入（例数代理）：连续七个季度 <small>（$M，一手 10-Q）</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 240">
+<line stroke="#cfe0d2" stroke-width="1.5" x1="50" x2="620" y1="200" y2="200"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="50" x2="620" y1="118.5" y2="118.5"></line>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="44" y="122">100</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="44" y="204">0</text>
+<polyline fill="none" points="50,103.8 164,89.3 278,78.5 392,72.2 506,67.5 620,41.6" stroke="#2d6a4f" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<circle cx="50" cy="103.8" fill="#2d6a4f" r="4"></circle><circle cx="164" cy="89.3" fill="#2d6a4f" r="4"></circle><circle cx="278" cy="78.5" fill="#2d6a4f" r="4"></circle><circle cx="392" cy="72.2" fill="#2d6a4f" r="4"></circle><circle cx="506" cy="67.5" fill="#2d6a4f" r="4"></circle>
+<circle cx="620" cy="41.6" fill="#2d6a4f" r="5" stroke="#fff" stroke-width="1.5"></circle>
+<text fill="#4a5a4e" font-size="10.5" text-anchor="middle" x="50" y="88">102.9</text>
+<text fill="#4a5a4e" font-size="10.5" text-anchor="middle" x="164" y="74">118.3</text>
+<text fill="#4a5a4e" font-size="10.5" text-anchor="middle" x="278" y="63">128.7</text>
+<text fill="#4a5a4e" font-size="10.5" text-anchor="middle" x="392" y="57">134.4</text>
+<text fill="#4a5a4e" font-size="10.5" text-anchor="middle" x="506" y="52">139.0</text>
+<text fill="#2d6a4f" font-size="11.5" font-weight="700" text-anchor="middle" x="620" y="26">186.0</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="50" y="222">Q3'24</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="164" y="222">Q4'24</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="278" y="222">Q1'25</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="392" y="222">Q2'25</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="506" y="222">Q3'25</text>
+<text fill="#1a2a1e" font-size="10" font-weight="700" text-anchor="middle" x="620" y="222">Q3'26</text>
+</svg>
+<div class="caveat-inline">x 轴按季度等距（每格一个季度，同为 3 个月，等距不歪曲时间轴）。Q3'26 的 +33.8% 略高于 Q2'26 的读数（约 +26%），例数代理增速在中枢上方企稳。</div>
+</div>
+<h3>3.2 三条器官线的分化：Heart 重加速、Lung 见底待验证</h3>
+<ul style="padding-left:22px;font-size:14px;">
+<li style="margin-bottom:8px;"><strong>Heart +21.7%（Q2 仅 +3.8%）——上季度空头的头号论据，本期被推翻</strong>。管理层在电话会上将其归因于 ENHANCE Part A 完成入组后的真实世界采纳（原话：移植项目反馈「hearts coming out of the device looking better, recovering quicker, less edema」），并称多中心正在把 OCS 心脏用于更边缘的供体 <span class="src-badge src-s">一手</span>（业绩电话会）。<strong>需要警惕的对照</strong>：+21.7% 中有多少是「ENHANCE 热情」的暂时拉动、多少是常态增速，单一季度无法区分——这正是 Part B 试验期（约 2027 全年）要盯的变量。</li>
+<li style="margin-bottom:8px;"><strong>Lung -47.5%，占总收入约 1.0%</strong>（&lt;2%，上文图内不标数值）。连续两季同比 -45% 以上：竞争挤压（XVIVO Perfusion 肺产品在美推进）+ 公司主动收缩低质量业务并存，管理层本季未单独展开。DENOVO Lung IDE 获批（10 月下旬）是这条线的转折变量——若 2027 年临床启动顺利，Lung 才有重新做大的通路。</li>
+<li style="margin-bottom:8px;"><strong>Liver +39.2%</strong>：连续第八个季度成为最大增量来源，占总收入约 74.0%。「一肝独大」的集中度风险未解除，但 Heart 重加速让三线结构比上季均衡（Liver 占比从 Q2 的 77.9% 降 3.9pct）。</li>
+<li style="margin-bottom:0;"><strong>10 月航班疲软 <span class="src-badge src-s">一手</span></strong>（业绩电话会，CEO 原话）："flights are down in October. It is a fact"——CEO 主动承认，但同时说明 Q3 的器官地面/汽车运输多于航空、且 10 月为财季首月。<strong>这是 Q4 收入指引（含假日季节性保守假设）背后的微观原因，也是空头口径里的「需求疲软」论据</strong>——同一事实两方各取一半，本期多空栏均收录。</li>
+</ul>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据</h2>
+<h3>4.1 五项裁决指标对账：全数兑现</h3>
+<div class="quote" style="margin-top:0;">
+    上期报告（2026-11-04，财报披露前夜）为本次 Q3 财报预置了五项「裁决指标」——本节逐一核对。
+    <strong>结果：五项全部通过。</strong>市场用两日 +35% 投了票，但请注意：这是「事实核对」，不是「买入依据」——股价的反应幅度包含空头回补（25% 做空占比）的放大效应，见第八节。
+  </div>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:26%">裁决指标（上期预置）</th><th style="width:34%">本期事实（一手）</th><th style="width:12%">裁决</th><th>备注</th></tr></thead>
+<tbody>
+<tr>
+<td>① OCS 例数增速 ≥15%（收入代理口径）</td>
+<td>美国 OCS 收入 <strong>+33.8%</strong>（$186.0M），Heart 重加速 +21.7%</td>
+<td class="metric-positive">通过</td>
+<td>间接口径（例数不披露）；远超 15% 阈值</td>
+</tr>
+<tr>
+<td>② 毛利率：ex-PAD 是否兑现「同比改善」指引</td>
+<td>综合毛利率 58.5%（PAD 拖累 260bps）；<strong>ex-PAD 61.1%，同比 +230bps</strong>，产品毛利率 79.2%（+50bps）、服务 32.2%（+440bps）</td>
+<td class="metric-positive">通过</td>
+<td>指引原话「ex-PAD 同比改善」；实际改善幅度超预期</td>
+</tr>
+<tr>
+<td>③ FY2026 收入指引是否上调</td>
+<td><strong>$764–774M（含 PAD ~$14M，+26–28%）</strong>；ex-PAD $750–760M（+24–26%，前值 $737–757M）</td>
+<td class="metric-positive">通过</td>
+<td>财报前共识约 $766.7M 落在新区间中值下方</td>
+</tr>
+<tr>
+<td>④ OCS Kidney 时间表是否维持（2027 下半年首例人体临床）</td>
+<td>维持。<strong>2027 H2 首例人体临床</strong>，指向 ~21,000 例/年肾移植 + ~9,000 例未用肾的长期分母</td>
+<td class="metric-positive">通过</td>
+<td>无提前、无推迟；电话会重申</td>
+</tr>
+<tr>
+<td>⑤ 调整后营业利润率指引 12.5–14% 是否守住；是否给 2027 指引</td>
+<td><strong>12.5–14% 重申</strong>；2027 指引未提前给出（管理层：先看 ENHANCE B / DENOVO 入组进度）</td>
+<td class="metric-warn">通过（保留项）</td>
+<td>利润率守住；但市场想要的 2027 指引没有——Q4 财报（2027 年 2 月）是下一个观察点</td>
+</tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">上期还预置了四情景概率（乐观 20% / 基准 45% / 悲观 30% / 尾部 5%），本期基于五项全过的证据更新为 <strong>乐观 ~30% / 基准 ~45% / 悲观 ~20% / 尾部 ~5%</strong>（主观概率，可证伪：乐观情景取决于 Part B 入组速度与 2027 指引出现，悲观情景取决于 AR/现金流再度恶化或 Heart 增速回落至个位数——见第十二章）。</div>
+<h3>4.2 Q3 2026 损益表（一手：8-K Ex99.1 + 10-Q）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>Q3 2026</th><th>Q3 2025</th><th>YoY</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td>总收入</td><td><strong>$203,005K</strong></td><td>$143,818K</td><td class="metric-positive">+41.1%</td><td>organic +35%（剔除 PAD 并表 $9.4M）</td></tr>
+<tr><td>— 产品收入</td><td>$113,419K</td><td>$87,690K</td><td class="metric-positive">+29.4%</td><td>占比 55.9%；毛利率 79.2%（+50bps）</td></tr>
+<tr><td>— 服务收入</td><td>$89,586K</td><td>$56,128K</td><td class="metric-positive">+59.6%</td><td>organic +43%；含 PAD 包机 $9.4M；毛利率 32.2%（+440bps）</td></tr>
+<tr><td>总毛利</td><td>$118,833K</td><td>$84,501K</td><td class="metric-positive">+40.6%</td><td>毛利率 58.5%（-30bps；ex-PAD 61.1%，+230bps）</td></tr>
+<tr><td>研发费用</td><td>$29,182K</td><td>$15,264K</td><td class="metric-negative">+91.2%</td><td>ENHANCE B + DENOVO 双试验开动，增速收入两倍余</td></tr>
+<tr><td>销售及管理费用</td><td>$61,334K</td><td>$46,000K</td><td class="metric-negative">+33.3%</td><td>含股权激励（SG&amp;A 内）~$12.1M</td></tr>
+<tr><td>利息费用</td><td>$7,271K</td><td>$3,497K</td><td class="metric-negative">+108.0%</td><td>机队融资租赁并表所致；1.5% 可转债利息极低</td></tr>
+<tr><td>营业利润</td><td><strong>$28,141K</strong></td><td>$23,300K</td><td class="metric-positive">+20.9%</td><td>利润率 13.9%（vs 16.2%，-230bps：R&amp;D 投入期）</td></tr>
+<tr><td>— 调整后营业利润</td><td>$28,872K</td><td>$24,127K</td><td class="metric-positive">+19.7%</td><td>调整后利润率 14.2%，处指引带 12.5–14% 上沿</td></tr>
+<tr><td>GAAP 净利</td><td>$17,073K</td><td>$25,738K</td><td class="metric-negative">-33.7%</td><td>税率 ~29%（上期更低基数）+ 利息 +108%</td></tr>
+<tr><td>— 摊薄 EPS</td><td>$0.46</td><td>$0.66</td><td class="metric-negative">-30.3%</td><td>摊薄股本 40.8M（含可转债 if-converted）</td></tr>
+<tr><td>调整后净利 / EPS</td><td>$18.9M / $0.51</td><td>$26.6M / $0.67</td><td class="metric-negative">-23.8%</td><td>连续第二季度调整后 EPS 同比下降</td></tr>
+</tbody>
+</table></div>
+<div class="stale-warning" style="background:#f2faf4;border-color:#d8f3dc;color:#1b5e20;">
+<strong>怎么读这份损益表：</strong>收入 +41% 但净利 -34%——差额几乎全部由两个主动选择构成：<strong>R&amp;D +91%</strong>（两个新临床试验同时开动，$13.9M 增量）与 <strong>利息费用 +108%</strong>（机队扩张的融资租赁）。前者是管线期投资，后者是重资产模式的资金成本。
+    调整后营业利润率 14.2% 仍处指引带上沿——<strong>营业层面的盈利能力没有恶化，恶化在「营业以下」（利息与税）</strong>。这与上期报告「利润率恶化是暂时的、由投入节奏决定」的判断一致，但利息项是结构性的：机队继续扩，利息就继续涨，它是 FCF 的常驻拖累。
+  </div>
+<div class="chart">
+<div class="chart-title">六个季度：总收入 与 调整后营业利润率 <small>（Q2'25 → Q3'26，一手财报）</small></div>
+<div class="dual-chart">
+<svg style="min-width:280px;" viewbox="0 0 340 220">
+<line stroke="#cfe0d2" stroke-width="1.5" x1="40" x2="320" y1="190" y2="190"></line>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="34" y="24">210</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="34" y="194">130</text>
+<polyline fill="none" points="55,131.7 110,160.7 165,124.5 220,96.7 275,62.7 320,34.9" stroke="#2d6a4f" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<circle cx="55" cy="131.7" fill="#2d6a4f" r="3.5"></circle><circle cx="110" cy="160.7" fill="#2d6a4f" r="3.5"></circle><circle cx="165" cy="124.5" fill="#2d6a4f" r="3.5"></circle><circle cx="220" cy="96.7" fill="#2d6a4f" r="3.5"></circle><circle cx="275" cy="62.7" fill="#2d6a4f" r="3.5"></circle>
+<circle cx="320" cy="34.9" fill="#2d6a4f" r="4.5" stroke="#fff" stroke-width="1.5"></circle>
+<text fill="#4a5a4e" font-size="10" text-anchor="middle" x="55" y="118">157.4</text>
+<text fill="#4a5a4e" font-size="10" text-anchor="middle" x="110" y="176">143.8</text>
+<text fill="#4a5a4e" font-size="10" text-anchor="middle" x="165" y="111">160.8</text>
+<text fill="#4a5a4e" font-size="10" text-anchor="middle" x="220" y="83">173.9</text>
+<text fill="#4a5a4e" font-size="10" text-anchor="middle" x="275" y="49">189.9</text>
+<text fill="#2d6a4f" font-size="11" font-weight="700" text-anchor="middle" x="320" y="21">203.0</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="55" y="206">Q2'25</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="110" y="206">Q3'25</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="165" y="206">Q4'25</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="220" y="206">Q1'26</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="275" y="206">Q2'26</text>
+<text fill="#1a2a1e" font-size="9.5" font-weight="700" text-anchor="middle" x="320" y="206">Q3'26</text>
+</svg>
+<svg style="min-width:280px;" viewbox="0 0 340 220">
+<line stroke="#cfe0d2" stroke-width="1.5" x1="40" x2="320" y1="190" y2="190"></line>
+<line stroke="#e4efe6" stroke-dasharray="4,3" stroke-width="1" x1="40" x2="320" y1="90" y2="90"></line>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="34" y="94">10%</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="34" y="24">25%</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="34" y="194">0%</text>
+<polyline fill="none" points="55,32.2 110,79.8 165,100.2 220,138.3 275,105.0 320,95.5" stroke="#bc6c25" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<circle cx="55" cy="32.2" fill="#bc6c25" r="3.5"></circle><circle cx="110" cy="79.8" fill="#bc6c25" r="3.5"></circle><circle cx="165" cy="100.2" fill="#bc6c25" r="3.5"></circle><circle cx="220" cy="138.3" fill="#bc6c25" r="3.5"></circle><circle cx="275" cy="105.0" fill="#bc6c25" r="3.5"></circle>
+<circle cx="320" cy="95.5" fill="#bc6c25" r="4.5" stroke="#fff" stroke-width="1.5"></circle>
+<text fill="#7a5a10" font-size="10" text-anchor="middle" x="55" y="47">23.2</text>
+<text fill="#7a5a10" font-size="10" text-anchor="middle" x="110" y="95">16.2</text>
+<text fill="#7a5a10" font-size="10" text-anchor="middle" x="165" y="115">13.2</text>
+<text fill="#7a5a10" font-size="10" text-anchor="middle" x="220" y="153">7.6</text>
+<text fill="#7a5a10" font-size="10" text-anchor="middle" x="275" y="120">12.5</text>
+<text fill="#7a5a10" font-size="11" font-weight="700" text-anchor="middle" x="320" y="111">13.9</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="55" y="206">Q2'25</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="110" y="206">Q3'25</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="165" y="206">Q4'25</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="220" y="206">Q1'26</text>
+<text fill="#6b7d6f" font-size="9.5" text-anchor="middle" x="275" y="206">Q2'26</text>
+<text fill="#1a2a1e" font-size="9.5" font-weight="700" text-anchor="middle" x="320" y="206">Q3'26</text>
+</svg>
+</div>
+<div class="caveat-inline">左图总收入（$M）；右图为 GAAP 营业利润率（%，虚线＝10% 参考线）。两个系列量纲不同，拆成小多图各配独立刻度，跨图不可比。Q1'26 的 7.6% 低点对应 R&amp;D 与冬季物流高峰；13.9% 处指引带（12.5–14%）内。</div>
+</div>
+<h3>4.3 九个月累计与全年指引</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目（9M 2026 vs 9M 2025）</th><th>9M 2026</th><th>YoY</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>总收入</td><td>$566,886K</td><td class="metric-positive">+27.0%</td><td>Q1/Q2 基数里含 PAD 前身业务（未并表）</td></tr>
+<tr><td>营业利润</td><td>$65,174K</td><td class="metric-negative">-15.9%</td><td>利润率 11.5%（vs 15.5%）：R&amp;D 投入 + Q1 冬季高峰</td></tr>
+<tr><td>GAAP 净利</td><td>$39,070K</td><td class="metric-negative">-54.0%</td><td>上年同期含一次性税项收益基数</td></tr>
+<tr><td>调整后 EPS</td><td>$1.26</td><td class="metric-negative">-45.9%</td><td>vs $2.33</td></tr>
+</tbody>
+</table></div>
+<div class="table-scroll"><table>
+<thead><tr><th>FY2026 指引（一手：财报新闻稿）</th><th>新指引（11-05）</th><th>前指引（8-04）</th><th>变化</th></tr></thead>
+<tbody>
+<tr><td>总收入（含 PAD）</td><td><strong>$764–774M（+26–28%）</strong></td><td>—（PAD 7 月才并表，无合并口径前值）</td><td class="metric-positive">新增合并口径</td></tr>
+<tr><td>总收入（ex-PAD）</td><td><strong>$750–760M（+24–26%）</strong></td><td>$737–757M</td><td class="metric-positive">上调，中值 +$8M</td></tr>
+<tr><td>PAD 贡献</td><td>~$14M</td><td>~$8M（Q3 已实收 $9.4M）</td><td>上修</td></tr>
+<tr><td>调整后营业利润率</td><td>12.5–14%</td><td>12.5–14%</td><td>重申</td></tr>
+<tr><td>隐含 Q4 收入 <span class="src-badge src-e">推算</span></td><td>$197.1–207.1M</td><td>—</td><td>中值 ~$202M（YoY 约 +28–31%）</td></tr>
+</tbody>
+</table></div>
+<div class="stale-warning">
+<strong>指引哲学（一手，电话会）：</strong>管理层明说新指引做了两个保守假设——① 假日季节性的飞行需求未计入（"we don't know how the holidays will play out"）；② <strong>Q4 不计入 ENHANCE Part B / DENOVO 的任何增量收入</strong>（两个试验 10 月下旬才获批，入组刚开始）。
+    空头读法：Q4 中值 ~$202M 意味着环比仅 +0.6%（Q3 $203M）——若 10 月航班确实疲软，这个中值并非轻松可达；多头读法：ex-PAD 口径连续第三次上调，且两个试验的收入完全没算， upside 是免费的。两种读法对同一份指引，见第九节。
+  </div>
+<h3>4.4 现金流与资产负债表：FCF 全年转正的含金量</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>现金流（9M 2026）</th><th>金额</th><th>vs 9M 2025</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td>经营现金流</td><td>$77,846K</td><td class="metric-negative">-51.0%</td><td>AR 增长拖累 -$28.1M、存货 -$19.4M</td></tr>
+<tr><td>资本开支</td><td>$52,149K</td><td>—</td><td>机队扩张（飞机定金与改装）为主</td></tr>
+<tr><td>自由现金流（9M）<span class="src-badge src-e">推算</span></td><td><strong>+$20,387K</strong></td><td>转正</td><td>OCF − capex；上年同期约 -$47M</td></tr>
+<tr><td>自由现金流（TTM）<span class="src-badge src-2">二手</span></td><td><strong>+$44.7M</strong></td><td>转正</td><td>StockAnalysis 口径（净现金=现金−总债务，不含短长期投资；上期为 -$9.7M）</td></tr>
+<tr><td>Q3 单季 OCF</td><td>$36.0M</td><td>—</td><td>全年最高单季；含 Q3 收款季节性</td></tr>
+</tbody>
+</table></div>
+<div class="table-scroll"><table>
+<thead><tr><th>资产负债表（9/30/2026）</th><th>金额</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td>现金及等价物</td><td>$492,962K</td><td>无短期投资披露；现金充足但增长吃现金</td></tr>
+<tr><td>应收账款</td><td>$114,935K</td><td class="metric-negative">较 12/31/25 +36.3%——连续第三期预警项（DSO 抬升）</td></tr>
+<tr><td>存货</td><td>$58,373K</td><td>与内控缺陷关联的科目（见第六节）</td></tr>
+<tr><td>可转债（净额）</td><td>$454,994K</td><td>$460M 本金、票息 1.50%、<strong>2028-06-01 到期</strong>、转股价 ~$94.00、公允价值 $538.6M</td></tr>
+<tr><td>融资租赁负债</td><td>$351,533K</td><td>机队为主；利息费用 +108% 的来源</td></tr>
+<tr><td>总负债</td><td>$967,225K</td><td>含流动长期债 $54,818K</td></tr>
+<tr><td>股东权益</td><td>$550,712K</td><td>—</td></tr>
+<tr><td>总债务 <span class="src-badge src-2">二手</span></td><td>$866.90M</td><td>StockAnalysis 口径（含租赁负债）</td></tr>
+<tr><td>净现金 <span class="src-badge src-2">二手</span></td><td>-$373.94M</td><td>现金 − 总债务；上期约 -$390M，小幅改善</td></tr>
+</tbody>
+</table></div>
+<div class="quote">
+<strong>可转债是本期资产负债表最大的叙事变化：</strong>现价 $93.79 距转股价 $94.00 仅 <strong>-0.2%</strong>（上期 -28%、11-06 时 -6.1%）——<strong>现价已基本触及转股价</strong>。
+    风险性质随之改变：上期讨论的是「2028 年 6 月到期时若无足够现金兑付的再融资风险」，现价语境下更现实的路径是 <strong>持有人转股 → 摊薄</strong>——若全部转股，新增约 4.9M 股（$460M ÷ $94），对现有 34.7M 基本股本摊薄约 12.4%、对 40.8M 摊薄股本约 10.7% <span class="src-badge src-e">推算</span>。
+    对多头这不是坏消息的全部：转股发生的前提是股价站上 $94 并维持（通常 130% 触发线在 ~$122），那意味着股价先涨 40%+——<strong>摊薄风险是「好问题的代价」</strong>；真正的坏消息场景是股价涨不上去、2028 年用现金或再融资兑付。两个场景的判据都是股价本身，这让「可转债风险」与「经营风险」第一次变成了同一个变量。
+  </div>
+</div>
+
+<div class="card" id="pipeline">
+<h2>五、增长管线拆解</h2>
+<div class="quote" style="margin-top:0;">
+    本期管线有<strong>一次质变</strong>：10 月下旬，FDA 同时批准 <strong>ENHANCE Heart Part B</strong>（含 CHOPS 对照臂）与 <strong>DENOVO Lung IDE</strong>——公司从「单试验等待期」进入「双试验并行期」，R&amp;D +91% 就是这两张入场券的账单。管理层称 CHOPS 对照为 <strong>"two shots on goal"</strong>（一手，电话会）：OCS 温热灌注与受控低温保存两条技术路线各押一次，无论哪条胜出都归 TMDX。
+  </div>
+<div class="chart">
+<div class="chart-title">管线里程碑时间轴 <small>（节点等距排列；截至 2026-11-10）</small></div>
+<div style="margin:14px 0 4px;">
+<div style="display:flex;flex-direction:column;">
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:30px;"><div style="flex:0 0 120px;font-size:12px;font-weight:700;color:var(--accent);text-align:right;">2026-09</div><div style="border-left:2px solid var(--accent-light);padding-left:14px;font-size:13.5px;"><strong>ENHANCE Part A 完成入组</strong>：175 例（DCD 心脏）全部入组完毕，数据整理中</div></div>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:30px;"><div style="flex:0 0 120px;font-size:12px;font-weight:700;color:var(--accent);text-align:right;">2026-10 上旬</div><div style="border-left:2px solid var(--accent-light);padding-left:14px;font-size:13.5px;"><strong>CAP 获批 +90 例追加</strong>：Part A 扩展队列，入组 2026 年末–2027 年初启动</div></div>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:30px;"><div style="flex:0 0 120px;font-size:12px;font-weight:700;color:var(--accent);text-align:right;">2026-10 下旬</div><div style="border-left:2px solid var(--accent-light);padding-left:14px;font-size:13.5px;"><strong>FDA 双批准</strong>：ENHANCE Part B IDE（~600 例：400 OCS / 200 CHOPS 对照）+ DENOVO Lung IDE（~450 例：300/150）</div></div>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:30px;"><div style="flex:0 0 120px;font-size:12px;font-weight:700;color:var(--accent);text-align:right;">2026-10</div><div style="border-left:2px solid var(--accent-light);padding-left:14px;font-size:13.5px;"><strong>欧洲首单</strong>：PAD Aviation 中标意大利 Emilia-Romagna 移植物流 tender；OCS NOP 计划 2027 H1 在意/荷/比启动</div></div>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:30px;"><div style="flex:0 0 120px;font-size:12px;font-weight:700;color:var(--text-muted);text-align:right;">2027 H1</div><div style="border-left:2px solid var(--border);padding-left:14px;font-size:13.5px;color:var(--text-secondary);">Part B / DENOVO 入组爬坡（本期指引未计入其收入贡献）</div></div>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:30px;"><div style="flex:0 0 120px;font-size:12px;font-weight:700;color:var(--text-muted);text-align:right;">2027 H2</div><div style="border-left:2px solid var(--border);padding-left:14px;font-size:13.5px;color:var(--text-secondary);"><strong>OCS Kidney 首例人体临床</strong>（计划维持）：面向 ~21,000 例/年美国肾移植 + ~9,000 例未被使用的捐献肾</div></div>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:30px;"><div style="flex:0 0 120px;font-size:12px;font-weight:700;color:var(--text-muted);text-align:right;">2028-06-01</div><div style="border-left:2px solid var(--border);padding-left:14px;font-size:13.5px;color:var(--text-secondary);">可转债到期（$460M、1.50%）——转股或兑付的最终期限</div></div>
+</div>
+</div>
+</div>
+<h3>5.1 试验规模的量化含义（管理层保守估计 <span class="src-badge src-s">一手</span>，电话会）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>试验 / 扩展</th><th>规模</th><th>对应的市场分母</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>ENHANCE Part B（OCS 臂）</td><td>~400 例 OCS + 200 CHOPS 对照</td><td>DBD 心脏「~4 小时段」：~2,200 例/年</td><td>已获批，入组待启动</td></tr>
+<tr><td>DENOVO Lung</td><td>~450 例（300 OCS / 150 对照）</td><td>美国肺移植 ~3,500 例/年</td><td>已获批，入组待启动</td></tr>
+<tr><td>合计增量（管理层保守估计）</td><td colspan="3"><strong>2,000–5,000 例/年</strong>（若两项试验均达成 endpoints 并商业化）——对照当前 OCS 年使用量约 1,000 例级别 <span class="src-badge src-2">二手</span>，这是收入体量数倍级的通路，兑现窗口在 2028 年以后</td></tr>
+<tr><td>OCS Kidney</td><td>首例人体临床 2027 H2</td><td>~21,000 例/年肾移植 + ~9,000 例/年弃用肾</td><td>时间表维持（裁决④）</td></tr>
+</tbody>
+</table></div>
+<div class="stale-warning" style="background:#f2faf4;border-color:#d8f3dc;color:#1b5e20;">
+<strong>管线期的时间账（决定「故事」何时变成「报表」）：</strong>Part B（600 例）按 Part A 的入组速度（约 14 个月）推算，完成入组约在 <strong>2027 年底–2028 年初</strong>；读出数据最快 2028 年中；商业化放量最早 2028 年底–2029 年。<strong>这意味着未来 6–8 个季度里，公司收入仍只由现有三条器官线 + 欧洲 NOP 驱动</strong>——管线的价值只能体现在估值（对 2028+ 收入的贴现），不能体现在未来一年的 EPS 里。共识 FY27E 收入 $901M（+17.6%）隐含的正是「无管线收入」路径。
+  </div>
+</div>
+
+<div class="card" id="anomaly">
+<h2>六、财务异常与风险检测</h2>
+<h3>6.1 异常清单（本期更新）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">项目</th><th style="width:40%">本期读数（一手）</th><th style="width:14%">状态</th><th>说明</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>应收账款增速 &gt; 收入增速</strong></td>
+<td>AR $114.9M，较 12/31/25 <strong>+36.3%</strong>；9M 收入 +27.0%。AR/TTM 收入比从 12.9% 升至 15.8% <span class="src-badge src-e">推算</span></td>
+<td class="metric-negative">连续预警</td>
+<td>连续第三期出现。含 Medicare/OPO 回款周期 + 新并表 PAD 的账期结构。尚未到危险区间（&lt;20%），但 Q4 财报须再核对——若 Q4 收入增速回落而 AR 仍 30%+，质量信号转负</td>
+</tr>
+<tr>
+<td><strong>内控重大缺陷（Item 4）</strong></td>
+<td>披露控制 9/30/26 <strong>仍 not effective</strong>：同一「存货流转」重大缺陷；新控制 2026 Q2 已实施，运行有效性测试预计 Q4 完成，<strong>整改目标 2026 年底</strong></td>
+<td class="metric-warn">有明确时间表</td>
+<td>缺陷本身未恶化（同一项），且首次给出「测试 Q4 完成」的执行节点。<strong>2026 年 10-K（2027 年 2 月）是验收点</strong>：若届时仍未消除，审计意见与内控双否定将构成实质性治理风险</td>
+</tr>
+<tr>
+<td><strong>存货水平</strong></td>
+<td>$58.4M，占收入比与上期基本持平；与内控缺陷同源（流转记录）</td>
+<td class="metric-warn">观察</td>
+<td>未见跌价或减值迹象披露；与缺陷整改绑定观察</td>
+</tr>
+<tr>
+<td><strong>集体诉讼</strong></td>
+<td>8/18/26 答辩已提交，现处 discovery 阶段；10-Q 原话：无法预测结果，无法估计损失区间</td>
+<td class="metric-warn">程序推进中</td>
+<td>与上期一致，无新进展披露。此类证券诉讼通常持续 2–3 年，短期无现金流影响</td>
+</tr>
+<tr>
+<td><strong>利息费用激增</strong></td>
+<td>Q3 $7.27M，YoY +108%；9M 累计约 $19M</td>
+<td class="metric-negative">结构性</td>
+<td>融资租赁并表（机队）所致，非可转债（票息仅 1.5%）。机队扩张不停则持续存在；是 FCF 的常驻拖累项</td>
+</tr>
+<tr>
+<td><strong>股权激励</strong></td>
+<td>Q3 ~$12.1M（占收入 6.0%）；另 10/28 Form 4：新 CFO 获诱导性限制股授予</td>
+<td class="metric-warn">正常偏高</td>
+<td>占收入比高于中盘医疗设备常见水平（3–4%）；摊薄计入 40.8M 摊薄股本</td>
+</tr>
+<tr>
+<td><strong>PAD 并表（VIE）</strong></td>
+<td>自 7/1/26 并表；购买对价 $7.4M（净现金）；商誉 $6,466K</td>
+<td class="metric-positive">新业务</td>
+<td>对价极低、商誉极小——买入的是运营牌照与欧洲网络准入，不是资产包；10-Q 披露完整，无异常</td>
+</tr>
+<tr>
+<td><strong>一次性税项（TTM 口径）</strong></td>
+<td>FY2025 Q4 递延税估值备抵释放 ~$82.8M 在 TTM 净利 $144.5M 中，占 57%</td>
+<td class="metric-warn">口径提示</td>
+<td>TTM PE 22.5x 含此收益；剔除后 52.9x——两个口径已在第一节并列，避免「便宜」错觉 <span class="src-badge src-e">推算</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3>6.2 做空方叙事的当前状态</h3>
+<p style="font-size:14px;">上期报告记录的空头论据，本期逐条对账：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>空头论据（上期记录）</th><th>本期事实</th><th>状态</th></tr></thead>
+<tbody>
+<tr><td>10 月无消息下跌是「聪明钱定价」，背后是例数放缓</td><td>Q3 美国 OCS 收入 +33.8%，Heart 重加速</td><td class="metric-positive">被推翻</td></tr>
+<tr><td>Scorpion Capital 做空报告（2025 年 1 月）指控例数夸大</td><td>本期无新证据；报告仍为 2025 年旧文，10-Q 例数科目（存货/AR）无异常恶化</td><td class="metric-warn">未升级未解除</td></tr>
+<tr><td>AR 增速 &gt; 收入增速，收入质量存疑</td><td>+36.3% vs +27.0%，仍成立</td><td class="metric-negative">仍然成立</td></tr>
+<tr><td>做空占比 25%+，财报是逼空燃料</td><td>11/6 +27.9% 放量（395 万股 ≈ 20 日均量 3.5 倍）——空头回补放大了涨幅（回补天数 11.14 天，无法单日消化全部）</td><td class="metric-positive">部分兑现</td></tr>
+<tr><td>10 月航班疲软、Q4 隐忧</td><td>CEO 承认 "flights are down in October"；指引以保守假设对冲</td><td class="metric-warn">事实成立、指引已对冲</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">做空占比数据仍为 10 月结算口径（11 月结算尚未发布）——11/6 大涨后实际空头仓位大概率已下降，下一期更新。<span class="src-badge src-t">时效</span></div>
+</div>
+
+<div class="card" id="policy">
+<h2>七、政策风险</h2>
+<h3>7.1 本期最大政策事件：CMS-3409-F 最终规则（10/30 发布，一手）</h3>
+<p style="font-size:14px;">CMS 于 2026-10-30 发布 <strong>OPO（器官获取组织）参保条件最终规则</strong>（CMS-3409-F），要点（CMS 官方发布 + AHA/HHS 转述摘要）：</p>
+<ul style="padding-left:22px;font-size:14px;">
+<li style="margin-bottom:6px;">以 2020 年 12 月规则框架为基础<strong>强化 OPO 监管</strong>：绩效指标 + 分层成员体系（performance-based tiering）；</li>
+<li style="margin-bottom:6px;">消除对部长认证新 OPO 的限制要求（利于竞争者进入，长期潜在增加 OPO 之间的替换压力）；</li>
+<li style="margin-bottom:0;">落地时间表自发布起分阶段推进。</li>
+</ul>
+<div class="quote">管理层电话会回应（原话，一手）："We remain committed to supporting every OPO in meeting or exceeding these metrics."——<strong>公司把自己的增长叙事与 OPO 绩效绑定</strong>：OCS/NOP 渗透率提升的前提是 OPO 有动力做大移植量，而新规则正是给 OPO 上绩效紧箍咒。<strong>短逻辑（OPO 被问责 → 更愿意采用提效工具）对 TMDX 有利；长逻辑（OPO 表现不佳被替换 → 采购关系重组）引入不确定性</strong>——替换期的采购决策可能暂停或重新招标。规则的分层结果公布节奏是后续跟踪点。</div>
+<h3>7.2 供体分母：十多年首次收缩</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>2024</th><th>2025</th><th>变化</th></tr></thead>
+<tbody>
+<tr><td>美国遗体捐献者</td><td>~16,976 人</td><td>16,550 人</td><td class="metric-negative">-2.5%（十多年首次下降）</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">来源：器官获取与移植网络（OPTN）年度数据，经二手转述核对。分母收缩意味着「渗透率提升」逻辑的天花板在动：若捐献量延续下滑，OCS 例数增长将更依赖「每例器官利用率」与「边缘供体可用化」（恰是 OCS 的核心卖点），而非捐献总量。这也是 Kidney 管线（~9,000 例弃用肾）战略价值的注脚。</div>
+<h3>7.3 政策清单总览</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>政策项</th><th>状态</th><th>对 TMDX 的传导</th></tr></thead>
+<tbody>
+<tr><td>CMS OPO 绩效规则（CMS-3409-F）</td><td>最终规则已发布（10/30），分阶段实施</td><td>短期利好 OPO 采购动力；中期关注分层结果与 OPO 替换</td></tr>
+<tr><td>ACO / 移植中心 CMS 报销</td><td>无本期变化</td><td>OCS 心/肺已有过渡支付码，肝的应用继续按例扩展</td></tr>
+<tr><td>证券集体诉讼</td><td>discovery 阶段</td><td>治理风险，短期无现金流影响</td></tr>
+<tr><td>FDA 双 IDE 批准（Part B + DENOVO）</td><td>已获批（10 月下旬）</td><td>管线期开启；监管关系整体顺畅</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="valuation">
+<h2>八、估值分析</h2>
+<h3>8.1 当前倍数（全部按 11-09 确认收盘 $93.79 自算 <span class="src-badge src-e">推算</span>）</h3>
+<div class="quote" style="margin-top:0;">
+    SA 统计页各字段更新时点可能不一致，故<strong>本报告所有倍数不直接引用 SA 读数，一律按 11-09 收盘 $93.79 自算</strong>；SA 数字仅作输入（股本 34.73M、TTM 口径）引用并标注 <span class="src-badge src-2">二手</span>。
+  </div>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>数值</th><th>计算基础</th><th>口径说明</th></tr></thead>
+<tbody>
+<tr><td>市值</td><td>$32.6 亿</td><td>34.73M 基本股 × $93.79</td><td>基本股口径（SA）</td></tr>
+<tr><td>企业价值 EV</td><td>$36.3 亿</td><td>市值 + 总债务 $866.9M − 现金 $493.0M</td><td>债务含融资租赁 $351.5M</td></tr>
+<tr><td>PE (TTM，含一次性税利)</td><td><strong>22.5x</strong></td><td>TTM 净利 $144.5M（= 190.3 − 84.9 + 39.1）</td><td>含 FY25Q4 估值备抵释放 $82.8M——<strong>此口径显著虚低</strong></td></tr>
+<tr><td>PE (TTM，剔一次性税利)</td><td><strong>52.9x</strong></td><td>TTM 净利 − $82.8M = $61.7M</td><td>经营性口径，更接近真实盈利能力</td></tr>
+<tr><td>前瞻 PE (FY26E)</td><td><strong>56.2x</strong></td><td>共识 EPS $1.67（财报后自 $1.51 上修）</td><td>若按 FY27E $2.49 则 37.7x</td></tr>
+<tr><td>PS (TTM)</td><td>4.48x</td><td>TTM 收入 $727.6M</td><td>—</td></tr>
+<tr><td>EV/Sales (TTM)</td><td>4.99x</td><td>EV $36.3 亿</td><td>—</td></tr>
+<tr><td>PEG</td><td>自算 1.14（EPS 增速）/ 3.2（收入增速）/ SA 0.87</td><td>自算用 FY26E→FY27E 增速；SA 用多年增速口径</td><td>两口径分母不同，均列示（详见「数据说明」①）</td></tr>
+</tbody>
+</table></div>
+<div class="stale-warning" style="background:#f2faf4;border-color:#d8f3dc;color:#1b5e20;">
+<strong>财报后估值的净变化（本期估值要算的一句话）：</strong>股价两日 +35%，而共识 EPS 只上修了约 11%（FY26E $1.51→$1.67、FY27E $2.25→$2.49）——
+    <strong>前瞻 PE 不降反升</strong>（56.2x vs 财报前 44.6x，上期口径）。财报兑现的是「经营事实」，没有兑现「估值空间」：现在 $93.79 的价格里，已经预付了一部分原本属于「悲观情景修复」的涨幅。
+    这不是判断方向，是算术：分子（共识盈利）改善幅度小于分母（股价）扩张幅度。
+  </div>
+<h3>8.2 价格位置：12 个月月度收盘</h3>
+<div class="chart">
+<div class="chart-title">TMDX 月度收盘（2025-11 → 2026-11-09）<small>（$，x 轴按真实日期比例，末两点为 11-06 / 11-09 收盘非月末）</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 240">
+<line stroke="#cfe0d2" stroke-width="1.5" x1="50" x2="620" y1="200" y2="200"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="50" x2="620" y1="155" y2="155"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="50" x2="620" y1="110" y2="110"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="50" x2="620" y1="65" y2="65"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="50" x2="620" y1="20" y2="20"></line>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="44" y="204">0</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="44" y="159">40</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="44" y="114">80</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="44" y="69">120</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="end" x="44" y="24">160</text>
+
+<polyline fill="none" points="50.0,35.4 101.4,63.1 152.7,49.3 199.1,36.6 250.5,88.2 300.2,86.6 351.6,124.4 401.3,125.3 452.6,113.9 504.0,104.5 553.7,106.1 605.1,125.8 615.0,100.7 620.0,94.5" stroke="#2d6a4f" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<circle cx="50.0" cy="35.4" fill="#2d6a4f" r="3.5"></circle>
+<circle cx="199.1" cy="36.6" fill="#2d6a4f" r="3.5"></circle>
+<circle cx="351.6" cy="124.4" fill="#c1121f" r="3.5"></circle>
+<circle cx="605.1" cy="125.8" fill="#c1121f" r="3.5"></circle>
+<circle cx="615.0" cy="100.7" fill="#2d6a4f" r="3.5"></circle>
+<circle cx="620" cy="94.5" fill="#2d6a4f" r="5" stroke="#fff" stroke-width="1.5"></circle>
+<text fill="#4a5a4e" font-size="10" text-anchor="middle" x="50" y="21">146.31</text>
+<text fill="#4a5a4e" font-size="10" text-anchor="middle" x="200" y="22">145.26</text>
+<text fill="#8b0e18" font-size="10" text-anchor="middle" x="352" y="139">67.20</text>
+<text fill="#8b0e18" font-size="10" text-anchor="middle" x="605" y="141">65.99</text>
+<text fill="#2d6a4f" font-size="11.5" font-weight="700" text-anchor="middle" x="618" y="84">93.79</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="50" y="222">25-11</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="153" y="222">26-01</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="252" y="222">26-03</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="354" y="222">26-05</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="456" y="222">26-07</text>
+<text fill="#6b7d6f" font-size="10" text-anchor="middle" x="558" y="222">26-09</text>
+<text fill="#1a2a1e" font-size="10" font-weight="700" text-anchor="middle" x="620" y="222">11-09</text>
+</svg>
+<div class="caveat-inline">14 点 = 12 个月末收盘 + 11-06 / 11-09 收盘（财报后两日）。x 轴按真实日期比例：11-06、11-09 距 10 月末仅 6 / 9 天，故末三点间距明显窄于月间距——这不是绘图误差。两个红点：5 月（Q1 财报后跳水至 $67.20）与 10 月末（Q3 前夜 $65.99）——<strong>一年内两次在财报附近跌入 $65–67 区域，又两次被拉回</strong>；11-09 收盘 $93.79 已略过 8 月收盘高点（$84.87）。</div>
+</div>
+<div class="table-scroll"><table>
+<thead><tr><th>位置指标</th><th>读数</th><th>基准</th></tr></thead>
+<tbody>
+<tr><td>52 周区间</td><td>$60.105 – $156.00</td><td>日线口径（SA）</td></tr>
+<tr><td>现价分位（52 周）</td><td><strong>自下而上 35.1%</strong></td><td>($93.79 − $60.105) ÷ ($156.00 − $60.105)</td></tr>
+<tr><td>距 52 周高点</td><td class="metric-negative">-39.9%</td><td>$156.00</td></tr>
+<tr><td>距 52 周低点</td><td class="metric-positive">+56.0%</td><td>$60.105（2026-10 中旬触及）</td></tr>
+<tr><td>5 年月度收盘高点 / 低点</td><td>$168.06（2024-08）/ $15.87（2022-01）</td><td>5 年月线；盘中历史最高 $177.37</td></tr>
+<tr><td>YTD / 近 1 年</td><td class="metric-negative">-22.9% / -23.2%</td><td>2025 年末收盘 $121.65；一年前（25-11-11）$122.14</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">历史 PE 分位不适用：过去 5 年公司多数时间处于亏损或微利状态（2022 年亏损、2024–2025 刚转盈利），PE 序列大面积无意义——位置指标以股价区间与 PS 表达。<strong>财报后 PS TTM 4.48x，处公司自 2023 年转盈利以来「中速增长期」的常见波动带内（约 3–9x），读数居中偏下</strong> <span class="src-badge src-e">推算</span>。可比公司跨表（XVIVO Perfusion、United Therapeutics、Artivion 等）本期未逐一取数核验倍数，不列跨公司倍数对比表，避免引用未核验数字；竞争格局参照见第二节、XVIVO Q3 销售额 +34% 见 3.2 节（二手转述）。</div>
+<h3>8.3 周期视角（马克斯温度计）：财报日的钟摆摆幅</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>钟摆维度</th><th>财报前（11-04）</th><th>财报后（11-06/11-09）</th><th>摆幅解读</th></tr></thead>
+<tbody>
+<tr><td>价格</td><td>$72.755（较 9/30 -12.8%）</td><td>$88.24（11-06）→ $93.79（11-09，+6.3%）</td><td>两日累计 +36.0%：从「财报前恐慌」一步跳到「财报后兴奋」</td></tr>
+<tr><td>空头处境</td><td>25.25% 占比、11.14 天回补——挤压弹药充足</td><td>11/6 成交 395 万股（20 日均量 3.5 倍），空头当日被迫回补，放大涨幅</td><td>涨幅中的「机械」成分无法精确剥离，但量能结构表明 <strong>+27.9% ≠ 纯基本面定价</strong></td></tr>
+<tr><td>卖方情绪</td><td>Argus 下调至 $64 / Neutral（11/4）</td><td>6 家动作中 4 家上调/重申 Buy</td><td>卖方从分歧转向一致，恰是钟摆加速的典型形态</td></tr>
+<tr><td>情绪面（社区）</td><td>r/TMDX 最后实质帖 "make or break"（10/20）</td><td>财报后无新帖（样本极小）</td><td>散户情绪无可靠读数</td></tr>
+</tbody>
+</table></div>
+<div class="quote">马克斯框架的读法：<strong>这是一次从恐惧端向贪婪端的快速摆动</strong>，触发器是真实的（五项裁决全过），但摆幅被做空结构放大。「第二层思维」要问的不是「财报好不好」（好），而是<strong>「+36% 之后的价格里还剩多少悲观定价、又提前计入了多少乐观定价」</strong>——8.1 节的算术（前瞻 PE 反升）给出的是后者的量化：FY26E 共识已全部或部分计入现价。</div>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>九、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4>多方论据（本期更新后）</h4>
+<ol>
+<li><strong>五项裁决指标全数兑现</strong>：例数代理 +33.8%、ex-PAD 毛利率 +230bps、指引上调、Kidney 时间表维持、利润率守住上沿——过去两个季度里「多头叙事被数据背书」的完整一季；</li>
+<li><strong>Heart 重加速 +21.7%</strong>：上季度 +3.8% 曾是空方的头号论据，本期被推翻，且管理层给出了机制解释（ENHANCE-A 采纳效应）；</li>
+<li><strong>FCF TTM 转正（$44.7M）</strong>：重资产模式的现金流拐点初步出现；净现金缺口收窄（-$373.9M vs 上期 -$390M）；</li>
+<li><strong>双试验获批 = 管线不确定性大幅下降</strong>：Part B（心）+ DENOVO（肺）同月获批，2,000–5,000 例/年的增量通路有了监管通行证；CHOPS 对照臂让公司押了两条技术路线；</li>
+<li><strong>可转债风险性质改善</strong>：距转股价仅 -0.2%（已基本触及），「兑付风险」让位「转股摊薄」——后者的发生条件本身是股价上涨 40%+；</li>
+<li><strong>欧洲落地首单</strong>：Emilia-Romagna tender + 意/荷/比 NOP 2027 H1 启动，海外复制有了第一份合同证据；</li>
+<li><strong>指引保守</strong>：Q4 不计 Part B/DENOVO 收入、不计假日弹性——ex-PAD 指引连续第三次上调的传统仍在。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4>空方论据（本期更新后）</h4>
+<ol>
+<li><strong>前瞻 PE 反升</strong>：+36% 股价 vs +11% 共识上修，56.2x FY26E——财报利好已被价格消化大半，安全边际比一周前更薄（8.1 节算术）；</li>
+<li><strong>调整后 EPS 连续两季同比下滑</strong>：Q3 $0.51 vs $0.67、9M $1.26 vs $2.33——收入高增长没有转化为每股盈利增长，摊薄股本 40.8M 且继续增加；</li>
+<li><strong>AR 连续三期增速超收入</strong>：+36.3% vs +27.0%，收入质量信号未解除；Q4 若收入减速而 AR 仍高增，将从「预警」变「实锤」；</li>
+<li><strong>10 月航班疲软（CEO 原话）</strong>：Q4 隐含中值 ~$202M 意味着环比零增长——若假日季节性同样疲软，指引下沿（$197M，环比 -2.9%）是现实可能；</li>
+<li><strong>内控缺陷仍未整改</strong>：存货流转重大缺陷存续至 9/30，整改验收要等 2027 年 2 月的 10-K；2025 年 1 月 Scorpion 做空报告的核心指控（存货/例数口径）从未被独立复核数据正面反驳；</li>
+<li><strong>肝集中度 ~74%</strong>：单器官依赖未变，Lung 持续萎缩（-47.5%）说明「第三条腿」尚未长成；</li>
+<li><strong>分母收缩</strong>：2025 年遗体捐献 -2.5%，十多年首降；CMS-3409-F 的 OPO 替换机制给采购关系引入中期不确定性；</li>
+<li><strong>利息 +108% 是结构性的</strong>：机队扩张不停则持续；R&amp;D 双试验期（+91%）至少延续到 2028——「利润率 14%」与「EPS 增长」之间还隔着摊薄与利息两座山。</li>
+</ol>
+</div>
+</div>
+<div class="quote">
+<strong>分歧的真正焦点（本期）已从「基本面真假」移到「价格是否已兑现基本面」。</strong>财报前空方的核心弹药（例数放缓、10 月疲软）有一半被 Q3 数据推翻，多方的叙事第一次完整跑通；但 +36% 的价格反应把「跑通叙事」的红利大部分预支了。下一轮多空对决的判据不再是「Q3 好不好」（已知），而是 <strong>Q4 与 2027 指引（2027-02 财报）、AR 方向、以及 Part B 入组速度能否支撑「2028 收入数倍级」的远期定价</strong>。
+  </div>
+</div>
+
+<div class="card" id="analysts">
+<h2>十、分析师全景</h2>
+<h3>10.1 Q3 财报后的评级动作（逐家核实日期，<span class="src-badge src-2">二手</span>）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>分析师</th><th>日期</th><th>评级</th><th>目标价</th><th>动作</th></tr></thead>
+<tbody>
+<tr><td>Barclays</td><td>Pasquale</td><td>11-09</td><td><span class="tag tag-bull">Buy</span></td><td>$120</td><td>重申（财报后首个动作）</td></tr>
+<tr><td>UBS</td><td>P. Wood</td><td>11-09</td><td><span class="tag tag-hold">Hold</span></td><td>$77 → $88</td><td>上调至现价附近，仍 Hold</td></tr>
+<tr><td>Oppenheimer</td><td>—</td><td>11-07</td><td><span class="tag tag-hold">Hold</span></td><td>—</td><td>重申</td></tr>
+<tr><td>J.P. Morgan</td><td>A. Gong</td><td>11-07</td><td><span class="tag tag-hold">Hold</span></td><td>$73 → $85</td><td>上调但维持 Hold</td></tr>
+<tr><td>Canaccord</td><td>Plovanic</td><td>11-06</td><td><span class="tag tag-bull">Buy</span></td><td>$95 → $120</td><td>上调（幅度最大之一）</td></tr>
+<tr><td>Needham</td><td>—</td><td>11-06</td><td><span class="tag tag-bull">Buy</span></td><td>$106 → $110</td><td>上调</td></tr>
+</tbody>
+</table></div>
+<h3>10.2 财报前的动作（对账用）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>日期</th><th>评级</th><th>目标价</th><th>动作</th></tr></thead>
+<tbody>
+<tr><td>Piper Sandler</td><td>11-03</td><td><span class="tag tag-bull">Buy</span></td><td>$100</td><td>重申（财报前）</td></tr>
+<tr><td>TD Cowen</td><td>11-02</td><td><span class="tag tag-bull">Buy</span></td><td>$120</td><td>重申（财报前）</td></tr>
+<tr><td><strong>Argus</strong></td><td>11-04</td><td><span class="tag tag-hold">Neutral</span></td><td>→ $64</td><td><strong>下调</strong>（财报前一日）——本期唯一下调动作</td></tr>
+<tr><td>Stifel</td><td>10-15</td><td><span class="tag tag-hold">Hold</span></td><td>$65</td><td>财报后未更新（动作 stale）</td></tr>
+</tbody>
+</table></div>
+<div class="table-scroll"><table>
+<thead><tr><th>聚合口径</th><th>共识</th><th>目标价均值</th><th>覆盖数</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>StockAnalysis（财报后）</td><td><span class="tag tag-bull">Buy</span></td><td>$104.55</td><td>13 位</td><td>财报后共识评级 Buy；$104.55 隐含较 $93.79 约 +11.5%</td></tr>
+<tr><td>MarketBeat（含旧价）</td><td><span class="tag tag-hold">Hold</span></td><td>$118.60</td><td>12 位</td><td>区间 $77–$175——<strong>$175 等高价来自未随财报更新的旧目标价，均值被抬高，两口径勿混用</strong></td></tr>
+<tr><td>10 月评级分布（SA）</td><td>6 强买 / 3 买 / 4 持有 / 0 卖</td><td>—</td><td>13 位</td><td>财报前的分布；财报后个体动作见 10.1</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">检索中出现的「上调至 $147 / $169 / $166」「EPS $0.66」等条目经日期核对为 <strong>2025 年 11 月（Q3'25 财报后）旧文</strong>，全部不采信——详见「数据说明」③。所有 2026-11 动作均有明确日期与来源页面支撑。</div>
+</div>
+
+<div class="card" id="community">
+<h2>十一、社区讨论</h2>
+<div class="stale-warning" style="margin-top:0;">
+<strong>样本量诚实声明：</strong>TMDX 在英文散户社区的讨论量持续极小（上期已标注）。本期财报是重大事件，但截至抓取时点（美东 11-09 上午）<strong>r/TMDX 财报后无新帖</strong>——大盘下跌周末 + 小样本双重原因。以下内容不构成「社区情绪」的统计依据。
+  </div>
+<div class="table-scroll"><table>
+<thead><tr><th>来源</th><th>时点</th><th>内容（<span class="src-badge src-3">三方</span>）</th><th>与报告主题的关联</th></tr></thead>
+<tbody>
+<tr><td>r/TMDX 最后实质帖「Earnings」</td><td>10-20</td><td>发帖者自述持有条件：「财报 make or break」——Q3 必须兑现例数与指引，否则离场</td><td>财报以五项全过兑现了该条件；但财报后该帖无后续、无新讨论，散户立场未见更新</td></tr>
+<tr><td>X（Twitter）@WOLF_Financial</td><td>11-06</td><td>财报快览：强调收入 +41%、上调指引、「做空占比 25% 的挤压结构」</td><td>第三方快览，非独立分析；与 8.3 节空头回补机制互证</td></tr>
+<tr><td>r/TMDX 财报后（0 帖）</td><td>11-06 → 11-09</td><td>无新帖——样本缺失</td><td>如实记录：无法从社区读出财报后的散户反应</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;color:var(--text-muted);">取数方法：Reddit 用 RSS 端点（r/TMDX/.rss，25 条内最后实质帖 10-20）；search.rss 返回 0 条（限流）。X 无 RSS，tvly 搜索命中上述快览。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>十二、综合判断框架</h2>
+<h3>12.1 四情景推演（主观概率，本期更新）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>本期概率</th><th>上期</th><th>12 个月价格带（推演）</th><th>成立条件（可证伪）</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-bull">乐观</span></td><td><strong>~30%</strong></td><td>20%</td><td>$110–130</td><td>Part B 入组速度达 Part A 量级、2027 指引给出且含利润率抬升、AR 增速回落至收入增速以内、Heart 维持 15%+</td></tr>
+<tr><td><span class="tag tag-hold">基准</span></td><td><strong>~45%</strong></td><td>45%</td><td>$85–110</td><td>现有三条线按共识增长（FY27E 收入 ~$901M）、管线按时间表推进但无 early data、AR 持平、Q4 指引兑现中值</td></tr>
+<tr><td><span class="tag tag-bear">悲观</span></td><td><strong>~20%</strong></td><td>30%</td><td>$65–80</td><td>Q4 收入落指引下沿（假日疲软证实）、AR 再加速、Heart 回落至个位数、或内控整改 10-K 未通过</td></tr>
+<tr><td>尾部</td><td>~5%</td><td>5%</td><td>$55 以下</td><td>例数数据被证伪（Scorpion 类指控获独立证据）、集体诉讼出现不利动议、OPO 替换导致采购中断</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">概率为本报告主观估计，非市场隐含概率。调整依据（+10pct 乐观 / -10pct 悲观）：五项裁决全过 + Heart 重加速 + FCF 转正，使「悲观情景的证据基础」较上期收缩；但前瞻 PE 56.2x 意味着乐观情景的价格兑现已部分前置（8.1 节）。价格带是情景推演的算术产物（概率 × 盈利路径 × 倍数带），<strong>不是目标价、不是预期涨跌</strong>。</div>
+<h3>12.2 关键跟踪指标（按重要性排序）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>#</th><th>指标</th><th>观察时点</th><th>证伪意义</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Q4 财报（2027-02）：AR 增速 vs 收入增速</strong></td><td>2027-02</td><td>AR 连续第四期超收入增速 → 收入质量问题从预警升级为实锤</td></tr>
+<tr><td>2</td><td><strong>2026 年 10-K：内控缺陷整改验收</strong></td><td>2027-02</td><td>整改目标「2026 年底」——届时仍 not effective = 治理风险实质化</td></tr>
+<tr><td>3</td><td><strong>2027 指引是否给出（Q4 财报时）</strong></td><td>2027-02</td><td>首次给 2027 指引并含利润率抬升 → 乐观情景的核心证据</td></tr>
+<tr><td>4</td><td><strong>Part B / DENOVO 入组速度</strong></td><td>各季度电话会</td><td>显著慢于 Part A 节奏 → 2028 数倍级收入叙事的时间表后移</td></tr>
+<tr><td>5</td><td><strong>Heart 单季增速</strong></td><td>Q4（2027-02）</td><td>回落至个位数 → Q3 的 +21.7% 被证为一次性拉动</td></tr>
+<tr><td>6</td><td><strong>做空占比（11 月结算）</strong></td><td>12 月中发布</td><td>若仍 ≥20% → 财报后空头未实质撤退，波动率维持高位</td></tr>
+<tr><td>7</td><td><strong>CMS OPO 分层结果公布</strong></td><td>按 CMS 节奏</td><td>出现 OPO 替换案例 → NOP 采购关系重组风险</td></tr>
+</tbody>
+</table></div>
+<h3>12.3 核心逻辑的证伪清单（对照用户体系：卖出条件里的「核心逻辑被证伪」）</h3>
+<ul style="padding-left:22px;font-size:14px;">
+<li style="margin-bottom:6px;"><strong>当前持仓逻辑依赖的核心命题</strong>（按本报告框架复述，供对照）：OCS 例数维持双位数增长（三、四章证据：+33.8%）；护城河 = 技术 + 监管垄断 + 网络密度（二章）；管线兑现窗口 2028+（五章）。<strong>证伪信号 = 12.2 节 #1/#3/#4/#5 的反向读数。</strong></li>
+<li style="margin-bottom:6px;"><strong>估值极端条件</strong>：前瞻 PE 若升至 60x+ 而共识未同步上修（分母涨快于分子），进入用户体系的「估值极端」观察区——当前 56.2x，距该阈值约 +7% 股价。</li>
+<li style="margin-bottom:0;"><strong>机会成本与仓位</strong>：属于组合层面决策（Beta 2.10、25%+ 做空占比带来的波动特征），本报告不展开。</li>
+</ul>
+<h3>12.4 「10 年后这家公司还在吗」——拆开回答</h3>
+<p style="font-size:14px;">按三段式拆分，不给整句判断：</p>
+<ol style="padding-left:22px;font-size:14px;">
+<li style="margin-bottom:8px;"><strong>有转换成本与监管壁垒的那部分</strong>（OCS 心/肺灌注：FDA 独占 + 外科习惯 + ENHANCE 双臂）：这部分在位者地位类似医疗设备行业的一般规律（审批壁垒 + 医生习惯），被颠覆需要竞品走完完整临床与审批周期（XVIVO 的美国上市就是倒计时的开始）；10 年存续取决于 <strong>XVIVO/SRTA 的获批进度与 TMDX 管线兑现的赛跑</strong>，可跟踪变量 = 12.2 节 #4 与 XVIVO 季报。</li>
+<li style="margin-bottom:8px;"><strong>商品化风险较高的那部分</strong>（NOP 物流/包机：PAD 包机 $9.4M/季、毛利率显著低于产品线）：物流本身无独占壁垒（Emilia-Romagna 是公开 tender），护城河来自规模与网络密度，这部分<strong>技术行业式的颠覆先例不适用、但物流业的先例适用</strong>——规模优势可能被区域竞争者蚕食；可跟踪变量 = 服务毛利率走向（当前 32.2%、同比 +440bps 是正面证据）与后续欧洲 tender 得失。</li>
+<li style="margin-bottom:0;"><strong>依赖政策与分母的那部分</strong>（整个 NOP 模式嵌在 US 器官分配体系里）：CMS-3409-F 与捐献分母收缩（7.2 节）说明政策环境在主动重塑——10 年存续与否取决于 OPO 体系改革后「移植量做大」是否成为共识路径（当前证据是正面的：管理层与 CMS 话术一致），可跟踪变量 = OPTN 年度捐献量与 OPO 分层名单。</li>
+</ol>
+<h3>12.5 总结：本期的一句话定位</h3>
+<div class="quote">
+<strong>Q3 财报把上期报告预置的「裁判问题」全部判给了多头：五项裁决指标全过、Heart 重加速、FCF 转正、管线双获批——基本面证据端，这是过去四个季度里多头最完整的一季。</strong>
+    但价格在同一周内两日 +36.0%，前瞻 PE 从上期口径的 44.6x 升至 56.2x：证据红利与价格红利同时到账，未来 12 个月的回报空间不再由「财报兑现」驱动（已兑现），而由 12.2 节排序的七个变量驱动——其中四个（AR、内控、2027 指引、Heart）的验收时点都是 2027 年 2 月的 Q4 财报 + 10-K。<strong>本报告的读数到此为止；价格里还剩多少乐观定价、悲观情景还剩多少证据，是读者面对 $93.79 时自己要回答的问题。</strong>
+</div>
+</div>
+
+<div class="card" id="data-notes" style="border-left:4px solid var(--border);">
+<h2>数据说明</h2>
+<h3>① 数据口径与方法论</h3>
+<ul style="padding-left:22px;font-size:13.5px;color:var(--text-secondary);">
+<li style="margin-bottom:6px;"><strong>TTM 净利</strong>：FY2025 归母净利 $190,291K − 9M2025 $84,908K + 9M2026 $39,070K = $144,453K（本地 10-K/10-Q 相减，可复核）。含 FY2025 Q4 递延税估值备抵释放 ~$82.8M（一次性）；剔除口径 = $144,453K − $82,822K ≈ $61,631K。PE 两口径（22.5x / 52.9x）分别对应。</li>
+<li style="margin-bottom:6px;"><strong>PEG 双口径</strong>：自算 = 前瞻 PE 56.2x ÷ (FY27E EPS $2.49 ÷ FY26E $1.67 − 1 ≈ 49.1%) ≈ 1.14x……注：若以收入增速（FY27E $901.36M ÷ FY26E $766.72M − 1 = 17.6%）为分母则 ≈ 3.2；SA 口径 0.87 用其自选的多年 EPS 增速。<strong>PEG 的分母选择（EPS 增速 vs 收入增速 vs 多年复合）会让同一价格读出 0.87–3.2 三个数</strong>——本报告正文引用 SA 0.87 时已注明其口径，自算部分三个读数并列，不做取舍。</li>
+<li style="margin-bottom:6px;"><strong>股本与市值</strong>：34.73M 为 SA 报告的基本股本（10-Q 基本加权 34,691,046，口径一致）；摊薄 40,833,175 含可转债 if-converted 与期权。市值/EV 全部用基本股本 × $93.79。</li>
+<li style="margin-bottom:6px;"><strong>净现金口径</strong>：SA 净现金 = 现金 − 总债务（含融资租赁），- $373.94M；10-Q 口径下若只算金融负债（可转债 $460M 本金）则约 -$32M——两口径并列，正文引用 SA 口径时已标注 <span class="src-badge src-2">二手</span>。</li>
+<li style="margin-bottom:6px;"><strong>汇率</strong>：全部为 USD 原币，未折算人民币。</li>
+<li style="margin-bottom:0;"><strong>分部收入</strong>：Q3 分部数字取自 10-Q Note（美国移植业务口径，排除国际与移植无关服务收入 $10.5M）；「美国 OCS 收入」= Liver + Heart + Lung + 其他移植相关（$0.4M）。</li>
+</ul>
+<h3>② 与上期报告（2026-11-04）的变化</h3>
+<ul style="padding-left:22px;font-size:13.5px;color:var(--text-secondary);">
+<li style="margin-bottom:6px;">五项裁决指标从「预置」变「对账」：全过（4.1 节）；四情景概率 20/45/30/5 → 30/45/20/5；</li>
+<li style="margin-bottom:6px;">可转债叙事：距转股价 -28% → -6.1%，风险性质从兑付转向摊薄（4.4 节）；</li>
+<li style="margin-bottom:6px;">TTM FCF：-$9.7M → +$44.7M（转正）；净现金 -$390M → -$373.9M；</li>
+<li style="margin-bottom:6px;">Q2 的「Heart 增速骤降疑问」被 Q3 的 +21.7% 推翻；「10 月下跌是聪明钱定价」之争被财报 + 11/6 +27.9% 的事实回答；</li>
+<li style="margin-bottom:6px;">新事件入档：CMS-3409-F（10/30）、FDA 双 IDE 批准（10 月下旬）、Emilia-Romagna tender、PAD 并表完整披露、Q3 电话会转写存档（16 份披露文件）。</li>
+<li style="margin-bottom:0;">正文结构变化：第四章开头改为对账表；「10 年后还在吗」按三段式改写（12.4 节）。</li>
+</ul>
+<h3>③ 取数更正记录</h3>
+<ul style="padding-left:22px;font-size:13.5px;color:var(--text-secondary);">
+<li style="margin-bottom:6px;"><strong>EDGAR CIK 初次取错</strong>（CIK0001282604 无关）：经 browse-edgar 公司名搜索更正为 <strong>CIK 0001756262</strong>，Q3 10-Q 与 8-K 均已按正确 CIK 下载存档；</li>
+<li style="margin-bottom:6px;"><strong>2025 年 11 月旧研报甄别</strong>：检索命中大量「Canaccord 上调至 $169（自 $147）」「Needham 上调至 $166（自 $148）」及「EPS $0.66」条目——核对日期均为 2025 年 11 月（上一年 Q3 财报后），全部不采信；本期 10.1 节只收录有 2026-11 明确日期的动作；</li>
+<li style="margin-bottom:6px;"><strong>Scorpion Capital 做空报告重推</strong>：11 月初社交媒体重推的「新做空报告」经核对为 2025 年 1 月旧报告，非新事件；</li>
+<li style="margin-bottom:6px;"><strong>SA 统计页字段时点不一致</strong>：PE 23.98x 对应 11-9 盘中价、PS 4.21x 对应 11-6 收盘——同一页面两套时点；处理：全部倍数不引用 SA 读数、按确认收盘自算（初稿按 $88.24，改版后按 $93.79），SA 读数仅作输入引用；</li>
+<li style="margin-bottom:6px;"><strong>11-09 收盘两阶段锚定</strong>：初稿生成于 11-09 盘中（两个行情源 11-09 行不一致，全部锚定 11-06 收盘 $88.24，盘中价标「时效」）；11-09 确认收盘 $93.79 发布后（腾讯行情时间戳 2026-11-09 16:00:01，与 Yahoo/StockAnalysis 日线一致），本期改版全部倍数重锚 11-09 收盘；</li>
+<li style="margin-bottom:0;"><strong>Reddit search.rss 返回 0 条</strong>（限流）：改直接抓 r/TMDX/.rss 成功（25 条），如实标注「财报后无新帖」。</li>
+</ul>
+<h3>④ 已知局限</h3>
+<ul style="padding-left:22px;font-size:13.5px;color:var(--text-secondary);">
+<li style="margin-bottom:6px;"><strong>OCS 移植例数从未披露</strong>：核心指标只能用美国 OCS 收入代理（间接口径），增速读数可能与真实例数增速有出入；管理层本季未给例数表述；</li>
+<li style="margin-bottom:6px;"><strong>估值锚为 11-09 收盘</strong>：初稿曾锚定 11-06，现全部按 11-09 确认收盘 $93.79 自算（已重算完毕）；</li>
+<li style="margin-bottom:6px;"><strong>做空数据为 10 月结算口径</strong>：11/6 大涨后的实际空头仓位未知，11 月结算数据 12 月中发布；</li>
+<li style="margin-bottom:6px;"><strong>可比公司倍数未核验</strong>：XVIVO/UTHR/Artivion 的当前倍数本期未逐一取数，不列跨公司对比表；</li>
+<li style="margin-bottom:6px;"><strong>社区样本极小</strong>：r/TMDX 无财报后讨论，散户情绪无法读出；</li>
+<li style="margin-bottom:0;"><strong>CMS-3409-F 实施细则</strong>：OPO 分层名单与替换机制的操作时间表未在检索到的官方摘要中完整给出，7.1 节仅呈现规则要点，实施节奏待跟踪。</li>
+</ul>
+</div>
+<div class="card" style="background:var(--bg-stripe);">
+<div class="footnote">
+<strong>免责声明：</strong>本报告为个人研究笔记，基于公开信息整理，不构成任何投资建议、买卖推荐或目标价预测。文中所有情景推演与概率为主观框架，不代表对未来的判断。数据虽经多源核对，仍可能存在错误——重大决策前请核对一手披露文件。
+    <br/><br/>
+<strong>数据源清单：</strong>SEC EDGAR（10-Q/8-K/Ex99.1，2026-11-05 提交，本地存档）· Q3 2026 业绩电话会转写（stockanalysis.com/Quartr，本地存档）· StockAnalysis 行情与统计接口（一手接口 + 统计页）· S&amp;P Global / MarketBeat 分析师动作聚合 · CMS.gov 官方发布（CMS-3409-F）· Reddit RSS（r/TMDX）· tvly 搜索（X/新闻）。完整取数过程与更正记录见「数据说明」。
+    <br/><br/>
+<strong>文件信息：</strong>TMDX_TransMedics_2026-11-10_分析报告.html · 生成于 2026-11-10 · 上一期：2026-11-04（财报前夜，预置五项裁决指标）
+  </div>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+TransMedics%EF%BC%88TMDX%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ATransMedics%EF%BC%88TMDX%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-10%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

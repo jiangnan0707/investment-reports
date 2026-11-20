@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><edgarSubmission xmlns="http://www.sec.gov/edgar/ownership" xmlns:com="http://www.sec.gov/edgar/common">
+  <headerData>
+    <submissionType>144</submissionType>
+    <filerInfo>
+      <filer>
+        <filerCredentials>
+          <cik>0001929125</cik>
+          <ccc>XXXXXXXX</ccc>
+        </filerCredentials>
+      </filer>
+      <liveTestFlag>LIVE</liveTestFlag>
+
+
+
+    </filerInfo>
+  </headerData>
+  <formData>
+    <issuerInfo>
+      <issuerCik>0001876042</issuerCik>
+      <issuerName>Circle Internet Group, Inc.</issuerName>
+      <secFileNumber>001-42671</secFileNumber>
+      <issuerAddress>
+        <com:street1>ONE WORLD TRADE CENTER</com:street1>
+        <com:city>NEW YORK</com:city>
+        <com:stateOrCountry>NY</com:stateOrCountry>
+        <com:zipCode>10007</com:zipCode>
+      </issuerAddress>
+      <issuerContactPhone>(332) 334-0660</issuerContactPhone>
+      <nameOfPersonForWhoseAccountTheSecuritiesAreToBeSold>Ostling Danita K</nameOfPersonForWhoseAccountTheSecuritiesAreToBeSold>
+      <relationshipsToIssuer>
+        <relationshipToIssuer>Director</relationshipToIssuer>
+      </relationshipsToIssuer>
+    </issuerInfo>
+    <securitiesInformation>
+      <securitiesClassTitle>Class A</securitiesClassTitle>
+      <brokerOrMarketmakerDetails>
+        <name>Fidelity Brokerage Services LLC</name>
+        <address>
+          <com:street1>900 Salem Street</com:street1>
+          <com:city>Smithfield</com:city>
+          <com:stateOrCountry>RI</com:stateOrCountry>
+          <com:zipCode>02917</com:zipCode>
+        </address>
+      </brokerOrMarketmakerDetails>
+      <noOfUnitsSold>1500</noOfUnitsSold>
+      <aggregateMarketValue>97113.80</aggregateMarketValue>
+      <noOfUnitsOutstanding>237492044</noOfUnitsOutstanding>
+      <approxSaleDate>11/12/2026</approxSaleDate>
+      <securitiesExchangeName>NYSE</securitiesExchangeName>
+    </securitiesInformation>
+    <securitiesToBeSold>
+      <securitiesClassTitle>Class A</securitiesClassTitle>
+      <acquiredDate>01/01/2026</acquiredDate>
+      <natureOfAcquisitionTransaction>Restricted Stock Vesting</natureOfAcquisitionTransaction>
+      <nameOfPersonfromWhomAcquired>Issuer</nameOfPersonfromWhomAcquired>
+      <isGiftTransaction>N</isGiftTransaction>
+      <amountOfSecuritiesAcquired>1500</amountOfSecuritiesAcquired>
+      <paymentDate>01/01/2026</paymentDate>
+      <natureOfPayment>Compensation</natureOfPayment>
+    </securitiesToBeSold>
+    <nothingToReportFlagOnSecuritiesSoldInPast3Months>Y</nothingToReportFlagOnSecuritiesSoldInPast3Months>
+    <noticeSignature>
+      <noticeDate>11/12/2026</noticeDate>
+      <signature>/s/ Joshua Schmitt, as a duly authorized representative of Fidelity Brokerage Services LLC, as attorney-in-fact for Danita Ostling.</signature>
+    </noticeSignature>
+  </formData>
+</edgarSubmission>

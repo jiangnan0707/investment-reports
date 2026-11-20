@@ -1,0 +1,62 @@
+[
+  {
+    "file": "00700_2026年_三季度业绩公布_2026-11-18.pdf",
+    "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1118/2026111800449_c.pdf",
+    "sha256": "a66964468491e2e518c7dbd5a4313c78f1cbe8975eabf2141512b5e28f3bfbcf",
+    "bytes": 962682
+  },
+  {
+    "file": "00700_2026年_三季度业绩公布_英文_2026-11-18.pdf",
+    "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1118/2026111800448.pdf",
+    "sha256": "cc70d57e4a3677f0ac9bb28085b8a9f1c2c83e49cbdae3a0d916cd82624d9614",
+    "bytes": 748377
+  },
+  {
+    "file": "00700_2026年_三季度业绩新闻稿_2026-11-18.pdf",
+    "source": "https://www.tencent.com/wp-content/uploads/2026/11/腾讯公布二零二六年第三季业绩.pdf",
+    "sha256": "53d988be584f52d3ec6ef949e302b3a7fa98d3e4f36d0bcdfbbb4e7e981c7a5b",
+    "bytes": 515564
+  },
+  {
+    "file": "00700_2026年_三季度业绩演示_2026-11-18.pdf",
+    "source": "https://static.www.tencent.com/website-2026-upload/Tencent-3Q26-earnings-presentation-1dfb9c.pdf",
+    "sha256": "eff386ce1cdd214287c0318a78a7e967978b918d52e29139725f7b0aeb633df4",
+    "bytes": 1684392
+  },
+  {
+    "file": "00700_2026年_三季度业绩电话会记录_2026-11-18.txt",
+    "source": "https://stockanalysis.com/quote/hkg/0700/transcripts/731168-q3-2026/",
+    "sha256": "ddc93ad36cbf40cb30233d54fad6d4473648a5be899ee7ae565b1c9e00ceffbc",
+    "bytes": 61404
+  },
+  {
+    "file": "00700_2026年10月_股份变动月报表_2026-11-05.pdf",
+    "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1105/2026110501131_c.pdf",
+    "sha256": "363e4e3388b53c5f7a506e972a65e4dd0a4cb5240535df37f43c2be60630d4de",
+    "bytes": 135918
+  },
+  {
+    "file": "美国BIS_远程访问先进半导体规则_预发布_2026-11-16.pdf",
+    "source": "https://public-inspection.federalregister.gov/2026-23529.pdf",
+    "sha256": "348ecda38fde4610caa348bda6a16688d95549f1dabac37d05f3c3ca91d29a14",
+    "bytes": 527146
+  },
+  {
+    "file": "美国1260H名单_2026-06-10.pdf",
+    "source": "https://www.govinfo.gov/content/pkg/FR-2026-06-10/pdf/2026-11571.pdf",
+    "sha256": "db7d0b01beb7c354844822b1cccadb35ee825a9782652859c787e539637cd113",
+    "bytes": 222342
+  },
+  {
+    "file": "00700_2022年_年度业绩新闻稿_2023-03-22.pdf",
+    "source": "https://static.www.tencent.com/uploads/2023/03/22/3b5431187fdc8a053d9fee3a4c031aa6.pdf",
+    "sha256": "d62e8eedcc14c29310a34d846fc2a99af23dc06c48c8cafeaa4fb4dcf24d0a70",
+    "bytes": 510617
+  },
+  {
+    "file": "00700_2024年_年度业绩新闻稿_2025-03-19.pdf",
+    "source": "https://static.www.tencent.com/uploads/2025/03/19/81cb1f36bec218d27d6e0b24eec012b6.pdf",
+    "sha256": "257bc5cc7450f36bf6f48d406efda4186ea8d314bd1234ec458e60969436227f",
+    "bytes": 581468
+  }
+]

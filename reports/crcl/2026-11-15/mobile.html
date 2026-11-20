@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>Circle 2026-11-15 · 移动版 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .dual-chart { display: flex; gap: 12px; flex-wrap: wrap; }
+  .dual-chart svg { flex: 1 1 300px; min-width: 280px; background: transparent; }
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; min-width: 0; overflow: hidden; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+  }
+
+section.card { display:block; } .chart svg text {font-family:inherit;} .bar-fill {height:100%;border-radius:4px;} .bull-box,.bear-box {padding:18px;border-radius:10px;background:#f3f8f4;} .bear-box{background:#fff5f3;} a{overflow-wrap:anywhere;} .chart{overflow:hidden;} .caveat-inline{font-size:12px;color:var(--text-muted);} @media(max-width:600px){.bar-label{flex-basis:72px}.bar-value{flex-basis:88px;font-size:10px}.sidebar-group a{font-size:12px}}
+
+.main-content{overflow-wrap:anywhere}.table-wrap{overflow-x:auto}.table-wrap table{min-width:540px}.source-note{font-size:12.5px;color:var(--text-secondary);margin-top:14px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.bull-box,.bear-box{padding:18px;border-radius:10px}.bull-box{background:#f2f8f3}.bear-box{background:#fff4f3}.data-note h4{font-size:16px;color:#2d6a4f}.bar-fill{min-height:14px}svg text{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}.sidebar a{overflow-wrap:anywhere}details pre{white-space:pre-wrap;overflow-wrap:anywhere} @media(max-width:760px){.two-col{grid-template-columns:1fr}.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.summary-item .value{font-size:21px}.chart{padding:15px}}
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research compact"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/crcl/index.html">披露资料</a><a href="index.html">PC 完整版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+Circle%EF%BC%88CRCL%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ACircle%EF%BC%88CRCL%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-15%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">CRCL <span>·</span> 2026-11-15 <span>·</span> 移动精简版</div><h1>Circle</h1></header><main class="mobile-report"><section aria-labelledby="key-data"><h2 id="key-data">关键数字</h2><div class="key-numbers"><div><span>11/13 常规收盘</span><strong>$62.20</strong></div><div><span>股权市值 · 亿美元</span><strong>$159.58</strong></div><div><span>官网 USDC · 11/12</span><strong>$67.92B</strong></div><div><span>DefiLlama USDC · 11/15</span><strong>$69.29B</strong></div><div><span>FY26E 调整后PE</span><strong>51.83x</strong></div><div><span>Q3 扣ARC的RLDC利润率</span><strong>39.7%</strong></div></div></section><section><h2>核心图表</h2><figure class="mobile-chart"><figcaption>总收入及储备收益</figcaption><div class="measure-chart"><div class="measure-row"><span>Q3 2026</span><div class="measure-track " aria-hidden="true"><i class="" style="left:0.00%;width:100.00%"></i></div><strong>864.888</strong></div><div class="measure-row"><span>Q3 2025</span><div class="measure-track " aria-hidden="true"><i class="" style="left:0.00%;width:85.53%"></i></div><strong>739.759</strong></div></div></figure><figure class="mobile-chart"><figcaption>CRCL收盘价：月末观测及近期交易日（美元）</figcaption><div class="chart"><div class="chart-title">CRCL收盘价：月末观测及近期交易日（美元）</div><svg aria-label="CRCL收盘价：月末观测及近期交易日（美元）" role="img" style="width:100%;height:auto" viewbox="0 0 720 280"><line stroke="#d9e5db" x1="58" x2="646" y1="220.00" y2="220.00"></line><text fill="#627568" font-size="12" text-anchor="end" x="48" y="224.00">0</text><line stroke="#d9e5db" x1="58" x2="646" y1="176.25" y2="176.25"></line><text fill="#627568" font-size="12" text-anchor="end" x="48" y="180.25">40</text><line stroke="#d9e5db" x1="58" x2="646" y1="132.50" y2="132.50"></line><text fill="#627568" font-size="12" text-anchor="end" x="48" y="136.50">80</text><line stroke="#d9e5db" x1="58" x2="646" y1="88.75" y2="88.75"></line><text fill="#627568" font-size="12" text-anchor="end" x="48" y="92.75">120</text><line stroke="#d9e5db" x1="58" x2="646" y1="45.00" y2="45.00"></line><text fill="#627568" font-size="12" text-anchor="end" x="48" y="49.00">160</text><polyline fill="none" points="58.00,132.58 113.44,133.27 163.84,150.08 210.88,128.74 264.64,115.65 315.04,120.60 363.76,96.41 417.52,151.50 469.60,151.52 521.68,115.49 572.08,130.13 622.48,140.66 627.52,141.16 629.20,137.73 630.88,136.74 632.56,144.01 634.24,145.76 639.28,146.11 640.96,148.93 642.64,146.59 644.32,150.20 646.00,151.97" stroke="#2d6a4f" stroke-width="2.6"></polyline><circle cx="58.00" cy="132.58" fill="#2d6a4f" r="2.2"><title>2025-11-28: 79.930</title></circle><text fill="#173626" font-size="13" text-anchor="start" x="58.00" y="120.58">79.93</text><circle cx="113.44" cy="133.27" fill="#2d6a4f" r="2.2"><title>2025-12-31: 79.300</title></circle><circle cx="163.84" cy="150.08" fill="#2d6a4f" r="2.2"><title>2026-01-30: 63.930</title></circle><circle cx="210.88" cy="128.74" fill="#2d6a4f" r="2.2"><title>2026-02-27: 83.440</title></circle><circle cx="264.64" cy="115.65" fill="#2d6a4f" r="2.2"><title>2026-03-31: 95.410</title></circle><circle cx="315.04" cy="120.60" fill="#2d6a4f" r="2.2"><title>2026-04-30: 90.880</title></circle><circle cx="363.76" cy="96.41" fill="#2d6a4f" r="2.2"><title>2026-05-29: 113.000</title></circle><circle cx="417.52" cy="151.50" fill="#2d6a4f" r="2.2"><title>2026-06-30: 62.630</title></circle><circle cx="469.60" cy="151.52" fill="#2d6a4f" r="2.2"><title>2026-07-31: 62.610</title></circle><circle cx="521.68" cy="115.49" fill="#2d6a4f" r="2.2"><title>2026-08-31: 95.550</title></circle><circle cx="572.08" cy="130.13" fill="#2d6a4f" r="2.2"><title>2026-09-30: 82.170</title></circle><circle cx="622.48" cy="140.66" fill="#2d6a4f" r="2.2"><title>2026-10-30: 72.540</title></circle><circle cx="627.52" cy="141.16" fill="#2d6a4f" r="2.2"><title>2026-11-02: 72.080</title></circle><circle cx="629.20" cy="137.73" fill="#2d6a4f" r="2.2"><title>2026-11-03: 75.220</title></circle><circle cx="630.88" cy="136.74" fill="#2d6a4f" r="2.2"><title>2026-11-04: 76.120</title></circle><circle cx="632.56" cy="144.01" fill="#2d6a4f" r="2.2"><title>2026-11-05: 69.480</title></circle><circle cx="634.24" cy="145.76" fill="#2d6a4f" r="2.2"><title>2026-11-06: 67.880</title></circle><circle cx="639.28" cy="146.11" fill="#2d6a4f" r="2.2"><title>2026-11-09: 67.560</title></circle><circle cx="640.96" cy="148.93" fill="#2d6a4f" r="2.2"><title>2026-11-10: 64.980</title></circle><circle cx="642.64" cy="146.59" fill="#2d6a4f" r="2.2"><title>2026-11-11: 67.120</title></circle><circle cx="644.32" cy="150.20" fill="#2d6a4f" r="2.2"><title>2026-11-12: 63.820</title></circle><circle cx="646.00" cy="151.97" fill="#2d6a4f" r="2.2"><title>2026-11-13: 62.200</title></circle><text fill="#173626" font-size="13" text-anchor="end" x="646.00" y="139.97">62.20</text><text fill="#627568" font-size="12" text-anchor="middle" x="58.00" y="254">25-11-28</text><text fill="#627568" font-size="12" text-anchor="middle" x="315.04" y="254">26-04-30</text><text fill="#627568" font-size="12" text-anchor="middle" x="572.08" y="254">26-09-30</text><text fill="#627568" font-size="12" text-anchor="middle" x="646.00" y="254">26-11-13</text></svg></div></figure></section><section><h2>研究速读</h2><article><h3>核心判断</h3><p>长期逻辑需要四项证据：合规与赎回信任可维持；USDC在新用途中的采用形成可留存价值；渠道投入的回报超过其持续成本；现金与稀释后的每股经济性改善。若这些条件持续偏离，长期假设需要修订。价格下降本身既不证明逻辑失效，也不替代这些证据。</p></article><article><h3>经营变化</h3><p>基本与稀释EPS不能混用。Q3总收入同比 +16.91%，营业利润 +157.14%；但剔除ARC预售确认收入后，收入余量为 $683.088M，同比 −7.66%、环比 −2.60%。该拆分说明本季增量主要来自预售确认，不能把合并增长直接当作储备与支付业务共同加速。 一手 推算</p></article><article><h3>估值与风险</h3><p>林奇框架： 卖方FY26至FY27调整后EPS预测增长约18.3%；若仅将FY26预测PE除以这一增长率，PEG约2.83。两段数字均受预测与调整口径影响，不能据此给出稳定的价值结论。更直接的核验是未来净收入增长能否覆盖渠道成本与费用。</p></article></section><section><h2>资料与出处</h2><ul class="source-list"><li><a href="../../../sources/crcl/SEC_Filings/CRCL_2026-Q3_10-Q_2026-11-04.htm">2026 Q3 10-Q</a></li><li><a href="../../../sources/crcl/SEC_Filings/CRCL_2026-Q2_10-Q_2026-08-05.htm">2026 Q2 10-Q</a></li><li><a href="../../../sources/crcl/SEC_Filings/CRCL_FY2025_10-K_2026-03-09.htm">FY2025 10-K</a></li><li><a href="../../../sources/crcl/SEC_Filings/CRCL_Q3-2026_%E4%B8%9A%E7%BB%A9%E7%94%B5%E8%AF%9D%E4%BC%9A%E8%AE%B0%E5%BD%95_2026-11-04_%E5%AE%98%E6%96%B9%E4%BF%AE%E8%AE%A2%E7%89%88.html">11/4 官方修订版电话会</a></li><li><a href="https://www.circle.com/transparency">Circle 储备透明页</a></li><li><a href="https://stablecoins.llama.fi/stablecoin/2">DefiLlama USDC 原始序列</a></li><li><a href="https://stockanalysis.com/stocks/crcl/statistics/">StockAnalysis 统计页</a></li><li><a href="https://polygon.technology/blog/sofiusd-lands-on-polygon">11/12 Polygon 官方公告</a></li></ul><a href="../../../sources/crcl/index.html">披露资料</a></section><a class="read-complete" href="index.html">查看完整报告 <span aria-hidden="true">→</span></a></main><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+Circle%EF%BC%88CRCL%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ACircle%EF%BC%88CRCL%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-15%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

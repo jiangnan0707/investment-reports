@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>曦智科技 2026-10-04 · 投资研究档案</title>
+<style>
+
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-1 { background: #d4edda; color: #1e5c2e; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/01879/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%9B%A6%E6%99%BA%E7%A7%91%E6%8A%80%EF%BC%8801879%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%9B%A6%E6%99%BA%E7%A7%91%E6%8A%80%EF%BC%8801879%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">01879 <span>·</span> 2026-10-04 <span>·</span> PC 完整版</div><h1>曦智科技</h1><p>数据截至 2026-10-02 收盘（10-03/04 周末休市）· 港股 HKD 计价 · 财报以 RMB 记账 · 上市 2026-04-28</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式 — 光电混合算力怎么赚钱</a></li><li><a href="#core-metric">三、核心指标 — 收入能否跨过 18C 的「商业化门槛」</a></li><li><a href="#financials">四、最新财务数据 (2026H1)</a></li><li><a href="#products">五、产品与技术路线</a></li><li><a href="#competition">六、竞争格局与赛道</a></li><li><a href="#geopolitics">七、地缘与政策风险</a></li><li><a href="#valuation">八、估值分析</a></li><li><a href="#bull-bear">九、多空核心分歧</a></li><li><a href="#analysts">十、券商分析师全景 二手</a></li><li><a href="#community">十一、社区讨论：雪球 / 股吧 三方</a></li><li><a href="#conclusion">十二、综合判断框架</a></li><li><a href="#datanotes">◉ 数据说明</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+    ⚠️ <strong>时效提示：</strong>本报告数据截至 <strong>2026-10-02 收盘</strong>（10-03、10-04 为周末，港股休市；10-01 为国庆休市）。财务数据取自 <strong>2026 中期报告</strong>（2026-09-24 刊发，未经审核）与 <strong>招股章程</strong>（2026-04-20），两份原文均已下载至本地。
+    <strong>投资前必读的定性前提：</strong>本公司是上市规则第 18C 章下的<strong>「未商业化」特专科技公司</strong>（股份简称带 <strong>-P</strong>），中期报告原文两处明载「本公司為未商業化公司，其為一家尚未滿足上市規則第 18C.03(4) 條所載收入要求的特專科技公司」，并警示「我們最終可能無法實現……收入要求」。这意味着：<strong>它尚无盈利、收入规模微小、适用与成熟公司完全不同的估值框架</strong>；若 2027 年前后未能跨过收入门槛，18C 规则下有相应的身份与流动性后果。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> HKEXnews 披露文件（已下载至本地） |
+    <span class="src-badge src-2">二手</span> 聚合平台/券商研报/新闻通稿 |
+    <span class="src-badge src-3">三方</span> 散户/社交媒体 |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>标的/01879-曦智科技/Filings/</code> —<br/>
+  · 01879_2026年_中期报告_2026-09-24.pdf · 01879_2026中期_业绩公告_2026-08-21.pdf · 01879_2026IPO_招股章程_2026-04-20.pdf（500 页）<br/>
+  · 01879_2026IPO_最终发售价及配发结果_2026-04-27.pdf · 01879_董事会会议结果_2026-06-04.pdf · 01879_澄清公告_2026-06-04/06-05.pdf · 01879_悉数行使超额配股权_2026-05-11.pdf · 01879_稳定价格期结束_2026-05-25.pdf</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>公司全称</td><td>上海曦智科技股份有限公司（Shanghai Xizhi Technology Co., Ltd.，英文品牌 Lightelligence），2017 年由 MIT 物理学者沈亦晨创立，<strong>中国境内注册</strong> <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>上市信息</td><td>2026-04-28 以 <strong>18C 特专科技规则</strong>在港交所主板上市，发售价 <strong>183.20 HKD</strong>（区间上限），全球发售 1,379.52 万股 H 股，毛募资 25.27 亿港元、净额 23.77 亿港元 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>股份地位</td><td>以 18C 章<strong>「未商业化公司」</strong>身份上市，股份简称带 <strong>-P</strong> 后缀；H 股面值人民币 1.00 元 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>指数/通道</td><td>恒生综合指数成份股，<strong>沪港通/深港通（港股通）标的</strong>，均自 <strong>2026-09-07</strong> 起生效 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>股权结构</td><td>总股本 <strong>94,037,377 股</strong>（H 股 76,850,576 + 内资股 17,186,801）；创始人沈亦晨直接持股 7.57%、通过员工激励平台合计控制 <strong>34.76% 投票权</strong>，为单一最大股东 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>主业</td><td>光电混合算力：三条核心芯片技术 <strong>oNOC</strong>（片上光网络）/ <strong>oNET</strong>（片间光网络）/ <strong>oMAC</strong>（光子矩阵计算），据此做<strong>光互连</strong>与<strong>光计算</strong>两条产品线 <span class="src-badge src-s">一手</span></td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">280.00</div><div class="label">收盘 HKD<br/>（2026-10-02，−0.64%）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">263.3亿</div><div class="label">总市值 HKD<br/>≈ 225 亿 RMB <span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">7,978万</div><div class="label">2026H1 收入 RMB<br/>（+284%）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">−1.47亿</div><div class="label">2026H1 经调整净亏损 RMB<br/>（报表亏损 32.6 亿，含非现金）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">28.59亿</div><div class="label">现金结余 RMB<br/>（2026-06-30）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">228.4–1050</div><div class="label">上市以来区间 HKD<br/>（现价距高点 −73%）<span class="src-badge src-s">一手</span></div></div>
+</div>
+<div class="quote">
+<strong>大白话一句话：</strong>如果说英伟达卖的是「算力的发动机」，曦智想卖的是「算力的神经系统和另一种运算方式」——它用光来做两件事：<strong>让 GPU 之间用光而不是铜线互连</strong>（光互连，占了它今天 79% 的收入），以及<strong>用光本身做矩阵运算</strong>（光计算，还在极早期）。它不是芯片制造厂，是设计公司（Fabless），把芯片交给代工厂生产。
+    它 2025 年全年收入只有 <strong>1.06 亿元人民币</strong>——小到还够不上港交所 18C 规则里「已商业化」的门槛，所以股份简称后面挂着一个 <strong>-P</strong>。
+  </div>
+<h3>1.1 上市半年，股价走了一条教科书式的「新股情绪曲线」</h3>
+<p>发行价 183.2 港元，公开认购超购约 <strong>5,785 倍</strong>，首日开盘 880、收盘 <strong>886 港元（+383.6%）</strong>。<strong>两个月内涨到 1050 港元的高点，随后三个月跌到 233.2，现价 280</strong>——较盘中高点回撤 73%，但仍比发行价高 53%。招股书自己就在显著位置发了警告：「鑒於股權高度集中於數目不多之股東，即使少量 H 股股份成交，H 股股份價格亦可能大幅波動」。</p>
+<div class="chart">
+<div class="chart-title">上市以来股价（HKD）· 2026-04-28 → 2026-10-02 <small>按真实交易日比例绘制 · 109 个交易日 · 数据源：腾讯财经行情 <span class="src-badge src-s">一手</span></small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="34" x2="606" y1="206" y2="206"></line>
+<line x1="34" x2="606" y1="163" y2="163"></line>
+<line x1="34" x2="606" y1="120" y2="120"></line>
+<line x1="34" x2="606" y1="77" y2="77"></line>
+<line x1="34" x2="606" y1="34" y2="34"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10.5" text-anchor="end">
+<text x="28" y="210">233</text><text x="28" y="167">450</text><text x="28" y="124">670</text>
+<text x="28" y="81">890</text><text x="28" y="38">1050</text>
+</g>
+<polyline fill="none" opacity="0.75" points="34,196.4 606,196.4" stroke="var(--text-muted)" stroke-dasharray="4 3" stroke-width="1"></polyline>
+<text fill="var(--text-muted)" font-size="10" text-anchor="end" x="600" y="212">发行价 183.2 →</text>
+<polyline fill="none" points="34.0,46.8 37.6,63.1 41.3,64.4 55.9,34.1 59.5,34.0 63.1,46.2 66.8,45.2 70.4,52.9 81.4,49.7 85.0,60.6 88.6,50.7 92.3,63.6 95.9,81.7 106.9,87.0 110.5,102.5 114.2,99.0 117.8,128.6 121.4,122.6 136.0,106.2 139.7,96.4 143.3,105.0 146.9,112.6 157.9,117.6 161.5,115.1 165.2,90.2 168.8,124.0 172.4,128.5 183.4,132.2 187.0,147.0 190.7,150.3 194.3,145.9 197.9,148.5 208.9,130.7 212.5,141.7 216.2,146.7 219.8,146.4 234.4,137.2 238.0,147.9 241.7,160.1 245.3,163.6 249.0,167.8 259.9,166.8 263.5,160.4 270.8,176.3 274.5,177.1 285.4,183.6 289.0,186.1 292.7,177.7 296.3,177.3 300.0,179.5 310.9,189.0 314.5,189.5 318.2,185.4 321.8,181.2 325.5,197.0 336.4,194.8 340.0,185.1 343.7,185.6 347.3,183.4 351.0,187.3 361.9,188.6 365.5,197.9 369.2,201.9 372.8,206.0 376.5,199.8 387.4,196.3 391.0,194.2 394.7,189.6 398.3,188.7 402.0,184.5 412.9,181.4 416.5,183.9 420.2,178.7 423.8,176.2 427.5,178.7 438.4,177.7 442.1,183.0 445.7,191.2 449.3,189.0 453.0,182.1 463.9,187.5 467.6,187.8 471.2,184.6 474.8,183.4 478.5,186.6 489.4,186.4 493.1,180.1 496.7,181.6 500.3,172.1 504.0,170.6 514.9,180.7 518.6,186.9 522.2,172.3 525.8,178.3 529.5,186.7 540.4,195.3 544.1,196.4 547.7,197.4 551.4,198.6 555.0,184.1 565.9,185.8 569.6,184.4 573.2,186.9 576.9,186.8 580.5,189.9 591.4,194.8 595.1,195.1 598.7,194.1 606.0,194.6" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></polyline>
+<circle cx="34.0" cy="46.8" fill="var(--accent)" r="3.6"></circle>
+<circle cx="63.1" cy="34.0" fill="var(--green)" r="3.6"></circle>
+<circle cx="372.8" cy="206.0" fill="var(--red)" r="3.6"></circle>
+<circle cx="606.0" cy="194.6" fill="var(--accent)" r="3.6"></circle>
+<g font-size="10.5" font-weight="700">
+<text fill="var(--accent)" x="42" y="40">首日收 886（+384%）</text>
+<text fill="var(--green)" x="72" y="28">5/6 盘中顶 1050</text>
+<text fill="var(--red)" x="300" y="222">7/30 收 233.2（较高点 −78%）</text>
+<text fill="var(--accent)" x="536" y="184">现 280.00</text>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="middle">
+<text x="34" y="234">4/28</text><text x="200" y="234">6月</text><text x="380" y="234">7月底</text><text x="530" y="234">9月</text><text x="606" y="234">10/2</text>
+</g>
+</svg>
+<span class="caveat-inline">三件事一起看：<strong>① 涨幅</strong>首日 +384%；<strong>② 回撤</strong>从 1050 到 233.2，−78%，发生在不到三个月内；<strong>③ 现价仍在发行价之上 53%</strong>。<span class="src-badge src-s">一手</span> 腾讯行情；关键节点日期 <span class="src-badge src-s">一手</span> 逐日 K 线</span>
+</div>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式 — 光电混合算力怎么赚钱</h2>
+<h3>2.1 两条收入线：一条已放量，一条还在验证</h3>
+<p>收入分两块：<strong>光互连</strong>（用光替铜做 GPU 之间的高速连接，含 Scale-up / Scale-out 产品与智能收发器）与<strong>光计算</strong>（直接用光做矩阵运算的加速卡）。2026 上半年两条线同时放量，但量级差 3 倍。</p>
+<div class="chart">
+<div class="chart-title">分部收入对比：2025H1 → 2026H1 <small>金额口径（人民币万元）· 两柱同一坐标轴 · 楔形＝该分部的绝对增量 <span class="src-badge src-s">一手</span> 2026 中期报告</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 300">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="70" x2="570" y1="260" y2="260"></line>
+<line x1="70" x2="570" y1="200" y2="200"></line>
+<line x1="70" x2="570" y1="140" y2="140"></line>
+<line x1="70" x2="570" y1="80" y2="80"></line>
+<line x1="70" x2="570" y1="20" y2="20"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10.5" text-anchor="end">
+<text x="62" y="264">0</text><text x="62" y="204">2,000</text><text x="62" y="144">4,000</text>
+<text x="62" y="84">6,000</text><text x="62" y="24">8,000</text>
+</g>
+<rect fill="var(--amber)" height="13.9" width="100" x="150" y="246.1"></rect>
+<rect fill="var(--accent)" height="48.6" width="100" x="150" y="197.5"></rect>
+<rect fill="var(--amber)" height="57.4" width="100" x="390" y="202.6"></rect>
+<rect fill="var(--accent)" height="182.6" width="100" x="390" y="20.0"></rect>
+<g opacity="0.9" stroke="var(--text-muted)" stroke-dasharray="3 3" stroke-width="1">
+<line x1="250" x2="390" y1="197.5" y2="20.0"></line>
+<line x1="250" x2="390" y1="246.1" y2="202.6"></line>
+</g>
+<g fill="#fff" font-size="12" font-weight="700" text-anchor="middle">
+<text x="200" y="228">1,617</text>
+<text font-size="10.5" x="200" y="256">462</text>
+<text x="440" y="116">6,070</text>
+<text x="440" y="236">1,908</text>
+</g>
+<g fill="var(--accent)" font-size="12" font-weight="700" text-anchor="middle">
+<text x="320" y="105">+275%</text>
+<text x="320" y="227">+313%</text>
+</g>
+<g fill="var(--text-secondary)" font-size="12" font-weight="700" text-anchor="middle">
+<text x="200" y="278">2025H1</text><text x="440" y="278">2026H1</text>
+<text fill="var(--text-muted)" font-size="10.5" font-weight="450" x="200" y="292">合计 2,079 万元</text>
+<text fill="var(--text-muted)" font-size="10.5" font-weight="450" x="440" y="292">合计 7,978 万元</text>
+</g>
+</svg>
+<div class="chart-legend"><i class="c-main"></i>光互连 <i class="c-warn"></i>光计算</div>
+<span class="caveat-inline"><strong>差异在增速，不在方向</strong>：两块都在高速增长（光互连 +275%、光计算 +313%），但<strong>结构基本没变</strong>——光互连始终占 76–79%。真正要问的不是「谁涨得快」，而是<strong>「光互连的大单能不能续、光计算能不能从 20% 走到 50%」</strong>。<span class="src-badge src-s">一手</span></span>
+</div>
+<h3>2.2 技术底座：三条芯片技术，两个产品方向</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">技术</th><th style="width:26%">是什么</th><th>解决什么问题</th></tr></thead>
+<tbody>
+<tr><td><strong>oNOC</strong><br/>片上光网络</td><td>在单颗芯片内部用光做数据通路</td><td>芯片内多核之间的带宽与功耗瓶颈</td></tr>
+<tr><td><strong>oNET</strong><br/>片间光网络</td><td>在芯片与芯片、服务器与服务器之间用光互连</td><td>Scale-up（超节点内 GPU 互联）与 Scale-out（集群互联）的距离与功耗上限</td></tr>
+<tr><td><strong>oMAC</strong><br/>光子矩阵计算</td><td>用光的物理特性直接完成矩阵乘加</td><td>AI 里最耗算力的矩阵运算，理论上可绕开电子器件的能效墙</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">一句话区分两条线：<strong>光互连是「把现有的电子计算连得更快」，光计算是「换一种方式算」</strong>。前者今天就能卖钱、客户是数据中心与 GPU 厂商；后者是长期命题，当前只在高精度评估、边缘推理等窄场景落地。<span class="src-badge src-s">一手</span> 招股章程</p>
+<h3>2.3 谁在买：客户很少，但单子很大</h3>
+<p>客户总数从 2023 年的 12 家增至 2025 年的 <strong>44 家</strong>，但收入高度依赖少数几家：<strong>2025 年前五大客户占收入 78.9%，最大一家占 40.6%</strong>（招股书描述为「一家总部位于北京的网络和云计算公司」）。2025 年第五大客户（客户 G）的毛利率仅 23.4%，同比下降 13 个百分点——<strong>大客户压价是实打实的</strong>。</p>
+<div class="chart">
+<div class="chart-title">2025 年前五大客户收入占比 <small>合计 78.9% · 单位：人民币万元 <span class="src-badge src-s">一手</span> 招股章程</small></div>
+<div class="bar-row"><div class="bar-label"><strong>客户 J</strong>（网络与云计算）</div><div class="bar-track"><div class="bar-fill c-main" style="width:100%"></div></div><div class="bar-value">4,318 · 40.6%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>客户 K</strong>（光互连+计算）</div><div class="bar-track"><div class="bar-fill c-main" style="width:38.8%"></div></div><div class="bar-value">1,677 · 15.8%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>客户 L</strong>（光计算）</div><div class="bar-track"><div class="bar-fill c-main" style="width:27.5%"></div></div><div class="bar-value">1,186 · 11.1%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>客户 G</strong>（光互连）</div><div class="bar-track"><div class="bar-fill c-main" style="width:16.2%"></div></div><div class="bar-value">699 · 6.6%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>客户 M</strong>（光互连）</div><div class="bar-track"><div class="bar-fill c-main" style="width:11.8%"></div></div><div class="bar-value">511 · 4.8%</div></div>
+<span class="caveat-inline">另一端有正面证据：2025 年第四季度公司拿到两份 Scale-up OCS 大单——某主要通讯设备及 ICT 基础设施供应商约 <strong>8,200 个模块</strong>、某 AI 计算芯片开发商约 <strong>2,000 个模块</strong>，合计约 <strong>人民币 8,730 万元</strong>，其中 <strong>56% 已在 2025 年确认收入，余下 44% 预计 2026 年确认</strong>；另与多家知名客户签有框架协议与意向书，其中至少 5 家为上市公司。<span class="src-badge src-s">一手</span></span>
+</div>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — 收入能否跨过 18C 的「商业化门槛」</h2>
+<h3>3.1 为什么这个指标是「全部」</h3>
+<p>大多数公司看增长，这家公司要先看<strong>「够不够格」</strong>。因为它头上挂着一个别的公司没有的开关：港交所 18C 规则把特专科技公司分成「已商业化」与「未商业化」两类，<strong>未商业化公司必须披露警示、面临更严的投资者适当性与更长的锁定期</strong>。而公司自己在中期报告里给出了时间表——</p>
+<div class="quote">
+<strong>公司原话：</strong>「基於我們於報告期間的業務發展及市場機遇……<strong>我們預期 2027 年的收入將達致已商業化公司（定義見上市規則第 18C 章）的收入門檻，並預計我們將能夠於 2027 年符合已商業化公司的資格</strong>。」<span class="src-badge src-s">一手</span> 2026 中期报告
+  </div>
+<p>这句话是可以被证伪的，这也是它值得当作核心指标的原因：<strong>门槛是硬数字——经审计的最近一个会计年度收入不低于 2.5 亿港元（按本机汇率约合 2.14 亿元人民币）</strong>。2025 年实际收入 1.064 亿元，意味着需要在两年内翻一倍（年化约 42%）。放在 2026H1 已实现 +284% 的背景下，这个目标<strong>不算激进</strong>；但如果增速失速，公司就要公开承认「未能实现收入要求」——这是招股书里已经写明的风险。</p>
+<div class="chart">
+<div class="chart-title">收入轨迹与 18C 商业化门槛 <small>人民币千元 · 2023–2025 为经审计年度数，TTM 为截至 2026-06-30 的滚动十二个月 · 虚线为门槛 213,600 千元（2.5 亿港元）<span class="src-badge src-s">一手</span></small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="34" x2="606" y1="206" y2="206"></line>
+<line x1="34" x2="606" y1="163" y2="163"></line>
+<line x1="34" x2="606" y1="120" y2="120"></line>
+<line x1="34" x2="606" y1="77" y2="77"></line>
+<line x1="34" x2="606" y1="34" y2="34"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10.5" text-anchor="end">
+<text x="28" y="210">0</text><text x="28" y="167">55,000</text><text x="28" y="124">110,000</text>
+<text x="28" y="81">165,000</text><text x="28" y="38">220,000</text>
+</g>
+<polyline fill="none" points="34,39.0 606,39.0" stroke="var(--amber)" stroke-dasharray="6 4" stroke-width="1.8"></polyline>
+<text fill="var(--amber)" font-size="10.5" font-weight="700" x="40" y="33">18C「已商业化」门槛 213,600 千元（2.5 亿港元）→ 2027 年目标</text>
+<polyline fill="none" points="34.0,176.1 263.5,158.9 492.5,122.8 606.0,76.7" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline>
+<g fill="var(--accent)">
+<circle cx="34.0" cy="176.1" r="4"></circle><circle cx="263.5" cy="158.9" r="4"></circle>
+<circle cx="492.5" cy="122.8" r="4"></circle><circle cx="606.0" cy="76.7" r="4.6"></circle>
+</g>
+<g fill="var(--accent)" font-size="10.5" font-weight="700" text-anchor="middle">
+<text x="34" y="192">3,824</text><text x="263" y="174">6,019</text>
+<text x="492" y="138">10,637</text><text x="596" y="68">16,535</text>
+</g>
+<g fill="var(--text-muted)" font-size="10.5" text-anchor="middle">
+<text x="34" y="220">2023</text><text x="263" y="220">2024</text><text x="492" y="220">2025</text><text x="606" y="220">TTM 26H1</text>
+</g>
+</svg>
+<span class="caveat-inline">TTM 收入 1.653 亿元已达门槛的 <strong>77%</strong>；若 2026 全年延续上半年的节奏，2027 年跨线在数学上是可达的。<strong>但这条曲线的斜率完全取决于光互连大单能否续签</strong>——这正是下一章要看的事。<span class="src-badge src-s">一手</span> 招股章程 / 2026 中期报告</span>
+</div>
+<h3>3.2 拆解：光互连是引擎，光计算是期权</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:18%">业务</th><th style="width:16%">2026H1 收入</th><th style="width:14%">占比</th><th>决定它的变量</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>光互连</strong><br/><span class="src-badge src-s">一手</span></td>
+<td>6,070 万元<br/><span class="metric-positive">+275%</span></td>
+<td>76.1%</td>
+<td>「光跃 LightSphere X」超节点与 Scale-up OCS 的<strong>部署规模</strong>、海外 Scale-up EPS 的设计导入转订单、以及大客户是否续单。这是当期<strong>唯一被验证的引擎</strong>。</td>
+</tr>
+<tr>
+<td><strong>光计算</strong><br/><span class="src-badge src-s">一手</span></td>
+<td>1,908 万元<br/><span class="metric-positive">+313%</span></td>
+<td>23.9%</td>
+<td>PACE 2 的单卡销售能否变成<strong>集群交付</strong>、PACE 3 的流片与验证进度、以及「天枢·光立方」一体机能否走出园区门禁这类示范场景。它是估值里的<strong>长期期权</strong>，不是当期现金流。</td>
+</tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>可证伪的跟踪判据：</strong>① 2026 年报与 2027 中报的收入是否沿 2.5 亿港元门槛的轨道推进；② 光互连收入中<strong>非最大客户的占比</strong>是否上升（当前集中度 78.9% 是脆弱点）；③ 2025Q4 那批 8,730 万元订单的<strong>余下 44% 是否如期在 2026 年确认</strong>。三者任一走坏，本条核心逻辑即被削弱。</p>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据 (2026H1)</h2>
+<h3>4.1 半年损益表（2026H1 vs 2025H1）<span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:34%">人民币千元</th><th>2026H1</th><th>2025H1</th><th style="width:16%">变动</th></tr></thead>
+<tbody>
+<tr><td><strong>收入</strong></td><td><strong>79,779</strong></td><td>20,793</td><td class="metric-positive">+284%</td></tr>
+<tr><td>销售成本</td><td>(27,260)</td><td>(12,490)</td><td class="metric-warn">+118%</td></tr>
+<tr><td><strong>毛利</strong></td><td><strong>52,519</strong></td><td>8,303</td><td class="metric-positive">+532%</td></tr>
+<tr><td>毛利率</td><td class="metric-positive">65.8%</td><td>40.0%</td><td class="metric-positive">+25.8pct</td></tr>
+<tr><td>研发开支</td><td>(349,724)</td><td>(154,532)</td><td>+126%</td></tr>
+<tr><td>销售及营销 / 行政开支</td><td>(118,905)</td><td>(62,437)</td><td>+90%</td></tr>
+<tr><td><strong>期内亏损（IFRS）</strong></td><td class="metric-negative"><strong>(3,256,744)</strong></td><td>(346,269)</td><td>—</td></tr>
+<tr><td>　加回：股份支付费用</td><td>182,685</td><td>38,270</td><td>—</td></tr>
+<tr><td>　加回：向投资者发行的金融工具公允价值变动</td><td>2,916,531</td><td>176,555</td><td>—</td></tr>
+<tr><td>　加回：上市开支</td><td>10,383</td><td>—</td><td>—</td></tr>
+<tr><td><strong>经调整净亏损（非 IFRS）</strong></td><td class="metric-negative"><strong>(147,145)</strong></td><td>(131,444)</td><td>+12%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>别被 32.6 亿的报表亏损吓到，也别完全无视它。</strong>其中 <strong>29.17 亿</strong>是上市前优先股等金融工具的公允价值变动——<strong>非现金</strong>，且这些工具已在上市时自动转为普通股，此后不再产生此类损益（中期报告原文）。真实经营口径是经调整净亏损 <strong>1.47 亿元</strong>，与去年同期基本持平。<strong>但要注意</strong>：股份支付费用从 0.38 亿升至 1.83 亿，说明人力成本（含股权激励）在快速上升。<span class="src-badge src-s">一手</span></p>
+<h3>4.2 三年经营轨迹 <span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:34%">人民币千元</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+<tbody>
+<tr><td>收入</td><td>38,235</td><td>60,191 <span class="metric-positive">+57.4%</span></td><td>106,368 <span class="metric-positive">+76.7%</span></td></tr>
+<tr><td>毛利率</td><td>60.7%</td><td>53.5%</td><td class="metric-warn">39.0%</td></tr>
+<tr><td>研发开支</td><td>(279,822)</td><td>(352,063)</td><td>(479,041)</td></tr>
+<tr><td>研发 / 收入</td><td>731.8%</td><td>584.9%</td><td>450.4%</td></tr>
+<tr><td>年内亏损（IFRS）</td><td>(413,503)</td><td>(735,280)</td><td>(1,342,376)</td></tr>
+<tr><td><strong>年内经调整净亏损</strong></td><td>(264,049)</td><td>(296,372)</td><td><strong>(271,474)</strong></td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>请注意最后一行</strong>：三年的经调整净亏损稳定在 2.6–3.0 亿元，几乎不增长——<strong>说明公司的「真实烧钱速度」没有随收入扩张而失控</strong>，收入增长是靠毛利率改善（而不是靠亏更多钱）撑起来的。研发/收入比从 732% 降到 450%，仍在高位，但对一家 18C 未商业化公司来说属于常态。</p>
+<h3>4.3 资产负债与现金跑道 <span class="src-badge src-s">一手</span></h3>
+<div class="chart">
+<div class="chart-title">资产负债结构：上市前后 <small>人民币千元 · 2025-12-31 为经审计，2026-06-30 未经审核</small></div>
+<div class="stacked-bar">
+<div class="c-main" style="width:89%">权益总额 2,943,278 · 89%</div>
+<div class="c-sub" style="width:11%">负债 366,835 · 11%</div>
+</div>
+<span class="caveat-inline">2026-06-30：资产总额 33.10 亿元 = 权益 29.43 亿元 + 负债 3.67 亿元，<strong>资产负债比率从 −127% 转为 12%</strong>。转正的直接原因是 <strong>49.24 亿元的「向投资者发行的金融工具」在上市时自动转为权益</strong>（2025-12-31 该科目还是 49.24 亿负债，把当时权益压成 −42.48 亿元）。这是上市带来的账面修复，不是经营改善。<span class="src-badge src-s">一手</span></span>
+</div>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:40%">项目（人民币百万元）</th><th>2026H1</th><th>2025H1</th></tr></thead>
+<tbody>
+<tr><td>经营活动所用现金净额</td><td class="metric-negative">(187.61)</td><td>(92.73)</td></tr>
+<tr><td>投资活动所用现金净额</td><td>(1,367.51)</td><td>(465.14)</td></tr>
+<tr><td>融资活动所得现金净额</td><td class="metric-positive">2,435.46</td><td>655.68</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">28.59亿</div><div class="label">现金结余 RMB<br/>（2025 年末为 6.36 亿）</div></div>
+<div class="summary-item"><div class="value">7.6–9.7 年</div><div class="label">现金跑道<br/>（按经营流出 / 经调整亏损年化）</div></div>
+<div class="summary-item"><div class="value">12.7%</div><div class="label">现金占市值比<br/>（总市值口径）</div></div>
+<div class="summary-item"><div class="value">−1,876万/月</div><div class="label">经营现金净流出<br/>（2026H1 月均，约 3,127 万元）</div></div>
+</div>
+<p class="caveat-inline">现金跑道是这家公司少有的<strong>硬优势</strong>：净募资 23.77 亿港元到账后，账上 28.59 亿元现金，按当前真实烧速（年化约 2.9–3.8 亿元）可支撑 <strong>7.6 年以上</strong>。这意味着<strong>短期内没有再融资的被动压力</strong>——但也意味着管理层有足够时间「慢慢来」，增长不及预期的惩罚会体现在股价而非生存上。<span class="src-badge src-s">一手</span> / <span class="src-badge src-e">推算</span></p>
+<h3>4.4 财务异常检测</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">检查项</th><th>结果</th><th style="width:12%">评级</th></tr></thead>
+<tbody>
+<tr><td>应收账款</td><td>贸易应收从 8,722 万降至 7,183 万元（<strong>−17.6%</strong>），而同期收入 +284%。应收/半年收入约 90%，周转约 163 天——与招股书披露的「大客户信用期 120–180 天」一致，属<strong>已知的商业条款</strong>而非异常，但确实占用资金。</td><td class="metric-positive">🟢 低</td></tr>
+<tr><td>存货</td><td>从 2,854 万降至 1,446 万元（<strong>−49%</strong>），收入却翻近 4 倍——周转显著加快，无积压迹象。</td><td class="metric-positive">🟢 低</td></tr>
+<tr><td>现金流背离</td><td>经营现金净流出 <strong>1.876 亿元</strong>，大于经调整净亏损 1.471 亿元，缺口约 0.40 亿元，主要来自<strong>递延收入与合约负债的下降</strong>（见下条）。利润表口径好于现金口径。</td><td class="metric-warn">🟡 中</td></tr>
+<tr><td><strong>递延收入 / 合约负债</strong></td><td><strong>这是本次检测发现的最值得注意的一条</strong>：递延收入从 2.92 亿元降至 2.61 亿元（−11%），其中<strong>流动部分从 1.82 亿降至 1.28 亿元（−30%）</strong>；合约负债从 2,162 万降至 1,784 万元（−18%）。<strong>收入爆发式增长的同时，「预收/在手合同」这类前瞻科目反而在缩水</strong>——可能是前期预收项目集中结转为收入，而新预收未同步跟上。若后续几个季度递延收入继续下降，将是收入动能减弱的<strong>领先信号</strong>。</td><td class="metric-warn">🟡 中</td></tr>
+<tr><td>毛利率波动</td><td>60.7%（2023）→ 53.5% → <strong>39.0%（2025）</strong> → <strong>65.8%（2026H1）</strong>。两年内波动 27 个百分点，对硬件型收入属剧烈波动，主因是产品结构（OCS 高毛利 vs EPS）与大客户定价。波幅本身即是风险：<strong>2026H1 的 65.8% 是结构红利还是新常态，尚无第二个半年度可验证</strong>。</td><td class="metric-warn">🟡 中</td></tr>
+<tr><td>股东回报自洽</td><td>无回购、无分红（2026-06-04 董事会决议「不建議就截至2025年12月31日止年度股息進行派付」）。对未商业化公司属正常，数字自洽。</td><td class="metric-positive">🟢 低</td></tr>
+<tr><td>关联交易 / 股东减持</td><td><strong>未评估</strong>——本报告未取得关联交易占比数据；减持方面，所有上市前股东均在锁定期内（见 8.4），暂无可减持股。</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>综合评级：🟡 中</strong>——无造假型红旗，资产质量干净（应收、存货双双下降）；但<strong>前瞻性科目（递延收入/合约负债）与收入背离</strong>、以及<strong>毛利率剧烈波动</strong>这两点，需要未来两个报告期验证。</p>
+</div>
+
+<div class="card" id="products">
+<h2>五、产品与技术路线</h2>
+<h3>5.1 光互连：当前唯一被验证的引擎</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">产品</th><th style="width:26%">定位</th><th>进展（均为公司口径）</th></tr></thead>
+<tbody>
+<tr><td><strong>Scale-up OCS</strong><br/>光电路交换</td><td>超节点内 GPU 之间的光交换</td><td><strong>2025 年 12 月才量产，当年即贡献 4,446.5 万元</strong>；2026H1 是收入增长的主引擎（含 8,200 + 2,000 个模块的大单）；已收到其他客户订单且<strong>定价有所提升</strong>。<span class="src-badge src-s">一手</span></td></tr>
+<tr><td><strong>光跃 LightSphere X</strong><br/>超节点解决方案</td><td>基于分布式光交换（dOCS）的 GPU 超节点整机方案</td><td>2026 年 WAIC 宣布<strong>数千卡 GPU 集群成功落地</strong>，称是中国首个商业化、自主研发的千卡级光交换计算集群；OCS 硅光 PIC 同步量产；与国内领先算力提供商联合推出下一代光交换/电交换混合 Scale-up 方案，称延迟降至<strong>百纳秒级</strong>，获 WAIC SAIL 之星奖（连续第二年）。<span class="src-badge src-s">一手</span></td></tr>
+<tr><td><strong>Scale-up EPS</strong></td><td>用于超节点的光互连模块</td><td>收入<strong>主要来自海外市场</strong>，已完成多家客户设计导入（design-in）。<span class="src-badge src-s">一手</span></td></tr>
+<tr><td>Scale-out 产品</td><td>集群级光互连</td><td>2025 年贡献 511.1 万元后，<strong>2026H1 收入归零</strong>——产品线在收缩，资源向 Scale-up 集中。<span class="src-badge src-s">一手</span></td></tr>
+<tr><td>下一代：NPO / CPO</td><td>近封装 / 共封装光学</td><td>公司称国内领先云服务商正推进 <strong>3.2T NPO 规模部署验证</strong>，并开展 6.4T NPO；CPO 交换机为在研方向。<span class="src-badge src-s">一手</span></td></tr>
+</tbody>
+</table></div>
+<h3>5.2 光计算：估值里的长期期权</h3>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">2021-12</div><div class="tl-text">发布 <strong>PACE</strong>——首代光子计算加速卡 <span class="src-badge src-s">一手</span></div></div>
+<div class="tl-item"><div class="tl-date">2025-03</div><div class="tl-text">发布 <strong>PACE 2「曦智天枢」</strong>：光学矩阵 128×128、光子器件 &gt;4 万个、光计算输出精度 8bit、芯片主频 1GHz、PIC 时延 200ps，称全球首款 3D TSV 封装光电混合加速卡 <span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">2026 WAIC</div><div class="tl-text">推出<strong>「天枢·光立方」</strong>——称全球首款光电混合智算一体机。示范场景先落在自家园区门禁（数百名员工使用），下一步是芯片设计流程的推理任务 <span class="src-badge src-s">一手</span></div></div>
+<div class="tl-item tl-future"><div class="tl-date">PACE 3</div><div class="tl-text"><strong>PIC 与 EIC 均已流片、PIC 已从代工厂回片</strong>，后续做系统验证；目标支持大模型推理与多卡互连扩展，覆盖端侧到云端 <span class="src-badge src-s">一手</span></div></div>
+</div>
+<p class="caveat-inline"><strong>怎么看待光计算：</strong>它目前只贡献约 24% 收入，且<strong>落地的第一个场景是「自家园区门禁」</strong>——这既说明团队愿意亲自下场验证，也说明<strong>离规模化商用还有相当距离</strong>。公司引用的第三方测算是：光计算芯片在中国 AI 推理芯片中的渗透率 2025 年 &lt;0.5%，预计 2040 年才到 20%。<span class="src-badge src-2">二手</span> 弗若斯特沙利文（招股书引用）</p>
+</div>
+
+<div class="card" id="competition">
+<h2>六、竞争格局与赛道</h2>
+<h3>6.1 国内：在「独立供应商」里排第一，整体排第二</h3>
+<p>招股书引用的第三方数据显示，2025 年中国 Scale-up 光互连市场中<strong>仅两家公司实现了大规模商业化，前两名合计份额 99.8%</strong>。曦智<strong>整体排名第二</strong>，但在<strong>「独立供应商」中排名第一，份额 88.3%</strong>（对应收入 7,920 万元）。</p>
+<p class="caveat-inline"><strong>这里有一个极易被误读的限定词</strong>：媒体上常见的「中国 Scale-up 光互连第一」省略了「独立供应商」这个限定。整体第一是谁，招股书未点名，媒体多推断为华为（因其有自研超节点与全栈体系）——<strong>属推测，不应写成事实</strong>。曦智的差异点在于定位：华为/英伟达是<strong>封闭全栈</strong>，曦智是<strong>开放中立的第三方</strong>，产品可被多家 GPU 厂商复用，已与多家一线 GPU 公司完成设计导入。<span class="src-badge src-2">二手</span></p>
+<h3>6.2 国际：一级市场同类估值远高于它</h3>
+<div class="chart">
+<div class="chart-title">光互连/光计算同类的估值参照 <small>单位：亿美元（港股标的按 7.85 汇率折算）· <strong>时点不同，不可直接并排比较</strong> <span class="src-badge src-2">二手</span></small></div>
+<div class="bar-row"><div class="bar-label"><strong>Lightmatter</strong><br/><span style="font-size:11px;color:var(--text-muted)">美股一级 · 2024.10 D 轮</span></div><div class="bar-track"><div class="bar-fill c-main" style="width:100%"></div></div><div class="bar-value">44</div></div>
+<div class="bar-row"><div class="bar-label"><strong>Ayar Labs</strong><br/><span style="font-size:11px;color:var(--text-muted)">美股一级 · 2026.03 E 轮</span></div><div class="bar-track"><div class="bar-fill c-main" style="width:85%"></div></div><div class="bar-value">37.5</div></div>
+<div class="bar-row"><div class="bar-label"><strong>Celestial AI</strong><br/><span style="font-size:11px;color:var(--text-muted)">被 Marvell 收购对价</span></div><div class="bar-track"><div class="bar-fill c-main" style="width:74%"></div></div><div class="bar-value">32.5</div></div>
+<div class="bar-row"><div class="bar-label"><strong>曦智科技 01879</strong><br/><span style="font-size:11px;color:var(--text-muted)">港股上市 · 2026-10-02</span></div><div class="bar-track"><div class="bar-fill c-warn" style="width:76%"></div></div><div class="bar-value">33.5</div></div>
+<div class="bar-row"><div class="bar-label"><strong>曦智（发行价时）</strong><br/><span style="font-size:11px;color:var(--text-muted)">2026-04-28 IPO</span></div><div class="bar-track"><div class="bar-fill c-sub" style="width:50%"></div></div><div class="bar-value">21.9</div></div>
+<span class="caveat-inline">三个必须说明的口径问题：<strong>① 时点不同</strong>——Lightmatter 是 2024 年 10 月的估值，Ayar 是 2026 年 3 月，Celestial AI 是并购对价，不能当同一时点的可比；<strong>② 业务不同</strong>——曦智是唯一同时做光互连与光计算的，其余三家主要在互连侧单点突破（Lightmatter 已把光计算推到 2030 年后）；<strong>③ 体量悬殊</strong>——曦智 2025 年收入仅 1.06 亿元人民币，而对手的公开收入数据极少，无法做收入倍数的严格对标。<strong>能得出的谨慎结论是：曦智当前的 33.5 亿美元市值，落在国际同类一级市场估值的同一量级内，而非显著高估或低估。</strong><span class="src-badge src-e">推算</span></span>
+</div>
+<p>三家国际对手的关键进展（<span class="src-badge src-2">二手</span>）：<strong>Lightmatter</strong> 的 Passage L200/L200X 已做到单 XPU 封装 256 Tbps、能效 &lt;5 pJ/bit，由 GlobalFoundries 代工；<strong>Ayar Labs</strong> 已加入英伟达 NVLink Fusion 生态，投资方含 AMD、Intel Capital、英伟达；<strong>Celestial AI</strong> 被 Marvell 以 32.5 亿美元收购（另含最高 22.5 亿美元对价）。英伟达则向 Lumentum、Coherent 各投 20 亿美元布局光互连。这些信号共同说明：<strong>光互连是真实的产业方向，且被巨头用真金白银定价</strong>——但它同时也意味着<strong>曦智面对的是有全栈生态的巨头，而非真空市场</strong>。</p>
+<h3>6.3 赛道空间：第三方测算很激进，须打折看</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:30%">市场（弗若斯特沙利文口径）</th><th>2025</th><th>目标年</th><th style="width:16%">CAGR</th></tr></thead>
+<tbody>
+<tr><td>中国 Scale-up 光互连</td><td>57 亿元</td><td>2030 年 1,805 亿元</td><td class="metric-positive">99.6%</td></tr>
+<tr><td>中国光计算产品</td><td>6,370 万元</td><td>2030 年 14.62 亿元</td><td class="metric-positive">87.2%</td></tr>
+<tr><td>全球 AI 计算与互连产品</td><td>4,836 亿元</td><td>2031 年 2.03 万亿元</td><td>27.0%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>这些数字来自招股书引用的同一家咨询机构（弗若斯特沙利文），且「曦智是首家实现光电混合算力大规模部署」等表述也来自同一来源</strong>——它们服务于发行文件，应视为<strong>公司口径</strong>而非独立第三方共识。作为对照，其他机构对相近市场的测算要保守得多（TrendForce 估 CPO 渗透率 2030 年约 35%；LightCounting 估 CPO 2030 年约 100 亿美元）。<strong>理性做法是采信「方向」（光互连需求真实且高速增长），对「斜率」（99.6% 的 CAGR）保持怀疑。</strong><span class="src-badge src-2">二手</span></p>
+</div>
+
+<div class="card" id="geopolitics">
+<h2>七、地缘与政策风险</h2>
+<p><strong>触发条件核对：</strong>公司在中国境内注册、H 股上市，2026H1 收入「絕大部分來自中國市場」——<strong>看似无跨境敞口</strong>。但满足两条触发：① <strong>身处中美博弈最敏感行业</strong>（半导体/AI 算力）；② <strong>已经实际发生过供应链冲击</strong>（不是理论推演）。因此按「地缘与政策风险」展开口径，而非只写「政策风险」。</p>
+<h3>7.1 已经发生的事：一块被扣了 18 个月的晶圆</h3>
+<div class="quote">
+<p><strong>招股章程原文（一手，本地存档第 172–173 页）：</strong></p>
+<p style="margin-top:8px;">公司曾聘用「<strong>供應商F</strong>」作为主要制造合作夥伴，最近一次流片（PACE 2）于 <strong>2024 年 6 月</strong>完成。2024 年 11 月美国指示若干半导体工厂停止向中国客户供应若干先进芯片后，<strong>若干流片后的晶圆留存在该合作夥伴的设施中</strong>。公司自 2024 年底至 2025 年间持续商谈取回，<strong>直至 2025 年 12 月 12 日就 PACE 2 取得美国工业与安全局（BIS）的商品分类自动追踪系统（CCATS）认证后</strong>，合作夥伴才同意交付，公司已于 2025 年底收到。招股书同时披露：「<strong>自 2024 年 6 月起，我們並無與此製造合作夥伴進行任何實質性的後續合作，包括任何新的流片活動</strong>。」</p>
+</div>
+<p>公司自 <strong>2023 年 4 月</strong>起就在接洽替代制造伙伴，<strong>2025 年 3 月</strong>决定将后续项目转移至国内制造合作伙伴，并称后者性能已达「与供应商 F 相当」的水平。招股书未点名具体晶圆厂（媒体多推测为台积电，<strong>未获官方确认，不应写成事实</strong>），也未披露 EDA 工具是否依赖 Synopsys/Cadence。</p>
+<p class="caveat-inline"><strong>为什么这条比任何宏观推演都重要：</strong>它把「地缘风险」从纸面变成了这家公司的<strong>已发生成本</strong>——18 个月的时间损失、一次 BIS 认证流程、以及整条产线的搬迁。这也解释了公司为什么必须在国内重建供应链：<strong>它的技术路线本身就建立在先进制程之上，而先进制程正是管制的靶心</strong>。</p>
+<h3>7.2 现行规则与提案：区分「已生效」与「在讨论」</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:24%">风险项</th><th>现状（含日期与来源等级）</th><th style="width:12%">影响强度</th></tr></thead>
+<tbody>
+<tr>
+<td>美国出口管制<br/>（对公司自身）</td>
+<td>国际制裁法律顾问霍金路伟（Hogan Lovells）意见：公司<strong>目前并未购买、采购或使用</strong>须遵守 EAR 许可的项目；现行业务活动、产品及采购的原材料不受美国出口许可证要求规限。<strong>光计算/硅光未被 ECCN 3A090 明确列名</strong>，但「未列名 ≠ 不受管辖」——若含数字处理单元且达性能阈值，存在按通用 IC 参数落入的解释空间。<span class="src-badge src-s">一手</span> 招股书 / <span class="src-badge src-2">二手</span> 律所分析</td>
+<td class="metric-warn">中<br/>（已发生过一次）</td>
+</tr>
+<tr>
+<td>美方投资审查</td>
+<td>招股书披露：曦智是美国对外投资规则（2024-10-28 财政部终局规则）下的<strong>「受辖外国主体」</strong>，其集成电路设计活动属<strong>「须申报交易」</strong>；但因设计未达被禁止的性能参数，<strong>未从事「被禁止交易」</strong>。效果：美国主体投资其<strong>上市前</strong>股份须申报，<strong>上市后公开交易证券适用例外、不受限</strong>。<span class="src-badge src-s">一手</span></td>
+<td class="metric-positive">低</td>
+</tr>
+<tr>
+<td>FCC 拟禁中国光收发器<br/>进口美国数据中心</td>
+<td>路透 2026-08-04 报道的<strong>草案阶段</strong>措施，称希望 2026 年内发布，<strong>可被修改或搁置</strong>；适用范围是「对美进口」。曦智当前收入以国内为主，属<strong>潜在长期海外拓展风险，非现实直接冲击</strong>。<span class="src-badge src-2">二手</span>（提案）</td>
+<td class="metric-positive">低（提案）</td>
+</tr>
+<tr>
+<td>实体清单 / 1260H</td>
+<td><strong>均未检索到曦智被列入的公开信息</strong>。1260H（中国军事企业清单）2026-06-08 更新的 65 家名单中未见曦智。<span class="src-badge src-s">一手</span> Federal Register</td>
+<td class="metric-positive">无</td>
+</tr>
+</tbody>
+</table></div>
+<h3>7.3 中国侧：明确的政策顺风</h3>
+<ul style="padding-left:20px;font-size:14px;line-height:1.9;">
+<li><strong>《「十五五」规划纲要》（2026-03 全国人大通过）</strong>：统筹布局算力设施，提升高端芯片、光电子器件产业水平，推进<strong>存算一体、三维集成、光电融合</strong>等技术突破应用。<span class="src-badge src-s">一手</span></li>
+<li><strong>《电子信息制造业发展「十五五」规划》（工信部+发改委）</strong>：明确「加快<strong>光计算</strong>等新计算范式布局」，突破<strong>全光交换</strong>关键技术；光子产业列为筑牢产业基础能力的五大方向之一。<span class="src-badge src-s">一手</span>（经二手转述）</li>
+<li><strong>《「人工智能+信息通信」创新发展实施意见（2026—2028）》（工信部，2026-06）</strong>：加强高速光电芯片、<strong>光电共封装器件（CPO）</strong>研发验证，开展光电混合组网技术试验。<span class="src-badge src-s">一手</span>（经二手转述）</li>
+<li><strong>地方规划点名</strong>：北京「十五五」数字经济规划点名<strong>硅基光电子、高性能光互联</strong>；上海软件和信息服务业「十五五」规划点名<strong>高速光互连（CPO）</strong>。<span class="src-badge src-2">二手</span></li>
+<li><strong>国资与产业资本接力</strong>：B 轮上海科创基金领投，C 轮（2025-09，超 15 亿元）含中国移动基金、上海国投、国新基金、浦东创投；IPO 基石含上海中移基金、中国国新。<span class="src-badge src-2">二手</span></li>
+</ul>
+<h3>7.4 传导强度排序与监测清单</h3>
+<div class="quote">
+<strong>一句话排序：</strong>决定这家公司命运的是<strong>「中国自己的算力基建采购」</strong>（正向、已落地、可从订单验证），而非「美国允不允许它卖」；美国的管制已经通过<strong>供应链</strong>（而非市场准入）对它产生过一次实质伤害，且那条传导链<strong>尚未被证明已彻底修复</strong>。
+  </div>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:34%">监测信号</th><th>看什么</th></tr></thead>
+<tbody>
+<tr><td>① 国内代工伙伴的产能与良率</td><td>招股书称已达「与供应商 F 相当」水平——<strong>这是公司口径，尚无第三方验证</strong>。关注后续 PACE 3 的流片/交付节奏是否顺利（PIC 已回片，系统验证是下一个关口）。</td></tr>
+<tr><td>② 美国管制是否延伸到光计算</td><td>目前光计算/硅光未被明确列名。若未来把光子芯片或相关设备/材料纳入 ECCN，供应链风险将二次上升。</td></tr>
+<tr><td>③ 国内客户采购的持续性</td><td>2025Q4 那批 8,730 万元 OCS 订单中余下 44% 是否在 2026 年如期确认；超节点集群从「数千卡」向「万卡」推进的实际落地。</td></tr>
+<tr><td>④ 港股通南向资金的实际流向</td><td>入通（2026-09-07）后南向持仓规模仍小（三方数据：2026-09-29 约 139.98 万股），<strong>不宜视为已兑现的资金承接</strong>。</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="valuation">
+<h2>八、估值分析</h2>
+<h3>8.1 当前估值水平 <span class="src-badge src-e">推算</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:32%">指标</th><th>数值</th><th style="width:32%">口径说明</th></tr></thead>
+<tbody>
+<tr><td>收盘价</td><td><strong>280.00 HKD</strong></td><td>2026-10-02 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>总市值</td><td><strong>263.3 亿 HKD</strong>（≈225 亿 RMB）</td><td>总股本 94,037,377 股 × 280</td></tr>
+<tr><td>H 股流通市值</td><td>215.2 亿 HKD</td><td>H 股 76,850,576 股 × 280；另 17,186,801 股为内资股</td></tr>
+<tr><td><strong>PS（TTM）</strong></td><td class="metric-negative"><strong>136x</strong></td><td>TTM 收入 1.653 亿元 RMB（≈1.935 亿 HKD）</td></tr>
+<tr><td>PS（FY2025）</td><td class="metric-negative">212x</td><td>2025 年收入 1.064 亿元 RMB</td></tr>
+<tr><td>PS（2026H1 年化）</td><td class="metric-negative">141x</td><td>假设下半年与上半年持平</td></tr>
+<tr><td>EV / TTM 收入</td><td class="metric-negative">119x</td><td>EV = 263.3 − 净现金 33.5 亿 HKD = 229.8 亿 HKD</td></tr>
+<tr><td>PE / 股息率</td><td>不适用</td><td>亏损，无分红</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>136 倍的 PS 该怎么读？</strong>孤立看这个数字没有意义——它对标的是「一家还没证明自己能盈利、但技术卡位稀缺的公司」。有意义的问法是：<strong>按 2026H1 的增速（+284%），需要几个报告期能把 PS 消化到 20–30x？</strong>答案是：若收入连续两年翻倍（2026 年约 2 亿元、2027 年约 4 亿元），PS 会降到约 56x；要降到 25x，收入需达到约 9 亿元——<strong>那是 2025 年的 8.5 倍</strong>。这就是 136x 的真实含义：<strong>它预支的不是一年，而是好几年的完美执行</strong>。</p>
+<h3>8.2 可比公司的两难</h3>
+<p>这家公司<strong>没有真正的可比公司</strong>，只能从三个方向找参照，且每个方向都有明显缺陷：</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">参照系</th><th style="width:26%">代表</th><th>可比性与缺陷</th></tr></thead>
+<tbody>
+<tr>
+<td>港股 18C 同侪</td>
+<td>晶泰控股 02228（341.7 亿 HKD）、黑芝麻智能 02533（68.4 亿）、越疆科技 02432（91.8 亿）、文远知行-W 00800（131.5 亿）<span class="src-badge src-s">一手</span></td>
+<td><strong>制度可比、业务不可比</strong>：同样是 18C 上市、同样面对未商业化/早期阶段问题，但晶泰做 AI4S 服务、黑芝麻做自动驾驶芯片、越疆做协作机器人、文远知行做自动驾驶。可用来看<strong>「港股市场给这类公司的市值区间」</strong>，不能用来算 PS 对标。</td>
+</tr>
+<tr>
+<td>国际光电一级市场</td>
+<td>Lightmatter 44 亿美元、Ayar Labs 37.5 亿、Celestial AI 32.5 亿（被收购）<span class="src-badge src-2">二手</span></td>
+<td><strong>业务最可比、时点最不可比</strong>：估值分别来自 2024.10 / 2026.03 / 并购对价，且对手收入数据几乎不公开。只能做<strong>量级判断</strong>（见 6.2）。</td>
+</tr>
+<tr>
+<td>A 股光通信产业链</td>
+<td>中际旭创（9,523 亿元 RMB）、新易盛（5,426 亿）、天孚通信（2,845 亿）<span class="src-badge src-s">一手</span></td>
+<td><strong>最不可比</strong>：这些是<strong>已大规模盈利的光模块制造商</strong>，赚的是确定性的硬件钱；曦智卖的是光交换方案与光子计算，且尚在亏损。放进来只为说明<strong>「中国光通信资产在 A 股能拿到什么市值」</strong>。</td>
+</tr>
+</tbody>
+</table></div>
+<h3>8.3 绝对估值不适用，这是它最诚实的一句话</h3>
+<p>DCF 需要可预测的自由现金流，DDM 需要分红——<strong>两者对这家公司都不成立</strong>：经营现金流为负、无分红、收入基数小而波动大。任何给出「内在价值 X 元」的模型，其精度都低于其虚假的确定感。对这类公司的合理估值方式是<strong>赔率结构</strong>（见 8.5），而非折现。</p>
+<h3>8.4 筹码结构：三个日期决定了未来两年的供给节奏 <span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:26%">股东类别</th><th style="width:20%">涉及股数 / 占比</th><th style="width:18%">解禁日</th><th>含义</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>基石投资者（20 家）</strong><br/>阿里、GIC、贝莱德、富达、淡马锡、Baillie Gifford、施罗德、UBS AM、联想、中兴通讯等</td>
+<td>8,974,575 股<br/>占总股本 <strong>9.54%</strong>（占发售股份 65.06%）</td>
+<td class="metric-negative"><strong>2026-10-27</strong></td>
+<td><strong>最迫近的供给冲击</strong>——距今 23 天。发行价 183.2，现价 280，基石<strong>仍有 53% 浮盈</strong>。</td>
+</tr>
+<tr>
+<td>领航资深独立投资者（5 家）<br/>腾讯、MPC V、上海中移数字转型基金、杭州毅鸿等</td>
+<td>合计约 1,257.8 万股<br/>约 <strong>13.4%</strong></td>
+<td>2027-04-27</td>
+<td>18C 规则下的 12 个月锁定期。腾讯持股 3.56% 是重要的产业背书信号。</td>
+</tr>
+<tr>
+<td>创始人及一致行动人<br/>沈亦晨、LightAI EIP、Mach C、有光熠辉、有光致远</td>
+<td>合计约 2,717.3 万股<br/>约 <strong>28.9%</strong></td>
+<td>2028-04-27</td>
+<td>18C 对未商业化公司主要人士的 <strong>24 个月</strong>锁定，比常规 12 个月更长。若公司提前转为「已商业化」，解禁日会<strong>提前重算</strong>（取较晚者）——<strong>这是一个容易被忽略的反向机制：跨过门槛反而可能让锁定期提前</strong>。</td>
+</tr>
+</tbody>
+</table></div>
+<div class="chart">
+<div class="chart-title">解禁规模 vs 二级市场流动性 <small>基石解禁量 8,974,575 股，与近期日均成交量对比 <span class="src-badge src-e">推算</span></small></div>
+<div class="bar-row"><div class="bar-label">基石解禁股数</div><div class="bar-track"><div class="bar-fill c-warn" style="width:100%"></div></div><div class="bar-value">897.5 万股</div></div>
+<div class="bar-row"><div class="bar-label">近 20 日日均成交</div><div class="bar-track"><div class="bar-fill c-main" style="width:6.2%"></div></div><div class="bar-value">55.8 万股</div></div>
+<div class="bar-row"><div class="bar-label">近 3 个月日均成交</div><div class="bar-track"><div class="bar-fill c-main" style="width:3.3%"></div></div><div class="bar-value">29.4 万股</div></div>
+<div class="bar-row"><div class="bar-label">2026-10-02 单日成交</div><div class="bar-track"><div class="bar-fill c-main" style="width:0.4%"></div></div><div class="bar-value">3.3 万股</div></div>
+<span class="caveat-inline"><strong>这是本报告认为最需要盯紧的一个数字。</strong>基石解禁规模约等于<strong>近 20 个交易日全部成交量</strong>（按近三月均量算约 31 个交易日）。当然，解禁 ≠ 卖出——基石多为长线机构，未必减持；但在一个日均成交仅几十万股、且招股书自认「股权高度集中」的标的上，<strong>9.54% 的流通股一次性解锁，是供给端的结构性变化</strong>。<span class="src-badge src-s">一手</span> 解禁日来自配发结果公告，成交量来自腾讯行情</span>
+</div>
+<h3>8.5 赔率结构：这是期权，不是价值股</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">情形</th><th style="width:34%">参照</th><th>对曦智的映射</th></tr></thead>
+<tbody>
+<tr>
+<td class="metric-positive"><strong>成功：光互连成为 AI 集群标准件</strong></td>
+<td>英伟达凭 NVLink 生态把互连变成平台级生意；Marvell 32.5 亿美元收购 Celestial AI、向 Lumentum/Coherent 各投 20 亿美元，说明巨头在为光互连付真金白银</td>
+<td>若曦智守住「独立第三方」的生态位、超节点从千卡走向万卡、海外 EPS 设计导入转化为订单，则收入跨过 2.5 亿港元门槛、进而向 10 亿元级推进是可能的路径。参考国际同类一级市场 33–44 亿美元估值，<strong>存在 1–3 倍的重估想象空间</strong>（<span class="src-badge src-e">推算</span>，非预测）。</td>
+</tr>
+<tr>
+<td class="metric-negative"><strong>失败：停留在「稀缺叙事」</strong></td>
+<td>大量 18C/18A 公司上市后长期停留在一亿级收入、靠不断融资维持；港股新股从高点回撤 70–90% 后再无修复是常见形态</td>
+<td>客户集中（前五大 78.9%）意味着<strong>丢一个大客户就是断崖</strong>；华为等全栈玩家的挤压、光计算迟迟不能规模商用、2027 年未跨过门槛——任一发生，估值将向「现金 + 技术残值」靠拢。当前 28.59 亿元现金（占市值 12.7%）提供一定下限，但那只是市值的一小部分，<strong>−50% 以上的回撤在路径上是可行的</strong>（该股今年 3 个月内已实际发生过 −78%）。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>九、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>赛道稀缺且方向被巨头验证</strong>：全球唯一同时布局光互连与光计算的公司；英伟达向 Lumentum/Coherent 各投 20 亿美元、Marvell 收购 Celestial AI——光互连是被真金白银定价的产业方向。</li>
+<li><strong>收入已经跑出真实斜率</strong>：2026H1 收入 +284%，毛利率从 40.0% 跳到 65.8%——不是靠烧钱换增长，三年经调整净亏损稳定在 2.6–3.0 亿元。</li>
+<li><strong>大单可验证、订单结构在改善</strong>：8,200 + 2,000 个 Scale-up OCS 模块合计 8,730 万元，其中 44% 留待 2026 年确认；OCS 定价已提升；客户数从 12 家增至 44 家。</li>
+<li><strong>现金极充裕，无被动融资压力</strong>：28.59 亿元现金、7.6 年以上跑道，意味着公司可以「等得起」技术兑现，不必在低点融资。</li>
+<li><strong>政策强顺风 + 国资背书</strong>：「十五五」规划点名光计算、光电融合、全光交换；上海国资、中国移动基金、国新基金接力入股。</li>
+<li><strong>锁定期结构对长期股东友好</strong>：创始人锁定至 2028-04-27，领航投资者至 2027-04-27，比常规 12 个月更长。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>估值预支了多年完美执行</strong>：PS(TTM) 136x、EV/TTM 119x。要把 PS 消化到 25x，收入需从 1.06 亿做到约 9 亿元——8.5 倍。</li>
+<li><strong>客户集中度是结构性脆弱</strong>：2025 年前五大客户占 78.9%、最大一家 40.6%；且大客户在压价（客户 G 毛利率仅 23.4%，同比降 13pct）。丢一家即断崖。</li>
+<li><strong>供应链曾真实断裂，且未证明已修复</strong>：PACE 2 晶圆被扣 18 个月，2025-12 才凭 BIS 认证取回；「自 2024 年 6 月起无新的流片合作」；转国内代工后的良率与产能<strong>只有公司口径，无第三方验证</strong>。</li>
+<li><strong>基石解禁迫在眉睫</strong>：10-27 解锁 897.5 万股（9.54% 总股本），约等于近 20 个交易日的全部成交量；基石仍有 53% 浮盈。在一个自认「股权高度集中」的标的上，这是供给端的结构性变化。</li>
+<li><strong>前瞻科目在恶化</strong>：收入 +284% 的同时，<strong>流动递延收入 −30%、合约负债 −18%</strong>——预收/在手合同缩水，是收入动能减弱的领先信号。</li>
+<li><strong>光计算离商用还很远</strong>：占收入 24%，首个落地场景是自家园区门禁；第三方测算光计算渗透率 2040 年才到 20%。它更像估值里的期权，而非可预测的第二曲线。</li>
+<li><strong>面对的是有全栈生态的巨头</strong>：国内整体第一（媒体推断为华为）拥有自研芯片—存储—网络全栈；国际上 Ayar Labs 已进英伟达 NVLink Fusion 生态。</li>
+<li><strong>覆盖与流动性都稀薄</strong>：上市仅 5 个月、卖方覆盖稀少、日均成交仅几十万股，价格由情绪与筹码主导——3 个月内 −78% 已经演示过一次。</li>
+</ol>
+</div>
+</div>
+<p style="margin-top:20px;"><strong>核心争议焦点：</strong>① <strong>光互连的收入是「渗透率早期的第一波」还是「依赖少数大客户的项目制收入」</strong>——裁决指标是客户数增长与非最大客户占比；② <strong>2027 年能否跨过 18C 商业化门槛</strong>——这是全篇最硬的、可被公司自己证伪的承诺；③ <strong>10 月 27 日之后筹码结构如何演化</strong>——基石是长期持有还是兑现浮盈，将直接决定未来数月的价格中枢。<strong>裁决指标：</strong>2026 年报收入、递延收入/合约负债的走向、基石解禁后的成交与持仓变化、PACE 3 的系统验证结果。</p>
+</div>
+
+<div class="card" id="analysts">
+<h2>十、券商分析师全景 <span class="src-badge src-2">二手</span></h2>
+<p>覆盖刚刚起步：<strong>至少两家在上市后首次覆盖，且目标价分歧接近一倍</strong>——本报告认为这是「这只票有多难定价」的直接证据。</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:15%">机构</th><th style="width:11%">日期</th><th style="width:12%">评级</th><th style="width:15%">目标价</th><th>方法与逻辑</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>中金公司</strong></td><td>2026-07-31</td><td>跑赢行业</td><td><strong>362.00 HKD</strong><br/><span class="src-badge src-2">二手</span></td>
+<td><strong>P/S 法</strong>（据转述对应 2028 年约 17x）。逻辑落在国产算力：国产 AI 芯片单卡性能相较海外仍有差距，更需要通过高效 Scale-up 网络提升集群算力利用率，光互连方案加速渗透，而公司在光互连领域的商业化进度领先。催化剂：NPO 放量、PACE 3 商用。</td>
+</tr>
+<tr>
+<td><strong>海通国际</strong></td><td>2026-07-08</td><td>优于大市</td><td><strong>668.00 HKD</strong><br/><span class="src-badge src-2">二手</span></td>
+<td><strong>Top-down 市值法</strong>：参考 A 股光模块/CPO <strong>7 家</strong>代表公司总市值，乘以 <strong>2% 渗透率</strong>假设，得出目标总市值约 629 亿港元。另指出产业链话语权会从光模块厂向系统厂/CSP/主芯片厂转移（LPO→DPO→NPO→CPO），是给曦智「系统厂」定位的论据。</td>
+</tr>
+<tr>
+<td>申万宏源</td><td>2026 年内</td><td colspan="2" style="text-align:center">仅有观点、<strong>未见评级与目标价</strong></td>
+<td>认为市场用「光模块制造商」的估值体系（PS 16–27x）理解曦智，<strong>低估了其芯片设计 + 原创 IP 的平台属性</strong>，应对标全球高端芯片设计企业。<span class="src-badge src-3">三方转述</span></td>
+</tr>
+</tbody>
+</table></div>
+<div class="quote" style="margin-top:20px;">
+<strong>分歧在哪：</strong>中金 362 与海通 668 相差 <strong>85%</strong>，根源不是对业务的判断不同，而是<strong>估值锚选得不同</strong>——中金用营收倍数（隐含「2028 年才合理」），海通用赛道总市值的渗透率切分（隐含「现在就给赛道 2%」）。<strong>这个分歧本身就是这家公司当前定价状态的说明</strong>：没有公认的框架，只有各自选的锚。
+  </div>
+<p class="caveat-inline"><strong>两点使用提示：</strong>① 两家均为<strong>上市后首次覆盖</strong>、尚无后续更新，362 / 668 对应的股价是 2026 年 7 月水平（当时约 250–400 港元区间），<strong>不能直接当作当前目标价使用</strong>；② 目标价的测算细节（海通的 7 家样本名单、2% 渗透率的推导）来自媒体与研报摘要转述，<strong>未取得研报原文</strong>，引用时请标明二手。本次检索<strong>未能取得系统性覆盖清单</strong>（如彭博/Wind 一致预期）——上市仅 5 个月，卖方覆盖仍在形成中。</p>
+</div>
+
+<div class="card" id="community">
+<h2>十一、社区讨论：雪球 / 股吧 <span class="src-badge src-3">三方</span></h2>
+<p><strong>样本量诚实声明：散户自发讨论极少。</strong>雪球 01879 个股页关注数约 <strong>7,316</strong>（2026-10-02 抓取），讨论区可见热帖仅个位数；东方财富股吧近期主题帖约 20 条，单帖阅读数十至数百、评论多为 0。有量的内容基本是<strong>转载稿</strong>（券商研报、公司 IR 稿、自媒体），不是散户原创。以下按实际样本呈现，<strong>不用沾边帖冒充情绪</strong>。</p>
+<ul style="padding-left:20px;font-size:14px;line-height:1.9;">
+<li><strong>打新情绪是起点</strong>：发行期公开认购超购约 5,785 倍，「今年最好中签的热门新股」类讨论主导；自媒体定调多为「概念是真好，业绩也是真难看」「赌赛道、赌技术」——<strong>典型的事件驱动，而非价值判断</strong>。</li>
+<li><strong>上市后情绪全面转向价格与筹码</strong>：股吧近期标题即情绪样本——「曦智科技能扭亏为盈吗？」「都没法看了」「狗的在砸盘」「原始股何时解禁？」「看来最终解读就是大利空」。<strong>没有产品讨论，只有持仓抱怨</strong>。</li>
+<li><strong>产业逻辑讨论集中在专业侧</strong>：雪球上互动最高的原创帖是《AI 算力从电到光：「光电混合算力唯一标的」曦智科技 9 月入通！》；另有长文点出「2025 年 PS 约 74 倍、亏损扩大、商业化早期——若光互连商业化不及预期、光计算落地延迟，估值或面临大幅回调」。这些是<strong>研报逻辑的散户转述</strong>。</li>
+<li><strong>用产品词检索（光计算/光互连/硅光/CPO/光跃/OCS）</strong>返回的几乎全是公司稿与研报转载，<strong>散户端无对应自发讨论</strong>。</li>
+</ul>
+<p><strong>社区情绪的可用信息：</strong>这只票的讨论热度与其市值（263 亿港元）严重不匹配——<strong>它还没有形成真正的「股东社区」</strong>。这既解释了价格的剧烈波动（由打新资金与情绪主导，缺乏长期持有者的定价），也意味着一旦基本面兑现，预期差的空间可能较大（尚未被反复研究与消化）。但要提醒：<strong>「无人讨论」既可能是机会，也可能是因为标的太小/太新而不值得讨论</strong>，两者从情绪面无法区分。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>十二、综合判断框架</h2>
+<h3>12.1 四情景推演（不构成预测）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">情景</th><th style="width:30%">触发条件</th><th>估值方向 <span class="src-badge src-e">推算</span></th><th style="width:12%">主观概率感</th></tr></thead>
+<tbody>
+<tr><td>乐观：光互连成为标准件</td><td>超节点从千卡走向万卡，海外 EPS 设计导入转订单，客户数与非最大客户占比同步上升</td><td>2027 年跨过门槛并向 5 亿元级推进，估值向国际同类（33–44 亿美元）上沿靠拢</td><td>~20%</td></tr>
+<tr><td>中性偏正：稳步爬坡</td><td>收入沿 2026H1 斜率推进（全年约 2 亿元），2027 年刚好跨过 2.5 亿港元门槛</td><td>估值维持区间震荡，PS 逐步消化，市值围绕当前水平上下波动</td><td>~35%</td></tr>
+<tr><td>中性偏负：增速回落</td><td>大单交付完毕后无同等规模续单，递延收入继续下降，收入增速降到 50% 以下</td><td>2027 年跨门槛出现疑问，PS 无法消化，市值向现金+技术残值靠拢（−30~50%）</td><td>~30%</td></tr>
+<tr><td>悲观：多重打击</td><td>核心客户流失或压价加剧 + 光计算继续停留在示范阶段 + 供应链再次受阻 + 解禁后抛压叠加</td><td>叙事瓦解，市值向发行价以下回归，接近现金垫+残值</td><td>~15%</td></tr>
+</tbody>
+</table></div>
+<span class="caveat-inline">概率为主观判断。四情景的关键分水岭只有一条：<strong>2027 年收入是否跨过 18C 商业化门槛</strong>——它同时决定叙事、流动性与锁定期结构。</span>
+<h3>12.2 关键跟踪指标（按重要性排序）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:36%">指标</th><th style="width:14%">频率</th><th>信号意义</th></tr></thead>
+<tbody>
+<tr><td><strong>2026 年报与 2027 中报收入 vs 2.5 亿港元门槛轨道</strong></td><td>半年</td><td>公司自己对 2027 年的承诺，是全篇唯一可被公司自己证伪的硬指标</td></tr>
+<tr><td><strong>基石解禁（2026-10-27）后的成交与筹码变化</strong></td><td>事件</td><td>897.5 万股 ≈ 近 20 个交易日全部成交量；供给端的结构性变化</td></tr>
+<tr><td><strong>递延收入 / 合约负债走向</strong></td><td>半年</td><td>已达 −30% / −18%，若继续下滑即收入动能减弱的领先信号</td></tr>
+<tr><td><strong>非最大客户收入占比、客户总数</strong></td><td>半年</td><td>前五大占 78.9% 是结构性脆弱，去集中化是本条逻辑能否成立的关键</td></tr>
+<tr><td>Scale-up OCS 新签订单与定价</td><td>公告</td><td>2025Q4 那批 8,730 万元余下的 44% 是否如期在 2026 年确认；是否有同等量级新单</td></tr>
+<tr><td>PACE 3 系统验证结果与光计算商用场景</td><td>事件</td><td>决定「第二曲线」是期权还是故事；当前首个落地场景仍只是自家园区门禁</td></tr>
+<tr><td>国内代工伙伴的流片/交付节奏</td><td>公告</td><td>「已达与供应商 F 相当水平」目前只有公司口径，PACE 3 是第一个可检验的样本</td></tr>
+<tr><td>美国对光计算/硅光的管制口径变化</td><td>政策</td><td>目前未列名，若纳入将二次冲击供应链</td></tr>
+</tbody>
+</table></div>
+<h3>12.3 对齐个人投资体系</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">原则</th><th>检验结果</th></tr></thead>
+<tbody>
+<tr><td>好公司（护城河）</td><td>技术壁垒真实（三条自研芯片技术、150 项授权专利、全球唯一同时做光互连+光计算），且「10 年后还在吗」这个问题对它有不寻常的答案：<strong>现金 28.59 亿元 + 政策顺风，作为一家公司存续的概率高；但作为「136x PS 的成长股」，存续取决于光互连能否成为标准件</strong>。护城河尚未转化为盈利能力，且面对有全栈生态的巨头——<strong>公司还在、估值逻辑却可能已死</strong>，这两件事必须分开判断。可证伪的判据：非最大客户收入占比连续两期不升反降。</td></tr>
+<tr><td>好价格</td><td>PS(TTM) 136x、EV/TTM 119x，显著偏贵；较盘中高点回撤 73% 部分消化了泡沫，但距「安全边际」仍远。<strong>本标的不存在估值分位锚</strong>（上市仅 5 个月），无法用历史分位判断便宜与否——只能比较国际同类一级市场估值（量级相当）。现金占市值 12.7% 是唯一的硬底，但它太薄，托不住 136x PS 的叙事。</td></tr>
+<tr><td>分散纪律</td><td>股权高度集中于少数股东（招股书自认）、日均成交仅几十万股、3 个月内已实际发生 −78% 回撤、10 月 27 日面临相当于近 20 个交易日成交量的解禁——<strong>波动性与流动性风险都属最高一档</strong>。</td></tr>
+<tr><td>融资纪律</td><td>无股息、持续亏损，收息/分红覆盖利息框架不适用（港股亦不做融资纪律分析）。</td></tr>
+<tr><td>卖出条件映射</td><td>① 核心逻辑证伪 = 2027 年跨不过 18C 门槛，或非最大客户占比持续恶化；② 极端高估 = PS 进一步扩张而收入增速未同步加速；③ 机会成本 = 同赛道出现「技术更硬 + 估值更低」的标的（国际同类一级市场价格可作为参照）。</td></tr>
+</tbody>
+</table></div>
+<div class="quote" style="margin-top:24px;">
+<strong>一句话总结：</strong>曦智科技是<strong>一个真实的技术卡位，撞上一个预支了未来数年的价格</strong>。它手里有三张别人没有的牌：全球唯一的光互连+光计算双线布局、28.59 亿元现金带来的 7 年以上跑道、以及「十五五」规划点名光计算的政策顺风。但它也有三张明牌的风险：<strong>收入只有 1 亿元却挂着 136 倍 PS、前五大客户占收入 79%、以及 10 月 27 日就要解锁相当于近 20 个交易日成交量的基石筹码</strong>。
+    它和晶泰控股那种「现金+成长期权」还不一样——晶泰赌的是增长曲线的斜率，曦智赌的是<strong>一条尚未被大规模验证的技术路线能否成为基础设施</strong>。这家公司在招股书里给自己写了一句很诚实的话：「我們最終可能無法實現……收入要求」。<strong>判断这家公司的核心，就是判断这句话会不会成真——而它的答案，2027 年会自己揭晓。</strong>
+</div>
+</div>
+
+<div class="card" id="datanotes">
+<h2>◉ 数据说明</h2>
+<p>本节收录<strong>口径、跨期对比与取数记录</strong>——它们影响你怎么用这份报告，但不影响正文的阅读。正文只保留分析与结论。</p>
+<h3>一、数据口径与方法论</h3>
+<p class="caveat-inline"><strong>估值口径：</strong>本报告全部倍数按 <strong>总市值</strong> 口径计算（总股本 94,037,377 股 × 收盘价），而非 H 股流通市值口径（76,850,576 股）——两者相差约 18%。汇率取 <strong>1 HKD ≈ 0.8545 RMB</strong>（USDCNY 6.7050 ÷ USDHKD 7.8470）。TTM 收入 = FY2025 + 2026H1 − 2025H1，均取自招股章程与中期报告原文。<span class="src-badge src-s">一手</span></p>
+<p class="caveat-inline"><strong>18C 身份口径：</strong>「未商业化公司」的判定依据是中期报告原文（「本公司為未商業化公司……尚未滿足上市規則第 18C.03(4) 條所載收入要求」），不是本报告的推断。已商业化门槛为最近一个经审计年度收入 ≥ 2.5 亿港元。<span class="src-badge src-s">一手</span></p>
+<h3>二、与上期报告的变化</h3>
+<p><strong>本报告为曦智科技的首次覆盖，没有上期可对比。</strong>后续每期在本节记录跨期变化。</p>
+<h3>三、取数更正记录</h3>
+<p><strong>本期无取数更正。</strong>报告中的财务数字全部来自本地存档的招股章程与 2026 中期报告原文；行情与股本数据来自交易所与腾讯行情接口。</p>
+<h3>四、已知局限</h3>
+<p class="caveat-inline">① <strong>卖方覆盖稀少</strong>，未取得系统性评级与目标价；② 「供应商 F」身份未获官方确认（媒体推测为台积电，招股书未点名）；③ 公司披露的性能数据（如 DeepSeek V3 训练延迟降低 90%+、MFU 提升 &gt;50%）均为<strong>公司口径，未见第三方复现</strong>；④ 国际可比公司估值时点不一致，不可直接并排；⑤ 未评估关联交易占比。</p>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议。报告基于公开信息生成，HKEXnews 披露文件已下载至本地作为可信数据源。所有估值情景和概率均为本文主观判断。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-10-04 · 由 Claude Code 辅助分析 · 数据截至 2026-10-02 收盘</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="padding-left:20px;font-size:12px;line-height:1.9;color:var(--text-muted);">
+<li><span class="src-badge src-s">一手</span> HKEXnews：<strong>2026 年中期报告</strong>（2026-09-24）——18C 未商业化公司声明、2026H1 损益表与分部收入、资产负债表、现金流量表、2027 年收入门槛预期、产品商业化进展</li>
+<li><span class="src-badge src-s">一手</span> HKEXnews：<strong>招股章程</strong>（2026-04-20，500 页）——三年财务数据、客户与供应商集中度、「供应商 F」晶圆滞留事件、美国对外投资规则披露、TAM 测算、股权结构</li>
+<li><span class="src-badge src-s">一手</span> HKEXnews：<strong>最终发售价及配发结果公告</strong>（2026-04-27）——发售价 183.2、基石投资者 20 家明细、禁售承诺表（含 2026-10-27 / 2027-04-27 / 2028-04-27 三个日期）</li>
+<li><span class="src-badge src-s">一手</span> HKEXnews：董事会会议结果（2026-06-04，不建议派付股息）、澄清公告（2026-06-04/05）、悉数行使超额配股权（2026-05-11）、稳定价格期结束（2026-05-25）</li>
+<li><span class="src-badge src-s">一手</span> 腾讯财经行情（qt.gtimg.cn）：2026-10-02 收盘价、成交、总股本与市值；上市以来日 K 线 109 个交易日</li>
+<li><span class="src-badge src-s">一手</span> 上交所/深交所「港股通标的证券名单」接口：01879 于 2026-09-07 调入，现行名单在列</li>
+<li><span class="src-badge src-2">二手</span> 券商与财经媒体：KGI 新股研究、路透（FCC 光收发器提案）、TrendForce/LightCounting（CPO 测算）、证券时报/财联社/界面新闻（上市与业务进展）</li>
+<li><span class="src-badge src-3">三方</span> 雪球 01879 页面、东方财富股吧（社区情绪样本，样本量已在正文标明）</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%9B%A6%E6%99%BA%E7%A7%91%E6%8A%80%EF%BC%8801879%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%9B%A6%E6%99%BA%E7%A7%91%E6%8A%80%EF%BC%8801879%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

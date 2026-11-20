@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>DoorDash 2026-10-21 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 8px 0 8px; justify-content: flex-start; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+  }
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+  .data-note h3 { font-size: 15px; margin: 22px 0 8px; color: var(--accent); }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/dash/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+DoorDash%EF%BC%88DASH%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ADoorDash%EF%BC%88DASH%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-21%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">DASH <span>·</span> 2026-10-21 <span>·</span> PC 完整版</div><h1>DoorDash</h1><p>数据截至 2026/10/20 美东收盘 · NASDAQ · USD · 披露来源 SEC EDGAR · 上期报告 2026-10-11</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#sec0">◉ 数据可靠性声明</a></li><li><a href="#sec1">一、公司速览</a></li><li><a href="#sec2">二、商业模式</a></li><li><a href="#sec3">三、核心指标 — GOV（总订单额）</a></li><li><a href="#sec4">四、最新财务数据（Q2 2026 10-Q，一手，沿用）</a></li><li><a href="#sec5">五、本期行情 — 抛售周里的横盘：-2.5% 对 QQQ 的 -4.5%</a></li><li><a href="#sec6">六、AI 与入口之争 — 第三条路出现：官方 MCP 接入</a></li><li><a href="#sec7">七、政策风险 — NYC 和解的衍生：高管受托责任调查</a></li><li><a href="#sec8">八、治理与内部人动态 — 卖出量级骤降：CFO 一笔 $0.2M</a></li><li><a href="#sec9">九、估值分析</a></li><li><a href="#sec10">十、多空核心分歧</a></li><li><a href="#sec11">十一、华尔街分析师全景 二手</a></li><li><a href="#sec12">十二、Reddit / 个人投资者讨论 三方</a></li><li><a href="#sec13">十三、综合判断框架</a></li><li><a href="#sec-data">数据说明</a></li></ul></aside><main class="main-content report-body">
+<div class="card" id="sec0">
+<h2>◉ 数据可靠性声明</h2>
+<p>本报告覆盖 <strong>美股（NASDAQ: DASH）</strong>，披露来源为 SEC EDGAR（一手），社区平台为 Reddit（三方），货币 USD，财报采用 10-Q / 10-K 格式。</p>
+<p><strong>数据来源分级：</strong><span class="src-badge src-s">一手</span> SEC文件/公司公告 ｜ <span class="src-badge src-2">二手</span> 聚合平台/分析师报告 ｜ <span class="src-badge src-3">三方</span> 个人投资者/社交媒体 ｜ <span class="src-badge src-e">推算</span> 间接计算 ｜ <span class="src-badge src-t">时效</span> 可能过期</p>
+<p><strong>本期取数状态（诚实声明）：</strong></p>
+<ul>
+<li>① 行情与估值：yfinance 日线（10/9–10/20 窗口 + 14 个月度收盘）取得；stockanalysis.com 统计页（curl 直连）交叉核对倍数与空头数据；市值按 Q2 10-Q 封面股本 433,295,654 股 × 10/20 收盘推算。</li>
+<li>② SEC 新申报：10/9 以来仅 1 份 Form 4（CFO Inukonda，10/12 交易），已直读 XML 原文并本地存档（第八节）。</li>
+<li>③ 本期为财报真空期最末段（Q2 财报 8/5、Q3 财报 <span class="src-badge src-s">一手</span> 11/4 盘后），季度经营数据沿用本地存档 Q2 10-Q，本期基本面输入与上期一致。</li>
+<li>④ 入口之争的新材料（Ordering Connector / DoorDash Air / 零售扩张）取自公司官方博客（一手），但其商业条款（抽成、计费）未披露；FAA Part 135 的取得时间为二手报道口径（7 月，见数据说明 ③）。</li>
+<li>⑤ Reddit：r/doordash 一手 RSS 成功（25 帖，10/19–10/21 样本）；投资者端检索 429 限流，样本缺口如实标注（第十二节）。</li>
+
+</ul>
+<p><strong>本期定位：</strong>上期（10/11）头条是「叙事折价的快速回补（8 个交易日 +10.2%）」；本期是它的续集——<strong>回补停止、转为横盘</strong>。10/9–10/20 期间市场遭遇一轮科技股抛售（10/14–10/16 加剧，媒体归因于加息担忧与 AI 投资融资压力<span class="src-badge src-2">二手</span>），QQQ 同窗口 -4.5%，DASH 仅 -2.5%，属相对抗跌的横盘。11/4 财报距本期约 10 个交易日，本期增量信息集中在：<strong>① 官方 MCP 接入（Ordering Connector）——入口之争的第三条路；② Scott+Scott 律所对高管受托责任的调查——NYC 和解的衍生治理事件；③ CFO 小额卖出（$0.2M，量级骤降）</strong>。</p>
+<p><strong>本地披露文件：</strong>标的/DASH-DoorDash/SEC_Filings/ — FY2025 10-K、FY2024 10-K、2026 Q1/Q2 10-Q、Q2 8-K 业绩、内华达迁册 8-K + DEF 14C、9/18 8-K、Form 4 ×5（8–10 月）+ Form 144；<strong>本期新增存档</strong>：Form 4（Inukonda，10/12 交易，10/14 披露，直读 XML）。</p>
+</div>
+<div class="card" id="sec1">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>数值</th></tr></thead>
+<tbody>
+<tr><td>公司</td><td>DoorDash, Inc.</td></tr>
+<tr><td>代码 / 交易所</td><td>DASH / NASDAQ</td></tr>
+<tr><td>股价（2026/10/20 收盘）<span class="src-badge src-2">二手</span></td><td><strong>$191.67</strong>（10/9 以来 <span class="metric-negative">-2.5%</span>；10/14 低点 $184.01 后部分收复）</td></tr>
+<tr><td>市值 <span class="src-badge src-e">推算</span></td><td>≈ $83.0B（433.30M 股 A+B × $191.67）</td></tr>
+<tr><td>企业价值 EV <span class="src-badge src-e">推算</span></td><td>≈ $81.0B（净现金按 stockanalysis 口径 $2.0B）</td></tr>
+<tr><td>52 周区间（收盘口径）<span class="src-badge src-2">二手</span></td><td>$146.60 – $266.06（现价距高点 <span class="metric-negative">-28.0%</span>、距低点 +30.7%）</td></tr>
+<tr><td>年内 / 近一年 <span class="src-badge src-e">推算</span></td><td>-15.4% / -29.5%（同期标普500 约 +14% <span class="src-badge src-2">二手</span>）</td></tr>
+<tr><td>Q2 2026 GOV <span class="src-badge src-s">一手</span></td><td>$33,078M（+36%）</td></tr>
+<tr><td>TTM 营收 / GAAP 净利 <span class="src-badge src-2">二手</span></td><td>$15,891M（+33.6%）/ $841M（EPS $1.90）</td></tr>
+<tr><td>注册地 <span class="src-badge src-s">一手</span></td><td>Nevada（2026/09/18 起）</td></tr>
+<tr><td>下一财报 <span class="src-badge src-s">一手</span></td><td><strong>2026/11/04 盘后</strong>（10/9 公司公告确认）</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">$191.67</div><div class="label">股价（10/20）</div></div>
+<div class="summary-item"><div class="value">$83.0B</div><div class="label">市值（推算）</div></div>
+<div class="summary-item"><div class="value">5.23x</div><div class="label">P/S（TTM）</div></div>
+<div class="summary-item"><div class="value">$33.1B</div><div class="label">Q2 GOV（+36%）</div></div>
+<div class="summary-item"><div class="value">28.4x</div><div class="label">Forward P/E（单口径）</div></div>
+<div class="summary-item"><div class="value">≈3.1%</div><div class="label">FCF 收益率（TTM）</div></div>
+</div>
+<p>上期报告（10/11，$196.50）之后共 7 个交易日。走势结构：<strong>10/12–10/13 高位盘整 → 10/14 随科技股抛售跌至 $184.01（单日 -4.7%）→ 10/15 单日 +4.9% 收复 → 10/16–10/20 在 $189–194 区间横盘</strong><span class="src-badge src-2">二手</span>。窗口整体 -2.5%，同期 QQQ -4.5%、META -3.4%、UBER -3.6%、SPY -1.2%、LYFT +6.4%<span class="src-badge src-e">推算</span>（收盘对收盘）——DASH 在本轮抛售中的回撤浅于纳指与主要可比，但也没有独立行情。</p>
+<p>技术位置：股价位于 50 日均线（≈$204<span class="src-badge src-2">二手</span>）与 200 日均线（≈$187<span class="src-badge src-2">二手</span>）之间；10 月至今 +4.4%（自 9 月真实收盘 $183.55 起算）<span class="src-badge src-e">推算</span>。</p>
+</div>
+<div class="card" id="sec2">
+<h2>二、商业模式</h2>
+<p>DoorDash 是一个本地商业（local commerce）平台，核心是连接消费者、商家与配送骑手（Dasher）的三边市场。收入主要来自：① 按订单规模向商家收取的交易佣金/服务费；② 面向商家与快消品牌的广告费（高毛利）；③ 消费者会员费（DashPass / Wolt+ / Deliveroo Plus）。<span class="src-badge src-s">一手</span></p>
+<h3>2.1 三大 Marketplace + 零售扩张</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>平台 / 渠道</th><th>覆盖</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>DoorDash Marketplace</td><td>美国/加/澳/新</td><td>核心盘，美加外卖份额约 60–70% <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>Wolt Marketplace</td><td>欧洲/中东</td><td>2022 年收购，切入欧洲本地配送</td></tr>
+<tr><td>Deliveroo Marketplace</td><td>英国/欧洲/亚洲/中东</td><td>2025/10 以 ≈$3.9B 完成收购，覆盖扩展至 40+ 市场 <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>非餐零售</td><td>美国</td><td>Macy's、Anthropologie、The North Face、Vans、Timberland（9/30 上线）+ <strong>Skims（10/14 上线）</strong><span class="src-badge src-2">二手</span>；此前已签约 Gap、Kohl's、Costco 等 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>平台广告 / 零售媒体</td><td>美国/全球</td><td>AAM 认证 → Brand Center → WPP 全球媒体伙伴（9 月三连）<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>AI 购物助手 / 代理接入</td><td>美国</td><td>Ask DoorDash（6 月）→ Skip the App 短信下单（beta）→ <strong>Ordering Connector（MCP 协议企业级接入，本期重点，第六节）</strong><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>无人机配送</td><td>美国</td><td>DoorDash Air：FAA Part 135 认证（7 月取得，9/30 随系统发布披露）；北加州试点，首批合作 Chipotle / Popeyes / Momo N Curry <span class="src-badge src-s">一手</span>+<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>运营网络</td><td>全球</td><td><strong>印度 Hyderabad 全球能力中心（GCC）</strong>：9/30 开幕，首期约 500 人、两年内 3,000 岗位，承接客服/运营/风控——继 Tempe、Mexico City 后第三座自营 CX 站点 <span class="src-badge src-2">二手</span></td></tr>
+</tbody>
+</table></div>
+<h3>2.2 护城河分析（巴菲特框架）</h3>
+<p><strong>网络密度（最强）</strong>：订单密度越高，配送路径越短、单位成本越低、送达越快，形成自我强化的飞轮。Q2 GOV 增速 +36% 与 Contribution Margin 升至 5.0%，是飞轮仍在运转的证据。<span class="src-badge src-s">一手</span></p>
+<p><strong>双边网络效应</strong>：商户越多→选择越多→订单越多→吸引更多商户。零售品类持续加宽（本期 Skims、Macy's 感恩节花车等），加深「一站式」黏性。<span class="src-badge src-s">一手</span></p>
+<p><strong>转换成本 / 会员锁定</strong>：DashPass 等会员制降低配送费、提升复购；Q2 电话会披露订阅数创纪录。<span class="src-badge src-2">二手</span></p>
+<p><strong>数据与算法</strong>：多年积累的履约、定价、投放数据。这一栏过去三期经历了「正面产出（AI 篮子 +50%）→ 遭遇攻击（Meta Muse 代理分流）→ 攻防战（Skip the App + Amazon 封锁 Muse）」；<strong>本期加入第四个注解：公司给出了第三条路的官方模板——不封锁、也不被动挨绕，而是把「代理接入」产品化（Ordering Connector，MCP 开放协议）</strong>（第六节展开）。</p>
+<p><strong>护城河追问</strong>：「竞争对手为什么无法复制？」单点（做个 App）容易复制，但区域级订单密度与骑手履约网络需要时间与烧钱堆出来。持续的反例仍是 Walmart——它复用已有的门店 + Spark 众包网络，不需要从零复制密度（上期口径，本期无新的量级变化）。</p>
+<p><strong>本期护城河的边际变化（一句话）</strong>：上期的变化在「入口面开始有攻防」；<strong>本期的变化在「攻防出现了第三种结局的模板」</strong>——公司把「与代理合作」做成了可对外销售的产品（企业级 Ordering Connector），同时无人机（Part 135）与印度 GCC 分别在履约端与成本端加厚基础设施。入口的载体之争仍在进行，但「目录+履约+支付」的基础设施层，公司正在主动把它变成对所有代理开放的轨道。<span class="src-badge src-e">推算</span></p>
+</div>
+<div class="card" id="sec3">
+<h2>三、核心指标 — GOV（总订单额）</h2>
+<p>GOV（Gross Order Value，总订单额）是 DoorDash 唯一真正重要的指标：它是平台上所有订单的流水总额，营收只是按比例从中抽成（Net Revenue Margin ≈ 13.5%）。GOV 决定营收天花板，也决定广告、会员、AI 购物、金融等一切增值业务的土壤。<span class="src-badge src-s">一手</span></p>
+<div class="table-scroll"><table>
+<thead><tr><th>期间</th><th>Total Orders（百万单）</th><th>GOV（$M）</th><th>GOV 增速</th><th>营收（$M）</th><th>营收增速</th><th>NRM</th></tr></thead>
+<tbody>
+<tr><td>2023</td><td>2,161</td><td>66,771</td><td>+25%</td><td>8,635</td><td>+31%</td><td>12.9%</td></tr>
+<tr><td>2024</td><td>2,583</td><td>80,231</td><td>+20%</td><td>10,722</td><td>+24%</td><td>13.4%</td></tr>
+<tr><td>2025</td><td>3,172</td><td>102,018</td><td>+27%</td><td>13,717</td><td>+28%</td><td>13.4%</td></tr>
+<tr><td>Q1 2026</td><td>933</td><td>31,604</td><td>+37%</td><td>4,036</td><td>+33%</td><td>12.8%</td></tr>
+<tr><td>Q2 2026</td><td>970</td><td>33,078</td><td>+36%</td><td>4,454</td><td>+36%</td><td>13.5%</td></tr>
+<tr><td>Q3 2026 指引 <span class="src-badge src-s">一手</span></td><td>—</td><td>33,000–34,000</td><td>≈+20–25%</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">Q3 指引增速为按去年同期 27,608M（Q3 2025，由 FY2025 全年减 H1 推得）计算的推算区间。同期 Adj. EBITDA 指引 $950M–1,100M。</p>
+<div class="chart">
+<div class="chart-title">年度 GOV（$B）<span class="src-badge src-s">一手</span>（10-K / 10-Q）· 金额口径</div>
+<div class="col-chart">
+<div class="col-wrap"><div class="col"><div class="col-seg" style="height:164px;background:var(--accent-light)">66.8</div></div><div class="col-label">FY2023</div></div>
+<div class="col-wrap"><div class="col"><div class="col-seg" style="height:197px;background:var(--accent-light)">80.2</div></div><div class="col-label">FY2024</div></div>
+<div class="col-wrap"><div class="col"><div class="col-seg" style="height:250px;background:var(--accent)">102.0</div></div><div class="col-label">FY2025</div></div>
+</div>
+</div>
+<p class="caveat-inline">Q3 2026 指引 $33.0–34.0B 为单季口径，与年度柱不可直接比高，故不绘入上图；其兑现与否是 11/4 财报的裁决项（见第十三节跟踪指标）。</p>
+<h3>3.1 GOV 核心解读（Q2 2026 10-Q 原文复核，本期沿用）</h3>
+<ul>
+<li><strong>订单量增速 &lt; GOV 增速</strong>：Q2 订单 +27%、GOV +36%——差额来自客单价提升。增长并非纯靠补贴堆单量，单位订单价值在上升。<span class="src-badge src-s">一手</span></li>
+<li><strong>货币化率站稳 13.5%</strong>：Q1 因 Deliveroo 并表稀释至 12.8%，Q2 回升至 13.5%（同比持平）——并表口径问题而非趋势恶化。<span class="src-badge src-s">一手</span></li>
+<li><strong>Q3 指引维持高增</strong>：Marketplace GOV $33.0–34.0B、Adj. EBITDA $950M–1.1B；公司提示 H2 的 Adj. EBITDA/GOV 走势与 H2 2025 一致（Q3 环比升、Q4 因骑手季节性成本 + 保险 + 技术投入回落）。<span class="src-badge src-s">一手</span></li>
+<li><strong>AI 线的行为级数据（沿用上期口径）</strong>：Ask DoorDash 上线三个月发现 4 万家新餐厅、近半 AI 餐厅订单流向消费者未试过的本地小店、30%+ AI 杂货订单为例行补货——公司自披露、非审计口径，<strong>仍未披露 AI 订单占总订单比例</strong>。<span class="src-badge src-s">一手</span></li>
+</ul>
+<h3>3.2 验证节点</h3>
+<p>11/4 的 Q3 财报——GOV 是否落在 $33–34B、Adj. EBITDA 是否兑现 $950M–1.1B（隐含 margin ≈ 2.8–3.3%）、NRM 是否站稳 13.5%、电话会是否首次量化 agentic 流量与 Ordering Connector 的接入进度。</p>
+</div>
+<div class="card" id="sec4">
+<h2>四、最新财务数据（Q2 2026 10-Q，一手，沿用）</h2>
+<p>本期无新季度披露（Q3 财报 11/4），季度经营数据沿用本地存档 DASH_2026-Q2_10-Q_2026-08-05.htm，关键数字与前三期核对一致。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>指标（$M，除比率外）</th><th>Q2 2025</th><th>Q2 2026</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>Revenue</td><td>3,284</td><td>4,454</td><td class="metric-positive">+36%</td></tr>
+<tr><td>Marketplace GOV</td><td>24,244</td><td>33,078</td><td class="metric-positive">+36%</td></tr>
+<tr><td>Total Orders（M）</td><td>761</td><td>970</td><td class="metric-positive">+27%</td></tr>
+<tr><td>Net Revenue Margin</td><td>13.5%</td><td>13.5%</td><td>持平</td></tr>
+<tr><td>GAAP Gross Profit</td><td>1,608</td><td>2,223</td><td class="metric-positive">+38%</td></tr>
+<tr><td>Contribution Profit（非 GAAP）</td><td>1,147</td><td>1,641</td><td class="metric-positive">+43%</td></tr>
+<tr><td>Contribution Margin（占 GOV）</td><td>4.7%</td><td>5.0%</td><td class="metric-positive">+30bps</td></tr>
+<tr><td>Adjusted EBITDA（非 GAAP）</td><td>655</td><td>914</td><td class="metric-positive">+40%</td></tr>
+<tr><td>GAAP 净利润（归母）</td><td>285</td><td>200</td><td class="metric-negative">-30%</td></tr>
+<tr><td>Diluted EPS（$）</td><td>0.65</td><td>0.46</td><td class="metric-negative">-29%</td></tr>
+</tbody>
+</table></div>
+<p>GAAP 净利下滑主因是费用端主动扩张（R&amp;D +52%、G&amp;A +39%、D&amp;A +86% 含 Deliveroo 无形摊销）及税项基数效应——「主动再投资 + 税项基数 + 并表无形摊销」三重叠加，而非经营恶化。Adj. EBITDA 超市场预期约 8.5%。<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span></p>
+<h3>4.1 上半年（6M 2026）汇总</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>（$M）</th><th>6M 2025</th><th>6M 2026</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>Revenue</td><td>6,316</td><td>8,490</td><td class="metric-positive">+34%</td></tr>
+<tr><td>— 美国收入</td><td>5,485</td><td>6,561</td><td class="metric-positive">+20%</td></tr>
+<tr><td>— 国际收入</td><td>831</td><td>1,929</td><td class="metric-positive">+132%</td></tr>
+<tr><td>GAAP 净利润（归母）</td><td>478</td><td>384</td><td class="metric-negative">-20%</td></tr>
+<tr><td>Adjusted EBITDA</td><td>1,245</td><td>1,668</td><td class="metric-positive">+34%</td></tr>
+<tr><td>经营现金流（OCF）</td><td>1,139</td><td>1,538</td><td class="metric-positive">+35%</td></tr>
+<tr><td>自由现金流（FCF）</td><td>849</td><td>1,162</td><td class="metric-positive">+37%</td></tr>
+<tr><td>回购（现金口径）</td><td>0</td><td>1,049</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p>Q2 单季 FCF $742M（+109%）、Q2 单季回购 $887M（Q1 为 $162M）。公司提示 2026 全年 FCF 将因商户付款的年末时点效应减少 $700–800M（一次性现金流转移，不影响价值）。全年 SBC 指引 $1.2–1.3B、D&amp;A 指引 $1.1–1.2B（含并购无形摊销约 $450M）。<span class="src-badge src-s">一手</span></p>
+<h3>4.2 资产负债（2026/06/30，一手）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标（$M）</th><th>2025/12/31</th><th>2026/06/30</th></tr></thead>
+<tbody>
+<tr><td>现金及等价物</td><td>4,378</td><td>4,424</td></tr>
+<tr><td>短期投资</td><td>1,128</td><td>923</td></tr>
+<tr><td>长期投资</td><td>837</td><td>869</td></tr>
+<tr><td>商誉</td><td>5,519</td><td>5,495</td></tr>
+<tr><td>无形资产净额</td><td>2,260</td><td>2,005</td></tr>
+<tr><td>可转债（2030 Notes）</td><td>2,724</td><td>2,727</td></tr>
+<tr><td>总资产</td><td>19,659</td><td>19,561</td></tr>
+<tr><td>股东权益</td><td>10,033</td><td>9,921</td></tr>
+</tbody>
+</table></div>
+<p>净现金口径存在分歧，如实并列：<strong>口径 A</strong>（含长短期投资，扣可转债）≈ $3.5B <span class="src-badge src-e">推算</span>；<strong>口径 B</strong>（stockanalysis，仅现金 − 总债务）$2.0B <span class="src-badge src-2">二手</span>。报告后续凡涉及净现金的论断，一律给出区间 $2.0–3.5B。商誉 + 无形资产合计 $7.5B 占总资产 38%（主要来自 Wolt/Deliveroo）——这是并购驱动成长型公司需要持续以利润兑现来「压实」的资产。<span class="src-badge src-e">推算</span></p>
+</div>
+<div class="card" id="sec5">
+<h2>五、本期行情 — 抛售周里的横盘：-2.5% 对 QQQ 的 -4.5%</h2>
+<h3>5.1 10/9–10/20 日线：先回撤、后横盘</h3>
+<div class="chart">
+<div class="chart-title">DASH 每日收盘价（2026/10/09 – 10/20）</div>
+<p class="caveat-inline">USD · 二手（yfinance 日线）· x 轴按真实日历日等比（10/10、10/17–18 为周末留空）</p>
+<svg aria-label="DASH daily closes Oct 9-20" role="img" viewbox="0 0 640 240" width="100%">
+<line stroke="#e4efe6" stroke-width="1" x1="60" x2="610" y1="168.2" y2="168.2"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="60" x2="610" y1="115.3" y2="115.3"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="60" x2="610" y1="62.4" y2="62.4"></line>
+<text fill="#6b7d6f" font-size="11" text-anchor="end" x="52" y="172">185</text>
+<text fill="#6b7d6f" font-size="11" text-anchor="end" x="52" y="119">190</text>
+<text fill="#6b7d6f" font-size="11" text-anchor="end" x="52" y="66">195</text>
+<polyline fill="none" points="60,46.5 210,70.4 260,82.6 310,178.7 360,83.2 410,124.9 560,77.8 610,97.6" stroke="#2d6a4f" stroke-width="2.5"></polyline>
+<circle cx="60" cy="46.5" fill="#2d6a4f" r="4"></circle>
+<circle cx="310" cy="178.7" fill="#c1121f" r="4"></circle>
+<circle cx="360" cy="83.2" fill="#2d6a4f" r="4"></circle>
+<circle cx="610" cy="97.6" fill="#2d6a4f" r="4"></circle>
+<text fill="#1a2a1e" font-size="11.5" font-weight="650" x="66" y="40">196.50（10/9）</text>
+<text fill="#c1121f" font-size="11.5" text-anchor="middle" x="310" y="196">184.01（10/14 低点 -6.4%）</text>
+<text fill="#2d6a4f" font-size="11.5" x="366" y="76">193.05（10/15 +4.9%）</text>
+<text fill="#1a2a1e" font-size="11.5" text-anchor="end" x="606" y="120">191.67（10/20）</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="60" y="218">10/9</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="210" y="218">10/12</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="310" y="218">10/14</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="410" y="218">10/16</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="560" y="218">10/19</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="610" y="218">10/20</text>
+</svg>
+</div>
+<p><strong>读法：</strong>本期窗口正好撞上 10/14–10/16 的全球科技股抛售（媒体归因：加息担忧 + AI 投资融资压力<span class="src-badge src-2">二手</span>）。DASH 在 10/14 单日 -4.7% 至 $184.01，次日 +4.9% 收复大部分失地，随后三个交易日在 $189–194 横盘。窗口整体 <strong>-2.5%</strong>，同期对照：QQQ -4.5%、META -3.4%、UBER -3.6%、SPY -1.2%、LYFT +6.4%<span class="src-badge src-e">推算</span>——回撤浅于纳指与主要可比（LYFT 例外，其 10/15 单日大涨带动窗口为正），但也没有独立于板块的行情。10 年期美债自 5.24% 回落至 5.12%<span class="src-badge src-2">二手</span>（^TNX 收盘）。</p>
+<h3>5.2 十四个月的月度轨迹：-29.5% 的一年</h3>
+<div class="chart">
+<div class="chart-title">DASH 月度收盘（2025/09 – 2026/10）</div>
+<p class="caveat-inline">USD · 二手（yfinance 月末收盘）· x 轴按真实月份等距 · 2026/10 为 10/20 月内值（非月末）</p>
+<svg aria-label="DASH monthly closes" role="img" viewbox="0 0 640 240" width="100%">
+<line stroke="#e4efe6" stroke-width="1" x1="60" x2="610" y1="145.8" y2="145.8"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="60" x2="610" y1="90.4" y2="90.4"></line>
+<line stroke="#e4efe6" stroke-width="1" x1="60" x2="610" y1="35" y2="35"></line>
+<text fill="#6b7d6f" font-size="11" text-anchor="end" x="52" y="150">160</text>
+<text fill="#6b7d6f" font-size="11" text-anchor="end" x="52" y="94">200</text>
+<text fill="#6b7d6f" font-size="11" text-anchor="end" x="52" y="39">240</text>
+<polyline fill="none" points="60,24.3 102.3,48.7 144.6,126.1 186.9,87.2 229.2,117.4 271.5,156.6 313.8,192.9 356.2,167.3 398.5,180.3 440.8,145.3 483.1,129.2 525.4,79.9 567.7,146.6 610,135.4" stroke="#2d6a4f" stroke-width="2.5"></polyline>
+<circle cx="60" cy="24.3" fill="#2d6a4f" r="4"></circle>
+<circle cx="313.8" cy="192.9" fill="#c1121f" r="4"></circle>
+<circle cx="525.4" cy="79.9" fill="#2d6a4f" r="4"></circle>
+<circle cx="610" cy="135.4" fill="#2d6a4f" r="4"></circle>
+<text fill="#1a2a1e" font-size="11.5" font-weight="650" x="66" y="24">271.99（2025/09 起点）</text>
+<text fill="#c1121f" font-size="11.5" text-anchor="middle" x="313.8" y="212">150.15（2026/03 低点）</text>
+<text fill="#2d6a4f" font-size="11.5" text-anchor="middle" x="525.4" y="70">231.74（2026/08 反弹高点）</text>
+<text fill="#1a2a1e" font-size="11.5" text-anchor="end" x="604" y="155">191.67</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="60" y="228">25/09</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="186.9" y="228">25/12</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="313.8" y="228">26/03</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="440.8" y="228">26/06</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="567.7" y="228">26/09</text>
+<text fill="#6b7d6f" font-size="10.5" text-anchor="middle" x="610" y="228">26/10</text>
+</svg>
+</div>
+<p><strong>读法：</strong>一年走势的骨架是「2025/9 高点 272 → 2026/3 低点 150（-45%）→ 2026/8 反弹 232 → 9 月叙事性回落 183.55 → 10 月横盘修复」。当前 $191.67 处在低点与 8 月反弹高点之间的下半区。9 月 -20.8% 的主因（入口之争叙事 + NYC 和解）在上两期已展开；10 月的横盘是「无新输入的等待」，与上期 +10.2% 的「无新输入的回补」是同一枚硬币的两面——裁决都在 11/4。<span class="src-badge src-e">推算</span></p>
+<h3>5.3 反证清单：窗口内没有发生什么</h3>
+<ul>
+<li><strong>没有新的季度数据</strong>：基本面输入与上期一字不差，Q3 指引未动。<span class="src-badge src-s">一手</span></li>
+<li><strong>没有评级转向</strong>：窗口内仅见 Goldman Sachs 重申 Buy、目标价 $280（约 10/13，TipRanks 口径）<span class="src-badge src-2">二手</span>——重申而非上调；共识均值 $254.95（MarketBeat）与上期 $255.47 基本持平。</li>
+<li><strong>空头继续回补</strong>：空头持股 16.30M → 15.74M 股<span class="src-badge src-2">二手</span>——连续第二期下降。</li>
+<li><strong>内部人卖出量级骤降</strong>：窗口内仅 CFO 一笔 $0.2M（上期为四人 $7.2M）（第八节）。</li>
+</ul>
+</div>
+<div class="card" id="sec6">
+<h2>六、AI 与入口之争 — 第三条路出现：官方 MCP 接入</h2>
+<p>过去三期这条线的演进：多头半边（Ask DoorDash 篮子 +50%）→ 空头半边（Meta Muse 代理绕开）→ 攻防战（Skip the App 自建短信入口 + Amazon 封锁 Muse）。<strong>本期的新变量是第三条路的官方模板——公司把「与代理合作」本身做成了产品。</strong></p>
+<h3>6.1 Ordering Connector：把「代理接入」产品化（9/30 Dash Forward 披露，本期补齐覆盖）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>要素</th><th>内容</th><th>来源分级</th></tr></thead>
+<tbody>
+<tr><td>形态</td><td>基于 <strong>MCP（Model Context Protocol）开放标准</strong>的企业级连接器：企业可将 DoorDash 接入内部 AI 工具或自建代理，代理可「找商品 → 组购物车 → 下单 → 追踪」</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>早期 beta</td><td>SpaceXAI、Vercel、Cognition、Tempo、Mercor——用于员工订餐与办公室补给</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>使用场景</td><td>Slack 群里收集午餐需求并由机器人统一下单；对接企业库存数据自动补货零食饮料；按用餐补贴规则循环订餐</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>战略含义</td><td>「代理下单」的订单仍走 DoorDash 的目录、定价、支付与履约——<strong>公司选择主动成为代理时代的轨道，而不是等待被绕开或效仿 Amazon 封锁</strong>。这与上期推演的「接入 + 分成」路径一致，但现在是公司官方背书的产品形态，不再是推演</td><td><span class="src-badge src-e">推算</span></td></tr>
+<tr><td>边界与风险</td><td>企业场景（办公室订餐）先于消费者场景；<strong>商业条款（抽成、计费、数据归属）未披露</strong>；企业端的订单量级与消费者端相比目前无法估计；Muse 类通用消费者代理是否也会走「接入」路径，仍无答案</td><td><span class="src-badge src-2">二手</span></td></tr>
+</tbody>
+</table></div>
+<h3>6.2 代理压力的另一个方向：WSJ 报道代理给卖家带来新麻烦</h3>
+<p>本期检索到 WSJ（10 月中旬）报道「AI Agents Bring New Headaches to Online Sellers」：Muse、OpenAI 的 Dots 等代理正在帮数百万用户比价、下单、订位、订菜——<strong>代理商业从「是否会来」进入「来了以后平台和卖家怎么办」的阶段</strong><span class="src-badge src-2">二手</span>。这与 6.1 形成一体的两面：代理侧的推进没有因 Amazon 封锁 Muse 停止；平台侧则分化为「拒绝（Amazon）」与「接入产品化（DoorDash）」两种应对。</p>
+<h3>6.3 DoorDash Air 与 FAA Part 135：履约端的基础设施里程碑</h3>
+<p>官方 9/30 披露（Dash Forward）：自研六旋翼飞机 + 装载系统 + 自动飞行编排的端到端无人机配送系统，北加州试点，首批合作 Chipotle / Popeyes / Momo N Curry；官方称按历史订单数据设计——约 80% 的典型餐厅订单重量与体积可由该机承载。<span class="src-badge src-s">一手</span> FAA Part 135 空运承运人认证据二手报道为 <strong>7 月取得</strong>（美国第 8 家无人机运营商），10 月中旬出现一批媒体跟进报道；<strong>BVLOS（超视距）授权尚未取得</strong>——规模化仍受监管边界约束<span class="src-badge src-2">二手</span>（时间线口径见数据说明 ③）。对 GOV 的贡献短期无法估计；其意义在「履约模式选项」的扩容，与 Dot 机器人、骑手网络构成多模式履约组合。</p>
+<h3>6.4 把三块合起来的判断</h3>
+<div class="two-col">
+<div>
+<h4 style="color:var(--green)">可站住的部分</h4>
+<ul>
+<li>「AI 帮平台卖得更多」有量化证据且在增强（篮子 +50%、结账 5 倍、4 万家新餐厅发现——上两期口径）。</li>
+<li>公司展示了入口层的全套动作：自建短信入口（Skip the App）+ 主动开放企业级代理接入（Ordering Connector）——「防守」与「开放」两手都有。</li>
+<li>Amazon 封锁 Muse 证明「拒绝代理」可执行；DoorDash 的 MCP 接入证明「合作代理」也可产品化——平台手里的选项比 9 月市场定价时更多。<span class="src-badge src-e">推算</span></li>
+</ul>
+</div>
+<div>
+<h4 style="color:var(--red)">未被验证、且仍被定价的部分</h4>
+<ul>
+<li>AI/agentic 订单占总订单的比例，公司至今未披露——多空两半共用同一份未披露的底层数据。</li>
+<li>Ordering Connector 的商业条款与订单量级均未披露；企业场景不等于消费者场景。</li>
+<li>Muse 在消费者端是否走接入路径、以什么条款接入，仍无案例——WSJ 报道的是压力存在，不是结局。</li>
+<li>无人机受 BVLOS 未授权约束，贡献时间表无法估计。</li>
+</ul>
+</div>
+</div>
+<p><strong>本报告的判断</strong>：上期说「主变量第一次出现了双向波动」；本期的增量是——<strong>双向之外，公司给出了第三种结局的可引用模板（官方接入）</strong>。可跟踪的否证/证实指标：① 11/4 电话会是否披露 agentic 流量口径与 Ordering Connector 的进展/条款；② Muse 类消费者代理是否被某平台接入（及条款由谁定）；③ Skip the App beta 转正与转化数据。<span class="src-badge src-e">推算</span></p>
+</div>
+<div class="card" id="sec7">
+<h2>七、政策风险 — NYC 和解的衍生：高管受托责任调查</h2>
+<p>DoorDash 是美国本土公司、收入以美国为主，不存在中概式地缘风险；政策风险集中在<strong>零工劳动监管、数据/算法定价立法与本地税赋</strong>三条线。本期的主要变化在第一条的衍生层——<strong>私人律所开始就 NYC 和解调查公司管理层</strong>。</p>
+<h3>7.1 本期核心事件：Scott+Scott 律所对高管/董事的受托责任调查</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>事件</td><td>Scott+Scott Attorneys at Law LLP 宣布对 DoorDash 部分高管与董事展开调查：是否「未能以可接受的方式管理公司、违反受托责任（fiduciary duties），致公司及股东受损」</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>关联事件</td><td>调查明确锚定 <strong>9/22 的 NYC $131.5M 和解</strong>（骑手少付工资）——即把「管理层导致公司支付 $131.5M」本身作为受托责任问题</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>性质</td><td>律所「investor alert」类调查（股东派生诉讼的前置筛选动作），非常见意义上针对投资者的证券集体诉讼；是否成案、能否通过利益历史悠久性等门槛，均无时间表</td><td><span class="src-badge src-e">推算</span></td></tr>
+<tr><td>解读</td><td>NYC 和解的成本形态从「一次性现金 $131.5M + 3 年监督期」扩展出第二层——<strong>治理与诉讼暴露</strong>。金额层面是尾部变量；信号层面它把 9 月的和解与公司治理正式挂钩，为后续原告律师提供模板</td><td><span class="src-badge src-e">推算</span></td></tr>
+</tbody>
+</table></div>
+<h3>7.2 其余政策线（沿用 + 时效核对）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>风险项</th><th>现状（含日期）</th><th>影响强度</th></tr></thead>
+<tbody>
+<tr><td>NYC 骑手最低时薪和解</td><td>$131.5M 和解（9/22 签署）：$115M+ 直接赔付工人、罚款约 $11.3M；3 年监督期；10 月下旬起 DCWP 向 2022/4–2026/6 期间被少付的工人逐人发送补偿邮件——<strong>本期窗口内未见执行进度的官方更新</strong>（时效：可能存在未检索到的动态）；衍生：Scott+Scott 调查（7.1）</td><td><strong>高</strong>（已落地、进入执行）</td></tr>
+<tr><td>DC 配送税</td><td>10/1 起对第三方配送征收 ≥20 美分/单（含杂货与处方药配送）；公司同日撤回 H.R. 9720 支持并转向「豁免 SNAP + 社区投资」的缓和路径（上期已展开）。价格传导如何分摊，将在 Q4 DC 订单数据里留下第一个可观测样本——<strong>本期尚无可读数据</strong></td><td>低→中（单城成本可计量，扩散是风险）</td></tr>
+<tr><td>监控/算法定价立法</td><td>西雅图「监控定价」禁令 + 24 州 40 项法案 + 联邦 Goldman 法案与 FTC 程序在推（上期口径，本期未见新进展——<span class="src-badge src-t">时效</span>）</td><td>中（立法阶段多为提案）</td></tr>
+<tr><td>零工就业分类</td><td>加州 Prop 22 框架存续、无新裁决；NYC 最低时薪标准是全美最严执行样本</td><td>中（结构性、长期）</td></tr>
+<tr><td>代理购物 / AI 准入立法</td><td>Amazon–Muse 之争把「平台可否拒绝代理」推到合同法与潜在立法的交叉点；无现行法案直接约束 DoorDash；DoorDash 以官方接入（Ordering Connector）主动规避了「封锁是否合法」的部分争议</td><td>低（远期、双向）</td></tr>
+</tbody>
+</table></div>
+<p><strong>传导强度排序一句话</strong>：NYC 和解的执行（Q4 补偿发放 + 3 年监督期）与其衍生调查（Scott+Scott）是当前唯一活跃的政策-治理链条；配送税与算法立法是「可计量但可扩散」的中层风险；代理准入之争因公司的官方接入策略而降低了立法层面的暴露。<strong>监测清单</strong>：① 10 月下旬 NYC 补偿邮件的实际发出与领取率；② Scott+Scott 调查是否升级为正式派生诉讼（以及是否有第二家律所跟进）；③ 是否出现第二个城市/州发起同类调查或开征配送税；④ 西雅图禁令实施细则与联邦层面 agentic commerce 立法动议。</p>
+</div>
+<div class="card" id="sec8">
+<h2>八、治理与内部人动态 — 卖出量级骤降：CFO 一笔 $0.2M</h2>
+<h3>8.1 本期新增：CFO Inukonda Form 4（10/12 交易，10/14 披露，直读 XML）<span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th>日期（交易）</th><th>内部人</th><th>内容</th><th>金额</th><th>计划依据</th></tr></thead>
+<tbody>
+<tr><td>10/12</td><td>Ravi Inukonda（CFO）</td><td>RSU 归属 1,017 股 @ $7.66（M 代码），同日全部卖出 @ $195.00（S 代码）</td><td>$0.20M</td><td>10b5-1（2025/9/2 采纳）</td></tr>
+</tbody>
+</table></div>
+<h3>8.2 内部人减持全景（2026/08–10，Form 4/144 汇总）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>时间</th><th>内部人</th><th>金额</th></tr></thead>
+<tbody>
+<tr><td>8/20 + 8/25</td><td>Adarkar（总裁 &amp; COO）</td><td>$16.59M</td></tr>
+<tr><td>9/1–9/4（集群）</td><td>Tang / Inukonda / Xu / Fang</td><td>$16.89M 合计</td></tr>
+<tr><td>9/17</td><td>Yandell（首席商务官）</td><td>$0.44M</td></tr>
+<tr><td>9/28–10/2（上期）</td><td>Adarkar / Fang / Yandell / Tang</td><td>$7.20M 合计</td></tr>
+<tr><td><strong>10/12（本期）</strong></td><td>Inukonda（CFO）</td><td><strong>$0.20M</strong></td></tr>
+</tbody>
+</table></div>
+<p><strong>性质判读（本期更新）</strong>：8 月以来累计高管卖出约 <strong>$41.3M</strong>。边际变化：<strong>10 月中旬的卖出量级骤降至 $0.2M（RSU 归属后的机械性卖出），且 10/12 成交价 $195 高于上期集群的 $180.9–186.2</strong>——「$180 下方是否重新大额申报」这一上期观察项，本窗口的答案是「没有」。样本仅一笔、时间仅一周余，不能据此下方向性结论，但卖出节奏在 Q3 财报前的静默窗口收敛，与「财报真空期高管降低交易活动」的常见模式一致。<span class="src-badge src-e">推算</span></p>
+<h3>8.3 资本回报与公司行为（沿用，无新披露）</h3>
+<p>回购：Q2 单季 $887M（Q1 $162M），上半年累计约 $1,049M（$5B 授权框架内）；Q3 数据待 11/4 财报。<span class="src-badge src-s">一手</span> 并购支出：$425M（Grubhub Campus $300M + Wonder 投资 $125M），预计 2027 年初前交割，本期无交割进展披露。监管支出：$131.5M NYC 和解（3 年监督期）。治理结构：内华达迁册已于 9/18 生效，双层股权不变。<span class="src-badge src-s">一手</span> 运营扩张：印度 Hyderabad GCC（9/30 开幕，两年 3,000 岗位）——成本侧的结构性布局，方向与「把客服/运营迁向低成本地区」一致，对公司利润率的净影响无量化披露。<span class="src-badge src-2">二手</span></p>
+</div>
+<div class="card" id="sec9">
+<h2>九、估值分析</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>数值（10/20，$191.67）</th><th>解读</th></tr></thead>
+<tbody>
+<tr><td>Trailing P/E <span class="src-badge src-e">推算</span></td><td>≈ 98.8x（stockanalysis 100.65x）</td><td>TTM GAAP 净利 $841M，分母小导致 PE 失真</td></tr>
+<tr><td>Forward P/E <span class="src-badge src-2">二手</span></td><td>28.4x（stockanalysis 口径）</td><td>聚合商 NTM EPS 估计口径分歧大（上期并列 23.8–28.4x），不采信单值；按 Yahoo 一致预期 EPS FY26E $2.58 / FY27E $4.50 算为 <span class="src-badge src-e">推算</span> <strong>74.3x / 42.6x</strong></td></tr>
+<tr><td>TTM P/S <span class="src-badge src-e">推算</span></td><td>5.23x</td><td>8 月末 6.32x → 9/28 4.86x → 10/9 5.36x → 本期 5.23x：本月净变化 ≈ -0.13x，股价与基本面输入都未前进</td></tr>
+<tr><td>P/B <span class="src-badge src-2">二手</span></td><td>≈ 8.4x</td><td>轻资产平台，参考意义有限；P/有形账面 ≈ 34x（商誉+无形占总资产 38%）</td></tr>
+<tr><td>EV / TTM Adj. EBITDA <span class="src-badge src-e">推算</span></td><td>≈ 25.3x</td><td>EV ≈$81.0B ÷ TTM Adj. EBITDA ≈$3.20B（FY25 $2.78B − H1'25 $1.245B + H1'26 $1.668B）</td></tr>
+<tr><td>P/FCF / EV/FCF <span class="src-badge src-2">二手</span></td><td>31.9x / 30.8x</td><td>FCF 收益率 ≈ 3.1%（TTM FCF $2.60B，stockanalysis 口径）；另一口径（FY25 $1.83B − H1'25 $0.849B + H1'26 $1.162B = $2.14B）则 ≈ 3.9%。口径分歧大，如实并列</td></tr>
+<tr><td>股息率</td><td>0%（不派息）</td><td>美股不使用融资，不做「股息率 vs 融资利率」比较；0 派息下股东回报完全依赖增长与回购</td></tr>
+<tr><td>ROIC vs WACC <span class="src-badge src-2">二手</span> <span class="src-badge src-t">时效</span></td><td>10.57% vs ≈13.6%</td><td>ROIC &lt; WACC——当前资本回报尚未跑赢资本成本（stockanalysis WACC 口径，沿用）</td></tr>
+<tr><td>10 年期美债 <span class="src-badge src-2">二手</span></td><td>5.12%（10/20）</td><td>自 10/9 的 5.24% 回落，绝对水平仍高；FCF 收益率 3.1–3.9% 对无风险利率为负溢价 <span class="src-badge src-e">推算</span></td></tr>
+<tr><td>Beta / 空头 <span class="src-badge src-2">二手</span></td><td>1.89（5Y）/ 15.74M 股</td><td>空头占比自上月 16.30M 股续降至 15.74M——连续第二期回补</td></tr>
+</tbody>
+</table></div>
+<h3>9.1 估值框架与本期边际变化</h3>
+<p><strong>PE 失真，P/S + GOV 增速是主锚</strong>：2025 年刚实现首个全年 GAAP 盈利（净利率约 0.9%），对「刚过盈利拐点」的成长股，P/S 与 GOV 增速比 PE 更有意义。P/S 5.23x 处于 2022–23 年底部（≈3x）与 2021 IPO 峰值（&gt;20x）之间的偏低区间中段（定性推算，美股缺免费精确历史分位接口，不可作为精确百分位引用）。<span class="src-badge src-e">推算</span></p>
+<p><strong>上期留下的「同一份信息集上的两次定价」，本期的答案是横盘</strong>：P/S 从 5.36x 微降至 5.23x——10 月中旬的科技股抛售把上期回补的 0.5x 又吐回了约 0.13x。市场在本期既没有为「入口可保留」的新证据（MCP 接入）加价，也没有为「代理压力主流化」（WSJ 报道）减价——两边的证据都被留到 11/4 之后处理。<span class="src-badge src-e">推算</span></p>
+<p><strong>ROIC &lt; WACC 仍是估值层面最硬的约束</strong>：10.57% vs ≈13.6%，再投资尚未创造经济利润；回购（Q2 $887M）+ 并购（$425M）+ 赔付（$131.5M）叠加后，「利润兑现」的门槛没有降低。<span class="src-badge src-2">二手</span></p>
+</div>
+<div class="card" id="sec10">
+<h2>十、多空核心分歧</h2>
+<div class="two-col">
+<div>
+<h4 style="color:var(--green)"><span class="tag tag-bull">多方</span>逻辑</h4>
+<ul>
+<li><strong>抛售周相对抗跌</strong>：QQQ -4.5%、META -3.4%、UBER -3.6% 的窗口里 DASH 仅 -2.5%，且空头连续第二期回补（16.30M → 15.74M 股）——抛压边际减弱。</li>
+<li><strong>入口之争的第三条路</strong>：Ordering Connector 把「代理接入」产品化（MCP 开放协议、五家 beta 企业），与 Skip the App（自建短信入口）、Amazon 封锁 Muse（拒绝先例）合起来——平台手里的选项比 9 月市场定价时更多。</li>
+<li><strong>基本面输入依旧扎实</strong>：Q2 GOV +36%、NRM 13.5%、Contribution Margin 5.0%、Q3 指引 $33–34B 维持；11/4 财报日已确认。</li>
+<li><strong>卖方共识未跟随股价下修</strong>：Goldman 重申 Buy $280（约 10/13）；共识均值 $254.95（MarketBeat，Moderate Buy），较现价隐含 +33%。</li>
+<li><strong>履约与成本端的期权在加厚</strong>：FAA Part 135 到手（7 月）、无人机试点在北加州铺开、印度 GCC 降低运营成本结构。</li>
+</ul>
+</div>
+<div>
+<h4 style="color:var(--red)"><span class="tag tag-bear">空方</span>逻辑</h4>
+<ul>
+<li><strong>横盘本身没有证据价值</strong>：-2.5% 是跟着大盘走的贝塔（QQQ -4.5%），不是独立定价；本期零新财务数据，11/4 之前「横盘等待」与「反弹失败」不可区分。</li>
+<li><strong>代理压力在主流化而非消退</strong>：WSJ 报道 Muse / OpenAI Dots 正在给数百万用户下单——代理商业进入实操阶段；Muse 未让步，消费者端的「接入条款」仍无案例。</li>
+<li><strong>Ordering Connector 的含金量未证实</strong>：企业订餐场景量级无法估计、商业条款未披露——「第三条路」目前是产品发布，不是收入。</li>
+<li><strong>ROIC 10.57% &lt; WACC 13.6%</strong>：回购 + 并购 + 赔付三线并进，再投资尚未创造经济利润；GAAP 净利率（Q2）4.5% 距多头模型要求的中高双位数仍远。</li>
+<li><strong>FCF 收益率对无风险利率为负溢价</strong>：3.1–3.9% vs 10 年期 5.12%；估值对利率与增长的双敏感未解除。</li>
+<li><strong>治理暴露出现第二层</strong>：Scott+Scott 就 NYC 和解调查高管受托责任——$131.5M 之外，和解的诉讼尾巴开始成形。</li>
+</ul>
+</div>
+</div>
+<h3>10.1 核心争议焦点</h3>
+<p>三期前把问题收敛为两句：「兑现的增长里有多少能在监管收紧后保留下来」+「保留下来的增长里，有多少入口还属于 DoorDash」。本期两句的形态：<strong>第一句进入执行与衍生期</strong>（NYC 补偿 + Scott+Scott 调查）；<strong>第二句多了一种结局可选</strong>（拒绝 / 被绕开 / 官方接入），但三种结局各自的收入含义都还没有数据。裁决点仍收敛到同一场考试：<strong>11/4 的 Q3 财报电话会</strong>——GOV/NRM/margin 的兑现度，与管理层对代理流量、Ordering Connector、短信入口的任何量化口径。</p>
+<h3>10.2 裁决指标（谁对谁错看这几个）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>多方成立</th><th>空方成立</th></tr></thead>
+<tbody>
+<tr><td>Q3 GOV / Adj. EBITDA（11/4）</td><td>GOV 落在 $33–34B 且 Adj. EBITDA 兑现 $950M–1.1B（margin 2.8–3.3%）</td><td>GOV 低于 $33B 或 margin 环比回落</td></tr>
+<tr><td>代理流量口径（11/4 电话会）</td><td>首次量化 agentic 流量并论证其为增量/接入型</td><td>回避量化，或披露显示外部代理订单占比可见上升</td></tr>
+<tr><td>Ordering Connector 进展</td><td>披露接入企业数/订单量级/计费模式</td><td>停留在一篇博客，无任何运营数据</td></tr>
+<tr><td>NRM 站稳 13.5%</td><td>环比持平或回升</td><td>再下滑（Q1 式稀释重演）</td></tr>
+<tr><td>NYC 补偿执行</td><td>平稳发放、无第二城市效仿、Scott+Scott 不升级</td><td>执行纠纷 / 派生诉讼立案 / 第二城市效仿</td></tr>
+<tr><td>代理 vs 平台的下一案例</td><td>消费者代理以「接入 + 分成」合规化（条款由平台定）</td><td>Muse 类代理在消费场景规模化绕开且平台无反制</td></tr>
+<tr><td>卖方模型是否刷新</td><td>财报后目标价维持或上调</td><td>财报后集中下调（监管成本 + 代理分流首次进模型）</td></tr>
+<tr><td>利率与估值</td><td>增长兑现主导估值修复</td><td>长端利率再度上行压制 FCF 负溢价的成长股</td></tr>
+</tbody>
+</table></div>
+</div>
+<div class="card" id="sec11">
+<h2>十一、华尔街分析师全景 <span class="src-badge src-2">二手</span></h2>
+<h3>11.1 本期变动：Goldman 重申；共识横盘</h3>
+<p>窗口内（10/11–10/20）捕获两处动态：<strong>① Goldman Sachs（Eric Sheridan）重申 Buy、目标价 $280</strong>（约 10/13，TipRanks 口径）<span class="src-badge src-2">二手</span>——重申而非调整；<strong>② MarketBeat 口径共识 $254.95（Moderate Buy）</strong>，与上期 TickFlow $255.47 基本持平；另见 MarketBeat 标记 DASH 出现异常放大的期权成交量（约 10/19–20）<span class="src-badge src-2">二手</span>——财报前的仓位行为，方向不明。非券商口径：TIKR 分析文章（约 10/19）按其模型（营收 CAGR 23%、经营利润率 5.3%、退出 P/E 28.1x、至 2028 年末）得出目标价 $211、隐含 +11.6%——<strong>明显低于券商共识</strong>，是「模型假设更保守」的样本而非评级变化，如实并列。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>目标价 vs 现价（10/20 $191.67）</th><th>数值</th></tr></thead>
+<tbody>
+<tr><td>最高目标价 <span class="src-badge src-2">二手</span></td><td>$300（Evercore ISI，8–9 月设定）</td></tr>
+<tr><td>共识均值（MarketBeat，本期）</td><td>$254.95（隐含 +33.0%）</td></tr>
+<tr><td>非券商模型（TIKR，约 10/19）</td><td>$211（隐含 +10.1%）</td></tr>
+<tr><td>最低目标价 <span class="src-badge src-2">二手</span></td><td>$220（Wedbush / Roth MKM）；Wells Fargo $230</td></tr>
+<tr><td>现价（10/20）</td><td>$191.67</td></tr>
+</tbody>
+</table></div>
+<p>现价低于最低目标价 12.9%（上期 10/9 时为低于 10.6%）<span class="src-badge src-e">推算</span>。谨慎读法沿用：<strong>多数目标价设定于 8 月初至 9 月上旬，早于 9/22 和解、9/28 大跌与代理叙事，卖方模型输入可能尚未刷新</strong><span class="src-badge src-t">时效</span>。若 11 月财报后出现集中下调，即为「监管成本 + 代理分流」首次进入卖方模型的信号；反之若维持，则卖方与 9 月卖出资金的分裂将持续。</p>
+<h3>11.2 逐家一览（沿用上期，本期仅 Goldman 重申）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>评级</th><th>目标价</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>Evercore ISI（M. Mahaney）</td><td>Outperform</td><td>$300</td><td>看 H2 2026 为 EBITDA margin 拐点（区间上沿）</td></tr>
+<tr><td>UBS</td><td>Buy</td><td>$295</td><td>9 月维持，看广告增长潜力</td></tr>
+<tr><td>StoneX</td><td>Buy</td><td>$295</td><td>9/8 重申</td></tr>
+<tr><td>BMO Capital</td><td>Buy</td><td>$293</td><td>延续</td></tr>
+<tr><td>Goldman Sachs（E. Sheridan）</td><td>Buy</td><td>$280</td><td><strong>本期重申（约 10/13）</strong></td></tr>
+<tr><td>Scotiabank</td><td>Sector Outperform</td><td>$275</td><td>9/9 首次覆盖</td></tr>
+<tr><td>Rosenblatt</td><td>Buy</td><td>$270</td><td>9/1 首次覆盖</td></tr>
+<tr><td>Bernstein SocGen</td><td>Outperform</td><td>$270</td><td>列入「回调即买入」名单</td></tr>
+<tr><td>Argus</td><td>Buy</td><td>$270</td><td>8/27 大幅上调（原 $190）</td></tr>
+<tr><td>Susquehanna</td><td>Positive</td><td>$250</td><td>8 月末上调（原 $225）</td></tr>
+<tr><td>Wells Fargo（K. Gawrelski）</td><td>Equal-Weight</td><td>$230（10/5 上修）</td><td>「Cautious」标签</td></tr>
+<tr><td>Wedbush / Roth MKM</td><td>Neutral</td><td>$220</td><td>延续</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">目标价为分析师主观预测，不构成本报告立场；多数设定于 9/22 和解与 9/28 大跌之前，时效风险见上。</p>
+</div>
+<div class="card" id="sec12">
+<h2>十二、Reddit / 个人投资者讨论 <span class="src-badge src-3">三方</span></h2>
+<p><strong>本期取数状态（如实说明）</strong>：r/doordash 一手 RSS 成功（25 帖，10/19–10/21 样本）；投资者端（关键词检索 RSS）429 限流，投资者样本缺口连续第三期，如实标注。X 检索命中的仍以新闻转载为主，无有效独立讨论信号。</p>
+<h3>12.1 消费者/骑手端（r/doordash，一手 RSS）</h3>
+<ul>
+<li><strong>履约与客服抱怨仍是基本盘</strong>：样本中「订单取消不退款」「配送错漏」「客服/AI 应答对抗」类占多数（「DoorDash canceled my order and is now refusing to refund me」「Paid $62 for groceries, got $0 of groceries」「AI was trying real hard to fight me」）——与前三期方向连续。<span class="src-badge src-3">三方</span></li>
+<li><strong>骑手端的两个新观察</strong>：① <strong>第三方收益 overlay 应用开始出现</strong>（两个独立帖推广「实时收益数据 overlay」的测试邀请）——骑手工具生态在平台官方数据之外自发生长，对平台的派单透明度是长期压力信号；② 派单安全（被引导去不安全街区）与接单率惩罚机制的不满持续。<span class="src-badge src-3">三方</span></li>
+<li><strong>一个孤例帖</strong>：「Did DoorDash really die in NYC」（10/20，晚 8 点语境）——与 NYC 最低时薪执行期重合，但样本量 1，且可能描述的是单晚体验，不作任何结论，仅记录。<span class="src-badge src-3">三方</span></li>
+<li><strong>无 AI / 入口相关讨论</strong>：Skip the App、Ordering Connector、代理等话题在消费者/骑手端零讨论——与上两期一致：入口之争目前是机构/研究侧叙事，未下沉为日常用户话题。</li>
+</ul>
+<h3>12.2 投资者端（样本缺口，如实说明）</h3>
+<p>与前三期一致：投资者社区对 DASH 的即时讨论样本不可得（429 限流）。上期的观察仍然成立：<strong>「AI 分流 / 入口之争」尚未下沉为散户话题；消费者端对股价无感</strong>——平台用户群与股东叙事脱节，这本身是多空都可用的一条证据。<span class="src-badge src-2">二手</span>（基于可得样本的推断）</p>
+<p class="caveat-inline">Reddit 为三方来源，情绪噪音大、样本自选偏差强，仅供观察市场叙事与产品口碑，不纳入估值判断。</p>
+</div>
+<div class="card" id="sec13">
+<h2>十三、综合判断框架</h2>
+<h3>13.1 三大师框架交叉验证</h3>
+<p><strong>巴菲特（护城河 + 管理层品质）</strong>：问「竞争对手为什么无法复制」的答案仍是网络密度；本期护城河的新维度是<strong>入口层的选项宽度</strong>——拒绝（效仿 Amazon）、自建（Skip the App）、开放（Ordering Connector）三种姿态公司都具备了产品或先例。管理层品质一栏本期记两笔正面（卖出量级骤降至 $0.2M、财报前静默期收敛；Ordering Connector 把被动挨绕的情景主动转化为产品）与两笔负面（Scott+Scott 受托责任调查——NYC 和解的治理尾巴；Grubhub Campus / Wonder 交割仍无进展披露）——两两并存，如实并列。</p>
+<p><strong>芒格（逆向 + 第二层思维）</strong>：先问「什么会毁掉它」的顺序本期不变——① 入口被通用代理绕开（本期选项宽度增加，但消费者端的结局仍无案例）→ ② 监管成本的存量执行（NYC 3 年监督期 + 补偿发放 + 衍生调查）→ ③ Walmart 式既有网络的包抄 → ④ 零工成本结构性抬升 → AV 被抢先。第二层思维：本期的横盘里，第一层读者看到「反弹失败」；第二层应当问「在 QQQ -4.5% 的一周里 DASH 只跌 2.5%、空头连降两期，是谁在承接」——以及反向的「如果 11/4 数据走弱，承接者会以什么速度撤退」。两边的答案都不在今天的报表里。<span class="src-badge src-e">推算</span></p>
+<p><strong>格雷厄姆（安全边际）</strong>：P/S 5.23x（上市以来偏低区间中段）、Forward P/E 28.4x（聚合商口径，分歧大）、FCF 收益率 3.1–3.9%（对 10 年期 5.12% 为负溢价）、净现金 $2.0–3.5B 与 3 年监督期 + 受托责任调查并存。安全边际的位置与上期基本持平（P/S -0.13x）——「价格横在原地，证据状态也没有前进」。<span class="src-badge src-e">推算</span></p>
+<h3>13.2 四情景框架（概率为本文主观判断）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>概率</th><th>核心假设</th><th>对估值的含义</th></tr></thead>
+<tbody>
+<tr><td>① 乐观</td><td>~25%</td><td>Q3 兑现指引；管理层量化代理流量并证明其为增量/接入型；NYC 执行平稳、调查不升级；Walmart 合单履约不经济；Grubhub Campus 顺利交割</td><td>margin 扩张兑现，P/S 5.23x 被增长消化，估值修复弹性大</td></tr>
+<tr><td>② 基准</td><td>~45%</td><td>GOV 增速 15–18%；Deliveroo $200M EBITDA 兑现；监管成本以「小幅、分散、逐步」方式进入费用率；代理分流停留在叙事层、平台与代理最终走向「接入 + 分成」而非绕开；2027 统一技术栈带来 margin 反转</td><td>估值中低位震荡，靠业绩增长逐步修复回撤</td></tr>
+<tr><td>③ 悲观</td><td>~20%</td><td>GOV 增速降至 ~10%；通用代理在消费场景规模化分流下单入口且平台反制无效；监控定价立法扩散；配送税多城跟进；ROIC 未上穿 WACC</td><td>成长股杀估值继续，P/S 向 3x 区间靠拢</td></tr>
+<tr><td>④ 尾部</td><td>~10%</td><td>核心逻辑被证伪（份额结构性流失 / 零工监管重创履约模型 / 数据资产被立法禁用 / 代理绕开成默认行为且平台沦为无定价权的履约管道）</td><td>逻辑破坏，非单纯估值问题</td></tr>
+</tbody>
+</table></div>
+<p>本期概率维持不变（上期已调整：悲观 25%→20%、基准 40%→45%）。理由（可证伪）：Ordering Connector 是「接入 + 分成」情景（基准）的官方背书，属强化证据；但它是产品发布而非订单数据，且企业场景与消费者场景量级不可比——证据强度不足以支持第二次调整。若 11/4 电话会给出 agentic 流量或 connector 运营数据，该项将重新评估。</p>
+<h3>13.3 上期跟踪清单核对（10/11 → 10/21）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>上期列出的跟踪指标</th><th>本期状态</th></tr></thead>
+<tbody>
+<tr><td>Q3 GOV / Adj. EBITDA / NRM 兑现</td><td>— 待验证：Q3 财报 <strong>11/4 盘后</strong>（已确认），为本期后第 10 个交易日</td></tr>
+<tr><td>NYC 补偿执行（10 月下旬启动）</td><td>— 无官方执行进度更新；<strong>✓ 新增衍生事件：Scott+Scott 受托责任调查</strong>（第七节）</td></tr>
+<tr><td>代理 vs 平台的下一案例</td><td>✓ 两条新证据：① <strong>公司官方 MCP 接入（Ordering Connector）</strong>——「接入+分成」路径获得产品化模板；② <strong>WSJ 报道代理压力主流化</strong>（Muse / OpenAI Dots 给卖家带来新问题）——压力侧继续推进。消费者端的接入案例仍缺</td></tr>
+<tr><td>卖方模型是否刷新</td><td>— Goldman 重申 Buy $280（约 10/13）；共识 $254.95 横盘；TIKR 模型 $211（非券商）并列。刷新与否仍待财报后观察</td></tr>
+<tr><td>内部人行为（$180–190 区间是否放量）</td><td>✓ 未触发：仅 CFO 一笔 $0.2M（@ $195，RSU 归属后机械卖出），量级骤降（第八节）</td></tr>
+<tr><td>配送税扩散</td><td>— 无新进展；DC 税传导待 Q4 数据</td></tr>
+<tr><td>监控定价立法边界</td><td>— 无新进展（时效：可能存在未检索到的动态）</td></tr>
+<tr><td>Walmart Restaurant Delivery</td><td>— 本期无新披露</td></tr>
+<tr><td>利率环境</td><td>— 10 年期 5.24% → 5.12%，仍高（第九节）</td></tr>
+<tr><td>Dash Forward 产品数据</td><td>✓ 部分补齐：Ordering Connector（MCP、五家 beta）、DoorDash Air（Part 135 于 7 月取得、北加州试点、80% 订单可承载）；<strong>仍无运营数据（订单量、转化）</strong>。Skims 10/14 上线（零售扩张续）</td></tr>
+<tr><td>回购执行节奏</td><td>— Q3 数据待财报</td></tr>
+</tbody>
+</table></div>
+<h3>13.4 关键跟踪指标（下一份报告核对清单，按重要性排序）</h3>
+<ul>
+<li><strong>Q3 财报（11/4 盘后）</strong>：GOV 是否落在 $33–34B、Adj. EBITDA 是否兑现 $950M–1.1B、NRM 是否站稳 13.5%、Q4 季节性成本指引；管理层是否量化 NYC 和解对费用率的影响；Grubhub Campus 交割口径；<strong>电话会是否首次给出 agentic 流量占比、Ordering Connector 的运营数据与计费模式</strong>。</li>
+<li><strong>NYC 补偿执行</strong>：26 万工人的逐人邮件与 Q4 现金流出的实际确认；Scott+Scott 调查是否升级为派生诉讼、是否有第二家律所跟进。</li>
+<li><strong>代理 vs 平台的消费者端案例</strong>：Muse 是否被第二个大型平台封锁（或被接入、条款由谁定）；OpenAI Dots 类通用代理在本地配送场景的渗透证据。</li>
+<li><strong>卖方模型是否刷新</strong>：11 月财报后目标价是否集中下调或维持——两种结果都有信息量。</li>
+<li><strong>配送税扩散</strong>：DC 税对 Q4 DC 订单的可测影响；其他城市是否跟进。</li>
+<li><strong>无人机与运营扩张</strong>：DoorDash Air 试点订单量与 BVLOS 进展；印度 GCC 的人员爬坡。</li>
+<li><strong>利率环境</strong>：10 年期美债（现 5.12%）走向——FCF 负溢价的成长股对该变量敏感。</li>
+<li><strong>内部人行为</strong>：Q3 财报静默期后（11 月中下旬）是否出现新的大额拟售申报；Q3 回购是否维持对冲节奏。</li>
+</ul>
+<h3>13.5 总结</h3>
+<p>① <strong>本期是「等待中的横盘」</strong>：基本面输入零变化，窗口 -2.5% 全部由大盘贝塔与科技股抛售解释（QQQ -4.5%），无独立行情、无评级转向、无新财务数据。上期的 +10.2% 回补与本期的横盘，加起来仍是对同一份信息集的两次定价，裁决都在 11/4。</p>
+<p>② <strong>入口之争从「攻防战」走向「三种结局并存」</strong>：拒绝（Amazon 封锁 Muse 先例）、自建（Skip the App 短信入口）、官方开放（Ordering Connector，MCP 协议、五家 beta 企业）——DoorDash 把第三种结局做成了产品，这是本期真正的结构性增量；但它是发布不是数据，商业条款与订单量级均未披露，代理压力的主流化（WSJ 报道）同时在进行。博弈的裁决变量（代理流量占比、connector 运营数据、短信入口转化）将在 11/4 电话会首次进入披露视野。</p>
+<p>③ <strong>政策-治理链条长出了第二层</strong>：NYC 和解从「一次性现金 + 监督期」扩展出「高管受托责任调查」（Scott+Scott）；补偿发放进入 10 月下旬执行窗口。估值层面的硬约束（ROIC 10.57% &lt; WACC ≈13.6%、FCF 收益率对 10 年期美债负溢价）没有变化。所有验证点集中在 11/4 的 Q3 财报：GOV/NRM/margin 的兑现度，与管理层敢不敢正面回答「代理流量占比」。</p>
+</div>
+<div class="card data-note" id="sec-data">
+<h2>数据说明</h2>
+<h3>① 数据口径与方法论</h3>
+<ul>
+<li><strong>股本与市值</strong>：433,295,654 股 = Class A 408,992,917 + Class B 24,302,737（Q2 10-Q 封面页，截至 2026/07/30 <span class="src-badge src-s">一手</span>）。市值 ≈ 433.30M × $191.67 = $83.05B；EV 按 stockanalysis 净现金口径 $2.04B 计算 ≈ $81.0B；净现金另一口径（含长短期投资扣可转债）≈ $3.5B，凡涉净现金论断一律并列 $2.0–3.5B 区间。</li>
+<li><strong>Forward P/E 的口径分歧</strong>：stockanalysis 28.4x（其 NTM EPS 估计，隐含 ≈$6.7）；按 Yahoo 一致预期 EPS（FY2026E $2.58 / FY2027E $4.50）另算为 74.3x / 42.6x。两口径并列，不采信单值。</li>
+<li><strong>TTM Adj. EBITDA / TTM FCF</strong>（推算）：TTM Adj. EBITDA = FY2025 $2.78B − H1'25 $1.245B + H1'26 $1.668B = $3.20B。TTM FCF 用 stockanalysis 口径 $2.60B（另一口径 $2.14B 并列）。</li>
+<li><strong>52 周区间口径</strong>：本期用 yfinance 收盘价口径 $146.60–266.06；上期报告的 $143.30–285.50 为聚合商口径（含盘中价）。两者口径不同，引用时不可混用（详见 ③）。</li>
+<li><strong>利率</strong>：10 年期美债取 yfinance ^TNX 收盘（10/20 为 5.12%）。</li>
+<li><strong>行情时间戳</strong>：全部价格取 10/20 美东收盘；窗口收益（-2.5% 等）为 10/9→10/20 收盘对收盘 <span class="src-badge src-e">推算</span>（yfinance）。美股单一市场，无跨市场混算问题。</li>
+</ul>
+<h3>② 与上期报告（2026-10-11）的变化</h3>
+<ul>
+<li>价格：$196.50（10/9）→ $191.67（10/20），主线从「叙事折价回补」变为「抛售周横盘」。</li>
+<li>新增事件：Ordering Connector（MCP 企业级接入，官方材料本期补齐覆盖，第六节）、WSJ 代理压力报道、Scott+Scott 受托责任调查（第七节）、CFO Form 4 $0.2M（第八节）、Goldman 重申 Buy $280（约 10/13）、MarketBeat 期权异常放量与共识 $254.95、TIKR 模型目标价 $211、Skims 上线（10/14）、印度 Hyderabad GCC 与 FAA Part 135 媒体跟进（均为 9/30 披露的后续覆盖）。</li>
+<li>框架变化：四情景概率维持不变（调整理由见 13.2 表下注）；跟踪清单新增 Ordering Connector 运营数据与调查升级两项。</li>
+</ul>
+<h3>③ 取数更正记录</h3>
+<ul>
+<li><strong>FAA Part 135 时间线</strong>：部分近期媒体标题读作「刚取得 FAA 批准」（如 Simply Wall St）；Commercial UAV News 明确写「DoorDash received FAA Part 135 certification <strong>in July</strong>（美国第 8 家无人机运营商）」，官方 9/30 博客随 DoorDash Air 系统一并披露。本报告采用「7 月取得、9/30 披露、10 月中旬媒体跟进」的时间线，并在正文标注 BVLOS 尚未取得。</li>
+<li><strong>52 周区间口径切换</strong>：上期沿用聚合商口径 $143.30–285.50（含盘中），本期改为 yfinance 收盘口径 $146.60–266.06。两期数据不可直接对比「距高点 -31.2% → -28.0%」的改善幅度（口径不同），故本报告不再做该跨期比较。</li>
+<li><strong>印度 GCC 日期</strong>：官方新闻列表将其归入 Dash Forward 期间材料；开幕日期以 Telangana 政府（经 IBEF/Reuters 转述）口径 9/30 为准，全部为二手来源。</li>
+</ul>
+<h3>④ 已知局限</h3>
+<ul>
+<li>Ordering Connector 的商业条款（抽成、计费、数据归属）未披露；其「企业场景」订单量级与消费者端不可比，本期所有战略含义均为定性推算。</li>
+<li>Scott+Scott 调查的准确发布日期未精确核实（检索窗口内的 Business Wire / Morningstar 转载），仅可确认在 10 月中下旬；其为律所自宣材料，单方口径。</li>
+<li>FAA Part 135「7 月取得」为二手报道口径（Commercial UAV），未在官方博客原文中直接核实到月份。</li>
+<li>投资者端 Reddit 连续第三期限流，10/11–10/20 的散户反应存在取证空白。</li>
+<li>印度 GCC 的岗位数/时间表为 Telangana 政府口径（经转述），无公司一手文件对照。</li>
+<li>Wells Fargo「Cautious」标签沿用上期（取自 MarketBeat 摘要，研报原文未取得）。</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+DoorDash%EF%BC%88DASH%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ADoorDash%EF%BC%88DASH%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-21%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

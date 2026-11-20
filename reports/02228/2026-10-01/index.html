@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>晶泰控股 2026-10-01 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-1 { background: #d4edda; color: #1e5c2e; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+  
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: 10px; padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: 10px; padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+  .bull-bear-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 16px 0; }
+  @media (max-width: 900px) { .bull-bear-grid { grid-template-columns: 1fr; } }
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; max-width: 220px; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .lg-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .chart-note { font-size: 11.5px; color: var(--text-muted); line-height: 1.6; margin-top: 6px; }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/02228/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%99%B6%E6%B3%B0%E6%8E%A7%E8%82%A1%EF%BC%8802228%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%99%B6%E6%B3%B0%E6%8E%A7%E8%82%A1%EF%BC%8802228%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-01%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">02228 <span>·</span> 2026-10-01 <span>·</span> PC 完整版</div><h1>晶泰控股</h1><p>数据截至 2026-09-30 收盘（10-01 港股休市）· 港股 HKD 计价 · 财报以 RMB 记账 · 本报告为该标的首次深度分析</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式 — 怎么赚钱</a></li><li><a href="#core-metric">三、核心指标 — 剔除大单后的内生收入增长</a></li><li><a href="#financials">四、最新财务数据</a></li><li><a href="#capital">五、资金安全与摊薄史</a></li><li><a href="#deals">六、重大合作与自有管线</a></li><li><a href="#geopolitics">七、地缘与政策风险 — 中美双重敞口的「卖铲人」</a></li><li><a href="#valuation">估值分析</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">券商分析师全景</a></li><li><a href="#community">社区讨论：雪球 / 散户讨论</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>数据可靠性声明</h2>
+<div class="stale-warning">⚠️ 时效提示：2026 中期业绩（截至 2026-06-30）为<strong>未经审核</strong>数据（已经审核委员会审阅），下一份强制披露为 2026 年第三季度/年度业绩。行情快照为 9/30 收盘价（8.18 HKD），10-01 港股国庆休市。2026 年 9/24 公告的 KQTD-126 FDA IND 提交，其权属结构（自有管线 vs 合资/合作管线）<strong>公开信息未完全明确</strong>，本报告按「待核实」处理。卖方覆盖稀少，估值判断缺少机构一致预期锚。</div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> HKEXnews披露文件（已下载至本地） |
+    <span class="src-badge src-2">二手</span> 聚合平台/分析师报告/新闻通稿 |
+    <span class="src-badge src-3">三方</span> 零售投资者/社交媒体 |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>投资分析/02228-晶泰控股/Filings/</code> — 02228_2026年_中期报告_2026-09-09.pdf · 02228_2026中期_业绩公告_2026-08-19.pdf · 02228_2025年度_业绩公告_2026-03-25.pdf</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th colspan="2">基本信息 <span class="src-badge src-s">一手</span> / <span class="src-badge src-2">二手</span></th></tr></thead>
+<tbody>
+<tr><td>公司全称</td><td>XtalPi Holdings Limited（晶泰控股），2015 年由三位 MIT 物理学者创立（温书豪/马健/赖力鹏），开曼注册，深圳起家 <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>上市信息</td><td>2024-06-13 以 <strong>18C 特专科技规则</strong>在港交所主板上市，IPO 价 5.28 HKD <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>指数/通道</td><td>恒生综合指数、MSCI 中国指数成员 → <strong>港股通标的</strong>（内地资金可直接买入，雪球页面带港股通/可卖空标签）<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>总股本</td><td>约 43.01 亿股（上市以来经三次配售 + 可转债转股权扩大）<span class="src-badge src-s">一手</span></td></tr>
+<tr><td>记账货币</td><td><strong>人民币 (RMB)</strong>；股票交易货币为港元 (HKD)——估值换算注意口径</td></tr>
+<tr><td>主业</td><td>把「AI 预测 + 机器人湿实验」打包成研发基础设施，卖给药企/材料/能源/农化客户，同时用同一套能力孵化自有创新药管线（详见下方"大白话拆解"）</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">8.18</div><div class="label">收盘 HKD（2026-09-30，+3.68%）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">351.8亿</div><div class="label">总市值 HKD ≈ 322亿 RMB <span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">3.94亿</div><div class="label">2026H1 收入 RMB（-23.9%，剔除大单基数 +73.8%）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">-2.25亿</div><div class="label">2026H1 净亏损 RMB（上年同期 +0.76亿）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">86.7亿</div><div class="label">流动性资产 RMB（现金+存款+理财）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">6.30–15.12</div><div class="label">52周区间 HKD（现价距高点 -46%）<span class="src-badge src-s">一手</span></div></div>
+</div>
+<div class="quote">大白话一句话：如果说英矽智能是「用 AI 自己造药、把药卖前程」，晶泰更像「<strong>给造药的人卖铲子，顺便自己也挖几口井</strong>」——它把量子物理计算、AI 模型和机器人实验室打包成「研发外包基础设施」，药企付服务费/建设费；同时公司正把赚到的钱和积累的能力，转投到自有创新药管线上（「服务→资产」战略）。它 2025 年账面上盈利过一次（+1.35 亿），但 2026H1 又回到亏损——盈利波动极大，而市值（322 亿 RMB）约为年收入的 40 倍。</div>
+<h3>1.1 与英矽智能（03696）：同市值、不同物种</h3>
+<p style="font-size:13px;">两只股票常被并称为「AI 制药四小龙」，市值几乎一样（均约 350 亿 HKD，2026-09-30），但商业模式是两个物种——这决定了它们对同一组宏观变量的反应完全不同：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>维度</th><th>晶泰控股 02228</th><th>英矽智能 03696</th></tr></thead>
+<tbody>
+<tr><td>收入本质</td><td>研发服务费 + 实验室建设费 + 授权里程碑（<strong>卖铲子</strong>）</td><td>自研管线 License-out 首付款/里程碑（<strong>卖药的前程</strong>）</td></tr>
+<tr><td>2026H1 毛利率</td><td>57.3%（同比 84.1%，下滑）</td><td>90.3%（BD 授权为主，天然高毛利）</td></tr>
+<tr><td>2026H1 盈亏</td><td>-2.25 亿 RMB（经调整 -1.06 亿）</td><td>+3,554 万 USD（经调整 +5,123 万，扭亏）</td></tr>
+<tr><td>收入可预测性</td><td>服务合同有连续性，但大单首付款造成基数剧烈波动</td><td>公司自己声明"无法保证或预测"——纯事件驱动</td></tr>
+<tr><td>资产属性</td><td>现金垫厚（流动性资产 ≈ 市值 27%），类「现金+成长期权」</td><td>单 III 期资产期权，成败决定 10 倍级赔率</td></tr>
+<tr><td>核心风险</td><td>烧钱速度 vs 服务收入增长的赛跑；40x PS 的估值消化</td><td>Rentosertib III 期成败；美国注册路径</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="business">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>二、商业模式 — 怎么赚钱</h2>
+<h3>2.1 两条收入线：一条爆发、一条失速</h3>
+<p style="font-size:13px;">晶泰的收入分两块：<strong>药物发现解决方案</strong>（AI 算法驱动的药物研发服务，含管线授权首付款/里程碑）和 <strong>AI for Science 智慧解决方案</strong>（智能机器人实验室建设/部署 + 智能服务，即「Physical AI 卖铲子」）。近三期披露的分部金额如下：</p>
+<div class="chart">
+<div class="chart-title">分部收入对比：年度口径（亿元 RMB）<span class="src-badge src-s">一手</span></div>
+<div class="col-chart">
+<div class="col-wrap">
+<div class="col"><div class="col-seg" style="height:16px;background:#a7c4a0;" title="药物发现 1.04">1.04</div><div class="col-seg" style="height:26px;background:#2d6a4f;" title="AI4S 1.63">1.63</div><div class="col-label">FY2024<br/>合计 2.66</div></div>
+</div>
+<div class="col-wrap">
+<div class="col"><div class="col-seg" style="height:84px;background:#a7c4a0;" title="药物发现 5.38">5.38</div><div class="col-seg" style="height:41px;background:#2d6a4f;" title="AI4S 2.65">2.65</div><div class="col-label">FY2025<br/>合计 8.03</div></div>
+</div>
+</div>
+<div class="chart-legend"><span class="lg-dot" style="background:#a7c4a0"></span>药物发现解决方案（含授权首付款）  <span class="lg-dot" style="background:#2d6a4f"></span>AI for Science 智慧解决方案（机器人实验室+软件）</div>
+<div class="chart-note">FY2025 药物发现线 +418.9%，其中含 DoveTree 首付款 5,100 万美元（≈3.65 亿 RMB）——<strong>剔除这笔一次性授权收入后，FY2025 经常性收入约 4.4 亿</strong> <span class="src-badge src-e">推算</span></div>
+</div>
+<div class="chart">
+<div class="chart-title">分部收入对比：2026H1 vs 2025H1（亿元 RMB）<span class="src-badge src-s">一手</span></div>
+<div class="col-chart">
+<div class="col-wrap">
+<div class="col"><div class="col-seg" style="height:68px;background:#a7c4a0;">4.35</div><div class="col-seg" style="height:13px;background:#2d6a4f;">0.82</div><div class="col-label">2025H1<br/>合计 5.17</div></div>
+</div>
+<div class="col-wrap">
+<div class="col"><div class="col-seg" style="height:31px;background:#a7c4a0;">2.00</div><div class="col-seg" style="height:30px;background:#2d6a4f;">1.94</div><div class="col-label">2026H1<br/>合计 3.94</div></div>
+</div>
+</div>
+<div class="chart-legend"><span class="lg-dot" style="background:#a7c4a0"></span>药物发现解决方案  <span class="lg-dot" style="background:#2d6a4f"></span>AI4S 智慧解决方案</div>
+<div class="chart-note">药物发现线 -54.0%（上年同期含 DoveTree 首付款 3.65 亿的高基数；本期收到 DoveTree 第二笔 1,900 万美元 ≈1.29 亿）；AI4S 线 <strong>+136.4%</strong>——机器人实验室与智能服务是当前唯一的内生增长引擎。注意：差异在增速，不在方向——两块的收入体量都在向「AI4S 为主」的结构收敛。</div>
+</div>
+<h3>2.2 四层技术架构：卖点不是「AI 算法」，是「算法+机器人+数据的闭环」</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:160px;">架构层</th><th>内容</th><th style="width:200px;">商业化落点</th></tr></thead>
+<tbody>
+<tr><td><strong>Genius Agent 智能中枢</strong></td><td>多智能体调度系统，拆解科研目标、编排科学模型/工具/流程（L1 工具 → L5 泛领域自主的「科学自主发现五级」框架出自其手）</td><td>科研智能体平台，200+ 工具</td></tr>
+<tr><td><strong>Scientific AI 科学智能</strong></td><td>小分子/大分子/多肽/核酸的 AI 预测体系；自进化逆合成系统 SureRoute：350 个真实工业分子评测中化学幻觉率 4.6%（为前沿大模型的 1/6），首条推荐路线准确率 74.3%</td><td>软件订阅 + 项目服务</td></tr>
+<tr><td><strong>Physical AI 物理智能</strong></td><td>全球部署 <strong>300+ 台自动化工作站</strong>、覆盖 20 余类研发场景的智能机器人实验室；既服务内部研发，也对外部署</td><td><strong>实验室建设/部署收入（AI4S 线主体）</strong></td></tr>
+<tr><td><strong>Data Moat 数据底座</strong></td><td>累计沉淀 50 万+ 条真实实验记录（约 80% 为公开文献稀缺的失败负样本），月产 5 万+ 条反应产率数据；服务 100+ 个新药/新材料发现项目</td><td>训练数据壁垒，反哺模型</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;margin-top:8px;">护城河评估（巴菲特框架）：真实壁垒是「<strong>物理闭环数据</strong>」——纯软件 AI 制药公司（多数同行）拿不到 80% 为失败样本的湿实验数据，这是智能体时代最稀缺的训练燃料；300+ 工作站的部署规模有网络密度效应。但要诚实：这条护城河<strong>正在形成而非已经固化</strong>，且 ROE 为负——它尚未转化为盈利能力，只是转化为收入增速。</p>
+<h3>2.3 客户与地区：美国客户是第一大收入来源</h3>
+<div class="chart">
+<div class="chart-title">2026H1 收入按地区（客户账单地址，亿元 RMB）<span class="src-badge src-s">一手</span></div>
+<div class="stacked-bar">
+<div class="seg" style="width:46.8%;background:#2d6a4f;">美国 1.84 亿（46.8%）</div>
+<div class="seg" style="width:40.3%;background:#74a892;color:#fff;">中国内地 1.59 亿（40.3%）</div>
+<div class="seg" style="width:12.9%;background:#c8d8c8;color:#555;">其他 0.51 亿</div>
+</div>
+<div class="chart-note">对比 2025H1：美国 4.13 亿（80%）、内地 0.79 亿（15%）——一年内收入重心大幅向内地迁移，主因上年 DoveTree 首付款计入美国。地区结构本身波动大，取「美国客户深度绑定」这一质即可。</div>
+</div>
+<div class="quote">客户集中度：2026H1 <strong>客户A 一家贡献 1.29 亿 RMB（占总收入 33%）</strong>——即 DoveTree 管线授权的第二笔付款。剔除该笔后客户集中度大幅下降，但「大单驱动」的收入结构未变。创收客户数 2025 年同比 +62%，累计覆盖全球前 20 大药企中的 <strong>17 家</strong> <span class="src-badge src-s">一手</span>。</div>
+</div>
+
+<div class="card" id="core-metric" style="border-left:4px solid var(--accent)">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>三、核心指标 — 剔除大单后的内生收入增长</h2>
+<p style="font-size:13px;">这家公司只有一个真正重要的指标：<strong>剔除管线授权首付款后的经常性收入增速（尤其 AI4S 线）</strong>。原因：当前 40x+ 的 PS 估值，只有「内生收入每年翻倍级增长」这一条路径能消化；首付款/里程碑是事件、不可外推（DoveTree 首付款贡献了 FY2025 收入的 45%），若内生增长失速，估值与收入将同时坍塌。</p>
+<h3>3.1 AI4S 智慧解决方案：+136.4% 的内生引擎</h3>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:180px;"><strong>2026H1 收入</strong></td><td>1.935 亿 RMB（+136.4%），机器人实验室部署 + 智能服务双驱动</td></tr>
+<tr><td><strong>增长的性质</strong></td><td>含硬件交付（毛利率被拉低到 57.3%）——这是「卖铲子」的代价：<strong>收入快、毛利薄</strong></td></tr>
+<tr><td><strong>连续性证据</strong></td><td>合约负债（预收款）0.85 亿 vs 上年末 0.55 亿（+55%）——在手订单的领先指标 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td><strong>横向扩展</strong></td><td>药物之外：新材料、能源化工、农业种业；2025 年收购英国 LCC Technologies（手性分子砌块 + PACE 平台）<span class="src-badge src-2">二手</span></td></tr>
+</tbody>
+</table></div>
+<h3>3.2 「服务→资产」战略跃迁：第二曲线的早期证据</h3>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">2025</div><div class="tl-text">宣布从「服务」向「资产」转型：以自有平台孵化创新药管线，FY2025 年报披露已赋能/孵化 <strong>5+ 款 FIC/BIC 管线</strong>进入临床或 IND-enabling（肿瘤/自免/神经退行/慢病）<span class="src-badge src-s">一手</span></div></div>
+<div class="tl-item"><div class="tl-date">2026-08-19</div><div class="tl-text">中期报告重申「积极推进服务到资产的战略跃迁，布局自有创新药物管线」；研发开支 +66% 至 3.68 亿——<strong>投入主要砸向这里</strong></div></div>
+<div class="tl-item"><div class="tl-date">2026-09-24</div><div class="tl-text">自研管线分子 <strong>KQTD-126 完成 FDA IND 提交</strong>（首个走向美国注册申报的自有资产信号）——⚠️ 其权属结构（自有 vs 合资）公开信息未完全明确，待核实 <span class="src-badge src-2">二手</span> <span class="src-badge src-t">时效</span></div></div>
+</div>
+<div class="quote">为什么这个战略值得单独跟踪：英矽的估值锚是「III 期资产」，晶泰的估值锚目前是「40x PS 的服务增速」——前者有明确里程碑，后者靠增速持续兑现。<strong>自有管线是晶泰从「服务公司估值」切换到「Biotech/平台混合估值」的唯一通道</strong>：一旦自有资产做出临床数据或签出大额 BD，估值框架就变了；反过来，如果管线迟迟没有临床级资产，「资产故事」就只是给 40x PS 找的叙事装饰。这是未来 12 个月最重要的观察线。</div>
+</div>
+
+<div class="card" id="financials">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><path d="M3 3v18h18"></path><rect height="8" width="3" x="7" y="10"></rect><rect height="12" width="3" x="12" y="6"></rect><rect height="5" width="3" x="17" y="13"></rect></svg>四、最新财务数据</h2>
+<h3>4.1 半年损益表（2026H1 vs 2025H1）<span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目（人民币）</th><th>2026H1</th><th>2025H1</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>收入</td><td>3.936 亿</td><td>5.171 亿</td><td class="metric-negative">-23.9%（剔除大单基数 +73.8%）</td></tr>
+<tr><td>营业成本</td><td>1.678 亿</td><td>0.820 亿</td><td>+104.8%</td></tr>
+<tr><td>毛利（毛利率）</td><td>2.258 亿（57.3%）</td><td>4.351 亿（84.1%）</td><td class="metric-negative">毛利率 -26.8pct</td></tr>
+<tr><td>一般及行政开支</td><td>2.121 亿</td><td>2.003 亿</td><td>+5.9%</td></tr>
+<tr><td>研发开支</td><td>3.678 亿</td><td>2.215 亿</td><td class="metric-negative">+66.0%</td></tr>
+<tr><td>期内亏损</td><td class="metric-negative">-2.249 亿</td><td>+0.756 亿</td><td class="metric-negative">由盈转亏</td></tr>
+<tr><td>经调整亏损（加回股份薪酬 0.66 亿 + 可转债利息 0.53 亿）</td><td class="metric-negative">-1.055 亿</td><td>+1.416 亿</td><td class="metric-negative">由盈转亏</td></tr>
+<tr><td>经营活动现金净流出</td><td class="metric-negative">-3.992 亿</td><td>-2.385 亿</td><td class="metric-negative">流出扩大 67%</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;">全年口径（FY2025，经审计）<span class="src-badge src-s">一手</span>：收入 8.03 亿（+201.2%）；年内利润 <strong>+1.35 亿</strong>（上市后首次年度盈利，「AI4S 领域首家盈利的港股上市公司」）；经调整净利 +2.58 亿。<strong>但盈利质量要打折</strong>：当年「其他收益净额」5.14 亿（主要是金融资产公允价值变动）+「财务收入净额」1.02 亿（利息收入），<strong>经营利润本身仅 0.55 亿</strong>——约 85% 的税前利润来自「钱生钱」而非主营业务 <span class="src-badge src-e">推算</span>。</p>
+<h3>4.2 财务异常检测</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>检查项</th><th>结果</th><th style="width:90px;">风险</th></tr></thead>
+<tbody>
+<tr><td>应收账款</td><td>贸易应收+应收票据 2.10 亿 vs 上年末 1.51 亿（+39%），同期收入 -23.9%——回款周期拉长</td><td class="metric-negative">🟡 中</td></tr>
+<tr><td>存货</td><td>2.75 亿 vs 上年末 1.27 亿（+116%）——与 AI4S 硬件交付规模扩张相符，但占半年收入 7%</td><td>🟡 中</td></tr>
+<tr><td>现金流背离</td><td>经调整亏损 1.06 亿，经营现金流却流出 3.99 亿——缺口 ≈3 亿，主要是应收/存货占用与预付扩张</td><td class="metric-negative">🟡 中偏高</td></tr>
+<tr><td>毛利率异常</td><td>84.1% → 57.3%：AI4S 硬件占比上升所致，方向可解释，但意味着收入增长「含金量」下降</td><td>🟡 结构性</td></tr>
+<tr><td>利润自洽</td><td>FY2025 净利 1.35 亿中约 85% 来自公允价值变动+利息收入（经营利润仅 0.55 亿）</td><td class="metric-negative">🟡 中偏高</td></tr>
+<tr><td>客户集中</td><td>2026H1 客户A 占 33%（DoveTree 里程碑付款）；剔除后集中度回落</td><td>🟡 事件性</td></tr>
+<tr><td>股份薪酬</td><td>2026H1 0.66 亿（上年同期 0.66 亿）——持续稀释项，公司以此调整「经调整」口径</td><td>🟡 持续</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;">综合风险分级：<strong>🟡 中</strong>——无造假迹象（披露规范、附注完整），但「盈利质量低 + 现金消耗加速 + 应收/存货扩张」三件事同时出现，是典型的「战略投入期」财务画像：钱在从报表流向实验室和管线，股价为此支付的是「未来产能」的估值。</p>
+</div>
+
+<div class="card" id="capital">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="7"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>五、资金安全与摊薄史</h2>
+<h3>5.1 资产负债表：现金垫极厚，且有新钱进账</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目（2026-06-30）</th><th>金额</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>现金及等价物 + 银行存款 + 流动理财 + 受限现金</td><td><strong>86.71 亿 RMB</strong></td><td><span class="src-badge src-s">一手</span>（另有非流动理财 25.22 亿，合计流动性资产 ≈111.9 亿）</td></tr>
+<tr><td>借款总额</td><td>29.90 亿</td><td>零息可转债负债成分 24.60 亿 + 银行借款 5.30 亿（固定利率）</td></tr>
+<tr><td><strong>净现金（流动口径）</strong></td><td><strong>+56.81 亿</strong></td><td>公司自披「现金余额超出借款 56.8 亿」；若计入非流动理财约 <strong>82 亿</strong> <span class="src-badge src-e">推算</span></td></tr>
+<tr><td>零息可转债</td><td>本金 28.66 亿 HKD</td><td>2026-01-28 发行，净筹 28.39 亿 HKD，零票息——融资成本低，但<strong>转股价低于现价时即成摊薄弹药</strong> <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>权益总额</td><td>90.72 亿</td><td>PB（现市值 322 亿 RMB）≈ 3.5x <span class="src-badge src-e">推算</span></td></tr>
+</tbody>
+</table></div>
+<div class="chart">
+<div class="chart-title">市值构成：现金垫 vs 企业价值（亿 RMB）<span class="src-badge src-e">推算</span></div>
+<div class="stacked-bar">
+<div class="seg" style="width:27%;background:#74a892;color:#fff;">流动现金垫 86.7</div>
+<div class="seg" style="width:25%;background:#a7c4a0;color:#555;">非流动理财 25.2</div>
+<div class="seg" style="width:48%;background:#2d6a4f;">企业价值 EV ≈ 210</div>
+</div>
+<div class="chart-note">总市值 ≈322 亿 RMB（351.8 亿 HKD ÷ 汇率）。市场为「业务本身」支付约 210 亿 RMB——约为 TTM 收入（6.79 亿）的 31 倍。现金垫占市值 27%（流动口径）/ 35%（含非流动理财）。</div>
+</div>
+<h3>5.2 摊薄史：上市两年，股本持续膨胀</h3>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">2024-06-13</div><div class="tl-text">IPO（18C 规则），发行价 5.28 HKD <span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">2025-01-18</div><div class="tl-text">配售 2.64 亿股 @ 4.28 HKD（折让），筹 11.3 亿 HKD <span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">2025-02-19</div><div class="tl-text">配售 3.42 亿股 @ 6.10 HKD，筹毛额 20.9 亿 HKD <span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">2025 下半年</div><div class="tl-text">再配售 2.86 亿股 @ 9.28 HKD（折让 7.75%），筹 26.5 亿 HKD（具体日期未核实）<span class="src-badge src-2">二手</span> <span class="src-badge src-t">时效</span></div></div>
+<div class="tl-item"><div class="tl-date">2026-01-28</div><div class="tl-text">发行 28.66 亿 HKD 零息可转债（潜在转股摊薄）<span class="src-badge src-s">一手</span></div></div>
+<div class="tl-item"><div class="tl-date">2026-09-30</div><div class="tl-text">总股本约 43.0 亿股；现价 8.18 HKD，较 IPO 价 +55%，较 52 周高点 15.12 <strong>-46%</strong> <span class="src-badge src-s">一手</span></div></div>
+</div>
+<div class="quote">摊薄账本（推算）：上市以来股权 + 类股权融资合计约 <strong>80+ 亿 HKD</strong>，总股本从 IPO 时约 36-37 亿股扩至 43 亿股（+17% 左右）<span class="src-badge src-e">推算</span>。这不是「乱圈钱」——研发开支 +66%、自有管线、机器人实验室都需要钱——但对二级市场股东意味着：<strong>每一次「利好」都伴随着一次折让配售的可能性</strong>。持有该股必须把「持续摊薄」当作常态假设而非尾部风险。正面看：公司在估值高时融（9.28 配售）、估值低时用 CB（零息），融资时点选择对自己有利。</div>
+</div>
+
+<div class="card" id="deals">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>六、重大合作与自有管线</h2>
+<h3>6.1 交易总账：DoveTree 是估值叙事的支点</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>伙伴</th><th>交易内容</th><th>金额</th><th style="width:110px;">时间</th></tr></thead>
+<tbody>
+<tr><td><strong>DoveTree（美国药企）</strong></td><td>管线授权：首付款管线专利已转让，一个 PCC 进入 IND-enabling；首付已收 + 第二笔已收</td><td><strong>总额最高 59.9 亿美元</strong>：首付 5,100 万美元（已收，≈3.65 亿 RMB）+ 第二笔 1,900 万美元（已收，≈1.29 亿 RMB）+ 后续 4,900 万美元 + 里程碑最高 58.9 亿美元 + 净销售额个位数分成</td><td>2025-06 签约</td></tr>
+<tr><td>国际知名药企</td><td>难成药 GPCR 靶点合作：对方付首付款 + 承担早期研发费用 + 里程碑 + 销售分成</td><td>首付款+里程碑合计超 4 亿美元</td><td>2026（具体日期待核）<span class="src-badge src-t">时效</span></td></tr>
+<tr><td>斯坦福大学</td><td>附属 LCC Technologies 与斯坦福校董会签药物发现合作协议（PACE™ 平台）——公告次日盘中涨超 10%</td><td>未披露</td><td>2026-09-17 <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>美国及韩国多家大型药企</td><td>自动化平台部署 + 化学反应条件优化（Physical AI 输出）</td><td>未披露</td><td>2026 中报披露 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>恒健控股</td><td>共建大湾区「AI+ 产业集群」项目</td><td>未披露</td><td>2025-02 <span class="src-badge src-2">二手</span></td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;">横向印证：累计覆盖全球前 20 大药企中的 <strong>17 家</strong>（英矽同期口径为 14 家有合作）<span class="src-badge src-s">一手</span>；DoveTree 59.9 亿美元总额为全球 AI 药物发现领域<strong>单笔公开金额最大</strong>的合作之一 <span class="src-badge src-2">二手</span>。算力侧公开信息为微软中国战略合作与 Google Cloud 案例（10,000+ GPU），<strong>未见与 NVIDIA 的公开合作</strong>（勿采信传闻）。</p>
+<h3>6.2 自有管线：5+ 款进入临床/IND-enabling，尚无临床数据</h3>
+<div class="bar-row"><div class="bar-label">临床阶段</div><div class="bar-track"><div class="bar-fill" style="width:15%;background:#2d6a4f;"></div></div><div class="bar-value">1 款（KQTD-126，FDA IND 已提交 9/24）</div></div>
+<div class="bar-row"><div class="bar-label">IND-enabling / 临床前</div><div class="bar-track"><div class="bar-fill" style="width:30%;background:#74a892;"></div></div><div class="bar-value">4+ 款（肿瘤/自免/神经退行/慢病）</div></div>
+<div class="bar-row"><div class="bar-label">已对外授权孵化</div><div class="bar-track"><div class="bar-fill" style="width:45%;background:#a7c4a0;"></div></div><div class="bar-value">DoveTree 首付款管线（PCC 进入 IND-enabling）</div></div>
+<p style="font-size:12px;color:var(--text-muted);margin-top:6px;">管线深度远不及英矽（34 个 PCC、III 期 1 款）——晶泰的自有管线处于「刚起步」阶段，其价值目前是期权而非资产 <span class="src-badge src-e">推算</span>。对比结论要诚实：在「资产」这一侧，晶泰与英矽差着整整一个临床阶段的时代。</p>
+</div>
+
+<div class="card" id="geopolitics">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>七、地缘与政策风险 — 中美双重敞口的「卖铲人」</h2>
+<p style="font-size:13px;">触发条件核对：收入 46.8% 来自美国客户（2026H1）、核心客户 DoveTree 为美国药企、算力依赖 Google Cloud/微软云、注册地开曼 + 港股上市——<strong>地缘框架适用</strong>。但它的敞口结构与英矽不同：晶泰卖的是服务和设备（非药品注册资产），暴露点在「客户采购决策」而非「监管注册路径」。</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:170px;">渠道</th><th>现状</th><th style="width:90px;">影响</th></tr></thead>
+<tbody>
+<tr><td><strong>① 美国客户采购意愿</strong></td><td>2026H1 美国收入 1.84 亿（占 46.8%）；DoveTree 第二笔 1,900 万美元如期支付、斯坦福合作落地——<strong>目前无受干扰迹象</strong>。但大药企在 BIOSECURE 阴影下对中国供应商的「新增合同」决策会更谨慎——这是收入端最直接的传导渠道</td><td class="metric-negative">中高</td></tr>
+<tr><td><strong>② BIOSECURE 法案</strong></td><td>2025-12-18 随 FY2026 NDAA 成法：禁止联邦资金采购「受关注生物技术公司（BCC）」的设备与服务，行政部门需在 <strong>2026-12 前</strong>出台 BCC 认定程序。晶泰卖自动化设备/服务给药企（含可能接受联邦经费的付款方），<strong>若被认定为 BCC，其「设备+服务」恰好在法案打击的品类内</strong>——比纯软件公司暴露面更大。目前无被点名迹象 <span class="src-badge src-2">二手</span></td><td class="metric-negative">中（尾部）</td></tr>
+<tr><td><strong>③ 算力/供应链依赖</strong></td><td>公开案例使用 Google Cloud（10,000+ GPU）与微软云——美国云+芯片依赖是软肋，但属行业共性（英矽亦然），非晶泰独有</td><td>低</td></tr>
+<tr><td><strong>④ 中国政策承接</strong></td><td>港股通标的（内地资金可直接买入）、恒综指+MSCI 中国成员；9 月中下旬 AI 制药板块异动中晶泰多次跟涨（9/18 +7%）；国家科技重大专项课题牵头资格 <span class="src-badge src-2">二手</span>——地缘越冷，国内叙事与流动性的承接越强</td><td style="color:var(--accent);">缓冲（正面）</td></tr>
+</tbody>
+</table></div>
+<div class="quote">传导强度一句话：<strong>美国客户新增合同决策 &gt; BCC 认定名单 &gt; 算力依赖</strong>。监测清单：① 2026-12 前 BCC 认定程序出台时晶泰是否被点名；② DoveTree 后续里程碑（4,900 万美元档）支付是否正常；③ 斯坦福/美韩药企合作有无续约或搁置信号。</div>
+</div>
+
+<div class="card" id="valuation">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><line x1="12" x2="12" y1="20" y2="10"></line><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg>估值分析</h2>
+<div class="stale-warning">⚠️ 盈利波动极大的公司：PE 口径失真（腾讯行情 PE(TTM) 256.8，Yahoo/雪球按 TTM 亏损口径显示「亏损」——两种算法对「TTM 利润」的构成取法不同），<strong>本报告不使用 PE</strong>，主用 PS/PB/现金折算。上市仅 2 年余，历史估值分位参考价值有限。</div>
+<h3>8.1 当前估值水平 <span class="src-badge src-e">推算</span></h3>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">47.4x</div><div class="label">PS(TTM)：322亿 ÷ TTM收入 6.79亿</div></div>
+<div class="summary-item"><div class="value">40.1x</div><div class="label">PS(FY2025)：322亿 ÷ 8.03亿（含大单）</div></div>
+<div class="summary-item"><div class="value">~31x</div><div class="label">EV/TTM收入：EV≈210亿（扣除净现金）</div></div>
+<div class="summary-item"><div class="value">~3.5x</div><div class="label">PB：322亿 ÷ 权益 90.7亿</div></div>
+<div class="summary-item"><div class="value">27%</div><div class="label">流动现金垫 ÷ 市值（含非流动理财 35%）</div></div>
+<div class="summary-item"><div class="value">-46%</div><div class="label">现价距 52 周高点 15.12</div></div>
+</div>
+<h3>8.2 可比公司 <span class="src-badge src-e">推算</span>（不同市场口径需谨慎）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>公司</th><th>市值</th><th>2026H1 盈亏</th><th>毛利率</th><th>与晶泰的关键差异</th></tr></thead>
+<tbody>
+<tr><td><strong>晶泰控股 02228</strong></td><td>≈322 亿 RMB</td><td>-2.25 亿</td><td>57.3%</td><td>—</td></tr>
+<tr><td>英矽智能 03696</td><td>≈323 亿 RMB（350 亿 HKD）</td><td>+2.54 亿 RMB（+3,554 万 USD）</td><td>90.3%</td><td>有 III 期资产与已验证 BD 飞轮；同市值下基本面更「硬」</td></tr>
+<tr><td>药明康德（CXO 锚）</td><td>约 2,000 亿+ RMB 级</td><td>持续盈利</td><td>~40%</td><td>传统 CXO 增速 10-20%，PS 约 3-4x——<strong>服务型收入的估值地心引力</strong></td></tr>
+<tr><td>Schrödinger (SDGR)</td><td>≈73 亿美元</td><td>亏损</td><td>软件业务高毛利</td><td>软件收入体量更大（2 亿+ USD/年），同类「平台溢价」逻辑</td></tr>
+<tr><td>Recursion (RXRX)</td><td>≈15 亿美元</td><td>大额亏损</td><td>—</td><td>烧钱更重、无 III 期旗舰——晶泰若叙事失败的对标下限</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;">估值解读：<strong>晶泰的定价介于「服务公司」与「平台故事」之间且明显偏向后者</strong>。药明式的卖服务给不了 40x PS（地心引力 3-4x）；撑起当前估值的是「AI4S = 下一代科研基础设施」的叙事 + 86.7 亿现金垫 + DoveTree 级大单的可能性。横向最扎眼的对比是：同样的 350 亿 HKD 市值，英矽拿出了 III 期资产 + 扭亏报表，晶泰拿出的是 +136% 的服务收入增速和 -3.99 亿经营现金流。<strong>市场实际上在赌晶泰的「增速」能长成英矽的「资产」</strong>——这正是第三节核心指标的含义。估值结论：不便宜，且比英矽更依赖叙事持续兑现；现金垫与港股通流动性是估值下限的托底，但 -46% 的回撤证明托底不等于支撑。</p>
+</div>
+
+<div class="card" id="bull-bear">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><path d="M7 14l5-5 5 5"></path><path d="M7 19l5-5 5 5" opacity="0.4"></path></svg>多空核心分歧</h2>
+<div class="bull-bear-grid">
+<div class="bull-side box-green">
+<h4>多方逻辑 <span class="tag tag-bull">Bull</span></h4>
+<ul>
+<li><strong>内生增长引擎真实且高速</strong>：AI4S 线 +136.4%，合约负债 +55% 预示在手订单；创收客户 +62%、全球前 20 大药企覆盖 17 家</li>
+<li><strong>现金垫极厚 + 融资成本低</strong>：86.7 亿流动资产、零息 CB、净现金 56.8 亿——烧钱可持续多年，且占市值 27% 提供估值下限</li>
+<li><strong>DoveTree 59.9 亿美元大单背书</strong>：全球 AI 药物发现最大单笔公开合作，第二笔付款如期到账——「中国 AI 能力」被美国药企真金白银定价</li>
+<li><strong>服务→资产的期权免费送</strong>：5+ 款自有管线、KQTD-126 已提交 FDA IND——若任何一款做出数据，估值框架切换，期权价值巨大</li>
+<li><strong>数据护城河独一无二</strong>：50 万条真实实验记录（80% 失败样本）+ 300+ 工作站，智能体时代最稀缺的训练燃料</li>
+<li><strong>流动性承接</strong>：港股通 + 恒综指 + MSCI 中国；AI 制药板块 9 月持续升温，字节系 Anew Labs 融资、罗氏自建 AI 实验室等事件不断给板块添柴</li>
+</ul>
+</div>
+<div class="bear-side box-red">
+<h4>空方逻辑 <span class="tag tag-bear">Bear</span></h4>
+<ul>
+<li><strong>40x PS 对服务型收入过贵</strong>：药明式卖服务的地心引力是 3-4x PS；EV 口径也有 ~31x——需要 AI4S 每年翻倍增长持续 3-4 年才能消化</li>
+<li><strong>收入含金量双降</strong>：毛利率 84%→57%（硬件化），经营现金流 -3.99 亿（经调整亏损仅 1.06 亿）——增长在加速烧钱，不是在验证商业模式</li>
+<li><strong>盈利是记账游戏</strong>：FY2025「首家盈利」中约 85% 来自公允价值变动+利息收入；2026H1 即重回亏损——「AI4S 首家盈利港股」的标签经不起拆解</li>
+<li><strong>摊薄是常态</strong>：上市两年 3 次折让配售 + CB，股本 +17%；每次涨上去都是下一次配售的窗口——股东回报机制缺位</li>
+<li><strong>客户集中 + 大单依赖</strong>：客户A 一家占 33%；收入基数被首付款搅得无法线性外推，「剔除大单 +73.8%」是管理层口径、非审计口径</li>
+<li><strong>资产端比英矽整整落后一个时代</strong>：同为 350 亿市值，英矽有 III 期 + 扭亏，晶泰自有管线最前沿只是 IND 提交——同市值下基本面最弱的那个先被卖出</li>
+<li><strong>机构覆盖稀少</strong>：2026 年内系统性卖方覆盖极少，无一致预期锚——下跌时没有「目标价支撑」的承接盘</li>
+</ul>
+</div>
+</div>
+<div class="quote">核心争议焦点：① <strong>AI4S 增速的持续性</strong>——+136% 是渗透率早期的一次性放量还是可复利的合同流水（看合约负债与下两期增速）；② <strong>现金消耗 vs 收入增长的赛跑</strong>——年化经营流出 ~8 亿 vs 净现金 56.8 亿，账面可烧 7 年，但摊薄不会等 7 年；③ <strong>自有管线能否升级为资产</strong>——这是从 40x PS 独木桥上走下来的唯一岔路。裁决指标：季度 AI4S 增速、经营现金流、DoveTree 里程碑支付、自有管线临床推进公告。</div>
+</div>
+
+<div class="card" id="analysts">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><path d="M2 3h20"></path><path d="M4 3v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3"></path><path d="M12 16v5"></path></svg>券商分析师全景</h2>
+<div class="stale-warning">⚠️ 覆盖缺口声明：与英矽（13 家券商全部积极评级）形成鲜明对比，<strong>公开渠道仅检索到一条 2026 年内的晶泰评级记录</strong>——目标价 10.78 HKD（2026-08-24，券商名在转载源中缺失、未经核实）。这一数据缺口本身是信息：机构关注度低，意味着定价主要由散户与北向/南向资金驱动，研报「托底」效应弱。以下如实呈现，不编造覆盖广度。</div>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>评级</th><th>目标价</th><th>要点</th><th style="width:140px;">日期/时效</th></tr></thead>
+<tbody>
+<tr><td>未核实券商（转载源乱码）</td><td>未核实</td><td>10.78 HKD</td><td>转载于聚合平台，机构名缺失——引用时须复核 <span class="src-badge src-3">三方</span></td><td>2026-08-24 <span class="src-badge src-t">时效</span></td></tr>
+<tr><td colspan="5" style="color:var(--text-muted);">系统性卖方覆盖：2026 年内未检索到其他公开评级/目标价。搜索中常见的是业绩转载与行情快讯，非正式研报。</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;">媒体情绪样本：财华网曾以「斩获 4 亿美金合作，股价仍跌跌不休」为题报道（指 GPCR 大单后股价未涨）——<strong>「利好不涨」是 2026 年该股的典型价格行为</strong>，与英矽「利好即涨」形成镜像。9/17 斯坦福合作次日盘中 +10% 是近月少数「利好即涨」案例。</p>
+</div>
+
+<div class="card" id="community">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>社区讨论：雪球 / 散户讨论</h2>
+<p style="font-size:13px;"><span class="src-badge src-3">三方</span> <strong>样本量诚实声明</strong>：雪球个股页活跃（港股通+可卖空标签、9 月底日成交 4 亿+ 港元），但本次检索<strong>未能抓到可引用的具体多空帖子原文</strong>——不编造散户观点，以下为媒体聚合层面的方向性观察：</p>
+<ul style="font-size:13px;">
+<li><strong>「利好不涨」的挫败感</strong>是媒体与股民讨论的主旋律之一（4 亿美金 GPCR 合作后股价仍下行、2026H1 财报后缺乏承接）——散户情绪偏向「基本面故事讲了一年、股价回到原点」的疲惫</li>
+<li>9 月中下旬 AI 制药板块回暖叙事（「AI 制药价值前夜」「赛道 40% 涨幅」类标题）中晶泰作为板块成员被反复提及，但<strong>讨论热度低于英矽</strong>——英矽有 III 期里程碑可聊，晶泰的讨论更多停留在板块贝塔层面</li>
+<li>9/17 斯坦福合作、9/24 KQTD-126 FDA IND 提交两条公告在快讯层面传播，未形成深度讨论帖——社区对「服务→资产」战略的跟踪意识尚未建立</li>
+</ul>
+<div class="quote">社区情绪的可用信息：散户「利好不涨」的疲惫感与机构覆盖缺失互相印证——<strong>该股当前缺乏「定价者」</strong>，价格更多由板块贝塔与资金流驱动。这既是风险（无锚定价、波动剧烈），也是机会（若 AI4S 增速与管线资产兑现，预期差空间大于已被充分研究的标的）。</div>
+</div>
+
+<div class="card" id="conclusion">
+<h2><svg class="h2-ico" viewbox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>综合判断框架</h2>
+<h3>四情景推演（不构成预测）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>估值方向 <span class="src-badge src-e">推算</span></th><th style="width:110px;">主观概率感</th></tr></thead>
+<tbody>
+<tr><td><strong>乐观：增速保持 + 自有管线升级</strong></td><td>AI4S 连续 2-3 期 80%+ 增长，自有管线进入临床并产出早期数据/BD</td><td>估值框架向「平台+资产」切换，市值向 450 亿+ RMB 想象</td><td>~20-25%</td></tr>
+<tr><td><strong>中性偏正：AI4S 高增长持续</strong></td><td>增速回落至 50-80% 但持续，现金消耗趋稳</td><td>40x PS 缓慢消化，市值 300-350 亿区间震荡</td><td>~30-35%</td></tr>
+<tr><td><strong>中性偏负：增速失速 + 持续摊薄</strong></td><td>AI4S 增速降至 30% 以下，经营现金流不收敛，再配售</td><td>PS 向 25x 回归，市值 ~200 亿 RMB（-40%）</td><td>~25-30%</td></tr>
+<tr><td><strong>悲观：大单断档 + 双杀</strong></td><td>DoveTree 里程碑不及预期 + 内生增长失速</td><td>现金垫托底但叙事坍塌，市值向净现金+管线残值靠拢</td><td>~10-15%</td></tr>
+</tbody>
+</table></div>
+<h3>关键跟踪指标（按重要性排序）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>频率</th><th>信号意义</th></tr></thead>
+<tbody>
+<tr><td>AI4S 智慧解决方案收入增速（季/半年）</td><td>每期</td><td>40x PS 唯一的消化通道——失速即估值重估</td></tr>
+<tr><td>经营现金流 vs 经调整亏损的缺口</td><td>每半年</td><td>应收/存货占用是否收敛——「增长的含金量」</td></tr>
+<tr><td>自有管线临床推进（KQTD-126 及后续 IND/临床公告）</td><td>公告</td><td>估值框架从「服务」切换到「平台+资产」的触发器</td></tr>
+<tr><td>DoveTree 里程碑支付与新签大单</td><td>公告</td><td>收入可预测性与客户粘性的直接验证</td></tr>
+<tr><td>配售/CB 转股/回购动向</td><td>公告</td><td>摊薄节奏——每次股价上涨后的第一风险</td></tr>
+<tr><td>2026-12 前 BCC 认定程序及名单</td><td>事件</td><td>BIOSECURE 尾部风险是否落地到「设备+服务」品类</td></tr>
+</tbody>
+</table></div>
+<h3>对齐个人投资体系（六原则检验）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>原则</th><th>检验结果</th></tr></thead>
+<tbody>
+<tr><td>好公司（护城河）</td><td>物理闭环数据 + 300+ 工作站是真实且稀缺的壁垒，但<strong>护城河尚未转化为盈利能力</strong>（ROE 为负）；「10 年后还在吗」——拆开看：现金 86.7 亿 + 服务客户 17/20 大药企，公司作为「研发基础设施供应商」存续概率高；但作为「40x PS 的成长股」，其存续意义取决于增速——若增速掉到行业平均，它会从「成长故事」退化为「低增长的现金充裕服务商」，公司还在、估值逻辑却已死。可证伪的判据：连续两期 AI4S 增速 &lt;50% 即触发</td></tr>
+<tr><td>好价格</td><td>PS(TTM) 47x / EV 口径 31x——对服务型收入显著偏贵；52 周高点回撤 46% 部分消化了泡沫，但距「安全边际」仍远；现金垫占市值 27% 是唯一的硬底</td></tr>
+<tr><td>分散纪律</td><td>52 周振幅 2.4 倍 + 无机构锚定价 + 摊薄常态化 → 若配置，仓位应按「实验仓位」管理（≤5-10%），同英矽合计的 AI 制药敞口需单独设限（两只同板块、同资金属性，相关性高）</td></tr>
+<tr><td>融资纪律</td><td>无股息，收息/分红覆盖利息框架不适用（港股亦不做融资纪律分析）</td></tr>
+<tr><td>卖出条件映射</td><td>① 核心逻辑证伪 = AI4S 增速连续两期 &lt;50% 且现金流缺口不收敛；② 极端高估 = PS 显著超越当前水平而增速未加速；③ 机会成本 = 同板块内英矽提供了「同市值、更强资产」的替代——机会成本本身就是晶泰最大的隐形对手</td></tr>
+</tbody>
+</table></div>
+<div class="quote" style="font-size:14px;"><strong>一句话总结</strong>：晶泰控股是一家「现金充裕、增长真实、但估值先行」的公司——它把 86.7 亿现金和 300+ 机器人工作站押注在「AI for Science 是下一代科研基础设施」这个命题上，AI4S +136% 的增速是命题成立的第一批证据，DoveTree 59.9 亿美元大单是美国药企投的信任票。但 40x+ PS 的定价已经预支了「增速持续 + 管线升级」两个尚未兑现的假设；与同市值的英矽相比，它拿出的硬资产少了一个临床时代的距离。<strong>它适合的仓位形态与英矽一样是「实验仓位」，但赌的东西不同</strong>：英矽赌一场临床试验的成败，晶泰赌一个增长曲线的斜率——前者是离散事件，后者可以逐季验证，从「可跟踪性」角度晶泰反而占优。</div>
+<p style="margin-top:16px;font-size:12px;color:var(--text-muted);">免责声明：不构成投资建议。报告基于公开信息生成，HKEXnews 披露文件已下载至本地作为可信数据源。所有估值情景和概率均为本文主观判断。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-10-01 · 由 Claude Code 辅助分析 · 数据截至 2026-09-30 收盘（10-01 港股休市）</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="font-size:12px;">
+<li><span class="src-badge src-s">一手</span> HKEXnews：02228_2026中期_业绩公告_2026-08-19.pdf、02228_2026年_中期报告_2026-09-09.pdf、02228_2025年度_业绩公告_2026-03-25.pdf（本地已存档 <code>02228-晶泰控股/Filings/</code>）</li>
+<li><span class="src-badge src-s">一手</span> 腾讯财经行情接口 qt.gtimg.cn（hk02228，2026-09-30 收盘快照）</li>
+<li><span class="src-badge src-2">二手</span> 新华网/PRNewswire：DoveTree 59.9 亿美元合作、「AI4S 首家盈利港股」（2025-06 / 2026-03-25/26）</li>
+<li><span class="src-badge src-2">二手</span> 新浪财经：LCC Technologies × 斯坦福合作公告（2026-09-17/18）；KQTD-126 FDA IND 提交（2026-09-24，权属待核实）</li>
+<li><span class="src-badge src-2">二手</span> 财联社/ir.xtalpi.com：IPO 及 2025 年三次配售记录（2025-01-18 @4.28、2025-02-19 @6.10、2025 下半年 @9.28）；智通财经/凤凰网 2026 中期业绩转述（现金 86.7 亿）</li>
+<li><span class="src-badge src-2">二手</span> Latham/Morrison Foerster/K&amp;L Gates 律所评论：BIOSECURE 成法（2025-12-18）与 BCC 认定程序时间表（2026-12 前）</li>
+<li><span class="src-badge src-3">三方</span> 雪球/财华网/新浪港股聚合：散户情绪与媒体标题（2026-09）；未核实评级记录 TP 10.78 HKD（2026-08-24）</li>
+<li><span class="src-badge src-e">推算</span> 市值 RMB 换算、EV、PS/PB 倍数、TTM 收入、摊薄幅度、情景概率均为本文推算</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%99%B6%E6%B3%B0%E6%8E%A7%E8%82%A1%EF%BC%8802228%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%99%B6%E6%B3%B0%E6%8E%A7%E8%82%A1%EF%BC%8802228%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-01%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

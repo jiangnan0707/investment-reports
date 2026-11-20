@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>长鑫科技 2026-11-07 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; overflow-wrap: anywhere; }
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; overflow-wrap: anywhere; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/688825/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-07%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">688825 <span>·</span> 2026-11-07 <span>·</span> PC 完整版</div><h1>长鑫科技</h1><p>数据截至 2026-11-06 收盘（腾讯行情 sh688825，时间戳 20261106161445）· 财报截至 2026 年第三季度报告（2026-10-30 披露，未经审计），并纳入 10-30 业绩交流会、回购加码（公告 2026-021）等后续事件</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式与收入构成</a></li><li><a href="#core-metric">三、核心指标 — 主营业务毛利率：一台周期温度计</a></li><li><a href="#financials">四、财务数据：三季报落地——两条利润线的分化</a></li><li><a href="#capacity">五、产能、制程与 HBM：第二增长曲线在哪</a></li><li><a href="#policy">六、政策与地缘：1260H 移除与 FAR 禁令并存的「半脱钩」</a></li><li><a href="#ipo">七、上市与资金面：70 个交易日、两次极端单日波动</a></li><li><a href="#valuation">八、估值分析：TTM 19.7 倍与 P/B 10.7 倍的两个读数</a></li><li><a href="#bull-bear">九、多空核心分歧</a></li><li><a href="#analysts">十、券商分析师全景 时效</a></li><li><a href="#reddit">十一、雪球 / 散户讨论 三方</a></li><li><a href="#conclusion">十二、综合判断框架</a></li><li><a href="#data-notes">数据说明</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+<strong>时效提示：</strong>本报告行情数据截至 2026-11-06 收盘；财务数据截至 2026 年第三季度报告（披露日 2026-10-30，<strong>未经审计</strong>）。公司上市约 70 个交易日（2026-07-27 至今），无历史估值分位可言；DRAM 处于剧烈涨价周期中，任何单一时点的利润与倍数都不代表常态。本报告基准日 2026-11-07 与最近行情日 2026-11-06 之间隔一个非交易日，若基准日盘中有交易，行情读数已过期。第三方产能/市占率数据存在多个冲突口径，本报告并列呈现并标注。Q3 单季归母净利润环比仅 +3.01%、而净利润（含少数股东）环比 +19.38% 的分化，是本期报告的核心事实——两条利润线的口径差异见 4.2 与数据说明①。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> 巨潮资讯/上交所披露（招股说明书、2026 半年报、2026 三季报、公司公告 PDF 已存档本地）|
+    <span class="src-badge src-2">二手</span> 财经媒体/券商研报/行情接口/业绩交流会媒体转述 |
+    <span class="src-badge src-3">三方</span> 雪球等散户讨论 |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>投资分析/标的/688825-长鑫科技/Filings/</code> — 招股说明书（2026-05-17 版）、2026 年半年度报告及摘要（2026-08-29）、第五代工艺量产自愿性披露（2026-09-21）、超募资金投向公告（2026-09-29）、2026 年前三季度业绩预告（2026-10-17）、2026 年第三季度报告（2026-10-30）。业绩交流会全文以新浪财经转述稿留存（<span class="src-badge src-2">二手</span>转述一手口径；上交所 IR 活动记录表原始 PDF 未取得，见数据说明③）。</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:32%"><strong>公司全称</strong></td><td>长鑫科技集团股份有限公司（上交所科创板，688825）</td></tr>
+<tr><td><strong>主营业务</strong></td><td>DRAM 存储芯片的设计、制造与销售（IDM 模式）：晶圆 / 颗粒 / 模组三形态，DDR 与 LPDDR 全系列</td></tr>
+<tr><td><strong>上市日期</strong></td><td>2026-07-27（发行价 8.66 元/股，募资净额 663.10 亿元<span class="src-badge src-s">一手</span>）</td></tr>
+<tr><td><strong>控股股东</strong></td><td>无控股股东、无实际控制人；第一大股东清辉集电 19.21%，长鑫集成电路 10.38%，大基金二期 7.74%（三季报前十大口径<span class="src-badge src-s">一手</span>；持股比例与招股书口径的差异见数据说明①）</td></tr>
+<tr><td><strong>行业地位</strong></td><td>按出货量与销售额为中国第一、全球第四的 DRAM 原厂；Counterpoint 口径 2026Q3 全球 DRAM 营收份额 9%（三星 38% 重回第一、SK 海力士第二）<span class="src-badge src-2">二手</span>；Omdia 口径 2025Q4 销售额份额 7.67%<span class="src-badge src-s">一手</span></td></tr>
+<tr><td><strong>客户</strong></td><td>阿里云、字节跳动、腾讯、联想、小米、传音、荣耀、OPPO、vivo 等<span class="src-badge src-s">一手</span>；截至 2026-09-30 股东总数 794,770 户<span class="src-badge src-s">一手</span>（6-30 为 60 户的口径说明见 7.2）</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">40.41</div><div class="label">收盘价（11-06，−4.98%）</div></div>
+<div class="summary-item"><div class="value">2.74 万亿</div><div class="label">总市值（元）</div></div>
+<div class="summary-item"><div class="value">19.71</div><div class="label">P/E（TTM，接口口径）</div></div>
+<div class="summary-item"><div class="value">10.68</div><div class="label">P/B（接口口径）</div></div>
+<div class="summary-item"><div class="value">38.11–61.80</div><div class="label">上市以来盘中区间（元）</div></div>
+<div class="summary-item"><div class="value">0%</div><div class="label">股息率（上市以来未分红）</div></div>
+</div>
+<span class="caveat-inline">市值/PE/PB 取自腾讯行情接口（2026-11-06 收盘）：市值 27,431.96 亿 = 40.41 元 × 总股本 678.84 亿股；P/E 19.71 与本报告 TTM 推算（2025Q4 71.55 + 2026 前三季度 1,320.40 = 1,391.95 亿）完全互证；P/B 10.68 的分母为 9 月末归母净资产（含 IPO 募资），与上期报告 15.20 的口径差异见八.2 与数据说明①。</span>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式与收入构成</h2>
+<h3>2.1 怎么赚钱</h3>
+<p>长鑫科技是 IDM（设计+制造+封测一体化）模式的 DRAM 原厂：自研 DRAM 产品（DDR 系列面向服务器/PC，LPDDR 系列面向手机/移动设备），在合肥、北京的自有 12 英寸晶圆厂投片，以颗粒和模组形态销售给下游整机厂、云厂商及模组厂。截至 2026 年中，公司研发人员占比超过 33%；境内专利 4,484 项（发明 3,744 项）+ 境外 3,400 项（2026-06-30）<span class="src-badge src-s">一手</span>。</p>
+<p>收入结构正在发生方向性变化：2025 年（招股书）LPDDR 占主营约三分之二，而 2026H1 的 DDR 占比已升至 46.22%、与 LPDDR（52.02%）接近——公司在 10-30 业绩交流会确认「前三季度 DDR 收入占比持续上升」<span class="src-badge src-2">二手</span>（交流会转述）。服务器/数据中心（DDR 主场）正在超越移动端成为增量引擎，这与 AI 算力需求的行业叙事一致。</p>
+<div class="chart">
+<div class="chart-title">收入构成：2025 年度 vs 2026 上半年 <small>各期归一为 100% · 口径：2025 为招股书主营构成，2026H1 为业绩交流会披露数（DDR 694.72 亿 / LPDDR 781.91 亿 / 其他 26.47 亿）</small></div>
+<div class="stacked-bar" style="margin-bottom:8px">
+<div class="c-sub" style="width:31.87%">DDR 31.87%</div>
+<div class="c-main" style="width:66.43%">LPDDR 66.43%</div>
+
+</div>
+<div class="chart-legend" style="justify-content:flex-start"><span>2025 年度（主营收入 612.76 亿）</span></div>
+<div class="stacked-bar">
+<div class="c-sub" style="width:46.22%">DDR 46.22%</div>
+<div class="c-main" style="width:52.02%">LPDDR 52.02%</div>
+
+</div>
+<div class="chart-legend" style="justify-content:flex-start;margin-top:4px"><span>2026 上半年（营收 1,503.10 亿）</span></div>
+<span class="caveat-inline">两期口径不同（2025 为招股书主营构成、2026H1 为交流会披露的产品收入数），只用于看结构方向，不宜逐块精确比较。「其他」两期均 &lt;2% 未标数值。<span class="src-badge src-s">一手</span>+<span class="src-badge src-2">二手</span></span>
+</div>
+<h3>2.2 护城河与竞争位置（巴菲特/费雪框架）</h3>
+<ul>
+<li><strong>规模+工艺壁垒</strong>：DRAM 是半导体中标准化程度最高的品类之一，产能建设需要巨额资本投入，全球在位者只剩三家（三星、SK 海力士、美光合计份额 &gt;90%）——本身即是「这门生意极难」的证明<span class="src-badge src-s">一手</span>（半年报引 Omdia）。</li>
+<li><strong>国产替代的稀缺性</strong>：公司是中国大陆规模最大、布局最全的 DRAM 研发设计制造一体化企业；在中国 DRAM 需求占全球约三成的背景下（TrendForce 口径 30–35%<span class="src-badge src-2">二手</span>），它是境内该品类的唯一大规模原厂。</li>
+<li><strong>成本与周期位置</strong>：IDM 模式下规模效应显著，但毛利率同时暴露于行业周期（见三）。Q3 单季毛利率 89.53% 超过媒体口径下三星/海力士同期的存储业务毛利率水平<span class="src-badge src-2">二手</span>——高位毛利率本身就是周期位置的读数，而非常态盈利能力。</li>
+<li><strong>产业链生态</strong>：与上游设备/材料厂商及下游整机厂结成紧密合作关系，是「中国 DRAM 产业链链主」（公司自述<span class="src-badge src-s">一手</span>，属战略表述）。</li>
+</ul>
+<div class="quote">公司战略表述（「链主」「AI 时代核心的内存制造商」）与财务事实需分开看：本报告凡引用公司自述标签，均同时给出可核验的财务/第三方数据。<span class="src-badge src-s">一手</span>来源表述 ≠ 独立验证。</div>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — 主营业务毛利率：一台周期温度计</h2>
+<p>对 DRAM 原厂而言，供需周期决定价格，价格几乎直接决定毛利率与利润。<strong>长鑫的主营业务毛利率从 2023 年的 −1.9% 走到 2026Q3 单季的 89.53%</strong>——这一个数字的轨迹，浓缩了这家公司过去三年发生的一切：先是周期底部的亏损，然后是本轮 AI 驱动涨价周期的完整展开。三季报新增的两个读数：Q3 单季 89.53%（环比 +1.94pct，历史新高）、前三季度累计 86.85%，涨价动能尚未在毛利率上显出颓势；但涨幅本身在收敛（见 3.1）。</p>
+<div class="chart">
+<div class="chart-title">长鑫毛利率的时间轨迹（2023 → 2026Q3）<small>x 轴按真实日期比例 · 2023–2025 为招股书年度数（推算自披露的营收与营业成本），2026H1 84.84% 与 2026Q3 89.53% 为公司披露值</small></div>
+<svg aria-label="长鑫毛利率折线图" role="img" style="width:100%;height:auto" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="50" x2="620" y1="200" y2="200"></line><line x1="50" x2="620" y1="167" y2="167"></line>
+<line x1="50" x2="620" y1="135" y2="135"></line><line x1="50" x2="620" y1="101" y2="101"></line>
+<line x1="50" x2="620" y1="69" y2="69"></line><line x1="50" x2="620" y1="36" y2="36"></line>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end">
+<text x="44" y="204">-10%</text><text x="44" y="171">10%</text>
+<text x="44" y="139">30%</text><text x="44" y="105">50%</text><text x="44" y="73">70%</text><text x="44" y="40">90%</text>
+</g>
+<polyline fill="none" points="50,187 245,175 432,117 521,50 620,37" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<g fill="#fff" stroke="var(--accent)" stroke-width="2">
+<circle cx="50" cy="187" r="4"></circle><circle cx="245" cy="175" r="4"></circle>
+<circle cx="432" cy="117" r="4"></circle><circle cx="521" cy="50" r="4"></circle><circle cx="620" cy="37" fill="var(--accent)" r="5"></circle>
+</g>
+<g font-size="12" font-weight="600" text-anchor="middle">
+<text fill="var(--red)" x="56" y="180">−1.9%</text>
+<text fill="var(--text-primary)" x="245" y="168">5.6%</text>
+<text fill="var(--text-primary)" x="432" y="110">41.0%</text>
+<text fill="var(--text-primary)" x="513" y="42">84.84%</text>
+<text fill="var(--accent)" x="606" y="26">89.53%</text>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="middle">
+<text x="50" y="224">2023-12</text>
+<text x="245" y="224">2024-12</text>
+<text x="432" y="224">2025-12</text>
+<text x="521" y="238">2026-06</text>
+<text x="606" y="224">2026-09</text>
+</g>
+</svg>
+<span class="caveat-inline">口径：2023–2025 毛利率 = (营业收入−营业成本)/营业收入，据招股书披露数推算；2026H1 的 84.84% 为公司半年报披露的「主营业务毛利率」、2026Q3 的 89.53% 为三季报披露的单季毛利率，两者与年度推算点存在主营业务与非主营的口径差异。<span class="src-badge src-e">推算</span>+<span class="src-badge src-s">一手</span></span>
+</div>
+<h3>3.1 周期温度计：这一轮涨价走到哪了</h3>
+<p>毛利率的急升是「量价齐升」的结果：2026 前三季度营收 2,690.24 亿元（+738.51%），而三季报披露的毛利率仍在环比抬升。公司在 10-30 业绩交流会上对 Q4 的表述是「供不应求延续、营收继续增长、毛利率保持稳定」<span class="src-badge src-2">二手</span>（交流会转述）。但第三方合约价涨幅的轨迹是明确收敛的：</p>
+<div class="chart">
+<div class="chart-title">一般型 DRAM 合约价季度环比涨幅（TrendForce 口径）<small>实际值与预估并列 · 虚线段为 TrendForce 预估</small></div>
+<svg aria-label="DRAM合约价季度涨幅" role="img" style="width:100%;height:auto" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="50" x2="620" y1="200" y2="200"></line><line x1="50" x2="620" y1="155" y2="155"></line>
+<line x1="50" x2="620" y1="110" y2="110"></line><line x1="50" x2="620" y1="65" y2="65"></line><line x1="50" x2="620" y1="20" y2="20"></line>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end">
+<text x="44" y="204">0%</text><text x="44" y="159">25%</text><text x="44" y="114">50%</text><text x="44" y="69">75%</text><text x="44" y="24">100%</text>
+</g>
+<polyline fill="none" points="50,163 192,28 335,91 478,172" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<line fill="none" stroke="var(--amber)" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="2.5" x1="478" x2="620" y1="172" y2="164"></line>
+<g fill="#fff" stroke="var(--accent)" stroke-width="2">
+<circle cx="50" cy="163" r="4"></circle><circle cx="192" cy="28" fill="var(--accent)" r="5"></circle>
+<circle cx="335" cy="91" r="4"></circle><circle cx="478" cy="172" r="4"></circle>
+</g>
+<circle cx="620" cy="164" fill="#fff" r="4.5" stroke="var(--amber)" stroke-width="2"></circle>
+<g font-size="12" font-weight="600" text-anchor="middle">
+<text fill="var(--text-primary)" x="50" y="150">+20.5%</text>
+<text fill="var(--accent)" x="196" y="44">+93~98%（史上最大）</text>
+<text fill="var(--text-primary)" x="335" y="80">+58~63%</text>
+<text fill="var(--text-primary)" x="478" y="159">+13~18%</text>
+<text fill="var(--amber)" x="600" y="151">+10~20%</text>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="middle">
+<text x="50" y="224">4Q25</text><text x="192" y="224">1Q26</text><text x="335" y="224">2Q26</text>
+<text x="478" y="224">3Q26</text><text x="610" y="224">4Q26E</text>
+</g>
+</svg>
+<span class="caveat-inline">来源：TrendForce 历次新闻稿（4Q25 发布于 2025-10-29、1Q26 上修至 90–95% 区间、2Q26 预估 +58~63%、3Q26 +13~18%、4Q26E：9-30 稿 +10~15%、10-20 稿上调至约 +20%——两次预估并列，本图取区间中值近似）。涨幅逐季收敛但 2026 年内仍为双位数正增长；TrendForce 同时预估 2027 年存储供应持续吃紧。<span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span></span>
+</div>
+<h3>3.2 公司对周期的自我提示（一手披露原文要点）</h3>
+<ul>
+<li>2015–2025 年间，DRAM 产品价格最高 7.89 美元/GB，2023 年上半年最低 1.78 美元/GB——四倍半的波动幅度是这门生意的常态<span class="src-badge src-s">一手</span>。</li>
+<li>本轮行情的需求主引擎是 AI 基础设施；三季报口径下，前三季度经营现金流 2,547.51 亿元（+1,864.52%），存货 392.27 亿元（较年初 +37%）——存货增速显著低于营收增速，暂无「卖不动」的报表信号<span class="src-badge src-s">一手</span>。</li>
+<li>供给端：国际厂商盈利改善后同步上调资本开支（三大厂 2027 年 DRAM/HBM 产能已被预订售罄、2027 年行业资本开支约 1,460 亿美元<span class="src-badge src-2">二手</span>），新增产线将在未来数年分阶段量产——「行业供需格局发生反转的潜在风险可能将持续提升」<span class="src-badge src-s">一手</span>（半年报原文，本期未推翻）。</li>
+</ul>
+</div>
+
+<div class="card" id="financials">
+<h2>四、财务数据：三季报落地——两条利润线的分化</h2>
+<h3>4.1 近三年又三期主要数据</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>科目</th><th>2023 年度</th><th>2024 年度</th><th>2025 年度</th><th>2026 前三季度</th></tr></thead>
+<tbody>
+<tr><td>营业收入（亿元）</td><td>90.87</td><td>241.78</td><td>618.00</td><td>2,690.24（+738.51%）</td></tr>
+<tr><td>归母净利润（亿元）</td><td class="metric-negative">−163.40</td><td class="metric-negative">−71.45</td><td class="metric-positive">18.75</td><td class="metric-positive">1,320.40（上年同期 −52.80）</td></tr>
+<tr><td>扣非归母净利润（亿元）</td><td class="metric-negative">−167.52</td><td class="metric-negative">−78.70</td><td class="metric-positive">53.16</td><td class="metric-positive">1,340.30</td></tr>
+<tr><td>净利润（含少数股东，亿元）</td><td class="metric-negative">−192.25</td><td class="metric-negative">−90.51</td><td>71.44</td><td>1,965.32</td></tr>
+<tr><td>经营现金流净额（亿元）</td><td class="metric-negative">−72.72</td><td>68.97</td><td>365.20</td><td>2,547.51（+1,864.52%）</td></tr>
+<tr><td>研发投入占营收比</td><td>51.40%</td><td>26.23%</td><td>15.52%</td><td>4.12%（110.71 亿，+73.03%）</td></tr>
+<tr><td>资产负债率（合并）</td><td>66.22%</td><td>61.61%</td><td>54.24%</td><td>36.34%（较年初 −17.9pct）</td></tr>
+<tr><td>加权平均 ROE</td><td class="metric-negative">−38.28%</td><td class="metric-negative">−17.54%</td><td>3.83%</td><td class="metric-positive">96.46%</td></tr>
+</tbody>
+</table></div>
+<span class="caveat-inline">来源：招股说明书（2023–2025 年度，经审计）+ 2026 年第三季度报告（未经审计）。2026 前三季度综合毛利率 86.85%、EPS 2.1369 元。研发占比骤降的主因是分母（营收）爆炸式增长，研发绝对额同比 +73.03%。资产负债率大幅下降来自 IPO 募资到账与利润留存（未分配利润由年初 −366.50 亿转正至 953.90 亿）。</span>
+<h3>4.2 两条利润线的分化：归母 vs 少数股东（本期核心事实）</h3>
+<p>三季报最刺眼的结构不在增长，而在<strong>增长的归属</strong>：Q3 单季净利润（含少数股东）889.83 亿元、环比 +19.38%，但归母净利润 544.35 亿元、环比仅 +3.01%——差额 345.48 亿元被少数股东分走，占 Q3 净利润 <strong>38.8%</strong>（H1 为 27.85%，占比在扩大）<span class="src-badge src-s">一手</span>+<span class="src-badge src-e">推算</span>。</p>
+<div class="chart">
+<div class="chart-title">净利润的所有权归属结构：2025 年度 → 2026H1 → 2026 前三季度 <small>各期归一为 100% · 本图回答「谁占的份额」，柱高不可跨期比大小</small></div>
+<div class="col-chart">
+<div class="col-wrap">
+<div class="col" style="height:100%">
+<div class="col-seg c-neg" style="height:73.74%">少数股东 73.74%</div>
+<div class="col-seg c-main" style="height:26.26%">归母 26.26%</div>
+</div>
+<div class="col-label">2025 年度<small>净利润 71.44 亿</small></div>
+</div>
+<div class="col-wrap">
+<div class="col" style="height:100%">
+<div class="col-seg c-neg" style="height:27.85%">少数股东 27.85%</div>
+<div class="col-seg c-main" style="height:72.15%">归母 72.15%</div>
+</div>
+<div class="col-label">2026 上半年<small>净利润 1,075.50 亿</small></div>
+</div>
+<div class="col-wrap">
+<div class="col" style="height:100%">
+<div class="col-seg c-neg" style="height:32.81%">少数股东 32.81%</div>
+<div class="col-seg c-main" style="height:67.19%">归母 67.19%</div>
+</div>
+<div class="col-label">2026 前三季度<small>净利润 1,965.32 亿</small></div>
+</div>
+</div>
+<span class="caveat-inline">来源：招股说明书、2026 半年报、2026 三季报合并利润表<span class="src-badge src-s">一手</span>。占比回落的分母效应：2026 各期基数极大（千A级），1pct 的归属变化对应 10–20 亿量级的归母利润。Q3 单季的 38.8%（推算值）高于前三季度累计的 32.81%——分化在 Q3 单季加剧，而非缓和。</span>
+</div>
+<p><strong>业绩会对分化给出了归因</strong>（10-30 交流会，媒体转述<span class="src-badge src-2">二手</span>）：增量主要来自长鑫新桥、长鑫集电两家权益比例较低的控股子公司（直接持股 30.68% / 31.72%<span class="src-badge src-s">一手</span>，招股书口径），这两家「营收利润环比 +50% 以上、但上市公司权益比例低」；公司称已于 2026 年 8 月注资长鑫集电提升权益比例。上期报告 4.4 列出的「三个候选解释」就此收敛为一个——但这本身构成新的空方证据：归母口径的 P/E 19.71 倍，是按「上市公司股东只分到合并利润的约三分之二」算出来的，该折价率是否收敛取决于注资后的权益结构变化，属 12.2 跟踪指标。</p>
+<h3>4.3 资产负债表与现金流要点</h3>
+<ul>
+<li><strong>总资产 6,725.35 亿元</strong>（较年初 +99.69%）：固定资产 1,848.99 亿 + 在建工程 442.35 亿，重资产扩张仍在进行；前三季度购建固定资产现金支出 369.98 亿元<span class="src-badge src-s">一手</span>。</li>
+<li><strong>货币资金 2,851.65 亿元</strong>（9 月末），资产负债率 36.34%（较年初 −17.9pct），长期借款 977.66 亿（较年初下降）——IPO 募资 + 利润留存使公司处于<strong>净现金状态</strong>，扩产资金无约束<span class="src-badge src-s">一手</span>。</li>
+<li><strong>存货 392.27 亿元</strong>（较年初 +37%）：存货增速远低于营收增速（+738.51%），暂无压货信号；应收账款 93.10 亿元——媒体对其账期结构的质疑（Bt 财经《收款困局》）<span class="src-badge src-2">二手</span>属解读而非披露问题，绝对额相对单季营收 1,187 亿并不大<span class="src-badge src-s">一手</span>+<span class="src-badge src-e">推算</span>。</li>
+<li><strong>非经常性损益为负</strong>：前三季度合计 −19.90 亿元（公允价值变动 −46.99 亿），扣非归母 1,340.30 亿反而高于归母 1,320.40 亿<span class="src-badge src-s">一手</span>。</li>
+<li><strong>未分配利润转正</strong>：由年初 −366.50 亿转正至 953.90 亿——三年亏损在两个季度内被抹平，这是周期威力的报表侧写，也意味着未来年度具备分红 accounting 能力（是否分红是另一回事）<span class="src-badge src-s">一手</span>。</li>
+</ul>
+<h3>4.4 单季轨迹：预告推算已被三季报验证</h3>
+<p>上期报告用「预告区间 − H1」推算了 Q3 单季（营收 1,146.90–1,196.90 / 归母 533.95–548.95）。三季报实际值<strong>双双落在此区间内</strong>：营收 1,187.14 亿（高于中值 1.3%）、归母 544.35 亿（高于中值 0.5%）——预告口径可信，环比序列就此闭环：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>单季</th><th>营业收入（亿元）</th><th>环比</th><th>归母净利润（亿元）</th><th>环比</th><th>归母净利率</th><th>数据口径</th></tr></thead>
+<tbody>
+<tr><td>2025Q4</td><td>297.16</td><td>—</td><td>71.55</td><td>—</td><td>24.1%</td><td><span class="src-badge src-e">推算</span> 2025 年报 − 2025 前三季度</td></tr>
+<tr><td>2026Q1</td><td>508.00</td><td>+70.9%</td><td>247.62</td><td>+246.1%</td><td>48.7%</td><td><span class="src-badge src-s">一手</span> 招股书审阅数</td></tr>
+<tr><td>2026Q2</td><td>995.10</td><td>+95.9%</td><td>528.43</td><td>+113.4%</td><td>53.1%</td><td><span class="src-badge src-e">推算</span> 半年报 − Q1</td></tr>
+<tr><td>2026Q3</td><td>1,187.14</td><td>+19.30%</td><td>544.35</td><td>+3.01%</td><td>45.9%</td><td><span class="src-badge src-s">一手</span> 三季报（未经审计）</td></tr>
+</tbody>
+</table></div>
+<div class="chart">
+<div class="chart-title">单季口径：营收与归母净利润（2025Q4–2026Q3）<small>折线按季度等距；全部为披露值或披露值之差，无预告推算段</small></div>
+<svg aria-label="季度营收与归母净利润折线图" role="img" style="width:100%;height:auto;display:block" viewbox="0 0 640 250">
+<line stroke="#ddd" stroke-width="1" x1="70" x2="610" y1="200" y2="200"></line>
+<line stroke="#eee" stroke-width="1" x1="70" x2="610" y1="157.5" y2="157.5"></line>
+<line stroke="#eee" stroke-width="1" x1="70" x2="610" y1="115" y2="115"></line>
+<line stroke="#eee" stroke-width="1" x1="70" x2="610" y1="72.5" y2="72.5"></line>
+<line stroke="#eee" stroke-width="1" x1="70" x2="610" y1="30" y2="30"></line>
+<text fill="#999" font-size="10" text-anchor="end" x="64" y="204">0</text>
+<text fill="#999" font-size="10" text-anchor="end" x="64" y="161.5">300</text>
+<text fill="#999" font-size="10" text-anchor="end" x="64" y="119">600</text>
+<text fill="#999" font-size="10" text-anchor="end" x="64" y="76.5">900</text>
+<text fill="#999" font-size="10" text-anchor="end" x="64" y="34">1,200</text>
+<polyline fill="none" points="110,157.9 250,128 390,59 530,48.4" stroke="var(--accent)" stroke-width="2.5"></polyline>
+<polyline fill="none" points="110,189.9 250,164.9 390,125.1 530,123.3" stroke="var(--amber)" stroke-width="2.5"></polyline>
+<circle cx="110" cy="157.9" fill="var(--accent)" r="3.5"></circle><circle cx="250" cy="128" fill="var(--accent)" r="3.5"></circle><circle cx="390" cy="59" fill="var(--accent)" r="3.5"></circle><circle cx="530" cy="48.4" fill="var(--accent)" r="4"></circle>
+<circle cx="110" cy="189.9" fill="var(--amber)" r="3.5"></circle><circle cx="250" cy="164.9" fill="var(--amber)" r="3.5"></circle><circle cx="390" cy="125.1" fill="var(--amber)" r="3.5"></circle><circle cx="530" cy="123.3" fill="var(--amber)" r="4"></circle>
+<text fill="var(--accent)" font-size="11" font-weight="600" text-anchor="middle" x="110" y="146">297</text>
+<text fill="var(--accent)" font-size="11" font-weight="600" text-anchor="middle" x="250" y="116">508</text>
+<text fill="var(--accent)" font-size="11" font-weight="600" text-anchor="middle" x="390" y="47">995</text>
+<text fill="var(--accent)" font-size="11" font-weight="600" text-anchor="middle" x="530" y="37">1,187</text>
+<text fill="var(--amber)" font-size="11" font-weight="600" text-anchor="middle" x="110" y="181">72</text>
+<text fill="var(--amber)" font-size="11" font-weight="600" text-anchor="middle" x="250" y="156">248</text>
+<text fill="var(--amber)" font-size="11" font-weight="600" text-anchor="middle" x="390" y="115">528</text>
+<text fill="var(--amber)" font-size="11" font-weight="600" text-anchor="middle" x="530" y="113">544</text>
+<text fill="#777" font-size="10" text-anchor="middle" x="180" y="133">+71%</text>
+<text fill="#777" font-size="10" text-anchor="middle" x="320" y="84">+96%</text>
+<text fill="#777" font-size="10" text-anchor="middle" x="460" y="44">+19.3%</text>
+<text fill="#777" font-size="10" text-anchor="middle" x="180" y="188">+246%</text>
+<text fill="#777" font-size="10" text-anchor="middle" x="320" y="151">+113%</text>
+<text fill="#777" font-size="10" text-anchor="middle" x="460" y="140">+3.0%</text>
+<text fill="#666" font-size="11" text-anchor="middle" x="110" y="222">25Q4</text>
+<text fill="#666" font-size="11" text-anchor="middle" x="250" y="222">26Q1</text>
+<text fill="#666" font-size="11" text-anchor="middle" x="390" y="222">26Q2</text>
+<text fill="#666" font-size="11" text-anchor="middle" x="530" y="222">26Q3</text>
+</svg>
+<div class="chart-legend">
+<span><i style="background:var(--accent)"></i>营业收入</span>
+<span><i style="background:var(--amber)"></i>归母净利润</span>
+</div>
+<span class="caveat-inline">环比标注写在相邻两点之间，属于两点间的关系，不挂在任何单点上。两条线的剪刀差（营收 +19.3% vs 归母 +3.0%）即 4.2 的股权结构故事；归母净利率 45.9%（Q3）回落但净利率（含少数）稳定约 75%——两个口径的分化就是同一件事。</span>
+</div>
+<p>业绩会同时给出 Q4 指引：供不应求延续、营收继续增长、毛利率保持稳定（<span class="src-badge src-2">二手</span>转述）。若兑现，Q4 单季营收将再创高；归母口径能否与营收同步，仍取决于少数股东占比（4.2）。</p>
+</div>
+
+<div class="card" id="capacity">
+<h2>五、产能、制程与 HBM：第二增长曲线在哪</h2>
+<h3>5.1 产品迭代时间线</h3>
+<div class="chart">
+<div class="chart-title">量产里程碑（节点等距排列）</div>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">2019-09</div><div class="tl-text"><strong>首颗自主 8Gb DDR4 投产</strong>——中国大陆 DRAM「从 0 到 1」<span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">2023</div><div class="tl-text"><strong>LPDDR5 量产</strong><span class="src-badge src-s">一手</span>（招股书）</div></div>
+<div class="tl-item"><div class="tl-date">2024</div><div class="tl-text"><strong>DDR5 量产</strong>；HBM2 于 2024 下半年量产（媒体口径）<span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">2025</div><div class="tl-text"><strong>LPDDR5X 量产</strong><span class="src-badge src-s">一手</span></div></div>
+<div class="tl-item"><div class="tl-date">2026-08-29</div><div class="tl-text"><strong>LPDDR6 量产</strong>（峰值 12800Mbps，全球首发商用；业绩会：头部手机客户首发爬坡中）<span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">2026-09-20</div><div class="tl-text"><strong>第五代工艺平台（G5）量产</strong>：四重曝光 DUV（无 EUV），单片晶圆裸片产出较 G4 提升至少 50%<span class="src-badge src-s">一手</span>（自愿性披露公告 2026-005）</div></div>
+<div class="tl-item"><div class="tl-date">2026-10-30</div><div class="tl-text"><strong>G6 完成工程样片验证</strong>：公司首次宣布第六代平台基于 4F² 垂直沟道架构（VSG 晶体管）；年底 4F² DDR5 RDIMM 送样<span class="src-badge src-2">二手</span>（业绩会转述，回应美光放弃 4F² 路线：「反映行业普遍物理挑战，不同厂商战略选择值得尊重」）</div></div>
+<div class="tl-item tl-future"><div class="tl-date">2026 年底（计划）</div><div class="tl-text"><strong>4F² DDR5 RDIMM 送样</strong>：单胞面积缩减约 33%、位元密度提升 30–50%<span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item tl-future"><div class="tl-date">2027（规划）</div><div class="tl-text"><strong>HBM3 小批量量产目标</strong>（2026 年底小批量、良率目标 70%，媒体口径现状约 25%）<span class="src-badge src-2">二手</span></div></div>
+</div>
+</div>
+<h3>5.2 产能：多口径并列</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>口径来源</th><th>现状</th><th>规划</th></tr></thead>
+<tbody>
+<tr><td>公司公告（超募资金投向，2026-09-29）<span class="src-badge src-s">一手</span></td><td colspan="2" style="font-size:13px">拟投入超募资金 130 亿元用于技术研发项目（总投资 241 亿元，30 个月）+ 50 亿元投后道测试基地二期（总投资 108 亿元，37 个月）；前三季度购建固定资产现金支出 369.98 亿元<span class="src-badge src-s">一手</span>——扩产以自建+技改双线推进</td></tr>
+<tr><td>美银（2026-10-28 研报）<span class="src-badge src-2">二手</span></td><td>2026 年底月产能约 30 万片，全球第四</td><td>占全球 DRAM 供应约 15%（美银估）</td></tr>
+<tr><td>证券时报/界面<span class="src-badge src-2">二手</span></td><td>合肥+北京 3 座 12 英寸厂，约 28–30 万片/月</td><td>2026 年底约 35 万片/月；2028 年底 50 万片/月</td></tr>
+<tr><td>SemiAnalysis（经 21 经济网转述）<span class="src-badge src-2">二手</span></td><td>2025 年底约 26.5 万片/月</td><td>2026–2028 每年新增 7–8.5 万片/月</td></tr>
+<tr><td>UBS（经媒体转述）<span class="src-badge src-2">二手</span></td><td>2025 年底约 24 万片/月</td><td>2027 年底约 38.2 万片/月</td></tr>
+</tbody>
+</table></div>
+<span class="caveat-inline">各机构对「片」的口径（投片 vs 装机 vs 有效产能）不完全一致，且「上海基地（临港/唐镇两说并存）」无官方选址文件——本报告不做调和，引用时以公司公告为准。</span>
+<h3>5.3 市占率：份额与「份额停滞」的两个读数</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>机构/口径</th><th>数据</th><th>时点</th></tr></thead>
+<tbody>
+<tr><td>Omdia（销售额，招股书引用）<span class="src-badge src-s">一手</span></td><td>7.67%，全球第四（三星 33.96% / SK 海力士 34.48% / 美光 23.41%）</td><td>2025Q4</td></tr>
+<tr><td>Counterpoint（营收）<span class="src-badge src-2">二手</span></td><td>7%</td><td>2026Q2</td></tr>
+<tr><td>Counterpoint（营收）<span class="src-badge src-2">二手</span></td><td><strong>9%（自 10% 回落）</strong>；同季三星 +5pct 至 38% 重夺第一、全球 DRAM 营收 +369% YoY</td><td>2026Q3</td></tr>
+<tr><td>Counterpoint（出货）<span class="src-badge src-2">二手</span></td><td>10%（2026Q2，一年前约 4%）</td><td>2026Q2</td></tr>
+<tr><td>SemiAnalysis/东北证券（产能）<span class="src-badge src-2">二手</span></td><td>13–17%</td><td>2026 估</td></tr>
+</tbody>
+</table></div>
+<p><strong>Q3 份额回落 1pct 是本期新增的空方证据</strong>：全球 DRAM 营收单季 +369% 的背景下，长鑫份额不升反降（10% → 9%，Counterpoint 营收口径<span class="src-badge src-2">二手</span>）——三大厂（尤其三星）在同一季度吃掉了更大的增量。这与「扩产最快」并不矛盾：基数小、产能爬坡有滞后；但它意味着「行业大涨 = 长鑫份额自动上升」的直觉不成立。<strong>HBM 仍是绕不开的短板</strong>：路透 2026-10-28 报道长鑫将量产 HBM3E、当前良率仅 20–30% 仍推进（vs 三星/海力士 90%+）；HBM3 样品已交付华为等客户、良率约 25%–50%（多口径）、2026 年底小批量量产目标；媒体口径公司计划转约 20% 产能（约 6 万片/月）做 HBM<span class="src-badge src-2">二手</span>。三大厂把通用 DRAM 产能让给 HBM 腾出的空间，能否守住取决于三大厂产能回摆时点与长鑫 HBM 良率爬坡速度的赛跑。</p>
+</div>
+
+<div class="card" id="policy">
+<h2>六、政策与地缘：1260H 移除与 FAR 禁令并存的「半脱钩」</h2>
+<h3>6.1 美国管制的三层现状</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>层级</th><th>现状（截至 2026-11）</th><th>性质</th></tr></thead>
+<tbody>
+<tr><td>BIS 实体清单</td><td><strong>未列入</strong>。2024-12 一揽子规则未列名；2026-06 美方再次搁置列名决定<span class="src-badge src-2">二手</span>——本期未变化</td><td>最大单一政策变量，处于「提案/考虑中」状态</td></tr>
+<tr><td>先进节点规则（2022-10 + 2024-12）</td><td>先进 DRAM 产线获取美系设备/技术需许可证且实质推定拒绝；HBM 列入 3A090.c 禁售——<strong>公司的先进产线与美国技术已实质「半脱钩」</strong><span class="src-badge src-2">二手</span></td><td>现行，持续约束</td></tr>
+<tr><td>国防部 1260H 清单</td><td><strong>2026-02-13 更新版曾把 CXMT/YMTC 移除数小时后撤回</strong>；2026-06-08 更新版再确认列入；公司 2026-08 起诉五角大楼<span class="src-badge src-2">二手</span>。半年报对此做了披露<span class="src-badge src-s">一手</span>。eCFR 实体清单页（2026-11-06 版）仍为现行规则文本<span class="src-badge src-2">二手</span></td><td>非出口管制，但产生寒蝉效应；诉讼进行中</td></tr>
+<tr><td>FAR 政府采购禁令</td><td><strong>2026-05-15 最终规则生效</strong>：禁止联邦政府采购含 CXMT/YMTC 半导体产品的设备与服务<span class="src-badge src-2">二手</span>——已落地的实际约束（上期未列入表格）</td><td>现行</td></tr>
+</tbody>
+</table></div>
+<h3>6.2 最实质的约束渠道：光刻机</h3>
+<p>资金不是瓶颈（IPO 募资 663 亿净额 + 账上货币资金 2,851.65 亿<span class="src-badge src-s">一手</span> + 合肥国资/大基金体系）。真正的单点依赖是<strong>光刻</strong>：EUV 对华禁售使长鑫成为四大 DRAM 原厂中唯一无法使用 EUV 的一家，G5 平台靠四重曝光 DUV 实现<span class="src-badge src-s">一手</span>；FT 报道（2026-07）称长鑫与长江存储已囤积约三年扩产所需的 ASML DUV<span class="src-badge src-2">二手</span>。2026 年 10 月，美国国会推进 MATCH Act（要求对华「断售后」——禁止 ASML 提供售后服务），荷兰政府公开反对；媒体报道美国酝酿对华近乎全面的 DUV 销售禁令<span class="src-badge src-2">二手</span>。ASML 自身口径：2026Q2 中国占系统销售额 14%（Q1 为 19%），呈下降趋势。<strong>若售后断供成法，是现有产能维持能力的最大尾部风险</strong>——囤积的整机解决不了每半年更换的光学部件。</p>
+<h3>6.3 政策红利的另一面</h3>
+<p>同一条政策轴向上，国内是顺风：存储国产化空间（中国 DRAM 消费占全球约 30–35%，自给率约 8%——均为非官方口径<span class="src-badge src-2">二手</span>）、大基金三期（注册资本 3,440 亿元）重点覆盖存储、2024-12 美国对 HBM 的对华禁令反而为国产 HBM 让出市场（华为等被禁购三大厂 HBM 的客户构成长鑫 HBM 的确定性需求）。政策同时是这家公司的<strong>需求侧保护伞</strong>与<strong>供给侧天花板</strong>——一体两面，不可只取其一。</p>
+</div>
+
+<div class="card" id="ipo">
+<h2>七、上市与资金面：70 个交易日、两次极端单日波动</h2>
+<div class="chart">
+<div class="chart-title">上市以来收盘价（2026-07-27 → 2026-11-06）<small>x 轴按真实日期比例 · 前复权日线 · 腾讯行情接口</small></div>
+<svg aria-label="上市以来股价走势" role="img" style="width:100%;height:auto" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="50" x2="620" y1="200" y2="200"></line><line x1="50" x2="620" y1="155" y2="155"></line>
+<line x1="50" x2="620" y1="110" y2="110"></line><line x1="50" x2="620" y1="65" y2="65"></line><line x1="50" x2="620" y1="20" y2="20"></line>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end">
+<text x="44" y="204">0</text><text x="44" y="159">25</text><text x="44" y="114">40</text><text x="44" y="69">55</text><text x="44" y="24">65</text>
+</g>
+<line opacity="0.8" stroke="var(--green)" stroke-dasharray="5 4" stroke-width="1.5" x1="50" x2="620" y1="176" y2="176"></line>
+<text fill="var(--green)" font-size="11" text-anchor="end" x="616" y="171">发行价 8.66</text>
+<g stroke="var(--border-light)" stroke-dasharray="2 3" stroke-width="1">
+<line x1="77.9" x2="77.9" y1="20" y2="200"></line><line x1="251.2" x2="251.2" y1="20" y2="200"></line><line x1="418.8" x2="418.8" y1="20" y2="200"></line><line x1="592.1" x2="592.1" y1="20" y2="200"></line>
+</g>
+<polyline fill="none" points="50,64.3 55.6,69.8 61.2,53.4 66.8,53.6 72.4,50.5 89.1,47.7 94.7,47.7 100.3,49.6 105.9,56.1 111.5,54.7 128.2,57.9 133.8,60.4 139.4,51.8 145,53.6 150.6,47.2 167.4,28.9 172.9,36.1 178.5,40.6 184.1,40.6 189.7,39.4 206.5,43.3 212.1,43.5 217.6,44.6 223.2,36.3 228.8,37.7 245.6,39.4 251.2,43.5 256.8,49.6 262.4,46.2 267.9,48.2 284.7,38.1 290.3,38.3 295.9,42.5 301.5,41.6 307.1,42.9 323.8,49.1 329.4,49.9 335,47.4 340.6,51.9 346.2,46.2 362.9,42.5 368.5,39.8 374.1,37.7 379.7,44.4 402.1,51 407.6,46.2 413.2,48.3 457.9,60.1 463.5,58.8 480.3,66.1 485.9,69.9 491.5,72.6 497.1,79.3 502.6,75.3 519.4,85 525,88.3 530.6,86.5 536.2,90.1 541.8,81.3 558.5,81.9 564.1,80.9 569.7,77.2 575.3,81.3 580.9,84.2 597.6,84.5 603.2,92.6 608.8,77.9 614.4,82.2 620,88.1" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+<g fill="#fff" stroke="var(--accent)" stroke-width="2">
+<circle cx="50" cy="64.3" r="4"></circle>
+<circle cx="167.4" cy="28.9" fill="#fff" r="5" stroke="var(--green)"></circle>
+<circle cx="603.2" cy="92.6" r="4" stroke="var(--red)"></circle>
+<circle cx="608.8" cy="77.9" r="4" stroke="var(--amber)"></circle>
+<circle cx="620" cy="88.1" fill="var(--accent)" r="5"></circle>
+</g>
+<g font-size="12" font-weight="600" text-anchor="middle">
+<text fill="var(--text-primary)" x="60" y="55">首日收 49.00</text>
+<text fill="var(--green)" x="174" y="24">峰值收 61.80（08-17）</text>
+<text fill="var(--red)" x="575" y="108">新低收 38.80（11-03）</text>
+<text fill="var(--amber)" x="600" y="70">+13.63%（11-04）</text>
+<text fill="var(--accent)" x="612" y="103">40.41</text>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="middle">
+<text x="50" y="224">07-27</text>
+<text x="251" y="224">09-01</text>
+<text x="418" y="224">10-01</text>
+<text x="600" y="224">11-06</text>
+</g>
+</svg>
+<span class="caveat-inline">来源：腾讯行情 web.ifzq.gtimg.cn 日线（前复权），2026-11-07 取数。盘中极值：最高 61.80（08-17）、最低 38.11（首日 07-27）；11-03 盘中低点即收盘 38.80（收盘即全日最低）。<span class="src-badge src-2">二手</span></span>
+</div>
+<h3>7.1 本期股价事件链（2026-10-16 → 2026-11-06）</h3>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">10-19 → 10-22</div><div class="tl-text"><strong>四连跌</strong>：45.02 → 39.70（累计 −11.8%），长鑫一度让出 A 股市值第一（工行、建行居前）<span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">10-30</div><div class="tl-text"><strong>三季报披露</strong>（营收 +613% / 归母 +3.01% 环比的分化结构），当日收 41.80（+3.7%）；次日股价反而走低——「利好落地」读法与「归母不及预期」读法并存</div></div>
+<div class="tl-item"><div class="tl-date">11-03</div><div class="tl-text"><strong>收盘新低 38.80</strong>（−7.0%，盘中收盘即最低），市值约 2.63 万亿，较峰值缩水逾 1.5 万亿<span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">11-04</div><div class="tl-text"><strong>+13.63%（收 44.09，上市以来最大单日涨幅）</strong>：当日早间公告董事长朱一明提议回购加码至 25–50 亿（公告 2026-021）；同日科创 50 大涨逾 8%、长鑫重回 3 万亿市值与 A 股市值第一——回购加码与板块行情的联动归因是媒体叙事，无法从公开数据中拆分各自的贡献<span class="src-badge src-2">二手</span></div></div>
+<div class="tl-item"><div class="tl-date">11-05 → 11-06</div><div class="tl-text"><strong>两日回落 −8.3%</strong>（44.09 → 40.41），11-06 收盘 2.74 万亿、让出市值第一（工行 3.01 万亿）<span class="src-badge src-2">二手</span>——单日暴涨未能延续，回购公告的定价效应未站稳</div></div>
+</div>
+<h3>7.2 发行、流通盘与回购</h3>
+<ul>
+<li>发行价 8.66 元/股，发行 76.91 亿股（含绿鞋），募资总额 666.07 亿元、净额 663.10 亿元——<strong>科创板史上最大 IPO</strong><span class="src-badge src-s">一手</span>；发行时对应 2025 年扣非摊薄市盈率 308.92 倍（官方口径）<span class="src-badge src-s">一手</span>。</li>
+<li>无限售流通股 45.03 亿股（约 6.6%），总股本 678.84 亿股；<strong>股东总数从 6-30 的 60 户激增至 9-30 的 794,770 户</strong><span class="src-badge src-s">一手</span>——三季报口径的户数是上市后首次公开的散户化读数（60 户为 H1 末招股书口径，两者披露时点、口径不同，见数据说明①）。筹码分散化的方向与 11 月以来股价波动放大（−7.0% / +13.63% / −4.98%）互为印证。</li>
+<li><strong>回购事件链</strong>：10-16 董事长朱一明提议回购 → 10-31 董事会通过方案（10–20 亿元，价格上限 72.69 元/股，公告 2026-018）→ <strong>11-04 提议加码至 25–50 亿元（公告 2026-021）</strong>，媒体称科创板史上最大单次回购<span class="src-badge src-s">一手</span>（公告 PDF 存档）+<span class="src-badge src-2">二手</span>（媒体定性）。50 亿上限 ≈ 市值的 0.18%<span class="src-badge src-e">推算</span>——量级上不足以改变流通盘结构，其信号意义大于资金意义。</li>
+<li><strong>解禁时间线</strong>：2027-01-27 网下配售 15.21 亿股（约 2.24%）→ 2027-07-27 战配 12 个月到期 → <strong>2029-07-27 三年期大额解禁（真正的供给压力窗口，媒体推算需万亿级资金承接<span class="src-badge src-3">三方</span>）</strong>；朱一明个人持股自愿锁定 10 年（至 2036-07-27）<span class="src-badge src-2">二手</span>。</li>
+</ul>
+</div>
+
+<div class="card" id="valuation">
+<h2>八、估值分析：TTM 19.7 倍与 P/B 10.7 倍的两个读数</h2>
+<h3>8.1 利润口径决定倍数：从 1630 倍到 20 倍只差一个假设</h3>
+<p>长鑫的估值悖论在于：用哪个利润做分母，得到的市盈率差两个数量级。三季报落地后，TTM 分母已全部由披露值构成（2025Q4 71.55 亿推算 + 2026 前三季度 1,320.40 亿披露）：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>口径</th><th>利润分母（亿元）</th><th>隐含 P/E</th><th>来源/性质</th></tr></thead>
+<tbody>
+<tr><td>2025 年归母净利润（静态）</td><td>18.75</td><td>≈ 1,463 倍</td><td><span class="src-badge src-e">推算</span>（市值/招股书披露利润；接口「市盈率(静)」字段即 1463.15）</td></tr>
+<tr><td>TTM 归母净利润（2025Q4 + 2026 前三季度）</td><td>1,391.95</td><td><strong>19.71 倍</strong></td><td><span class="src-badge src-e">推算</span>，与接口 PE-TTM 19.71 完全一致；2025Q4 为 2025 年报 − 2025 前三季度之差</td></tr>
+<tr><td>2026 前三季度简单年化（×4/3）</td><td>1,760.53</td><td>15.6 倍</td><td><span class="src-badge src-e">推算</span>，隐含「Q4 利润与前三季度季均持平」</td></tr>
+<tr><td>华泰 2026 年预测</td><td>1,979.43</td><td>13.9 倍</td><td><span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span>（媒体转述研报预测值）</td></tr>
+</tbody>
+</table></div>
+<span class="caveat-inline">TTM 推算：2025Q4 归母 = 2025 全年 18.75 − 2025 前三季度（−52.80）= 71.55；+ 2026 前三季度 1,320.40 = 1,391.95 亿元；27,431.96 ÷ 1,391.95 = 19.71，与腾讯接口 PE-TTM 完全吻合（口径互证）。上期报告的「预告 TTM ≈ 22.0 倍」口径已被三季报实际值取代：实际前三季度归母 1,320.40 亿落在预告区间（1,310–1,325 亿）之内。<strong>「年化」假设在周期顶部是危险的</strong>——DRAM 价格若回落，年化利润本身会缩水；且 Q3 单季归母环比仅 +3.01%（4.2），「Q4 与季均持平」隐含的利润水平需要用 12.2 的跟踪变量检验。</span>
+<h3>8.2 P/B 从 15.2 到 10.7：分母变了，不是估值跌了</h3>
+<p>接口 P/B 10.68 的分母是 9 月末归母净资产 2,568.76 亿元<span class="src-badge src-s">一手</span>（含 IPO 募资 663 亿 + 前三季度利润留存 1,320 亿）。与上期报告的 15.20 相比读数下降近三分之一，但同期股价只从 45.02 走到 40.41（−10.2%）——差异几乎全部来自分母（净资产在一个季度内增厚约 27.8%）<span class="src-badge src-e">推算</span>。<strong>P/B 的两期读数不可直接连读为「估值大幅回落」</strong>。横向看：A 股可比（兆易创新约 8.5 / 中芯国际约 5.5，2026-11-06 腾讯接口口径<span class="src-badge src-2">二手</span>）与海外三巨头（2–6 倍<span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span>）——长鑫 P/B 仍处可比组最高位。P/E 看齐海外、P/B 显著更高，这个矛盾读数本身仍是市场在给「周期顶利润不可持续」定价的证据。</p>
+<h3>8.3 股息率与融资纪律（A 股专属检验）</h3>
+
+<h3>8.4 三重历史性参照</h3>
+<ul>
+<li><strong>与发行价比</strong>：40.41 ÷ 8.66 = 4.7 倍，上市约 3.5 个月<span class="src-badge src-e">推算</span>；</li>
+<li><strong>与峰值比</strong>：较 08-17 峰值收盘 61.80 元回撤 −34.6%，市值从约 4.13 万亿缩水约 1.4 万亿<span class="src-badge src-e">推算</span>；</li>
+<li><strong>与可比市值比</strong>：约 2.74 万亿 ≈ 兆易创新（1,686 亿）× 16 ≈ 两个多中芯国际（9,496 亿）量级<span class="src-badge src-2">二手</span>（11-06 接口市值）——该量级对应的市场共识假设是「长鑫成为全球存储格局的长期玩家」，这个假设本身可被 HBM 良率、市占率曲线、周期反转时点证伪。</li>
+</ul>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>九、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>稀缺性 + 国产替代</strong>：境内唯一大规模 DRAM 原厂，全球第四；中国 DRAM 需求占全球约三成而自给率仅约 8%<span class="src-badge src-2">二手</span>。</li>
+<li><strong>利润兑现且现金为证</strong>：前三季度归母 1,320 亿、经营现金流 2,547 亿（大于净利润）、资产负债率降至 36.34%；Q3 毛利率 89.53% 环比仍在抬升<span class="src-badge src-s">一手</span>。</li>
+<li><strong>Q4 指引明确</strong>：管理层称供不应求延续、Q4 营收继续增长、毛利率保持稳定；长协（长期供货协议）已与多家头部客户推进<span class="src-badge src-2">二手</span>（业绩会转述）——长协若落地，把「周期利润」部分转化为「锁量利润」。</li>
+<li><strong>技术追赶持续</strong>：G5 无 EUV 量产、LPDDR6 首发、G6（4F²）工程样片验证完成、年底 DDR5 RDIMM 送样——代际追赶未被美光放弃 4F² 的路线分叉打断<span class="src-badge src-2">二手</span>。</li>
+<li><strong>回购加码 + 三大厂 2027 产能售罄</strong>：董事长提议 25–50 亿回购（公告 2026-021<span class="src-badge src-s">一手</span>）；三星/海力士/美光 2027 年 DRAM/HBM 产能已全部售罄，行业短缺口延续至 2027 的概率上升<span class="src-badge src-2">二手</span>。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>归母利润环比走平的股权结构解释</strong>：Q3 净利润（含少数）889.83 亿（+19.38% 环比）而归母仅 544.35 亿（+3.01%）——少数股东损益占 Q3 净利润 38.8%（H1 为 27.85%），营收利润高增发生在权益比例低的子公司（长鑫新桥/长鑫集电）<span class="src-badge src-s">一手</span>+<span class="src-badge src-e">推算</span>；上市公司股东只分到合并利润的一半多一点。</li>
+<li><strong>份额不升反降</strong>：Q3 全球 DRAM 营收 +369% 的超级季度，长鑫份额从 10% 降到 9%（Counterpoint）——增量主要被三星拿走（+5pct 至 38%）<span class="src-badge src-2">二手</span>。</li>
+<li><strong>HBM 良率差距仍是数量级</strong>：路透口径 HBM3E 良率 20–30% vs 三星/海力士 90%+；HBM 约占全球 DRAM 晶圆投片 25%，最肥的市场缺席<span class="src-badge src-2">二手</span>。</li>
+<li><strong>周期顶部信号在累积</strong>：合约价环比涨幅 +95% → +15% → +10~20%（预估）逐季收敛；庆桂显（前三星高管）称 2027 年底全球 DRAM 月产能或达 600 万片——供给响应已在路上<span class="src-badge src-2">二手</span>。</li>
+<li><strong>回购量级与解禁悬置</strong>：50 亿回购 ≈ 市值 0.18%，挡不住量级的下跌（11-05/06 两日 −8.3% 为证）；2027-01 网下解禁、2029-07 三年期大额解禁的结构性供给在前方<span class="src-badge src-e">推算</span>+<span class="src-badge src-2">二手</span>。</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div class="card" id="analysts">
+<h2>十、券商分析师全景 <span class="src-badge src-t">时效</span></h2>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>日期</th><th>观点 / 目标价</th></tr></thead>
+<tbody>
+<tr><td>美银证券</td><td>2026-10-28</td><td><strong>首次覆盖「买入」，目标价 65 元</strong>：产能急速扩张，按明后两年 PE 16 倍定价（高于国际同业 8–10 倍）；估 2026 年底月产能 30 万片、占全球供应 15%；预计明年 DRAM 均价 +9%<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>华泰证券</td><td>2026-09-25 首覆 / 11-04 更新</td><td>首覆「买入」75.4 元（对应 2027 PE 14.5 倍）；11-04 研报目标价 ≤59 元、预测 2026 年归母 1,979.43 亿<span class="src-badge src-2">二手</span>（两次口径并存，未查到 11-04 报告原文，见数据说明④）</td></tr>
+<tr><td>野村</td><td>2026-07-28</td><td>目标价 116 元（AI 存储短缺延续至 2030 年）<span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span>（上市初期观点）</td></tr>
+<tr><td>高盛</td><td>2026-10（转引）</td><td>目标价 129 元（格隆汇 2026-10-08 统计口径转引，未查到原始报告，未经一手核实）</td></tr>
+<tr><td>大和 Daiwa</td><td>2026-10-14</td><td>市场对 4F² 技术过度反应，全球存储股回调属「买入机会」</td></tr>
+<tr><td>瑞穗</td><td>2026-10</td><td>目标价 70 元（媒体统计口径）<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>晨星 Morningstar</td><td>2026-10</td><td>目标价 16.1 元（格隆汇 2026-10-08 统计口径），<strong>上市以来唯一「卖出」评级</strong>；称 4F² 商业化「extremely difficult」（2026-10-12）</td></tr>
+</tbody>
+</table></div>
+<p>三点观察：① 卖方目标价极端分化依旧——最悲观 Morningstar（16.1 元，唯一「卖出」）与最乐观高盛（129 元）相差 8 倍（格隆汇统计口径），分歧本身比任何单一目标价更有信息量；② 新增的美银目标价 65 元锚定「明后两年 PE 16 倍」——比国际同业（8–10 倍）高 60% 以上，溢价理由是扩产斜率与国产替代稀缺性，这个溢价能否维持是判断分歧的核心；③ 目标价多锚定 2027–2028 年利润，而那些利润尚不存在、且依赖周期不反转。</p>
+</div>
+
+<div class="card" id="reddit">
+<h2>十一、雪球 / 散户讨论 <span class="src-badge src-3">三方</span></h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多头声音</span></h4>
+<ul>
+<li>「明年 10pe 是特别低估的；如果这算高估，那寒武纪最起码还得腰斩」——用 2027 年预期利润衡量（10 月中旬）</li>
+<li>「存储远没有结束……中国在这方面像光伏、电池、新能源车一样成为世界第一」——雪球 @7贪婪PK恐惧（10-16）</li>
+<li>三季报后多头叙事集中在「毛利率 89.5% 全球第一」「前三季度日赚近 5 亿」；11-04 回购加码被解读为「管理层认为股价低估的官方信号」（雪球/股吧综合，11 月上旬）</li>
+<li>基金三季报口径：公募基金持有长鑫 9.18 亿股（媒体报道口径），机构持仓在流通盘中的占比成为多头「筹码稳定」论据（11 月初）</li>
+</ul>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空头声音</span></h4>
+<ul>
+<li>「这一轮很多做科技的，都是股市新手。他们搞不懂为啥业绩这么好，股价却一直跌……长鑫管理层自己或许不这么认为，他们已经赚翻了，那是远远超过他们预期的」——雪球 @斯托伯的天空（10-19）：周期股在利润顶点被给予最低估值的经典结构</li>
+<li>「参考光伏隆基」的对比帖：周期股在盈利顶点之后估值与利润双杀的路径依赖（股吧，10-11 月）</li>
+<li>「第三季赚了 890 亿，少数股东分了近四成」——观点网对 Q3 利润归属结构的标题式概括（10-30 后广泛传播），归母含金量成为散户空方的主要论据</li>
+<li>《千亿 DRAM 的收款困局》（Bt 财经）：应收账款 93.10 亿（9 月末）与「先货后款」的下游账期结构被质疑<span class="src-badge src-2">二手</span></li>
+<li>「按目前价格，2027 年解禁需要万亿级资金承接」——财富号算术帖（10 月下旬），解禁恐惧持续发酵</li>
+</ul>
+</div>
+</div>
+<p style="font-size:13px;color:var(--text-muted);margin-top:10px;">样本说明：以上为 2026-10 至 2026-11 雪球/股吧/评论区的抽样（搜索引擎快照与媒体转述获取），样本量有限且倾向极端观点，仅代表散户情绪光谱，不构成事实。<strong>可复核的事实核</strong>：① 11-03 收盘新低 38.80 与 11-04 +13.63% 为交易所行情数据；② 少数股东损益 644.92 亿（前三季度）为三季报披露值，「分走近四成」是对披露值的转述；③ 应收账款 93.10 亿为三季报披露值，「收款困局」是媒体对该披露值的解读。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>十二、综合判断框架</h2>
+<h3>12.1 四情景推演（非预测，仅为组织思考的框架）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>利润/估值传导</th><th>主观概率（本报告观点，可被证伪）</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-bull">乐观</span> 周期延长 + 长协落地</td><td>AI 需求超预期 + 长协锁定 2027 销量 + HBM 良率爬坡快于预期</td><td>2027 利润维持或增长，长协降低利润波动率，估值获得「周期弱化」重定价</td><td>约 25%</td></tr>
+<tr><td><span class="tag tag-hold">中性</span> 高位平台期</td><td>2027 供需趋衡，价格高位横盘，份额与三大厂拉锯</td><td>利润 2027 见顶回落但绝对额仍高，估值随市场情绪波动</td><td>约 40%</td></tr>
+<tr><td><span class="tag tag-bear">悲观</span> 周期反转</td><td>2027 三大厂新增产能集中释放（月产能向 600 万片走）+ AI 资本开支放缓</td><td>利润与毛利率回到周期均值，2026 年利润不可作为估值锚</td><td>约 25%</td></tr>
+<tr><td><span class="tag tag-bear">尾部</span> 政策冲击</td><td>实体清单落地或 ASML 售后断供成法</td><td>供给端受损先于需求端，产能扩张斜率中断</td><td>约 10%</td></tr>
+</tbody>
+</table></div>
+<span class="caveat-inline">概率为本报告主观判断，无频率依据；赋值目的仅在显性化分歧，便于事后检验。与上期的框架差异：乐观情景加入「长协」变量（10-30 业绩会新增信息）。</span>
+<h3>12.2 关键跟踪指标（按重要性排序）</h3>
+<ol>
+<li><strong>TrendForce/CFM DRAM 合约价环比</strong>：季度涨幅从正转负的时点，是周期反转的第一信号；4Q26 预估 +10~20%（TrendForce 两稿），2027Q1 的方向是下一个观测点；</li>
+<li><strong>少数股东损益占比</strong>：Q3 单季已升至 38.8%，该科目走势决定归母利润与合并利润的折价率是收敛（8 月注资长鑫集电后的权益比例变化是否体现）还是继续扩大——归母口径的 P/E 能否维持，取决于此；</li>
+<li><strong>公司季度毛利率与存货</strong>：Q4 毛利率「保持稳定」的管理层表述能否兑现（Q3 89.53% 为基期）；存货 392 亿（+37% 较年初）的周转变化；</li>
+<li><strong>三大厂资本开支与产能投放</strong>：三星/海力士/美光季报中的 capex 指引与 HBM 产能占比；庆桂显「600 万片/月」的产能路径是否兑现；</li>
+<li><strong>HBM3/HBM3E 良率与量产验证</strong>：有无可核实的量产订单（而非送样）；路透口径 20–30% 良率是否被公司披露口径证实或推翻；</li>
+<li><strong>回购实施进度</strong>：25–50 亿提议能否成为董事会决议并实际执行（公告 2026-021 仅为提议，需股东大会/董事会后续程序）；</li>
+<li><strong>实体清单与 ASML 售后政策</strong>：BIS 规则动态、MATCH Act 立法进度、荷兰政府立场；</li>
+<li><strong>解禁与流通盘</strong>：2027-01-27 首批网下解禁（15.21 亿股）前后的筹码结构变化。</li>
+</ol>
+<h3>12.3 总结</h3>
+<p>三季报把上期报告留下的两个悬而未决的问题给出了答案：<strong>其一</strong>，Q3 实际营收 1,187.14 亿、归母 544.35 亿，双双落在业绩预告推算区间之内（预告区间中值 +1.3% / +0.5%）——预告口径可信；<strong>其二</strong>，上期「归母环比近走平」的三个候选解释（涨价减弱/费用节奏/少数股东占比），三季报+业绩会给出了明确归因：净利润（含少数）环比 +19.38% 与归母 +3.01% 的剪刀差，来自权益比例低的长鑫新桥/长鑫集电贡献了大部分增量，公司已于 8 月注资长鑫集电提升权益比例<span class="src-badge src-2">二手</span>（业绩会转述）。这个解释可被 12.2 第 2 条跟踪指标证伪或证实。</p>
+<p>同样更新的是多空两边的证据：多方拿到了「毛利率 89.53% + 现金流 2,547 亿 + Q4 指引 + 回购加码」，空方拿到了「份额 10%→9% + HBM 良率 20–30% + 归母占比继续恶化」。股价对这组信息的反应是：先创新低（11-03 收 38.80），再单日 +13.63%（11-04，回购公告日），随后两日回吐 −8.3%——市场没有对任何一侧给出持续性定价。</p>
+<p><strong>本报告不给出买卖建议，不预测目标价。</strong>长鑫的市值里同时定价了「国产替代的长期叙事」与「周期顶部的短期利润」，而现在又叠加了第三个变量：归母利润的「所有权折价」是否收敛。三者中任何一个的证伪都会先于基本面本身反映在股价上——跟踪 12.2 清单里的变量，比争论「19.7 倍还是 1463 倍」更有价值。</p>
+</div>
+
+<div class="card" id="data-notes" style="border-left:4px solid var(--border)">
+<h2>数据说明</h2>
+<h3>① 数据口径与方法论</h3>
+<ul style="font-size:13.5px;color:var(--text-secondary)">
+<li><strong>TTM 归母净利润推算</strong>：2025Q4 = 2025 全年 18.75 − 2025 前三季度（−52.80，业绩预告给出的上年同期基数）= 71.55 亿；TTM = 71.55 + 1,320.40 = 1,391.95 亿；P/E = 27,431.96 ÷ 1,391.95 = 19.71，与腾讯接口 PE-TTM 字段完全一致（口径互证）。<span class="src-badge src-e">推算</span></li>
+<li><strong>P/B 分母</strong>：27,431.96 ÷ 10.68 ≈ 2,568.7 亿 = 9 月末归母净资产（三季报披露 2,568.76 亿，直接吻合）。该分母已含 IPO 募资 663 亿与前三季度利润留存；上期报告的 15.20 分母约 2,010 亿（H1 净资产 + IPO 募资）——两期 P/B 的读数差异主要来自分母增厚，不可连读为估值大幅回落。<span class="src-badge src-e">推算</span>+<span class="src-badge src-s">一手</span></li>
+<li><strong>Q3 单季少数股东损益</strong>：889.83（净利润）− 544.35（归母）= 345.48 亿，占 Q3 净利润 38.8%；前三季度合计 644.92 亿、占 32.81%。三季报未直接披露「Q3 单季少数股东损益」科目，该数由两行披露值之差推算。<span class="src-badge src-e">推算</span></li>
+<li><strong>股东户数口径</strong>：60 户（2026-06-30，半年报）与 794,770 户（2026-09-30，三季报）的巨大差异是披露口径不同——半年报的「股东总数」按招股书披露惯例仅统计发行人层面登记户数（上市前），三季报为上市后标准 A 股口径，两者不可直接连读为「户数暴增 1.3 万倍」。</li>
+<li><strong>前十大股东持股比例</strong>：清辉集电 19.21%（三季报）vs 21.67%（招股书/上期报告）——差异来自 IPO 新发 76.91 亿股稀释与口径时点不同，非减持。</li>
+<li><strong>毛利率口径差异</strong>：第三章折线图中 2023–2025 点用 (营收−营业成本)/营收 推算；84.84%（H1）与 89.53%（Q3 单季）为公司披露口径，两者不可直接连读斜率。</li>
+</ul>
+<h3>② 与上期报告的变化（2026-10-16 → 本期）</h3>
+<ul style="font-size:13.5px;color:var(--text-secondary)">
+<li><strong>三季报落地，预告推算被验证</strong>：上期 4.4 的 Q3 推算区间（营收 1,146.90–1,196.90 / 归母 533.95–548.95）与实际值（1,187.14 / 544.35）比对：实际高于中值 1.3% / 0.5%，预告口径可信。上期的「预告 TTM ≈ 22.0 倍」更新为实际 TTM 19.71 倍。</li>
+<li><strong>上期「三个候选解释」已解</strong>：上期 4.4 列出归母环比走平的三个候选（涨价减弱/费用节奏/少数股东占比），本期三季报+业绩会归因于子公司权益结构（少数股东损益 Q3 占 38.8% vs H1 27.85%），公司称 8 月已注资长鑫集电提升权益比例。归因表述来自业绩交流会转述（<span class="src-badge src-2">二手</span>），未取得 IR 记录表原件。</li>
+<li><strong>估值锚整体下移</strong>：市值 3.06→2.74 万亿、PE-TTM 37.36→19.71、PB 15.20→10.68；P/B 变化主因是分母（净资产）单季增厚约 27.8%，不是估值坍缩。</li>
+<li><strong>新增事件</strong>：三季报（10-30）、业绩交流会（10-30）、回购方案 10-20 亿（10-31 董事会）、回购加码提议 25–50 亿（11-04）、美银首覆（10-28）、华泰目标价更新（11-04）、Counterpoint Q3 份额 9%（10 月末）、TrendForce 4Q26 预估上调（10-20 稿）、1260H 移除又撤回（2026-02）、FAR 禁令生效（2026-05-15，上期表格漏列，本期补入）。</li>
+<li><strong>股价区间延展</strong>：新增 11-03 收盘新低 38.80、11-04 上市以来最大单日涨幅 +13.63%。</li>
+</ul>
+<h3>③ 取数更正记录</h3>
+<ul style="font-size:13.5px;color:var(--text-secondary)">
+<li><strong>可比公司代码事故（本期生成过程中自查发现）</strong>：取数过程中曾把兆易创新误写为 sz300458（该代码实为全志科技），正确代码为 sh603986，已按正确代码重新取数（11-06 收盘 239.49 元、市值 1,685.94 亿）。本报告 8.2/8.4 的可比数据均基于正确代码。</li>
+<li><strong>FAR 禁令漏列（上期）</strong>：上期 6.1 表格未列入 2026-05-15 已生效的 FAR 联邦采购禁令，本期补入（严格说是上期遗漏而非取数错误）。</li>
+<li><strong>sseinfo IR 活动记录表未取得</strong>：上交所 sns.sseinfo.com 的 10-30 业绩说明会记录表 PDF（编号 2026-001）curl 超时未下载；业绩会内容全部改用新浪财经/科创板日报等转述稿（<span class="src-badge src-2">二手</span>），已在引用处逐条标注。</li>
+<li><strong>东财 push2 接口封禁（延续）</strong>：东方财富 push2/push2his 对本机仍返回 HTTP 000/0 字节，全部行情改用腾讯接口；关键字段（PE/PB/市值）用披露值独立推算互证。</li>
+<li><strong>腾讯 52 周字段陷阱（延续）</strong>：接口字段 41/42 在 A 股语义是「当日最高/最低」；本报告的 38.11–61.80 区间来自日线 K 线全量复核。</li>
+</ul>
+<h3>④ 已知局限</h3>
+<ul style="font-size:13.5px;color:var(--text-secondary)">
+<li>三季报<strong>未经审计</strong>；HBM 良率（25% vs 50% vs 70% 目标）存在多口径且全部为媒体/业界消息，公司未做自愿性披露；</li>
+<li>产能（24–35 万片/月）与市占率（7%–17%）存在多个机构口径冲突，本报告并列呈现、不做调和；</li>
+<li>华泰 11-04 研报（目标价 ≤59 元、2026 预测 1,979.43 亿）与 9-25 首覆报告（75.4 元）的关系未查到原文核对——两次口径是否代表下调、或不同基准的并存预测，未定；</li>
+<li>业绩交流会内容全部为媒体转述（<span class="src-badge src-2">二手</span>），长协「与多家头部客户推进中」无公告级证据；回购加码（公告 2026-021）为董事长提议，尚需董事会/股东大会程序，实施金额与节奏未知；</li>
+<li>上市约 70 个交易日，所有「历史分位」类分析在本标的上不适用；本报告未提供 PE/PB 分位数表；</li>
+<li>11-04 回购公告与科创 50 板块行情对当日 +13.63% 的贡献无法从公开数据拆分；11-05/06 回落的资金面归因（获利了结/板块轮动/ETF 调仓）未取得龙虎榜与资金流明细。</li>
+</ul>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>本报告不构成投资建议。报告基于公开披露文件与网络公开信息生成，招股说明书、2026 年半年度报告、2026 年第三季度报告及公司公告已下载至本地作为一手数据源。所有估值情景与概率均为本报告的主观分析框架。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-11-07 · 由 Claude Code 辅助分析 · 数据截至 2026-11-06 收盘</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<p style="margin-top:4px;">
+    · 招股说明书（上交所，2026-05-17 版）· 2026 年半年度报告（巨潮资讯，2026-08-29）· 2026 年第三季度报告（2026-10-30，本地存档）<br/>
+    · 2026 年前三季度业绩预告（2026-10-17）· 回购方案公告 2026-018（2026-10-31）· 回购加码提议公告 2026-021（2026-11-04）<br/>
+    · 腾讯行情接口：qt.gtimg.cn/q=sh688825 · web.ifzq.gtimg.cn 日线（前复权）<br/>
+    · TrendForce 历次 DRAM 价格新闻稿（2025-10 至 2026-10）· Counterpoint 3Q26 DRAM 营收报告（2026-10）<br/>
+    · 路透 / FT / 美银·华泰·野村研报（经财联社等转述）/ 新浪财经·科创板日报（业绩会转述）<br/>
+    · 雪球 / 股吧 / 财经媒体评论区（散户观点，三方来源）
+  </p>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%EF%BC%88688825%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-07%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>日经ETF工银 2026-11-02 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/159866/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%97%A5%E7%BB%8FETF%E5%B7%A5%E9%93%B6%EF%BC%88159866%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%97%A5%E7%BB%8FETF%E5%B7%A5%E9%93%B6%EF%BC%88159866%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-02%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">159866 <span>·</span> 2026-11-02 <span>·</span> PC 完整版</div><h1>日经ETF工银</h1><p>数据截至 2026-11-02（ETF 价格为 A股 11-02 收盘；份额净值为 10-30，11-02 官方净值晚间公布；日经225 为东京 11-02 收盘；指数权重与估值为 10-30 官方口径）</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、基金速览</a></li><li><a href="#business">二、这只 ETF 是什么</a></li><li><a href="#index-structure">三、底层指数：日经225 认知要点</a></li><li><a href="#core-metric">四、核心指标 — 溢价率</a></li><li><a href="#holdings">五、持仓结构 — 穿透到底层</a></li><li><a href="#macro">六、宏观驱动</a></li><li><a href="#peers">七、同类 ETF 横向对比</a></li><li><a href="#financing">八、A 股融资纪律：股息率 vs 融资利率</a></li><li><a href="#bull-bear">九、多空核心分歧</a></li><li><a href="#sentiment">十、市场情绪与社区讨论 三方</a></li><li><a href="#conclusion">十一、综合判断框架</a></li><li><a href="#data-notes">数据说明</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> 基金公司公告/指数编制方官网/交易所行情 |
+    <span class="src-badge src-2">二手</span> 聚合平台/财经媒体 |
+    <span class="src-badge src-3">三方</span> 个人投资者/社交媒体 |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<ul style="margin-top:10px;font-size:13px;color:var(--text-secondary);padding-left:20px;">
+<li>ETF 收盘价/流通份额来自腾讯财经（<strong>2026-11-02 收盘</strong>，<span class="src-badge src-s">一手</span>）；近一月日 K 序列来自新浪财经接口，与腾讯当日收盘/昨收、上期报告数据三方核对一致（<span class="src-badge src-s">一手</span>，接口层）；份额净值序列、申赎状态来自天天基金净值接口（截至 2026-10-30，11-02 净值晚间公布，<span class="src-badge src-s">一手</span>）。</li>
+<li><strong>本地新增披露文件</strong>：Q3 季报（10-27 发布）已下载存档，9-30 份额 12.47 亿份、资产净值 20.93 亿元、净值增长率 −2.85% 均取自该文件（<span class="src-badge src-s">一手</span>）。</li>
+<li>日经225 点位（含 11-02 收盘）取自日经新闻社官网日度收盘 CSV（<span class="src-badge src-s">一手</span>）；前十大权重、七大行业权重、PER/PBR/股息率/除数取自日经官网 10-30 摘要页（Playwright 无头抓取，<span class="src-badge src-s">一手</span>；11-02 页面抓取超时，权重以 10-30 为准）。</li>
+<li>USD/JPY 与 USDCNY（含 2025 年末基期）来自 Yahoo Finance（11-02，<span class="src-badge src-s">一手</span>）；日本 10 年期国债利率来自 Trading Economics 页面快照（约 2.77%，<span class="src-badge src-2">二手</span>）。</li>
+<li>日银 10-29/30 会议结果、ETF 抛售、汇市干预、高市财政等宏观与政策信息均来自 Google News RSS 的<strong>标题层</strong>（NHK、日经、WSJ、Bloomberg、Reuters、财联社、新浪等，<span class="src-badge src-2">二手</span>）——tavily 检索额度用尽，未能取正文，已在引用处标注。</li>
+<li>社区情绪：Reddit 经 RSS 端点直接抓取（<span class="src-badge src-s">一手</span>，接口层）。<strong>本 ETF 无独立英文社区，已穿透到「底层指数本身」检索</strong>——检索结果为噪音/零相关，如实标注样本极少。</li>
+</ul>
+<div class="stale-warning">⚠️ <strong>时效提示</strong>：① 11-02 官方净值尚未公布，本报告溢价率同时给出「11-02 价 ÷ 10-30 净值」（T-1 口径）与「10-30 同日」两种口径；② 日经官网 11-02 权重页抓取超时，权重与指数估值为 10-30 官方口径；③ 本报告宏观表述大量引用标题层新闻（二手），会议细节以日本央行公布原文为准；④ 11-03（周二）为日本文化之日休市，东京 11-02 收盘后下一交易日为 11-04。</div>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>标的/159866-日经ETF工银/Filings/</code> — 159866_2026年中期报告_20260630.pdf、159866_2026年第2季度报告_20260630.pdf、<strong>159866_2026年第3季度报告_20260930.pdf（本期新增）</strong></p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、基金速览</h2>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:32%">场内代码 / 简称</td><td>159866 日经ETF工银（深交所）</td></tr>
+<tr><td>基金全称</td><td>工银瑞信大和日经225交易型开放式指数证券投资基金（QDII）</td></tr>
+<tr><td>跟踪标的</td><td>日经225 指数（Nikkei 225），通过投资日本大和资管旗下 iFreeETF-Nikkei 225（代码 1320）间接跟踪</td></tr>
+<tr><td>管理人 / 托管人</td><td>工银瑞信基金 / 农业银行</td></tr>
+<tr><td>成立日期</td><td>2021-03-24 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>管理费</td><td>0.20%/年（托管费约 0.05%/年） <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>份额 / 规模</td><td><strong>9-30（Q3 季报）</strong>：12.47 亿份 / 20.93 亿元 <span class="src-badge src-s">一手</span> · 11-02 按流通份额与收盘价推算约 12.55 亿份 / 20.24 亿元 <span class="src-badge src-e">推算</span> · 对比 6-30（中报）：8.05 亿份 / 13.90 亿元 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>Q3 业绩（季报）</td><td>净值增长率 −2.85%（基准 −3.18%，超额 +0.33pct）；近一年 +34.03%（基准 +32.64%） <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>跟踪目标</td><td>日均跟踪偏离度 ≤0.35%，年化跟踪误差 ≤4% <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>申赎状态（10-30）</td><td>场内正常买卖；10 月内仅 10-12 一天「暂停申购/暂停赎回」（QDII 额度节奏），此后恢复正常 <span class="src-badge src-s">一手</span></td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">1.612</div><div class="label">收盘价（11-02，元）</div></div>
+<div class="summary-item"><div class="value">+2.12%</div><div class="label">收盘溢价率（T-1 净值口径）</div></div>
+<div class="summary-item"><div class="value">1.5785</div><div class="label">份额净值（10-30）</div></div>
+<div class="summary-item"><div class="value metric-negative">−15.7%</div><div class="label">自 6-22 价格高点回撤</div></div>
+<div class="summary-item"><div class="value metric-positive">+20.4%</div><div class="label">净值 YTD（2026 年）</div></div>
+<div class="summary-item"><div class="value metric-negative">−0.12%</div><div class="label">当日涨跌（11-02）</div></div>
+</div>
+<p class="caveat-inline">溢价率 = 收盘价 1.612（11-02）÷ 份额净值 1.5785（10-30）− 1 = +2.12%（<span class="src-badge src-e">推算</span>，T-1 净值口径）；同日可比口径（10-30 收盘 1.614 ÷ 当日净值 1.5785）为 +2.25%。净值 YTD 以 2025-12-31 官方净值 1.3112 为基期。价格高点回撤以近 52 周收盘价最高 1.912（2026-06-22，新浪日 K）为锚。</p>
+</div>
+
+<div class="card" id="business">
+<h2>二、这只 ETF 是什么</h2>
+<p>159866 是一只 <strong>QDII 通道的被动指数 ETF</strong>：A 股投资者用人民币在内地交易所买卖，基金公司用批下来的外汇额度换成日元、买入日本大和的日经225 标的 ETF。</p>
+<p>它 <strong>不是</strong> 一家公司——没有护城河、没有财报、没有个股意义上的 PE 分位，因此本报告不做个股式估值，只看四件事：<strong>溢价成本、穿透后的真实暴露、底层指数的宏观驱动、以及相对同类工具的成本高低</strong>。</p>
+<h3>2.1 它和「直接买日股」差在哪</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>环节</th><th>机制</th><th>对你的影响</th></tr></thead>
+<tbody>
+<tr><td><strong>通道</strong></td><td>QDII 外汇额度</td><td>额度用尽 → 暂停申购 → 二级市场只能靠存量博弈 → 溢价飙升</td></tr>
+<tr><td><strong>币种</strong></td><td>人民币申购 → 换日元买日股 → 净值日元计、再折回人民币</td><td>持仓同时暴露 <strong>日股 + 日元兑人民币汇率</strong> 双重风险</td></tr>
+<tr><td><strong>时差</strong></td><td>A 股与日本市场交易日/时段均不同</td><td>一方休市时净值被「冻结」而价格仍在跳——溢价凭空扩张或收缩</td></tr>
+<tr><td><strong>成本</strong></td><td>管理费 0.20% + 托管费约 0.05% + 底层 iFreeETF 费用</td><td>合计费率高于在日直接买日经 ETF（如 1320 管理费约 0.095%）</td></tr>
+</tbody>
+</table></div>
+<h3>2.2 结构：feeder（联接型），季报里「股票明细」必然为空</h3>
+<p>本基金的季报不直接持有个股——90% 以上资产投在一只境外标的 ETF 上（Q3 季报原文：标的 ETF 资产占基金资产净值比例不低于 90%）。看它的持仓，<strong>必须穿透到日经225 指数本身的成分与权重</strong>（日经新闻社官网一手披露），而不是在中国季报里找股票名单。这也是本报告第五节「持仓结构」的做法。</p>
+<h3>2.3 规模变化：Q3 单季份额 +55%，规模站上 20 亿</h3>
+<p>Q3 季报（一手）：6-30 份额 8.05 亿份 / 净资产 13.90 亿元 → <strong>9-30 份额 12.47 亿份 / 净资产 20.93 亿元</strong>——单季份额 +54.9%、规模 +50.6%，扩张集中在三季度（与 9 月中下旬溢价、成交同步放大的窗口吻合）。10 月以来新增趋缓：流通份额较 9-30 仅 +0.6%（腾讯口径 <span class="src-badge src-e">推算</span>），而净值同期回落约 −5.9%，规模大体持平在 20.2 亿元附近。同期申购通道大部分时间正常（仅 10-12 一天暂停），说明额度未再明显收紧。</p>
+<p>业绩口径（Q3 季报 <span class="src-badge src-s">一手</span>）：三季度净值增长率 −2.85%，跑赢基准 −3.18% 约 0.33pct；过去六个月 +29.44%、过去一年 +34.03%，均小幅超越基准。</p>
+</div>
+
+<div class="card" id="index-structure">
+<h2>三、底层指数：日经225 认知要点</h2>
+<h3>3.1 价格加权——权重每天都在漂</h3>
+<p>日经225 是全球主要宽基里少有的<strong>价格加权</strong>指数（多数宽基为市值加权）：权重 ≈ 股价 ÷ 除数（官方 10-30 除数 29.66435840）。这带来两个必须记住的性质：</p>
+<ul style="padding-left:20px;color:var(--text-secondary);font-size:13.5px;">
+<li>权重是<strong>快照、非固定值</strong>——股价涨得多的成分股权重自动膨胀（爱德万测试 10-23 → 10-30 一周内权重 11.13% → 11.88%）；</li>
+<li>单只高价股的影响被放大，个股权重可以远超其市值占比的「合理」水平。</li>
+</ul>
+<h3>3.2 官方前十大权重（2026-10-30，日经官网 <span class="src-badge src-s">一手</span>）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>#</th><th>公司（中文）</th><th>代码</th><th>主营产品/服务</th><th>行业（官方分类）</th><th>权重</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>爱德万测试 Advantest</td><td>6857</td><td>半导体测试设备</td><td>技术</td><td>11.88%</td></tr>
+<tr><td>2</td><td>迅销 Fast Retailing</td><td>9983</td><td>优衣库等服装连锁</td><td>消费</td><td>9.63%</td></tr>
+<tr><td>3</td><td>东京电子 Tokyo Electron</td><td>8035</td><td>半导体制造设备</td><td>技术</td><td>7.60%</td></tr>
+<tr><td>4</td><td>软银集团 SoftBank Group</td><td>9984</td><td>投资控股（AI/科技）</td><td>信息通信</td><td>5.73%</td></tr>
+<tr><td>5</td><td>瑞可利 Recruit Holdings</td><td>6098</td><td>招聘信息/人力资源</td><td>消费</td><td>3.07%</td></tr>
+<tr><td>6</td><td>TDK</td><td>6762</td><td>电子元器件（电池/磁材）</td><td>技术</td><td>2.05%</td></tr>
+<tr><td>7</td><td>KDDI</td><td>9433</td><td>电信运营</td><td>信息通信</td><td>1.81%</td></tr>
+<tr><td>8</td><td>伊比登 Ibiden</td><td>4062</td><td>半导体封装基板</td><td>技术</td><td>1.78%</td></tr>
+<tr><td>9</td><td>信越化学 Shin-Etsu Chemical</td><td>4063</td><td>硅材料/化学品</td><td>原材料</td><td>1.59%</td></tr>
+<tr><td>10</td><td>发那科 FANUC</td><td>6954</td><td>工业机器人/数控系统</td><td>技术</td><td>1.52%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">价格加权：权重为 10-30 快照，每日随股价漂移。前二合计 21.51%，前三合计 29.11%，前十合计 46.66%；单周最大变动为爱德万 +0.75pct（11.13% → 11.88%，对应 AI/半导体链 10-27~29 反弹）。</p>
+<h3>3.3 行业权重（官方七类，10-30 <span class="src-badge src-s">一手</span>）</h3>
+<div class="stacked-bar">
+<div class="c-main" style="width:41.11%">技术 41.1%</div>
+<div class="c-sub" style="width:23.82%">消费 23.8%</div>
+<div class="c-warn" style="width:12.36%">原材料 12.4%</div>
+<div class="c-neg" style="width:11.18%">信息通信 11.2%</div>
+
+
+
+</div>
+<p class="caveat-inline">从左至右：技术 41.1% ｜ 消费 23.8% ｜ 原材料 12.4% ｜ 信息通信 11.2% ｜ 资本财及其他 7.0% ｜ 金融 3.1% ｜ 公用事业与运输 1.4%（后三段因过窄不标数值）。技术类占比一周内自 40.9% 升至 41.1%——「日经 ETF」名字里没有的暴露——半导体设备（爱德万+东京电子+伊比登）——仍是它最大的单一集中项。</p>
+<h3>3.4 指数官方估值（10-30，日经官网 <span class="src-badge src-s">一手</span>）</h3>
+<p>上期报告时点（10-23）官网 PER/PBR 尚未更新；本期 10-30 官方数据已出：<strong>PER 16.56 倍（加权平均）、PBR 1.82 倍、股息率 1.85%（单纯平均）</strong>。这三个数是穿透后真实暴露的估值快照——技术权重四成以上的「日经」，整体估值读数并不极端，原因正是价格加权下低估值板块（金融 3.1%、原材料 12.4%）占比小，指数估值由高股价成长股主导。</p>
+</div>
+
+<div class="card" id="core-metric">
+<h2>四、核心指标 — 溢价率</h2>
+<p>对 QDII ETF，溢价率是每笔交易都真实支付/回收的成本：它衡量你比基金真实净值多付了多少钱。正溢价 = 买贵，负折价 = 打折。本报告用<strong>官方份额净值</strong>作分母（而非实时 IOPV），因为净值是一手可复算的口径；盘中决策则以 IOPV 为准。</p>
+<div class="summary-grid" style="grid-template-columns:repeat(4,1fr)">
+<div class="summary-item"><div class="value">+2.12%</div><div class="label">11-02 收盘（T-1 净值口径）</div></div>
+<div class="summary-item"><div class="value">+2.25%</div><div class="label">10-30 同日口径</div></div>
+<div class="summary-item"><div class="value">+3.03%</div><div class="label">10-28 · 近 13 日最高</div></div>
+<div class="summary-item"><div class="value">+1.68%</div><div class="label">10-23 · 近 13 日最低</div></div>
+</div>
+<h3>4.1 价格 vs 净值（10-14 以来，14 个交易日）</h3>
+<div class="chart">
+<div class="chart-title">159866 收盘价 vs 份额净值 <small>10-14 ~ 11-02 · 元 · 阴影 = 溢价（价在净值上方的距离）</small></div>
+<div style="display:flex;gap:18px;font-size:12px;color:var(--text-secondary);margin-bottom:4px;"><span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--green);margin-right:5px;"></span>收盘价</span><span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--amber);margin-right:5px;"></span>份额净值</span></div>
+<svg aria-label="159866 收盘价与净值折线图" role="img" style="width:100%;height:auto" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="50" x2="620" y1="200" y2="200"></line><line x1="50" x2="620" y1="155" y2="155"></line>
+<line x1="50" x2="620" y1="110" y2="110"></line><line x1="50" x2="620" y1="65" y2="65"></line>
+<line x1="50" x2="620" y1="20" y2="20"></line>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end">
+<text x="44" y="204">1.55</text><text x="44" y="159">1.60</text>
+<text x="44" y="114">1.65</text><text x="44" y="69">1.70</text><text x="44" y="24">1.75</text>
+</g>
+<path d="M50.0,38.0 L79.9,110.0 L109.8,92.9 L199.5,101.0 L229.4,124.4 L259.3,114.5 L289.2,146.0 L319.1,147.8 L408.7,158.6 L438.6,145.1 L468.5,115.4 L498.4,116.3 L528.3,142.4 L618.0,144.2 L618.0,174.4 L528.3,174.4 L498.4,141.3 L468.5,158.9 L438.6,170.8 L408.7,187.2 L319.1,171.7 L289.2,179.2 L259.3,145.3 L229.4,157.9 L199.5,134.3 L109.8,126.8 L79.9,142.6 L50.0,75.5 Z" fill="var(--border)" opacity="0.35"></path>
+<polyline fill="none" points="50.0,75.5 79.9,142.6 109.8,126.8 199.5,134.3 229.4,157.9 259.3,145.3 289.2,179.2 319.1,171.7 408.7,187.2 438.6,170.8 468.5,158.9 498.4,141.3 528.3,174.4 618.0,174.4" stroke="var(--amber)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<polyline fill="none" points="50.0,38.0 79.9,110.0 109.8,92.9 199.5,101.0 229.4,124.4 259.3,114.5 289.2,146.0 319.1,147.8 408.7,158.6 438.6,145.1 468.5,115.4 498.4,116.3 528.3,142.4 618.0,144.2" stroke="var(--green)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<g fill="#fff" stroke="var(--green)" stroke-width="2">
+<circle cx="50" cy="38" fill="var(--green)" r="4.5"></circle><circle cx="618" cy="144.2" r="4.5"></circle>
+</g>
+<g fill="#fff" stroke="var(--amber)" stroke-width="2">
+<circle cx="618" cy="174.4" r="4"></circle>
+</g>
+<g font-size="12" font-weight="600" text-anchor="middle">
+<text fill="var(--green)" x="112" y="30">1.730 高点（10-14）</text>
+<text fill="var(--text-primary)" text-anchor="end" x="618" y="126">价 1.612</text>
+<text fill="var(--amber)" text-anchor="end" x="618" y="194">净值 1.5785（10-30）</text>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="middle">
+<text x="50" y="224">10-14</text>
+<text x="259" y="224">10-21</text>
+<text x="468" y="224">10-28</text>
+<text text-anchor="end" x="618" y="224">11-02 最新</text>
+</g>
+</svg>
+<span class="caveat-inline">11-02 官方净值晚间才公布，净值线末端复用 10-30 值（1.5785），11-02 的真实溢价待净值公布后确认；当日日经225 收跌 0.33%、USD/JPY 基本持平，净值大概率小幅下修。期间净值 1.6883 → 1.5785（−6.5%）、价格 1.730 → 1.612（−6.8%），溢价率区间 +1.68% ~ +3.03%。</span>
+</div>
+<h3>4.2 溢价的读法</h3>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li><strong>+2.12%/+2.25% 处于近月区间中部</strong>：10-14 以来 13 个可同日比较交易日的溢价率区间为 +1.68% ~ +3.03%，中位数 +2.25%。10-28 曾单日冲高 +3.03%（当日 A 股价格 +2.05% 而净值 +0.83%，溢价单日扩张约 1.2pct，次日即回落）——价格端对 A 股情绪的反应比净值端快。</li>
+<li><strong>溢价没有归零的机制性理由</strong>：QDII 额度约束下，套利资金只能在「溢价 − 额度摩擦成本」覆盖交易成本时进场，历史上该类产品长期存在 1%–3% 的溢价中枢；只有在申购通道大幅放开时才会被压到 0 附近。</li>
+<li><strong>高溢价买入的风险是不对称的</strong>：溢价回落时，即使底层指数不跌，持有者也会承受溢价收敛的损失——2024-01 该类产品曾出现溢价逼近 10% 后基金公司连发五道风险提示、随后大幅收敛的先例。</li>
+</ul>
+</div>
+
+<div class="card" id="holdings">
+<h2>五、持仓结构 — 穿透到底层</h2>
+<p>基金季报（本地 <code>Filings/159866_2026年第3季度报告_20260930.pdf</code>，本期新增存档）的持仓明细只列出对 iFreeETF-Nikkei 225（1320）的投资——这是 feeder 结构的正常形态。真实暴露要从指数官方成分看：</p>
+<h3>5.1 「名字 vs 实际」的三条偏差</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>观察</th><th>数据（10-30 官方口径）</th><th>含义</th></tr></thead>
+<tbody>
+<tr><td>「日本大盘」≠ 均衡分散</td><td>技术 + 信息通信合计 <strong>52.3%</strong>；前三成分合计 29.1%</td><td>买它的一半是买日本半导体/AI 链</td></tr>
+<tr><td>「优衣库占近一成」</td><td>迅销 9.63%（价格加权把高股价放大）</td><td>单一消费股的波动对指数影响远超其市值地位</td></tr>
+<tr><td>金融占比极低</td><td>金融仅 3.1%</td><td>价格加权系统性低配了低价股密集的金融板块</td></tr>
+</tbody>
+</table></div>
+<h3>5.2 汇率暴露：净值 = 日股 × 日元，而 2026 年汇率腿是拖累</h3>
+<p>净值以日元计价、折回人民币。持有本基金 = 同时持有「日经225 多头」与「日元兑人民币多头」。2026 年的实际分解如下（<span class="src-badge src-e">推算</span>，算式见数据说明①）：</p>
+<div class="summary-grid" style="grid-template-columns:repeat(4,1fr)">
+<div class="summary-item"><div class="value metric-positive">+25.3%</div><div class="label">日经225 YTD（指数腿）</div></div>
+<div class="summary-item"><div class="value metric-negative">−5.6%</div><div class="label">日元兑人民币 YTD（汇率腿）</div></div>
+<div class="summary-item"><div class="value metric-positive">≈+2.1%</div><div class="label">股息−费用+跟踪差（残差）</div></div>
+<div class="summary-item"><div class="value metric-positive">+20.4%</div><div class="label">净值 YTD（结果）</div></div>
+</div>
+<p class="caveat-inline">关键点：USD/JPY 全年基本持平（156.8 → 157.8），但人民币对美元升值约 5.0%（6.996 → 6.645），两相叠加，<strong>日元兑人民币贬值 5.6%</strong>——汇率腿全年拖累本基金人民币回报约 5~6 个百分点。残差 ≈ 底层指数股息（官网口径 1.85%）− 双层费用（约 0.3%）+ 跟踪偏差，量级自洽。</p>
+<h3>5.3 十大权重近期变动</h3>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-date">2026-09-29（上期口径）</div>
+<div class="tl-text">前十大末位由京瓷（6971）占据，权重 1.51%</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">2026-10-23</div>
+<div class="tl-text"><strong>发那科（6954，工业机器人）以 1.50% 升至第 10 位</strong>，京瓷跌出前十——AI/自动化链权重扩散</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">2026-10-30</div>
+<div class="tl-text"><strong>爱德万 11.13% → 11.88%（单周 +0.75pct）</strong>，对应 AI/半导体链 10-27~29 三连涨；发那科守住第 10 位（1.52%）</div>
+</div>
+<div class="tl-item tl-future">
+<div class="tl-date">持续跟踪</div>
+<div class="tl-text">价格加权下权重随股价日频漂移；爱德万/迅销/东京电子三家的单日波动即可主导指数方向</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="macro">
+<h2>六、宏观驱动</h2>
+<p>宽基指数 ETF 不做个股式财务分析，但必须结合底层市场的宏观变量。对日经225，「决定国际资金进出日本」的变量按传导强度排序如下（本期最大增量：日银 10-29/30 会议落地）：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>变量</th><th>当前状态（2026-10-30 ~ 11-02）</th><th>来源</th><th>对指数/本 ETF 的传导</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>日银利率路径</strong></td>
+<td><strong>10-30 会议按兵不动（政策利率 1.25%），但宣告基础通胀「达成 2% 目标」——2013 年以来首次</strong>；植田补充「尚未可持续地达成」；东京 10 月 CPI 会前已破 2%；路透 11-02 解读「12 月加息已锁定（locks in December hike）」，但中性利率水平的不确定性令路径难测</td>
+<td><span class="src-badge src-2">二手</span>（标题层）</td>
+<td>「通胀达标」宣告把继续加息变成可预期的政策序列——融资端成本的趋势性抬升从此有了官方依据；12 月会议成为下一个定价事件</td>
+</tr>
+<tr>
+<td><strong>日银 ETF 抛售（新增变量）</strong></td>
+<td>日银加速抛售所持 ETF：<strong>年售规模增至约 8,600 亿日元</strong>，2026 年内已抛约 2,440 亿；当日日股反应平淡，部分分析解读为「未来供给不确定性下降」的正面信号</td>
+<td><span class="src-badge src-2">二手</span>（标题层）</td>
+<td>日银从日股历史最大买家转为系统性卖家——对指数是持续供给变量；「反应平淡」说明当前卖量（月均约 700 亿）相对市场成交仍是小数，但方向与利率路径同向（政策全面退出）</td>
+</tr>
+<tr>
+<td><strong>日元汇率与干预</strong></td>
+<td>USD/JPY 157.75（11-02）；10-30 会后盘中一度升至 155 台（「通胀达标」推升日元）；7-8 月日元买入干预累计 <strong>15 万亿日元（史上最大）</strong>；野村提示后续存在追加干预、日银加速加息与债市稳定化三种当局响应路径</td>
+<td><span class="src-badge src-s">一手</span>（汇率）+ <span class="src-badge src-2">二手</span>（干预）</td>
+<td><strong>双向且方向相反</strong>：贬值利多出口型权重股盈利、推升日经；但本基金净值以日元计价折人民币，日元贬值直接吃掉人民币收益。干预制造的上行风险对人民币回报腿反而是利好</td>
+</tr>
+<tr>
+<td><strong>美国 10 年期国债</strong></td>
+<td>4.93%（10-30），10-21 曾触及 5.15% 后回落</td>
+<td><span class="src-badge src-s">一手</span></td>
+<td>全球风险资产估值锚。10 月下旬美债收益率自高位回落与日股 10-27~29 反弹同步；日美 10 年利差约 2.16pct（4.93% vs 2.77%）</td>
+</tr>
+<tr>
+<td><strong>AI / 半导体景气</strong></td>
+<td>10 月中旬 CoreWeave 债券收益率 15%+、CDS 触及 distressed 水平引发「AI 基建靠债融资」担忧（CNBC/MarketWatch）；摩根大通称对全球银行风险有限（路透 10-20）；10-27~29 日经三连涨 +3.97%，10-30 会议日 −2.12%；11-02 东京早盘受 Kioxia（铠侠）急落拖累，午后跌幅收窄（−0.33% 收盘）</td>
+<td><span class="src-badge src-2">二手</span></td>
+<td>利多与最大单一波动源并存：技术+信息通信权重 52.3%，AI 信用叙事反复时指数两三天内可摆动 4%+；Kioxia 急落未扩散为全板块抛售（日经 11-02 报道口径）</td>
+</tr>
+<tr>
+<td><strong>日本财政（高市政权）</strong></td>
+<td>消费税减税财源之争公开化：首相在参院预算委称「不排除国债」（10-19），随后又强调「不依赖赤字国债」（10-20）；日经 10-31 报道年末将「三正面作战」（消费税减税、防卫强化、成长投资）；每日新闻社论追问「物价达标后积极财政的依据」（11-01）</td>
+<td><span class="src-badge src-2">二手</span>（标题层）</td>
+<td>财政扩张 + 日银加息 = 政策互搏：财源若靠国债，日债利率上行压力内生（10 年期 5 月中旬首次触及 2.8% 为 29 年半高位，现约 2.77%）</td>
+</tr>
+</tbody>
+</table></div>
+<h3>6.1 近 20 周指数路径</h3>
+<div class="chart">
+<div class="chart-title">日经225 周收盘 <small>2026-06-05 ~ 11-02 · 日经官网日度收盘 CSV</small></div>
+<svg aria-label="日经225 周线折线图" role="img" style="width:100%;height:auto" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="50" x2="620" y1="200" y2="200"></line><line x1="50" x2="620" y1="142.7" y2="142.7"></line>
+<line x1="50" x2="620" y1="85.5" y2="85.5"></line><line x1="50" x2="620" y1="28.2" y2="28.2"></line>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end">
+<text x="44" y="204">61,500</text><text x="44" y="146.7">65,000</text>
+<text x="44" y="89.5">68,500</text><text x="44" y="32.2">72,000</text>
+</g>
+<polyline fill="none" points="50.0,116.7 76.5,126.0 103.0,40.5 129.5,71.4 156.0,65.1 182.5,84.5 209.0,156.8 235.5,149.1 262.1,153.2 288.6,132.8 315.1,82.0 341.6,126.1 368.1,119.7 394.6,142.4 421.1,158.9 447.6,142.4 474.1,120.4 500.6,88.6 527.1,76.8 553.6,137.4 580.1,180.5 606.6,170.7 618.0,174.1" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<g fill="#fff" stroke="var(--accent)" stroke-width="2">
+<circle cx="103" cy="40.5" fill="var(--green)" r="4.5"></circle><circle cx="527.1" cy="76.8" r="4"></circle><circle cx="618" cy="174.1" fill="var(--red)" r="4.5"></circle>
+</g>
+<g font-size="12" font-weight="600" text-anchor="middle">
+<text fill="var(--green)" x="128" y="34">71,250 高点（06-19 当周）</text>
+<text fill="var(--text-primary)" x="527" y="60">69,031（10-09 当周）</text>
+<text fill="var(--red)" text-anchor="end" x="602" y="196">63,082</text>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="middle">
+<text x="50" y="224">06-05</text>
+<text x="341" y="224">08-21</text>
+<text text-anchor="end" x="618" y="224">11-02 最新</text>
+</g>
+</svg>
+<span class="caveat-inline">周收盘为每周最后交易日收盘值；日收盘高点 72,366（06-25）高于周收盘口径 71,250（06-19 当周）。现价距日收盘高点 −12.8%。10 月路径：AI 恐慌下杀（10-23 低点 62,693）→ 反弹三连涨至 64,659（10-29）→ 日银会议日 −2.12%（10-30）→ 11-02 −0.33%。</span>
+</div>
+<h3>6.2 日元套息交易——资金进出的「总闸门」</h3>
+<p>借便宜的日元 → 换美元等货币 → 买美债/美股/日股，是日经外资流向的底层机制，也是一台<strong>顺周期放大器</strong>。2026 年的特殊之处：日元没有明显升值（仍处 155~158 区间），压力来自<strong>融资端</strong>——日债利率自己在涨，且央行在加速退出 ETF 市场。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>链条</th><th>当前状态（10-30 ~ 11-02）</th><th>传导</th></tr></thead>
+<tbody>
+
+<tr><td><strong>日元弹性回升</strong></td><td>USD/JPY 157.75；10-30 会后盘中一度 155 台；7-8 月干预 15 万亿日元垫底，当局随时可能再出手</td><td>避险/政策驱动的日元升值与套息平仓互为因果；对人民币持有者，日元升值是回报腿的对冲</td></tr>
+<tr><td><strong>日美利差仍宽</strong></td><td>10 年期利差约 2.16pct（美 4.93% − 日 2.77%）</td><td>利差未收窄到触发大规模平仓的水平；套息仍在，但对「12 月加息 → 利差收窄」的敏感度在提高</td></tr>
+<tr><td><strong>央行供给变量</strong></td><td>日银 ETF 年抛售节奏增至约 8,600 亿日元 + 量化紧缩（季度减持 2,000 亿日元国债）；高市政权倾向增发国债</td><td>「央行卖 + 财政发」组合让日债利率上行内生，也把日股推入「央行退出」的新阶段——这是对套息与指数的双重中期利空</td></tr>
+</tbody>
+</table></div>
+<h3>6.3 宏观小结</h3>
+<div class="quote">
+    10-23 以来两条主线改写了宏观格局：① AI 信用恐慌阶段性缓和，美债收益率自 5.15% 高位回落，日经 10-27~29 反弹 3.97%；② 日银 10-30「宣告基础通胀达成 2% 目标」，把 12 月加息变成高概率事件，当日指数 −2.12% 作为回应。叠加日银 ETF 抛售提速（年约 8,600 亿），日股进入「政策紧缩 + 央行卖压 + 盈利上修」三力对冲的阶段。对本 ETF 的人民币持有者还有第三层：日元兑人民币 YTD −5.6% 的拖累仍在。后续变量按关注顺序：<strong>日银 12 月会议与加息落地、日银 ETF 抛售节奏、AI 信用利差（CoreWeave 为代理指标）、USD/JPY 与干预</strong>。
+  </div>
+</div>
+
+<div class="card" id="peers">
+<h2>七、同类 ETF 横向对比</h2>
+<p>跟踪日经225 的场内 QDII ETF 有三只，11-02 同日读数（溢价率为 T-1 净值口径）：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>代码 / 简称</th><th>收盘价（元）</th><th>净值（10-30）</th><th>溢价率</th><th>规模（推算）</th><th>当日涨跌</th></tr></thead>
+<tbody>
+<tr><td><strong>159866 日经ETF工银</strong></td><td>1.612</td><td>1.5785</td><td><strong class="metric-positive">+2.12%</strong></td><td>约 20.2 亿</td><td class="metric-negative">−0.12%</td></tr>
+<tr><td>513520 日经ETF华夏</td><td>2.178</td><td>2.0968</td><td>+3.87%</td><td>约 23.8 亿</td><td class="metric-negative">−0.09%</td></tr>
+<tr><td>513880 日经225ETF华安</td><td>2.052</td><td>1.9647</td><td>+4.44%</td><td>约 27.6 亿</td><td class="metric-negative">−0.24%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">价格/净值为一手口径（腾讯行情 + 天天基金），溢价率与规模为推算。10-30 同日可比口径：159866 +2.25% / 513520 +3.97% / 513880 +4.70%——排序与 T-1 口径一致。</p>
+<p><strong>读法</strong>：同日同一指数，三只产品溢价从 +2.12% 到 +4.44% 不等——溢价差本身就是可观测的持有成本差。以 11-02 为例，买 513880 比买 159866 每万元多付约 232 元的溢价。溢价高低受各自额度状态、成交活跃度与流动性影响，会随时间变化，本报告只陈述当日快照。</p>
+</div>
+
+<div class="card" id="financing">
+<h2>八、A 股融资纪律：股息率 vs 融资利率</h2>
+
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>数值</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>159866 分红记录</td><td>成立以来无分红记录（份额净值与累计净值始终相同：1.5785 = 1.5785）</td><td><span class="src-badge src-s">一手</span>（天天基金净值表，无分红记录）</td></tr>
+<tr><td>股息率</td><td><strong>0%</strong>——再投资于底层指数成分</td><td><span class="src-badge src-e">推算</span></td></tr>
+
+
+</tbody>
+</table></div>
+
+</div>
+
+<div class="card" id="bull-bear">
+<h2>九、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ul>
+<li><strong>政策不确定性显著下降</strong>：「基础通胀达成 2%」官方宣告（2013 年以来首次）+ 12 月加息预期明确化（路透 11-02「locked in」）——加息路径从「猜」变成「可定价」，WSJ 称此为加息之路「扫清障碍」。</li>
+<li><strong>AI 信用恐慌阶段性缓和</strong>：美 10Y 自 5.15% 回落至 4.93%，日经 10-27~29 反弹 3.97%；摩根大通评估 CoreWeave 类信用压力对全球银行风险有限（路透 10-20）。</li>
+<li><strong>盈利上修未变</strong>：野村预计 TOPIX EPS 2026 年度 +10.0%、2027 年度 +14.2%（二手，10 月上旬口径），10 月回调未触发下修。</li>
+<li><strong>溢价处于区间中部、同类最低</strong>：+2.12%（T-1 口径）位于近月 +1.68%~+3.03% 区间中部，且是三只日经 QDII 中最低。</li>
+<li><strong>日银 ETF 抛售未被定价为冲击</strong>：公告当日日股反应平淡，供给节奏月均约 700 亿日元相对市场成交是小数。</li>
+</ul>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ul>
+<li><strong>加息周期进入「官宣阶段」</strong>：通胀达标宣告 = 继续加息的官方依据；12 月若落地 25bp，融资端成本对套息盘的挤压继续加深（路透同时提示中性利率不确定、路径难测）。</li>
+<li><strong>日银从最大买家转为系统性卖家</strong>：ETF 年抛售节奏提至约 8,600 亿日元——供给变量与加息同向叠加，「反应平淡」不等于「永远平淡」。</li>
+<li><strong>财政与货币互搏</strong>：消费税减税财源「不排除国债」（10-19 参院预算委），日债利率上行风险未消除（10 年期 5 月已触 2.8%，29 年半高位）。</li>
+<li><strong>价格加权的结构脆弱性</strong>：前三成分合计 29.1%（爱德万+迅销+东京电子），一跌指数没得躲；这与「分散的日本大盘」的直觉相悖。</li>
+<li><strong>汇率腿持续拖累人民币回报</strong>：日元兑人民币 YTD −5.6%（人民币对美元升值 5.0% 所致），且人民币若继续走强，这条腿继续做负功——中国投资者独有的空方维度。</li>
+</ul>
+</div>
+</div>
+<h3>核心争议焦点</h3>
+<p>分歧不在「日本经济好不好」，而在<strong>「『加息 + 央行卖压』的紧缩组合，能否被 +10%~14% 的盈利上修消化」</strong>。多方把 10-30 宣告读作「政策路径确定 = 折现率可预期」的利好（不确定性的消除本身有价值），空方读作「融资端成本 + 指数级供给同时上台阶」的开端。两者对 12 月日银会议的落地方式与 CoreWeave 类信用指标走向的判断不同。</p>
+<h3>裁决指标</h3>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li>日银 12 月会议：加息是否落地、声明对 2027 年路径的暗示；</li>
+<li>日银 ETF 抛售节奏：月度卖出量是否显著超过年化 8,600 亿的月均值（约 700 亿）；</li>
+<li>AI 信用利差：CoreWeave 债券收益率与 CDS 是否从 15%+/distressed 水平回落；</li>
+<li>日债 10 年期利率：2.8% 攻防——再上台阶则「财政货币互搏」逻辑强化；</li>
+<li>本 ETF 溢价率：跌破 +1% 或冲上 +4%，分别对应额度放松与情绪抢购的信号。</li>
+</ul>
+</div>
+
+<div class="card" id="sentiment">
+<h2>十、市场情绪与社区讨论 <span class="src-badge src-3">三方</span></h2>
+<p><strong>样本说明</strong>：本 ETF（中国上市的 QDII 产品）在英文/境外社区几乎零讨论——境外投资者不买这些产品。本节<strong>穿透到「底层指数本身」检索</strong>（日经225 / Nikkei 225 / 日本股市），这正是本基金的真实暴露。雪球上的产品讨论以行情播报为主，信息量有限，如实标注。</p>
+<h3>10.1 Reddit（RSS 一手抓取，10-24 ~ 11-02）</h3>
+<div class="quote">
+<p style="margin:0;"><strong>本期样本为零</strong>：r/stocks 近一周 25 条头条经逐条核对，无任何日本市场/日经/日银主题帖；「Nikkei」关键词的近月站内搜索返回的 25 条全部为噪音（葡语侨民社区、游戏、人名等），无一涉及日股投资。<strong>英文个人投资者社区对本轮「日银宣告通胀达标 → 12 月加息」的讨论样本极少</strong>——上一报告期（10-22~23）尚有「AI 恐慌冲击亚洲股市」的行情 recap 类帖，本期连行情类帖也未出现，说明日股不在英文社区当前的关注焦点内。这是样本事实，不是情绪判断。</p>
+<span class="caveat-inline">抓取说明：两次搜索端点 + r/stocks 子版 RSS，间隔 ≥8s；0 字节（限流）时等待后重抓，全部 25 条标题逐条人工核对。</span>
+</div>
+<h3>10.2 日本本土（日媒，标题层二手）</h3>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li><strong>NHK（10-30）</strong>：「日银政策利率按兵不动，物价 2%『一个节点』，加息继续」——官方广播对「达标宣告 + 继续加息」的双联表述。</li>
+<li><strong>日本经济新闻（10-29/31/11-02）</strong>：会前预期「将宣告 2% 达成、按兵不动」；10-31 转向财政「年末三正面作战」（消费税减税、防卫、成长投资）；11-02 「Kioxia 急落但卖压未扩散」。</li>
+<li><strong>每日新闻社论（11-01）</strong>：「物价达成 2% 目标，积极财政的依据受到追问」——日媒舆论把「通胀达标」与「财政纪律」绑定争论，与第六节财政变量互搏的框架一致。</li>
+<li><strong>路透日文版专栏（11-02）</strong>：「2027 年日元会转向升值吗——日银继续加息与日元走向」（内田稔）——市场讨论重心已从「会不会加息」移到「加到哪、日元怎么走」。</li>
+</ul>
+<h3>10.3 雪球（中文社区，二手）</h3>
+<p>以 159866/513520 的行情播报与净值问答为主，10 月下旬无集中性的多空长文（雪球站内不可直接检索，tavily 额度用尽，以上为封面判断，样本受限如实标注）。历史上（2024-01）产品溢价逼近 10% 时曾出现「连发五道溢价风险提示」的密集报道期，当前 +2% 级别的溢价远未触发此类警示强度。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>十一、综合判断框架</h2>
+<h3>11.1 四情景推演（以 11-02 净值锚 1.5785 / 日经 63,082 为基准）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>指数/净值路径</th><th>概率标签</th></tr></thead>
+<tbody>
+<tr><td><strong>政策落地修复</strong></td><td>12 月加息 25bp 落地且声明不再更鹰、AI 信用利差继续回落、日债利率 2.8% 下方企稳</td><td>指数回补 64,000~66,000 区间，溢价维持 1%~3%，净值随盈利上修复行</td><td><span class="tag tag-bull">多方基线</span></td></tr>
+<tr><td><strong>区间震荡</strong></td><td>加息与央行 ETF 卖压被盈利吸收，AI 恐慌反复但不升级</td><td>62,000~66,000 箱体，净值横盘，汇率波动主导人民币回报</td><td><span class="tag tag-hold">中性</span></td></tr>
+<tr><td><strong>二次探底</strong></td><td>CoreWeave 类信用事件实质违约/重组、12 月会议同时鹰派超预期</td><td>指数下探 58,000~60,000（200 周线与 4 月缺口，技术位参考），溢价可能因抢购反向走高</td><td><span class="tag tag-bear">空方基线</span></td></tr>
+<tr><td><strong>利率冲击</strong></td><td>日债利率破 3.1%+ 且日银被迫加速加息、日元急升破 150</td><td>套息平仓 + 出口股盈利下修双杀；净值因日元升值部分对冲，但指数腿跌得更深</td><td><span class="tag tag-bear">尾部</span></td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">情景与概率标签是本报告的分析框架（主观判断），可被证伪的锚点见 11.2。数字区间为技术位/整数关口参考，非目标价。</p>
+<h3>11.2 关键跟踪指标（按优先级排序）</h3>
+<ol style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li><strong>日银 12 月会议</strong>：加息是否落地 + Outlook 对 2027 年路径的暗示——融资端成本的定价锚，也是「政策紧缩」情景的裁决点。</li>
+<li><strong>日银 ETF 抛售节奏</strong>：月度卖出量相对年化 8,600 亿的月均值（约 700 亿）是否再加码——这是本期新增的指数级供给变量。</li>
+<li><strong>AI 信用利差</strong>：CoreWeave 债券收益率/CDS、AI 基建相关高收益债利差——日经对这一变量的敏感度高于其他发达市场宽基（技术+信息通信 52.3%）。</li>
+<li><strong>USD/JPY 与日债利率组合</strong>：155/160 关口与干预风险、日债 2.8% 攻防；两者同向急变时套息链条重新定价。</li>
+<li><strong>本 ETF 溢价率</strong>：相对同类产品（513520/513880）的溢价差——反映额度状态与情绪，是本产品独有的可交易观测点。</li>
+</ol>
+<h3>11.3 总结</h3>
+<div class="quote">
+<strong>这只产品是什么</strong>：一张「日本半导体/AI 链 + 日元」的双因子敞口凭证，用 QDII 通道、以 2% 上下的溢价成本包装成 A 股可交易的 ETF。它不是「分散的日本大盘」——52.3% 的技术+信息通信权重和 29.1% 的前三集中度，让它对 AI 信用叙事与三大权重股的敏感度高于任何市值加权的日本工具。<br/><br/>
+<strong>11-02 时点的读数</strong>：净值 YTD +20.4%（指数腿 +25.3%、汇率腿 −5.6%、股息费用残差约 +2.1%）；净值距 10-08 高点 −9.0%，价格距 6-22 高点 −15.7%；溢价 +2.12%（T-1 口径）处于近月区间中部、三只同类中最低；无分红（融资纪律不成立）；Q3 季报确认份额单季 +55%、规模站上 20 亿。<br/><br/>
+<strong>这个状态何时改变，取决于三个可观察的变量</strong>：日银 12 月加息的落地方式与后续路径（决定融资端成本）、AI 信用利差走向（决定指数腿）、人民币兑日元汇率（决定回报腿——注意它 YTD 一直在做负功）。三者同向恶化时本产品没有内生的对冲；同向改善时，两条腿同时贡献正收益。
+  </div>
+</div>
+
+<div class="card" id="data-notes" style="border-left:4px solid var(--amber)">
+<h2>数据说明</h2>
+<h3>① 数据口径与方法论</h3>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li><strong>溢价率（双口径）</strong>：T-1 口径 = 腾讯收盘价（11-02，1.612）÷ 天天基金官方份额净值（10-30，1.5785）− 1 = +2.12%；同日口径 = 10-30 收盘 1.614 ÷ 10-30 净值 1.5785 − 1 = +2.25%。11-02 净值晚间公布后 T-1 口径应重算。</li>
+<li><strong>价格序列</strong>：新浪财经日 K 接口（scale=240），与腾讯 11-02 收盘 1.612 / 昨收 1.614、上期报告 10-23 收盘 1.608 三方核对一致；52 周价格区间（收盘口径 1.313 ~ 1.912）由该序列计算。腾讯行情串中的「52 周高低」字段未采用（未经反查验证）。</li>
+<li><strong>规模</strong>：9-30 为 Q3 季报一手值（份额 1,247,479,377 份 × 净值 1.6780 = 20.93 亿元，季报原文「期末基金资产净值 2,093,220,420.88 元」）；11-02 推算 = 腾讯流通份额 1,255,479,377 × 收盘价 1.612 ≈ 20.24 亿元。两口径差 0.6%（份额口径微差）。</li>
+<li><strong>净值 YTD</strong> 以 2025-12-31 官方净值 1.3112 为基期：1.5785 / 1.3112 − 1 = +20.39%。</li>
+<li><strong>日经225 YTD</strong> 以日经官网日度收盘 CSV 的 2025-12-30 收盘 50,339.48 为基期（12-31 为日本休市日）：63,081.86 / 50,339.48 − 1 = +25.31%。</li>
+<li><strong>汇率分解算式</strong>：日元兑人民币 YTD = (6.6452/157.75) ÷ (6.9961/156.79) − 1 = −5.59%（USDCNY、USDJPY 均为 Yahoo 周线，基期取 2025-12-29 当周收盘）；指数×汇率 = 1.2531 × 0.9441 − 1 = +18.30%；残差 = 净值 YTD +20.39% − 18.30% ≈ +2.1pct，对应底层股息（官网 1.85%）− 双层费用（约 0.25%）+ 跟踪偏差，量级自洽。</li>
+<li><strong>日本 10 年期国债</strong>：Trading Economics 页面快照约 2.77%（11-02），页面文字称 10-28（周三）曾升破 2.8%——两个读数并存，均为二手口径。</li>
+</ul>
+<h3>② 与上期报告（2026-10-23）的变化</h3>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li><strong>日银 10-29/30 会议落地</strong>：上期为会前预期「按兵不动」，本期为既成事实——按兵不动 + 宣告基础通胀达成 2%（2013 年以来首次）+ 市场定价 12 月加息；宏观框架随之更新。</li>
+<li><strong>日银 ETF 抛售提速为新增变量</strong>：年售规模增至约 8,600 亿日元（上期报告未覆盖此线索）。</li>
+<li>指数 10-27~29 反弹 3.97% 后 10-30 会议日 −2.12%、11-02 −0.33%，收 63,082（上期 62,693）；净值 1.5814 → 1.5785；价格 1.608 → 1.612。</li>
+<li>前十大权重与行业权重更新至 10-30 官方口径：爱德万 11.13% → 11.88%（+0.75pct）；技术 40.9% → 41.1%；<strong>官方 PER 16.56 / PBR 1.82 / 股息率 1.85% 本期已可引用（上期官网字段未更新）</strong>。</li>
+<li>Q3 季报（10-27 发布）已下载存档，份额/规模/业绩改用一手数据，替代上期的流通股本推算口径。</li>
+<li>溢价率区间由上期的 +1.13%~+2.68%（9-28 以来）更新为本期 +1.68%~+3.03%（10-14 以来），中位数 +2.25%。</li>
+</ul>
+<h3>③ 取数更正记录</h3>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li><strong>上期 N225 YTD 基期有误，且汇率腿方向写反</strong>：上期报告写「指数 YTD 约 +17.6%（53,323 → 62,693），差额主要来自日元兑人民币升值」。经与日经官网日度收盘 CSV 核对，2025 年最后一个交易日（12-30）收盘为 <strong>50,339.48</strong>，「53,323」无官方依据；按正确基期，10-23 时点指数 YTD 应为约 +24.5%。同时汇率方向判断相反：USD/JPY 全年基本持平（156.8 附近），而人民币对美元升值约 5%，两相叠加 <strong>日元兑人民币 YTD 为贬值（约 −5.6%）</strong>，汇率腿是拖累而非支撑。本报告 5.2 的分解已按正确口径重做。</li>
+<li><strong>上期同类对比的溢价差金额有数量级笔误</strong>：上期写「买 513880 比买 159866 每万元多付约 29 元」，按当日溢价差 2.92pct 应为约 <strong>292 元</strong>；本期按 11-02 溢价差 2.32pct 写为 232 元。</li>
+<li><strong>日经官网 Playwright 抓取时间戳</strong>：11-02 页面两次超时（60s/110s），权重与估值最终取自 10-30 页面快照——正文引用处均已标注 10-30。</li>
+</ul>
+<h3>④ 已知局限</h3>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li>11-02 官方净值未公布（晚间更新），本日溢价为 T-1 口径，收盘后申购套利的实际成本以此为准。</li>
+<li>宏观与政策信息全部为 Google News RSS <strong>标题层二手</strong>（tavily 额度用尽、未能取正文），日银决议细节（声明原文、展望报告、反对票）未经一手核对；引用处均为转述，以日银官网公布原文为准。</li>
+<li>雪球社区不可直接检索（阿里 WAF）且 tavily 不可用，中文社区情绪小节为受限样本下的判断，未列具体帖子。</li>
+<li>份额为腾讯流通股本口径（11-02 推算用），Q3 后的新申购未含在季报数内。</li>
+<li>汇率分解中的「股息−费用+跟踪差」为残差推算，未逐项核对底层 iFreeETF 的实际分红再投资与费用计提。</li>
+<li>Reddit 本期样本为零，社区情绪小节实质上只有日媒标题层一个来源——样本单薄，结论强度受限。</li>
+</ul>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-11-02 · 由 Claude Code 辅助分析 · 数据截至 2026-11-02（净值/权重/估值口径详见数据说明）</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="padding-left:20px;">
+<li>ETF 行情：腾讯财经 qt.gtimg.cn（sz159866 / sh513520 / sh513880，2026-11-02 收盘）；日 K 序列：新浪财经 CN_MarketDataService（近 250 交易日）</li>
+<li>份额净值/申赎状态：天天基金 f10/lsjz 接口（159866，截至 2026-10-30；11-02 净值晚间公布）</li>
+<li>基金披露：159866_2026年第3季度报告_20260930.pdf（本期新增，天天基金公告库）、2026 年中期报告、2026 年第 2 季度报告（本地 Filings/）</li>
+<li>日经225 指数：日经新闻社官网 indexes.nikkei.co.jp —— 日度收盘 CSV（2026-11-02）、日次摘要页（10-30 权重/PER/PBR/股息率/除数，Playwright 无头抓取）</li>
+<li>汇率/利率：Yahoo Finance USDJPY=X、CNY=X（11-02 及 2025 年末基期）、^TNX（美 10Y）；Trading Economics 日本 10 年期国债（页面快照，二手）</li>
+<li>宏观与政策（标题层二手）：NHK、日本经济新闻、每日新闻社论、朝日新闻、时事通信、Reuters（BOJ locks in December hike，11-02）、WSJ、Bloomberg、CNBC、MarketWatch（CoreWeave 信用）、财联社/新浪（日银 ETF 抛售，10-30）、野村证券（汇市干预路径，10-30）、财务省（7-8 月干预 15 万亿日元）</li>
+<li>社区：Reddit RSS 端点（r/stocks + 站内搜索，2026-10-24~11-02，样本为零如实标注）；雪球（本期未直接检索）</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%97%A5%E7%BB%8FETF%E5%B7%A5%E9%93%B6%EF%BC%88159866%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%97%A5%E7%BB%8FETF%E5%B7%A5%E9%93%B6%EF%BC%88159866%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-02%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

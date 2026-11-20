@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>泡泡玛特 2026-08-14 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    .card { padding: 24px 20px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 8px 10px; }
+    header { padding: 40px 20px 36px; }
+    header h1 { font-size: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    body { background: #fff; }
+    .sidebar { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    header { background: #1a3c2a !important; -webkit-print-color-adjust: exact; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/09992/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-08-14%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">09992 <span>·</span> 2026-08-14 <span>·</span> PC 完整版</div><h1>泡泡玛特</h1><p>数据截至 2026-08-14 · 货币 HKD · 披露来源 HKEXnews · ⚠ 2026 中期业绩预计 8/19–8/20 发布，本报告基于发布前数据</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、核心指标 — IP 营收矩阵（LABUBU 等）</a></li><li><a href="#financials">四、最新财务数据（2025 全年，2026-03-25 披露）</a></li><li><a href="#overseas">五、海外扩张深度拆解</a></li><li><a href="#ip-lifecycle">六、IP 矩阵与生命周期（成长可持续性的费雪式检核）</a></li><li><a href="#valuation">估值分析</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">投行分析师全景</a></li><li><a href="#xueqiu">雪球 / 零售投资者讨论 三方</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+<strong>⚠ 时效警告：</strong>2025 年全年业绩已于 2026-03-25 经 HKEXnews 披露（本报告财务主体）。2026 年中期业绩预计 8/19–8/20 发布，尚未披露，故 2026 上半年仅有一季度未经审核数据与各投行预测，请以公司官方 IR 及 HKEXnews 后续公告为准。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> HKEXnews 公告/公司年报 |
+    <span class="src-badge src-2">二手</span> 财经媒体转述 + 投行研报 |
+    <span class="src-badge src-3">三方</span> 雪球/零售投资者 |
+    <span class="src-badge src-e">推算</span> PE 历史分位、PEG 多情景 |
+    <span class="src-badge src-t">时效</span> 2026 中报未发布
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">市场：港股（HKEX）· 货币：HKD · 披露来源：HKEXnews · 本地 Filings 目录：<code>投资分析/09992-泡泡玛特/Filings/</code>（本报告财务数字取自 2025 年报官方披露，经多家媒体交叉核对；PE 历史分位为推算，详见估值章节）</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>公司名称</td><td>泡泡玛特国际集团（Pop Mart International Group）</td></tr>
+<tr><td>上市市场</td><td>香港交易所主板（HKEX），2020-12-11 上市</td></tr>
+<tr><td>股票代码</td><td>09992.HK</td></tr>
+<tr><td>主营业务</td><td>潮流玩具（盲盒/手办/毛绒）的设计、开发、销售与 IP 运营</td></tr>
+<tr><td>核心 IP</td><td>THE MONSTERS（LABUBU）、MOLLY、SKULLPANDA、CRYBABY、DIMOO、星星人（Twinkle Twinkle）等</td></tr>
+<tr><td>核心指标</td><td>IP 营收矩阵（各 IP 收入占比与增速）+ 海外扩张</td></tr>
+<tr><td>2025 年营收 / 净利</td><td>371.2 亿元人民币（+184.7%）/ 归母净利 127.76 亿元（+308.8%）</td></tr>
+<tr><td>全球门店</td><td>630 家（净增 109），机器人商店 2637 台（净增 165）</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">154.10</div><div class="label">现价 (HKD)</div></div>
+<div class="summary-item"><div class="value">2052 亿</div><div class="label">总市值 (HKD)</div></div>
+<div class="summary-item"><div class="value">14.5x</div><div class="label">PE (TTM)</div></div>
+<div class="summary-item"><div class="value">8.95x</div><div class="label">PB</div></div>
+<div class="summary-item"><div class="value">~0.4%</div><div class="label">股息率</div></div>
+<div class="summary-item"><div class="value" style="color:var(--red)">-54%</div><div class="label">距 52 周高点</div></div>
+</div>
+<p class="caveat-inline">现价/市值/PE/PB 来自腾讯财经 qt.gtimg.cn 实时行情（2026-08-14 收盘，PE=14.51x）。52 周最高 337.08 HKD、最低 137.38 HKD。股息率字段数值偏低，与 2025 末期息 2.3817 元/股（派息率降至 25%）存在口径差异，详见估值章节。</p>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<p>泡泡玛特是一家<strong>以 IP 为核心、以盲盒/手办/毛绒为载体、全球化运营的潮流玩具公司</strong>。商业模式可拆为「上游 IP 孵化 → 中游产品化与供应链 → 下游全渠道销售 → 会员复购」四层。</p>
+<h3>怎么赚钱</h3>
+<ul>
+<li><strong>艺术家 IP 授权/买断</strong>：签约或买断艺术家 IP（如 LABUBU 作者龙家升、MOLLY 作者 Kenny Wong），占收入约 90%；</li>
+<li><strong>产品化变现</strong>：把 IP 做成盲盒、手办、毛绒、积木等，盲盒 69–159 元/只的主流定价，毛利率 72.1%<span class="src-badge src-s">一手</span>；</li>
+<li><strong>渠道矩阵</strong>：线下直营店 + 机器人商店 + 线上（天猫/抖音/自研 App/海外 TikTok/Shopee/亚马逊）；</li>
+<li><strong>会员体系</strong>：中国大陆注册会员 7258 万，会员贡献销售占比 93.7%，复购率 55.7%<span class="src-badge src-2">二手</span>。</li>
+</ul>
+<h3>收入构成（2025 全年）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>维度</th><th>中国市场</th><th>海外市场</th><th>合计</th></tr></thead>
+<tbody>
+<tr><td>收入（亿元）</td><td>208.5</td><td>162.7</td><td>371.2</td></tr>
+<tr><td>同比增速</td><td class="metric-positive">+134.6%</td><td class="metric-positive">+291.9%</td><td class="metric-positive">+184.7%</td></tr>
+<tr><td>占比</td><td>56.2%</td><td>43.8%</td><td>100%</td></tr>
+</tbody>
+</table></div>
+<p>按品类看，<strong>毛绒品类收入 187.1 亿元（+560.6%），首次超越手办成为第一大品类</strong>——这正是 LABUBU 毛绒系列爆发的直接体现，也意味着产品结构正在从「标准化盲盒」向「IP 内容化+多品类」迁移。</p>
+<h3>护城河（巴菲特式追问：竞争对手为什么无法复制？）</h3>
+<ul>
+<li><strong>无形资产/IP 资产库</strong>：17 个 IP 收入破亿、6 个 IP 破 20 亿，形成 IP 梯队而非单一依赖；但头部 IP 依赖仍高（详见核心指标章节）；</li>
+<li><strong>艺术家生态</strong>：长期绑定头部艺术家，签约/买断模式锁定 IP 独家权，是「内容供给」的源头壁垒；</li>
+<li><strong>全球化渠道先发</strong>：630 家门店 + 2637 台机器人商店，已进入 20+ 国家，形成物理网络密度；</li>
+<li><strong>会员与复购</strong>：55.7% 复购率、93.7% 会员销售占比，是消费品牌稀缺的用户资产。</li>
+</ul>
+<div class="quote">护城河的关键拷问：泡泡玛特到底是「能持续孵化爆款 IP 的平台」，还是「恰好押中了 LABUBU 这一只爆款的消费品公司」？这是本报告多空分歧的轴心（详见多空章节）。</div>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — IP 营收矩阵（LABUBU 等）</h2>
+<p>泡泡玛特唯一真正重要的指标是 <strong>IP 营收矩阵</strong>：头部 IP 的集中度、第二梯队 IP 的接力能力、以及单一爆款的生命周期，三者共同决定这家公司的估值是「成长股」还是「周期股」。</p>
+<h3>2025 年头部 IP 营收矩阵</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>IP</th><th>2025 收入（亿元）</th><th>同比增速</th><th>占总营收</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td><strong>THE MONSTERS (LABUBU)</strong></td><td><strong>141.6</strong></td><td class="metric-positive">+365.7%</td><td><strong>38.1%</strong></td><td>首个百亿级 IP，销量破 1 亿只</td></tr>
+<tr><td>SKULLPANDA</td><td>35.4</td><td class="metric-positive">+170.6%</td><td>9.5%</td><td>第二梯队头名</td></tr>
+<tr><td>CRYBABY</td><td>29.3</td><td class="metric-positive">+151.4%</td><td>7.9%</td><td>增速从 2024 的 +1537% 大幅回落</td></tr>
+<tr><td>MOLLY</td><td>28.97</td><td class="metric-warn">+38.4%</td><td>7.8%</td><td>前旗舰 IP，增速显著落后</td></tr>
+<tr><td>DIMOO</td><td>27.8</td><td class="metric-positive">+205.3%</td><td>7.5%</td><td>—</td></tr>
+<tr><td>星星人 (Twinkle Twinkle)</td><td>20.6</td><td class="metric-positive">+1602%</td><td>5.5%</td><td>从 1.2 亿飙升，新黑马</td></tr>
+<tr><td>其余 11 个破亿 IP</td><td>合计约 88</td><td>—</td><td>约 24%</td><td>17 个 IP 破亿</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">艺术家 IP 合计约占收入 90%；LABUBU 一家收入（141.6 亿）接近 DIMOO 与星星人合计（约 48 亿）的 3 倍。<span class="src-badge src-2">二手</span>（多家财经媒体转述 2025 年报）</p>
+<h3>集中度趋势：这是核心矛盾</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>2024</th><th>2025</th><th>变化</th></tr></thead>
+<tbody>
+<tr><td>LABUBU 收入占比</td><td>23.3%</td><td>38.1%</td><td class="metric-negative">+14.8 ppt</td></tr>
+<tr><td>CRYBABY 收入增速</td><td>+1537.2%</td><td>+151.4%</td><td class="metric-negative">急剧回落</td></tr>
+<tr><td>MOLLY 收入占比</td><td>约 10%+</td><td>7.8%</td><td class="metric-negative">下滑</td></tr>
+</tbody>
+</table></div>
+<p><strong>多方解读</strong>：LABUBU 占比上升是「超级 IP 爆发」的结果，第二梯队（SKULLPANDA 35 亿、星星人 +1602%）正在形成，IP 矩阵从「一超多强」走向「梯队化」，星星人证明公司仍具造星能力。</p>
+<p><strong>空方解读</strong>：LABUBU 依赖从 23%→38% 不降反升，是「单点风险」的强化而非化解；CRYBABY 的增速断崖（+1537%→+151%）是潮玩 IP 短生命周期（2–5 年）的鲜活样本，星星人可能成为「下一个 CRYBABY」。</p>
+<div class="quote">管理层已主动回应：2026 年定为「休整年」，IP 数量或从约 20 个收敛到 10 个左右，聚焦头部、提升海外运营。这既是承认单一爆款风险，也是「从铺量到提质」的战略转向。</div>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据（2025 全年，2026-03-25 披露）</h2>
+<div class="stale-warning">
+    ⚠ 2026 中期业绩预计 8/19–8/20 发布。当前仅有 2026 一季度未经审核数据：整体收益 +75%~80%，中国区 +100%~105%，美洲 +55%~60%，欧洲及其他 +60%~65%，中国以外亚太 +25%~30%。
+  </div>
+<h3>损益表（合并，人民币）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>2024</th><th>2025</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>营业收入</td><td>130.4 亿</td><td>371.2 亿</td><td class="metric-positive">+184.7%</td></tr>
+<tr><td>毛利</td><td>87.1 亿（推算）</td><td>267.64 亿</td><td class="metric-positive">+207.4%</td></tr>
+<tr><td>毛利率</td><td>66.8%</td><td>72.1%</td><td class="metric-positive">+5.3 ppt</td></tr>
+<tr><td>经营溢利</td><td>—</td><td>168.9 亿</td><td>—</td></tr>
+<tr><td>归母净利润</td><td>约 31 亿</td><td>127.76 亿</td><td class="metric-positive">+308.8%</td></tr>
+<tr><td>经调整净利润</td><td>约 34 亿</td><td>130.8 亿</td><td class="metric-positive">+284.5%</td></tr>
+<tr><td>净利率（归母）</td><td>—</td><td>35.05%</td><td class="metric-positive">+9.67 ppt</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">毛利率 72.1% 已堪比奢侈品（60–80% 区间），驱动来自海外高单价占比提升（贡献约 +3.5 ppt）与供应链集中采购优化（约 +0.9 ppt）。<span class="src-badge src-e">推算</span> 部分 2024 基数为约数。</p>
+<h3>财务异常检测（skill 十项）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>检测项</th><th>结果</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>毛利率异常</td><td class="metric-positive">🟢 无</td><td>+5.3 ppt 有清晰归因（海外 mix + 供应链）</td></tr>
+<tr><td>费用率异常</td><td class="metric-warn">🟡 关注</td><td>分销及销售费用 +121%，租赁 +192%、物流 +276%，重资产扩张</td></tr>
+<tr><td>股东/机构减持</td><td class="metric-warn">🟡 关注</td><td>2025 Q3 重仓基金 311→197 只，单季抛售超 2062.9 万股；沽空比例一度 21.47%</td></tr>
+<tr><td>派息率</td><td class="metric-warn">🟡 下降</td><td>从 35% 降至 25%，令部分收入型资金失望</td></tr>
+<tr><td>存货/应收/关联交易</td><td class="metric-positive">🟢 未见异常</td><td>公开数据未发现显著背离信号</td></tr>
+</tbody>
+</table></div>
+<p><strong>财务风险综合评级：🟡 中</strong>（费用重资产化 + 机构减持 + 派息率下降，属 1–2 项轻微至中等，无财务造假类红旗）。</p>
+</div>
+
+<div class="card" id="overseas">
+<h2>五、海外扩张深度拆解</h2>
+<p>海外是泡泡玛特过去两年的核心叙事：<strong>2024 年海外 50.7 亿（+375%）、占比 38.9%；2025 年海外 162.7 亿（+291.9%）、占比 43.8%</strong>。管理层的目标曾指向海外占比超 50%。</p>
+<h3>分区域收入（2025 全年）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>区域</th><th>收入（亿元）</th><th>同比增速</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>中国市场</td><td>208.5</td><td class="metric-positive">+134.6%</td><td>仍是基本盘</td></tr>
+<tr><td>亚太（除中国）</td><td>80.1</td><td class="metric-positive">+157.6%</td><td>东南亚早期爆发的沉淀</td></tr>
+<tr><td>美洲</td><td>68.1</td><td class="metric-positive">+748.4%</td><td>2025 增速之王，但 Q3 后骤降</td></tr>
+<tr><td>欧洲及其他</td><td>14.5</td><td class="metric-positive">+506.3%</td><td>基数低</td></tr>
+</tbody>
+</table></div>
+<h3>增速的「拐点」是当前最大分歧</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>区域增速</th><th>2025 Q3</th><th>2025 H2</th><th>2026 Q1</th></tr></thead>
+<tbody>
+<tr><td>美洲</td><td class="metric-positive">+1265%~1270%</td><td class="metric-warn">+633%</td><td class="metric-warn">+55%~60%</td></tr>
+<tr><td>欧洲及其他</td><td class="metric-positive">+735%~740%</td><td class="metric-warn">+436%</td><td class="metric-warn">+60%~65%</td></tr>
+<tr><td>亚太（除中国）</td><td>高增长</td><td>放缓</td><td class="metric-warn">+25%~30%</td></tr>
+</tbody>
+</table></div>
+<p>海外增速从「三位数」断崖式回落到「中高个位到五成」区间，是 2025 年报发布当天股价暴跌 22.51% 的直接导火索。市场担忧的核心不是「海外不行」，而是<strong>「高基数下的增速兑现节奏」</strong>——尤其美洲，从 1265% 回落到 55%，斜率过于陡峭。</p>
+<p><strong>汇丰（7/17）</strong>预测 2026 Q2 海外同比 <span class="metric-negative">-14%</span>；<strong>德银（7/8）</strong>更悲观，预测 Q2 海外 <span class="metric-negative">-19%</span>、全年收入 -6%。公司盈喜则暗示上半年收入增速至少 55%，与大行形成鲜明对立——<strong>8 月 19/20 日的中报是裁决时点</strong>。</p>
+</div>
+
+<div class="card" id="ip-lifecycle">
+<h2>六、IP 矩阵与生命周期（成长可持续性的费雪式检核）</h2>
+<p>费雪（Philip Fisher）的 15 要点中，最关键的几条拷问泡泡玛特：<strong>「公司是否具备高于平均水平的增长潜力，且这种增长是否可持续？」</strong>潮玩 IP 的生命周期普遍只有 2–5 年，这让「可持续性」成为比「当前增速」更本质的问题。</p>
+<h3>费雪 15 要点检核（节选适用项）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>费雪要点</th><th>泡泡玛特对应情况</th><th>评分</th></tr></thead>
+<tbody>
+<tr><td>产品或服务是否有足够市场潜力实现多年增长</td><td>全球潮玩市场扩容 + 海外渗透率提升</td><td class="metric-positive">正面</td></tr>
+<tr><td>管理层是否有决心开发新产品/新增长点</td><td>17 个 IP 破亿、毛绒品类 +560%、全球化</td><td class="metric-positive">正面</td></tr>
+<tr><td>研发/创新投入是否充分</td><td>IP 孵化依赖艺术家生态，非传统研发</td><td class="metric-warn">中性</td></tr>
+<tr><td>利润率能否维持</td><td>72.1% 毛利，但费用重资产化（租赁+192%）</td><td class="metric-warn">需跟踪</td></tr>
+<tr><td>管理层诚信与坦诚</td><td>王宁坦诚「休整年」，主动降速指引</td><td class="metric-positive">正面</td></tr>
+</tbody>
+</table></div>
+<h3>关键跟踪信号（Scuttlebutt 视角）</h3>
+<ul>
+<li><strong>LABUBU 二级市场价格</strong>：LABUBU 4.0（THE MONSTERS Hair Salon）反响疲软，二级市场价一周内跌至约 50 元（零售 159 元）<span class="src-badge src-t">时效</span>——若「限量款不再需要抢购、溢价消失」，是热度退潮的先行信号；</li>
+<li><strong>国内线上转弱</strong>：第三方魔镜数据显示 5 月国内线上销售额同比 <span class="metric-negative">-5%</span>、环比 -14%，为 2024 年以来首次同比下滑<span class="src-badge src-3">三方</span>；</li>
+<li><strong>新 IP 接力</strong>：星星人（+1602%）能否扛起第二增长曲线，还是重演 CRYBABY 的增速断崖；</li>
+<li><strong>去库存/折扣</strong>：多个市场出现去库存促销、福袋折扣，提示短期需求动能减弱。</li>
+</ul>
+</div>
+
+<div class="card" id="valuation">
+<h2>估值分析</h2>
+<h3>当前估值倍数</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>数值</th><th>来源/口径</th></tr></thead>
+<tbody>
+<tr><td>PE (TTM)</td><td>14.51x（stockanalysis 口径 14.16x）</td><td class="src-badge src-s">一手</td></tr>
+<tr><td>远期 PE（2026E）</td><td>12.36x</td><td class="src-badge src-2">二手</td></tr>
+<tr><td>PB</td><td>8.95x</td><td class="src-badge src-s">一手</td></tr>
+<tr><td>总市值</td><td>2052 亿 HKD（约 1888 亿 RMB）</td><td class="src-badge src-s">一手</td></tr>
+<tr><td>股息率</td><td>~0.4%（行情字段，口径待核）</td><td class="src-badge src-t">时效</td></tr>
+</tbody>
+</table></div>
+<h3>PE 历史分位（推算）</h3>
+<p>泡泡玛特 2020-12 上市，估值曾经历极端区间：2021 年首轮炒作冲高后跌至 2022 年低点；2025 年 6 月动态 PE 一度超 80x（股价高点 337 HKD 附近），随后业绩爆发 + 股价回落，PE 压缩至当前 14.5x。<strong>当前 14.5x 的 PE（TTM）处于公司上市以来的历史低位区间</strong>，对应 skill 中「14x PE 历史低位」的锚点。</p>
+<p class="caveat-inline">⚠ 精确的 PE 历史百分位数本次搜索未获得（stockanalysis.com 仅提供当前值），此处「历史低位」为<span class="src-badge src-e">推算</span>，基于「2025 高点 80x+ → 当前 14.5x」的已知区间，非精确分位。建议以专业终端（Wind/Bloomberg）复核。</p>
+<h3>PEG（林奇框架，多情景）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>假设增速</th><th>PEG（PE÷增速）</th><th>林奇判读</th></tr></thead>
+<tbody>
+<tr><td>乐观：达成指引</td><td>净利润 +20%（管理层「不低于 20%」）</td><td>14.5 ÷ 20 = <strong>0.73</strong></td><td class="metric-positive">便宜</td></tr>
+<tr><td>中性：大行共识</td><td>净利润 +10%~15%</td><td>14.5 ÷ 12 ≈ <strong>1.2</strong></td><td class="metric-warn">合理</td></tr>
+<tr><td>悲观：德银情景</td><td>净利润 -13%</td><td>无意义（负增长）</td><td class="metric-negative">增速证伪</td></tr>
+</tbody>
+</table></div>
+<p>PEG 的关键变量是「2026 增速到底是多少」：管理层指引「不低于 20%」，德银预测全年 -13%，分歧极大。若增速守住 20%+，14.5x PE 对应 PEG 0.73 属明显低估；若增速转负，14.5x 是「低 PE + 盈利顶点」的周期股陷阱信号（马克斯第二层思维）。</p>
+<h3>股息率 vs 融资利率（skill 关键原则）</h3>
+<p>泡泡玛特是<strong>成长股而非红利股</strong>：派息率仅 25%（且从 35% 下调），股息率约 0.4%~2%（口径不一，见下方说明），<strong>远低于 10 年期国债 ~2.8% 与港股融资利率 ~3.5%</strong>。「股息覆盖融资成本」的长期持有逻辑在此<strong>不成立</strong>，持仓逻辑完全依赖成长与估值修复，而非分红现金流。</p>
+<p class="caveat-inline">⚠ 股息率口径矛盾：行情字段显示 0.41%，但 2025 末期息 2.3817 元/股（RMB）按现价折算应更高。差异可能源于末期息尚未除权入账或字段口径不同。<span class="src-badge src-t">时效</span> 本报告不以此作为估值锚，仅作提示。</p>
+<h3>可比公司（谨慎参考）</h3>
+<p>港股最接近的潮玩/积木 IP 对标是 <strong>布鲁可（Bloks，0325.HK）</strong>（盲盒积木、IP 驱动），另可参考拥有 TOP TOY 的 <strong>名创优品（09896.HK）</strong>。但因商业模式与 IP 结构差异，跨公司直接对比倍数意义有限（skill：不做无关对比），此处仅列方向，不作机械套用。</p>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ul>
+<li><strong>护城河实化（巴菲特）</strong>：17 个 IP 破亿、6 个破 20 亿，艺术家生态 + 7258 万会员 + 55.7% 复购，是稀缺的 IP 平台资产，非「单只爆款」。</li>
+<li><strong>全球化收获期</strong>：海外占比 43.8%，四大区域全数三位数增长，630 家门店全球网络形成物理壁垒。</li>
+<li><strong>盈利质量高</strong>：毛利率 72.1% 堪比奢侈品，净利率 35%，规模效应释放。</li>
+<li><strong>估值历史低位</strong>：PE 从 80x+ 压缩到 14.5x，若增速守 20%+，PEG 0.73 属明显低估（大摩「14x 2026 PE 被低估」）。</li>
+<li><strong>新 IP 接力证据</strong>：星星人 +1602%、SKULLPANDA 35 亿，证明造星能力未失效。</li>
+<li><strong>段永平态度反转</strong>：2026-03 收回「不投资」说法，实地考察后称「right business, right people, right price」。</li>
+</ul>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ul>
+<li><strong>单一 IP 依赖加剧</strong>：LABUBU 占比 23.3%→38.1% 不降反升，是集中度风险强化而非化解。</li>
+<li><strong>IP 生命周期短（2–5 年）</strong>：CRYBABY 增速 +1537%→+151% 断崖，星星人可能重演，潮玩难逃「热度见顶」。</li>
+<li><strong>增长指引「急刹车」</strong>：2026 指引「不低于 20%」，从 184.7% 骤降，暗示高增长时代终结。</li>
+<li><strong>海外增速断崖</strong>：美洲 Q3 +1265% → Q1 +55%，汇丰/德银预测 Q2 海外转负（-14%~-19%）。</li>
+<li><strong>盈利质量隐忧</strong>：租赁 +192%、物流 +276% 的重资产扩张，销售费用 +121%，若销售转弱将侵蚀利润。</li>
+<li><strong>段永平式「灵魂发问」</strong>：「万一过两年大家都不要了呢？」潮玩是情绪消费，护城河可能不如想象深。</li>
+</ul>
+</div>
+</div>
+<h3>核心争议焦点（一句话）</h3>
+<p style="font-size:15px;font-weight:600;">泡泡玛特是「能持续孵化爆款的 IP 平台公司」，还是「押中 LABUBU 一只爆款的周期性情绪消费公司」？</p>
+<h3>裁决指标（决定多空胜负的可观测变量）</h3>
+<ul>
+<li><strong>8/19–8/20 中报</strong>：Q2 海外增速是否守住正增长（vs 汇丰 -14% / 德银 -19%）；</li>
+<li><strong>LABUBU 占比是否回落</strong>：第二梯队 IP 是否真正接力（占比结构而非绝对额）；</li>
+<li><strong>LABUBU 二级市场溢价</strong>：限量款是否仍「抢购/溢价」，是热度最灵敏的温度计；</li>
+<li><strong>非 LABUBU IP 增速</strong>：星星人、SKULLPANDA、CRYBABY 的持续性。</li>
+</ul>
+</div>
+
+<div class="card" id="analysts">
+<h2>投行分析师全景</h2>
+<p>市场共识为「买入」：约 24 位分析师中 18 买入 / 6 持有 / 3 卖出，12 个月平均目标价 214.98 HKD（较现价 +36%），区间 128–398 HKD。<span class="src-badge src-2">二手</span></p>
+<div class="table-scroll"><table>
+<thead><tr><th>投行</th><th>评级</th><th>目标价 (HKD)</th><th>核心观点</th></tr></thead>
+<tbody>
+<tr><td>摩根士丹利</td><td><span class="tag tag-bull">增持（首选）</span></td><td>278（由 325 下调）</td><td>14x 2026 PE 被低估，线下驱动模式仍有效</td></tr>
+<tr><td>瑞银</td><td><span class="tag tag-bull">买入</span></td><td>237.5</td><td>Q1 超预期，下调 2026–28 净利 7–9%</td></tr>
+<tr><td>Jefferies</td><td><span class="tag tag-bull">买入</span></td><td>227.6（下调 41%）</td><td>仍看好，但大幅下调目标价</td></tr>
+<tr><td>花旗</td><td><span class="tag tag-bull">买入</span></td><td>350（由 415 下调）</td><td>调研：47% 用户因 LABUBU 首次接触</td></tr>
+<tr><td>高盛</td><td><span class="tag tag-hold">中性</span></td><td>164（由 300 下调）</td><td>关税压制售价、成本高位、海外扩张放缓，下调盈利 18%</td></tr>
+<tr><td>汇丰</td><td><span class="tag tag-hold">持有</span></td><td>168.9（由 189.5 下调）</td><td>Q2 收入增速骤降至 10%，海外 Q2 或 -14%</td></tr>
+<tr><td>摩根大通</td><td><span class="tag tag-hold">持有</span></td><td>165</td><td>5 月由增持下调至持有</td></tr>
+<tr><td>德意志银行</td><td><span class="tag tag-bear">卖出</span></td><td>140</td><td>高增长时代或到拐点，全年收入 -6%、净利 -13%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">目标价与评级多在 2026 年 3 月年报后集中下调，5–7 月又有汇丰/德银的二次下修；中报（8/19–8/20）后预计将再次集中调整。以上为搜索结果时点快照，非实时。<span class="src-badge src-t">时效</span></p>
+</div>
+
+<div class="card" id="xueqiu">
+<h2>雪球 / 零售投资者讨论 <span class="src-badge src-3">三方</span></h2>
+<p>按 skill 要求，社区搜索用<strong>产品关键词（「Labubu」「泡泡玛特」「潮玩」）</strong>而非股票代码，聚焦真实消费与投资情绪。</p>
+<h3>三大讨论焦点</h3>
+<ul>
+<li><strong>段永平态度反转</strong>：从「看不懂、不投资」（2025 底）→「万一过两年大家都不要了呢」（2026-01 灵魂发问）→「决定收回不投资的说法」（2026-03-30）→实地考察后「right business, right people, right price」「王宁比我强」。这一反转是雪球最热话题。</li>
+<li><strong>「茅台批价」式见顶信号</strong>：投资者类比「飞天茅台 2016–2021 从 1200 涨到 3100 后涨不动，股价就见顶」，提出潮玩版的判据——<em>「哪天 LABUBU 限量款不用抢了、卖不出溢价了，泡泡玛特股价也就到头了」</em>。且潮玩升级换代更快，见顶可能来得更早。</li>
+<li><strong>「爆款消费品」 vs 「IP 平台」的认知分歧</strong>：质疑方视其为爆款驱动的消费品公司、热度近峰值；支持方视其为可长期运营 IP 的平台公司，跨媒介/跨品类/跨场景是更稳的底盘。</li>
+</ul>
+<h3>反方声音（理性降温）</h3>
+<ul>
+<li>有用户认为：即便 LABUBU 热度退散，运营积累的认知可通过授权、联名、乐园延续，无形价值未来或超玩偶销售本身。</li>
+<li>也有观点指出：市场认知迭代速度「赶不上泡泡玛特的增速」，股价与基本面的背离（业绩亮眼却暴跌）本身反映的是<strong>估值预期差</strong>，而非公司质变。</li>
+</ul>
+<div class="quote">「泡泡玛特没变，资本先变脸了」——社区中这句被反复引用的话，恰点出当前阶段的核心：公司基本面仍在兑现，但市场对「增速可持续性」的定价发生了根本转向。</div>
+</div>
+
+<div class="card" id="conclusion">
+<h2>综合判断框架</h2>
+<p>综合巴菲特（护城河）、费雪（成长可持续性）、林奇（PEG/股票分类）、马克斯（第二层思维/周期）四套框架，泡泡玛特当前处于<strong>「从快速成长股向可持续成长股过渡」的十字路口</strong>，估值已从极端泡沫（80x+）压缩到历史低位区间（14.5x），但「低估值是否等于好价格」取决于增速能否守住的裁决。</p>
+<h3>四情景框架（主观，非预测）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>估值含义</th><th>概率（主观）</th></tr></thead>
+<tbody>
+<tr><td>① 成长延续</td><td>中报海外守正、LABUBU 占比回落、新 IP 接力</td><td>14.5x + 20% 增速 = PEG 0.73，明显低估</td><td>中等</td></tr>
+<tr><td>② 平稳降速</td><td>增速 10–15%，海外个位数，估值回归合理</td><td>PEG 1.2，合理定价，赚业绩钱</td><td>较高</td></tr>
+<tr><td>③ 增长证伪</td><td>Q2 海外转负、国内线上持续下滑（德银情景）</td><td>14.5x 是「盈利顶点」陷阱，戴维斯双杀</td><td>中等偏低</td></tr>
+<tr><td>④ IP 平台兑现</td><td>非 LABUBU 形成梯队、授权/乐园/联名第二曲线</td><td>从「消费品」重估为「IP 平台」，估值中枢上移</td><td>偏乐观</td></tr>
+</tbody>
+</table></div>
+<h3>关键跟踪指标（持仓验证清单）</h3>
+<ul>
+<li><strong>8/19–8/20 中报</strong>：Q2 海外增速正负、下半年指引是否二次下修；</li>
+<li><strong>LABUBU 收入占比</strong>：是否从 38.1% 回落（集中度是核心风险）；</li>
+<li><strong>LABUBU 二级市场溢价/抢购情况</strong>：热度温度计；</li>
+<li><strong>非 LABUBU IP 增速</strong>：星星人、SKULLPANDA、CRYBABY 的持续性；</li>
+<li><strong>费用率与毛利率</strong>：租赁/物流重资产扩张是否侵蚀利润。</li>
+</ul>
+<h3>总结</h3>
+<p>泡泡玛特是一家<strong>护城河真实存在（IP 资产库 + 艺术家生态 + 全球渠道 + 会员复购）但仍在「验证可持续性」</strong>的公司。2025 年 371 亿营收、72.1% 毛利率、14.5x PE 的组合，放在任何成长股框架下都值得严肃研究；但 LABUBU 单一依赖（38.1%）与海外增速断崖，构成真正的、尚未被证伪的长期风险。<strong>当前的核心矛盾不是「好不好」，而是「14x 的估值，是否已经 price in 了增速见顶」</strong>——这个问题的答案，将在 8 月中报与接下来 2–3 个季度的 IP 矩阵演化中揭晓。</p>
+<p style="margin-top:12px;color:var(--text-muted);font-size:13px;">本报告不提供买卖建议、不预测目标价。仅呈现多空双方论据与可验证的裁决指标，供独立尽调参考。</p>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026年8月 · 由 Claude Code 辅助分析（stock-analysis skill）· 数据截至 2026-08-14 · 货币 HKD</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="margin-left:18px;line-height:1.9;">
+<li>实时行情：腾讯财经 qt.gtimg.cn（09992.HK，2026-08-14 收盘）</li>
+<li>2025 年报：HKEXnews 官方披露（2026-03-25 发布），经多家财经媒体转述交叉核对</li>
+<li>IP 营收矩阵 / 海外分区域：界面、澎湃、北京日报、财经、上证报、新浪财经等（转述 2025 年报）</li>
+<li>投行评级：明报、investing.com、格隆汇、财联社等（高盛/大摩/摩根大通/花旗/瑞银/Jefferies/德银/汇丰）</li>
+<li>社区讨论：雪球、东方财富股吧（产品关键词「Labubu」「泡泡玛特」「潮玩」）</li>
+<li>估值参照：stockanalysis.com（PE 14.16x / Forward 12.36x）</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-08-14%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

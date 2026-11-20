@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>DoorDash 2026-09-04 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    .card { padding: 24px 20px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 8px 10px; }
+    header { padding: 40px 20px 36px; }
+    header h1 { font-size: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    body { background: #fff; }
+    .sidebar { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    header { background: #1a3c2a !important; -webkit-print-color-adjust: exact; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/dash/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+DoorDash%EF%BC%88DASH%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ADoorDash%EF%BC%88DASH%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">DASH <span>·</span> 2026-09-04 <span>·</span> PC 完整版</div><h1>DoorDash</h1><p>数据截至 2026/09/03 收盘 · 美股 NASDAQ · 货币 USD · 披露来源 SEC EDGAR（本期新增：内华达迁册 8-K / DEF 14C 已本地存档）· 上期报告 2026/08/21</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、核心指标 — GOV（总订单额）</a></li><li><a href="#financials">四、最新财务数据（Q2 2026 10-Q，一手；本期无新季度数据）</a></li><li><a href="#advertising">五、广告与 Agentic 商业 — 高毛利第二曲线</a></li><li><a href="#autonomous">六、自动驾驶 — 远期最大的期权</a></li><li><a href="#international">七、国际扩张与监管 — Deliveroo 整合期 + 澳洲最低工资落地</a></li><li><a href="#governance">八、治理与内部人动态（本期重点关注的事件）</a></li><li><a href="#valuation">估值分析</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">华尔街分析师全景 二手</a></li><li><a href="#reddit">Reddit / 零售投资者讨论 三方</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<p style="font-size:13px;margin-top:12px;">
+    本报告覆盖 <strong>美股（NASDAQ: DASH）</strong>，披露来源为 <strong>SEC EDGAR</strong>（一手），社区平台 <strong>Reddit</strong>（三方），货币 <strong>USD</strong>。
+  </p>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> SEC文件/公司公告 |
+    <span class="src-badge src-2">二手</span> 聚合平台/分析师报告 |
+    <span class="src-badge src-3">三方</span> 零售投资者/社交媒体 |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<div class="stale-warning"><strong>本期定位：</strong>处于 Q2 财报（8/5）与 Q3 财报（预计 11 月初）之间的<strong>财报真空期</strong>，季度经营数据（GOV/营收/EBITDA）沿用已存档的 Q2 2026 10-Q（一手，无新季度数据）；本期增量信息集中在<strong>治理事件（内华达迁册）、内部人交易、分析师动作、竞争对手动态</strong>四个维度。行情数据截至 2026/09/03 收盘（yfinance，二手）。</div>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">
+    本地 SEC 文件：<code>投资分析/DASH-DoorDash/SEC_Filings/</code> — DASH_FY2025_10-K_2026-02-18.htm、DASH_FY2024_10-K_2025-02-14.htm、DASH_2026-Q1_10-Q_2026-05-06.htm、DASH_2026-Q2_10-Q_2026-08-05.htm、DASH_Q2-2026_8-K_Earnings_2026-08-05.htm，<strong>本期新增：DASH_8-K_Nevada_Reincorporation_2026-08-11.htm、DASH_DEF14C_Nevada_Reincorporation_2026-08-27.htm（本期核心一手新数据源）</strong>
+</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>数值</th><th>项目</th><th>数值</th></tr></thead>
+<tbody>
+<tr><td>公司</td><td>DoorDash, Inc.</td><td>代码 / 交易所</td><td>DASH / NASDAQ</td></tr>
+<tr><td>股价（2026/09/03 收盘）<span class="src-badge src-2">二手</span></td><td>$222.00</td><td>市值</td><td>≈ $96.2B</td></tr>
+<tr><td>企业价值 EV</td><td>≈ $94.2B</td><td>流通稀释股数（6/30，一手）</td><td>433.3M</td></tr>
+<tr><td>52 周区间</td><td>$143.30 – $285.50</td><td>90 天 / 30 天 / 7 天涨跌<span class="src-badge src-e">推算</span></td><td><span class="metric-positive">+46%</span> / +15% / <span class="metric-negative">-3.4%</span></td></tr>
+<tr><td>距 52 周高点回撤<span class="src-badge src-e">推算</span></td><td class="metric-negative">-22.2%</td><td>Beta</td><td>1.77</td></tr>
+<tr><td>50 日 / 200 日均线<span class="src-badge src-2">二手</span></td><td>$202.05 / $188.41（股价站上双均线）</td><td>Q2 2026 GOV（一手）</td><td>$33,078M（+36%）</td></tr>
+<tr><td>TTM 营收（推算）</td><td>$15,891M</td><td>TTM GAAP 净利（推算）</td><td>$841M</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">$222.00</div><div class="label">股价（9/3）</div></div>
+<div class="summary-item"><div class="value">$96.2B</div><div class="label">市值</div></div>
+<div class="summary-item"><div class="value">$33.1B</div><div class="label">Q2 GOV +36%</div></div>
+<div class="summary-item"><div class="value">$914M</div><div class="label">Q2 Adj. EBITDA +40%</div></div>
+<div class="summary-item"><div class="value">$742M</div><div class="label">Q2 FCF +109%</div></div>
+<div class="summary-item"><div class="value">6.1x</div><div class="label">TTM P/S</div></div>
+</div>
+<div class="caveat-inline">较上期报告（8/21，$223.49）：股价两周基本持平（-0.7%）——8 月下旬一度冲高至 $236.93（8/26），随后回落；市值从 $97.2B 微降至 $96.2B。技术面股价仍在 50/200 日均线上方（中期趋势未破坏），但 8/26 以来的回撤与内部人减持、板块轮动时点重合（推算）。</div>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<p>DoorDash 是一个<strong>本地商业（local commerce）平台</strong>，核心是连接消费者、商家与配送骑手（Dasher）的<strong>三边市场</strong>。收入主要来自：① 按订单规模向商家收取的<strong>交易佣金/服务费</strong>；② 面向商家与快消品牌的<strong>广告费</strong>（高毛利）；③ 消费者会员费（DashPass / Wolt+ / Deliveroo Plus）。<span class="src-badge src-s">一手</span></p>
+<h3>三大 Marketplace + 新零售伙伴</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>平台 / 渠道</th><th>覆盖</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>DoorDash Marketplace</td><td>美国为主</td><td>核心盘，美加外卖份额约 60–70%<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>Wolt Marketplace</td><td>欧洲/中东</td><td>2022 年收购，切入欧洲本地配送</td></tr>
+<tr><td>Deliveroo Marketplace</td><td>英国/欧洲/亚洲/中东</td><td>2025 年 10 月以 ≈$3.9B 完成收购，扩展至 45 个市场<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>新零售伙伴<span class="src-badge src-2">二手</span></td><td>美国</td><td>Barnes &amp; Noble、Carter's、Kohl's、Gap 等零售品牌已入驻（8 月返校季），一小时达商品超 50 万 SKU——「非餐」扩张持续</td></tr>
+<tr><td>品牌营销合作（本期新增）<span class="src-badge src-2">二手</span></td><td>澳新</td><td>2026/09/03 宣布与 Live Nation ANZ 达成<strong>三年战略合作</strong>（官方合作伙伴 + Food Village 线下激活）——规模有限，但显示品牌营销预算从「拉新」转向「文化绑定」</td></tr>
+</tbody>
+</table></div>
+<h3>护城河分析（巴菲特框架）</h3>
+<ul>
+<li><strong>网络密度（最强）</strong>：订单密度越高，配送路径越短、单位成本越低、送达越快，形成自我强化的飞轮——竞争对手在低密度市场复制同样的体验在单位经济性上处于劣势。</li>
+<li><strong>双边网络效应</strong>：商户越多→消费者选择越多→订单越多→吸引更多商户；骑手供给充足→履约更快。</li>
+<li><strong>转换成本/会员锁定</strong>：DashPass 等会员制降低配送费，提升复购频率与留存（截至 2025 年末全球会员约 3500 万）。</li>
+<li><strong>数据与算法</strong>：多年积累的履约、定价、广告投放数据，是 Uber Eats/Instacart 难以一夜复制的运营壁垒。</li>
+</ul>
+<div class="quote">护城河追问：<em>「竞争对手为什么无法复制？」</em>——单点（做个 App）容易复制，但<strong>区域级的订单密度与骑手履约网络</strong>需要时间与烧钱堆出来，这是 DoorDash 真正的壁垒。但护城河在<strong>监管与单位经济性</strong>面前可能被侵蚀（见第七、八节与多空分歧）。本期新的反面信号：治理层面，双层股权 + 迁册内华达意味着「巴菲特式管理层品质」维度需要打折审视——公司选择了对管理层诉讼风险最友好的司法辖区（详见第八节）。</div>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — GOV（总订单额）</h2>
+<p><strong>GOV（Gross Order Value，总订单额）</strong>是 DoorDash 唯一真正重要的指标：它是平台上所有订单的<strong>流水总额</strong>，营收只是按比例从中抽成（Net Revenue Margin 约 13.5%）。GOV 决定营收天花板，也决定广告、会员、金融等一切增值业务的土壤。<span class="src-badge src-s">一手</span></p>
+<div class="table-scroll"><table>
+<thead><tr><th>期间</th><th>Total Orders（百万单）</th><th>GOV（$M）</th><th>GOV 增速</th><th>营收（$M）</th><th>营收增速</th><th>NRM</th></tr></thead>
+<tbody>
+<tr><td>2023</td><td>2,161</td><td>66,771</td><td>+25%</td><td>8,635</td><td>+31%</td><td>12.9%</td></tr>
+<tr><td>2024</td><td>2,583</td><td>80,231</td><td>+20%</td><td>10,722</td><td>+24%</td><td>13.4%</td></tr>
+<tr><td>2025</td><td>3,172</td><td>102,018</td><td class="metric-positive">+27%</td><td>13,717</td><td>+28%</td><td>13.4%</td></tr>
+<tr><td>Q1 2026</td><td>933</td><td>31,604</td><td class="metric-positive">+37%</td><td>4,036</td><td>+33%</td><td>12.8%</td></tr>
+<tr><td><strong>Q2 2026</strong></td><td><strong>970</strong></td><td><strong>33,078</strong></td><td class="metric-positive"><strong>+36%</strong></td><td><strong>4,454</strong></td><td class="metric-positive"><strong>+36%</strong></td><td><strong>13.5%</strong></td></tr>
+</tbody>
+</table></div>
+<h3>GOV 核心解读（Q2 2026 10-Q，一手；本期无新季度数据）</h3>
+<ul>
+<li><strong>GOV +36% 的成色</strong>：剔除 Deliveroo 并表后，Q2 营收 +24%、订单量 +17%<span class="src-badge src-2">二手</span>——有机增速依然强劲。Susquehanna 本期上调目标价时引用的正是该口径。<span class="src-badge src-2">二手</span></li>
+<li><strong>货币化率企稳</strong>：Q1 2026 NRM 因 Deliveroo 并表稀释至 12.8%，Q2 回升至 13.5%（同比持平，一手）——并表口径问题而非趋势恶化，上上期报告的核心悬念已阶段性解除。</li>
+<li><strong>Q3 指引维持高增</strong>：公司指引 Q3 GOV $33.0–34.0B（同比 +27–31%）、Adj. EBITDA $950M–1.1B（中值环比上行），Reuters 报道指引<strong>高于华尔街预期</strong>。<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span></li>
+<li><strong>国际 GOV 增速追平</strong>：Q2 财报披露国际市场 GOV 增速与 Q1 持平且单位经济性进一步改善，Deliveroo 自身 GOV 增速在 Q2 <strong>加速</strong>。<span class="src-badge src-s">一手</span></li>
+</ul>
+<div class="caveat-inline">下一验证节点是 11 月初的 Q3 财报：GOV 是否落在 $33–34B、Adj. EBITDA 是否兑现 $950M–1.1B、NRM 是否站稳 13.5%。</div>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据（Q2 2026 10-Q，一手；本期无新季度数据）</h2>
+<h3>Q2 2026 核心经营与盈利指标（一手）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标（$M，除比率外）</th><th>Q2 2025</th><th>Q2 2026</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>Revenue</td><td>3,284</td><td>4,454</td><td class="metric-positive">+36%</td></tr>
+<tr><td>Marketplace GOV</td><td>24,244</td><td>33,078</td><td class="metric-positive">+36%</td></tr>
+<tr><td>Total Orders（M）</td><td>761</td><td>970</td><td class="metric-positive">+27%</td></tr>
+<tr><td>GAAP Gross Profit</td><td>1,608</td><td>2,223</td><td class="metric-positive">+38%</td></tr>
+<tr><td>Contribution Profit（非 GAAP）</td><td>1,147</td><td>1,641</td><td class="metric-positive">+43%</td></tr>
+<tr><td>Contribution Margin（占 GOV）</td><td>4.7%</td><td>5.0%</td><td class="metric-positive">+30bps</td></tr>
+<tr><td>Adjusted EBITDA（非 GAAP）</td><td>655</td><td>914</td><td class="metric-positive">+40%</td></tr>
+<tr><td>GAAP 净利润（归母）</td><td>285</td><td>200</td><td class="metric-negative">-30%</td></tr>
+<tr><td>Diluted EPS（$）</td><td>0.65</td><td>0.46</td><td class="metric-negative">-29%</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">GAAP 净利下滑主因是费用端主动扩张（R&amp;D +52%、G&amp;A +39%）及去年同期 $13M 税收收益 vs 今年 $8M 税费的基数效应——「主动再投资 + 税项基数」叠加，而非经营恶化（详见上期报告损益明细，数据未变）。</div>
+<h3>上半年（6M 2026）汇总（一手）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标（$M）</th><th>6M 2025</th><th>6M 2026</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>Revenue</td><td>6,316</td><td>8,490</td><td class="metric-positive">+34%</td></tr>
+<tr><td>美国收入</td><td>5,485</td><td>6,561</td><td class="metric-positive">+20%</td></tr>
+<tr><td>国际收入</td><td>831</td><td>1,929</td><td class="metric-positive">+132%</td></tr>
+<tr><td>GAAP 净利润（归母）</td><td>478</td><td>384</td><td class="metric-negative">-20%</td></tr>
+<tr><td>Adjusted EBITDA</td><td>1,245</td><td>1,668</td><td class="metric-positive">+34%</td></tr>
+<tr><td>经营现金流（OCF）</td><td>1,139</td><td>1,538</td><td class="metric-positive">+35%</td></tr>
+<tr><td>自由现金流（FCF）</td><td>849</td><td>1,162</td><td class="metric-positive">+37%</td></tr>
+<tr><td>回购（现金口径）</td><td>0</td><td>1,049</td><td>—</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">Q2 单季 FCF $742M（+109%）。公司提示 2026 全年 FCF 将因商户付款的年末时点效应减少 $700–800M（一次性现金流转移，不影响价值）<span class="src-badge src-s">一手</span>。上半年回购约 $1.05B（$5B 授权框架内）。</div>
+<h3>资产负债（2026/06/30，一手）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标（$M）</th><th>2025/12/31</th><th>2026/06/30</th></tr></thead>
+<tbody>
+<tr><td>现金及等价物</td><td>4,378</td><td>4,424</td></tr>
+<tr><td>短期投资</td><td>1,128</td><td>923</td></tr>
+<tr><td>总负债</td><td>9,613</td><td>9,629</td></tr>
+<tr><td>股东权益</td><td>10,033</td><td>9,921</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">净现金约 $2.0B（现金+投资 ≈$5.7B，减可转债等债务 ≈$3.3B，推算）——资产负债表稳健，Deliveroo 并购的 $2.75B 可转债负担可控。</div>
+</div>
+
+<div class="card" id="advertising">
+<h2>五、广告与 Agentic 商业 — 高毛利第二曲线</h2>
+<p>广告是 DoorDash 交易佣金之外的第二利润引擎，毛利率远高于交易抽成，是 <strong>margin 扩张</strong>的核心驱动力。<span class="src-badge src-s">一手</span></p>
+<ul>
+<li><strong>增速快于 GOV</strong>：10-K 明确披露广告收入「增速快于 Marketplace GOV」，是贡献利润提升的重要来源。<span class="src-badge src-s">一手</span></li>
+<li><strong>产品形态</strong>：搜索竞价、商户赞助位、CPG 快消品牌投放（「临近成交时刻的高意图流量」溢价）。</li>
+<li><strong>规模潜力</strong>：对标亚马逊/美团广告占 GMV 的高个位数百分比，DoorDash 广告渗透率仍低，长期是数百亿美元量级的潜在收入池。<span class="src-badge src-e">推算</span></li>
+<li><strong>本期新增：广告可测量性升级</strong><span class="src-badge src-2">二手</span>：9 月初的广告测量新闻（Simply Wall St 引用）显示 DoorDash 持续加码零售媒体（retail media）能力——从 marketplace 到 operator 的定位转变，为品牌方提供端到端投放与履约一体化的机会。</li>
+</ul>
+<h3>Agentic Commerce（本期新增维度）<span class="src-badge src-2">二手</span></h3>
+<p>7 月底以来 DoorDash 在「代理式商务」上动作密集：</p>
+<ul>
+<li><strong>Shopify 合作</strong>：agentic ordering 经由 Shopify 接入——AI 代理代客下单的场景卡位。</li>
+<li><strong>dd-cli</strong>：联创/CTO Andy Fang 发布命令行工具，把平台能力开放给开发者/AI agent 调用——「本地商业 API 化」的信号。</li>
+<li><strong>战略含义</strong>：若 AI 购物代理成为消费入口，履约网络（而非商品页）将成为稀缺资产——DoorDash 的「最后一公里」密度是天然卡位。但该叙事目前<strong>无可量化的财务贡献</strong>，按期权处理。<span class="src-badge src-e">推算</span></li>
+</ul>
+<div class="caveat-inline">DoorDash 仍未单独披露广告收入绝对额；agentic commerce 相关收入贡献接近于零。两者均为「方向正确、规模未证」的第二曲线。</div>
+</div>
+
+<div class="card" id="autonomous">
+<h2>六、自动驾驶 — 远期最大的期权</h2>
+<p>配送成本中人力（Dasher）占比最高，若能以机器人/无人机/自动驾驶替代，单位经济性将发生质变。</p>
+<ul>
+<li><strong>技术路线</strong>：「平台 + 伙伴」而非自研——Waymo（自动驾驶乘用车）、Coco/Serve（机器人）、Wing + 自研 DoorDash Air（无人机）。<span class="src-badge src-2">二手</span></li>
+<li><strong>DoorDash Air 已上线</strong>：Reuters 8/5 报道确认自研无人机配送项目 7 月正式推出，定位「减少对人类骑手的依赖、扩张物流网络」——从 FAA 认证（上期已报）走到实际运营。<span class="src-badge src-2">二手</span></li>
+<li><strong>投入加码</strong>：管理层在 Q2 财报中明确「提高地面与空中机器人的投资强度」，Q2 R&amp;D +52% 已部分体现；Citizens 8/31 重申评级时也引用「AI 效率收益」逻辑。<span class="src-badge src-2">二手</span></li>
+<li><strong>风险（反向）</strong>：10-K 明确提示「竞争对手可能在我们之前规模化商用自动驾驶/无人机配送」——若 Uber 或 Amazon 先行，DoorDash 的履约成本优势可能被反超。<span class="src-badge src-s">一手</span></li>
+</ul>
+<div class="caveat-inline">AV 对财务的可见贡献仍接近于零，本报告按<strong>期权而非当期资产</strong>处理，不纳入估值基准情景。跟踪信号：无人机/机器人单量占比、单位履约成本的量化披露。</div>
+</div>
+
+<div class="card" id="international">
+<h2>七、国际扩张与监管 — Deliveroo 整合期 + 澳洲最低工资落地</h2>
+<p>2025 年 10 月完成的 Deliveroo（≈$3.9B）收购使 DoorDash 覆盖扩展至 <strong>45 个市场（欧洲 30 个）</strong>。国际收入占比已升至 22%+，海外渗透率更低、成长空间更大，但监管敞口同步扩大。<span class="src-badge src-2">二手</span></p>
+<h3>收入结构（一手，10-Q 分部数据）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>区域（$M）</th><th>2024</th><th>2025</th><th>Q2 2025</th><th>Q2 2026</th><th>Q2 同比</th></tr></thead>
+<tbody>
+<tr><td>美国</td><td>9,403</td><td>11,460</td><td>2,829</td><td>3,457</td><td class="metric-positive">+22%</td></tr>
+<tr><td>国际</td><td>1,319</td><td>2,257</td><td>455</td><td>997</td><td class="metric-positive">+119%</td></tr>
+<tr><td>国际占比</td><td>12.3%</td><td>16.5%</td><td>13.9%</td><td>22.4%</td><td>—</td></tr>
+</tbody>
+</table></div>
+<h3>本期监管动态：零工立法从「担忧」变成「样本」</h3>
+<ul>
+<li><strong>澳大利亚「全球首个」零工最低工资落地</strong><span class="src-badge src-2">二手</span>：覆盖 Uber Eats/DoorDash 等平台的骑手最低时薪约 AU$32（≈US$21，从接单到送达全程计时，含等待时间）—— Guardian 报道有骑手测算每周多赚 AU$100–200。这是 Deliveroo/Wolt 所在的欧洲-澳新监管潮的具象化样本：<strong>零工监管不是「会不会」而是「多贵」</strong>。</li>
+<li><strong>美国境内持续加码</strong>：加州/纽约/西雅图的监管响应费（regulatory fee）已成为 Toast 等合作方报价表中的标准条目——成本部分转嫁给商家/消费者，但转嫁率有天花板。<span class="src-badge src-3">三方</span></li>
+<li><strong>利好</strong>：Q2 财报披露 Deliveroo GOV 增速在 Q2 加速、国际单位经济性进一步改善、2026 年 Deliveroo 预计贡献 Adj. EBITDA 约 $200M。<span class="src-badge src-s">一手</span></li>
+<li><strong>隐忧</strong>：英国/欧盟/澳新的零工监管环境比美国更严格，Deliveroo 整合（管理层、骑手、监管）仍在进行中，$2.75B 可转债带来财务费用。</li>
+</ul>
+</div>
+
+<div class="card" id="governance">
+<h2>八、治理与内部人动态（本期重点关注的事件）</h2>
+<h3>8.1 内华达迁册：54.2% 投票权书面同意，绕过股东大会 <span class="src-badge src-s">一手</span></h3>
+<p>8/6，DoorDash 持有 <strong>54.2% 投票权的股东（Consenting Stockholders，即双层股权下的创始团队）以书面同意（written consent）方式批准</strong>将注册地从特拉华迁至内华达，8/11 提交 8-K，8/27 提交 DEF 14C（定版信息声明），无需股东大会表决。公司解释（DEF 14C 原文要旨）：</p>
+<div class="quote">「特拉华近年的判例出现了许多令人意外的结果、诉讼环境日益恶化、涉及控制型股东的高-profile 判决频出……董事会对注册地选项进行了评估，认为内华达更『友好、敏捷、可预测』的成文法环境更契合公司战略。」<span class="src-badge src-s">一手</span></div>
+<ul>
+<li><strong>背景</strong>：这是 2024–2026 年「特拉华大逃亡」（Tesla、Meta 等）的延续。Bloomberg Law 指出：特拉华为挽留公司修订了公司法（新设「控制型股东」法定定义等），但 DoorDash 认为不够。<span class="src-badge src-2">二手</span></li>
+<li><strong>对小股东的实际影响</strong>：内华达法律对管理层/控股股东的忠实义务（fiduciary duty）保护显著弱于特拉华，派生诉讼门槛更高——<strong>少数股东通过诉讼制衡管理层的工具被实质削弱</strong>。叠加 DASH 本就存在的双层股权（B 类股超级投票权），治理天平进一步向创始团队倾斜。<span class="src-badge src-2">二手</span><span class="src-badge src-e">推算</span></li>
+<li><strong>市场反应</strong>：股价当日未受明显冲击——市场当前对治理折价「不定价」，但格雷厄姆框架下这是<strong>隐性安全边际的损耗</strong>：同样的财务表现，治理变差意味着极端情形下股东回收价值的能力下降。</li>
+</ul>
+<h3>8.2 内部人高点减持集群 <span class="src-badge src-2">二手</span></h3>
+<p>8 月下旬股价逼近年内反弹高点（8/28 收 $236.74，较 3 月低点 +65%）前后，<strong>CEO Tony Xu、总裁兼 COO Prabir Adarkar、CFO Ravi Inukonda、联创 Stanley Tang 均报告了公开市场减持，价格多在 $213–$234 区间</strong>（TIKR 8/30 汇总）；9/1 联创/CTO Andy Fang 经 10b5-1 计划再减持 15,000 股（加权均价约 $225.75–232.23）。EDGAR 上 8–9 月的 Form 144（拟出售预告）与 Form 4 数量也明显增多。<span class="src-badge src-s">一手</span></p>
+<ul>
+<li><strong>性质判读</strong>：多为 10b5-1 预设计划减持（合规、常规），单看每笔都不构成信号；但<strong>时间上的集群性</strong>（集中在反弹高点附近）+ <strong>覆盖度</strong>（CEO/COO/CFO/两位联创全员）构成一个值得记录的边际信号。</li>
+<li><strong>对标</strong>：内部人减持≠看空基本面的可靠指标（科技股高管例行减持常见），但在「估值不便宜 + GAAP 利润下滑 + 迁册削弱小股东权利」的组合背景下，它降低了本已有限的安全边际。</li>
+</ul>
+<h3>8.3 资本回报：回购在继续 <span class="src-badge src-s">一手</span></h3>
+<p>上半年已回购约 $1.05B（$5B 授权框架内），稀释股数从年初起小幅下降至 433.3M——在内部人减持的同时公司用现金回购，两个方向的资本流动并存（高管套现由公司回购部分对冲摊薄，对小股东而言中性偏负）。</p>
+</div>
+
+<div class="card" id="valuation">
+<h2>估值分析</h2>
+<h3>当前估值倍数（2026/09/03）<span class="src-badge src-2">二手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>数值</th><th>解读</th></tr></thead>
+<tbody>
+<tr><td>Trailing P/E</td><td>≈119x</td><td>高——TTM GAAP 净利仅 $841M（推算），分母小导致 PE 失真</td></tr>
+<tr><td>Forward P/E</td><td>≈27x（Non-GAAP 口径）</td><td>基于 forward EPS ≈$8.14（含 EBITDA 高增预期）；GAAP 口径显著更高<span class="src-badge src-e">推算</span></td></tr>
+<tr><td>TTM P/S</td><td>≈6.1x</td><td>与上期持平——股价横盘 + 无新并表增量；处于上市以来中低区间</td></tr>
+<tr><td>P/B</td><td>≈9.7x</td><td>轻资产平台型公司，参考意义有限</td></tr>
+<tr><td>EV/Revenue</td><td>≈5.9x</td><td>净现金 ≈$2B，与 P/S 基本一致</td></tr>
+<tr><td>EV/TTM Adj. EBITDA</td><td>≈29x<span class="src-badge src-e">推算</span></td><td>TTM Adj. EBITDA ≈$3.2B；GAAP 口径 EV/EBITDA ≈66x（yfinance）</td></tr>
+<tr><td>PEG</td><td>2.82（yfinance）</td><td>任何口径 PEG 均 &gt;1.5——「为成长付出溢价」<span class="src-badge src-e">推算</span></td></tr>
+<tr><td>FCF 收益率（替代股息率）</td><td>≈2.2%<span class="src-badge src-e">推算</span></td><td>TTM FCF ≈$2.14B / 市值 $96.2B；公司不派息</td></tr>
+</tbody>
+</table></div>
+<h3>估值框架与本期边际变化</h3>
+<ul>
+<li><strong>PE 失真，P/S 才是主锚</strong>：2025 年刚实现首个全年 GAAP 盈利（净利率约 0.9%），对这类「刚过盈利拐点」的成长股，<strong>P/S 与 GOV 增速</strong>比 PE 更有意义。Simply Wall St 本期以 P/E 116x vs 行业 22x、其「公允 P/E」46.7x 论证「昂贵」，属于机械套用 PE，方向可参考、数字不可采信。<span class="src-badge src-2">二手</span></li>
+<li><strong>历史分位（推算）</strong>：股价 $222 较 2025 年 10 月高点 $285.50 回撤约 22%；TTM P/S 6.1x 处于上市以来中低区间（2021 年 IPO 峰值 &gt;20x，2022–23 底部 ~3x）——<strong>中低位而非底部</strong>。</li>
+<li><strong>反弹结构</strong>：90 天 +46%（自 3 月低点 $143.30 反弹 +55%）后，近 7 天 -3.4%——市场开始对「反弹故事的极限」产生分歧（9/3 评论文章：股价 $226 已高于卖方公允价值估计 $213.91，焦点从「希望改善」转向「需要执行兑现」）。<span class="src-badge src-2">二手</span></li>
+<li><strong>可比公司（二手）</strong>：Uber YTD -6.4%、且宣布疫情以来最大规模裁员（再裁 10% 员工）；DASH 同期 +2% 左右且在加码投资。<strong>「对手收缩、DASH 扩张」的分化</strong>——短期利好 DASH 份额与心智，但也说明 Uber 在修复利润率，若 2027 年 Uber 利润兑现而 DASH 再投资回报不及预期，估值溢价的对照系会变得刺眼。</li>
+<li><strong>治理折价未入价</strong>：迁册内华达 + 内部人集群减持在当前股价中未被定价（市场反应平淡）。按格雷厄姆框架，这属于「隐性折价项」——不改变目标价计算，但降低极端情形下的回收率假设。</li>
+</ul>
+<h3>盈利拐点与资本回报</h3>
+<p>2025 年全年 GAAP 盈利 $935M、Adj. EBITDA $2.78B，拐点已确认；2026 年管理层主动「再投资」（机器人 + AI + 国际整合），上半年 GAAP 利润 -20%，但 Adj. EBITDA +34%、FCF +37%、Q3 指引环比继续上行——「主动选择而非恶化」的判断维持。<span class="src-badge src-s">一手</span></p>
+<p style="margin-top:8px;"><strong>股息率</strong>：不派息（0%），「股息率 vs 融资利率」框架不适用，以 FCF 收益率 ≈2.2% 替代——低于 10 年期美债，持有回报完全依赖增长兑现。<span class="src-badge src-e">推算</span></p>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>网络密度的护城河</strong>：美加外卖份额约 60–70%；Reddit 消费者端「Uber Eats 更贵、整体更偏好 DoorDash」的反馈持续佐证心智份额。</li>
+<li><strong>增长有质量且被验证</strong>：Q2 GOV +36%（剔除 Deliveroo 营收 +24%）、NRM 回升至 13.5%、Q3 指引高于华尔街预期（Reuters）；下一节点大概率延续。</li>
+<li><strong>对手在收缩</strong>：Uber YTD -6% 且裁员 10%（疫情以来最大）——竞争烈度边际下降，DASH 的份额与定价环境改善。</li>
+<li><strong>多重增长引擎</strong>：国际收入 +119%（占比 22%）、Deliveroo GOV 增速加速、非餐零售（B&amp;N/Kohl's/Gap）、高毛利广告、agentic commerce（Shopify/dd-cli）与无人机（DoorDash Air 已运营）两张远期期权。</li>
+<li><strong>现金流加速</strong>：Q2 FCF $742M（+109%）、上半年 FCF +37%——「再投资年」里现金流指标反而加速。</li>
+<li><strong>华尔街持续看多且在上调</strong>：42 家覆盖、Buy 共识、平均目标价 ≈$254（较现价 +14%）；本期 Susquehanna $225→$250、Argus $190→$270、Rosenblatt 新呼 Buy（「逆风缓解、买点出现」）。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>估值不便宜</strong>：Trailing PE ≈119x、P/S 6.1x、EV/TTM Adj. EBITDA ≈29x、FCF 收益率 2.2% 低于无风险利率；90 天 +46% 后反弹故事接近透支（股价已高于部分公允价值估计）。</li>
+<li><strong>治理折价（本期新增）</strong>：迁册内华达削弱小股东诉讼制衡 + 双层股权书面同意绕过股东大会 + CEO/CFO/COO/联创在反弹高点集群减持——三件事叠加，管理层与小股东利益一致性存疑。</li>
+<li><strong>GAAP 利润连续下滑 + 投入加码</strong>：Q2 净利 -30%、机器人/AI 投入延长利润逆风，估值切换要等 2027 年兑现。</li>
+<li><strong>零工监管从担忧变现实</strong>：澳洲最低时薪 ≈AU$32（含等待时间）落地、欧洲/英国敞口扩大、美国加州/纽约/西雅图监管费持续——成本结构性抬升的样本已经出现。</li>
+<li><strong>fee fatigue 与通胀敏感</strong>：到手价可比堂食贵 25%–100%，Reddit 上「社会何时接受了这种价格」的消费者情绪值得警惕。</li>
+<li><strong>Deliveroo 整合未完</strong>：上半年 restructuring $50M、全年无形摊销 ≈$450M 拖累 GAAP 利润；英国市场盈利历史不佳。</li>
+</ol>
+</div>
+</div>
+<h3>核心争议焦点</h3>
+<p>多空分歧的<strong>唯一本质问题</strong>：「网络密度护城河 + 广告/AV/agentic 三张期权」能否支撑对 Uber 的持续估值溢价，并在 2026 再投资年 + 零工监管落地 + 治理折价浮现的三重背景下不被侵蚀？</p>
+<h4>裁决指标（谁对谁错看这几个）</h4>
+<ul>
+<li><strong>Q3 GOV/NRM</strong>：GOV 落在 $33–34B 且 NRM 站稳 13.5% → 多方占优；NRM 再度下滑 → 空方成立。</li>
+<li><strong>Adj. EBITDA Margin</strong>：Q3 指引中值 ≈3.1%（vs Q2 2.8%）——指引兑现即验证「再投资不挡 margin 扩张」。</li>
+<li><strong>监管成本传导</strong>：澳洲模式是否扩散至英国/欧盟/美国更多城市，以及费率转嫁后的订单弹性。</li>
+<li><strong>内部人行为延续性</strong>：10b5-1 计划的后续执行节奏（若高点过后停止，则更像例行套现；若持续放量，信号意义增强）。</li>
+<li><strong>对手动向</strong>：Uber 裁员后的利润率修复 vs 市场份额防守——DASH 有机订单增速能否维持 &gt;15%。</li>
+</ul>
+</div>
+
+<div class="card" id="analysts">
+<h2>华尔街分析师全景 <span class="src-badge src-2">二手</span></h2>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>评级</th><th>目标价</th><th>备注（时效）</th></tr></thead>
+<tbody>
+<tr><td>Rosenblatt（Scott Devitt）</td><td class="metric-positive">Buy</td><td>—</td><td>9/1：新呼 Buy，「逆风缓解、当前是买点」，称 DASH 为出行配送领域「最具防御力的运营商」</td></tr>
+<tr><td>Argus</td><td class="metric-positive">Buy</td><td>$270（原 $190）</td><td>8 月末：大幅上调 $80，强调资产负债表稳健</td></tr>
+<tr><td>Susquehanna</td><td class="metric-positive">Positive</td><td>$250（原 $225）</td><td>8 月末：Q2 营收 +36%（剔除 Deliveroo +24%）为据上调</td></tr>
+<tr><td>Citizens</td><td class="metric-positive">重申</td><td>—</td><td>8/31：以「AI 效率收益」逻辑重申评级</td></tr>
+<tr><td>Evercore ISI（M. Mahaney）</td><td class="metric-positive">Outperform</td><td>$300</td><td>8 月：看 H2 2026 为 EBITDA margin 拐点（延续自上期）</td></tr>
+<tr><td>BMO Capital</td><td class="metric-positive">Buy</td><td>$293</td><td>延续自上期</td></tr>
+<tr><td>Deutsche Bank / KeyCorp / Benchmark / TD Cowen / UBS</td><td class="metric-positive">Buy 系</td><td>$240–275</td><td>8 月财报后密集上调的延续（详见上期报告）</td></tr>
+<tr><td>Roth MKM</td><td class="tag tag-hold">Neutral</td><td>$220</td><td>低于现价（延续自上期）</td></tr>
+<tr><td>Wells Fargo</td><td class="tag tag-hold">Equal Weight</td><td>$199</td><td>低于现价，偏谨慎（延续自上期）</td></tr>
+</tbody>
+</table></div>
+<p><strong>共识</strong>：Buy——42 家覆盖、平均目标价 <strong>$253.83</strong>（较 9/3 现价 +14.3%），区间 $172–$350。<span class="src-badge src-2">二手</span></p>
+<div class="caveat-inline">本期方向以上调为主（Argus +$80、Susquehanna +$25、Rosenblatt 新买入），但注意：平均目标价的隐含涨幅部分来自「目标价上调慢于股价上涨」的算术效应；Roth MKM / Wells Fargo 仍低于现价。目标价为分析师主观预测，不构成本报告立场。时效截至 2026/09/03。<span class="src-badge src-t">时效</span></div>
+</div>
+
+<div class="card" id="reddit">
+<h2>Reddit / 零售投资者讨论 <span class="src-badge src-3">三方</span></h2>
+<p>按 skill 纪律，社区搜索用<strong>产品关键词</strong>（"food delivery" / "DoorDash" / "Uber Eats"）而非股票代码。本期（近一月）可交叉验证的讨论：</p>
+<ul>
+<li><strong>消费者端（r/doordash 等）</strong>：「整体更偏好 DoorDash，Uber Eats 只在 DoorDash 没有那家餐厅时才用，而且（本地）Uber Eats 更贵」——与上期「DoorDash has won the food delivery culture」的叙事一致：心智 + 价格感知上 DoorDash 持续占优。</li>
+<li><strong>价格疲劳信号</strong>：「我们这个社会是何时接受（外卖比堂食贵这么多）的？」「$6.63 的单，骑手到手成本 $3.81、39 分钟只赚 $2.82」——消费者与骑手两端同时对价格结构表达不满，fee fatigue 是压制 GOV 天花板的长期变量。</li>
+<li><strong>骑手端</strong>：对新费率结构（按距离/订单规模 $1.99–9.99）抱怨集中；Toast 报价表显示加州/纽约/西雅图订单已叠加监管费——监管成本转嫁正在发生。</li>
+<li><strong>监管情绪土壤</strong>：澳洲最低时薪新闻下，骑手社区一边倒支持（「$32/小时才合理」）——零工立法的社会情绪基础扎实，澳洲模式扩散概率不低，这与第七节的监管判断互相印证。</li>
+<li><strong>投资者端</strong>：围绕「内部人减持 vs 公司回购」的讨论开始出现（对应第八节），零售情绪对治理事件的敏感度在上升。</li>
+</ul>
+<div class="caveat-inline">Reddit 为三方来源，情绪噪音大，仅供观察市场叙事，不纳入估值判断。骑手与消费者的双重抱怨是监管风险与 fee fatigue 的社会情绪土壤，作为先行指标跟踪。<span class="src-badge src-3">三方</span></div>
+</div>
+
+<div class="card" id="conclusion">
+<h2>综合判断框架</h2>
+<h3>三大师框架交叉验证</h3>
+<ul>
+<li><strong>巴菲特（护城河 + 管理层品质）</strong>：护城河（网络密度/双边效应/会员锁定）无变化、依然成立；但本期「管理层品质」维度出现两处扣分——迁册内华达（选择对管理层最友好的司法辖区）与高点集群减持。巴菲特会问：「你愿意把女儿嫁给这家公司的管理层吗？」——本期答案是「生意没问题，管理层需要更小心地盯」。</li>
+<li><strong>芒格（逆向 + 第二层思维）</strong>：先问「什么会毁掉它」——零工监管（澳洲样本已落地）、竞争费率战（但对手正在裁员收缩）、AV 被抢先。第二层思维：市场看到「Uber 裁员 + DASH 加码」解读为 DASH 强势（第一层），但也可以解读为行业整体进入利润率修复期、增长叙事变贵（第二层）——两层的差额就是当前估值溢价的脆弱性。</li>
+<li><strong>格雷厄姆（安全边际）</strong>：FCF 收益率 2.2% &lt; 无风险利率；P/S 6.1x 处于历史中低位而非底部；本期新增的<strong>治理折价（迁册 + 减持）是格雷厄姆意义上的「隐性负债」</strong>——不体现在任何倍数里，但降低极端情形的回收率。安全边际进一步收窄的判断成立。</li>
+</ul>
+<h3>四情景框架（概率为本文主观判断）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>概率</th><th>核心假设</th><th>对估值的含义</th></tr></thead>
+<tbody>
+<tr><td class="metric-positive">① 乐观</td><td>~25%</td><td>Q3 兑现指引，GOV 维持 20%+，广告放量，监管扩散慢于预期</td><td>margin 扩张兑现，P/S 6x 可被增长消化甚至修复</td></tr>
+<tr><td>② 基准</td><td>~40%</td><td>GOV 增速 15–18%，Deliveroo $200M EBITDA 兑现，2027 GAAP 利润回升</td><td>估值高位震荡，靠业绩增长逐步消化</td></tr>
+<tr><td class="metric-warn">③ 悲观</td><td>~25%</td><td>零工监管扩散（澳洲模式）+ GOV 增速降至 ~10%，再投资拖长利润周期</td><td>估值下修，成长股杀估值风险显著</td></tr>
+<tr><td class="metric-negative">④ 尾部</td><td>~10%</td><td>核心逻辑被证伪（监管重创履约模型 / AV 被竞对抢先规模化 / 治理事件升级）</td><td>逻辑破坏，非单纯估值问题</td></tr>
+</tbody>
+</table></div>
+<h3>上期跟踪清单核对（8/21 → 9/4）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>上期列出的跟踪指标</th><th>本期状态</th></tr></thead>
+<tbody>
+<tr><td>Q3 GOV / Adj. EBITDA 指引兑现</td><td>— 待验证：Q3 财报预计 11 月初，本期无新数据</td></tr>
+<tr><td>NRM 是否站稳 13.5%</td><td>— 待 Q3 验证（Q2 数据维持 13.5%）</td></tr>
+<tr><td>2026 全年 FCF（剔除时点效应）</td><td>— 待 Q4 验证</td></tr>
+<tr><td>机器人投入的量化产出</td><td class="metric-positive">✓ 部分进展：DoorDash Air 无人机 7 月正式投入运营（Reuters 确认）</td></tr>
+<tr><td>Deliveroo 整合进度</td><td class="metric-positive">✓ 正面：Q2 财报披露 Deliveroo GOV 增速加速、国际单位经济性改善（一手）</td></tr>
+<tr><td>零工监管立法进展</td><td class="metric-negative">✗ 落地：澳洲「全球首个」骑手最低时薪 ≈AU$32（含等待时间）；加州/纽约/西雅图监管费常态化</td></tr>
+<tr><td>非餐零售扩张留存</td><td>△ Live Nation ANZ 三年合作（9/3）为品牌向增量，留存数据未披露</td></tr>
+<tr><td>回购执行节奏</td><td>✓ 上半年 $1.05B 继续执行（一手）</td></tr>
+</tbody>
+</table></div>
+<div class="caveat-inline">本期未列入上期清单但值得记录的新增项：<strong>① 内华达迁册（治理）；② 内部人高点集群减持；③ Uber 裁员 10%（竞争格局）；④ agentic commerce 布局（Shopify/dd-cli）</strong>——前三项偏负面/谨慎，第四项偏正面期权。</div>
+<h3>关键跟踪指标（下一份报告核对清单）</h3>
+<ul>
+<li>Q3 财报（预计 2026/11 初）：GOV 是否落在 $33–34B、Adj. EBITDA 是否兑现 $950M–1.1B、NRM 是否站稳 13.5%</li>
+<li>内华达迁册的 Effective Time（DEF 14C 邮寄后 20 天左右生效）及市场/指数是否出现治理相关调整</li>
+<li>内部人减持延续性：Form 144/Form 4 的后续节奏（高点回撤后是否放缓）</li>
+<li>澳洲最低工资实施后对订单量/费率的影响——监管成本的第一个可量化样本</li>
+<li>Uber 裁员 10% 后的外卖业务投入变化（防守 vs 撤退）</li>
+<li>无人机/机器人单量占比的量化披露；agentic commerce 的商业化信号</li>
+<li>回购执行节奏与全年 FCF（剔除 $700–800M 时点效应后的真实口径）</li>
+</ul>
+<h3>总结</h3>
+<p>本期是财报真空期，季度经营面无新数据、基本面判断维持上期：<strong>好公司，价格仍未到「击球区」</strong>。真正值得记录的边际变化在治理与情绪层面：<strong>① 54.2% 投票权书面同意迁册内华达——双层股权 + 管理层友好辖区，小股东制衡工具被实质削弱，市场暂不定价，但这是格雷厄姆意义上的隐性折价；② CEO/CFO/COO/联创在反弹高点（较 3 月低点 +65% 附近）集群减持——多为 10b5-1 常规操作，但集群性本身是信号；③ 澳洲骑手最低时薪落地——零工监管从「会不会」变成「多贵」，而 DoorDash 国际占比已超 22%</strong>。对冲这些的是：Q3 指引高于预期、对手 Uber 裁员收缩、华尔街继续上调（平均目标价 +14% 空间）、无人机与 agentic commerce 两张期权在实质推进。操作含义不变但置信度结构有变：<strong>基本面（护城河/增长/现金流）的看多证据在增强，治理/估值/监管三重的安全边际折损也在累积</strong>——盯住 11 月初 Q3 财报的指引兑现度，与内部人减持的后续节奏，是未来一个季度最重要的两件事。<span class="src-badge src-e">推算</span></p>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议。报告基于公开网络搜索生成，SEC 文件已下载至本地作为可信数据源。所有估值情景和概率均为本文主观判断。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026年9月4日 · 由 Claude Code 辅助分析 · 数据截至 2026/09/03 收盘 · 上期报告：DASH_DoorDash_2026-08-21_深度分析.html</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul>
+<li>SEC EDGAR（本地文件：DASH_2026-Q2_10-Q、DASH_FY2025_10-K、DASH_2026-Q1_10-Q — 季度财务；<strong>DASH_8-K_Nevada_Reincorporation_2026-08-11、DASH_DEF14C_Nevada_Reincorporation_2026-08-27 — 本期新增一手数据源</strong>）— 一手</li>
+<li>yfinance — 行情、估值倍数、分析师共识（截至 2026/09/03 收盘）— 二手</li>
+<li>DoorDash IR / Business Wire（经 FT）— Q2 2026 财报新闻稿、Q3 指引 — 一手</li>
+<li>Business Insider / Bloomberg Law — 内华达迁册报道（54.2% 投票权书面同意）— 二手</li>
+<li>Reuters — Q3 指引高于预期、DoorDash Air 无人机上线 — 二手</li>
+<li>TIKR / Insider filings 汇总 — CEO/COO/CFO/联创减持明细、Andy Fang 9/1 减持 — 二手</li>
+<li>Investing.com / Seeking Alpha / Simply Wall St — Rosenblatt、Susquehanna、Argus、Citizens 评级动作；估值观点 — 二手</li>
+<li>Marketing-Interactive / MediaPost — Live Nation ANZ 合作、agentic commerce（Shopify/dd-cli）、大学橄榄球营销 — 二手</li>
+<li>Guardian / 24-7 Wall St — 澳洲零工最低工资、Uber 裁员 10% — 二手</li>
+<li>Reddit（r/doordash、r/UberEATS、r/UberEatsDrivers 等）— 消费者与骑手社区讨论 — 三方</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+DoorDash%EF%BC%88DASH%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ADoorDash%EF%BC%88DASH%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

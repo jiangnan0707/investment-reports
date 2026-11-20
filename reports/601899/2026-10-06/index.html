@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>紫金矿业 2026-10-06 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/601899/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E7%B4%AB%E9%87%91%E7%9F%BF%E4%B8%9A%EF%BC%88601899%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%B4%AB%E9%87%91%E7%9F%BF%E4%B8%9A%EF%BC%88601899%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-06%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">601899 <span>·</span> 2026-10-06 <span>·</span> PC 完整版</div><h1>紫金矿业</h1><p>A股 601899 最新收盘 2026-09-30 （国庆休市 10-01~10-07，10-08 复市）· H股 02899 为 2026-10-06 收盘 · AH 溢价 +8.16% （同为 9-30 口径）· 财务为 2026 年半年报</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式 — 逆周期并购 + 金铜锂三极</a></li><li><a href="#core-metric">三、核心指标 — 矿产品量价</a></li><li><a href="#financials">四、2026 中期业绩 一手</a></li><li><a href="#segments">五、分部拆解 — 黄金 / 铜 / 锂</a></li><li><a href="#geopolitics">六、地缘与政策风险</a></li><li><a href="#valuation">七、估值分析</a></li><li><a href="#bull-bear">八、多空核心分歧</a></li><li><a href="#analysts">九、券商分析师全景 二手</a></li><li><a href="#community">十、雪球 / 散户讨论 三方</a></li><li><a href="#conclusion">十一、综合判断框架</a></li><li><a href="#datanotes">◉ 数据说明</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+    ⚠️ <strong>时效提示：</strong>A股价格、市值与估值指标截至 <strong>2026-09-30 收盘</strong>——<strong>A股国庆休市 10-01~10-07、10-08 复市</strong>，期间无新增交易日；H股价格与商品行情为 2026-10-06。<strong>AH 溢价率因此统一取 9-30 同日口径</strong>。财务数据为 <strong>2026 年半年度报告</strong>（2026-08-22 披露，未经审计）。<strong>下一确定性节点：2026-10-24（三季报预约披露日）</strong>。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    市场：<strong>A+H 双上市</strong>（A股 601899 / H股 02899）。按用户约定，分析以 <strong>A股数据为准</strong>（股价、市值、估值），港币口径仅用于计算 AH 溢价率。
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> 公司公告/交易所披露/行情接口 |
+    <span class="src-badge src-2">二手</span> 媒体/券商研报 |
+    <span class="src-badge src-3">三方</span> 论坛/UGC |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>标的/601899-紫金矿业/Filings/</code> —
+  601899_2025年_年报_2026-03-21.pdf · 601899_2026年_一季报_2026-04-22.pdf · 601899_2026年_半年报_2026-08-22.pdf（含摘要）</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>公司</td><td>紫金矿业集团股份有限公司，上交所主板 <strong>601899</strong>（H股 港交所 <strong>02899</strong>） <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>行业</td><td>有色金属矿采选 — <strong>金、铜、锂为主，多矿种协同</strong>（锌铅、银、钼、钨）</td></tr>
+<tr><td>总股本</td><td>265.9 亿股（A+H 合计）<span class="src-badge src-e">推算</span></td></tr>
+<tr><td>控股子公司上市</td><td><strong>紫金黄金国际（02259.HK）</strong>——2025 年 9 月分拆挂牌，主营境外黄金资产；紫金持股约 <strong>85%</strong> <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>审计/披露</td><td>沪深交易所 + 巨潮资讯；财报为季度/半年度/年度</td></tr>
+<tr><td>下一节点</td><td class="metric-warn"><strong>2026-10-24 三季报</strong>（预约披露日，一手）</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid" style="grid-template-columns:repeat(3,1fr)">
+<div class="summary-item"><div class="value">29.79 元</div><div class="label">A股收盘（2026-09-30，+1.12%）<br/>52 周区间 24.00–44.14 <span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">7,921 亿</div><div class="label">总市值（人民币）<br/>流通市值 6,137 亿 <span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">11.71x</div><div class="label">PE (TTM)<br/>五年区间 9.10–36.64 <span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">3.92x</div><div class="label">PB (MRQ)<br/>五年区间 2.43–6.28 <span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">+8.16%</div><div class="label">AH 溢价率（同为 9-30）<br/>29.79 ÷ (32.24×0.8543) − 1 <span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">2.69%</div><div class="label">股息率（TTM 已宣派）<br/>近 12 个月 0.80 元/股 <span class="src-badge src-e">推算</span></div></div>
+</div>
+<h3>1.1 价格结构：距 52 周高点 −32.5%，距低点 +24.1%</h3>
+<div class="chart">
+<div class="chart-title">紫金矿业 A股（601899）近 12 个月月度收盘 <small>人民币 · 前复权 · x 轴按真实日期比例</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 200">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="34" x2="606" y1="118" y2="118"></line><line x1="34" x2="606" y1="95" y2="95"></line>
+<line x1="34" x2="606" y1="72" y2="72"></line><line x1="34" x2="606" y1="49" y2="49"></line><line x1="34" x2="606" y1="26" y2="26"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="end">
+<text x="28" y="121">22</text><text x="28" y="98">27</text><text x="28" y="75">32</text><text x="28" y="52">37</text><text x="28" y="29">42</text>
+</g>
+<polyline fill="none" points="34.0,87.5 82.6,82.6 126.4,91.4 178.2,64.3 225.2,38.2 269.1,40.9 319.2,72.4 366.2,69.7 411.7,82.9 461.8,105.5 510.4,69.6 559.0,64.3 606.0,82.2" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<circle cx="225.2" cy="38.2" fill="var(--red)" r="4"></circle>
+<circle cx="606.0" cy="82.2" fill="var(--accent)" r="4.5"></circle>
+<g font-size="10.5" font-weight="700" text-anchor="middle">
+<text fill="var(--red)" x="225.2" y="30">39.34 年内最高收盘</text>
+<text fill="var(--accent)" x="586" y="99">29.79</text>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="middle">
+<text x="34" y="136">2025-09</text><text x="178" y="136">2025-12</text><text x="319" y="136">2026-03</text>
+<text x="461" y="136">2026-06</text><text x="606" y="136">2026-09</text>
+</g>
+</svg>
+<div class="chart-legend"><span><i style="background:var(--accent)"></i>月度收盘</span><span><i style="background:var(--red)"></i>年内最高收盘</span></div>
+<p class="caveat-inline">13 个月的月度末收盘（前复权），<strong>不是每周实测</strong>。区间<strong>盘中</strong>极值为最高 44.14（2026-01-29）、最低 24.00（2026-07-01）——<strong>「52 周区间」用的是盘中价，与图中收盘价不是同一口径</strong>。<span class="src-badge src-s">一手</span>（行情接口）</p>
+</div>
+<p class="caveat-inline">阶段性事实：A股自 <strong>2026-09-09 的高点 ¥34.53</strong>（当日盘中最高，收盘 34.40）回落至 2026-09-30 的 ¥29.79（<strong>−13.9%</strong>）；其间 H股同步回落。52 周区间 <strong>24.00–44.14</strong>（盘中、前复权，2025-09-30 至 2026-09-30），现价距高点 <strong>−32.5%</strong>、距低点 <strong>+24.1%</strong>。年内高低相差 84%，这个振幅本身是周期股的特征之一。<span class="src-badge src-s">一手</span></p>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式 — 逆周期并购 + 金铜锂三极</h2>
+<p><strong>一句话：紫金赚的是「资源获取能力」与「成本控制能力」之间的差。</strong>它不是价格的制定者，而是把别人不愿做或做不好的矿，用更低的成本挖出来、在更低的价格周期里买进来。</p>
+<h3>2.1 怎么赚钱：金铜两极已经接近平分</h3>
+<div class="chart">
+<div class="chart-title">2026H1 毛利构成 <small>半年报「抵销后」口径 · <span class="src-badge src-s">一手</span></small></div>
+<div class="stacked-bar" style="height:36px;font-size:12.5px;">
+<div style="width:41.7%;background:var(--accent)">黄金 41.7%</div>
+<div style="width:33.8%;background:var(--amber)">铜 33.8%</div>
+
+
+<div style="width:19.4%;background:#cfd8d2;color:var(--text-secondary)">其他 19.4%</div>
+</div>
+<div class="chart-legend"><span><i style="background:#6b9e7f"></i>锂 3.4%</span><span><i style="background:#9ec3ad"></i>锌（铅）1.7%</span><span><i style="background:#cfd8d2"></i>其他（其他矿种、贸易与冶炼）</span></div>
+<p class="caveat-inline">占宽度不足 4% 的两段（锂 3.4%、锌铅 1.7%）在条上无法容纳文字，用下方色块标注；五段合计 100%。<strong>「其他」是半年报未单独拆分的部分，占毛利 19.4%——它比锂大得多，读这份报告时需要记住它不是矿山主业。</strong></p>
+</div>
+<p><strong>两个数字放在一起看：黄金与铜合计贡献 75.5% 的毛利，而锂只有 3.4%。</strong>公司在战略表述中把锂称为「第三增长极」——那是按<strong>增量</strong>说的（产量同比 +496%），不是按<strong>当期利润贡献</strong>说的。这两件事都需要知道，但不能混为一谈。</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">板块</th><th style="width:16%">收入占比</th><th style="width:16%">毛利占比</th><th style="width:16%">毛利 − 收入</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>黄金</strong></td><td>41.2%</td><td><strong>41.7%</strong></td><td class="metric-positive">+0.5pct</td><td>毛利第一贡献板块，得益于金价大幅上涨</td></tr>
+<tr><td><strong>铜</strong></td><td>32.6%</td><td><strong>33.8%</strong></td><td class="metric-positive">+1.2pct</td><td>毛利第二，与黄金接近平分</td></tr>
+<tr><td>锂</td><td>2.2%</td><td>3.4%</td><td class="metric-positive">+1.2pct</td><td>「第三增长极」，产量同比 +496%</td></tr>
+<tr><td>锌（铅）</td><td>3.0%</td><td>1.7%</td><td class="metric-negative">−1.3pct</td><td>—</td></tr>
+<tr><td>其他</td><td>21.0%</td><td>19.4%</td><td class="metric-negative">−1.6pct</td><td>其他矿种、贸易与冶炼，半年报未单独拆分</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>为什么要加「毛利 − 收入」这一列</strong>：它衡量的是<strong>每个板块把收入转成毛利的效率</strong>。黄金、铜、锂三列为正（高于集团平均），锌铅与「其他」为负。<strong>但要注意这个差值全部在 ±1.6 个百分点以内</strong>——它说明各板块的<strong>结构占比</strong>在收入端与利润端基本一致，没有出现「某板块收入很大但几乎不赚钱」的情况。<span class="src-badge src-e">推算</span></p>
+<div class="quote">
+<strong>这一节最该记住的一点：黄金与铜的毛利贡献已经接近平分（41.7% vs 33.8%）。</strong>这意味着紫金的利润不再由单一金属主导——但也意味着<strong>两个价格都必须站在高位，当期利润才能维持</strong>。这一点在第三章会展开。
+  </div>
+<h3>2.2 护城河：三条来源，强度不同</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:16%">来源</th><th style="width:14%">强度</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td><strong>逆周期并购能力</strong></td><td class="metric-positive">较强</td><td>在商品价格低迷期以低成本获取世界级矿山，是紫金区别于国内同行的核心能力。近期案例：收购哈萨克斯坦瑞果多金矿（2025-10 交割）、加纳阿基姆金矿（2025-04 交割）、推进赤峰黄金控制权收购 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>低成本运营</td><td class="metric-warn">中等</td><td>矿产品毛利率 69.34%（半年报），但成本受能源价格、资源税、品位下降影响，<strong>不是恒定优势</strong>——高盛 9 月即因中东危机推升能源价格而上调金铜单位成本预测 <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>资源禀赋与矿种分散</td><td>中等</td><td>多矿种、多地域布局降低了单一矿山事故的冲击——但<strong>卡莫阿淹井事件恰好检验了这条护城河的边界</strong>（见第五章）</td></tr>
+</tbody>
+</table></div>
+<p><strong>「10 年后这家公司还在吗」——这是提问，不是结论。</strong>矿业公司与消费品的逻辑不同，要拆开看：<strong>矿本身是不可再生的</strong>，10 年后现有矿山的品位与储量都会下降，公司的存续取决于「能否持续以合理成本获取新资源」——这条能力有历史记录（过去十年逆周期买下了卡莫阿、巨龙、波格拉等），<strong>但它依赖两件事：资产负债表能否承受下一轮下行周期，以及目标国的政治稳定性</strong>（海外资产占比高，见第六章）。这两件事都有可观察的指标，本报告在第十一章列出。</p>
+<h3>2.3 战略执行：两份三年规划，和两笔正在进行的资本运作</h3>
+<div class="chart">
+<div class="chart-title">主要矿产品产量路径：2024–2025 实际 → 2026E / 2028E 目标 <small>公司《三年（2026-2028 年）产量规划》，2025 年报 · <span class="src-badge src-s">一手</span></small></div>
+<div class="chart-legend"><span><i style="background:var(--accent)"></i>实线 · 已实现</span><span><i style="background:var(--amber)"></i>虚线 · 公司目标</span></div>
+<p class="caveat-inline">x 轴按<strong>真实年份比例</strong>定位（2028 距 2026 为两年，间距是 2026 距 2025 的两倍）；2028 取规划区间中值。三个品种量纲不同，<strong>各自独立成图、各自一条 Y 轴</strong>——跨图不可比，同一图内的斜率可比。<span class="src-badge src-s">一手</span></p>
+<div class="chart-title" style="margin-top:14px;">矿产金 <small>吨 · 2026E 目标 105</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 150">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="44" x2="600" y1="118" y2="118"></line><line x1="44" x2="600" y1="95" y2="95"></line>
+<line x1="44" x2="600" y1="72" y2="72"></line><line x1="44" x2="600" y1="49" y2="49"></line><line x1="44" x2="600" y1="26" y2="26"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="end">
+<text x="38" y="121">60</text><text x="38" y="98">80</text><text x="38" y="75">100</text><text x="38" y="52">120</text><text x="38" y="29">140</text>
+</g>
+<polyline fill="none" points="44,103.1 183,83.5" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<polyline fill="none" points="183,83.5 322,66.3 600,31.8" stroke="var(--amber)" stroke-dasharray="6 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<g fill="var(--accent)"><circle cx="44" cy="103.1" r="3.2"></circle><circle cx="183" cy="83.5" r="3.2"></circle></g>
+<g fill="var(--amber)"><circle cx="322" cy="66.3" r="3.2"></circle><circle cx="600" cy="31.8" r="3.2"></circle></g>
+<g font-size="10.5" font-weight="700" text-anchor="middle">
+<text fill="var(--accent)" x="44" y="95">73</text>
+<text fill="var(--accent)" x="183" y="75">90</text>
+<text fill="var(--amber)" x="322" y="58">105</text>
+<text fill="var(--amber)" x="596" y="23">135</text>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="middle">
+<text x="44" y="134">2024</text><text x="183" y="134">2025</text>
+<text fill="var(--amber)" x="322" y="134">2026E</text><text fill="var(--amber)" x="600" y="134">2028E</text>
+</g>
+</svg>
+<div class="chart-title" style="margin-top:16px;">矿产铜 <small>万吨 · 2026E 目标 120</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 150">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="44" x2="600" y1="118" y2="118"></line><line x1="44" x2="600" y1="89.7" y2="89.7"></line>
+<line x1="44" x2="600" y1="61.4" y2="61.4"></line><line x1="44" x2="600" y1="33.1" y2="33.1"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="end">
+<text x="38" y="121">100</text><text x="38" y="93">120</text><text x="38" y="64">140</text><text x="38" y="36">160</text>
+</g>
+<polyline fill="none" points="44,108.1 183,105.3" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<polyline fill="none" points="183,105.3 322,89.7 600,40.2" stroke="var(--amber)" stroke-dasharray="6 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<g fill="var(--accent)"><circle cx="44" cy="108.1" r="3.2"></circle><circle cx="183" cy="105.3" r="3.2"></circle></g>
+<g fill="var(--amber)"><circle cx="322" cy="89.7" r="3.2"></circle><circle cx="600" cy="40.2" r="3.2"></circle></g>
+<g font-size="10.5" font-weight="700" text-anchor="middle">
+<text fill="var(--accent)" x="44" y="100">107</text>
+<text fill="var(--accent)" x="183" y="97">109</text>
+<text fill="var(--amber)" x="322" y="82">120</text>
+<text fill="var(--amber)" x="596" y="32">155</text>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="middle">
+<text x="44" y="134">2024</text><text x="183" y="134">2025</text>
+<text fill="var(--amber)" x="322" y="134">2026E</text><text fill="var(--amber)" x="600" y="134">2028E</text>
+</g>
+</svg>
+<div class="chart-title" style="margin-top:16px;">当量碳酸锂 <small>万吨 LCE · 2026E 目标 12</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 150">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="44" x2="600" y1="118" y2="118"></line><line x1="44" x2="600" y1="95" y2="95"></line>
+<line x1="44" x2="600" y1="72" y2="72"></line><line x1="44" x2="600" y1="49" y2="49"></line><line x1="44" x2="600" y1="26" y2="26"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="end">
+<text x="38" y="121">0</text><text x="38" y="98">8</text><text x="38" y="75">16</text><text x="38" y="52">24</text><text x="38" y="29">32</text>
+</g>
+<polyline fill="none" points="183,110.7 322,83.5 600,33.2" stroke="var(--amber)" stroke-dasharray="6 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<circle cx="183" cy="110.7" fill="var(--accent)" r="3.2"></circle>
+<g fill="var(--amber)"><circle cx="322" cy="83.5" r="3.2"></circle><circle cx="600" cy="33.2" r="3.2"></circle></g>
+<g font-size="10.5" font-weight="700" text-anchor="middle">
+<text fill="var(--accent)" x="183" y="102">2.55</text>
+<text fill="var(--amber)" x="322" y="75">12</text>
+<text fill="var(--amber)" x="596" y="25">29.5</text>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="middle">
+<text x="183" y="134">2025</text><text fill="var(--amber)" x="322" y="134">2026E</text><text fill="var(--amber)" x="600" y="134">2028E</text>
+</g>
+<text fill="var(--text-muted)" font-size="10" x="183" y="147">2024 年该品种尚未形成产量，无实际基数</text>
+</svg>
+</div>
+<h4>两笔正在进行的资本运作</h4>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">事项</th><th style="width:14%">状态</th><th>要点</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>紫金黄金国际分拆</strong><br/>（02259.HK）</td>
+<td class="metric-positive">已完成</td>
+<td>2025 年 9 月挂牌，发行价 71.59 港元，引入 GIC、高瓴、贝莱德、施罗德等 29 名基石投资者；超额配售后净募资约 <strong>283 亿港元</strong>。紫金持股由 86.7% 降至约 <strong>85%</strong>。该公司承接境外黄金资产（武里蒂卡、诺顿金田、罗斯贝尔等）。现价 <strong>140.10 港元</strong>，市值约 3,750 亿港元——<strong>按持股比例折合约 2,700 亿人民币，相当于紫金当前总市值的约三分之一</strong> <span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></td>
+</tr>
+<tr>
+<td><strong>赤峰黄金控制权收购</strong></td>
+<td class="metric-warn">延期</td>
+<td>2026-03-22 签署协议：紫金黄金受让李金阳及浙江瀚丰持有的约 <strong>2.42 亿股 A股</strong>，并认购赤峰黄金 <strong>3.11 亿股 H股</strong> 定增。原定先决条件满足期限为 2026-09-30，<strong>2026-09-28 签署补充协议，延期至 2026-11-30</strong>。公司称「力争尽早完成交割」，同时提示「能否最终完成交割仍存在不确定性」 <span class="src-badge src-s">一手</span></td>
+</tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">补充协议未改变原协议核心商务条款。该交易的具体对价与股权比例以公司公告为准，本报告不据此推算并表影响。<span class="src-badge src-s">一手</span></p>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — 矿产品量价</h2>
+<h3>3.1 为什么是它：紫金的利润表可以拆成一个乘法</h3>
+<p>矿业公司的当期利润 ≈ <strong>产量 × 单位毛利</strong>，而单位毛利 ≈ <strong>商品价格 − 单位成本</strong>。紫金的三极（金、铜、锂）各自独立，所以真正决定业绩的不是某一个价格，而是<strong>量、价两条线同时怎么走</strong>。这一章把两条线分别摊开。</p>
+<h3>3.2 量：三个主品种的 H1 完成度都低于 50% 线性进度</h3>
+<div class="chart">
+<div class="chart-title">2026 年产量目标完成度（H1 实际 ÷ 全年目标） <small>目标出自 2025 年报「经营计划」，产量出自 2026 半年报 · 均为 <span class="src-badge src-s">一手</span></small></div>
+<div class="bar-row"><div class="bar-label">矿产锌（铅）</div><div class="bar-track"><div class="bar-fill c-sub" style="width:100%"></div></div><div class="bar-value">50.0%</div></div>
+<div class="bar-row"><div class="bar-label">矿产金</div><div class="bar-track"><div class="bar-fill c-warn" style="width:89.6%"></div></div><div class="bar-value">44.8%</div></div>
+<div class="bar-row"><div class="bar-label">矿产铜</div><div class="bar-track"><div class="bar-fill c-warn" style="width:89.0%"></div></div><div class="bar-value">44.5%</div></div>
+<div class="bar-row"><div class="bar-label">矿产银</div><div class="bar-track"><div class="bar-fill c-warn" style="width:88.2%"></div></div><div class="bar-value">44.1%</div></div>
+<div class="bar-row"><div class="bar-label">矿产钼</div><div class="bar-track"><div class="bar-fill c-warn" style="width:84.0%"></div></div><div class="bar-value">42.0%</div></div>
+<div class="bar-row"><div class="bar-label">当量碳酸锂</div><div class="bar-track"><div class="bar-fill c-neg" style="width:72.6%"></div></div><div class="bar-value">36.3%</div></div>
+<div class="chart-legend">虚线位置为 50%——半年时间过半的线性基准。<strong>六个品种中五个低于该基准</strong>，其中锂最低（36.3%）。所有柱共用一条坐标轴。</div>
+</div>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:18%">品种</th><th style="width:18%">2026H1 实际</th><th style="width:16%">同比</th><th>全年目标 / H1 完成度</th></tr></thead>
+<tbody>
+<tr><td><strong>矿产金</strong></td><td>46.70 吨</td><td class="metric-positive">+13.4%</td><td>105 吨 / 44.8%</td></tr>
+<tr><td><strong>矿产铜</strong></td><td>53.44 万吨</td><td class="metric-negative">−5.7%</td><td>120 万吨 / 44.5%（剔卡莫阿后 +4.8%）</td></tr>
+<tr><td>矿产银</td><td>229.2 吨</td><td class="metric-positive">+2.5%</td><td>520 吨 / 44.1%</td></tr>
+<tr><td>当量碳酸锂</td><td>4.36 万吨</td><td class="metric-positive">+496%</td><td>12 万吨 / 36.3%</td></tr>
+<tr><td>矿产锌（铅）</td><td>约 20 万吨</td><td>—</td><td>40 万吨 / 50.0%</td></tr>
+<tr><td>矿产钼</td><td>6,302 吨</td><td class="metric-positive">+7.2%</td><td>1.5 万吨 / 42.0%</td></tr>
+<tr><td>矿产钨</td><td>2,567 吨</td><td class="metric-positive">+20%</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">公司在中报里的表述是「部分矿产品产量相对滞后于全年计划的时序进度」，并明确提示卡莫阿事件「对公司 2026 年矿产铜产量计划目标的达成带来压力」。<strong>全年目标是公司在 2025 年报中给出的指导性指标，且原文声明「存在不确定性，不构成对产量实现的承诺，公司有权根据情况变化调整」。</strong><span class="src-badge src-s">一手</span></p>
+<h3>3.3 价：金与铜已经分道</h3>
+<p>这是本期最值得记录的一个变化。上半年两个主品种的均价同比大涨，但<strong>进入下半年后，金价回落、铜价上行</strong>：</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">品种</th><th style="width:17%">2025H1 均价</th><th style="width:17%">2026H1 均价</th><th style="width:13%">同比</th><th>当前价（10-06）／较 H1 均价</th></tr></thead>
+<tbody>
+<tr><td><strong>伦金（美元/盎司）</strong></td><td>3,067</td><td>4,693</td><td class="metric-positive">+53.0%</td><td><strong>4,154</strong> <span class="metric-negative">−11.5%</span></td></tr>
+<tr><td>黄金国内（元/克）</td><td>722</td><td>1,033</td><td class="metric-positive">+43.1%</td><td>—</td></tr>
+<tr><td><strong>伦铜（美元/吨）</strong></td><td>9,445</td><td>13,083</td><td class="metric-positive">+38.5%</td><td><strong>14,391</strong> <span class="metric-positive">+10.0%</span></td></tr>
+<tr><td>铜国内（元/吨）</td><td>77,596</td><td>101,984</td><td class="metric-positive">+31.4%</td><td>—</td></tr>
+<tr><td>碳酸锂（元/吨）</td><td>70,399</td><td>163,427</td><td class="metric-positive">+132.1%</td><td>—</td></tr>
+<tr><td>伦银（美元/盎司）</td><td>33</td><td>79</td><td class="metric-positive">+139.4%</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">前两列与同比为半年报原文披露的<strong>区间均价</strong>；「当前价」为 2026-10-06 实时行情（伦敦金现 / 伦铜），与区间均价的口径不同（时点价 vs 期间均价），仅用于观察方向。<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span>（商品行情）</p>
+<div class="quote">
+<strong>这条分叉对下半年的含义很具体。</strong>黄金是当前毛利第一的板块（41.7%），它的 H2 同比基数会明显抬高——2025H1 均价 3,067、H2 更高，而 2026H1 的 4,693 已是历史极值区，当前 4,154 低于上半年均价。铜则相反：当前价高于上半年均价，且卡莫阿下半年产量指引回升。<strong>两个板块的同比方向在下半年可能对调。</strong>本报告不对这一分叉作方向判断，但在第十一章把它列为跟踪项。
+  </div>
+</div>
+
+<div class="card" id="financials">
+<h2>四、2026 中期业绩 <span class="src-badge src-s">一手</span></h2>
+<h3>4.1 损益表</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:34%">项目（人民币亿元）</th><th style="width:22%">2026H1</th><th style="width:22%">2025H1</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>营业收入</td><td>1,941.78</td><td>1,677.11</td><td class="metric-positive">+15.78%</td></tr>
+<tr><td><strong>归母净利润</strong></td><td><strong>391.70</strong></td><td>232.92</td><td class="metric-positive"><strong>+68.17%</strong></td></tr>
+<tr><td><strong>扣非归母净利润</strong></td><td><strong>380.35</strong></td><td>216.24</td><td class="metric-positive"><strong>+75.89%</strong></td></tr>
+<tr><td>经营活动现金流净额</td><td>554.72</td><td>288.30</td><td class="metric-positive">+92.41%</td></tr>
+<tr><td>扣非基本每股收益（元）</td><td>1.430</td><td>0.814</td><td class="metric-positive">+75.68%</td></tr>
+<tr><td>加权平均 ROE</td><td>19.60%</td><td>16.11%</td><td class="metric-positive">+3.49pct</td></tr>
+</tbody>
+</table></div>
+<p><strong>利润增速（+68%）远高于收入增速（+16%）</strong>，这是量价型矿企在价格上行期的典型形态：收入由销量与价格共同驱动，而成本相对刚性，价格涨幅直接落到毛利上。半年报披露<strong>矿产品毛利率 69.34%</strong>，综合毛利率 37.75%。</p>
+<h3>4.2 资产负债与股东回报</h3>
+<div class="summary-grid" style="grid-template-columns:repeat(3,1fr)">
+<div class="summary-item"><div class="value">49.55%</div><div class="label">资产负债率<br/><strong>2012 年以来首次降至 50% 以下</strong></div></div>
+<div class="summary-item"><div class="value">554.72 亿</div><div class="label">经营现金流净额<br/>同比 +92.41%</div></div>
+<div class="summary-item"><div class="value">212 亿</div><div class="label">2026 自然年度内累计分红<br/>（2025 年度 101 亿 + 中期 111 亿）</div></div>
+</div>
+<p><strong>分红政策发生了结构性变化：</strong>2026 中期每 10 股派 4.2 元（约 111 亿元），加上此前已实施的 2025 年度分红 101 亿元，<strong>2026 自然年度内累计分红首次突破 200 亿元</strong>。公司同时将未来三年（2026—2028）累计现金分红占累计可供分配利润的比例<strong>从 30% 提升至 35%</strong>。<span class="src-badge src-s">一手</span></p>
+<h3>4.3 财务异常检测</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:24%">检查项</th><th>结果</th><th style="width:12%">评级</th></tr></thead>
+<tbody>
+<tr><td>现金流背离</td><td><strong>无异常，且方向相反</strong>：经营现金流 +92.41%，快于净利润 +68.17%，现金收入质量高。</td><td class="metric-positive">🟢 低</td></tr>
+<tr><td>毛利率异常</td><td>矿产品毛利率 69.34%、综合 37.75%，属价格上行期的正常扩张。<strong>需注意这是周期性高位</strong>，不是结构性改善。</td><td class="metric-warn">🟡 中</td></tr>
+<tr><td>杠杆</td><td>资产负债率 49.55%，连续下降。</td><td class="metric-positive">🟢 低</td></tr>
+<tr><td>股东回报自洽</td><td>中期分红 111 亿元 ÷ 265.9 亿股 = 0.417 元/股 ≈ 公告的「每 10 股派 4.2 元」。<strong>数字自洽。</strong></td><td class="metric-positive">🟢 低</td></tr>
+<tr><td>少数股东损益占比</td><td>紫金大量矿山为控股非全资（巨龙 58.16%、卡莫阿权益 44.19%、塞尔维亚紫金铜业 63%），<strong>归母净利与合并净利之间存在可观差额</strong>，读财报时须区分归属口径。本报告未逐项核对该项，列为信息缺口。</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">综合评级 <strong>🟢 低</strong>——没有发现造假或经营恶化的迹象。唯一需要记住的是：<strong>当前的高毛利是价格给的，不是成本给的</strong>。价格是外生变量，这部分利润的持续性不由公司控制。<span class="src-badge src-e">推算</span></p>
+</div>
+
+<div class="card" id="segments">
+<h2>五、分部拆解 — 黄金 / 铜 / 锂</h2>
+<h3>5.1 黄金：当前的第一利润来源</h3>
+<p>2026H1 矿产金 <strong>46.70 吨（+13.4%）</strong>，单位销售价格同比提升约 45%，毛利占集团 41.7%。增量的来源不是某一座大矿，而是<strong>一批中型矿山的接续放量</strong>——这是紫金「逆周期并购 → 技改扩产」模式的标准产出：</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:30%">矿山</th><th style="width:20%">2025 实际</th><th style="width:20%">2026 计划</th><th>所在地</th></tr></thead>
+<tbody>
+<tr><td>哥伦比亚武里蒂卡</td><td>8.8 吨</td><td>9.2 吨</td><td>哥伦比亚</td></tr>
+<tr><td>苏里南罗斯贝尔</td><td>8.3 吨</td><td>8.7 吨</td><td>苏里南</td></tr>
+<tr><td>加纳阿基姆</td><td>5.1 吨</td><td><strong>8.5 吨</strong></td><td>加纳（2025-04 交割）</td></tr>
+<tr><td>澳大利亚诺顿金田</td><td>7.9 吨</td><td>8.4 吨</td><td>澳大利亚</td></tr>
+<tr><td>哈萨克斯坦瑞果多</td><td>1.2 吨</td><td><strong>6.4 吨</strong></td><td>哈萨克斯坦（2025-10 交割）</td></tr>
+<tr><td>塔吉克斯坦吉劳、塔罗</td><td>6.1 吨</td><td>6.2 吨</td><td>塔吉克斯坦</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">两座新交割矿山（阿基姆、瑞果多）的计划增量合计 <strong>8.6 吨</strong>，占 2026 年计划总增量（105 − 90 = 15 吨）的一半以上——<strong>黄金板块的增量高度依赖新并购资产的爬坡</strong>。<span class="src-badge src-s">一手</span>（2025 年报）</p>
+<h3>5.2 铜：卡莫阿是本期唯一的实质性负面</h3>
+<p>2026H1 矿产铜 <strong>53.44 万吨（−5.7%）</strong>。这个下降全部来自一个矿山：</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">项目</th><th>数据</th></tr></thead>
+<tbody>
+<tr><td>事件</td><td>卡莫阿-卡库拉铜矿发生<strong>淹井事件</strong>（矿震引发涌水、地下排水设施受损），叠加下游冶炼厂长时间停工检修</td></tr>
+<tr><td>产量计划调整</td><td>2026 年产量计划由 <strong>38–42 万吨下调至 29–33 万吨</strong></td></tr>
+<tr><td>对紫金的影响</td><td>紫金权益 44.19%，对应公司矿产铜产量<strong>减少 2.2–5.7 万吨</strong></td></tr>
+<tr><td>H1 实际</td><td>卡莫阿-卡库拉上半年产铜 <strong>135,745 吨</strong>（Q1 约 7.1 万吨、Q2 约 6.4 万吨）；该矿上半年<strong>净利润同比 −74%</strong></td></tr>
+<tr><td>下半年指引</td><td>合作方艾芬豪指引：卡莫阿采矿能力提升 30% 至 850 万吨/年；卡库拉下半年采矿能力提升至每月 50 万吨、平均品位约 3.5%，<strong>下半年产量预计增长 30%</strong> <span class="src-badge src-2">二手</span></td></tr>
+</tbody>
+</table></div>
+<p><strong>剔除卡莫阿后，公司铜产量实际增长 4.8%</strong>（480,032 吨 vs 457,913 吨）——增量来自巨龙铜矿二期（2026 年 1 月建成投产，H1 产铜 134,024 吨）等项目的爬坡。<strong>一个矿山减 5.7 万吨、其余矿山增 6.4 万吨，净额 −5.7%——这就是「多点布局的对冲效果」的实际读数：它减震，但没有消除冲击。</strong></p>
+<p class="caveat-inline">朱诺铜矿预计 <strong>2026 年底建成投产</strong>（设计产能 7.6 万吨/年），是铜板块的下一个增量。按期与否可在三季报与年报中核对。<span class="src-badge src-s">一手</span></p>
+<h3>5.3 锂：增速最快，但完成度最低</h3>
+<p>当量碳酸锂产量 <strong>4.36 万吨（+496%）</strong>，毛利占集团 3.4%。这是三个品种里增速最高的，但<strong>H1 完成度只有 36.3%（4.36 ÷ 12 万吨）</strong>，是六个品种中最低的。马诺诺锂矿于 2026 年 5 月实现重介质选矿投产（较原计划提前约 1 个月），其<strong>冶炼一系列工程计划于 2026 年底建成投产</strong>——<strong>全年 12 万吨目标能否达成，取决于这个年底节点。</strong><span class="src-badge src-s">一手</span></p>
+</div>
+
+<div class="card" id="geopolitics">
+<h2>六、地缘与政策风险</h2>
+<p><strong>触发条件核对：</strong>紫金符合「有跨境敞口」的判定——其黄金资产已大部分装入境外平台，铜资产分布在刚果（金）、塞尔维亚、秘鲁等地。因此本章按完整框架展开，而非只写政策风险。</p>
+<h3>6.1 资产分布本身就是风险敞口</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">地区</th><th style="width:26%">主要资产</th><th>风险类型</th></tr></thead>
+<tbody>
+<tr><td><strong>刚果（金）</strong></td><td>卡莫阿-卡库拉铜矿（权益 44.19%）、科卢韦齐铜钴矿（67%）</td><td class="metric-warn">中高——矿业政策与税制变动频繁；<strong>本期已实现的冲击是自然/工程风险（淹井），不是政治风险</strong></td></tr>
+<tr><td>塞尔维亚</td><td>紫金矿业（100%）、紫金铜业（63%）</td><td>中——欧盟候选国，环保与社区议题敏感</td></tr>
+<tr><td>哥伦比亚 / 苏里南 / 圭亚那</td><td>武里蒂卡、罗斯贝尔、奥罗拉金矿</td><td class="metric-warn">中高——<strong>已装入紫金黄金国际（02259），风险被部分隔离在上市平台内</strong></td></tr>
+<tr><td>加纳 / 哈萨克斯坦 / 塔吉克斯坦 / 吉尔吉斯斯坦</td><td>阿基姆、瑞果多、吉劳塔罗、奥同克</td><td>中——中亚与西非的资源国政策风险</td></tr>
+<tr><td>澳大利亚</td><td>诺顿金田</td><td class="metric-positive">低——成熟矿业法域</td></tr>
+<tr><td>中国境内</td><td>巨龙铜业（58.16%）、紫金山铜金矿、多宝山、陇南等</td><td class="metric-positive">低——但受安全生产检查、资源税等国内政策影响</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">上表按半年报披露的矿山清单整理；<strong>紫金未在半年报中给出「境外资产占总资产比例」这一口径</strong>，本报告不做估算。要评估真实敞口，需逐年核对年报的分地区资产附註。<span class="src-badge src-s">一手</span></p>
+<h3>6.2 政策风险（境内）</h3>
+<ul style="padding-left:20px;font-size:14px;line-height:1.9;">
+<li><strong>安全生产检查</strong>：半年报明确提到「境内部分重点项目配合安全生产大检查停产检修」是产量滞后于计划的原因之一——<strong>这是常态化的运营扰动，不是生存威胁，但会直接影响季度产量</strong>。<span class="src-badge src-s">一手</span></li>
+<li><strong>资源税与环保</strong>：券商研报提到西藏资源税是成本变量之一。<span class="src-badge src-2">二手</span></li>
+<li>出口管制：<strong>本次检索未发现针对紫金产品的出口管制措施。</strong></li>
+</ul>
+<h3>6.3 资本运作中的政治变量</h3>
+<ul style="padding-left:20px;font-size:14px;line-height:1.9;">
+<li><strong>紫金黄金国际</strong>：2026 年 1 月曾拟以总代价 <strong>55 亿加元</strong>收购 Allied Gold，其后有美国众议院中国特别委员会表达关注；<strong>7 月 30 日报道称放弃收购，改为持股 9.2%</strong>。<span class="src-badge src-2">二手</span></li>
+<li><strong>赤峰黄金收购</strong>：交割先决条件期限已从 2026-09-30 延期至 <strong>2026-11-30</strong>。公司公告称「绝大部分先决条件已获满足」，同时提示「能否最终完成交割仍存在不确定性」。<span class="src-badge src-s">一手</span></li>
+</ul>
+<div class="quote">
+<strong>传导强度排序：</strong>当前压制紫金股价的<strong>不是地缘政治，也不是监管，而是商品价格本身</strong>——黄金从上半年均价回落 11.5%，而黄金贡献 41.7% 的毛利。地缘风险的作用方式是<strong>抬高「获取新资源」的成本与不确定性</strong>（Allied Gold 一案已经演示了一次），它影响的是长期增长假设，不是当期利润。
+    <br/><br/><strong>监测清单：</strong>① 赤峰黄金交割是否在 11-30 前完成；② 刚果（金）矿业税制是否有变动；③ 境内安全检修对 Q3 产量的实际影响（三季报 10-24 可查）；④ 紫金黄金国际层面的海外并购是否再遇政治阻力。
+  </div>
+</div>
+
+<div class="card" id="valuation">
+<h2>七、估值分析</h2>
+<h3>7.1 当前读数</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:26%">指标</th><th style="width:20%">当前</th><th style="width:24%">五年区间</th><th>位置</th></tr></thead>
+<tbody>
+<tr><td>收盘价（A股）</td><td><strong>29.79 元</strong></td><td>52 周 24.00–44.14</td><td>距高点 −32.5%，距低点 +24.1%</td></tr>
+<tr><td>总市值</td><td>7,921 亿元</td><td>—</td><td>—</td></tr>
+<tr><td><strong>PE (TTM)</strong></td><td class="metric-positive"><strong>11.71x</strong></td><td>9.10 – 36.64（中位 16.24）</td><td class="metric-positive"><strong>第 5.3 百分位</strong></td></tr>
+<tr><td><strong>PB (MRQ)</strong></td><td class="metric-warn"><strong>3.92x</strong></td><td>2.43 – 6.28（中位 3.55）</td><td class="metric-warn"><strong>第 63.0 百分位</strong></td></tr>
+<tr><td>AH 溢价率</td><td><strong>+8.16%</strong></td><td>—</td><td>同为 9-30 口径；A股较 H股溢价</td></tr>
+<tr><td>股息率（TTM）</td><td>2.69%</td><td>—</td><td>近 12 个月已宣派 0.80 元/股</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">分位由 <strong>1,300 个交易日</strong>（2021-05-26 至 2026-09-30）的 PE(TTM)/PB(MRQ) 日频序列计算，全部输入可复核；口径与数据来源见 ◉ 数据说明。<span class="src-badge src-e">推算</span></p>
+<h3>7.2 PE 与 PB 的背离，是这一节的核心</h3>
+<div class="quote">
+<strong>同一时刻，PE 落在五年第 5.3 百分位，PB 落在第 63.0 百分位。</strong>这两个数字用的是同一套价格，方向却相反。
+  </div>
+<p><strong>为什么会出现这种背离：</strong>PE 的分母是<strong>当期盈利</strong>，PB 的分母是<strong>净资产</strong>。金铜价格处于历史高位，把当期盈利推到了极值区——分母变大，PE 被压低。而净资产的增长慢得多（靠留存收益与并购累积），所以 PB 反映的是<strong>市场愿意为这些矿山资产付多少倍账面价值</strong>，这个倍数处在五年中位数之上。</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">年末</th><th style="width:16%">PE (TTM)</th><th style="width:16%">PB (MRQ)</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>2021 年末</td><td>19.29</td><td>3.60</td><td>—</td></tr>
+<tr><td>2022 年末</td><td>12.52</td><td>3.12</td><td>—</td></tr>
+<tr><td>2023 年末</td><td>16.79</td><td>3.18</td><td>—</td></tr>
+<tr><td>2024 年末</td><td>13.71</td><td>2.91</td><td>PB 五年最低区</td></tr>
+<tr><td>2025 年末</td><td>20.12</td><td>4.98</td><td>PB 五年最高区</td></tr>
+<tr><td><strong>2026-09-30</strong></td><td class="metric-positive"><strong>11.71</strong></td><td class="metric-warn"><strong>3.92</strong></td><td><strong>PE 最低区，PB 仍在 2024 年末之上 35%</strong></td></tr>
+</tbody>
+</table></div>
+<p><strong>把这张表读成一句话：</strong>2024 年末 PE 13.71、PB 2.91；现在 PE 更低（11.71）而 PB 更高（3.92）。<strong>同期盈利涨了，账面价值也涨了，但市场给账面价值的倍数涨得更多。</strong>这正是本报告第九节要讨论的争议焦点——<strong>PE 的低位来自「盈利处于高位」，而不是「价格相对于资产变便宜了」</strong>。这一点在周期股上必须与商品价格是否见顶一起判断。</p>
+<h3>7.3 股息率 vs 融资利率（仅 A 股适用）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:30%">口径</th><th style="width:22%">读数</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>股息率（TTM，已宣派）</td><td><strong>2.69%</strong></td><td>近 12 个月：2026-06-26 除息 0.38 元/股 + 2026-08-21 除息 0.42 元/股 = 0.80 元/股</td></tr>
+<tr><td>股息率（2026E 前瞻）</td><td><strong>3.63%</strong></td><td>按券商一致预期归母净利约 821 亿元 × 分红率 35% ÷ 265.9 亿股 = 1.081 元/股 <span class="src-badge src-2">二手</span><span class="src-badge src-e">推算</span></td></tr>
+
+<tr><td>对比结果</td><td class="metric-warn"><strong>TTM 低于、前瞻高于</strong></td><td><strong>两个口径给出不同结论</strong>：用已宣派的现金分红（2.69%）看，覆盖不了融资成本；用 2026 年预期的分红（3.63%）看，可以覆盖。<strong>差额来自「预期能否兑现」——即 2026 全年利润与 35% 分红率是否落地。</strong></td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">分红率自 30% 提升至 35% 是公司公告的结构性安排（2026—2028 三年），不是一次性承诺；实现的前提是累计可供分配利润达标。<span class="src-badge src-s">一手</span></p>
+<h3>7.4 一个可以交叉验证的锚：紫金黄金国际的市值</h3>
+<p>紫金黄金国际（02259.HK）现价 140.10 港元、市值约 <strong>3,750 亿港元</strong>。紫金持股约 85%，<strong>折合约 2,723 亿人民币，相当于紫金当前总市值（7,921 亿）的约 34%</strong>。<span class="src-badge src-e">推算</span></p>
+<p>这个数字的用途是<strong>提供一个分部的市场定价参照</strong>：境外黄金资产在分拆平台上被单独定价，其市值占母公司的三分之一。<strong>但要注意两个口径限制</strong>：① 该平台只装境外黄金资产，不含境内黄金与全部铜、锂资产；② 母公司持有的 85% 是控股股权，市场对母公司的定价还包含控股折价因素。因此这个 34% <strong>不能直接当作「分部估值之和」来推算母公司价值</strong>，只能作为观察两者定价是否协调的参照。</p>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>八、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>量有明确路径，且已开工</strong>：2028 年目标矿产金 130–140 吨、铜 150–160 万吨、锂 27–32 万吨（2025 年报三年规划）。巨龙二期 2026 年 1 月已投产并产铜 13.4 万吨、朱诺铜矿 2026 年底投产、马诺诺锂矿冶炼系列 2026 年底投产——<strong>增量不是纸面规划，是在建工程</strong>。</li>
+<li><strong>铜价当前高于上半年均价 10%</strong>：H1 均价 13,083 美元/吨，现价 14,391 美元/吨。铜贡献 33.8% 的毛利，价格上行直接落到毛利。</li>
+<li><strong>卡莫阿下半年指引回升</strong>：合作方艾芬豪指引下半年产量增长 30%，卡库拉采矿能力提升至每月 50 万吨、平均品位约 3.5%。<strong>本期的最大负面因素是「一次性事件 + 复产爬坡」，不是储量问题。</strong></li>
+<li><strong>资产负债表在改善</strong>：资产负债率 49.55%，2012 年以来首次低于 50%；经营现金流 554.72 亿（+92.41%）。<strong>这为下一轮逆周期并购留出了空间</strong>——而逆周期并购正是紫金的核心能力。</li>
+<li><strong>股东回报有制度性抬升</strong>：2026 自然年度累计分红首破 200 亿（212 亿），三年分红率底线由 30% 提升至 35%。</li>
+<li><strong>分拆带来价值发现</strong>：紫金黄金国际在港交所独立定价，市值约 3,750 亿港元——境外黄金资产的价值不再隐含在母公司体内。</li>
+<li><strong>锂已从拖累变成增量</strong>：产量 +496%，毛利转正并占 3.4%，是三个品种里增速最快的。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>毛利第一的板块，价格已经在回落</strong>：黄金占毛利 41.7%，而当前金价（4,154 美元/盎司）<strong>低于上半年均价 4,693 约 11.5%</strong>。而 2025H2 的金价高于 2025H1——<strong>H2 黄金板块面对的是一个被抬高的同比基数</strong>，且当期价格已低于 2026H1 均价。</li>
+<li><strong>PE 低是因为盈利在高位，不是价格便宜</strong>：PE 第 5.3 百分位 vs PB 第 63.0 百分位。2024 年末 PE 13.71/PB 2.91，现在 PE 更低而 PB 高 35%——<strong>市场给账面价值的倍数在扩张</strong>。周期股在盈利顶点附近出现低 PE 是常态。</li>
+<li><strong>产量完成度全面落后</strong>：六个品种里五个低于 50% 线性进度，锂仅 36.3%。公司自述「部分矿产品产量相对滞后于全年计划的时序进度」。<strong>要达成全年目标，H2 必须显著加速。</strong></li>
+<li><strong>卡莫阿的冲击比表面大</strong>：该矿 H1 <strong>净利润同比 −74%</strong>；全年产量计划下调 22%（38–42 → 29–33 万吨），对应紫金矿产铜减少 2.2–5.7 万吨。</li>
+<li><strong>成本端有上行压力</strong>：高盛 9 月因中东危机推升能源价格，上调金、铜单位成本预测，并下调 2026–2027 盈利预测 1%–3%。<strong>成本是矿企无法控制的外生变量。</strong></li>
+<li><strong>一笔关键交易仍未落地</strong>：赤峰黄金控制权收购的交割先决条件期限已由 9-30 延至 <strong>11-30</strong>，公司自己提示「能否最终完成交割仍存在不确定性」。</li>
+<li><strong>海外资产占比高，且已有先例</strong>：紫金黄金国际拟收购 Allied Gold 时遭美国众议院中国特别委员会关注，最终放弃收购改为持股 9.2%——<strong>政治阻力已经实际发生过一次</strong>。</li>
+<li><strong>股价结构已走弱</strong>：A股自 9-09 高点 34.53 回落至 29.79（−13.7%），同期恒生指数与上证指数并未同步下跌。</li>
+</ol>
+</div>
+</div>
+<p style="margin-top:20px;"><strong>核心争议焦点：</strong>① <strong>当前是周期顶部还是周期中段</strong>——这是全部其他问题的前提。多方看 2028 年产量目标（金 +30%、铜 +30%、锂 +10 倍），空方看 PE/PB 背离与金价回落。<strong>裁决指标是单位成本与产量完成度，不是价格本身</strong>；② <strong>卡莫阿是一次性事故还是系统性问题的暴露</strong>——裁决指标是 Q3 该矿的实际复产进度；③ <strong>H2 黄金与铜的同比方向是否对调</strong>——若铜价维持而金价继续回落，两个板块的贡献会此消彼长。</p>
+</div>
+
+<div class="card" id="analysts">
+<h2>九、券商分析师全景 <span class="src-badge src-2">二手</span></h2>
+<h3>9.1 A股目标价（含日期，避免时效误读）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:16%">机构</th><th style="width:13%">A股目标价</th><th style="width:14%">H股目标价</th><th style="width:14%">评级</th><th>时间与要点</th></tr></thead>
+<tbody>
+<tr><td><strong>摩根士丹利</strong></td><td><strong>58 元</strong></td><td><strong>61 港元</strong></td><td><span class="tag tag-bull">增持</span></td><td>2026-09-16（8-12 由 A52/HK55 上调）。<strong>列为行业首选</strong>；观点是西藏巨龙铜矿为增长关键动力，预计今年铜产量 30–31 万吨、明年 31–32 万吨，明年成本改善</td></tr>
+<tr><td><strong>高盛</strong></td><td>49 元</td><td>51 港元</td><td><span class="tag tag-bull">买入</span></td><td>2026-09 下调（A 由 50、H 由 52）。<strong>下调原因是成本</strong>：中东危机推升能源价格，上调金铜单位成本预测，下调今明两年盈利预测 1–3%；仍预计 2026 年经常性利润增长 53% 至 779 亿元</td></tr>
+<tr><td><strong>美银证券</strong></td><td>45 元</td><td>50 港元</td><td><span class="tag tag-bull">买入</span></td><td>2026-09-28/29 上调（A 由 36、H 由 40）</td></tr>
+<tr><td>中金公司</td><td>42.00 元</td><td>—</td><td>—</td><td>2026-09-01</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">目标价均落到原文日期。<strong>注意目标价与「当前价格」的口径差</strong>：A股现价 29.79 元，上述目标价区间 42–58 元，<strong>这是机构的判断，不是本报告的判断</strong>；且部分机构的目标价发布于股价尚在 31–34 元区间时。<span class="src-badge src-2">二手</span></p>
+<h3>9.2 一致预期与盈利预测</h3>
+<div class="summary-grid" style="grid-template-columns:repeat(3,1fr)">
+<div class="summary-item"><div class="value">15 / 0 / 0</div><div class="label">A股评级分布<br/>买入 / 持有 / 卖出</div></div>
+<div class="summary-item"><div class="value">47.99 元</div><div class="label">A股 12 个月平均目标价<br/>最高 58 元、最低 39 元 <span class="src-badge src-2">二手</span></div></div>
+<div class="summary-item"><div class="value">821 亿元</div><div class="label">2026E 归母净利一致预期均值<br/>最高 920 亿、最低 723 亿（+58.58%）</div></div>
+</div>
+<p class="caveat-inline">一致预期的统计口径与更新时间因平台而异（同花顺口径为 18 家机构、2026 年目标价平均 45.13 元；MarketScreener/Investing 口径为平均 47.99 元）。<strong>本报告只呈现，不采用其中任何一个作为自身的估值锚。</strong><span class="src-badge src-2">二手</span></p>
+<h3>9.3 这条清单真正在说什么</h3>
+<p><strong>分歧不在方向，在幅度。</strong>四家机构全部给出买入/增持，没有一家看空，但目标价从 42 元到 58 元，跨度 38%。<strong>差异的来源高度集中在两个变量上</strong>：</p>
+<ul style="padding-left:20px;font-size:14px;line-height:1.9;">
+<li><strong>成本假设</strong>——高盛因能源价格上调成本、下调目标价；大摩预期明年成本改善、上调目标价。<strong>同一家公司，两家对成本的判断相反。</strong></li>
+<li><strong>巨龙铜矿的产量爬坡</strong>——大摩把它列为增长关键动力（今年 30–31 万吨、明年 31–32 万吨）。</li>
+</ul>
+<p>值得注意的是：<strong>没有一家机构把「金价回落 11.5%」写进目标价调整理由</strong>——9 月的高盛与美银调整理由分别是成本与估值，大摩是巨龙产量。<strong>这是一个可观察的空白</strong>：H2 黄金板块的同比增速如果显著放缓，机构是否会重新调整，是第十一章的跟踪项之一。</p>
+</div>
+
+<div class="card" id="community">
+<h2>十、雪球 / 散户讨论 <span class="src-badge src-3">三方</span></h2>
+<p class="caveat-inline"><strong>样本量诚实声明：</strong>本次检索命中、且能拿到完整正文与可靠日期的中文 UGC 只有<strong>数条</strong>，且时间集中在 2026 年 8–9 月，<strong>未检索到明确标注为 2026 年 10 月的雪球讨论</strong>。以下不构成「社区情绪」的统计，只是几条有信息量的观点。</p>
+<h3>10.1 一条被反复引用的定性：紫金「赚的是价格的钱」</h3>
+<div class="quote">
+    2026-09-01 雪球文章《紫金与神华：两种世界观的对决》认为，紫金信仰铜价、金价、锂价上涨，通过<strong>逆周期布局</strong>（卡莫阿、巨龙、波格拉）获利；而神华赚的是稳定现金流的钱。<strong>「紫金赚的是价格的钱」</strong>——这条判断与本报告第三章的分析方向一致：紫金的核心指标是量价。
+  </div>
+<h3>10.2 讨论中最集中的技术问题：金价和铜价，谁是主导变量</h3>
+<p>这是社区讨论里质量最高的一条，且与半年报的数据可以对上：</p>
+<ul style="padding-left:20px;font-size:14px;line-height:1.9;">
+<li><strong>短期看金价</strong>——黄金是当前毛利第一的板块（41.7%），金价波动直接带动板块资金偏好。有用户给出「6 月底至 8 月初黄金稳住 4000 点后一波涨到 4700」的观察（<strong>未经本报告核实</strong>）。</li>
+<li><strong>中长期看铜</strong>——铜的产能增量（巨龙二期、朱诺）是未来最大的变数；铜毛利占比 33.8%，与黄金接近。</li>
+</ul>
+<p class="caveat-inline">这条判断与本报告第三章「金铜已经分道」的观察指向同一件事，但<strong>社区用的是「谁主导情绪」，本报告用的是「哪个板块的同比基数在变」</strong>——两个角度不冲突，且都不构成方向判断。<span class="src-badge src-3">三方</span></p>
+<h3>10.3 卡莫阿被当作「单一矿山风险」的教科书案例</h3>
+<p>讨论中把它概括为「单一主力矿山意外停运」，并强调紫金靠多点布局的系统冗余对冲。<strong>本报告第五章给出了这个「对冲」的实际读数</strong>：剔除卡莫阿后铜产量 +4.8%，但公司整体铜产量仍是 −5.7%——<strong>减震是真的，消除冲击不是</strong>。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>十一、综合判断框架</h2>
+<h3>11.1 四情景推演（不构成预测）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:16%">情景</th><th style="width:26%">触发条件</th><th>对当期利润的含义</th></tr></thead>
+<tbody>
+<tr><td><strong>① 量价齐升</strong></td><td>金价站稳 4,000 以上 + 铜价维持 14,000 上方 + H2 产量补足到全年目标</td><td>2026 全年归母净利落在一致预期上沿（约 900 亿）；2028 年产量目标的可信度上升</td></tr>
+<tr><td><strong>② 量补价跌</strong></td><td>金价继续回落至 3,800 以下，但铜价维持 + 巨龙/朱诺/马诺诺按期放量</td><td>黄金板块同比转负、铜板块对冲部分。<strong>这是 PE/PB 背离最可能被证伪的情景</strong>——盈利下修会让 PE 被动抬升</td></tr>
+<tr><td><strong>③ 价补量缺</strong></td><td>金铜价格维持高位，但 H2 产量仍达不到全年目标（延续 H1 的滞后）</td><td>利润维持但增长叙事受损；2028 年目标的折扣率上升</td></tr>
+<tr><td><strong>④ 双杀</strong></td><td>金铜同步回落 + 卡莫阿复产不及指引 + 赤峰黄金交割告吹</td><td>盈利与估值同时承压。<strong>此时 PB 第 63 百分位是主要的下行空间来源</strong></td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">四个情景的概率本报告不作估计——缺少可核验的输入。<strong>列出它们的目的是把「取决于什么」写具体</strong>，而不是给方向。<span class="src-badge src-e">推算</span></p>
+<h3>11.2 关键跟踪指标（按重要性排序）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:32%">指标</th><th style="width:12%">频率</th><th>信号意义</th></tr></thead>
+<tbody>
+<tr><td><strong>① 10-24 三季报的产量完成度</strong></td><td>季度</td><td>H1 六个品种中五个低于 50% 线性进度。<strong>若 Q3 累计完成度低于 75%，则 Q4 必须完成全年的 25% 以上</strong>——这是把「产量滞后」从描述变成事实的第一个读数。</td></tr>
+<tr><td><strong>② 单位成本（金、铜的克/吨成本）</strong></td><td>季度</td><td>高盛与大摩对成本的判断相反。成本是价格之外唯一能由公司影响的部分，也是周期下行时的缓冲。</td></tr>
+<tr><td>③ 卡莫阿 Q3 复产进度</td><td>季度</td><td>艾芬豪指引下半年产量 +30%。<strong>兑现与否决定「一次性事故」这个定性成不成立。</strong></td></tr>
+<tr><td>④ 伦金能否守住 4,000</td><td>每日</td><td>当前 4,154，低于 H1 均价 11.5%。黄金贡献 41.7% 毛利，是 H2 同比的主要变数。</td></tr>
+<tr><td>⑤ 赤峰黄金交割（11-30 期限）</td><td>事件</td><td>公司自己提示存在不确定性。交割与否影响黄金板块的增量路径。</td></tr>
+<tr><td>⑥ 朱诺铜矿 / 马诺诺锂矿冶炼的年底投产节点</td><td>事件</td><td>两个项目都在 2026 年底。按期与否决定 2027 年的增量从哪来。</td></tr>
+<tr><td>⑦ 巨龙铜矿的产量爬坡曲线</td><td>季度</td><td>大摩把它列为增长关键动力（今年 30–31 万吨）。H1 已产 13.4 万吨。</td></tr>
+</tbody>
+</table></div>
+<h3>11.3 对齐个人投资体系</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:18%">原则</th><th>检验结果</th></tr></thead>
+<tbody>
+<tr><td>好公司（护城河）</td><td>紫金的护城河是<strong>逆周期资源获取能力</strong>，有历史记录（卡莫阿、巨龙、波格拉）支撑。<strong>但要拆开看</strong>：矿是不可再生资产，现有矿山的品位与储量会随时间下降，10 年后的存续取决于能否持续买到好资源——而这依赖资产负债表与目标国政治稳定性两个外部条件。<strong>本报告不给出「10 年后还在吗」的结论</strong>，只列出这两个可跟踪的条件。</td></tr>
+<tr><td>好价格</td><td><strong>这一栏要处理的不是估值高低，而是周期股特有的口径问题。</strong>PE 11.71x 位于五年第 5.3 百分位，PB 3.92x 位于第 63.0 百分位——<strong>两个指标背离</strong>。PE 的低位来自「当期盈利处于历史高位」（分母大），而不是价格相对资产变便宜。<strong>矿业是周期行业，低 PE 分位与盈利顶点可以同时出现，本报告因此不把 PE 分位单独作为估值依据</strong>，而是与商品价格位置、产量完成度并读。</td></tr>
+<tr><td>分散纪律</td><td>紫金提供的是<strong>黄金 + 铜 + 锂</strong>三种商品的敞口，彼此相关性不高（本期金铜已经分道）。若组合里已有山东黄金、江西铜业等同业，<strong>叠加紫金会显著提高有色金属因子的集中度</strong>；若已有铜或金的 ETF，也需注意底层重叠。</td></tr>
+
+<tr><td>卖出条件映射</td><td>① 核心逻辑证伪 = 商品价格中枢下移且单位成本上升同时发生，或 2028 年产量目标的折扣率持续扩大；② 极端高估 = 本报告未给出此类阈值，因周期股的 PE 阈值不适用；③ 机会成本 = 同类资源股出现显著更低的 PB 而商品假设相同；④ 赤峰黄金等关键交易告吹且无替代路径。</td></tr>
+</tbody>
+</table></div>
+<div class="quote" style="margin-top:24px;">
+<strong>总结：</strong>紫金 2026 上半年交出了一份高增长的中报——营收 +15.78%、归母净利 +68.17%、经营现金流 +92.41%、资产负债率降至 2012 年以来最低。这些是事实。
+    <br/><br/><strong>但这份成绩单的驱动力是价格，而价格已经开始分化。</strong>黄金（毛利占 41.7%）从上半年均价 4,693 美元回落至当前的 4,154（−11.5%）；铜（33.8%）从 13,083 上行至 14,391（+10.0%）。同时六个主品种里有五个的 H1 产量完成度低于 50% 线性进度。
+    <br/><br/>估值上最值得记录的是那个背离：<strong>PE 第 5.3 百分位、PB 第 63.0 百分位</strong>。前者说明当期盈利处于历史高位，后者说明市场给这些矿山资产的账面倍数并不低。矿业是周期行业，这两个数字同时出现本身就是信息——<strong>本报告把它列为争议焦点，而不是把它读成「便宜」或「贵」</strong>。
+    <br/><br/><strong>接下来 18 天有两个确定的读数：10-24 三季报（产量完成度的第一次检验）、11-30 赤峰黄金交割期限。</strong>
+</div>
+</div>
+
+<div class="card" id="datanotes">
+<h2>◉ 数据说明</h2>
+<p>本节收录<strong>口径、跨期对比与取数记录</strong>——它们影响你怎么用这份报告，但不影响正文的阅读。正文只保留分析与结论。</p>
+<h3>一、数据口径与方法论</h3>
+<p class="caveat-inline"><strong>AH 溢价率</strong>：= (A股人民币价 ÷ (H股港币价 × 港币兑人民币汇率) − 1) × 100%。本例 = (29.79 ÷ (32.24 × 0.8543) − 1) × 100% = <strong>+8.16%</strong>，即 A股较 H股溢价。<strong>分子分母必须取同一交易日</strong>——A股 9-30 收 29.79 元、H股 9-30 收 32.24 港元。汇率取 2026-10-06 新浪外汇报价（9-30 与 10-06 港币兑人民币都在 0.854 附近，对结果影响小于 0.1pct）。</p>
+<p class="caveat-inline"><strong>PE/PB 历史分位</strong>：取自东方财富估值分析接口的日频序列，区间 <strong>2021-05-26 至 2026-09-30，共 1,300 个交易日</strong>。当前 PE(TTM) 11.71、PB(MRQ) 3.92。<strong>百分位 = 序列中小于当前值的观测数 ÷ 总观测数</strong>，得 PE 第 5.3、PB 第 63.0 百分位。注意三点：① <strong>序列止于 2026-09-30</strong>，与本期 A 股价格口径一致（国庆休市，9-30 之后无新股）；② <strong>PB 用的是最新报告期净资产（MRQ）</strong>，在盈利高增长期会滞后于当期盈利，这是两个分位背离的一部分原因，另一部分是盈利本身处于高位；③ <strong>东财的 PB 剔除了「其他权益工具」</strong>——紫金 2026H1 该项为 38.99 亿元（永续债），剔除后归母净资产由 2,058.67 亿降为 2,019.68 亿。若<strong>不剔除</strong>，按同一价格算出的 PB 是 <strong>3.85</strong>（市值 7,921.57 亿 ÷ 2,058.67 亿）。<strong>本报告全篇采用东财口径以保持序列内部一致，引用时请注意这个分母差异。</strong></p>
+<p class="caveat-inline"><strong>股息率的两个口径</strong>：① TTM 已宣派 = 近 12 个月除息日落在区间内的每股分红之和（0.38 + 0.42 = 0.80 元）÷ 现价；② 2026E 前瞻 = 券商一致预期归母净利 821 亿元 × 分红率 35% ÷ 265.9 亿股 ÷ 现价。<strong>两者差异来自「预期能否兑现」，不是计算错误。</strong></p>
+<p class="caveat-inline"><strong>产量完成度的算法</strong>：H1 实际产量 ÷ 公司在 2025 年报「经营计划」中披露的 2026 年全年目标。50% 是时间过半的线性基准，<strong>但矿业生产有季节性（部分矿山受雨季、检修影响），线性基准只是一个粗略参照</strong>，不是「应该达到的标准」。公司原文声明该计划为「指导性指标，存在不确定性，不构成对产量实现的承诺」。</p>
+<p class="caveat-inline"><strong>商品价格的两种口径</strong>：正文表格中「2026H1 均价 / 2025H1 均价」为半年报原文披露的<strong>区间均价</strong>；「当前价」为 2026-10-06 的<strong>时点价</strong>。两者不可直接相减得出「涨跌了多少」的精确结论，本报告只用它观察方向。</p>
+<h3>二、与上期报告的变化</h3>
+<p>上期报告为 <strong>2026-09-16</strong>，距今 20 天。这一期间<strong>没有新的财报</strong>（半年报 8-22 已发布，三季报预约 10-24），因此基本面数据无增量；变化全部来自价格与公司公告。</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:26%">指标</th><th style="width:22%">上期（2026-09-16）</th><th style="width:22%">本期（2026-10-06）</th><th>变化</th></tr></thead>
+<tbody>
+<tr><td>A股收盘</td><td>32.17 元</td><td><strong>29.79 元</strong></td><td class="metric-negative">−7.4%</td></tr>
+<tr><td>H股收盘</td><td>34.42 港元</td><td>32.58 港元</td><td class="metric-negative">−5.3%</td></tr>
+<tr><td>总市值</td><td>8,554 亿元</td><td>7,921 亿元</td><td class="metric-negative">−7.4%</td></tr>
+<tr><td>PE (TTM)</td><td>12.6x</td><td>11.71x</td><td>随股价与盈利口径变化</td></tr>
+<tr><td>PB</td><td>4.15x</td><td>3.92x</td><td>—</td></tr>
+<tr><td>AH 溢价率</td><td>+9.3%</td><td><strong>+8.16%</strong></td><td>收窄 1.1pct（同为同日口径）</td></tr>
+</tbody>
+</table></div>
+<p><strong>本期的实质增量有三项（均为公告，非价格）：</strong>① <strong>2026-09-28 赤峰黄金交割先决条件期限由 9-30 延至 11-30</strong>（补充协议，一手）；② 2026-09-17 董事会临时会议通过向参股公司提供财务资助、为参股公司提供担保、全资子公司与关联人共同投资等议案；③ 上证 E 互动与券商研报在 9 月中下旬集中讨论卡莫阿复产与巨龙产量。<span class="src-badge src-s">一手</span></p>
+<p class="caveat-inline">上期报告的结构是「宏观范式反转 → 黄金 → 铜 → 锂」的分品种叙事；本期改为围绕<strong>核心指标（量价）</strong>组织，并把 PE/PB 背离提为估值节的核心。<strong>这不是对上一期判断的推翻，而是重心转移</strong>——上一期的品种分析在本期第五节的框架内仍然成立。</p>
+<h3>三、取数更正记录</h3>
+<p style="font-size:12px;color:var(--text-muted);"><strong>本期有三处更正，均由交付后的复核发现</strong>——记录在此以防后续引用出错：</p>
+<ul style="padding-left:20px;font-size:12px;color:var(--text-muted);line-height:1.9;">
+<li><strong>① 数据日期标注错误（影响最大）。</strong>初稿页头写「数据截至 2026-10-06 收盘」，但 <strong>A股 10-01~10-07 因国庆休市</strong>——行情接口返回的 29.79 元带的时间戳是 <code>20260930161459</code>，即 <strong>9-30 收盘</strong>。因此本报告的价格、市值、PE/PB、52 周区间<strong>全部是 9-30 口径</strong>，已据此改正页头与时效提示。</li>
+<li><strong>② AH 溢价率混用了两个交易日。</strong>初稿用「A股 9-30 的 29.79 ÷ H股 <strong>10-06</strong> 的 32.58」，得 +7.03%。<strong>AH 溢价的分子分母必须同日</strong>——改用 H股 9-30 收盘 <strong>32.24 港元</strong>后为 <strong>+8.16%</strong>，相差 1.13pct。恒生指数在 9-30 至 10-06 之间是上涨的，混算会系统性低估 A 股溢价。</li>
+<li><strong>③ 52 周区间取错了字段。</strong>初稿用行情接口的 f47/f48 字段得 26.51–32.41，但<strong>该字段对 A 股并非 52 周高低</strong>——用福耀（接口 58.30 vs 实测 70.35）和茅台（1359 vs 1540）反查确认。已改用日 K 前复权序列实测：<strong>24.00–44.14</strong>，并同步重建 1.1 的价格图（原图 y 轴 24–36 装不下 1 月的 44 高点）。</li>
+</ul>
+<p style="font-size:12px;color:var(--text-muted);">另有两处口径问题，已按正确来源处理：</p>
+<ul style="padding-left:20px;font-size:12px;color:var(--text-muted);line-height:1.9;">
+<li><strong>分红单位</strong>：东方财富分红接口的「每股分红」字段实为<strong>每 10 股</strong>金额（中期 4.2 元 = 每 10 股），若按每股理解会放大 10 倍。本报告已按每 10 股处理，并与公告的「中期分红约 111 亿元 ÷ 265.9 亿股 = 0.417 元/股」交叉核对一致。</li>
+<li><strong>半年报披露了更正公告</strong>：公司于 2026-09-05 发布《关于定期报告财务报表附注部分相关文字错误的更正公告》。<strong>本报告的关键财务数字（营收、归母净利、扣非、现金流、产量）取自更正后的口径，未逐条比对更正前后的差异</strong>，此项列为信息缺口。</li>
+</ul>
+<h3>四、已知局限</h3>
+<p style="font-size:12px;color:var(--text-muted);">① <strong>产量完成度用线性基准</strong>——矿业有季节性，50% 不是「应该达到的标准」，它只是本报告选用的一个可比较的参照；② <strong>未取得分地区资产占比</strong>——紫金未在半年报披露此口径，第六章的海外敞口只能按矿山清单定性描述；③ <strong>少数股东损益占比未逐项核对</strong>——紫金大量矿山为控股非全资，归母与合并净利之间有可观差额；④ <strong>单位成本数据未取得</strong>——本报告只引用了券商对成本方向的判断，没有一手的克金/吨铜成本数字，这是第 11.2 节第 ② 项跟踪指标目前无法核验的原因；⑤ <strong>社区样本量极小</strong>——命中且可核实的 UGC 集中在 2026 年 8–9 月，未检索到 10 月的雪球讨论，第 10 节不构成情绪统计；⑥ <strong>商品价格的历史分位未做</strong>——本报告给出了商品当前价与 H1 均价的关系，但没有计算金价/铜价自身的历史分位，也未对「是否见顶」下判断，因为该判断需要远期的供需模型，超出公开数据的支撑范围。</p>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-10-06 · 由 Claude Code 辅助分析 · A股数据截至 2026-09-30 收盘、H股与商品截至 2026-10-06 · 上期报告 2026-09-16</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="padding-left:20px;font-size:12px;line-height:1.9;color:var(--text-muted);">
+<li><span class="src-badge src-s">一手</span> 紫金矿业 <strong>2026 年半年度报告</strong>（2026-08-22）——损益表、产量、分部收入与毛利占比、区间均价、产量完成度所需的分母</li>
+<li><span class="src-badge src-s">一手</span> 紫金矿业 <strong>2025 年年度报告</strong>（2026-03-21）——2026 年产量经营计划、《三年（2026-2028 年）主要矿产品产量规划》</li>
+<li><span class="src-badge src-s">一手</span> 公司公告：赤峰黄金控制权收购补充协议（临 2026-052，2026-09-29）、董事会临时会议决议（2026-09-17）、财务报表附注文字更正公告（2026-09-05）</li>
+<li><span class="src-badge src-s">一手</span> 行情接口：腾讯财经（A/H 股实时行情）、新浪财经（伦敦金现 / 伦铜 / 港币兑人民币）</li>
+<li><span class="src-badge src-2">二手</span> 券商研报与财经媒体：高盛 / 摩根士丹利 / 美银证券 / 中金目标价（均已落到原文日期）、东方财富估值序列与分红记录、艾芬豪矿业复产指引、德意志银行金属观点</li>
+<li><span class="src-badge src-3">三方</span> 雪球、今日头条等 UGC（样本量已在正文标明）</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E7%B4%AB%E9%87%91%E7%9F%BF%E4%B8%9A%EF%BC%88601899%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%B4%AB%E9%87%91%E7%9F%BF%E4%B8%9A%EF%BC%88601899%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-06%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

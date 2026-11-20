@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>灰度迷你比特币信托 2026-09-04 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+  .num { text-align: right; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    .card { padding: 24px 20px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 8px 10px; }
+    header { padding: 40px 20px 36px; }
+    header h1 { font-size: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    body { background: #fff; }
+    .sidebar { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    header { background: #1a3c2a !important; -webkit-print-color-adjust: exact; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/btc/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">BTC <span>·</span> 2026-09-04 <span>·</span> PC 完整版</div><h1>灰度迷你比特币信托</h1><p>数据截至 2026-09-04（现货）/ 2026-09-03（信托收盘）· 距 9/15 CLARITY Act 参议院投票 + 9/15-16 FOMC 仅剩 11 天</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、标的速览</a></li><li><a href="#business">二、信托结构与商业模式</a></li><li><a href="#core-metric">三、核心指标 — 溢价/折价 + 每股 BTC 含量</a></li><li><a href="#financials">四、最新信托数据 (2026-Q2 10-Q，2026-08-04 提交)</a></li><li><a href="#macro">五、宏观：财政部扩表 vs 美联储加息 — 8 月大涨的全部逻辑与最大风险</a></li><li><a href="#gold-ratio">六、黄金对照与贬值交易</a></li><li><a href="#valuation">估值参考与关键价位</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">机构观点全景 二手</a></li><li><a href="#reddit">Reddit / X 社区情绪 三方</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">⚠️ <b>时效提示</b>：本报告分析日期 2026-09-04（周五），信托最新收盘价为 9/3，比特币现货为 9/4 盘中。加密市场 7×24 交易，价格波动剧烈，报告数据仅代表分析时点快照。<b>9/15（CLARITY Act 程序性投票）与 9/15-16（FOMC 议息）为本月最重要的两个事件窗口</b>，届时本报告结论需重新校验。</div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> SEC 文件（10-Q/8-K）、灰度官网产品数据 |
+    <span class="src-badge src-2">二手</span> 聚合行情（yfinance）、主流财经媒体、链上分析机构 |
+    <span class="src-badge src-3">三方</span> Reddit / X 社区讨论 |
+    <span class="src-badge src-e">推算</span> 溢价率序列、每股BTC含量由本地 10-Q 数据推算 |
+    <span class="src-badge src-t">时效</span> 情绪指数、资金流为高频变动数据
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>BTC-灰度迷你比特币信托/SEC_Filings/</code> — 10-K FY2025（2026-02-25）、10-Q 2026-Q2（2026-08-04）、8-K ×3（2026-02-06 / 03-16 / 07-02）</p>
+<p style="margin-top:8px;font-size:13px;"><b>本标的性质声明</b>：Grayscale Bitcoin Mini Trust ETF 是<b>委托人信托（grantor trust），非运营公司</b>——没有营收/利润/护城河等个股概念，也没有传统分析师评级。本报告按加密信托框架分析四个维度：<b>① 对比 BTC-USD 的溢价/折价 ② 每股 BTC 含量（内在价值锚）③ 宏观（财政部+美联储+黄金）④ 社区情绪</b>。上一期报告（2026-08-17）同样的框架，本期重点更新 8 月大涨后的变化。</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、标的速览</h2>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:220px;"><b>全称 / 代码</b></td><td>Grayscale Bitcoin Mini Trust ETF（NYSE Arca: BTC）——注意：非 GBTC（灰度旗舰信托，费率 1.5%），也非 BTC-USD 现货</td></tr>
+<tr><td><b>结构 / 成立</b></td><td>特拉华州委托人信托，按 ETF 注册；2024-07-31 开始运营，2024-11-19 实施 1 拆 5 反向拆分</td></tr>
+<tr><td><b>管理费</b></td><td><span class="metric-positive">0.15%/年（全美现货 BTC ETF 最低档）</span>，以 BTC 计提（非现金）</td></tr>
+<tr><td><b>托管 / 行政</b></td><td>Coinbase Custody（主托管）+ Anchorage Digital（备托管）；转账代理 BNY Mellon</td></tr>
+<tr><td><b>估值基准</b></td><td>2026-04-01 起由 CoinDesk XBX 指数切换为 <b>CoinDesk Bitcoin Benchmark Rate (CBBR)</b>（8-K 2026-03-16 披露）</td></tr>
+<tr><td><b>AUM</b></td><td><b>$47.9 亿</b>（灰度官网 GAAP，8/28）<span class="src-badge src-s">一手</span>；Yahoo 口径 $48.7 亿</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">$36.16</div><div class="label">信托价（9/3 收盘）</div></div>
+<div class="summary-item"><div class="value" style="color:var(--green)">+0.03%</div><div class="label">溢价率 vs NAV（8/28 官方）</div></div>
+<div class="summary-item"><div class="value">0.00044</div><div class="label">每股 BTC 含量（推算）</div></div>
+<div class="summary-item"><div class="value">$80,935</div><div class="label">BTC 现货（9/4）</div></div>
+<div class="summary-item"><div class="value" style="color:var(--green)">+26.3%</div><div class="label">BTC 近 1 月涨幅</div></div>
+<div class="summary-item"><div class="value" style="color:var(--amber)">62 贪婪</div><div class="label">恐惧贪婪指数（上月 25）</div></div>
+</div>
+<div class="table-scroll"><table>
+<thead><tr><th>关键行情</th><th class="num">数值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>BTC 现货（9/4）</td><td class="num">$80,935</td><td>较 6/30 年内低点 $58,559 <b>反弹 +38%</b>；8/25 曾在 $81K 被 50 周均线拒绝</td></tr>
+<tr><td>信托 52 周区间</td><td class="num">$25.65 – $55.96</td><td>当前价位于区间下沿 ~24% 分位</td></tr>
+<tr><td>BTC 52 周区间</td><td class="num">$58,559 – $126,198</td><td>高点 2025-10，低点 2026-06-30；2026 年内高点 $96,929（1/14）</td></tr>
+<tr><td>8 月单月表现</td><td class="num metric-positive">+25.6%</td><td>2024 年 11 月以来最佳单月、2017 年以来最佳 8 月（历史 8 月中位数 -7.0%）</td></tr>
+<tr><td>信托近 1 月 / YTD / 1 年</td><td class="num">+28.1% / <span class="metric-negative">-8.0%</span> / <span class="metric-negative">-26.3%</span></td><td>与 BTC 现货（-7.5% / -27.6%）基本同步，跟踪误差极小</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">行情来源：yfinance（BTC-USD / BTC / GC=F / ^GSPC），现货 9/4 盘中、信托 9/3 收盘。8 月单月数据来自 cryptonews.net 统计。</p>
+</div>
+
+<div class="card" id="business">
+<h2>二、信托结构与商业模式</h2>
+<p>这只信托的"商业模式"极其简单：<b>持有比特币，收取 0.15%/年管理费（以 BTC 计提）</b>。它不借贷、不加杠杆、不做质押、不持有现金（除少量运营所需）。投资目标就一句话——让每份份额的价值（基于每股 BTC 含量）反映信托持有的比特币价值减去费用。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>机制</th><th>说明</th><th>对持有人的意义</th></tr></thead>
+<tbody>
+<tr><td><b>实物申赎</b></td><td>授权参与人（AP）以 10,000 股为一篮子，用 BTC 实物申购/赎回</td><td class="metric-positive">溢价/折价被套利机制压缩到接近零——不会重演 GBTC 时代 ±30% 的偏离</td></tr>
+<tr><td><b>费率 0.15%</b></td><td>灰度旗舰 GBTC 收 1.5%，迷你信托是其 1/10</td><td class="metric-positive">持有 10 年累计成本约 1.5%，是"合规持币"几乎最低的成本结构</td></tr>
+<tr><td><b>费用以 BTC 计提</b></td><td>每日卖币支付费用 → 每股 BTC 含量缓慢递减</td><td>持有成本隐性化：份额数不变，但每份背后的 BTC 逐年减少 ~0.15%</td></tr>
+<tr><td><b>被动持有</b></td><td>无主动管理、无收益分配、无利息</td><td class="metric-warn">完全镜像 BTC 价格，收益来源 100% 是比特币本身的涨跌</td></tr>
+</tbody>
+</table></div>
+<div class="quote">与 8/17 报告的结论一致且本期再次验证：<b>这只信托本身没有"公司质地"问题</b>——它是底层资产的高精度、低成本容器。所有分析的重心都应该放在比特币本身（见第五、六节）。</div>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — 溢价/折价 + 每股 BTC 含量</h2>
+<h3>3.1 溢价/折价：紧贴 NAV，结构无损耗</h3>
+<p>NAV = 每股 BTC 含量 × BTC 现货价。用 10-Q 数据（6/30 净资产 $3,188.7M ÷ 122,749,963 股 ÷ 当日现货 $58,559）推算每股含量约 <b>0.00044 BTC</b> <span class="src-badge src-e">推算</span>，据此回溯近 60 个交易日的二级市场溢价率：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>日期</th><th class="num">BTC 现货</th><th class="num">信托价</th><th class="num">推算 NAV</th><th class="num">溢价/折价</th></tr></thead>
+<tbody>
+<tr><td>2026-08-14</td><td class="num">$62,976</td><td class="num">$27.81</td><td class="num">$27.94</td><td class="num">-0.45%</td></tr>
+<tr><td>2026-08-19（突破周）</td><td class="num">$69,266</td><td class="num">$30.27</td><td class="num">$30.73</td><td class="num">-1.49%</td></tr>
+<tr><td>2026-08-21（空头爆仓顶点）</td><td class="num">$78,335</td><td class="num">$34.08</td><td class="num">$34.75</td><td class="num">-1.93%</td></tr>
+<tr><td>2026-08-28</td><td class="num">$77,830</td><td class="num">$34.30</td><td class="num">$34.53</td><td class="num">-0.66%（官方 +0.03%）</td></tr>
+<tr><td>2026-09-02</td><td class="num">$77,300</td><td class="num">$34.20</td><td class="num">$34.29</td><td class="num">-0.27%</td></tr>
+</tbody>
+</table></div>
+<p><b>近 60 日溢价率区间 -2.17% ~ +1.60%，均值 -0.36%</b> <span class="src-badge src-e">推算</span>；灰度官方披露 8/28 溢价 <b>+0.03%</b>、30 日买卖价差中位数 <b>0.03%</b> <span class="src-badge src-s">一手</span>。两者结论一致：<b>大涨一个月，信托依然贴着 NAV 交易</b>——8/19-21 急涨中出现的 -1.5%~-1.9% 短暂折价，正是 AP 篮子套利在追赶现货的速度差，数日内即收敛。</p>
+<h3>3.2 每股 BTC 含量：内在价值锚</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th class="num">2025-12-31</th><th class="num">2026-06-30</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>净资产（千美元）</td><td class="num">4,243,952</td><td class="num">3,188,712</td><td>10-Q 资产负债表 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>流通份额</td><td class="num">109,539,963</td><td class="num">122,749,963</td><td>→ 7/30 进一步增至 <b>133,199,963</b></td></tr>
+<tr><td>NAV/股</td><td class="num">$38.74</td><td class="num">$25.98</td><td>Principal Market NAV</td></tr>
+<tr><td>每股 BTC 含量（推算）</td><td class="num">0.0004427</td><td class="num">0.0004436</td><td>两期基本持平（10-Q 表述"约 0.0004"）<span class="src-badge src-e">推算</span></td></tr>
+<tr><td>折合持币总量</td><td class="num">≈48,500 BTC</td><td class="num">≈54,400 BTC</td><td>净资产 ÷ 现货价</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">两期含量几乎不变是因为：申购带来 BTC 与份额同步增加（含量不变），费用计提使其缓降（-0.15%/年），而 4/1 估值指数由 XBX 切换为 CBBR 带来微小口径差。以当前 ~$81K 现货计，每股内在价值 ≈ 0.00044 × $80,935 ≈ <b>$35.6</b>，与信托价 $36.16 大体一致。</p>
+<div class="quote"><b>结论</b>：信托结构维度<b>维持 8/17 报告的判断——优秀</b>。0 溢价 + 最低档费率 + 0.03% 价差，持有成本几乎可忽略。本期新增的关键信息不在结构，而在<b>份额流</b>：7 月单月净申购 1,045 万份（+8.5%，约 $2.7-2.8 亿）发生在 BTC $58-65K 的低位区——<b>有人在本轮反弹启动前通过这只信托大额抄底</b> <span class="src-badge src-t">时效</span>。</div>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新信托数据 (2026-Q2 10-Q，2026-08-04 提交)</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>项目（千美元）</th><th class="num">Q2 2026</th><th class="num">Q2 2025</th><th class="num">H1 2026</th><th class="num">H1 2025</th></tr></thead>
+<tbody>
+<tr><td>净投资损失（费用）</td><td class="num metric-negative">(1,419)</td><td class="num metric-negative">(1,577)</td><td class="num metric-negative">(2,826)</td><td class="num metric-negative">(2,975)</td></tr>
+<tr><td>份额净增（股）</td><td class="num metric-positive">+5,940,000</td><td class="num">+7,780,000</td><td class="num metric-positive">+13,210,000</td><td class="num">+13,640,000</td></tr>
+</tbody>
+</table></div>
+<div class="table-scroll"><table>
+<thead><tr><th>净资产变动</th><th class="num">金额</th><th>归因</th></tr></thead>
+<tbody>
+<tr><td>2025-12-31 → 2026-06-30 净资产</td><td class="num metric-negative">$4,244M → $3,189M（-24.8%）</td><td>BTC 现货 -33%（$87.5K → $58.6K）是主因，净申购 +$3.5 亿部分对冲</td></tr>
+<tr><td>6/30 → 8/28 AUM</td><td class="num metric-positive">$3,189M → $4,791M（+50.3%）</td><td>现货 +38% + 7 月净申购 ~$2.7 亿（份额 122.7M → 133.2M）</td></tr>
+<tr><td>持仓成本 vs 公允价值</td><td class="num">$4,292M vs $3,189M</td><td>累计未实现亏损 ~$11 亿——全部是 BTC 价格波动，无信用/对手方风险敞口</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">来源：本地 10-Q（BTC_2026-Q2_10-Q_2026-08-04.htm）、灰度官网 GAAP AUM（8/28）。份额数据至 7/30，8 月反弹期间的申赎流需待 10-Q Q3（11 月初）披露。</p>
+</div>
+
+<div class="card" id="macro">
+<h2>五、宏观：财政部扩表 vs 美联储加息 — 8 月大涨的全部逻辑与最大风险</h2>
+<p>8/17 报告时的图景是"鹰派美联储 + 情绪冰点 + 资金流出"。过去三周<b>每一个变量都反转了</b>，这是理解本轮 +26% 行情的关键：</p>
+<h3>5.1 催化剂链条（8 月发生了什么）</h3>
+<div class="box-green" style="margin:16px 0;">
+<ol>
+<li><b>财政部回购扩容（8/19 当周）</b>：财长 Bessent 宣布将长债回购规模翻倍以上 → 30 年期美债收益率从 5.2%+ 一度回落至 <b>5.18%</b> 附近，美元走弱 → 流动性预期扩张。Bernstein：BTC 历史上对流动性扩张反应为正。</li>
+<li><b>空头轧空</b>：BTC 从 $63,600 一周拉升 23.6%（2021 年初以来第二强单周），<b>24 小时内 $26.6 亿空头爆仓</b>，全周轧空 $27 亿——"下跌押注"被迫平仓放大涨幅。</li>
+<li><b>ETF 资金强势回流</b>：最强一周加密 ETF 净流入 <b>$26.2 亿</b>；黄金+BTC 基金 5 个交易日合计吸金 <b>$70 亿创纪录</b>（IBIT 单周 $15 亿，跻身全美 ETF 流入前十）；9/3 单日现货 BTC ETF 仍净流入 $2.17 亿。</li>
+<li><b>机构复购</b>：Strategy 恢复买入（4,603 BTC / $3.697 亿）；特朗普催促国会通过加密立法。</li>
+<li><b>贬值交易回归</b>：美国国债总额突破 <b>$40 万亿</b>（8 月下旬），财政担忧把黄金和 BTC 重新绑定为"法币贬值对冲"——这与 8/17 时"黄金涨 BTC 跌"的分裂完全不同。</li>
+</ol>
+</div>
+<h3>5.2 最大风险：Warsh 的美联储（9/15-16 FOMC）</h3>
+<div class="box-red" style="margin:16px 0;">
+<ul>
+<li>美联储主席 <b>Kevin Warsh 8/28 Jackson Hole 放鹰</b>：重申抗通胀誓言 → CME FedWatch 显示 <b>9 月加息 25bp 概率 ~56%</b>（7 月底还是约 50/50 的按兵概率）。</li>
+<li>德意志银行预计年内加息 50bp（9 月 + 12 月）；巴克莱预计再加息两次；Wellington 固定收益主管直言"FOMC 9 月必须加息"。</li>
+<li>当前联邦基金利率 <b>3.50%–3.75%</b>（7/29 会议按兵不动，当时已是 9:3 的罕见鹰派分歧）。</li>
+<li><b>美联储与财政部公开"打架"</b>：财政部用回购注入流动性压低长端利率，Warsh 用加息预期抬升短端——9 月加息的一个动机恰恰是锚定 10 年期收益率、对冲财政部操作。这对"流动性叙事"是釜底抽薪式的风险。</li>
+<li>参照物：黄金在 Warsh 讲话当天（8/28）暴跌 3%+（6 月初以来最大单日跌幅），一度跌破 $4,400——<b>无息资产对利率预期有多敏感，8/28 的黄金就是现场演示</b>。</li>
+</ul>
+</div>
+<h3>5.3 立法变量：CLARITY Act（9/15 参议院程序性投票）</h3>
+<p>参议院多数党领袖 Thune 已对 H.R. 3633 提交 cloture，<b>9/15 进行程序性投票</b>：通过则进入辩论与最终表决（11 月中期选举前有时间压力）；失败则 2026 年立法希望基本破灭，需等 2027 年新国会重启。<b>灰度自家研究主管（Zach Pandl）都认为今年通过概率偏低</b> <span class="src-badge src-2">二手</span>——市场若已把"立法催化"计入 8 月涨幅，9/15 落空就是回吐风险。该法案内容：SEC/CFTC 分工监管、要求加密企业注册披露、保护客户资金。</p>
+</div>
+
+<div class="card" id="gold-ratio">
+<h2>六、黄金对照与贬值交易</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>资产</th><th class="num">现价</th><th class="num">近1月</th><th class="num">YTD</th><th class="num">近1年</th><th>52周区间</th></tr></thead>
+<tbody>
+<tr><td><b>比特币</b>（BTC-USD）</td><td class="num">$80,935</td><td class="num metric-positive">+26.3%</td><td class="num metric-negative">-7.5%</td><td class="num metric-negative">-27.6%</td><td class="num">$58.6K – $126.2K</td></tr>
+<tr><td><b>黄金</b>（COMEX）</td><td class="num">$4,509</td><td class="num metric-positive">+9.2%</td><td class="num metric-positive">+3.6%</td><td class="num metric-positive">+27.0%</td><td class="num">$3,550 – $5,586</td></tr>
+<tr><td>标普 500</td><td class="num">7,748</td><td class="num metric-positive">+1.5%</td><td class="num metric-positive">+12.6%</td><td class="num metric-positive">+20.0%</td><td class="num">6,317 – 7,817</td></tr>
+</tbody>
+</table></div>
+<p><b>8/17 报告的核心痛点是"数字黄金叙事失效"（黄金 +33.7% vs BTC -46%，1 年口径）。本期出现边际修复</b>：8 月下旬起黄金与 BTC 罕见地同步上涨（贬值交易），近 1 月 +9.2% vs +26.3%，BTC 明显跑赢——市场重新把两者放进同一个"财政风险对冲"篮子。但<b>1 年口径的裂口仍在</b>（-27.6% vs +27.0%），且 8/28 Warsh 讲话后黄金先崩、BTC 却抗住，说明两者当前的驱动并不完全同源：黄金对利率预期更敏感，BTC 当前更多由流动性与 ETF 资金流定价。</p>
+<div class="quote"><b>BTC/黄金比率</b>是修复叙事的核心跟踪指标：8 月比率显著回升（BTC 单月 +26% vs 黄金 +9%），若 9 月 FOMC 加息落地，历史上黄金先受损、BTC 难独善其身——比率回落则证明本轮只是"流动性脉冲"而非叙事修复。</div>
+</div>
+
+<div class="card" id="valuation">
+<h2>估值参考与关键价位</h2>
+<p>加密信托无 PE/PB/DCF 概念，估值只看两层：<b>① 信托价 vs NAV（结构成本，当前 +0.03%，无损耗）② 底层比特币的价位结构</b>。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>价位</th><th class="num">数值</th><th>含义</th></tr></thead>
+<tbody>
+<tr><td>每股内在价值（推算）</td><td class="num">≈$35.6</td><td>0.00044 BTC × $80,935；信托价 $36.16 基本重合</td></tr>
+<tr><td>BTC 年内低点 / 现价</td><td class="num">$58,559 → $80,935</td><td>已收复 6 月失地，距年内高点 $96,929 还差 -16.6%</td></tr>
+<tr><td>50 周均线（8/25 拒绝位）</td><td class="num">≈$81,000</td><td class="metric-warn">当前正卡在此关键阻力——9/4 盘中 $80,935 属于"顶在阻力位上"，突破与否是短期方向裁决</td></tr>
+<tr><td>社区多空预期位</td><td class="num">$86.4K / $70.7K</td><td>散户投票 pump/dump 目标位（78% 看涨）<span class="src-badge src-3">三方</span></td></tr>
+<tr><td>2025-10 历史高点</td><td class="num">$126,198</td><td>完整牛市修复需收复的最终目标，距现价 +56%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">均线位与预期位来自 CoinDesk（8/25）与 dailycoin 社区投票，均为参考性价位而非预测；内在价值为推算值（基于 6/30 每股含量，费用计提与指数口径会带来 &lt;1% 的偏差）。</p>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><b>流动性拐点</b>：财政部长债回购翻倍 ≈ 变相 QE，30Y 利率回落、美元走弱——Bernstein 指出 BTC 历史上对流动性扩张反应为正，且这是 3 年来最强单周行情的资金面基础。</li>
+<li><b>贬值交易回归</b>：美债破 $40 万亿，黄金+BTC 基金 5 日 $70 亿创纪录流入——机构重新把 BTC 当作财政风险对冲，"数字黄金"叙事边际修复（8 月 BTC 跑赢黄金）。</li>
+<li><b>ETF 资金流反转</b>：从 8 月初的周度流出转为最强周流入 $26.2 亿，且 9/3 仍在流入；Strategy 恢复增持 $3.7 亿。</li>
+<li><b>聪明钱在低位申购</b>：本信托 7 月在 $58-65K 区间净申购 $2.7 亿（份额 +8.5%），AUM 半月 +50%。</li>
+<li><b>信托容器近乎零成本</b>：0 溢价 + 0.15% 费率 + 0.03% 价差，是所有合规 BTC 敞口工具中最优之一。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><b>9 月加息概率 56%</b>：Warsh 领导的美联储明确要对抗财政部的宽松——加息直接打击"流动性叙事"，8/28 黄金暴跌 3% 就是预演；DB 预计年内 +50bp。</li>
+<li><b>量价背离</b>：8 月成交量接近 2023 年 9 月以来低位（CryptoQuant/Darkfost），+25.6% 的月涨幅缺乏量能确认，回落风险未被充分交易。</li>
+<li><b>技术阻力</b>：$81K 的 50 周均线 8/25 已拒绝过一次；YTD 仍 -7.5%，距 1 月高点 $96.9K 有 -16.6%，距历史高点 -36%——这是反弹，不是新趋势的确认。</li>
+<li><b>CLARITY Act 大概率落空</b>：9/15 程序性投票，灰度自家研究都判断 2026 通过概率低——立法催化若已计入涨幅，落空即回吐。</li>
+<li><b>涨幅结构脆弱</b>：$26.6 亿空头爆仓 + XRP 60% 高杠杆投机推动，情绪一个月从极度恐惧(25)飙到贪婪(62)——追高的赔率明显变差。</li>
+<li><b>周期派盯 10 月</b>：Reddit 四年周期派预计 2026 年 10 月见底，若历史韵律重演，当前仍处周期尾段。</li>
+</ol>
+</div>
+</div>
+<p><b>核心争议焦点</b>：本轮行情是<b>"财政部流动性驱动的脉冲"</b>（空方：会被 9 月加息证伪，量能不济）还是<b>"贬值交易/数字黄金叙事的重新定价"</b>（多方：黄金 BTC 同涨是信号，机构资金已在场内）。<b>裁决指标</b>：9/15-16 FOMC 后 BTC 能否站稳 $81K 上方 + ETF 流入是否持续——站稳且流入持续则多方胜，跌破 $77K 且流入转负则脉冲论胜。</p>
+</div>
+
+<div class="card" id="analysts">
+<h2>机构观点全景 <span class="src-badge src-2">二手</span></h2>
+<p>加密信托无传统卖方评级体系，以下为近期对本轮行情有明确表态的机构与分析师（按立场排列，时效均为 2026 年 8 月下旬~9 月初）：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>机构 / 分析师</th><th>观点</th><th>立场</th></tr></thead>
+<tbody>
+<tr><td>Bernstein（G. Chhugani）</td><td>本轮触发点是财政部长端回购；BTC 对流动性扩张历史上反应为正，此前"冷漠"源于伊朗冲突后紧缩 + AI 行情抽水</td><td class="metric-positive">看多驱动</td></tr>
+<tr><td>TD Securities（B. Melek）</td><td>金银大涨源于美债破 $40 万亿后的财政担忧——贬值交易支撑包括 BTC 在内的替代资产</td><td class="metric-positive">看多驱动</td></tr>
+<tr><td>Grayscale Research（Z. Pandl）</td><td>CLARITY Act 2026 年通过概率偏低（程序性投票 9/15）</td><td class="metric-warn">立法催化谨慎</td></tr>
+<tr><td>CryptoQuant（Darkfost）</td><td>8 月成交量接近 2023 年 9 月以来低位，+30% 月涨幅缺乏量能匹配，涨势需要确认</td><td class="metric-warn">质疑持续性</td></tr>
+<tr><td>德意志银行</td><td>预计 Fed 年内再加息 50bp（9 月 + 12 月各 25bp）</td><td class="metric-negative">宏观逆风</td></tr>
+<tr><td>巴克莱</td><td>Warsh Jackson Hole 讲话后，预计年内再加息两次</td><td class="metric-negative">宏观逆风</td></tr>
+<tr><td>Wellington（B. Khurana）</td><td>"FOMC 9 月必须加息"以锚定 10 年期收益率</td><td class="metric-negative">宏观逆风</td></tr>
+<tr><td>Tom Lee</td><td>9 月是股市强势月（风险偏好环境判断）</td><td class="metric-positive">风险偏好</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">注意机构观点的分裂结构：加密原生机构（Bernstein/TD）看多资金面，传统宏观机构（DB/巴克莱/Wellington）一致预警加息——这个分裂本身就是"财政部 vs 美联储"宏观博弈的投影，9 月 FOMC 将给出方向。</p>
+</div>
+
+<div class="card" id="reddit">
+<h2>Reddit / X 社区情绪 <span class="src-badge src-3">三方</span></h2>
+<div class="table-scroll"><table>
+<thead><tr><th>信号</th><th>数据（9 月初）</th><th>解读</th></tr></thead>
+<tbody>
+<tr><td>恐惧贪婪指数</td><td class="metric-warn">62（贪婪）</td><td>一个月内 25（极度恐惧）→ 46 → 29 → 62，情绪修复速度极快；历史上进入贪婪区后短线追高赔率变差，但趋势市中贪婪可以持续</td></tr>
+<tr><td>Reddit r/Bitcoin 日谈</td><td>活跃度回升</td><td>"亚洲和美盘轮流抬轿，每 12 小时涨 $2-5K"；$26.6 亿空头爆仓被反复庆祝——散户重新进场</td></tr>
+<tr><td>X / Binance 热帖</td><td>"DON'T SHORT $BTC" 上热搜</td><td> BTC 吸收了 $81K→$77K 的回调后重回 $80K 上方，空头信心动摇</td></tr>
+<tr><td>四年周期派（Reddit）</td><td class="metric-negative">盯住 2026 年 10 月</td><td>"距周期底部约 50 天"——若韵律重演，当前是熊市反弹而非新牛市；反方：三次样本不构成规律</td></tr>
+<tr><td>散户多空投票</td><td>78% 看涨（$86.4K vs $70.7K）</td><td class="metric-warn">看涨比例偏高本身是反向指标候选</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">来源：r/Bitcoin、r/btc 日谈帖（9/3）、alternative.me 口径 F&amp;G、Binance/Milk Road 情绪页、dailycoin 投票。社区情绪时效性极强，仅供温度计量，不构成任何择时依据。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>综合判断框架</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>维度</th><th>8/17 报告判断</th><th>本期（9/4）更新</th></tr></thead>
+<tbody>
+<tr><td><b>信托结构</b>（溢价/费用/跟踪）</td><td class="metric-positive">优秀</td><td class="metric-positive">维持优秀：+0.03% 溢价、月内急涨期折价 &lt;2% 且快速收敛、AUM $47.9 亿创新高路径</td></tr>
+<tr><td><b>底层资产</b>（比特币）</td><td class="metric-negative">弱势：-46%/1年，风险资产定价</td><td class="metric-warn">修复中：+26%/1月、8 月最佳单月，但卡在 $81K 阻力、量能不足、YTD 仍 -7.5%</td></tr>
+<tr><td><b>宏观</b>（美联储/财政/黄金）</td><td class="metric-warn">鹰派压制，叙事失效</td><td class="metric-warn">多空对峙升级：财政部注流动性 vs 美联储 56% 概率加息——9/15-16 见分晓</td></tr>
+<tr><td><b>情绪/资金</b></td><td class="metric-warn">冰点 25（极度恐惧）</td><td class="metric-warn">贪婪 62 + ETF 强流入：温度从冰点烧到贪婪只用一个月，波动将放大</td></tr>
+</tbody>
+</table></div>
+<h3>四情景推演（裁决窗口：9/15 CLARITY 投票 + 9/15-16 FOMC）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>条件</th><th>可能路径</th></tr></thead>
+<tbody>
+<tr><td class="metric-negative">双重利空</td><td>FOMC 加息 + CLARITY 程序投票失败</td><td>流动性叙事被证伪 + 立法催化落空 → 回踩 $70.7K（社区 dump 位）/ 50 周均线失守则看 $65K</td></tr>
+<tr><td class="metric-warn">鹰派 + 立法进展</td><td>加息但 CLARITY 进入辩论</td><td>多空对冲，宽幅震荡 $75-85K，方向延后至 10 月</td></tr>
+<tr><td class="metric-warn">按兵 + 立法失败</td><td>利率不动 + 立法搁置</td><td>中性偏多（财政部流动性仍在），挑战 $86.4K 后回落风险取决于量能</td></tr>
+<tr><td class="metric-positive">双重催化</td><td>按兵不动 + CLARITY 通过程序投票</td><td>流动性 + 立法双击 → 挑战 $86.4K → $96.9K（1 月高点），贬值交易叙事全面修复</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">情景为分析框架而非预测；概率权重请结合自身对 Warsh 美联储与参议院票仓的独立判断。</p>
+<h3>核心跟踪指标（按重要性排序）</h3>
+<ol>
+<li><b>9/15-16 FOMC 决议与点阵图</b>：当前市场定价加息 56%——无论加不加，Warsh 发布会措辞决定"流动性叙事"存亡，这是单一最大变量。</li>
+<li><b>9/15 CLARITY Act 程序性投票</b>：通过=立法行情延续；失败=2027 年前无立法催化。</li>
+<li><b>$81K（50 周均线）攻防</b>：站稳则打开 $86K 空间，失守则本轮回涨定性为脉冲。</li>
+<li><b>现货 BTC ETF 日度净流入</b>（当前 ~$2-3 亿/日）：转负三天以上 = 机构撤退信号。</li>
+<li><b>成交量确认</b>：反弹能否放量——CryptoQuant 指出当前量能为 2023 年 9 月以来低位。</li>
+<li><b>30 年期美债收益率</b>（现 ~5.18%）：财政部回购执行力度 vs 美联储加息的拔河结果，直接映射流动性。</li>
+<li><b>BTC/黄金比率</b>：同步上行 = 贬值交易成立；黄金独涨 = BTC 回到风险资产定价。</li>
+<li><b>本信托份额与溢价率</b>（季报披露 + 官网日更）：份额续增且溢价 &lt;1% = 资金通过合规渠道持续流入。</li>
+</ol>
+<div class="quote"><b>总结</b>：三周内（8/17 → 9/4），本标的的四个维度全部改善——价格 +28%、资金从流出转创纪录流入、情绪从极度恐惧到贪婪、数字黄金叙事边际修复。信托容器本身依旧无可挑剔（0 溢价、0.15% 费率）。<b>但行情的性质（流动性脉冲 vs 叙事重定价）将在 11 天内由 9/15-16 的两场投票/议息裁决</b>：美联储 vs 财政部的宏观博弈是本轮全部多空分歧的源头。当前位置（$81K 阻力 + 贪婪情绪 + 低量能 + 56% 加息概率）短线赔率并不好，中长期的赔率取决于你对"美债 $40 万亿时代 BTC 作为财政对冲"这一命题的信仰程度。<b>若买入逻辑是"贬值交易"，跟踪黄金；若买入逻辑是"流动性"，跟踪 FOMC——逻辑被证伪时（而非价格下跌时）才考虑离场。</b></div>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议。报告基于公开网络搜索生成，SEC 文件已下载至本地作为可信数据源。所有估值情景和概率均为本文主观判断。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-09-04 · 由 Claude Code 辅助分析 · 数据截至 2026-09-03/04（信托收盘/现货盘中）</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="padding-left:20px;">
+<li>一手：SEC 10-Q 2026-Q2（本地存档）、灰度官网 BTC 产品页（AUM/溢价/价差，8/28）</li>
+<li>行情：yfinance — BTC-USD / BTC（信托）/ GC=F（黄金）/ ^GSPC</li>
+<li>宏观与资金流：CoinDesk（8/24-25 ETF 流入、50 周均线）、CNBC（Jackson Hole、贬值交易）、Reuters/Kitco（Warsh 加息预期、黄金）、Forbes（8 月行情归因）、Yahoo Finance（Bessent 回购）</li>
+<li>立法：参议院 cloture 与 9/15 投票安排（多来源交叉）</li>
+<li>情绪：alternative.me 口径 F&amp;G（62/46/29/25）、r/Bitcoin 日谈（9/3）、Binance/Milk Road、dailycoin 社区投票、cryptonews.net（8 月 +25.58%）、incrypted（量能警示）</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%81%B0%E5%BA%A6%E8%BF%B7%E4%BD%A0%E6%AF%94%E7%89%B9%E5%B8%81%E4%BF%A1%E6%89%98%EF%BC%88BTC%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

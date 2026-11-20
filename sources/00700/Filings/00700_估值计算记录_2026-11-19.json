@@ -1,0 +1,183 @@
+{
+  "reportDate": "2026-11-19",
+  "price": 348.4,
+  "priceTimeHkt": "2026-11-19 16:08:13",
+  "latestCompletedClose": 348.4,
+  "latestCompletedCloseDate": "2026-11-19",
+  "priceDayChangePct": -6.545064377682408,
+  "hkdToCny": 0.8491,
+  "fxTimeHkt": "2026-11-19T17:05:47+08:00",
+  "shares": 9092644829,
+  "sharesAsOf": "2026-10-31",
+  "marketCapHkdM": 3167877.4584235996,
+  "marketCapCnyM": 2689844.7499474785,
+  "ttmRevenueM": 802950,
+  "ttmParentNetProfitM": 235987,
+  "ttmNonIfrsParentNetProfitM": 267533,
+  "ttmOperatingCashFlowM": 223188,
+  "ttmFcfCompanyRoundedM": 7800,
+  "ttmNonIfrsPe": 10.054254054443671,
+  "ttmIfrsPe": 11.398275116627095,
+  "ttmPs": 3.3499529857992134,
+  "ttmPfcfApprox": 344.8518910189075,
+  "forwardEps2026": 28.83,
+  "forwardEps2027": 29.92,
+  "forwardPe2026": 10.261062781824489,
+  "forwardPe2027": 9.887247326203207,
+  "forwardEpsGrowth2027Pct": 3.7807839056538395,
+  "peg2026": 2.714004036697243,
+  "cashDividendHkd": 5.3,
+  "cashDividendYieldPct": 1.521239954075775,
+  "coreOperatingQ2B": 86.1,
+  "groupOperatingQ2B": 75.636,
+  "coreOperatingQ3B": 83.3,
+  "groupOperatingQ3B": 68.073,
+  "q3NewAiContributionDragBApprox": 15.227000000000004,
+  "q2NewAiContributionDragBApprox": 10.463999999999999,
+  "q3ComputePrepaymentsBApprox": 86.0,
+  "q2ComputePrepaymentsBApprox": 51.400000000000006,
+  "ttmNonIfrsBasicEps": 29.624000000000002,
+  "ttmNonIfrsDilutedEps": 28.976999999999997,
+  "ttmNonIfrsBasicPe": 9.986039697542532,
+  "ttmNonIfrsDilutedPe": 10.209008524001796,
+  "history": [
+    {
+      "year": 2021,
+      "date": "2021-12-31",
+      "close": 456.8,
+      "hkdToCny": 0.8166598611678236,
+      "basicNonIfrsEps": 12.99261387230787,
+      "pe": 28.712484512186705
+    },
+    {
+      "year": 2022,
+      "date": "2022-12-30",
+      "close": 334.0,
+      "hkdToCny": 0.893415527561869,
+      "basicNonIfrsEps": 12.138,
+      "pe": 24.584015999807566
+    },
+    {
+      "year": 2023,
+      "date": "2023-12-29",
+      "close": 293.6,
+      "hkdToCny": 0.9080177971488241,
+      "basicNonIfrsEps": 16.67811734481322,
+      "pe": 15.984659403167209
+    },
+    {
+      "year": 2024,
+      "date": "2024-12-31",
+      "close": 417.0,
+      "hkdToCny": 0.9433072351664937,
+      "basicNonIfrsEps": 24.027,
+      "pe": 16.371545222642357
+    },
+    {
+      "year": 2025,
+      "date": "2025-12-31",
+      "close": 599.0,
+      "hkdToCny": 0.8973438621679827,
+      "basicNonIfrsEps": 28.577,
+      "pe": 18.809146286825825
+    }
+  ],
+  "sourceInputs": {
+    "quoteUrl": "https://qt.gtimg.cn/q=hk00700",
+    "fxUrl": "https://query2.finance.yahoo.com/v8/finance/chart/HKDCNY%3DX?range=1mo&interval=1d",
+    "fxMeta": {
+      "currency": "CNY",
+      "symbol": "HKDCNY=X",
+      "exchangeName": "CCY",
+      "fullExchangeName": "CCY",
+      "instrumentType": "CURRENCY",
+      "firstTradeDate": 1070236800,
+      "regularMarketTime": 1795079147,
+      "hasPrePostMarketData": false,
+      "gmtoffset": 0,
+      "timezone": "GMT",
+      "exchangeTimezoneName": "Europe/London",
+      "regularMarketPrice": 0.8491,
+      "regularMarketChangePercent": -0.0941,
+      "fulldayPrice": 0.8491,
+      "fulldayChange": -0.0008,
+      "fulldayChangePercent": -0.0941,
+      "fiftyTwoWeekHigh": 0.9236,
+      "fiftyTwoWeekLow": 0.8472,
+      "regularMarketDayHigh": 0.85,
+      "regularMarketDayLow": 0.848,
+      "regularMarketVolume": 0,
+      "longName": "HKD/CNY",
+      "shortName": "HKD/CNY",
+      "chartPreviousClose": 0.8526,
+      "priceHint": 4,
+      "currentTradingPeriod": {
+        "pre": {
+          "timezone": "GMT",
+          "start": 1795046400,
+          "end": 1795046400,
+          "gmtoffset": 0
+        },
+        "regular": {
+          "timezone": "GMT",
+          "start": 1795046400,
+          "end": 1795132740,
+          "gmtoffset": 0
+        },
+        "post": {
+          "timezone": "GMT",
+          "start": 1795132740,
+          "end": 1795132740,
+          "gmtoffset": 0
+        }
+      },
+      "dataGranularity": "1d",
+      "range": "1mo",
+      "validRanges": [
+        "1d",
+        "5d",
+        "1mo",
+        "3mo",
+        "6mo",
+        "1y",
+        "2y",
+        "5y",
+        "10y",
+        "ytd",
+        "max"
+      ]
+    },
+    "forecast": {
+      "url": "https://stockanalysis.com/quote/hkg/0700/forecast/",
+      "lastUpdated": "2026-11-18",
+      "ratings": {
+        "count": 42,
+        "strongBuy": 32,
+        "buy": 7,
+        "hold": 2,
+        "strongSell": 1
+      },
+      "priceTargets": {
+        "count": 40,
+        "average": 628.17,
+        "median": 633.92,
+        "low": 367.77,
+        "high": 784.04
+      },
+      "eps2026": 28.83,
+      "eps2027": 29.92
+    },
+    "historyPriceUrl": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=hk00700,day,<YYYY>-12-01,<YYYY>-12-31,30,",
+    "historyFxUrl": "https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily?pagesize=2000",
+    "closeDailyBar": [
+      "2026-11-19",
+      "361.800",
+      "348.400",
+      "365.000",
+      "345.000",
+      "76426269.000"
+    ],
+    "closeDailyUrl": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=hk00700,day,2026-11-17,2026-11-19,3,"
+  },
+  "previousClose": 372.8
+}

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><edgarSubmission xmlns="http://www.sec.gov/edgar/schedule13g" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <schemaVersion>X0202</schemaVersion>
+<headerData>
+    <submissionType>SCHEDULE 13G/A</submissionType>
+    <filerInfo>
+      <filer>
+        <filerCredentials>
+          <cik>0001607841</cik>
+          <ccc>XXXXXXXX</ccc>
+        </filerCredentials>
+      </filer>
+      <liveTestFlag>LIVE</liveTestFlag>
+
+
+
+    </filerInfo>
+  </headerData>
+  <formData>
+    <coverPageHeader>
+      <amendmentNo>4</amendmentNo>
+      <securitiesClassTitle>Class A common stock, par value $0.00001 per share</securitiesClassTitle>
+      <eventDateRequiresFilingThisStatement>09/30/2026</eventDateRequiresFilingThisStatement>
+      <issuerInfo>
+        <issuerCik>0001792789</issuerCik>
+        <issuerName>DoorDash, Inc.</issuerName>
+        <issuerCusips>
+          <issuerCusipNumber>25809K105</issuerCusipNumber>
+        </issuerCusips>
+        <issuerPrincipalExecutiveOfficeAddress>
+          <street1 xmlns="http://www.sec.gov/edgar/common">303 2nd Street</street1>
+          <street2 xmlns="http://www.sec.gov/edgar/common">South Tower, 8th Floor</street2>
+          <city xmlns="http://www.sec.gov/edgar/common">San Francisco</city>
+          <stateOrCountry xmlns="http://www.sec.gov/edgar/common">CA</stateOrCountry>
+          <zipCode xmlns="http://www.sec.gov/edgar/common">94107</zipCode>
+        </issuerPrincipalExecutiveOfficeAddress>
+      </issuerInfo>
+      <designateRulesPursuantThisScheduleFiled>
+        <designateRulePursuantThisScheduleFiled>Rule 13d-1(d)</designateRulePursuantThisScheduleFiled>
+      </designateRulesPursuantThisScheduleFiled>
+    </coverPageHeader>
+    <coverPageHeaderReportingPersonDetails>
+
+
+      <reportingPersonName>SEQUOIA CAPITAL FUND PARALLEL, LLC ("SCFP")</reportingPersonName>
+      <citizenshipOrOrganization>DE</citizenshipOrOrganization>
+      <reportingPersonBeneficiallyOwnedNumberOfShares>
+        <soleVotingPower>0</soleVotingPower>
+        <sharedVotingPower>1884304</sharedVotingPower>
+        <soleDispositivePower>0</soleDispositivePower>
+        <sharedDispositivePower>1884304</sharedDispositivePower>
+      </reportingPersonBeneficiallyOwnedNumberOfShares>
+      <reportingPersonBeneficiallyOwnedAggregateNumberOfShares>1884304</reportingPersonBeneficiallyOwnedAggregateNumberOfShares>
+      <aggregateAmountExcludesCertainSharesFlag>N</aggregateAmountExcludesCertainSharesFlag>
+      <classPercent>0.5</classPercent>
+      <typeOfReportingPerson>OO</typeOfReportingPerson>
+      <comments>The information set forth on this cover page reflects information as of the date hereof.
+
+As of September 30, 2026, 2,512,407 shares were directly owned by SCFP.
+
+Based on a total of 411,998,576 shares of Class A common stock as of October 26, 2026, as reported in the Issuer's Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on October 30, 2026.</comments>
+    </coverPageHeaderReportingPersonDetails>
+    <coverPageHeaderReportingPersonDetails>
+
+
+      <reportingPersonName>SEQUOIA CAPITAL FUND, L.P. ("SCF")</reportingPersonName>
+      <citizenshipOrOrganization>E9</citizenshipOrOrganization>
+      <reportingPersonBeneficiallyOwnedNumberOfShares>
+        <soleVotingPower>0</soleVotingPower>
+        <sharedVotingPower>15405732</sharedVotingPower>
+        <soleDispositivePower>0</soleDispositivePower>
+        <sharedDispositivePower>15405732</sharedDispositivePower>
+      </reportingPersonBeneficiallyOwnedNumberOfShares>
+      <reportingPersonBeneficiallyOwnedAggregateNumberOfShares>15405732</reportingPersonBeneficiallyOwnedAggregateNumberOfShares>
+      <aggregateAmountExcludesCertainSharesFlag>N</aggregateAmountExcludesCertainSharesFlag>
+      <classPercent>3.7</classPercent>
+      <typeOfReportingPerson>PN</typeOfReportingPerson>
+      <comments>The information set forth on this cover page reflects information as of the date hereof.
+
+As of September 30, 2026, 20,540,976 shares were directly owned by SCF.
+
+Based on a total of 411,998,576 shares of Class A common stock as of October 26, 2026, as reported in the Issuer's Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on October 30, 2026.</comments>
+    </coverPageHeaderReportingPersonDetails>
+    <coverPageHeaderReportingPersonDetails>
+
+
+      <reportingPersonName>SC US/E EXPANSION FUND I MANAGEMENT, L.P. ("SC US/E EXPANSION FUND I MGMT")</reportingPersonName>
+      <citizenshipOrOrganization>E9</citizenshipOrOrganization>
+      <reportingPersonBeneficiallyOwnedNumberOfShares>
+        <soleVotingPower>0</soleVotingPower>
+        <sharedVotingPower>514047</sharedVotingPower>
+        <soleDispositivePower>0</soleDispositivePower>
+        <sharedDispositivePower>514047</sharedDispositivePower>
+      </reportingPersonBeneficiallyOwnedNumberOfShares>
+      <reportingPersonBeneficiallyOwnedAggregateNumberOfShares>514047</reportingPersonBeneficiallyOwnedAggregateNumberOfShares>
+      <aggregateAmountExcludesCertainSharesFlag>N</aggregateAmountExcludesCertainSharesFlag>
+      <classPercent>0.1</classPercent>
+      <typeOfReportingPerson>PN</typeOfReportingPerson>
+      <comments>The information set forth on this cover page reflects information as of the date hereof.
+
+Based on a total of 411,998,576 shares of Class A common stock as of October 26, 2026, as reported in the Issuer's Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on October 30, 2026.</comments>
+    </coverPageHeaderReportingPersonDetails>
+    <coverPageHeaderReportingPersonDetails>
+
+
+      <reportingPersonName>SEQUOIA CAPITAL FUND MANAGEMENT, L.P. ("SEQUOIA CAPITAL FUND MANAGEMENT")</reportingPersonName>
+      <citizenshipOrOrganization>E9</citizenshipOrOrganization>
+      <reportingPersonBeneficiallyOwnedNumberOfShares>
+        <soleVotingPower>0</soleVotingPower>
+        <sharedVotingPower>17290036</sharedVotingPower>
+        <soleDispositivePower>0</soleDispositivePower>
+        <sharedDispositivePower>17290036</sharedDispositivePower>
+      </reportingPersonBeneficiallyOwnedNumberOfShares>
+      <reportingPersonBeneficiallyOwnedAggregateNumberOfShares>17290036</reportingPersonBeneficiallyOwnedAggregateNumberOfShares>
+      <aggregateAmountExcludesCertainSharesFlag>N</aggregateAmountExcludesCertainSharesFlag>
+      <classPercent>4.2</classPercent>
+      <typeOfReportingPerson>PN</typeOfReportingPerson>
+      <comments>The information set forth on this cover page reflects information as of the date hereof.
+
+17,290,036 shares, of which 1,884,304 shares are directly owned by SCFP and 15,405,732 shares are directly owned by SCF. SEQUOIA CAPITAL FUND MANAGEMENT is the general partner of SCF and the manager of SCFP.
+
+As of September 30, 2026, 23,053,383 shares, of which 2,512,407 shares were directly owned by SCFP and 20,540,976 shares were directly owned by SCF. SEQUOIA CAPITAL FUND MANAGEMENT is the general partner of SCF and the manager of SCFP.
+
+Based on a total of 411,998,576 shares of Class A common stock as of October 26, 2026, as reported in the Issuer's Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on October 30, 2026.</comments>
+    </coverPageHeaderReportingPersonDetails>
+    <coverPageHeaderReportingPersonDetails>
+
+
+      <reportingPersonName>SC US (TTGP), LTD. ("SC US (TTGP)")</reportingPersonName>
+      <citizenshipOrOrganization>E9</citizenshipOrOrganization>
+      <reportingPersonBeneficiallyOwnedNumberOfShares>
+        <soleVotingPower>0</soleVotingPower>
+        <sharedVotingPower>17804083</sharedVotingPower>
+        <soleDispositivePower>0</soleDispositivePower>
+        <sharedDispositivePower>17804083</sharedDispositivePower>
+      </reportingPersonBeneficiallyOwnedNumberOfShares>
+      <reportingPersonBeneficiallyOwnedAggregateNumberOfShares>17804083</reportingPersonBeneficiallyOwnedAggregateNumberOfShares>
+      <aggregateAmountExcludesCertainSharesFlag>N</aggregateAmountExcludesCertainSharesFlag>
+      <classPercent>4.3</classPercent>
+      <typeOfReportingPerson>OO</typeOfReportingPerson>
+      <comments>The information set forth on this cover page reflects information as of the date hereof.
+
+17,804,083 shares, of which 1,884,304 shares are directly owned by SCFP, 15,405,732 shares are directly owned by SCF, and 514,047 shares are directly owned by SC US/E EXPANSION FUND I MGMT. The general partner of SCF and the manager of SCFP is SEQUOIA CAPITAL FUND MANAGEMENT. The general partner of SC US/E EXPANSION FUND I MGMT and SEQUOIA CAPITAL FUND MANAGEMENT is SC US (TTGP).
+
+As of September 30, 2026, 23,567,430 shares, of which 2,512,407 shares were directly owned by SCFP, 20,540,976 shares were directly owned by SCF, and 514,047 shares were directly owned by SC US/E EXPANSION FUND I MGMT. The general partner of SCF and the manager of SCFP is SEQUOIA CAPITAL FUND MANAGEMENT. The general partner of SC US/E EXPANSION FUND I MGMT and SEQUOIA CAPITAL FUND MANAGEMENT is SC US (TTGP).
+
+Based on a total of 411,998,576 shares of Class A common stock as of October 26, 2026, as reported in the Issuer's Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on October 30, 2026.</comments>
+    </coverPageHeaderReportingPersonDetails>
+    <items>
+      <item1>
+        <issuerName>DoorDash, Inc.</issuerName>
+        <issuerPrincipalExecutiveOfficeAddress>303 2nd Street, South Tower, 8th Floor, San Francisco, CA, 94107</issuerPrincipalExecutiveOfficeAddress>
+      </item1>
+      <item2>
+        <filingPersonName>Sequoia Capital Fund Parallel, LLC
+Sequoia Capital Fund, L.P.
+SC US/E Expansion Fund I Management, L.P.
+Sequoia Capital Fund Management, L.P.
+SC US (TTGP), Ltd.
+
+The general partner of SCF and the manager of SCFP is SEQUOIA CAPITAL FUND MANAGEMENT. The general partner of SC US/E EXPANSION FUND I MGMT and SEQUOIA CAPITAL FUND MANAGEMENT is SC US (TTGP).</filingPersonName>
+        <principalBusinessOfficeOrResidenceAddress>2800 Sand Hill Road, Suite 101, Menlo Park, CA 94025</principalBusinessOfficeOrResidenceAddress>
+        <citizenship>Sequoia Capital Fund Parallel, LLC: Delaware; Sequoia Capital Fund, L.P., SC US/E Expansion Fund I Management, L.P., Sequoia Capital Fund Management, L.P., and SC US (TTGP), Ltd.: Cayman Islands.</citizenship>
+      </item2>
+      <item3>
+        <notApplicableFlag>Y</notApplicableFlag>
+      </item3>
+      <item4>
+        <amountBeneficiallyOwned>17,804,083 shares, of which 1,884,304 shares are directly owned by SCFP, 15,405,732 shares are directly owned by SCF, and 514,047 shares are directly owned by SC US/E EXPANSION FUND I MGMT. The general partner of SCF and the manager of SCFP is SEQUOIA CAPITAL FUND MANAGEMENT. The general partner of SC US/E EXPANSION FUND I MGMT and SEQUOIA CAPITAL FUND MANAGEMENT is SC US (TTGP).</amountBeneficiallyOwned>
+        <classPercent>4.3%. Based on a total of 411,998,576 shares of Class A common stock as of October 26, 2026, as reported in the Issuer's Quarterly Report on Form 10-Q filed with the Securities and Exchange Commission on October 30, 2026.</classPercent>
+        <numberOfSharesPersonHas>
+          <solePowerOrDirectToVote>0</solePowerOrDirectToVote>
+          <sharedPowerOrDirectToVote>SCFP: 1,884,304
+SCF: 15,405,732
+SC US/E EXPANSION FUND I MGMT: 514,047
+SEQUOIA CAPITAL FUND MANAGEMENT: 17,290,036 shares, of which 1,884,304 shares are directly owned by SCFP and 15,405,732 shares are directly owned by SCF. SEQUOIA CAPITAL FUND MANAGEMENT is the general partner of SCF and the manager of SCFP.
+SC US (TTGP): 17,804,083 shares, of which 1,884,304 shares are directly owned by SCFP, 15,405,732 shares are directly owned by SCF, and 514,047 shares are directly owned by SC US/E EXPANSION FUND I MGMT. The general partner of SCF and the manager of SCFP is SEQUOIA CAPITAL FUND MANAGEMENT. The general partner of SC US/E EXPANSION FUND I MGMT and SEQUOIA CAPITAL FUND MANAGEMENT is SC US (TTGP).</sharedPowerOrDirectToVote>
+          <solePowerOrDirectToDispose>0</solePowerOrDirectToDispose>
+          <sharedPowerOrDirectToDispose>SCFP: 1,884,304
+SCF: 15,405,732
+SC US/E EXPANSION FUND I MGMT: 514,047
+SEQUOIA CAPITAL FUND MANAGEMENT: 17,290,036 shares, of which 1,884,304 shares are directly owned by SCFP and 15,405,732 shares are directly owned by SCF. SEQUOIA CAPITAL FUND MANAGEMENT is the general partner of SCF and the manager of SCFP.
+SC US (TTGP): 17,804,083 shares, of which 1,884,304 shares are directly owned by SCFP, 15,405,732 shares are directly owned by SCF, and 514,047 shares are directly owned by SC US/E EXPANSION FUND I MGMT. The general partner of SCF and the manager of SCFP is SEQUOIA CAPITAL FUND MANAGEMENT. The general partner of SC US/E EXPANSION FUND I MGMT and SEQUOIA CAPITAL FUND MANAGEMENT is SC US (TTGP).</sharedPowerOrDirectToDispose>
+        </numberOfSharesPersonHas>
+      </item4>
+      <item5>
+        <notApplicableFlag>N</notApplicableFlag>
+        <classOwnership5PercentOrLess>Y</classOwnership5PercentOrLess>
+      </item5>
+      <item6>
+        <notApplicableFlag>Y</notApplicableFlag>
+      </item6>
+      <item7>
+        <notApplicableFlag>Y</notApplicableFlag>
+      </item7>
+      <item8>
+        <notApplicableFlag>Y</notApplicableFlag>
+      </item8>
+      <item9>
+        <notApplicableFlag>Y</notApplicableFlag>
+      </item9>
+      <item10>
+        <notApplicableFlag>Y</notApplicableFlag>
+      </item10>
+    </items>
+    <signatureInformation>
+      <reportingPersonName>SEQUOIA CAPITAL FUND PARALLEL, LLC ("SCFP")</reportingPersonName>
+      <signatureDetails>
+        <signature>/s/ Jung Yeon Son</signature>
+        <title>Jung Yeon Son, Authorized Signatory</title>
+        <date>11/04/2026</date>
+      </signatureDetails>
+    </signatureInformation>
+    <signatureInformation>
+      <reportingPersonName>SEQUOIA CAPITAL FUND, L.P. ("SCF")</reportingPersonName>
+      <signatureDetails>
+        <signature>/s/ Jung Yeon Son</signature>
+        <title>Jung Yeon Son, Authorized Signatory</title>
+        <date>11/04/2026</date>
+      </signatureDetails>
+    </signatureInformation>
+    <signatureInformation>
+      <reportingPersonName>SC US/E EXPANSION FUND I MANAGEMENT, L.P. ("SC US/E EXPANSION FUND I MGMT")</reportingPersonName>
+      <signatureDetails>
+        <signature>/s/ Jung Yeon Son</signature>
+        <title>Jung Yeon Son, Authorized Signatory</title>
+        <date>11/04/2026</date>
+      </signatureDetails>
+    </signatureInformation>
+    <signatureInformation>
+      <reportingPersonName>SEQUOIA CAPITAL FUND MANAGEMENT, L.P. ("SEQUOIA CAPITAL FUND MANAGEMENT")</reportingPersonName>
+      <signatureDetails>
+        <signature>/s/ Jung Yeon Son</signature>
+        <title>Jung Yeon Son, Authorized Signatory</title>
+        <date>11/04/2026</date>
+      </signatureDetails>
+    </signatureInformation>
+    <signatureInformation>
+      <reportingPersonName>SC US (TTGP), LTD. ("SC US (TTGP)")</reportingPersonName>
+      <signatureDetails>
+        <signature>/s/ Jung Yeon Son</signature>
+        <title>Jung Yeon Son, Authorized Signatory</title>
+        <date>11/04/2026</date>
+      </signatureDetails>
+    </signatureInformation>
+  </formData>
+</edgarSubmission>

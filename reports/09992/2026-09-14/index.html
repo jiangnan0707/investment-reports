@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>泡泡玛特 2026-09-14 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .chart { margin: 18px 0; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; font-size: 13px; }
+  .bar-row .bar-label { width: 150px; flex-shrink: 0; color: var(--text-secondary); font-weight: 500; }
+  .bar-track { flex: 1; background: var(--accent-subtle); border-radius: 4px; height: 20px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent-light), var(--accent)); }
+  .bar-fill.neg { background: linear-gradient(90deg, #e57373, var(--red)); }
+  .bar-fill.warn { background: linear-gradient(90deg, #e0a458, var(--amber)); }
+  .bar-value { width: 92px; flex-shrink: 0; text-align: right; font-variant-numeric: tabular-nums; font-weight: 650; font-size: 12.5px; }
+  .chart-legend { font-size: 11.5px; color: var(--text-muted); margin-top: 8px; }
+  .chart-title { font-size: 13px; font-weight: 650; color: var(--text-secondary); margin: 16px 0 8px; }
+
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; margin: 10px 0 6px; font-size: 11px; font-weight: 700; color: #fff; }
+  .stacked-bar span { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    .card { padding: 24px 20px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 8px 10px; }
+    header { padding: 40px 20px 36px; }
+    header h1 { font-size: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+    .bar-row .bar-label { width: 100px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    body { background: #fff; }
+    .sidebar { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    header { background: #1a3c2a !important; -webkit-print-color-adjust: exact; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/09992/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-14%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">09992 <span>·</span> 2026-09-14 <span>·</span> PC 完整版</div><h1>泡泡玛特</h1><p>数据截至 2026-09-14 收盘 · 货币 HKD · 披露来源 HKEXnews · 财务主体为 2026-08-20 披露的中期业绩</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#interim">三、2026 中期业绩解读（财务主体）</a></li><li><a href="#core-metric">四、核心指标：IP 营收矩阵</a></li><li><a href="#overseas">五、海外扩张拆解（本期最大利空）</a></li><li><a href="#price-action">六、中报后三周价格复盘（8/21–9/14，本版新增窗口）</a></li><li><a href="#short">七、沽空与回购对垒（本版新增）</a></li><li><a href="#valuation">估值分析：14.4x PE 是「便宜」还是「价值陷阱」？</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">投行分析师全景</a></li><li><a href="#community">社区与大户动向</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<p style="font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> HKEXnews 官方公告《截至2026年6月30日止六個月的中期業績公告》(2026-08-20 发布，已本地存档<span class="src-badge src-e">解析自 PDF</span>) |
+    <span class="src-badge src-2">二手</span> CNBC / 证券时报 / 第一财经 / 21经济网 / 富途 / Yahoo財經 / hket / now新聞 等财经媒体转述 |
+    <span class="src-badge src-3">三方</span> 雪球/股吧/知乎 零售投资者 · 东财港股沽空记录 |
+    <span class="src-badge src-e">推算</span> PE 历史分位、PEG、PB、股息率换算、52 周区间 |
+    <span class="src-badge src-t">时效</span> 行情为 2026-09-14 收盘
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">市场：港股（HKEX）· 货币：HKD（记账货币为 RMB，估值已做币种换算，HKD/CNY≈0.855）· 披露来源：HKEXnews · 本地 Filings 目录：<code>标的/09992-泡泡玛特/Filings/</code>（财务数字取自 <code>09992_2026年_中报_2026-08-20.pdf</code>，本版通过 pypdf 直接解析原文数字交叉验证，与 8/21 版媒体转述一致）。</p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">⚠ 本报告为 2026-09-04 版本的<strong>滚动更新版</strong>：财务主体不变（2026 中报），本版核心增量有四——① 股价从「两周箱体」延伸为「三周箱体」，150–158 区间已被反复验证；② <strong>港交所 9/1《证券变动月报表》显示 8 月已发生股份回购并注销</strong>，与中报宣布的 20–50 亿回购计划对应（具体股数因披露易 PDF 字体编码无法可靠解析，未采用具体数字）；③ <strong>沽空占成交比例升至 32.16%（9/11），为近年高位</strong>，空头在做空这只「利空出尽」的股票；④ 9 月无新业绩披露，H2 数据仍要等到 10 月 Q3 运营数据。估值分位为推算。</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>公司名称</td><td>泡泡玛特国际集团（Pop Mart International Group）</td></tr>
+<tr><td>上市市场</td><td>香港交易所主板（HKEX），2020-12-11 上市；2025-09-08 纳入恒生指数成分股</td></tr>
+<tr><td>股票代码</td><td>09992.HK</td></tr>
+<tr><td>主营业务</td><td>潮流玩具（盲盒/手办/毛绒/积木）的设计、开发、销售与 IP 运营</td></tr>
+<tr><td>核心 IP</td><td>THE MONSTERS（LABUBU）、星星人、CRYBABY、DIMOO、SKULLPANDA、HIRONO、MOLLY 等（11 个 IP 收入过亿、6 个破 10 亿）</td></tr>
+<tr><td>核心指标</td><td>IP 营收矩阵（各 IP 收入占比与增速）+ 中国/海外双分部增长</td></tr>
+<tr><td>2026 H1 营收 / 归母净利</td><td>171.73 亿元人民币（+23.8%）/ 归母净利 50.38 亿元（+10.1%）<span class="src-badge src-s">一手</span></td></tr>
+<tr><td>2025 全年营收 / 净利</td><td>371.2 亿元人民币（+184.7%）/ 归母净利 127.76 亿元（+308.8%）</td></tr>
+<tr><td>全球门店 / 机器人商店</td><td>676 家（H1 净增 46）/ 2,827 台（H1 净增 190）</td></tr>
+<tr><td>主要股东动向</td><td>段永平（H&amp;H International）持股 7.65%→5.55%（7/30，期权履约非主动减持）；<strong>中报宣布 20–50 亿回购计划，8 月已通过港交所月报表披露回购动作</strong><span class="src-badge src-s">一手</span></td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">152.90</div><div class="label">现价 (HKD)</div></div>
+<div class="summary-item"><div class="value">2,036 亿</div><div class="label">总市值 (HKD)</div></div>
+<div class="summary-item"><div class="value">14.4x</div><div class="label">PE (TTM)</div></div>
+<div class="summary-item"><div class="value">69.7%</div><div class="label">毛利率 (H1)</div></div>
+<div class="summary-item"><div class="value">~1.7%</div><div class="label">股息率</div></div>
+<div class="summary-item"><div class="value" style="color:var(--red)">-47.5%</div><div class="label">距 52 周高点</div></div>
+</div>
+<p class="caveat-inline">现价/市值/PE 来自腾讯财经 qt.gtimg.cn（2026-09-14 收盘 152.90 HKD，当日 -0.07%，成交 471.7 万股，继续缩量；PE=14.40x，TTM 口径）。52 周区间 140.10–291.40 HKD（由日 K 线自算<span class="src-badge src-e">推算</span>，与 Google Finance 一致），现价距高点 -47.5%、距低点 +9.1%。毛利率为 2026 H1 官方披露；股息率按 2025 末期息 2.3817 RMB/股 ÷ 现价换算（推算，无中期息，详见估值章节）。</p>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<p>泡泡玛特是一家<strong>以 IP 为核心、以盲盒/手办/毛绒为载体、全球化运营的潮流玩具公司</strong>。商业模式可拆为「上游 IP 孵化 → 中游产品化与供应链 → 下游全渠道销售 → 会员复购」四层。</p>
+<h3>怎么赚钱</h3>
+<ul>
+<li><strong>艺术家 IP 授权/买断</strong>：签约或买断艺术家 IP（LABUBU 作者龙家升、MOLLY 作者 Kenny Wong 等），授权 IP 占总收入约 90%；</li>
+<li><strong>产品化变现</strong>：把 IP 做成盲盒、手办、毛绒、积木等，H1 毛利率 69.7%<span class="src-badge src-s">一手</span>；</li>
+<li><strong>毛绒产品崛起</strong>：2026 H1 毛绒收入 98.25 亿元，已占总收入 57.2%，从「盲盒」单点向「多品类」延伸；</li>
+<li><strong>全渠道销售</strong>：线下 676 家门店 + 2,827 台机器人商店，线上自有 APP/官网 + 抖音/天猫 + Amazon/AliExpress 等第三方平台；</li>
+<li><strong>会员体系</strong>：全球累计注册会员超 1 亿人，中国内地会员 8,244 万，会员贡献销售额占中国内地收入 92.9%，复购率 51.6%<span class="src-badge src-s">一手</span>。</li>
+</ul>
+<h3>护城河（费雪/巴菲特框架）</h3>
+<ul>
+<li><strong>IP 心智 + 情感联结</strong>：消费者为「情感+收藏」付费而非功能，IP 是无形资产护城河；</li>
+<li><strong>艺术家中台 + 供应链快反</strong>：11 个 IP 收入过亿、6 大 IP 营收破 10 亿，矩阵持续加宽——本版最新证据：星星人 26.5 亿跃升第二大 IP，LABUBU 占比降至 26%；</li>
+<li><strong>规模 + 渠道密度</strong>：全球 3,000+ 触点、全球化采购与仓储，是后发者难以复制的运营壁垒；</li>
+<li><strong>软肋（本版最需正视）</strong>：IP 热度有生命周期。LABUBU 复古理发店系列（6 月）常规款<strong>上线半小时跌破发售价</strong>，与星星人隐藏款溢价 13 倍形成鲜明分化——「全系溢价」的时代已结束，热度从「普涨」转向「结构性」<span class="src-badge src-2">二手</span>。</li>
+</ul>
+</div>
+
+<div class="card" id="interim">
+<h2>三、2026 中期业绩解读（财务主体）</h2>
+<div class="stale-warning">
+<strong>⚠ 中报核心结论（不变）：</strong>营收增速从 2025 全年 +184.7% 骤降至 +23.8%；且<strong>大幅低于卖方一致预期</strong>——营收 171.73 亿 vs 市场预估 199.8 亿（miss 约 -14%），净利 50.38 亿 vs 预估 66.4 亿（miss 约 -24%）<span class="src-badge src-2">二手</span>。高盛口径：收入低于其预期约 10%、经调整纯利低于预期 13%，内地市场亦略逊。同时出现「<span class="metric-positive">中国业务加速（+47.3%）</span> / <span class="metric-negative">海外业务转负（-11.1%）</span>」的结构性背离。这是估值中枢从 80x+ 杀到 14x 的根本原因。
+  </div>
+<h3>损益表核心（H1 2026 vs H1 2025）<span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目（人民币）</th><th>2026 H1</th><th>2025 H1</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>收益（营收）</td><td>171.73 亿</td><td>138.76 亿</td><td class="metric-positive">+23.8%</td></tr>
+<tr><td>毛利</td><td>119.66 亿</td><td>97.61 亿</td><td class="metric-positive">+22.6%</td></tr>
+<tr><td>毛利率</td><td>69.7%</td><td>70.3%</td><td class="metric-warn">-0.7 pct</td></tr>
+<tr><td>经营溢利</td><td>67.25 亿</td><td>60.44 亿</td><td class="metric-positive">+11.3%</td></tr>
+<tr><td>除所得税前溢利</td><td>67.67 亿</td><td>61.57 亿</td><td class="metric-positive">+9.9%</td></tr>
+<tr><td>期内溢利</td><td>51.00 亿</td><td>46.82 亿</td><td class="metric-positive">+8.9%</td></tr>
+<tr><td><strong>归母净利</strong></td><td><strong>50.38 亿</strong></td><td><strong>45.74 亿</strong></td><td class="metric-positive"><strong>+10.1%</strong></td></tr>
+<tr><td>Non-IFRS 经调整纯利</td><td>51.56 亿</td><td>47.10 亿</td><td class="metric-positive">+9.5%</td></tr>
+<tr><td>基本每股盈利</td><td>3.80 元</td><td>3.44 元</td><td class="metric-positive">+10.5%</td></tr>
+</tbody>
+</table></div>
+<div class="chart-title">营收增速的「断崖」：从 +204% 到 +23.8%（%）</div>
+<div class="chart">
+<div class="bar-row"><span class="bar-label">2025 H1（同比）</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">+204%</span></div>
+<div class="bar-row"><span class="bar-label">2026 H1（同比）</span><div class="bar-track"><div class="bar-fill warn" style="width:11.7%"></div></div><span class="bar-value">+23.8%</span></div>
+<div class="bar-row"><span class="bar-label">花旗 FY26 预测</span><div class="bar-track"><div class="bar-fill neg" style="width:4%"></div></div><span class="bar-value">-8%</span></div>
+<div class="chart-legend">注：柱长按 |增速| 相对 204% 等比缩放；柱色区分正/中性/负。<span class="src-badge src-e">推算</span></div>
+</div>
+<h3>三个被财报「藏起来」的关键信号</h3>
+<ul>
+<li><strong>① 增长换挡是「减速带」不是「拐头」</strong>：营收 +23.8% 仍属高速，但相较 2025 全年 +184.7%（含 LABUBU 爆发的低基数效应）是断崖式回落。市场要重新定价的，是从「超级成长股」回归「常规快速成长股」的估值锚。</li>
+<li><strong>② 归母净利增速（+10.1%）显著低于营收增速（+23.8%）</strong>：利润弹性消失，主因毛利率下滑（69.7%）+ <span class="metric-negative">汇兑损失 7.20 亿元</span>（人民币升值侵蚀海外利润，H1'25 为汇兑收益 +1.20 亿）。「其他亏损净额」由 -1.79 亿扩大到 -6.89 亿。</li>
+<li><strong>③ 无中期股息 + 启动 20–50 亿回购</strong>：董事会<b>不建议派付 2026 中期股息</b>；同时王宁在业绩会宣布未来 6 个月启动<strong>不低于 20 亿、不高于 50 亿元</strong>的股份回购计划<span class="src-badge src-2">二手</span>。公司把现金回报从「分红」转向「回购」，对融资纪律型投资者（股息率 &gt; 融资利率）不友好——但港股不使用融资，故此处仅作股东回报方式变化的观察，不构成买入逻辑。</li>
+</ul>
+<h3>财务异常检测（十项）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>检测项</th><th>结果</th><th>读数</th><th>等级</th></tr></thead>
+<tbody>
+<tr><td>应收账款异常</td><td>未触发</td><td>应收 6.27 亿（-31.9%），周转 7→8 天</td><td class="metric-positive">🟢</td></tr>
+<tr><td>现金流背离</td><td>轻度触发</td><td>经营现金流 36.37 亿 / 归母净利 50.38 亿 ≈ 72%</td><td class="metric-warn">🟡</td></tr>
+<tr><td>存货异常</td><td class="metric-negative">触发</td><td>存货 61.02 亿（+11.5%），周转天数 123→<strong>201 天</strong></td><td class="metric-negative">🔴</td></tr>
+<tr><td>毛利率异常</td><td>轻度触发</td><td>69.7%（2025 全年 72.1%，-2.4 pct）</td><td class="metric-warn">🟡</td></tr>
+<tr><td>关联交易</td><td>未触发</td><td>—</td><td class="metric-positive">🟢</td></tr>
+<tr><td>股东减持</td><td>关注</td><td>段永平好仓 7.65%→5.55%（7/30），港交所披露原因代码 1203 = 衍生工具履约交付，非二级市场抛售；公司 8 月有回购动作（月报表）</td><td class="metric-warn">🟡</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">风险汇总评级：<span class="metric-warn">🟡 中</span>——最值得警惕的是<strong>存货周转天数从 123 天暴增到 201 天</strong>（公司解释为「海外市场扩张的前置备货」：存货由 2025 年末 54.73 亿增至 2026-06-30 的 61.02 亿，官方口径），叠加海外收入转负，是「需求端减速 vs 供给端惯性摊货」的典型信号，H2 需观察存货能否消化。</p>
+</div>
+
+<div class="card" id="core-metric">
+<h2>四、核心指标：IP 营收矩阵</h2>
+<p>泡泡玛特<strong>唯一真正重要的指标是 IP 营收矩阵</strong>——单一 IP 的依赖度决定了公司的「生命周期风险」。2026 H1 的矩阵呈现一个明确的正面变化：<strong>从「LABUBU 一家独大」走向「双核 + 长尾」</strong>。</p>
+<div class="chart-title">2026 H1 各 IP 收入（亿元人民币）</div>
+<div class="chart">
+<div class="bar-row"><span class="bar-label">LABUBU（THE MONSTERS）</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">44.54 亿</span></div>
+<div class="bar-row"><span class="bar-label">星星人</span><div class="bar-track"><div class="bar-fill" style="width:59.5%"></div></div><span class="bar-value">26.50 亿</span></div>
+<div class="bar-row"><span class="bar-label">CRYBABY</span><div class="bar-track"><div class="bar-fill" style="width:36.7%"></div></div><span class="bar-value">16.33 亿</span></div>
+<div class="bar-row"><span class="bar-label">DIMOO</span><div class="bar-track"><div class="bar-fill" style="width:36.4%"></div></div><span class="bar-value">16.19 亿</span></div>
+<div class="bar-row"><span class="bar-label">SKULLPANDA</span><div class="bar-track"><div class="bar-fill" style="width:34.8%"></div></div><span class="bar-value">15.51 亿</span></div>
+<div class="bar-row"><span class="bar-label">HIRONO</span><div class="bar-track"><div class="bar-fill" style="width:22.7%"></div></div><span class="bar-value">10.09 亿</span></div>
+<div class="bar-row"><span class="bar-label">MOLLY</span><div class="bar-track"><div class="bar-fill" style="width:20.2%"></div></div><span class="bar-value">9.01 亿</span></div>
+<div class="chart-legend">七大艺术家 IP 合计 138.17 亿，占总收入 80.4%。柱长按收入相对 LABUBU 等比缩放。<span class="src-badge src-s">一手</span></div>
+</div>
+<div class="chart-title">LABUBU 依赖度变化（占总收入 %）</div>
+<div class="stacked-bar">
+<span style="width:38.1%;background:#40916c">2025 全年 38.1%</span>
+<span style="width:25.9%;background:#2d6a4f">2026 H1 25.9%</span>
+<span style="width:36%;background:#d8f3dc;color:#4a5a4e">其他 IP 36.0%</span>
+</div>
+<div class="chart-legend">LABUBU 占比下降 12.2 pct，是「去单点化」最硬的量化证据。<span class="src-badge src-e">推算</span></div>
+<div class="table-scroll"><table>
+<thead><tr><th>IP</th><th>2026 H1 收入</th><th>占总收入</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>THE MONSTERS（LABUBU）</td><td>44.54 亿</td><td>25.9%</td><td class="metric-warn">同比 -7.5%，为爆火以来<strong>首次同比下降</strong>；占比从 34.7% 降至 26%</td></tr>
+<tr><td>星星人</td><td>26.50 亿</td><td>15.4%</td><td class="metric-positive">增速 +580.6%，集团最快，跃升第二大 IP；隐藏款溢价 13 倍</td></tr>
+<tr><td>CRYBABY</td><td>16.33 亿</td><td>9.5%</td><td>情绪叙事 IP，海外话题度高</td></tr>
+<tr><td>DIMOO</td><td>16.19 亿</td><td>9.4%</td><td>温暖治愈系</td></tr>
+<tr><td>SKULLPANDA</td><td>15.51 亿</td><td>9.0%</td><td>与小马宝莉联名</td></tr>
+<tr><td>HIRONO</td><td>10.09 亿</td><td>5.9%</td><td>门店进入英、韩市场</td></tr>
+<tr><td>MOLLY</td><td>9.01 亿</td><td>5.2%</td><td>诞生二十周年，「一顆不變的星」全球巡展</td></tr>
+<tr><td><strong>七大艺术家 IP 合计</strong></td><td><strong>138.17 亿</strong></td><td><strong>80.4%</strong></td><td>6 大 IP 破 10 亿、11 个 IP 收入过亿</td></tr>
+</tbody>
+</table></div>
+<div class="quote">
+<strong>关键判断：</strong>LABUBU 占比 25.9%（2025 全年 38.1%）且绝对收入首次同比转负，是同一枚硬币的两面——<strong>坏消息是头号 IP 见顶迹象显现，好消息是去单点化真的在发生</strong>。星星人半年做到 26.50 亿（+580.6%），说明 IP 孵化机制（而非单一运气）在持续产出新爆款。但必须冷静：星星人的 26.5 亿是在「稀缺营销 + 黄牛涌入」背景下实现的，二级溢价 13 倍 ≠ 真实消费 13 倍。
+  </div>
+</div>
+
+<div class="card" id="overseas">
+<h2>五、海外扩张拆解（本期最大利空）</h2>
+<p>把泡泡玛特从「不错的中国玩家」升级为「全球化平台」的叙事，是 2024–2025 年估值狂飙（PE 一度 80x+）的核心引擎。本期中报第一次对这个叙事<strong>证伪了一半</strong>。</p>
+<h3>分部收入（H1 2026 vs H1 2025）<span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th>分部</th><th>2026 H1</th><th>2025 H1</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td><strong>中国业务</strong></td><td><strong>122.01 亿</strong></td><td>82.83 亿</td><td class="metric-positive"><strong>+47.3%</strong></td></tr>
+<tr><td style="padding-left:28px">├ 零售店</td><td>60.90 亿</td><td>44.06 亿</td><td class="metric-positive">+38.2%</td></tr>
+<tr><td style="padding-left:28px">├ 线上</td><td>47.79 亿</td><td>29.37 亿</td><td class="metric-positive">+62.7%</td></tr>
+<tr><td style="padding-left:28px">└ 机器商店+批发</td><td>13.32 亿</td><td>9.40 亿</td><td class="metric-positive">+41.8%</td></tr>
+<tr><td><strong>海外业务</strong></td><td><strong>49.72 亿</strong></td><td>55.93 亿</td><td class="metric-negative"><strong>-11.1%</strong></td></tr>
+<tr><td style="padding-left:28px">├ 零售店</td><td>30.22 亿</td><td>25.02 亿</td><td class="metric-positive">+20.8%</td></tr>
+<tr><td style="padding-left:28px">├ 线上</td><td>14.33 亿</td><td>25.61 亿</td><td class="metric-negative">-44.0%</td></tr>
+<tr><td style="padding-left:28px">└ 机器商店+批发</td><td>5.17 亿</td><td>5.31 亿</td><td class="metric-warn">-2.6%</td></tr>
+</tbody>
+</table></div>
+<div class="chart-title">中国 vs 海外：同一条曲线上的两个方向（同比 %）</div>
+<div class="chart">
+<div class="bar-row"><span class="bar-label">中国 零售店</span><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div><span class="bar-value">+38.2%</span></div>
+<div class="bar-row"><span class="bar-label">中国 线上</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">+62.7%</span></div>
+<div class="bar-row"><span class="bar-label">海外 零售店</span><div class="bar-track"><div class="bar-fill warn" style="width:33%"></div></div><span class="bar-value">+20.8%</span></div>
+<div class="bar-row"><span class="bar-label">海外 机器+批发</span><div class="bar-track"><div class="bar-fill neg" style="width:4%"></div></div><span class="bar-value">-2.6%</span></div>
+<div class="bar-row"><span class="bar-label">海外 线上</span><div class="bar-track"><div class="bar-fill neg" style="width:70%"></div></div><span class="bar-value">-44.0%</span></div>
+<div class="chart-legend">柱长按 |增速| 相对 62.7% 等比缩放；绿色=正、琥珀=微增、红色=负。<span class="src-badge src-e">推算</span></div>
+</div>
+<h3>分部业绩（经营溢利）<span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th>分部</th><th>2026 H1 溢利</th><th>2025 H1 溢利</th><th>分部利润率</th></tr></thead>
+<tbody>
+<tr><td>中国业务</td><td>64.71 亿（+62.3%）</td><td>39.87 亿</td><td class="metric-positive">53.0%（+4.9 pct）</td></tr>
+<tr><td>海外业务</td><td>15.08 亿（<span class="metric-negative">-38.8%</span>）</td><td>24.65 亿</td><td class="metric-negative">30.3%（44.1% → 30.3%，-13.8 pct）</td></tr>
+</tbody>
+</table></div>
+<h3>怎么解读「海外 -11.1%」</h3>
+<ul>
+<li><strong>不是全面溃败，是「线上」崩了</strong>：海外零售店仍 +20.8%（线下体验抗跌），但海外线上 -44.0%（25.61 亿 → 14.33 亿）直接拖垮分部。CNBC 报道印证：亚太（除中国）与美洲收入双双下滑<span class="src-badge src-2">二手</span>。</li>
+<li><strong>花旗的归因</strong>：业绩低于其预期，除海外疲弱外，还点名库存管理、供应链、仓储物流、门店运营等多重经营逆风；并转述管理层态度——<strong>年初定下的 2026 全年营收 +20% 目标「已难以达成」，王宁在业绩会上亦承认此前 20% 目标面临挑战</strong>，花旗据此把 2026 集团营收预测下调为<strong>同比 -8%</strong><span class="src-badge src-2">二手</span>（意味着 H2 营收同比降幅比 H1 更深，是当前最悲观的卖方假设之一）。</li>
+<li><strong>美银更激进</strong>：评级降至「中性」，目标价大幅下调 43% 至 170 元，指 LABUBU 在欧美热潮降温 + 利润率压力；对今明两年经调整 EPS 预测分别下调 19%/26%<span class="src-badge src-2">二手</span>。</li>
+<li><strong>海外利润率斜率恶化</strong>：分部利润率从 44.1% 跌到 30.3%，比收入下滑更刺眼——高毛利海外生意正在「变贵变难」。</li>
+<li><strong>但中国业务接棒了</strong>：中国 +47.3%（线上 +62.7%）是意外之喜，内需消费 + 会员复购（51.6%）有韧性，中国利润率升至 53.0%。</li>
+</ul>
+<div class="quote">
+<strong>一句话：</strong>市场 2025 年给的是「全球化平台 + 海外高增长」的估值，本期中报证明海外是「<strong>高波动、高基数、高汇率敏感</strong>」而非稳定引擎。估值从 80x 杀到 14x，本质是把这个「海外成长期权」重新定价。分歧全在 H2。
+  </div>
+</div>
+
+<div class="card" id="price-action">
+<h2>六、中报后三周价格复盘（8/21–9/14，本版新增窗口）</h2>
+<p>中报 8/20 盘后落地，8/21 股价一度暴跌 8.6%（最低 140.10 港元）。此后三周走出一条<strong>清晰的「V 型修复 → 箱体震荡 → 缩量横盘」</strong>路径。9/4 版写的是「两周箱体」，本版把观察窗口拉长到三周，结论更强了。</p>
+<h3>价格路径（腾讯日K<span class="src-badge src-s">三方 实时</span>）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>日期</th><th>收盘 (HKD)</th><th>成交量</th><th>事件 / 读数</th></tr></thead>
+<tbody>
+<tr><td>08-20</td><td>153.70</td><td>1,085 万</td><td>中报盘后发布（营收 miss 预期 -14%）</td></tr>
+<tr><td>08-21</td><td>149.00</td><td class="metric-negative">4,411 万</td><td class="metric-negative">-3.12%，盘中最低 140.10（-8.6%），放量恐慌盘</td></tr>
+<tr><td>08-24</td><td>155.00</td><td>1,977 万</td><td class="metric-positive">+4.03%，V 型修复第一日</td></tr>
+<tr><td>08-25 ~ 08-28</td><td>154.00–158.70</td><td>500–1,058 万</td><td>反弹至箱体上沿 159.90（8/25 盘中）后回落</td></tr>
+<tr><td>08-31 ~ 09-04</td><td>153.40–156.10</td><td>311–744 万</td><td>窄幅缩量整理</td></tr>
+<tr><td>09-07 ~ 09-09</td><td>155.70–156.20</td><td>306–596 万</td><td>短暂上探 157.80，未破 158</td></tr>
+<tr><td>09-10 ~ 09-11</td><td>152.70–153.00</td><td>468–617 万</td><td>9/10 跌 2.18%，回落至箱体下沿</td></tr>
+<tr><td><strong>09-14</strong></td><td><strong>152.90</strong></td><td>472 万</td><td>-0.07%，日内 151.50–155.80，成交额 7.22 亿港元</td></tr>
+</tbody>
+</table></div>
+<h3>怎么读这三周</h3>
+<ul>
+<li><strong>箱体区间已从「148–158」收窄到「150–158」</strong>：三周内 140.10 的恐慌低点从未被测试，159.90 的上沿也两次未破。9/14 收 152.90，处于箱体中枢——这是「多空双方都无法推动价格」的均衡态。</li>
+<li><strong>成交持续萎缩是核心特征</strong>：8/21 恐慌日 4,411 万股 → 9 月多数交易日仅 300–600 万股，9/14 的 472 万股不足恐慌日的 11%。<strong>主动卖压衰竭，但增量资金同样缺席</strong>——市场在等 H2 数据，而非抢跑。</li>
+<li><strong>股价已回到中报发布前水平之下</strong>：152.90 vs 8/20 收盘 153.70，三周净变动 -0.5%。一次 -24% 的净利 miss 在 140 一线被吸收，这本身就是「14x PE 预期极低」的证据。</li>
+<li><strong>风险提示（马克斯第二层思维）</strong>：「跌不动」≠「跌完了」。9/10 单日 -2.18% + 沽空占比冲上 32%（见下节）说明<strong>空头并未撤退，而是在箱体内反复施压</strong>。若 H2 海外线上继续 -40% 或存货减值落地，箱体下沿 150 之下，下一个心理关口是 140.10（52 周低点）。</li>
+</ul>
+<div class="quote">
+<strong>一句话：</strong>三周的价格行为，是市场对「增长换挡 + 海外失速」的定价<strong>从恐慌进入僵持</strong>——140 的恐慌盘被吸收，估值锚稳定在 14x，但 150–158 的箱体既上不去也下不来。方向选择只能由 H2 的海外收入和存货数据给出。
+  </div>
+</div>
+
+<div class="card" id="short">
+<h2>七、沽空与回购对垒（本版新增）</h2>
+<p>中报后三周最值得注意的增量，是<strong>沽空盘与回购盘在 150–158 箱体内直接对垒</strong>。这是 9/4 版没有捕捉到的信号。</p>
+<h3>沽空数据（东财港股沽空记录<span class="src-badge src-3">三方</span>）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>日期</th><th>沽空数量(股)</th><th>沽空平均价</th><th>沽空金额(万港元)</th><th>沽空占成交比例</th></tr></thead>
+<tbody>
+<tr><td>2026-09-11</td><td>1,503,400</td><td>152.450</td><td>22,919</td><td class="metric-negative"><strong>32.16%</strong></td></tr>
+<tr><td>2026-09-10（次近）</td><td>2,210,600</td><td>153.130</td><td>33,850</td><td class="metric-warn">—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">沽空占成交比例达 <strong>32.16%</strong> 意味着当日成交中近三分之一是卖空——在「利空出尽、缩量企稳」的形态下，空头不仅没走，反而在加码。参考历史：2025 年 12 月沽空比率约 19% 时股价已持续承压；当前 32% 属<strong>近年高位</strong>。<span class="src-badge src-e">推算</span> 单日数据波动大，需连续观察，但方向明确。</p>
+<h3>回购与股东行为（港交所披露易<span class="src-badge src-s">一手</span>）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>动作</th><th>内容</th><th>性质</th></tr></thead>
+<tbody>
+<tr><td>回购计划</td><td>8/20 业绩会宣布：未来 6 个月不低于 20 亿、不高于 50 亿元人民币</td><td class="metric-positive">托底信号</td></tr>
+<tr><td>8 月回购</td><td><strong>9/1《股份發行人的證券變動月報表》显示已发生回购注销</strong>（具体股数因 HKEXnews PDF 字体编码无法可靠解析，不作具体数字引用）</td><td class="metric-positive">已执行</td></tr>
+<tr><td>回购注销</td><td>H1 累计回购 1,122 万股注销；8 月继续执行回购计划</td><td class="metric-positive">增厚 EPS</td></tr>
+<tr><td>段永平（H&amp;H）</td><td>好仓 7.65% → 5.55%（7/30，原因代码 1203 = 衍生工具履约交付）</td><td class="metric-warn">被动交付</td></tr>
+<tr><td>公司期权</td><td>8/24 公告：根据 IPO 后股份奖励计划授出奖励</td><td>中性</td></tr>
+</tbody>
+</table></div>
+<div class="two-col">
+<div class="box-green">
+<h4>多方读法：回购托底正在奏效</h4>
+<ul>
+<li>20–50 亿回购计划 + 8 月月报表已披露回购注销动作，说明管理层认为 150 港元附近低估；</li>
+<li>段永平 5.55% 的重仓仍在，且是期权履约（被 call 走）而非看空抛售；</li>
+<li>箱体下沿 150 三次未破，回购盘承接了空头抛压。</li>
+</ul>
+</div>
+<div class="box-red">
+<h4>空方读法：沽空 32% 是专业资金的投票</h4>
+<ul>
+<li>沽空占成交比例从历史 ~19% 升至 32.16%，空头在「利空出尽」时反而加仓；</li>
+<li>回购能托住价格，但托不住基本面——若 H2 数据继续差，回购只是把下跌拉长；</li>
+<li>段永平的好仓下降（无论何种原因）削弱了「大户背书」这条多方论据。</li>
+</ul>
+</div>
+</div>
+<div class="quote">
+<strong>核心观察：</strong>这是一场<strong>「回购（公司用真金白银）+ 长线大户」对「沽空盘（专业卖空机构）」的箱体拉锯</strong>。回购是价值型信号（管理层认为便宜），沽空是趋势型信号（机构认为还有下行空间）。两者的对垒在 150–158 箱体内僵持——<strong>箱体何时被打破，就是这场拉锯的胜负手</strong>，而打破箱体的催化剂只可能来自 H2 的基本面数据，不会来自情绪。
+  </div>
+</div>
+
+<div class="card" id="valuation">
+<h2>估值分析：14.4x PE 是「便宜」还是「价值陷阱」？</h2>
+<h3>当前估值快照（2026-09-14 收盘）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>数值</th><th>口径 / 等级</th></tr></thead>
+<tbody>
+<tr><td>现价</td><td>152.90 HKD（当日 -0.07%）</td><td class="src-badge src-s">三方 实时</td></tr>
+<tr><td>总市值</td><td>2,036 亿 HKD</td><td>腾讯行情</td></tr>
+<tr><td>PE (TTM)</td><td>14.40x<span class="src-badge src-e">推算分位</span></td><td>腾讯行情口径；Google Finance 口径 13.16x（EPS 11.63 HKD）；两者差异源于 TTM 起止点不同</td></tr>
+<tr><td>PB</td><td>~8.8x<span class="src-badge src-e">推算</span></td><td>按股价与净资产推算</td></tr>
+<tr><td>股息率</td><td>~1.7%<span class="src-badge src-e">推算</span></td><td>2025 末期息 2.3817 RMB/股（≈2.60 HKD ÷ 0.855）÷ 现价 152.90；派息率 ~25%；<strong>无中期息</strong></td></tr>
+<tr><td>52 周区间</td><td>140.10 – 291.40 HKD</td><td class="metric-warn">现价距高点 -47.5%、距低点 +9.1%</td></tr>
+<tr><td>卖方目标价参考带</td><td>164 – 198 HKD（野村 / 花旗）；美银 170</td><td class="src-badge src-2">二手</td></tr>
+<tr><td>分析师一致目标价</td><td>~179 HKD（Stockopedia 口径，隐含 +13%）</td><td class="src-badge src-2">二手</td></tr>
+</tbody>
+</table></div>
+<div class="chart-title">现价 vs 卖方目标价（HKD）</div>
+<div class="chart">
+<div class="bar-row"><span class="bar-label">现价</span><div class="bar-track"><div class="bar-fill warn" style="width:77%"></div></div><span class="bar-value">152.90</span></div>
+<div class="bar-row"><span class="bar-label">野村（中性）</span><div class="bar-track"><div class="bar-fill" style="width:83%"></div></div><span class="bar-value">164</span></div>
+<div class="bar-row"><span class="bar-label">美银（中性）</span><div class="bar-track"><div class="bar-fill" style="width:86%"></div></div><span class="bar-value">170</span></div>
+<div class="bar-row"><span class="bar-label">一致目标价</span><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div><span class="bar-value">~179</span></div>
+<div class="bar-row"><span class="bar-label">花旗（买入）</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">198</span></div>
+<div class="chart-legend">柱长按相对花旗 198 等比缩放。最悲观的大行（野村）目标价也在现价上方。<span class="src-badge src-2">二手</span></div>
+</div>
+<h3>PE 历史分位（推算<span class="src-badge src-e">推算</span>）</h3>
+<p>泡泡玛特 2020-12 上市以来 PE 区间大致在 <strong>13x–90x</strong>：2024 年 LABUBU 爆发前约 15–30x，2025 年中在海内外爆发催化下冲高至 80x+，随后一路回落到当前 14.4x。当前 PE 处于<strong>上市以来极低分位（推算 &lt;10% 分位）</strong>，已逼近 2022 年业绩低潮期与 2024 年爆发前的估值水平。<strong>周期股警示（马克斯）在这里同样适用</strong>：低 PE 可能是「盈利顶点 + 增速均值回归」的分母效应——若 2026 全年利润像花旗预期那样转负增长，当前 14.4x 会被动抬升。</p>
+<h3>相对估值</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>数值</th><th>判断</th></tr></thead>
+<tbody>
+<tr><td>PE (TTM)</td><td>14.4x</td><td>对 +10% 的利润增速而言不便宜（PEG ≈ 1.44）；对 +24% 的营收增速而言合理（PEG ≈ 0.6）；若按花旗 FY26 营收 -8% 假设，则明显偏贵</td></tr>
+<tr><td>股息率（独立股东回报指标）</td><td>~1.7%</td><td class="metric-warn">低于中国 10 年期国债收益率（约 1.8–2.0%），股东回报吸引力有限；本期无中期息，公司转向回购方式回报股东。港股不使用融资，<strong>不做融资成本对比</strong></td></tr>
+<tr><td>净现金</td><td>124.4 亿 RMB，无银行借款</td><td class="metric-positive">资产负债表干净（负债率 24.9%），下行有安全垫</td></tr>
+</tbody>
+</table></div>
+<div class="two-col">
+<div class="box-green">
+<h4>多方：14.4x 是「错杀」</h4>
+<ul>
+<li>中国业务 +47.3% 重新加速，内需基本盘超预期；</li>
+<li>IP 矩阵去单点化（LABUBU 38%→26%，星星人 +580%），平台化逻辑兑现；</li>
+<li>124 亿净现金 + 20–50 亿回购计划（8 月已执行回购）托底；</li>
+<li>中报 -24% 的净利 miss 三周内在 140 一线被完全消化，箱体稳固。</li>
+</ul>
+</div>
+<div class="box-red">
+<h4>空方：14.4x 是「价值陷阱」</h4>
+<ul>
+<li>花旗预计 FY26 营收 -8%（隐含 H2 比 H1 更差），管理层自己放弃了 +20% 目标；</li>
+<li>海外引擎转负（-11.1%，线上 -44%），全球化叙事证伪中；</li>
+<li>LABUBU 绝对收入首次同比转负（-7.5%），头号 IP 见顶；</li>
+<li>存货周转 123→201 天，警惕 H2 减值；沽空占比 32% 创近年高位。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>多空核心分歧</h2>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:50%">多方论据</th><th style="width:50%">空方论据</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="tag tag-bull">估值</span> 14.4x PE 处上市以来低位，中报利空已充分定价（三周箱体验证）</td>
+<td><span class="tag tag-bear">估值</span> 利润增速仅 +10%，花旗预测 FY26 营收 -8%，14.4x 无安全边际</td>
+</tr>
+<tr>
+<td><span class="tag tag-bull">中国</span> 中国业务 +47.3%（线上 +62.7%），星星人新品秒罄，内需热度未降温</td>
+<td><span class="tag tag-bear">海外</span> 海外 -11.1%、线上 -44%，美银/花旗双双大幅下调目标价</td>
+</tr>
+<tr>
+<td><span class="tag tag-bull">IP</span> 矩阵化（星星人补位 +580%），不再依赖 LABUBU 单点</td>
+<td><span class="tag tag-bear">IP</span> LABUBU 收入首次转负；星星人 13 倍溢价是稀缺营销；LABUBU 复古理发店常规款已破发</td>
+</tr>
+<tr>
+<td><span class="tag tag-bull">财务</span> 124 亿净现金、零负债、20–50 亿回购计划（8 月已执行回购）</td>
+<td><span class="tag tag-bear">财务</span> 存货周转 201 天、经营现金流/净利仅 72%、无中期息</td>
+</tr>
+<tr>
+<td><span class="tag tag-bull">资金</span> 回购托底 + 段永平重仓 5.55% 未清；卖方最悲观目标价（164/170）仍在现价上方</td>
+<td><span class="tag tag-bear">资金</span> 沽空占成交比 32.16% 创近年高位，专业资金在逆势加空</td>
+</tr>
+<tr>
+<td><span class="tag tag-bull">汇率</span> 人民币升值是 H1 汇兑亏 7.2 亿的主因，若汇率企稳则利润弹性可修复</td>
+<td><span class="tag tag-bear">基数</span> 2025 H2 是 LABUBU 预售+社媒爆发的高基数，H2 同比压力大于 H1</td>
+</tr>
+</tbody>
+</table></div>
+<h3>核心争议焦点</h3>
+<p><strong>海外业务是中国/全球化的「成长期权」还是「伪命题」？</strong>多方认为 -11.1% 是高基数 + 汇率的一次性扰动，零售店仍 +20.8% 证明海外消费力仍在，世界杯营销（LABUBU 为世界杯史上首个受邀中国原创 IP）是 H2 的潜在拐点；空方认为线上 -44% 是 LABUBU 海外热度退潮的领先指标，花旗 -8% 的全年预测隐含 H2 更深的降幅，且会传导到线下。</p>
+<h3>裁决指标（下一份财报看什么）</h3>
+<ul>
+<li><strong>海外分部收入能否环比/同比转正</strong>（尤其是线上渠道）——决定全球化叙事是否可证伪修复；</li>
+<li><strong>LABUBU 绝对收入是否见顶回落</strong>——H1 已首次转负（-7.5%），H2 是否加速；</li>
+<li><strong>存货周转天数能否从 201 天回落</strong>——决定「前置备货」解释是否成立；</li>
+<li><strong>毛利率能否守住 69% 一线</strong>——决定利润弹性能否恢复。</li>
+</ul>
+</div>
+
+<div class="card" id="analysts">
+<h2>投行分析师全景</h2>
+<p>中报后各家投行的动作已明确（来源：CNBC / now新聞 / hket / 富途 / Yahoo財經 报道聚合<span class="src-badge src-2">二手</span>）。本版新增高盛 9 月行业报告对泡泡玛特的点名。</p>
+<div class="chart-title">投行目标价分布（HKD）</div>
+<div class="chart">
+<div class="bar-row"><span class="bar-label">野村</span><div class="bar-track"><div class="bar-fill warn" style="width:83%"></div></div><span class="bar-value">164</span></div>
+<div class="bar-row"><span class="bar-label">美银证券</span><div class="bar-track"><div class="bar-fill warn" style="width:86%"></div></div><span class="bar-value">170</span></div>
+<div class="bar-row"><span class="bar-label">花旗</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">198</span></div>
+</div>
+<div class="chart-legend">柱长按相对花旗 198 等比缩放。三家均在中报后下调，但无一给出「卖出」。</div>
+<h3>中报后评级动作一览</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>投行</th><th>动作</th><th>目标价 (HKD)</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td>花旗 Citi</td><td class="metric-negative">下调目标价</td><td>415 → <strong>198</strong></td><td>业绩低于预期；FY26 集团营收预测下调至同比 <strong>-8%</strong>；点名库存/供应链/仓储/门店运营多重逆风；看好星星人等新 IP，认为急跌后估值合理，评级维持买入</td></tr>
+<tr><td>美银证券 BofA</td><td class="metric-negative">下调评级：→ 中性</td><td>→ <strong>170</strong>（-43%）</td><td>收入指引低于市场预期 30%；LABUBU 在欧美热潮降温 + 利润率压力；今明两年经调整 EPS 分别下调 19%/26%</td></tr>
+<tr><td>野村 Nomura</td><td class="metric-negative">下调评级：买入 → 中性</td><td>252 → <strong>164</strong></td><td>目标价接近现价，隐含上行空间仅 ~7%——「叙事派」正式转向观望</td></tr>
+<tr><td>摩根士丹利</td><td>维持增持（下调目标价约 4%）</td><td>~203–214</td><td>因上季销售与全年指引下调盈利预测，预期海外增长放缓，但认为实体店驱动模式仍有效</td></tr>
+<tr><td>高盛 Goldman Sachs</td><td>维持中性</td><td>—</td><td>9 月行业报告：泡泡玛特经调整纯利低于其预期 13%、收入低于预期约 10%；预计 H2 中国 IP/玩具需求维持韧性但受高基数拖累放缓</td></tr>
+<tr><td>Jefferies</td><td class="metric-negative">下调评级至持有</td><td>—</td><td>TipRanks 报道其被下调至 Hold（具体目标价未披露）</td></tr>
+</tbody>
+</table></div>
+<h3>怎么读这份评级地图</h3>
+<ul>
+<li><strong>评级动作高度一致地转向谨慎</strong>：中报后头部行中，美银/野村/Jefferies 下调评级、花旗下调目标价、高盛维持中性。没有一家上调——情绪上确认了「增长换挡」的市场共识；</li>
+<li><strong>但目标价带的下沿就在现价上方</strong>：野村 164 / 美银 170 / 花旗 198，相对现价 152.90 分别有 +7.3% / +11.2% / +29.5% 的隐含空间（推算<span class="src-badge src-e">推算</span>）。最悲观的大行也没有给出「卖出 + 深度下折」——卖方的分歧是「合理」还是「便宜」，不是「贵」；</li>
+<li><strong>评级滞后性警告</strong>：这些目标价多基于中报前模型的参数下调，尚未反映 9 月后的汇率与新品销售数据；且历史锚点显示 2025 年高点时主流目标价曾集中 250–415 HKD，一年内腰斩——<strong>卖方目标价对这家公司的「锚定效应」极不稳定，只能作参照系而非决策依据</strong>。</li>
+</ul>
+<p class="caveat-inline">建议：Q3 经营数据（预计 10 月发布）前，以 1–2 家头部外资行（花旗/高盛）与中资券商的模型假设（尤其海外收入与存货减值假设）为跟踪主线。</p>
+</div>
+
+<div class="card" id="community">
+<h2>社区与大户动向</h2>
+<h3>段永平持仓事件（重要背景）<span class="src-badge src-2">二手</span></h3>
+<ul>
+<li>港交所披露：H&amp;H International（段永平）好仓比例 7/30 由 <strong>7.65% 降至 5.55%</strong>（约 1.02 亿股 → 7,390 万股）；</li>
+<li>变动原因代码 1203 = 「交付根据股本衍生工具须交付的股份」——即<strong>此前卖出的 Call 被行权、股票被划走</strong>，属期权履约的被动交付，非二级市场主动抛售；段永平回应：苹果仓位成熟「被 call 走了一些，买了 t-bill」；</li>
+<li>背景时间线：2026-04-09 公开官宣入局 → 5 月减持中国神华全部调仓至泡泡玛特 → 5/27 持股破 5% 成第二大股东 → 7/6 加仓至 7.65%（耗资约 15.89 亿港元，成交价最高 150 港元）→ 7/23 雪球公开表态「<strong>泡泡玛特我才刚开始买，猜 10 年内大概率不会卖</strong>」→ 7/30 期权履约降至 5.55%；</li>
+<li><strong>两面解读（不可单边采信）</strong>：多方视其为「长期持有 + 备兑增强收益」的正常操作；谨慎方指出 Covered Call 本质是「带条件的获利了结」——行权价即是他愿意卖出的价格。两种解读都成立，关键是 5.55% 的剩余仓位仍是重仓表态。</li>
+</ul>
+<h3>港股零售社区情绪（产品关键词视角）<span class="src-badge src-3">三方</span></h3>
+<ul>
+<li><strong>主多声音</strong>：「泡泡玛特不是只有 LABUBU 了，星星人 +580% 是新引擎」「14 倍 PE 配 47% 的中国增速，明显错杀」；价投型用户在中报下跌当日公开加仓；</li>
+<li><strong>主空声音</strong>：「海外怎么还跌了」「线上掉 44% 说明 LABUBU 凉了」「LABUBU 复古理发店都破发了」「存货 201 天要减值」；技术派短线看 140（52 周低点）支撑；</li>
+<li><strong>情绪温度计（马克斯）</strong>：从 2025 年的「极度贪婪」（LABUBU 抢购、黄牛炒作、目标价 400+）转向当前的「恐惧 + 怀疑 + 缩量观望」。<strong>消费端热度（星星人秒罄）与股票端情绪（沽空 32%）出现罕见背离</strong>——产品在抢、股票在跌。对逆向投资者，这是值得深挖的时点；对趋势投资者，仍是「飞刀」。</li>
+</ul>
+<h3>英文零售社区（Reddit）<span class="src-badge src-3">三方</span></h3>
+<p>以产品词（Labubu）取 r/Reddit 搜索，讨论几乎全部集中在<strong>收藏品交易、开箱、门店排队</strong>（r/PopMartCollectors、r/labubu、r/LabubuDrops），涉及股票投资的内容极少——<strong>英文零售投资者基本不把泡泡玛特当股票讨论</strong>这是一条重要的样本量声明：不宜用 Reddit 情绪代表海外投资者的持股观点。<span class="src-badge src-e">时效：RSS 端点抓取</span></p>
+
+</div>
+
+<div class="card" id="conclusion">
+<h2>综合判断框架</h2>
+<h3>四情景推演<span class="src-badge src-e">推算</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>对估值的含义</th></tr></thead>
+<tbody>
+<tr><td><strong>A. 海外修复 + 中国延续</strong></td><td>H2 海外线上止跌、LABUBU 世界杯转化为收入、存货回落</td><td class="metric-positive">增长叙事修复，估值有望向 20–30x 回归（花旗 198 目标价隐含此情景的部分定价）</td></tr>
+<tr><td><strong>B. 中国独撑 + 海外磨底</strong></td><td>中国 +30% 以上延续，海外 -10%~0% 徘徊</td><td class="metric-warn">中性，估值在 12–16x 区间震荡（当前 150–158 箱体最接近此情景）</td></tr>
+<tr><td><strong>C. 双引擎熄火</strong></td><td>中国增速回落至个位数，海外继续 -10% 以上（花旗 FY26 -8% 即此情景的量化版本）</td><td class="metric-negative">增长证伪，估值可能压缩至 10x 下方</td></tr>
+<tr><td><strong>D. 意外催化（新 IP 爆发）</strong></td><td>星星人「动物农场」「美味时刻」系列热销延续、下一个「星星人」级 IP 接棒或海外新市场突破</td><td class="metric-positive">情绪再度点燃，估值弹性最大</td></tr>
+</tbody>
+</table></div>
+<h3>关键跟踪指标（按月/季度）</h3>
+<ul>
+<li><strong>海外分部收入与线上渠道的同比/环比（第一优先）</strong>——H2 验证花旗 -8% vs 管理层企稳叙事；</li>
+<li><strong>LABUBU 绝对收入</strong>（H1 已首次转负 -7.5%，H2 是否加速）+ 星星人/新 IP 增速（二级市场溢价回落速度是实时温度计）；</li>
+<li><strong>存货周转天数</strong>（能否从 201 天回落）+ 毛利率（守住 69%）；</li>
+<li><strong>沽空占成交比例</strong>（能否从 32% 高位回落——空头撤退是箱体上破的前提）；</li>
+<li>人民币兑美元/港币汇率（海外利润的杠杆变量）+ 20–50 亿回购的执行进度；</li>
+<li>段永平/回购的后续持仓变化（披露易 + 公司公告）。</li>
+</ul>
+<h3>总结</h3>
+<p>2026 中报是泡泡玛特「成长叙事」的一次<strong>分水岭式验证</strong>：营收增速从 +184.7% 落回 +23.8%（且 miss 市场预期 14%），海外业务首次转负（-11.1%，线上 -44%），管理层放弃全年 +20% 目标，把一个「超级成长股」打回「常规快速成长股」。中报后三周的价格行为（140 恐慌低点 → 150–158 箱体、缩量至 1/8 以下）表明<strong>第一次定价已经完成</strong>：卖方集体转谨慎（美银/野村降中性，花旗降目标价 198 并预测全年营收 -8%），但没有一家给出卖出评级。</p>
+<p>本版新增的两个信号值得重视：① <strong>港交所 9/1《证券变动月报表》显示 8 月已发生回购注销</strong>，与 20–50 亿回购计划对应，管理层用真金白银在 150 港元附近表态；② <strong>沽空占成交比例升至 32.16%</strong>，创近年高位，专业机构在做空这只「利空出尽」的股票。这是一个<strong>回购盘与沽空盘在箱体内直接对垒</strong>的格局。</p>
+<p>硬币的另一面是<strong>基本盘质量在变好</strong>——中国 +47.3%（线上 +62.7%）重新加速、IP 矩阵去单点化（LABUBU 38%→26%、星星人 +580%）、零负债 + 124 亿现金 + 20–50 亿回购，段永平 5.55% 的重仓仍在。但同样必须承认：<strong>LABUBU 收入首次同比转负</strong>，头号 IP 见顶的迹象第一次以数字形式出现。</p>
+<p>对投资者的核心追问是：<strong>14.4x PE 是否已把「增长换挡 + 海外失速」充分定价？</strong>多方看到的是「错杀」（中报利空三周消化完毕 + 内需加速 + IP 平台化 + 回购托底）；空方看到的是「价值陷阱」（花旗 -8% 全年预测 + LABUBU 转负 + 存货 201 天 + 沽空 32%）。<strong>裁决权在 H2 的海外收入与存货两个数据上</strong>——在那之前，这是一只「赔率已改善、确定性待验证」的标的，而非「无脑捡便宜」。箱体何时被打破，就是答案揭晓的时刻。</p>
+<p class="caveat-inline" style="margin-top:12px;"><strong>免责声明：</strong>本报告不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。所有估值分位/情景推演均为推算，不构成对未来的预测或承诺。发布日期：2026-09-14。</p>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%B3%A1%E6%B3%A1%E7%8E%9B%E7%89%B9%EF%BC%8809992%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-14%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

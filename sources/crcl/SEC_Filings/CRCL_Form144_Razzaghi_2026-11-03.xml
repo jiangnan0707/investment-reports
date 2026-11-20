@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><edgarSubmission xmlns="http://www.sec.gov/edgar/ownership" xmlns:com="http://www.sec.gov/edgar/common">
+  <headerData>
+    <submissionType>144</submissionType>
+    <filerInfo>
+      <filer>
+        <filerCredentials>
+          <cik>0002083179</cik>
+          <ccc>XXXXXXXX</ccc>
+        </filerCredentials>
+      </filer>
+      <liveTestFlag>LIVE</liveTestFlag>
+
+
+
+    </filerInfo>
+  </headerData>
+  <formData>
+    <issuerInfo>
+      <issuerCik>0001876042</issuerCik>
+      <issuerName>Circle Internet Group, Inc.</issuerName>
+      <secFileNumber>001-42671</secFileNumber>
+      <issuerAddress>
+        <com:street1>ONE WORLD TRADE CENTER</com:street1>
+        <com:city>NEW YORK</com:city>
+        <com:stateOrCountry>NY</com:stateOrCountry>
+        <com:zipCode>10007</com:zipCode>
+      </issuerAddress>
+      <issuerContactPhone>(332) 334-0660</issuerContactPhone>
+      <nameOfPersonForWhoseAccountTheSecuritiesAreToBeSold>Razzaghi Hossein</nameOfPersonForWhoseAccountTheSecuritiesAreToBeSold>
+      <relationshipsToIssuer>
+        <relationshipToIssuer>Officer</relationshipToIssuer>
+      </relationshipsToIssuer>
+    </issuerInfo>
+    <securitiesInformation>
+      <securitiesClassTitle>Class A</securitiesClassTitle>
+      <brokerOrMarketmakerDetails>
+        <name>Fidelity Brokerage Services LLC</name>
+        <address>
+          <com:street1>900 Salem Street</com:street1>
+          <com:city>Smithfield</com:city>
+          <com:stateOrCountry>RI</com:stateOrCountry>
+          <com:zipCode>02917</com:zipCode>
+        </address>
+      </brokerOrMarketmakerDetails>
+      <noOfUnitsSold>1831</noOfUnitsSold>
+      <aggregateMarketValue>133772.86</aggregateMarketValue>
+      <noOfUnitsOutstanding>234685190</noOfUnitsOutstanding>
+      <approxSaleDate>11/03/2026</approxSaleDate>
+      <securitiesExchangeName>NYSE</securitiesExchangeName>
+    </securitiesInformation>
+    <securitiesToBeSold>
+      <securitiesClassTitle>Class A</securitiesClassTitle>
+      <acquiredDate>11/01/2026</acquiredDate>
+      <natureOfAcquisitionTransaction>Restricted Stock Vesting</natureOfAcquisitionTransaction>
+      <nameOfPersonfromWhomAcquired>Issuer</nameOfPersonfromWhomAcquired>
+      <isGiftTransaction>N</isGiftTransaction>
+      <amountOfSecuritiesAcquired>1831</amountOfSecuritiesAcquired>
+      <paymentDate>11/01/2026</paymentDate>
+      <natureOfPayment>Compensation</natureOfPayment>
+    </securitiesToBeSold>
+    <nothingToReportFlagOnSecuritiesSoldInPast3Months>N</nothingToReportFlagOnSecuritiesSoldInPast3Months>
+    <securitiesSoldInPast3Months>
+      <sellerDetails>
+        <name>Hossein Razzaghi</name>
+        <address>
+          <com:street1>One World Trade Center</com:street1>
+          <com:city>New York</com:city>
+          <com:stateOrCountry>NY</com:stateOrCountry>
+          <com:zipCode>10007</com:zipCode>
+        </address>
+      </sellerDetails>
+      <securitiesClassTitle>Class A</securitiesClassTitle>
+      <saleDate>08/04/2026</saleDate>
+      <amountOfSecuritiesSold>1829</amountOfSecuritiesSold>
+      <grossProceeds>109886.32</grossProceeds>
+    </securitiesSoldInPast3Months>
+    <securitiesSoldInPast3Months>
+      <sellerDetails>
+        <name>Hossein Razzaghi</name>
+        <address>
+          <com:street1>One World Trade Center</com:street1>
+          <com:city>New York</com:city>
+          <com:stateOrCountry>NY</com:stateOrCountry>
+          <com:zipCode>10007</com:zipCode>
+        </address>
+      </sellerDetails>
+      <securitiesClassTitle>Class A</securitiesClassTitle>
+      <saleDate>09/02/2026</saleDate>
+      <amountOfSecuritiesSold>7458</amountOfSecuritiesSold>
+      <grossProceeds>655334.46</grossProceeds>
+    </securitiesSoldInPast3Months>
+    <securitiesSoldInPast3Months>
+      <sellerDetails>
+        <name>Hossein Razzaghi</name>
+        <address>
+          <com:street1>One World Trade Center</com:street1>
+          <com:city>New York</com:city>
+          <com:stateOrCountry>NY</com:stateOrCountry>
+          <com:zipCode>10007</com:zipCode>
+        </address>
+      </sellerDetails>
+      <securitiesClassTitle>Class A</securitiesClassTitle>
+      <saleDate>10/02/2026</saleDate>
+      <amountOfSecuritiesSold>1830</amountOfSecuritiesSold>
+      <grossProceeds>156977.40</grossProceeds>
+    </securitiesSoldInPast3Months>
+    <noticeSignature>
+      <noticeDate>11/03/2026</noticeDate>
+      <planAdoptionDates>
+        <planAdoptionDate>03/10/2026</planAdoptionDate>
+      </planAdoptionDates>
+      <signature>/s/ Jennifer Ruchti, as a duly authorized representative of Fidelity Brokerage Services LLC, as attorney-in-fact for Hossein Razzaghi</signature>
+    </noticeSignature>
+  </formData>
+</edgarSubmission>

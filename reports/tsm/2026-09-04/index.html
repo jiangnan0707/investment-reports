@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>台积电 2026-09-04 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+  .update-box { background: #f0f7ff; border: 1px solid #cfe4ff; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #1e3a5f; line-height: 1.65; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    .card { padding: 24px 20px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 8px 10px; }
+    header { padding: 40px 20px 36px; }
+    header h1 { font-size: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    body { background: #fff; }
+    .sidebar { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    header { background: #1a3c2a !important; -webkit-print-color-adjust: exact; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/tsm/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">TSM <span>·</span> 2026-09-04 <span>·</span> PC 完整版</div><h1>台积电</h1><p>数据截至 2026-09-03 收盘 · 本地一手源：SEC 20-F（FY2025）+ Q2 2026 财报 6-K + 7 月营收 6-K · 美股 NYSE ADR · 货币 USD</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、核心指标 — 制程节点营收占比（2nm/3nm）</a></li><li><a href="#financials">四、最新财务数据（FY2025 年报 + Q2 2026 + 7 月营收）</a></li><li><a href="#segment">五、平台业务拆解：HPC 是唯一引擎，智能手机沦为「现金牛」</a></li><li><a href="#competitive">六、竞争格局动态（2026 年 8 月增量信息）</a></li><li><a href="#valuation">估值分析</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">华尔街分析师全景 二手</a></li><li><a href="#reddit">Reddit / 零售投资者讨论 三方</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="update-box">
+<strong>本次更新（2026-09-04，相对上一版 2026-08-14）：</strong>
+    ① 行情与估值全部刷新至 9 月 3 日收盘（$417.01，较上版报告日回落约 2%）；② 新增 <strong>7 月月度营收 6-K</strong>（NT$467.58B，同比 +44.7%，本地一手文件）；③ Q2 2026 制程节点/平台拆分已改为直接取自本地 6-K 合并财报，数据等级由二手升为一手；④ 新增 8 月下旬竞争格局与事件动态（Apple M6 首颗 2nm 芯片、A16 量产准备、三星 1.4nm 推迟、先进封装扩产等）；⑤ 股息率更新（季度股息上调至 $1.1136）。
+  </div>
+<div class="stale-warning">
+<strong>⚠ 时效提示：</strong>8 月单月营收 6-K 尚未发布（预计 2026-09-08 前后），最新月度营收数据截至 <strong>2026 年 7 月</strong>；下一季财报（Q3 2026）预计 <strong>2026-10-15</strong> 发布。若需最精确数字，请前往台积电投资者关系官网（investor.tsmc.com）核对原始公告。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> SEC 文件/公司公告（20-F、6-K 财报与月度营收） |
+    <span class="src-badge src-2">二手</span> 聚合平台（yfinance、MarketBeat、GuruFocus、TrendForce）/ 分析师报告 |
+    <span class="src-badge src-3">三方</span> Reddit / 零售投资者讨论 |
+    <span class="src-badge src-e">推算</span> PEG、历史估值分位等间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">说明：台积电为台湾上市公司，在 SEC 以 <strong>20-F（年报）+ 6-K（季报/月度营收）</strong> 披露；ADR 每单位 = 5 股普通股。历史估值分位美股无免费精确接口，本文相关数值均标 <span class="src-badge src-e">推算</span>。</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>公司全称</td><td>Taiwan Semiconductor Manufacturing Company Limited（台湾积体电路制造股份有限公司）</td></tr>
+<tr><td>交易标的</td><td>NYSE: TSM（ADR，1 ADS = 5 普通股）· 台湾证交所 2330</td></tr>
+<tr><td>业务定位</td><td>全球最大纯晶圆代工厂（dedicated foundry），先进制程（≤7nm）技术绝对领先者</td></tr>
+<tr><td>核心指标</td><td><strong>制程节点营收占比（2nm/3nm 先进制程占比与增速）</strong></td></tr>
+<tr><td>现价 / 市值</td><td>$417.01（2026-09-03 收盘）· 市值约 $2.16 万亿 <span class="src-badge src-2">二手</span></td></tr>
+<tr><td>52 周区间</td><td>约 $238 – $479（现价距 52 周高点回撤约 13%）</td></tr>
+<tr><td>年内表现</td><td>YTD <span class="metric-positive">+31.1%</span>；距上版报告日（8-14 收盘 $426.35）回落约 2.2%</td></tr>
+<tr><td>报告货币 / 披露</td><td>USD（ADR 计价）/ 财报本位币新台币 NT$ · SEC EDGAR 20-F + 6-K</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">$417.01</div><div class="label">现价 (09-03)</div></div>
+<div class="summary-item"><div class="value">$2.16T</div><div class="label">市值</div></div>
+<div class="summary-item"><div class="value">~19.1x</div><div class="label">Forward PE</div></div>
+<div class="summary-item"><div class="value">33%</div><div class="label">2nm+3nm 占比(Q2'26)</div></div>
+<div class="summary-item"><div class="value">67.7%</div><div class="label">毛利率(Q2'26)</div></div>
+<div class="summary-item"><div class="value">$552</div><div class="label">分析师目标均值</div></div>
+</div>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<h3>怎么赚钱</h3>
+<p>台积电是「纯晶圆代工」模式的鼻祖与绝对霸主——不为自己的品牌设计芯片，只替全球芯片设计公司（fabless）与 IDM（如苹果、英伟达、AMD、高通、博通等）把设计变成实体晶圆。收入 = <strong>晶圆出货量 × 单片晶圆价格</strong>，而单价由「制程节点」决定：节点越先进（数字越小，如 3nm/2nm），单片价格越贵、毛利越高。它是全半导体行业资本最密集的「基础设施」，客户（即使强大如苹果、英伟达）也高度依赖其先进制程产能。</p>
+<h3>护城河（巴菲特框架：技术垄断 + 规模工艺壁垒）</h3>
+<ul>
+<li><strong>技术垄断</strong>：全球唯一大规模量产 2nm 的纯代工厂；Apple M6（2026-08-26 发布，首颗 2nm 芯片）已商业验证 N2 良率与量产成熟度；A16（1.6nm 级）供应链报告称 <strong>Q4 2026 即可量产</strong><span class="src-badge src-2">二手</span>，路线图持续领先三星、英特尔。</li>
+<li><strong>转换成本极高</strong>：芯片设计与制程深度绑定（design-technology co-optimization，DTCO），客户把设计移植到别家代工厂的代价是数年的重新流片与验证，几乎不可能轻易「换厂」。</li>
+<li><strong>规模 + 资本壁垒</strong>：2026 年资本开支指引 US$60–64B，任何潜在进入者（Rapidus、重启的英特尔代工）无法匹敌；先进封装产能连续三年每年翻倍、运营 10 座专用厂仍供不应求<span class="src-badge src-2">二手</span>。</li>
+<li><strong>定价权</strong>：先进制程多年供不应求，且有报道称台积电计划 <strong>2027 年再次提价</strong><span class="src-badge src-3">三方</span>——「经济特许权」的典型体现。</li>
+</ul>
+<h3>收入构成（按平台，FY2025 → Q2 2026）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>平台</th><th>2023</th><th>2024</th><th>2025</th><th>Q2 2026</th><th>趋势</th></tr></thead>
+<tbody>
+<tr><td>高性能计算 HPC（AI/GPU/CPU）</td><td>43%</td><td>51%</td><td>58%</td><td class="metric-positive"><strong>65.4%</strong></td><td class="metric-positive">↑ 绝对主导</td></tr>
+<tr><td>智能手机 Smartphone</td><td>38%</td><td>35%</td><td>29%</td><td>22.3%</td><td class="metric-negative">↓ 占比被 AI 稀释</td></tr>
+<tr><td>物联网 IoT</td><td>8%</td><td>6%</td><td>5%</td><td>5.0%</td><td>→</td></tr>
+<tr><td>汽车 Automotive</td><td>6%</td><td>5%</td><td>5%</td><td>4.2%</td><td>→</td></tr>
+<tr><td>数字消费电子 DCE + 其他</td><td>5%</td><td>3%</td><td>3%</td><td>3.1%</td><td>→</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">FY2023–FY2025 数据源：SEC 20-F（FY2025）<span class="src-badge src-s">一手</span>；Q2 2026 数据由本地 6-K 合并财报平台明细计算（HPC NT$830.4B / 总营收 NT$1,270.4B = 65.4%）<span class="src-badge src-s">一手</span>。HPC 占比一年内从 60% 升至 65%+，AI 驱动的集中度仍在上升。</p>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — 制程节点营收占比（2nm/3nm）</h2>
+<p>对台积电，<strong>唯一真正重要的指标</strong>是「先进制程节点占晶圆收入的比例」——它直接决定单价、毛利率与护城河的兑现程度。先进制程（≤7nm）占比每上一个台阶，毛利率中枢就整体上移一个台阶。</p>
+<h3>制程节点营收占比（占晶圆收入 %）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>制程节点</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>Q2 2026</th><th>Q2 2025 → Q2 2026 营收增速</th></tr></thead>
+<tbody>
+<tr><td><strong>2nm（N2）</strong></td><td>—</td><td>—</td><td>—（量产启动）</td><td class="metric-positive"><strong>3.0%</strong></td><td class="metric-positive">0 → NT$31.9B（首季放量）</td></tr>
+<tr><td><strong>3nm（N3）</strong></td><td>~4%（含 N5 初代，注）</td><td>18%</td><td>24%</td><td class="metric-positive"><strong>29.9%</strong></td><td class="metric-positive">+71%（NT$187.3B → 320.6B）</td></tr>
+<tr><td>5nm（N5）</td><td>~33%</td><td>34%</td><td>36%</td><td>32.6%</td><td>+21%</td></tr>
+<tr><td>7nm（N7）</td><td>~19%</td><td>17%</td><td>14%</td><td>11.3%</td><td>+12%</td></tr>
+<tr><td>16nm 及以下成熟制程</td><td>~42%</td><td>31%</td><td>26%</td><td>23.2%</td><td>+26%（结构性占比下降）</td></tr>
+<tr><td><strong>先进制程合计（≤7nm）</strong></td><td>58%</td><td>69%</td><td class="metric-positive">74%</td><td class="metric-positive"><strong>76.8%</strong></td><td class="metric-positive">晶圆收入整体 +35%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">FY2023–FY2025 数据源：SEC 20-F（一手）；Q2 2026 及同比增速由本地 6-K 合并财报「Resolution」明细直接计算（晶圆收入 NT$1,073.7B，2nm NT$31.9B / 3nm NT$320.6B / 5nm NT$350.1B / 7nm NT$121.9B）<span class="src-badge src-s">一手</span>。FY2023 分项为当年年报口径近似值，标 <span class="src-badge src-e">推算</span>。</p>
+<h3>核心逻辑：占比扩张 → 毛利率结构性上移</h3>
+<div class="quote">
+    先进制程占比 <strong>58%（2023）→ 69%（2024）→ 74%（2025）→ 76.8%（Q2 2026）</strong>，同步驱动毛利率 <strong>54.4% → 56.1% → 59.0% → 67.7%（Q2 2026）</strong>。这不是一次性的周期回暖，而是「3nm 放量 + 2nm 启动 + AI 定价权」三重叠加的结构性变化。月度数据继续验证：7 月营收 NT$467.58B，同比 <strong>+44.7%</strong>，1–7 月累计 +37.0%<span class="src-badge src-s">一手（6-K）</span>。
+  </div>
+<ul>
+<li><strong>3nm 是当前利润引擎</strong>：Q2 2026 营收 NT$320.6B（占晶圆收入 29.9%），同比 +71%，是苹果 + 英伟达 + 高通等旗舰芯片的主力节点，良率成熟后毛利率显著高于 5nm。</li>
+<li><strong>2nm 已过「验证关」</strong>：Q2 2026 首季贡献 3%（NT$31.9B）；Apple M6（首颗 2nm 芯片，8 月末发布）商业验证 N2 良率与量产成熟度，为智能手机 / HPC / 定制 ASIC 客户放量铺路<span class="src-badge src-2">二手</span>。2nm 对应英伟达下一代 GPU、苹果 A/M 系列与 AI ASIC，单价与毛利更高，但<strong>爬坡初期折旧前置会稀释毛利率</strong>。</li>
+<li><strong>下一站 A16</strong>：供应链报告称 1.6nm A16 开发完成、<strong>Q4 2026 准备量产</strong>——若兑现，台积电将保持对三星/英特尔约一代的领先<span class="src-badge src-2">二手</span>。</li>
+<li><strong>稀释项</strong>：海外扩产（亚利桑那/日本/德国）与 2nm 初期爬坡是毛利率两大对冲项，管理层 Q3 2026 毛利率指引 65%–67%（略低于 Q2 的 67.7%），体现这一稀释。</li>
+</ul>
+<h3>竞争地位验证（技术垄断的可证伪性）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>对手</th><th>最新状态（2026-08）</th><th>与台积电差距</th></tr></thead>
+<tbody>
+<tr><td>三星（Samsung Foundry）</td><td>SF2（2nm）已商用但良率爬坡中；<strong>SF1.4（1.4nm）由 2027 推迟至 2029</strong>；获特斯拉长期订单，与博通合作扩展至 sub-2nm；Q2 代工份额约 7% <span class="src-badge src-2">二手</span></td><td>路线图推迟 = 差距重新拉大；Counterpoint 称台积电在 AI 驱动的代工景气中「扩大领先」</td></tr>
+<tr><td>英特尔（Intel Foundry）</td><td>18A（≈2nm 级）量产推进中，客户导入有限、自身代工持续亏损</td><td>技术接近但商业化/生态远未成熟</td></tr>
+<tr><td>Rapidus（日本）</td><td>IIM-1 厂房建设完工（2026-08-31），但 PDK 尚不可交付、2nm GAA 良率未验证、订单系统从零搭建</td><td>2027 量产目标前不确定性极高，代际差距大</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">本季度动态对多头有利：三家中最接近的追赶者三星主动推迟 1.4nm 两年，等于把「2027-2028 缩小差距」的窗口让出。若未来任一对手在 2nm 良率/客户导入上实质突破、导致台积电先进制程占比或毛利率趋势逆转，将是本核心指标的证伪信号。</p>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据（FY2025 年报 + Q2 2026 + 7 月营收）</h2>
+<h3>损益表（合并，按年度）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>FY2023</th><th>FY2024</th><th>FY2025</th></tr></thead>
+<tbody>
+<tr><td>净营收（NT$ 百万）</td><td>2,161,736</td><td>2,894,308</td><td class="metric-positive">3,782,585</td></tr>
+<tr><td>净营收（US$ 十亿）</td><td>~69.3</td><td>~90.1</td><td class="metric-positive">~120.6</td></tr>
+<tr><td>毛利率</td><td>54.4%</td><td>56.1%</td><td class="metric-positive">59.0%</td></tr>
+<tr><td>营业利润率</td><td>42.6%</td><td>45.7%</td><td class="metric-positive">50.5%</td></tr>
+<tr><td>净利率（归母）</td><td>39.4%</td><td>40.0%</td><td class="metric-positive">43.7%</td></tr>
+<tr><td>净利润（NT$ 百万）</td><td>~838,498</td><td>~1,173,504</td><td class="metric-positive">1,653,325（~US$52.7B）</td></tr>
+<tr><td>摊薄 EPS（每 ADS，US$）</td><td>~6.3</td><td>~8.7</td><td class="metric-positive">~10.1</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">数据源：SEC 20-F（FY2025，合并口径，一手）。净利润与 EPS 中 FY2023/FY2024 为公开财报口径，FY2025 净利润取 20-F 损益表「净利 1,653,325 / US$52,704M」、EPS 按约 5.19B ADS 摊薄折算，标 <span class="src-badge src-e">推算</span>。</p>
+<h3>季度趋势（近 5 季，NT$，一手 6-K + 财报）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>Q2 2025</th><th>Q3 2025</th><th>Q4 2025</th><th>Q1 2026</th><th>Q2 2026</th></tr></thead>
+<tbody>
+<tr><td>净营收（NT$ B）</td><td>934</td><td>990</td><td>1,046</td><td>1,134</td><td class="metric-positive"><strong>1,270</strong></td></tr>
+<tr><td>毛利率</td><td>58.6%</td><td>59.5%</td><td>62.3%</td><td>66.2%</td><td class="metric-positive"><strong>67.7%</strong></td></tr>
+<tr><td>营业利润率</td><td>49.6%</td><td>50.6%</td><td>54.0%</td><td>58.1%</td><td class="metric-positive"><strong>60.3%</strong></td></tr>
+<tr><td>净利润（NT$ B）</td><td>398</td><td>452</td><td>485</td><td>572</td><td class="metric-positive"><strong>707</strong></td></tr>
+</tbody>
+</table></div>
+<h3>最新一季：Q2 2026（2026-07-16 发布）与最新月度营收</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>数值</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>营收</td><td>US$~40B（NT$1,270.38B）</td><td class="metric-positive">+33.7%（USD）/ +36.0%（NTD）</td></tr>
+<tr><td>毛利率</td><td class="metric-positive">67.7%</td><td class="metric-positive">+9.1pp</td></tr>
+<tr><td>营业利润率</td><td>60.3%</td><td class="metric-positive">+10.7pp</td></tr>
+<tr><td>净利润</td><td>NT$706.56B（~US$22.4B）</td><td class="metric-positive">+77.4%</td></tr>
+<tr><td>摊薄 EPS</td><td>NT$27.25 / 股（~US$4.28 / ADR）</td><td class="metric-positive">超预期（市场共识 ~US$3.8）</td></tr>
+<tr><td><strong>7 月营收（6-K，8-10 发布）</strong></td><td class="metric-positive">NT$467.58B（环比 +5.6%）</td><td class="metric-positive"><strong>+44.7%</strong>（1–7 月累计 +37.0%）</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">7 月单月同比 +44.7% 是近月最强的动能信号——增速不但没有从 Q2 的 36% 回落，反而继续上冲，隐含 Q3 营收可能贴近甚至超出指引上限。8 月营收 6-K 预计 9 月上旬发布，为下一次验证点。<span class="src-badge src-s">一手</span></p>
+<h3>指引（Q3 2026 与全年 2026）</h3>
+<ul>
+<li>Q3 2026 营收指引：<strong>US$44.6–45.8B</strong>（高于共识 ~US$43.1B）；按 7 月动能，市场预期实际值偏上限</li>
+<li>Q3 毛利率指引：65%–67%；营业利润率指引：56%–58%</li>
+<li>全年 2026 营收增速指引：<strong>由 30%+ 上调至 40%+</strong> <span class="metric-positive">↑</span></li>
+<li>全年 2026 资本开支指引：<strong>由 US$52–56B 上调至 US$60–64B</strong> <span class="metric-positive">↑</span></li>
+<li>季度股息上调至 <strong>US$1.1136 / ADR</strong>（年化 ~US$4.45）<span class="src-badge src-2">二手</span></li>
+</ul>
+<h3>财务健康度（异常检测）</h3>
+<p>按 skill 财务异常检测清单核查：应收账款、现金流背离、存货、毛利率异常、关联交易、股东减持六项，未见明显异常信号；现金流与净利润同步高增，ROE 约 40%，净现金充裕（约 US$75–80B），资本开支全部来自经营现金流。8 月有多笔<strong>内部人与机构买入</strong>披露（高管买入、Tiger Global Q1 增持 49.4% 至 556 万股 ADS）<span class="src-badge src-2">二手</span>。<strong>风险分级：🟢 低</strong>。唯一需留意的是<strong>资本开支激增（US$60–64B 历史高位）对自由现金流的阶段性挤压</strong>，属主动扩张而非被动恶化。</p>
+</div>
+
+<div class="card" id="segment">
+<h2>五、平台业务拆解：HPC 是唯一引擎，智能手机沦为「现金牛」</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>平台</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>Q2 2026</th><th>驱动逻辑</th></tr></thead>
+<tbody>
+<tr><td><strong>HPC（高性能计算）</strong></td><td>43%</td><td>51%</td><td>58%</td><td class="metric-positive"><strong>65.4%</strong></td><td>AI GPU/ASIC/CPU 需求爆炸，英伟达/AMD/云厂与 AI 原生厂（OpenAI 等）自研芯片</td></tr>
+<tr><td>智能手机</td><td>38%</td><td>35%</td><td>29%</td><td>22.3%</td><td>苹果仍是第一大客户（19%），但占比被 AI 稀释</td></tr>
+<tr><td>物联网</td><td>8%</td><td>6%</td><td>5%</td><td>5.0%</td><td>成熟制程，稳定但占比下降</td></tr>
+<tr><td>汽车</td><td>6%</td><td>5%</td><td>5%</td><td>4.2%</td><td>ADAS 等长期看好，短期被 HPC 挤出占比</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">Q2 2026 平台占比由本地 6-K 明细计算（一手）。HPC 单季营收 NT$830.4B、同比 +48%，是全部增长引擎；智能手机同比 +13% 绝对值仍在增长，只是占比被动下降。</p>
+<h3>客户集中度（前十大 / 前二大）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>2023</th><th>2024</th><th>2025</th></tr></thead>
+<tbody>
+<tr><td>前十大客户占营收</td><td>70%</td><td>76%</td><td class="metric-warn">78%</td></tr>
+<tr><td>第一大客户（苹果）</td><td>25%</td><td>22%</td><td>19%</td></tr>
+<tr><td>第二大客户（英伟达）</td><td>11%</td><td>12%</td><td class="metric-positive">17%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">数据源：SEC 20-F。客户集中度上升是双刃剑：英伟达占比从 12%→17% 是 AI 红利的直接体现；但前十大 78% 的集中度意味着大客户砍单会放大营收波动（详见多空分歧）。增量观察：小米 Xring 自研芯片、Waymo 1000-TOPS 自动驾驶芯片、OpenAI 自研推理芯片等「去英伟达化」的自研趋势，<strong>最终都仍需找代工厂流片</strong>——自研芯片越多，台积电的客户基数反而越分散，这是被市场低估的二阶效应<span class="src-badge src-2">二手</span>。</p>
+</div>
+
+<div class="card" id="competitive">
+<h2>六、竞争格局动态（2026 年 8 月增量信息）</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>事件</th><th>时间</th><th>对 TSM 的含义</th></tr></thead>
+<tbody>
+<tr><td>Apple 发布 M6——首颗 2nm 芯片，AI GPU 算力较 M5 +30%</td><td>08-26</td><td class="metric-positive">商业验证 N2 良率与量产成熟度，为 2027 年 2nm 大规模放量铺路</td></tr>
+<tr><td>供应链报告：A16（1.6nm）开发完成，Q4 2026 准备量产</td><td>08-20</td><td class="metric-positive">对三星/英特尔的领先有望维持在一代以上</td></tr>
+<tr><td>三星将 SF1.4（1.4nm）由 2027 推迟至 2029，优先攻 SF2 良率</td><td>08 月中</td><td class="metric-positive">最接近的追赶者主动让出 2027–28 窗口；三星 Q2 代工份额仅 ~7%</td></tr>
+<tr><td>台积电先进封装产能连续三年每年翻倍，10 座专用厂，良率 98–99%，仍供不应求</td><td>08-13</td><td class="metric-positive">CoWoS 等先进封装成为第二增长曲线与护城河延伸</td></tr>
+<tr><td>报道称台积电计划 2027 年再次提价</td><td>08 月</td><td class="metric-positive">供不应求下的定价权兑现（三方信源，待官方确认）</td></tr>
+<tr><td>Rapidus IIM-1 厂房完工，但 PDK/良率/订单系统均未就绪</td><td>08-31</td><td class="metric-positive">2027 量产目标前不确定性高，短期不构成威胁</td></tr>
+<tr><td>Morningstar：2027 预计 ~30% 增长，AI 回报需在 2028–29「证明自己」</td><td>08-11</td><td class="metric-warn">多头叙事的时间边界——2028 年是 AI 资本开支回报的检验年</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">事件均来自公开媒体报道（TrendForce、TradingKey、CNBC、ChosunBiz 等，Tavily 检索，二手/三方），关键条目（A16 量产时点、2027 提价）尚未经台积电官方确认，需在 Q3 财报会（10-15）验证。</p>
+</div>
+
+<div class="card" id="valuation">
+<h2>估值分析</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>估值指标</th><th>当前值</th><th>解读</th></tr></thead>
+<tbody>
+<tr><td>股价 / 市值</td><td>$417.01 / $2.16T</td><td>52 周区间约 $238–479；距高点回撤 ~13%，较上版报告日回落 ~2%</td></tr>
+<tr><td>Trailing PE（TTM）</td><td>~30.9x</td><td>各源口径 30–31x；明显高于 5 年中位数（见下）</td></tr>
+<tr><td>Forward PE</td><td class="metric-positive">~19.1x</td><td>基于 2026 年 40%+ 增长预期，显著低于 trailing</td></tr>
+<tr><td>PB</td><td>~8–9x（实际口径）</td><td>yfinance 显示 ~87x 为 ADR 口径数据失真，忽略</td></tr>
+<tr><td>股息率</td><td>~1.0–1.1%（季度股息 $1.1136，年化 ~$4.45）</td><td>低于 10 年期美债 ~2.8% 与融资利率 ~3.5%，不构成分红逻辑</td></tr>
+<tr><td>ROE</td><td class="metric-positive">~40%</td><td>极高，护城河的财务印证</td></tr>
+</tbody>
+</table></div>
+<h3>PEG（推算）</h3>
+<p>Forward PE ~19.1x ÷ 2026 营收增速指引 40%+ ≈ <strong>PEG ~0.48</strong>；若用 Morningstar 的 2027 年 ~30% 增速做保守计，PEG ≈ 0.64。二者均显著低于 1，按 PEG 框架属「便宜」区间。<span class="src-badge src-e">推算</span></p>
+<p class="caveat-inline">注意：PEG 的可靠性取决于「高增速能否持续」。Morningstar 明确把「AI 回报验证点」放在 2028–29——若 2027 年后增速快速回落，当前 PEG 的便宜是虚的，这正是空方的核心论据。</p>
+<h3>历史估值区间（定性，推算）</h3>
+<p>美股无免费精确历史分位接口，以下为「当前 PE vs 历史区间」的<strong>定性</strong>判断<span class="src-badge src-e">推算</span>：</p>
+<ul>
+<li>台积电 ADR 过去十年 forward PE 大致在 <strong>13x–30x</strong> 区间波动：2020–21 高点 ~28–30x，2022–23 半导体下行周期低点 ~13–15x。</li>
+<li>Trailing PE 口径：GuruFocus 数据显示当前 ~30.1x vs <strong>5 年中位数 22.9x</strong>——trailing 口径处于历史偏高水平（约 75–85% 分位，推算）<span class="src-badge src-2">二手</span>。</li>
+<li><strong>Forward PE ~19.1x</strong>：处于历史区间中部，低于 2021 年高点、显著高于 2022 年低点。考虑到当前毛利率（67.7%）与增速（40%+/月度 +44.7%）均为历史最强，forward 口径不贵；trailing 口径偏贵——两口径的分裂本身就是「市场在给增长定价」的体现。</li>
+<li>反向锚点：GuruFocus 的 GF Value 模型给出 $326（较现价 -22%）<span class="src-badge src-2">二手</span>，是机构侧「高估」一派的量化代表；华尔街卖方均值 $552（+32%）则是「低估」一派。估值的分歧度本身就是这个标的的特征。</li>
+</ul>
+<h3>股息率 vs 融资利率</h3>
+
+</div>
+
+<div class="card" id="bull-bear">
+<h2>多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>核心指标继续向上</strong>：先进制程占比 74%→76.8%，3nm 同比 +71%、2nm 首季放量 3%；毛利率 59%→67.7% 结构性上移。</li>
+<li><strong>月度动能加速</strong>：7 月营收同比 +44.7%（高于 Q2 的 36%），1–7 月累计 +37%——Q3 大概率贴近指引上限。</li>
+<li><strong>2nm 商业化已验证</strong>：Apple M6 落地 + A16 Q4 量产准备 + 三星 1.4nm 推迟两年，技术垄断在 2027–28 窗口内反而强化。</li>
+<li><strong>AI 需求「多年供不应求」</strong>：先进封装产能三年翻倍仍不够卖，2027 年计划再提价；自研芯片潮（OpenAI/Waymo/小米）扩大客户基数。</li>
+<li><strong>估值合理偏低（forward 口径）</strong>：forward PE ~19x + 40% 增速 → PEG ~0.5，历史上罕见的「高增长 + 合理估值」组合。</li>
+<li><strong>内部人用真金白银投票</strong>：8 月多笔高管买入、Tiger Global 大幅增持（二手披露）。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>地缘政治尾部风险（达利欧）</strong>：台湾海峡是最大不可逆风险；一旦冲突，产能/供应链中断，估值瞬间重构。</li>
+<li><strong>毛利率可持续性存疑</strong>：67.7% 受 2nm 爬坡 + 海外扩产（亚利桑那/日本/德国）双重稀释，Q3 指引已回落至 65%–67%。</li>
+<li><strong>AI 回报的检验年在 2028–29（Morningstar）</strong>：若 AI 资本开支 2027 后失速，40% 增速与高毛利率同时逆转，forward PE 的「便宜」消失，估值双杀。</li>
+<li><strong>trailing 估值偏贵</strong>：PE ~30x vs 5 年中位 22.9x；GuruFocus GF Value $326 隐含 -22%——量化派认为已透支。</li>
+<li><strong>客户集中</strong>：前十大 78%、前二大 36%（苹果 19% + 英伟达 17%），大客户砍单或订单分流（三星已获特斯拉/博通合作）会放大波动。</li>
+<li><strong>资本开支激增</strong>：US$60–64B 历史高位，自由现金流被挤压；若需求不及预期则成为沉没成本。</li>
+</ol>
+</div>
+</div>
+<h3>核心争议焦点与裁决指标</h3>
+<div class="quote">
+    争议的本质：<strong>「AI 资本开支超级周期」的回报能否在 2028 年前自证？</strong>多方认为这是十年维度的范式迁移且 2027 年提价权在手；空方认为 trailing PE 30x 已计入乐观预期，AI 若无法证明回报，2027 就是顶。裁决胜负手不在短期股价，而在以下可跟踪指标：
+  </div>
+<div class="table-scroll"><table>
+<thead><tr><th>裁决指标</th><th>当前值</th><th>多方胜出信号</th><th>空方胜出信号</th></tr></thead>
+<tbody>
+<tr><td>2nm+3nm 营收占比</td><td>33%（Q2'26）</td><td>2nm 2027 年快速放量至 15%+</td><td>占比见顶回落</td></tr>
+<tr><td>月度营收同比</td><td>+44.7%（7 月）</td><td>维持 35%+ 高位</td><td>连续两月失速至 20% 以下</td></tr>
+<tr><td>毛利率</td><td>67.7%（Q3 指引 65–67%）</td><td>2nm 规模化后回到 66%+</td><td>跌破 60%</td></tr>
+<tr><td>2027 年提价落地</td><td>报道阶段（三方）</td><td>财报会确认提价幅度</td><td>供过于求、提价取消</td></tr>
+<tr><td>云厂 AI capex 指引</td><td>仍在扩张</td><td>2027 指引继续增长</td><td>任一大客户下修 capex</td></tr>
+<tr><td>前二大客户集中度</td><td>36%</td><td>自研芯片潮使客户分散</td><td>进一步集中/订单分流三星</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="analysts">
+<h2>华尔街分析师全景 <span class="src-badge src-2">二手</span></h2>
+<p>截至 2026-09-03，yfinance 汇总的共识为 <strong class="metric-positive">Strong Buy</strong>（19 位分析师），目标价均值 <strong>$552</strong>（区间 $440–$700），对现价 $417 隐含约 <strong>+32%</strong> 上行空间。MarketBeat 口径的共识目标 $496（隐含 +19%）——两个聚合源因样本池不同存在差异，方向一致：无卖出评级。<span class="src-badge src-t">时效</span></p>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>日期</th><th>评级</th><th>目标价</th><th>动作</th></tr></thead>
+<tbody>
+<tr><td>Sanford C. Bernstein</td><td>2026-08-11</td><td>跑赢大盘</td><td>$554</td><td class="metric-positive">上调（自 $430）</td></tr>
+<tr><td>Bank of America</td><td>2026-06-24</td><td>买入</td><td>$590</td><td class="metric-positive">上调（自 $490）</td></tr>
+<tr><td>Needham</td><td>2026-07-27</td><td>买入</td><td>$530</td><td class="metric-positive">上调（自 $480）</td></tr>
+<tr><td>Weiss Ratings</td><td>2026-07-28</td><td>买入（B-）</td><td>—</td><td class="metric-positive">上调（自 Hold）</td></tr>
+<tr><td>交银国际</td><td>2026-07-20</td><td>买入</td><td>$500</td><td class="metric-positive">上调</td></tr>
+<tr><td>Barclays</td><td>2026-07-17</td><td>增持</td><td>$650</td><td class="metric-positive">上调（自 $625）</td></tr>
+<tr><td>TD Cowen</td><td>2026-07-17</td><td class="metric-warn">持有</td><td>$440</td><td>上调（自 $400）</td></tr>
+<tr><td>D.A. Davidson</td><td>2026-07-17</td><td>买入</td><td>$500</td><td class="metric-positive">上调（自 $450）</td></tr>
+<tr><td>Susquehanna</td><td>2026-07-16</td><td>积极</td><td>$600</td><td class="metric-positive">上调（自 $575）</td></tr>
+<tr><td>Zacks Research</td><td>2026-07-16</td><td>强力买入</td><td>—</td><td class="metric-positive">上调（自 Hold）</td></tr>
+<tr><td>Morningstar（Phenix Lee，CNBC 访谈）</td><td>2026-08-11</td><td>（中性框架，非评级）</td><td>—</td><td class="metric-warn">提示 2028–29 才是 AI 回报验证点；2027 预计 ~30% 增长</td></tr>
+<tr><td>GuruFocus（量化模型）</td><td>2026-08-18</td><td>GF Score 97/100（质地极优）</td><td>GF Value $326</td><td class="metric-negative">估值判定「高估」-22%（量化口径）</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">近两月<strong>无下调评级</strong>，卖方动作均为目标价/评级上调；唯一「持有」来自 TD Cowen（$440）。值得注意的反方声音来自买方/量化侧：GuruFocus 模型与 Morningstar 的谨慎框架——卖方一致看多 + 量化模型提示高估的组合，通常意味着市场分歧集中在「时间」而非「方向」。时效：数据截至 2026-09-03。</p>
+</div>
+
+<div class="card" id="reddit">
+<h2>Reddit / 零售投资者讨论 <span class="src-badge src-3">三方</span></h2>
+<p>按 skill 要求，社区讨论以<strong>产品关键词</strong>（"chip foundry" / "2nm" / "TSMC"）而非仅股票代码检索。近一月（2026-08）核心观察：</p>
+<ul>
+<li><strong>「ETF of chip stocks」叙事成为主流</strong>：r/stocks 高热帖主张「与其追新 AI 芯片股，不如囤 TSM」——理由是所有 AI 芯片公司（英伟达/AMD/云厂自研）<strong>产能已被订到 2027/2028 年</strong>，「无论谁赢，都要找台积电流片」。这一框架在散户中扩散度很高。</li>
+<li><strong>7 月营收 +44.7% 刷屏</strong>：路透「世界最大芯片制造商销售额暴涨 45%」帖引发大量讨论，散户同时也在审视科技巨头的 capex 回报（ROI 担忧与买入冲动并存）。</li>
+<li><strong>2027 提价传闻获正面解读</strong>：「TSMC planning to raise chip prices in 2027」在 r/TechHardware 等版块传播，被解读为定价权/供不应求的证明。</li>
+<li><strong>价值投资圈在入场</strong>：r/ValueInvesting 出现「19 岁、长期组合 10% 仓位配置 TSMC」类帖子，「先进制程近乎垄断 + forward PE ~19x」是被反复引用的理由。</li>
+<li><strong>空头声音（少数）</strong>：聚焦台湾地缘风险、CoWoS 产能瓶颈、67.7% 毛利率不可持续、以及「AI 泡沫若破、代工首当其冲」。</li>
+</ul>
+<p class="caveat-inline">社区观点为三方信源，仅作情绪温度计。整体散户情绪偏多，且「囤 TSM = 买 AI 行业 ETF」的心智占位正在固化——这类叙事本身既是多头燃料，也是拥挤度信号。分歧度仍高于机构（机构几乎一边倒看多）。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>综合判断框架</h2>
+<h3>三位大师框架的交叉结论</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>大师框架</th><th>对 TSM 的结论</th></tr></thead>
+<tbody>
+<tr><td><strong>巴菲特（护城河）</strong></td><td>技术垄断 + 规模工艺壁垒构成极深护城河，且本季度护城河在<strong>加宽</strong>（三星推迟 1.4nm、2nm 经 Apple M6 商业验证）；10 年后仍在的概率极高。「好价格」靠 forward PE ~19x + PEG ~0.5 支撑，但 trailing PE ~31x vs 5 年中位 22.9x 意味着安全边际只能来自增长的兑现。</td></tr>
+<tr><td><strong>达利欧（宏观/地缘）</strong></td><td>最大变量不变：地缘（台湾海峡）与宏观（AI 资本开支周期、美联储利率）。Morningstar 把 AI 回报验证点定在 2028–29——这是宏观叙事的「到期日」，2027 年后的增速是最大的贝塔来源。</td></tr>
+<tr><td><strong>费雪（成长）</strong></td><td>成长可持续性强：2nm 放量 + A16 接棒 + 先进封装第二曲线 + 客户排队至 2027/28；毛利率随规模上移（59%→67.7%），符合「长期持有型成长股」特征。需持续验证「毛利率能否守住 65%+」。</td></tr>
+</tbody>
+</table></div>
+<h3>四情景推演（主观判断，非预测）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>核心指标走向</th><th>估值影响</th></tr></thead>
+<tbody>
+<tr><td><strong>基准（中性偏多）</strong></td><td>AI 需求延续，2nm 平稳放量，2027 提价落地</td><td>先进制程占比升至 80%+，毛利率维持 65%+</td><td>forward PE 维持 ~19–20x，盈利驱动上行</td></tr>
+<tr><td><strong>乐观</strong></td><td>AI capex 超预期 + A16 提前量产 + 提价幅度超预期</td><td>2nm 占比快速爬升，毛利率冲 68%+</td><td>估值与盈利双升（分析师高目标 $650–700 对应此情景）</td></tr>
+<tr><td><strong>悲观（周期下行）</strong></td><td>AI 回报证伪、大客户砍单、存货过剩</td><td>先进制程占比与毛利率见顶回落</td><td>增速失速 → 估值下杀，forward PE 向 13–15x 回归（对应 GF Value 一派的 $326）</td></tr>
+<tr><td><strong>极端（地缘）</strong></td><td>台海冲突或供应链中断</td><td>产能中断、营收骤降</td><td>估值体系重构，属不可估值尾部风险</td></tr>
+</tbody>
+</table></div>
+<h3>关键跟踪指标（用户持有/观察 TSM 时盯这 6 个）</h3>
+<ol>
+<li><strong>2nm + 3nm 营收占比</strong>（核心指标，当前 33%）——占比是毛利率的先行指标；A16 量产进度（Q4 2026 验证点）。</li>
+<li><strong>月度营收同比</strong>（当前 +44.7%）——每月 10 日前后的 6-K 是最高频的动能验证；8 月数据 9 月上旬发布。</li>
+<li><strong>季度毛利率</strong>（当前 67.7%，Q3 指引 65–67%）——跌破 60% 需警惕结构性变化。</li>
+<li><strong>云厂 AI capex 指引与大客户集中度</strong>（苹果+英伟达 36%）——AI 回报叙事的源头变量。</li>
+<li><strong>2027 年提价是否在 Q3 财报会（10-15）确认</strong>——定价权兑现的直接证据。</li>
+<li><strong>海外产能（亚利桑那/日本/德国）进度</strong>——地缘风险的对冲与毛利率稀释的来源。</li>
+</ol>
+<h3>总结</h3>
+<div class="quote">
+    台积电是「AI 时代的定价者」：核心指标（先进制程占比 76.8%）持续向上，月度营收同比 +44.7% 显示动能仍在加速，毛利率从 59% 结构性抬升至 67.7%；本季度护城河进一步加宽——Apple M6 验证 2nm、三星主动推迟 1.4nm 两年、A16 有望 Q4 量产。真正的风险不在商业模式（费雪式长期成长逻辑清晰），而在<strong>达利欧式的外部变量</strong>——地缘尾部风险，以及 Morningstar 点出的「2028–29 AI 回报验证」。估值呈两口径分裂：forward PE ~19x + PEG ~0.5 偏便宜，trailing PE ~31x vs 5 年中位 22.9x 偏贵——分裂本身说明市场已把 2026–27 的高增长计入价格。<strong>结论：商业模式与核心指标强势且在强化（多方占优），股息率 ~1% 不构成融资买入逻辑，回报依赖盈利兑现；地缘与 AI 周期是无法用财报证伪的「场外变量」，需以仓位纪律而非精确估值来管理。下一个验证点：9 月上旬 8 月营收 6-K、10-15 Q3 财报会。</strong>
+</div>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议。报告基于公开网络搜索生成，SEC 20-F 与 6-K 文件已下载至本地作为可信数据源。所有估值情景、概率与 PEG/历史分位均为本文主观判断（标注「推算」）。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-09-04 · 由 Claude Code 辅助分析 · 行情数据截至 2026-09-03 收盘 · 财报数据截至 Q2 2026（6-K）与 2026 年 7 月营收</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul>
+<li>一手（本地）：SEC EDGAR 20-F（TSM_FY2025_20-F_2026-04-16.htm）/ Q2 2026 合并财报 6-K（TSM_2026-Q2_6-K_ConsolidatedReport_2026-08-14.htm，制程/平台拆分）/ 7 月营收 6-K（TSM_2026-07_6-K_MonthlyRevenue_2026-08-10.htm）</li>
+<li>二手：yfinance（行情/估值/季度财务）、MarketBeat（分析师与机构持仓）、GuruFocus（PE 中位数/GF Value）、TrendForce / TradingKey / ChosunBiz / BigGo（2nm/A16/三星/先进封装动态）、CNBC（Morningstar 观点）、CNN Markets（行情）</li>
+<li>三方：Reddit（r/stocks、r/ValueInvesting、r/TechHardware 等，产品关键词检索）</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-04%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

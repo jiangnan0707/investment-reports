@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>Anthropic 2026-11-19 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+.table-wrap{overflow-x:auto} .sidebar a{display:block;padding:6px 0} .main-content{min-width:0} svg{max-width:100%;height:auto} p{overflow-wrap:anywhere} h1,h2{text-wrap:balance} a:focus-visible{outline:2px solid #bc6c25} .sidebar a{color:#365747;text-decoration:none;font-size:13px;border-radius:5px;padding:7px 8px}.sidebar a:hover{background:#e8f1e8}.sidebar a:focus-visible{outline:2px solid #bc6c25}
+.mobile-contents, .readout, .table-hint { display: none; }
+@media screen and (max-width: 900px) {
+  html { scroll-padding-top: 16px; }
+  body { font-size: 16px; line-height: 1.72; }
+  header { padding: 24px 16px; margin-bottom: 0; }
+  header .meta { font-size: 13px; }
+  .container { padding: 14px 12px 36px; }
+  .card { padding: 16px 14px; margin-bottom: 14px; }
+  .page-layout > .sidebar { display: none; }
+  .mobile-contents { display: block; margin-bottom: 14px; }
+  .mobile-contents summary { cursor: pointer; padding: 6px 0; font-weight: 650; }
+  .mobile-contents ol { margin: 8px 0 0; padding-left: 24px; }
+  .mobile-contents a { display: block; min-height: 44px; padding: 8px 0; color: var(--accent); }
+  .readout { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin-bottom: 14px; }
+  .readout div { padding: 10px; background: var(--accent-subtle); border: 1px solid var(--border); border-radius: 8px; }
+  .readout strong, .readout span { display: block; }
+  .readout span { font-size: 13px; }
+  .table-wrap { overflow-x: auto; }
+  .table-wrap table { display: table; font-size: 14px; overflow: visible; margin-top: 4px; }
+  .table-wrap.wide table { min-width: 560px; }
+  .table-hint { display: block; font-size: 13px; margin: 10px 0 0; }
+  .table-wrap:not(.wide) th, .table-wrap:not(.wide) td { padding: 8px; overflow-wrap: anywhere; }
+  .card a { overflow-wrap: anywhere; }
+}
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/ant/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+Anthropic%EF%BC%88ANT%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9AAnthropic%EF%BC%88ANT%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-19%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">ANT <span>·</span> 2026-11-19 <span>·</span> PC 完整版</div><h1>Anthropic</h1><p>更新截点：11月19日 21:29 北京时间 · 财务截至 2026-09-30 · 美元</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式与护城河</a></li><li><a href="#compute">三、核心指标：算力费用率</a></li><li><a href="#financial">四、最新财务与现金流</a></li><li><a href="#obligations">五、算力承诺与融资循环</a></li><li><a href="#ipo">六、发行条款、控制权与稀释</a></li><li><a href="#policy">七、政策风险</a></li><li><a href="#valuation">八、估值：把收入分母与股本分开</a></li><li><a href="#debate">九、多空核心分歧</a></li><li><a href="#opinions">十、分析师与社区观点的可用范围</a></li><li><a href="#scenarios">十一、情景与跟踪清单</a></li><li><a href="#conclusion">十二、综合判断框架</a></li><li><a href="#notes">数据说明</a></li></ul></aside><main class="main-content report-body"><div class="card" id="reliability"><h2>数据可靠性声明</h2><p>本期以最终招股书及 SEC 定价文件为准。截点在纳斯达克安排的首个交易日常规开盘前，估值以 IPO 定价计算，首笔成交与首日收盘待核实。财务表仍以截至 9 月 30 日未经审计的季度数据为基础。</p><p>本地披露存档：ANT_424B4_2026-11-19.htm、ANT_FWP定价_2026-11-18.htm。</p><p>资料来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a></p></div><section class="card" id="snapshot"><h2>一、公司速览</h2><p><strong>Anthropic 以每股 83 美元定价，高于原区间上限 6.4%。</strong> 公司预计公开发行与同期私募合计净募资约 1,048 亿美元。Q3 收入环比增长 46.7%，算力费用环比增长 77.5%。发行改善了融资缓冲，产能利用与费用率决定长期回报。</p><div class="table-wrap"><table><thead><tr><th>指标</th><th>最新披露</th></tr></thead><tbody><tr><td>交易安排</td><td>Nasdaq Global Select，代码 ANT，计划 11 月 19 日开始交易，预计 11 月 20 日交割</td></tr><tr><td>IPO 定价与发售</td><td>83 美元/股，9.80 亿股</td></tr><tr><td>发行价对应股权价值</td><td>按发行及私募完成后的备考已发行经济权益股数约 1.10 万亿美元，按招股书摊薄调整表约 1.51 万亿美元</td></tr><tr><td>Q3 已确认收入</td><td>169.56 亿美元</td></tr><tr><td>Q3 算力费用率</td><td>58.2%，较 Q2 上升约 10.1 个百分点</td></tr><tr><td>Q3 GAAP 经营结果</td><td>亏损 5.67 亿美元</td></tr></tbody></table></div><p><a href="https://www.nasdaqtrader.com/TraderNews.aspx?id=DTN2026-28">纳斯达克上市通知</a> · <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm">SEC 定价文件</a></p><p>资料来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a></p><p><strong>发行日观察：</strong>根据纳斯达克通知，ANT 计划于 11 月 19 日开始交易。北京时间 22:30 为常规开盘时间，新股首笔成交取决于开盘集合竞价。此版估值采用已确认的 83 美元发行价，首笔成交及收盘价尚待确认。</p></section><section class="card" id="business"><h2>二、商业模式与护城河</h2><p>Anthropic把前沿模型能力通过API、云市场和自有应用销售给企业与个人。API使用量随客户业务增长，Claude Code及Cowork则把调用嵌入员工日常流程。企业工作流越深入，评测、权限、培训和系统集成的迁移成本越高；但模型能力的领先仍需持续研发证明。</p><div class="table-wrap"><table><thead><tr><th>优势来源</th><th>支持证据</th><th>约束与反证</th></tr></thead><tbody><tr><td>客户扩张</td><td>≥10万美元TTM消费客户超过11,900家，≥100万美元超过1,900家；约250家≥1,000万美元</td><td>客户消费增长不能直接等同合同锁定收入，预算与模型选择可变化</td></tr><tr><td>平台与应用</td><td>Code、Chat、Cowork与平台组合提供交叉销售</td><td>未单独披露各应用收入、毛利与留存，无法量化应用护城河</td></tr><tr><td>多芯片算力</td><td>Trainium、TPU、NVIDIA及AMD架构适配</td><td>适配与调度是工程能力，供电、交付和长期合约仍是约束</td></tr><tr><td>企业信任</td><td>安全与可控性定位有助于进入受监管企业</td><td>与政府的争议可能构成采购限制；安全定位并非无条件的商业优势</td></tr></tbody></table></div><p><strong>竞争判断：</strong>OpenAI、Google及开放权重模型分别在产品分发、云生态与成本方面施压。比较应落到同一工作负载的任务成功率、完成成本和可靠性，不能把一次榜单领先外推为永久定价权。巴菲特框架要求观察客户是否愿意长期支付溢价；目前证据支持业务扩张，尚不足以证明永久经济特许权。</p><p class="footnote">来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a>（一手；已本地存档）。财务数字未经审计。</p><p>最终招股书披露，2026 年前九个月约 79% 收入来自按量计费。该模式能跟随客户使用扩张，也使收入比多年算力承诺更容易随需求和价格波动。</p><p>资料来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a></p></section><section class="card" id="compute"><h2>三、核心指标：算力费用率</h2><p><strong>Q3每1美元收入对应约0.582美元算力费用，Q2为0.481美元。</strong>收入环比增长46.7%，算力费用环比增长77.5%，本季成本扩张快于收入。长期改善趋势与本季回升同时成立。</p><div class="chart"><div class="chart-title">季度收入与算力费用｜十亿美元；绿＝收入，橙＝算力</div><svg aria-label="七个季度收入与算力费用柱状对比，单位十亿美元" role="img" viewbox="0 0 760 300"><line stroke="#d8e5d8" x1="48" x2="740" y1="240" y2="240"></line><text font-size="12" text-anchor="end" x="38" y="244">0</text><line stroke="#d8e5d8" x1="48" x2="740" y1="190" y2="190"></line><text font-size="12" text-anchor="end" x="38" y="194">5</text><line stroke="#d8e5d8" x1="48" x2="740" y1="140" y2="140"></line><text font-size="12" text-anchor="end" x="38" y="144">10</text><line stroke="#d8e5d8" x1="48" x2="740" y1="90" y2="90"></line><text font-size="12" text-anchor="end" x="38" y="94">15</text><line stroke="#d8e5d8" x1="48" x2="740" y1="40" y2="40"></line><text font-size="12" text-anchor="end" x="38" y="44">20</text><rect fill="#2d6a4f" height="3.76" width="26" x="65" y="236.24"></rect><text font-size="10" text-anchor="middle" x="78" y="230.24">0.38</text><rect fill="#bc6c25" height="9.44" width="26" x="96" y="230.56"></rect><text font-size="10" text-anchor="middle" x="109" y="224.56">0.94</text><text font-size="12" text-anchor="middle" x="93" y="265">25Q1</text><rect fill="#2d6a4f" height="7.87" width="26" x="161" y="232.13"></rect><text font-size="10" text-anchor="middle" x="174" y="226.13">0.79</text><rect fill="#bc6c25" height="13.899999999999999" width="26" x="192" y="226.1"></rect><text font-size="10" text-anchor="middle" x="205" y="220.1">1.39</text><text font-size="12" text-anchor="middle" x="189" y="265">25Q2</text><rect fill="#2d6a4f" height="13.819999999999999" width="26" x="257" y="226.18"></rect><text font-size="10" text-anchor="middle" x="270" y="220.18">1.38</text><rect fill="#bc6c25" height="20.470000000000002" width="26" x="288" y="219.53"></rect><text font-size="10" text-anchor="middle" x="301" y="213.53">2.05</text><text font-size="12" text-anchor="middle" x="285" y="265">25Q3</text><rect fill="#2d6a4f" height="20.4" width="26" x="353" y="219.6"></rect><text font-size="10" text-anchor="middle" x="366" y="213.6">2.04</text><rect fill="#bc6c25" height="29.45" width="26" x="384" y="210.55"></rect><text font-size="10" text-anchor="middle" x="397" y="204.55">2.94</text><text font-size="12" text-anchor="middle" x="381" y="265">25Q4</text><rect fill="#2d6a4f" height="47.31" width="26" x="449" y="192.69"></rect><text font-size="10" text-anchor="middle" x="462" y="186.69">4.73</text><rect fill="#bc6c25" height="33.87" width="26" x="480" y="206.13"></rect><text font-size="10" text-anchor="middle" x="493" y="200.13">3.39</text><text font-size="12" text-anchor="middle" x="477" y="265">26Q1</text><rect fill="#2d6a4f" height="115.55" width="26" x="545" y="124.45"></rect><text font-size="10" text-anchor="middle" x="558" y="118.45">11.55</text><rect fill="#bc6c25" height="55.58" width="26" x="576" y="184.42000000000002"></rect><text font-size="10" text-anchor="middle" x="589" y="178.42000000000002">5.56</text><text font-size="12" text-anchor="middle" x="573" y="265">26Q2</text><rect fill="#2d6a4f" height="169.56" width="26" x="641" y="70.44"></rect><text font-size="10" text-anchor="middle" x="654" y="64.44">16.96</text><rect fill="#bc6c25" height="98.63" width="26" x="672" y="141.37"></rect><text font-size="10" text-anchor="middle" x="685" y="135.37">9.86</text><text font-size="12" text-anchor="middle" x="669" y="265">26Q3</text></svg></div><p class="table-hint">左右滑动查看完整表格</p><div aria-label="可横向滚动的对比表" class="table-wrap wide" role="region"><table><thead><tr><th>指标</th><th>2025Q3</th><th>2026Q2</th><th>2026Q3</th></tr></thead><tbody><tr><td>收入（亿美元）</td><td>13.82</td><td>115.55</td><td>169.56</td></tr><tr><td>算力费用（亿美元）</td><td>20.47</td><td>55.58</td><td>98.63</td></tr><tr><td>算力费用率（推算）</td><td>148.1%</td><td>48.1%</td><td>58.2%</td></tr></tbody></table></div><p>公司披露Q3额外使用了约50亿美元短期算力承诺，其成本高于多年期采购。短期供给帮助承接需求，也压低了当期效率。将来要观察长期产能按时交付后，费用率能否回落，同时保持任务质量。<strong>该费用包含训练、推理及内部使用，不等于营业成本；其补数不能称为毛利率。</strong></p><p class="footnote">来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a>（一手；已本地存档）。财务数字未经审计。</p></section><section class="card" id="financial"><h2>四、最新财务与现金流</h2><p class="table-hint">左右滑动查看完整表格</p><div aria-label="可横向滚动的对比表" class="table-wrap wide" role="region"><table><thead><tr><th>亿美元</th><th>2026Q1</th><th>2026Q2</th><th>2026Q3</th></tr></thead><tbody><tr><td>收入</td><td>47.31</td><td>115.55</td><td>169.56</td></tr><tr><td>算力与基础设施</td><td>33.87</td><td>55.58</td><td>98.63</td></tr><tr><td>人员</td><td>12.95</td><td>18.57</td><td>17.11</td></tr><tr><td>销售、营销与合作伙伴</td><td>10.33</td><td>21.35</td><td>23.61</td></tr><tr><td>其他经营与管理</td><td>6.83</td><td>10.31</td><td>35.88</td></tr><tr><td>GAAP经营利润／亏损</td><td>−16.67</td><td>9.74</td><td>−5.67</td></tr><tr><td>调整后经营利润（非GAAP）</td><td>−6.17</td><td>22.35</td><td>24.63</td></tr><tr><td>GAAP净亏损</td><td>−144.39</td><td>−663.09</td><td>−232.91</td></tr></tbody></table></div><p>Q3调整后经营利润仍增长，但利润率由Q2的19.3%降至14.5%（推算），GAAP经营结果由盈转亏。两者不能相互替代：Q3调整项包含10.70亿美元股权激励与19.60亿美元非现金慈善捐赠，均有股东经济含义。</p><p>Q3净亏损232.91亿美元中，219.36亿美元来自可转债、衍生负债与SAFE公允价值变动。<strong>它不是同额经营烧钱</strong>；转股和未来稀释仍需计入股本分析。前九个月经营现金流65.69亿美元，期末现金956亿美元、短期投资363亿美元，合计约1,319亿美元。现金充裕与未来多年支付义务可以同时存在。</p><p>前三季度累计收入332.42亿美元、GAAP经营亏损12.60亿美元。不能把Q2首次经营盈利外推为稳定盈利阶段，也不能把非现金估值损失全部当作现金消耗。</p><p class="footnote">来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a>（一手；已本地存档）。财务数字未经审计。</p></section><section class="card" id="obligations"><h2>五、算力承诺与融资循环</h2><div class="table-wrap"><table><thead><tr><th>口径</th><th>金额</th><th>含义</th></tr></thead><tbody><tr><td>9月末及后续广义采购、租赁等承诺</td><td>约9,009亿美元</td><td>包含短期承诺及尚未开始的租赁；绝大部分与算力基础设施有关</td></tr><tr><td>上述未来12个月到期部分</td><td>约707亿美元</td><td>2026-09-30起12个月；不等于未来四季利润表费用</td></tr><tr><td>上述截至2030年底预计发生</td><td>约4,516亿美元</td><td>其余大部分预计在2031–2045年发生</td></tr><tr><td>9月末表内合同义务汇总表</td><td>约3,199.93亿美元</td><td>租赁及剩余期限超过一年的不可撤销采购等，范围较窄</td></tr><tr><td>期末现金及短期投资</td><td>约1,319亿美元</td><td>不包含尚未完成的IPO及同期私募净流入</td></tr></tbody></table></div><p>广义承诺约为期末现金与短投的6.8倍，未来12个月到期部分约为其53.6%（推算）。这些比值用于展示规模，不是倒计时：收入回款、供应商付款时点、预付与融资都会改变现金路径。将全部长期承诺与单年收入直接相减，或把不同合同表简单相加，都会误导。</p><p>Google、Amazon、Microsoft等同时扮演股东、供应商与销售渠道。融资使扩容成为可能，扩容又形成对伙伴的采购收入；要观察终端企业需求是否足以支撑循环，而不能仅用战略投资金额证明商业回报。</p><p class="footnote">来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a>（一手；已本地存档）。财务数字未经审计。</p><p>最终招股书列明 Google 托管协议至少约 1,213 亿美元，Microsoft 协议至少 472 亿、上限 492 亿美元。另有未设固定美元承诺的算力和基础设施安排，公司估计支付额为 1,500 亿至 1,750 亿美元，未纳入 9,009 亿美元总额。具体合同金额已按各自范围列示，避免与总额重复计算。</p><p>资料来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a></p></section><section class="card" id="ipo"><h2>六、发行条款、控制权与稀释</h2><div class="table-wrap"><table><thead><tr><th>条款</th><th>最终发行</th></tr></thead><tbody><tr><td>每股发行价</td><td>83 美元，较原上限 78 美元高 6.4%</td></tr><tr><td>公开发售</td><td>9.80 亿股，比此前的 8.25 亿股多 18.8%</td></tr><tr><td>公司新发／老股出售</td><td>9.5635 亿股／0.2365 亿股</td></tr><tr><td>公开发售总额</td><td>813.4 亿美元，含约 19.63 亿美元老股出售所得</td></tr><tr><td>同期私募</td><td>260 亿美元，按发行价配售约 3.133 亿股 Class N，交割以公开发行完成等条件为前提</td></tr><tr><td>发行人合计净募资</td><td>约 1,048 亿美元，含同期私募，未计绿鞋。全额行使绿鞋时预计约 1,170 亿美元</td></tr><tr><td>超额配售权</td><td>30 天内最多 1.47 亿股公司新股</td></tr><tr><td>资金用途</td><td>营运、人员、算力和基建等，另预计约 43 亿美元用于 RSU 结算的代扣税汇缴</td></tr></tbody></table></div><p>公开发售总额包含老股出售款，发行人只获得公司新股的净收入。同期私募中 Google 的认购包含已承诺投资的履行。实际交割结果和绿鞋行使规模仍需后续核实。</p><p>Founder LLC 通过 Class F 拥有一般股东事项 50.1% 的投票权，长期利益信托通过 Class T 通常有权选举董事会多数席位。部分亚马逊票据受持股上限约束，可延后转股。员工期权、RSU 与公益相关股份也影响每股权益。</p><p>锁定期依持有人分为最长 180 天或 365 天，存在提前出售例外。观察实际解禁条件和可出售股数，避免把全部已发行股份当作首日流通盘。</p><p>资料来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a></p><p>按每股 83 美元和承销商基础股每股 82.43878 美元的支付价格计算，公司新股发行总额约 793.77 亿美元，扣除承销折扣后约 788.40 亿美元，尚未扣其他发行费用。公司预计 IPO 与同期私募的净募资约 1,048 亿美元，其中估计约 43 亿美元用于 RSU 结算代扣税汇缴。两项相减约为 1,005 亿美元，未计其他用途、交割后资金流动与超额配售。</p><p><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm">SEC 定价文件与承销价</a></p></section><section class="card" id="policy"><h2>七、政策风险</h2><div class="table-wrap"><table><thead><tr><th>风险</th><th>当前证据与适用边界</th><th>传导</th></tr></thead><tbody><tr><td>美国政府采购争议</td><td>修订稿披露，加州法院部分支持公司；DC巡回法院对FASCSA认定的审查结果不利，公司仍评估后续措施</td><td>不同法律路径不能混为一谈；政府及相关承包业务存在准入不确定性</td></tr><tr><td>模型出口与安全监管</td><td>修订稿风险因素披露此前模型限制及监管不确定性</td><td>可能影响模型可用性、销售范围与合规成本</td></tr><tr><td>版权与数据</td><td>既有Bartz和解不能消除其他作品与其他原告的索赔</td><td>现金支付、授权成本、赔偿和训练数据范围</td></tr><tr><td>电力与数据中心审批</td><td>采购交付依赖第三方机房、电网及地方许可</td><td>产能延期、备用成本与合同履约</td></tr><tr><td>跨境客户限制</td><td>客户所在地、关联关系与适用出口政策影响服务范围</td><td>海外收入扩张与客户筛查成本</td></tr></tbody></table></div><p>本节为投资风险梳理，不代替法律意见。监测后续法院正式裁定、政府采购实施范围、模型限制与数据中心交付。政策事件需按法条与机构范围判断，不能把单一采购争议扩大为全部企业客户被禁用。</p><p class="footnote">来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a>（一手；已本地存档）。财务数字未经审计。</p></section><section class="card" id="valuation"><h2>八、估值：把收入分母与股本分开</h2><p><strong>83 美元对应约 1.10 万亿美元已发行口径股权价值，按最终招股书的额外摊薄调整约为 1.51 万亿美元。</strong> 两个数字用的是同一发行价。股本差额包括期权、RSU、剩余可转票据、公益相关股份及其他项目。</p><p class="table-hint">左右滑动查看完整表格</p><div aria-label="可横向滚动的对比表" class="table-wrap wide" role="region"><table><thead><tr><th>股本口径</th><th>每股假设</th><th>股权价值</th><th>÷ TTM 收入</th><th>÷ Q3 年化</th><th>÷ 10 月 Run-Rate</th></tr></thead><tbody><tr><td>发行及私募后已发行 A+N 股</td><td>83 美元</td><td>1.097 万亿美元</td><td>31.1 倍</td><td>16.2 倍</td><td>13.5 倍</td></tr><tr><td>招股书摊薄调整</td><td>83 美元</td><td>1.505 万亿美元</td><td>42.7 倍</td><td>22.2 倍</td><td>18.6 倍</td></tr><tr><td>同一摊薄股数的价格情景</td><td>100 美元</td><td>1.814 万亿美元</td><td>51.4 倍</td><td>26.7 倍</td><td>22.4 倍</td></tr><tr><td>同一摊薄股数的价格情景</td><td>120 美元</td><td>2.177 万亿美元</td><td>61.7 倍</td><td>32.1 倍</td><td>26.9 倍</td></tr></tbody></table></div><p>按摊薄口径，83 美元相当于已实现过去 12 个月收入的约 42.7 倍。若用 15 倍或 10 倍股权价值／年收入作为纯情景假设，同样的股权价值分别对应约 1,004 亿或 1,505 亿美元的年度收入。倍数与收入均为敏感性测算，未作为目标价或预测。</p><p>三种分母分别是过去 12 个月已确认收入 352.82 亿美元、Q3 机械年化 678.24 亿美元，以及公司 10 月末披露的 Run-Rate 约 810 亿美元。这里计算股权价值／收入。GAAP 净亏损下，传统市盈率不适用。</p><p>资料来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a></p><p><strong>上市后换算：</strong>固定招股书股数时，股价每变动 1 美元，已发行股权价值变动约 132.20 亿美元，按招股书摊薄股数则约变动 181.38 亿美元。若绿鞋全额行使，按 83 美元对应的已发行股权价值约为 1.109 万亿美元。实际可流通股数仍受锁定期、提前解禁和持有人出售行为影响。</p></section><section class="card" id="debate"><h2>九、多空核心分歧</h2><div class="table-wrap"><table><thead><tr><th>争点</th><th>多方证据</th><th>空方证据</th></tr></thead><tbody><tr><td>需求</td><td>Q3收入169.56亿美元、环比+46.7%；大客户数量扩张</td><td>按量计费缺乏多年保底，客户可迁移或优化用量</td></tr><tr><td>经营杠杆</td><td>Q3调整后经营利润24.63亿美元，经营现金流累计转正</td><td>算力费用环比增速超过收入；GAAP经营重新亏损</td></tr><tr><td>扩容</td><td>长期产能可能降低短期采购溢价、承接需求</td><td>广义承诺9,009亿美元，交付与价格风险长期化</td></tr><tr><td>融资</td><td>期末现金短投1,319亿美元；已定价发行预计增加缓冲</td><td>募资依赖发行完成，新增股份与可转债稀释</td></tr><tr><td>产品</td><td>工作流嵌入可提高切换成本</td><td>应用收入与毛利未单独披露，优势强度难量化</td></tr><tr><td>治理</td><td>使命治理可能支持长期研发与安全投入</td><td>公众股东缺少控制权，公益发行影响经济权益</td></tr></tbody></table></div><p>芒格逆向框架：若模型能力落后或每任务价格快速下降，收入增长可能弱于预期，而采购支付仍按合同发生。反过来，若效率提高带来更低成本、更大用量且应用留存增强，长期产能也可能成为竞争资源。分歧需要由现金、费用率和客户扩张数据裁决。</p></section><section class="card" id="opinions"><h2>十、分析师与社区观点的可用范围</h2><p>首日交易前缺乏可供比较的稳定卖方覆盖与历史估值区间。发行价比此前上限高 6.4%，发行股数也增加 18.8%，反映了本次发行定价和规模的变化。二级市场交易将由可流通供给与即时需求定价。</p><p>公开社区讨论主要围绕首日定价、算力资本开支和商业模式竞争。零散讨论仅用于识别争议，未量化市场情绪。</p><p><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm">SEC 定价文件</a></p></section><section class="card" id="scenarios"><h2>十一、情景与跟踪清单</h2><div class="table-wrap"><table><thead><tr><th>情景</th><th>可观察触发条件</th><th>对经营与股东的含义</th></tr></thead><tbody><tr><td>需求兑现</td><td>季度收入继续增长；短期算力溢价下降；现金回款跟进</td><td>产能被利用，经营杠杆有机会恢复</td></tr><tr><td>增长放缓</td><td>收入增长不及算力费用；客户净扩张明显回落</td><td>费用率上行，现金消耗或融资需求增加</td></tr><tr><td>交付或政策冲击</td><td>产能交付延迟、模型受限、采购禁令扩大</td><td>收入承接与成本之间错配</td></tr><tr><td>发行与供给冲击</td><td>定价或发行数量调整、解禁或转换集中发生</td><td>即使业务增长，单股价值与交易价格仍可能承压</td></tr></tbody></table></div><p>未来披露优先跟踪：①首笔成交及首日收盘、实际交割与绿鞋行使、完全摊薄股本；②Q4已确认收入及算力费用率；③未来12个月付款义务、预付和现金余额；④≥10万美元客户数与同口径NRR；⑤政府采购诉讼和出口措施；⑥锁定期例外、公益发行与票据转换。各情景不赋予缺乏统计依据的概率。</p></section><section class="card" id="conclusion"><h2>十二、综合判断框架</h2><p><strong>本报告观点：</strong>Anthropic已证明企业需求可以快速转成收入，但尚未证明高速扩容下利润与现金流能够稳定复利。Q3的增长与成本反弹都应进入判断，不能只选择其中一面。若后续季度收入增长、费用率下降且现金回款同步，该判断会向经营杠杆增强方向修正；若费用率继续上升而大客户扩张放缓，则长期采购压力更突出。</p><p>十年视角应分层：模型领先持续性、应用工作流黏性、基础设施承诺与股东权益结构。需求空间广不代表每一家供应商都能获得持续回报；长期采购也不必然导致失败，取决于利用率、单价与现金创造。</p></section><div class="card" id="notes"><h2>数据说明</h2><p><strong>股本与估值。</strong> 已发行口径为 7,583,103,996 股 Class A + 5,636,538,278 股 Class N。摊薄情景按 424B4 第 26 页调整表，把 Class A、Class N、库存股法净期权和 RSU 相加，共 18,137,587,873 股。两种口径均不计绿鞋与无经济权股。100、120 美元情景固定 83 美元时的摊薄股数以便比较。</p><p><strong>经营口径。</strong> 算力费用率为算力与基础设施费用／收入，Q3 为 98.63／169.56＝58.17%。TTM 收入为 2025Q4 到 2026Q3 四季之和。Run-Rate 为近期用量与订阅估算的年化指标。Q3 财务不包含发行所得。</p><p><strong>与上期相比。</strong> 用最终发行条款替换 11 月 11 日版的初步区间和净募资估计。Q3 收入、费用率、长期算力承诺与财务判断均按最终招股书重新核对。</p><p><strong>局限。</strong> 本期采用首日美东常规开盘前截点。尚无可核实的首笔成交、首日收盘及发行交割结果。未单独披露 Claude 各应用的利润。</p><p>资料来源：<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书 424B4</a></p></div><footer class="card"><p>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p><p>2026-11-19 · OpenAI Codex 辅助更新</p><p><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书</a> · <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm">SEC 定价文件</a> · <a href="https://www.nasdaqtrader.com/TraderNews.aspx?id=DTN2026-28">纳斯达克上市通知</a></p></footer></main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+Anthropic%EF%BC%88ANT%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9AAnthropic%EF%BC%88ANT%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-19%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

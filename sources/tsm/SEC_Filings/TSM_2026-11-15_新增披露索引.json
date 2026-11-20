@@ -1,0 +1,324 @@
+[
+  {
+    "file": "TSM_2026-11-13_6-K_000104617926000801.htm",
+    "form": "6-K",
+    "date": "2026-11-13",
+    "accession": "000104617926000801",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000801/tsm-fsx20261113x6k.htm",
+    "doc": "tsm-fsx20261113x6k.htm",
+    "sha256": "af355c0fb8e79ef76638146bddcef4be19e2a8c2d244d3cafbda65c5288cbc60"
+  },
+  {
+    "file": "TSM_2026-11-12_6-K_000104617926000800.htm",
+    "form": "6-K",
+    "date": "2026-11-12",
+    "accession": "000104617926000800",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000800/a20261112statementregardin.htm",
+    "doc": "a20261112statementregardin.htm",
+    "sha256": "7c66a2943a472c97111e98c4f406500a79af1673c3ebf62a2e18101dca9523e3"
+  },
+  {
+    "file": "TSM_2026-11-10_6-K_000104617926000797.htm",
+    "form": "6-K",
+    "date": "2026-11-10",
+    "accession": "000104617926000797",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000797/tsm-boardx202611xx.htm",
+    "doc": "tsm-boardx202611xx.htm",
+    "sha256": "e46ae29b61d5a6d78b7970d2f391eeaeecc45f9bdbdd4419424ba10e4b4e24c3"
+  },
+  {
+    "file": "TSM_2026-11-10_6-K_000104617926000796.htm",
+    "form": "6-K",
+    "date": "2026-11-10",
+    "accession": "000104617926000796",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000796/tsm-revenue20261110.htm",
+    "doc": "tsm-revenue20261110.htm",
+    "sha256": "444c1095c1e54db111306e159d731e879e0581ed01c31716572725258a692cf3"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000794.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000794",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000794/wk-form4_1794310898.xml",
+    "doc": "wk-form4_1794310898.xml",
+    "sha256": "537190d2c2e85404a3a0bf97a6f23401439e4c934fd8db1279518d0d8b739964"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000793.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000793",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000793/wk-form4_1794310890.xml",
+    "doc": "wk-form4_1794310890.xml",
+    "sha256": "7999201a437cb3157c6f4b72d06b9627456d2132cedb1ac613fc90769f07d671"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000792.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000792",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000792/wk-form4_1794310883.xml",
+    "doc": "wk-form4_1794310883.xml",
+    "sha256": "87cb1ce7f847756a5b77afc50cc648b35be898adc3e15c277eeed229fee76dc8"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000791.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000791",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000791/wk-form4_1794310876.xml",
+    "doc": "wk-form4_1794310876.xml",
+    "sha256": "d694e37fabe8e7d2348df6fa1a6607a3436550f5957ebd016060ad6ee34719c4"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000790.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000790",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000790/wk-form4_1794310870.xml",
+    "doc": "wk-form4_1794310870.xml",
+    "sha256": "ad01686334bd802936eabf5a2f960254fcecb01a738c9dea35cefa1223e435d4"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000789.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000789",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000789/wk-form4_1794310863.xml",
+    "doc": "wk-form4_1794310863.xml",
+    "sha256": "4eb1deedb97eb210dd339ebe5c9a145793fe50dab37bf6741a19179a6d5ad59a"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000782.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000782",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000782/wk-form4_1794310702.xml",
+    "doc": "wk-form4_1794310702.xml",
+    "sha256": "c4be41a17cfeac38d70e9265b732b8edf55893e386d4363144f8a2b2468c32eb"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000781.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000781",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000781/wk-form4_1794310695.xml",
+    "doc": "wk-form4_1794310695.xml",
+    "sha256": "8389aee11ae37f4b40e7bcd4d01bdfdc4be2723853d35006783f271c4c70231a"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000780.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000780",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000780/wk-form4_1794310688.xml",
+    "doc": "wk-form4_1794310688.xml",
+    "sha256": "42e828cd8d2a51a8d1f96e3dce3adeb0118f210f091b5b0246793411f937478b"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000779.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000779",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000779/wk-form4_1794310680.xml",
+    "doc": "wk-form4_1794310680.xml",
+    "sha256": "4442a9a7e2d8de2de6b389e9993d2352472789095b1095198269b34e7b6946cf"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000778.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000778",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000778/wk-form4_1794310674.xml",
+    "doc": "wk-form4_1794310674.xml",
+    "sha256": "728fc9da16a02d8556f0abb78702dd88e31e48e7bbe8bbd47f7eea90837b879e"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000777.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000777",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000777/wk-form4_1794310668.xml",
+    "doc": "wk-form4_1794310668.xml",
+    "sha256": "99b3a29598a0e34ef4e598e8a5aade768403a6b5988a786f3b0896319fb103aa"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000776.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000776",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000776/wk-form4_1794310662.xml",
+    "doc": "wk-form4_1794310662.xml",
+    "sha256": "fdf5f9a8b58ddf074be8469110ff91286b831f14f313f2b75eaaabd92c708d72"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000775.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000775",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000775/wk-form4_1794310656.xml",
+    "doc": "wk-form4_1794310656.xml",
+    "sha256": "9915c3d4d1d8431eb03766216822e1c5bba794dc655fdb77c62a97c50ebd8d52"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000774.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000774",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000774/wk-form4_1794310650.xml",
+    "doc": "wk-form4_1794310650.xml",
+    "sha256": "baa0e17c4286bbfa37656da93bb919de1099c52b6b3a5645ac8119a995242fe9"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000773.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000773",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000773/wk-form4_1794310644.xml",
+    "doc": "wk-form4_1794310644.xml",
+    "sha256": "87b1ab3d2d5442fc9ad6831ee9f9b71a795e49b617b299adfabc96cedb3255fc"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000772.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000772",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000772/wk-form4_1794310638.xml",
+    "doc": "wk-form4_1794310638.xml",
+    "sha256": "8276af85c397f0497d631141ba81b093e9f90bba47cdab6b40e41facd6dceaaf"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000771.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000771",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000771/wk-form4_1794310631.xml",
+    "doc": "wk-form4_1794310631.xml",
+    "sha256": "c189a66d1fbe89eb10230011816689ad90ea165d7445e0d098cdb0ba8014758e"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000758.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000758",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000758/wk-form4_1794310320.xml",
+    "doc": "wk-form4_1794310320.xml",
+    "sha256": "abf4c9195b8f5fe6b76c153af125231715464ebf06898a84301913719df06e7f"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000757.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000757",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000757/wk-form4_1794310312.xml",
+    "doc": "wk-form4_1794310312.xml",
+    "sha256": "734a35ad784077d3920c8870a204e0c38fc5c268b5703b3c240a35f9a7c3727b"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000756.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000756",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000756/wk-form4_1794310306.xml",
+    "doc": "wk-form4_1794310306.xml",
+    "sha256": "b6533e345170118d30aa40ea66acdafeb1179f9e0c27c44f567eb9688af4bb1f"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000755.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000755",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000755/wk-form4_1794310298.xml",
+    "doc": "wk-form4_1794310298.xml",
+    "sha256": "24cb2c448fcc983425a90fefe394c4855fb9f7cddd18c5eff8b65a026a9000fe"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000754.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000754",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000754/wk-form4_1794310289.xml",
+    "doc": "wk-form4_1794310289.xml",
+    "sha256": "23a28f401ba1dce4fb883b11300c7d123c0f7ea3fb8472a1aa1e1f2ada9514c6"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000753.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000753",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000753/wk-form4_1794310280.xml",
+    "doc": "wk-form4_1794310280.xml",
+    "sha256": "ededbe8df6e19112484fc7ddb1b2c19377c401373e75a8a20887ef405e2ef514"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000746.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000746",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000746/wk-form4_1794309328.xml",
+    "doc": "wk-form4_1794309328.xml",
+    "sha256": "1ec2a9538f638b63b0fdada7bac983bbb35b7a77eb261ce090b20b71f31d5288"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000745.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000745",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000745/wk-form4_1794309321.xml",
+    "doc": "wk-form4_1794309321.xml",
+    "sha256": "b6f1256a2b8a3fd6baa57bc025f34768c0199afc707dbe8f35192ff04a975a7a"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000744.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000744",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000744/wk-form4_1794309313.xml",
+    "doc": "wk-form4_1794309313.xml",
+    "sha256": "0763118b29b204e04bf9023fb0e04eaed889b7189326a24f45595629a38351a1"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000743.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000743",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000743/wk-form4_1794309306.xml",
+    "doc": "wk-form4_1794309306.xml",
+    "sha256": "beba505fae38d0e46ce130bc5d53f9a9cce68c2cb32d68d2d79e774b5b0e0815"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000742.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000742",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000742/wk-form4_1794309298.xml",
+    "doc": "wk-form4_1794309298.xml",
+    "sha256": "e633c42b661aa4c64b6149255fdd43f985c11ea18f6c069ff3fc1edb526e0215"
+  },
+  {
+    "file": "TSM_2026-11-10_4_000104617926000741.xml",
+    "form": "4",
+    "date": "2026-11-10",
+    "accession": "000104617926000741",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000741/wk-form4_1794309291.xml",
+    "doc": "wk-form4_1794309291.xml",
+    "sha256": "f86c5af4e7f0be85ba12cd19782894cbdba509f0738a697bd444f428adcdcd61"
+  },
+  {
+    "file": "TSM_2026-11-09_4_000104617926000734.xml",
+    "form": "4",
+    "date": "2026-11-09",
+    "accession": "000104617926000734",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000734/wk-form4_1794222904.xml",
+    "doc": "wk-form4_1794222904.xml",
+    "sha256": "0f36a3b010d8f9a8a9fbaa0aef14de4076cbe67a283e55987afc72a6879072d4"
+  },
+  {
+    "file": "TSM_2026-Q3_6-K_ConsolidatedReport_2026-11-13.htm",
+    "form": "6-K EX99.1",
+    "date": "2026-11-13",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000801/a2026q3consolidatedreport-.htm",
+    "sha256": "c24b4afb0f22d1cd2cb0df23694ecbab6eb40350d586b26a9ba07bb8f7f571b0"
+  }
+]

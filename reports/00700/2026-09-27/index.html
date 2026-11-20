@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>腾讯控股 2026-09-27 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: calc(max(var(--tl-min, 30px), var(--span, 1) * var(--tl-unit, 7px))); }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/00700/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E8%85%BE%E8%AE%AF%E6%8E%A7%E8%82%A1%EF%BC%8800700%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%85%BE%E8%AE%AF%E6%8E%A7%E8%82%A1%EF%BC%8800700%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-27%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">00700 <span>·</span> 2026-09-27 <span>·</span> PC 完整版</div><h1>腾讯控股</h1><p>行情截至 2026/09/25 收盘 · 财务为 Q2 2026 实际业绩（2026/08/12 发布）</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式 — 社交流量池 × 三大变现引擎，AI 从「增强层」走向「交互层」</a></li><li><a href="#core-metric">三、核心指标 — 微信生态变现深度 × AI 投入产出比</a></li><li><a href="#financials">四、最新财务数据（Q2 2026 实际业绩，2026/08/12 发布）</a></li><li><a href="#wechat-agent">五、微信原生 Agent「小微」— 本周「中国版 Muse」重估的核心资产</a></li><li><a href="#cash">六、资金面 — 回购持续，但对冲的是 AI 消耗与大股东供给</a></li><li><a href="#geopolitics">七、地缘与政策风险</a></li><li><a href="#valuation">八、估值分析 — 「期权定价」打断了逼近 52 周低点的折价测试</a></li><li><a href="#bull-bear">九、多空核心分歧</a></li><li><a href="#analysts">十、券商分析师全景 二手</a></li><li><a href="#community">十一、雪球 / 散户讨论 三方</a></li><li><a href="#conclusion">十二、综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+<strong>⚠ 时效提示：</strong>本报告行情为 <strong>2026/09/25（周五）收盘</strong>，财务仍基于 2026/08/12 发布的 <strong>Q2 2026 实际业绩</strong>——Q3 业绩预计 11 月中旬发布，在此之前公司层面无新财报。本周最关键的边际变化发生在<strong>情绪与叙事层</strong>而非基本面：Meta 的 C 端 AI Agent「Muse」在美国爆红，市场据此把腾讯重估为「中国版 Muse」最可能的落地载体（详见第五节）。请特别注意：网络上广泛流转的若干高目标价（杰富瑞 794、基准 790、高盛 770 港元）经核查<strong>源自 2025 年 10 月的旧研报</strong>，并非当前观点，本报告已剔除（详见分析师一节）。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> HKEXnews 公告 / 公司财报 / 腾讯行情接口 |
+    <span class="src-badge src-2">二手</span> 券商研报 / 财经媒体转述 |
+    <span class="src-badge src-3">三方</span> 雪球、散户与社区讨论 |
+    <span class="src-badge src-e">推算</span> 间接计算（如 Non-IFRS PE、PEG、汇率折算） |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">
+    本地披露文件存档（一手）：<code>Filings/00700_2025年_年度业绩公布_2026-03-18.pdf</code> ·
+    <code>00700_2025年_年报_2026-04-09.pdf</code> ·
+    <code>00700_2026年_中报业绩公布_2026-08-12.pdf</code>。
+    行情来自腾讯财经 qt.gtimg.cn / ifzq.gtimg.cn（一手）。汇率取自公开汇率接口（2026/09/25：USDCNY 6.7128、USDHKD 7.8441 → HKDCNY 0.8558）。
+    历史 PE 分位、Non-IFRS TTM PE、PEG、目标价隐含空间均为基于公开数据的<strong>推算</strong>（<span class="src-badge src-e">推算</span>），非精确统计。
+  </p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:180px;"><strong>全称</strong></td><td>腾讯控股有限公司（Tencent Holdings Ltd.）</td></tr>
+<tr><td><strong>上市</strong></td><td>港交所主板 0700.HK（2004/06 上市，IPO HK$3.70）；注册地开曼群岛</td></tr>
+<tr><td><strong>核心产品</strong></td><td>微信 / WeChat（合并月活 14.39 亿）、腾讯游戏、营销服务（广告）、微信支付、腾讯云、AI 矩阵（混元 Hy4、微信原生 Agent「小微」、WorkBuddy、元宝）</td></tr>
+<tr><td><strong>管理层</strong></td><td>马化腾（创始人/CEO）· 刘炽平（总裁）· 张小龙（微信事业群）· 姚顺雨（首席 AI 科学家，2026/03 起掌舵基础模型）</td></tr>
+<tr><td><strong>记账 / 交易货币</strong></td><td>人民币（RMB）记账，港元（HKD）交易 —— 港股特有的双重汇率暴露</td></tr>
+<tr><td><strong>2025 全年营收</strong></td><td>7,517.66 亿元 RMB（同比 +14%）<span class="src-badge src-s">一手</span></td></tr>
+<tr><td><strong>H1 2026 营收</strong></td><td>4,012.43 亿元 RMB（同比 +10%）<span class="src-badge src-s">一手</span></td></tr>
+<tr><td><strong>披露来源</strong></td><td>HKEXnews（港交所披露易），最新中报已存档本地</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">HK$436.60</div><div class="label">股价 (2026/09/25 收盘，-0.41%)<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">3.97 万亿</div><div class="label">总市值 (港元)<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">15.95x</div><div class="label">P/E (TTM，行情接口口径)<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">~12.5x</div><div class="label">Non-IFRS P/E (TTM，推算)<span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">1.22%</div><div class="label">股息率 (TTM 股息 HK$5.313)<span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value metric-positive">+4.20%</div><div class="label">本周涨跌 (419.00 → 436.60)<span class="src-badge src-e">推算</span></div></div>
+</div>
+<div class="chart">
+<div class="chart-title">股价关键锚点 <small>一手行情 + 月K线，2026/09/25 收盘 · x 轴按真实日期比例</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="50" x2="620" y1="20" y2="20"></line>
+<line x1="50" x2="620" y1="76" y2="76"></line>
+<line x1="50" x2="620" y1="132" y2="132"></line>
+<line x1="50" x2="620" y1="189" y2="189"></line>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end">
+<text x="44" y="24">700</text>
+<text x="44" y="80">600</text>
+<text x="44" y="136">500</text>
+<text x="44" y="193">400</text>
+</g>
+<polyline fill="none" points="50,32.5 195,79.8 482,182.6 620,168.2" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<g fill="#fff" stroke-width="2.5">
+<circle cx="50" cy="32.5" r="5" stroke="var(--accent)"></circle>
+<circle cx="195" cy="79.8" r="5" stroke="var(--accent)"></circle>
+<circle cx="482" cy="182.6" r="5" stroke="var(--red)"></circle>
+<circle cx="620" cy="168.2" r="5" stroke="var(--amber)"></circle>
+</g>
+<g fill="var(--text-primary)" font-size="11.5" font-weight="700">
+<text text-anchor="start" x="50" y="24">677.70</text>
+<text text-anchor="middle" x="195" y="71">593.70</text>
+<text fill="var(--red)" text-anchor="middle" x="482" y="201">411.00</text>
+<text fill="var(--amber)" text-anchor="end" x="620" y="159">436.60</text>
+</g>
+<g fill="var(--text-muted)" font-size="11">
+<text text-anchor="start" x="50" y="226">2025/10 高点</text>
+<text text-anchor="middle" x="195" y="240">2025 年末</text>
+<text text-anchor="middle" x="482" y="226">2026/06 52周低</text>
+<text text-anchor="end" x="620" y="240">2026/09/25 现价</text>
+</g>
+</svg>
+<span class="caveat-inline">一年期走势：<strong>677.70 → 411.00（−39.4%）→ 436.60</strong>——是一条单边下行后小幅反弹的曲线，不是一组孤立的水平位。本周（9/18–9/25）的细部走势见下文「本周价格路径」的日线图。<br/>现价距 52 周低点 +6.2%，距 2025/10 高点 -35.6%，年初至今 -26.46%（行情接口口径）。本周走势与大盘背离：腾讯 +4.20%，同期恒生科技 <span class="metric-negative">-2.13%</span>，超额收益约 +6.3pct——这是一次明确的个股叙事驱动行情，而非板块普涨。</span>
+</div>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式 — 社交流量池 × 三大变现引擎，AI 从「增强层」走向「交互层」</h2>
+<p>腾讯的商业模式基石是<strong>微信 14.39 亿合并月活的社交流量池</strong>——中国的「数字基础设施」。它为三大主业提供变现场景：<strong>游戏</strong>（社交裂变 + 分发）、<strong>营销服务/广告</strong>（朋友圈 + 视频号 + 小程序 + 微信小店）、<strong>金融科技及企业服务</strong>（微信支付 + 云）。2026 年 AI 的角色正在发生质变：从此前的「贯穿各板块的效率增强层」（AI 投放、AI 编码）升级为<strong>「直接面向用户的交互层」</strong>——微信原生 Agent「小微」若跑通，意味着入口本身被 AI 重写。</p>
+<div class="stacked-bar" style="margin:18px 0;">
+<div style="width:48.1%;background:#2d6a4f;">增值服务 48%</div>
+<div style="width:29.4%;background:#40916c;">金融科技及企业服务 29%</div>
+<div style="width:21.3%;background:#74a892;">营销服务 21%</div>
+<div style="width:1.2%;background:#b7cfc1;">1%</div>
+</div>
+<span class="caveat-inline">Q2 2026 收入结构（一手财报）。增值服务 = 本土游戏 473 亿 + 国际游戏 186 亿 + 社交网络 325 亿。</span>
+<h3>2.1 护城河（巴菲特框架：经济特许权 + 网络效应）</h3>
+<p>反复追问「竞争对手为什么无法复制」：微信的网络效应是<strong>中国最强的双边网络密度</strong>——14 亿用户、千万级商家、400 万+ 小程序开发者同处一个生态，迁移成本极高。「聊天 → 内容 → 交易 → 支付」的闭环是任何竞品单点无法复制的<strong>系统性护城河</strong>。本周市场的重估逻辑正建立在这条护城河之上：Muse 证明了「消费级 Agent 的本质竞争力 = 能否调用足够多的真实服务」，而微信是<strong>国内唯一同时握有社交关系链、内容矩阵、小程序服务集群与支付履约网络</strong>的平台——即「交互–分发–支付–履约」四段全在同一体内。国盛证券的判断是「生态构建是 AI Agent 时代的核心壁垒」<span class="src-badge src-2">二手</span>。</p>
+<h3>2.2 港股特殊考量</h3>
+<ul style="padding-left:20px;font-size:13.5px;">
+<li><strong>流动性</strong>：恒生指数第一大权重股，南向资金第一大重仓，内资定价权强。</li>
+<li><strong>双重汇率</strong>：港元锚定美元（联系汇率 7.75–7.85），人民币记账——本周美联储鹰派倾向通过港币拆息直接抬升港股贴现率（详见第七节与估值一节）。</li>
+<li><strong>大股东供给</strong>：Prosus/Naspers 长期减持构成持续股票供给（此前月均约 570 万股）<span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span>。</li>
+</ul>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — 微信生态变现深度 × AI 投入产出比</h2>
+<p>腾讯「唯一真正重要的指标」不是单一数字，而是<strong>微信生态的变现深度</strong>——14.39 亿 MAU 的基本盘以多快速度转化为广告、交易、AI 服务收入；以及它的对偶面：<strong>每投入 1 元 AI 资本开支，换回多少收入/利润</strong>。本周行情把第三个维度推到了台前：<strong>微信作为 Agent 入口的「可调用服务密度」</strong>——小程序生态有多厚，Agent 能办的事就有多少，这是「中国版 Muse」叙事能否兑现的物理基础。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>关键跟踪指标</th><th>最新值</th><th>含义</th></tr></thead>
+<tbody>
+<tr><td>微信 / WeChat 合并月活</td><td><strong>14.39 亿</strong>（+2%）<span class="src-badge src-s">一手</span></td><td>基本盘：接近人口上限，增长靠变现而非新增</td></tr>
+<tr><td>小程序生态规模</td><td>400 万+ 小程序；日均活跃用户超 <strong>9 亿</strong>（截至 2026/03）<span class="src-badge src-2">二手</span></td><td>Agent 的「手脚」：可被调用的服务池深度</td></tr>
+<tr><td>营销服务（广告）增速</td><td><strong class="metric-positive">+22%</strong>（Q2）<span class="src-badge src-s">一手</span></td><td>最快引擎：AI 投放平台 AIM+ + 视频号加载率提升</td></tr>
+<tr><td>本土游戏增速</td><td><strong class="metric-positive">+17%</strong>（Q2，环比加速）<span class="src-badge src-s">一手</span></td><td>现金牛：《王者荣耀》长青 + 《三角洲行动》放量</td></tr>
+<tr><td>资本开支</td><td><strong class="metric-negative">527.8 亿/季</strong>（+176%）<span class="src-badge src-s">一手</span></td><td>关键拖累项：Q1 320 亿 → Q2 528 亿，加速攀升</td></tr>
+<tr><td>新 AI 产品单季拖累</td><td>约 105 亿元利润<span class="src-badge src-s">一手</span></td><td>剔除后 Non-IFRS 经营利润 861 亿（+19%）vs 实际 756 亿（+9%）</td></tr>
+<tr><td>微信 Agent「小微」</td><td>小范围灰度测试中（6 月起）<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span></td><td>本期叙事核心：从「模型能力」转向「入口重估」，但尚无量化的商业化数据</td></tr>
+</tbody>
+</table></div>
+<div class="quote"><strong>核心命题：</strong>市场当前给腾讯 ~15.95x TTM P/E / ~12.5x Non-IFRS TTM P/E。本周的边际变化<strong>不在分子</strong>——Q2 营收、广告 +22%、游戏 +17% 的基本盘一字未变，Q3 财报还要等到 11 月中旬；<strong>变化在分母端的「叙事资产」定价</strong>：Muse 让市场第一次给「微信作为 Agent 入口」单独标价。这既是最容易被情绪放大的部分，也是最难被短期证伪的部分——判断它的唯一锚点是小微灰度转正式放量的时点与可观测数据（用户渗透、任务完成率、支付闭环占比），而这些目前<strong>全部未披露</strong>。</div>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据（Q2 2026 实际业绩，2026/08/12 发布）</h2>
+<p>以下为 HKEXnews 披露的 Q2/H1 2026 实际数据（人民币口径），非预测。<span class="src-badge src-s">一手</span>（本地存档 Filings/ 中报业绩公布 PDF）。自上一份报告以来公司未发布新财报，本节数据与前次一致，仅作为估值与多空讨论的基础。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>指标（亿元 RMB）</th><th>Q2 2026</th><th>同比</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>营收</td><td><strong>2,047.85</strong></td><td class="metric-positive">+11%</td><td>超市场预期 ~2,028 亿</td></tr>
+<tr><td>毛利</td><td>1,184.33</td><td class="metric-positive">+13%</td><td>毛利率 58%（同比 +1pct）</td></tr>
+<tr><td>经营盈利（Non-IFRS）</td><td>756.36</td><td class="metric-positive">+9%</td><td>剔除新 AI 产品后 +19% 至 861 亿——AI 是利润增速差的主因</td></tr>
+<tr><td>股东应占溢利（IFRS）</td><td>560.22</td><td class="metric-warn">+0.7%</td><td>受非上市被投企业一次性会计损失 + AI 投入拖累</td></tr>
+<tr><td>经调整净利（Non-IFRS）</td><td>684.15</td><td class="metric-positive">+9%</td><td>经营口径稳健</td></tr>
+<tr><td>资本开支</td><td><strong class="metric-negative">527.8</strong></td><td class="metric-negative">+176%</td><td>环比 +65%；另有算力采购预付款 516 亿</td></tr>
+<tr><td>自由现金流</td><td><strong class="metric-negative">约 -138</strong></td><td class="metric-negative">转负</td><td>上年同期 +430 亿；剔除算力预付款经营现金流仍 +376 亿</td></tr>
+<tr><td>回购</td><td>169 亿港元</td><td>—</td><td>约 3,738 万股（Q2）</td></tr>
+</tbody>
+</table></div>
+<div class="chart">
+<div class="chart-title">分部收入同比：Q2 2025 → Q2 2026（金额） <small>亿元 RMB · 一手财报（中报业绩公布 2026-08-12）· 虚线连接同一分部两期的边界，楔形＝该分部的绝对增长</small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 300">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="70" x2="570" y1="260" y2="260"></line>
+<line x1="70" x2="570" y1="202.9" y2="202.9"></line>
+<line x1="70" x2="570" y1="145.7" y2="145.7"></line>
+<line x1="70" x2="570" y1="88.6" y2="88.6"></line>
+<line x1="70" x2="570" y1="31.4" y2="31.4"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10.5" text-anchor="end">
+<text x="62" y="264">0</text>
+<text x="62" y="207">500</text>
+<text x="62" y="150">1,000</text>
+<text x="62" y="93">1,500</text>
+<text x="62" y="35">2,000</text>
+</g>
+
+<rect fill="var(--accent)" height="104.4" width="100" x="150" y="49.1"></rect>
+<rect fill="#9ec3ad" height="63.5" width="100" x="150" y="153.6"></rect>
+<rect fill="var(--amber)" height="40.9" width="100" x="150" y="217.0"></rect>
+<rect fill="#cf6f6f" height="2.1" width="100" x="150" y="257.9"></rect>
+
+<rect fill="var(--accent)" height="112.4" width="100" x="390" y="26.0"></rect>
+<rect fill="#9ec3ad" height="68.9" width="100" x="390" y="138.4"></rect>
+<rect fill="var(--amber)" height="49.8" width="100" x="390" y="207.3"></rect>
+<rect fill="#cf6f6f" height="2.9" width="100" x="390" y="257.1"></rect>
+
+<g opacity="0.9" stroke="var(--text-muted)" stroke-dasharray="3 3" stroke-width="1">
+<line x1="250" x2="390" y1="153.6" y2="138.4"></line>
+<line x1="250" x2="390" y1="217.0" y2="207.3"></line>
+<line x1="250" x2="390" y1="257.9" y2="257.1"></line>
+</g>
+
+<g fill="#fff" font-size="13" font-weight="700" text-anchor="middle">
+<text x="200" y="105">914</text><text x="200" y="189">555</text><text x="200" y="241">358</text>
+<text x="440" y="86">984</text><text x="440" y="177">603</text><text x="440" y="236">436</text>
+</g>
+
+<g fill="var(--accent)" font-size="12" font-weight="700" text-anchor="middle">
+<text x="320" y="95.8">+8%</text>
+<text x="320" y="183.1">+9%</text>
+<text x="320" y="238.8">+22%</text>
+</g>
+<g fill="var(--text-secondary)" font-size="12" font-weight="700" text-anchor="middle">
+<text x="200" y="278">Q2 2025</text>
+<text x="440" y="278">Q2 2026</text>
+<text fill="var(--text-muted)" font-size="10.5" font-weight="450" x="200" y="292">合计 1,845 亿</text>
+<text fill="var(--text-muted)" font-size="10.5" font-weight="450" x="440" y="292">合计 2,048 亿（+11%）</text>
+</g>
+</svg>
+<div class="chart-legend">
+<i class="c-main"></i>增值服务
+      <i class="c-sub" style="background:#9ec3ad"></i>金融科技及企业服务
+      <i class="c-warn"></i>营销服务
+      <i class="c-neg" style="background:#cf6f6f"></i>其他
+    </div>
+<span class="caveat-inline">两柱同一坐标轴、柱高即金额，所以<strong>既能看出各分部的增量，也能看出总量</strong>。<br/><strong>看楔形（＝各分部的绝对增长）：营销服务的两块张开最明显（358 → 436 亿，+22%，增速最快）；金融科技 555 → 603 亿（+9%）；增值服务虽然体量最大（914 → 984 亿），但 +8% 是四块里最慢的。</strong>所有分部都在增长——因为总量本身 +11%；<strong>差异在增速，不在方向</strong>。</span>
+<div class="bar-group" style="margin-top:14px;">增值服务内部：└ 本土游戏 473 (+17%) · 国际游戏 186 (-0.8%，固定汇率 +4%) · 社交网络 325 (+0.8%)</div>
+<div class="bar-group">金融科技及企业服务内部：└ 企业服务（云）增速从 Q1「高十几」加速至「低二十几」百分比</div>
+</div>
+<h3>4.1 年度与中期对照</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标（亿元 RMB）</th><th>FY2025</th><th>同比</th><th>H1 2026</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>营收</td><td>7,517.66</td><td class="metric-positive">+14%</td><td>4,012.43</td><td class="metric-positive">+10%</td></tr>
+<tr><td>毛利</td><td>4,225.93</td><td class="metric-positive">+21%</td><td>2,296.98</td><td class="metric-positive">+12%</td></tr>
+<tr><td>归母净利（IFRS）</td><td>2,248.42</td><td class="metric-positive">+16%</td><td>1,141.15</td><td class="metric-positive">+10%</td></tr>
+<tr><td>经调整净利（Non-IFRS）</td><td>2,596.26</td><td class="metric-positive">+17%</td><td>1,363.20</td><td class="metric-positive">+10%</td></tr>
+<tr><td>每股末期息（HKD）</td><td>5.30</td><td class="metric-positive">+18%</td><td>—</td><td>—</td></tr>
+</tbody>
+</table></div>
+<h3>4.2 财务异常检测（自动检查）</h3>
+<p><span class="tag tag-hold">🟡 中风险</span>触发项为<strong>现金流背离</strong>——净利润正增长，但单季自由现金流 -138 亿、净现金从 1,469 亿骤降至 582 亿（含 516 亿算力预付款）。管理层口径：剔除预付款后经营现金流 +376 亿，<strong>承压源于 AI 前置投入而非经营恶化</strong>。毛利率 58% 持续改善，无应收/存货/关联交易异常。<span class="src-badge src-2">二手</span></p>
+<h3>4.3 资产与投资组合</h3>
+<p>于 2026/06/30：上市投资（不含附属）公允价值 <strong>4,872 亿元</strong>（3 月末 5,471 亿），非上市投资账面 <strong>3,879 亿元</strong>（3 月末 3,651 亿）——合计约 <strong>8,751 亿元</strong>「隐藏资产」，约占当前市值（约 33,986 亿元 RMB，推算）的 <strong>25.8%</strong>。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></p>
+</div>
+
+<div class="card" id="wechat-agent">
+<h2>五、微信原生 Agent「小微」— 本周「中国版 Muse」重估的核心资产</h2>
+<p>本周腾讯上涨的直接触发因素<strong>不是腾讯自己的业绩</strong>，而是 Meta 的 C 端 AI Agent「Muse」。其传导链条值得完整拆解，因为它是理解当前股价定价逻辑的关键。</p>
+<h3>5.1 触发事件：Meta「Muse」爆红与映射逻辑</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>环节</th><th>事实</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>事件</td><td>Meta 旗下 C 端 AI Agent 应用 <strong>Muse</strong> 上线后短时间内超越同期 ChatGPT，<strong>登顶美国 App Store 与 Google Play 免费榜</strong>，生产力榜持续前列</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>产品实质</td><td>超越聊天机器人范畴：<strong>后台异步执行</strong>、读取社交关系、接入邮件/日历/购物/订餐等 API，直接替用户跨应用完成任务（中金梳理其四点实质突破）</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>市场推论</td><td>消费级 Agent 的胜负手 = 能否调用足够多的<strong>真实服务</strong>。拥有「超级社交生态 + 高频生活场景入口」的巨头才是最佳落地载体</td><td><span class="src-badge src-3">三方</span></td></tr>
+<tr><td>映射到腾讯</td><td>微信同时握有社交关系链、公众号/视频号内容矩阵、400 万+ 小程序服务集群、微信支付与全行业商户网络 → 被视为<strong>「中国版 Muse」最有条件的载体</strong>，且被论证为「落地效率和商业变现潜力不低于 Meta」</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>同日催化</td><td>腾讯 9/22 发布图像生成模型<strong>混元图像 3.5 预览版（Hy Image 3.5 preview）</strong>，支持文生图/图生图与多轮对话</td><td><span class="src-badge src-s">一手</span></td></tr>
+</tbody>
+</table></div>
+<div class="quote"><strong>诚实标注：</strong>这是一次<strong>叙事驱动（narrative-driven）</strong>而非基本面驱动的重估。截至本报告，腾讯<strong>未披露任何</strong>与小微相关的用户量、任务完成率或商业化数据；「中国版 Muse」目前是映射与类比，不是已实现的经营事实。把它当作「期权」而非「业绩」，是本节最重要的一句话。</div>
+<h3>5.2 腾讯这边的实际基础设施：小微进展时间线</h3>
+<div class="chart">
+<div class="chart-title">微信 AI Agent 关键节点 <small>节点间距按真实时间比例 · 一手为财报/官方披露，二手为媒体转述</small></div>
+<div class="timeline">
+<div class="tl-item" style="--span:1">
+<div class="tl-date">2025 上半年</div>
+<div class="tl-text"><strong>项目启动</strong></div>
+</div>
+<div class="tl-item" style="--span:10">
+<div class="tl-date">2026/03/18</div>
+<div class="tl-text"><strong>电话会确认</strong>项目存在<span class="src-badge src-s">一手</span></div>
+</div>
+<div class="tl-item" style="--span:3">
+<div class="tl-date">2026/06/08</div>
+<div class="tl-text"><strong>生态开放接入</strong>开放平台允许 AI 调用、操作小程序<span class="src-badge src-s">一手</span></div>
+</div>
+<div class="tl-item" style="--span:0">
+<div class="tl-date">2026/06 起</div>
+<div class="tl-text"><strong>小微灰度测试</strong>小范围<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span></div>
+</div>
+<div class="tl-item" style="--span:2">
+<div class="tl-date">2026/08/12</div>
+<div class="tl-text"><strong>财报正式披露</strong>首次在财报层面确认<span class="src-badge src-s">一手</span></div>
+</div>
+<div class="tl-item tl-future" style="--span:1">
+<div class="tl-date">2026 Q3–Q4</div>
+<div class="tl-text"><strong>放量窗口？</strong>社区与券商的推演，非公司指引<span class="src-badge src-3">三方</span></div>
+</div>
+</div>
+<span class="caveat-inline">节点间距按真实时间比例——2025 上半年 → 2026/03 隔了约 10 个月，视觉上就该明显更远；6 月两个节点挨得近，也同样体现出来。<strong>近 4 个月（6 月灰度至今）没有任何节点，因为公司未披露任何进展数据</strong>，这正是本标的的核心不确定性。灰度转正式的时点与节奏，是最值得跟踪的单一变量。</span>
+</div>
+<div class="table-scroll"><table>
+<thead><tr><th>要素</th><th>状态与细节</th><th>意义</th></tr></thead>
+<tbody>
+<tr><td><strong>「小微」形态</strong></td><td>不是独立 App，以<strong>对话形式出现在微信会话列表</strong>里；用户用文字或语音说出需求，系统自动调用合适的小程序完成任务<span class="src-badge src-2">二手</span></td><td>零安装成本触达 14.39 亿用户，分发效率远超独立 App</td></tr>
+<tr><td><strong>生态开放</strong></td><td>2026/06/08 起微信开放平台允许微信 AI <strong>调用、访问和操作小程序</strong>；提供「平台自动分析页面」的自动模式与开发者自主开发的开发模式<span class="src-badge src-s">一手</span></td><td>把 400 万+ 小程序变成 Agent 的「手脚」，开发者接入量决定能力上限</td></tr>
+<tr><td><strong>支付闭环</strong></td><td>微信支付发布专为 AI 智能体支付场景设计的<strong>「AI 专属卡」</strong>，实现从智能推荐到下单支付的闭环<span class="src-badge src-2">二手</span></td><td>这是与纯信息类助手的分水岭：Agent 能真正完成交易并产生佣金/服务费</td></tr>
+<tr><td><strong>底层模型</strong></td><td>以自研 <strong>WeLM</strong> 为主；另有报道称微信团队同时在测试智谱、阿里、DeepSeek 及自研小模型（<strong>未使用混元</strong>）<span class="src-badge src-3">三方</span><span class="src-badge src-t">时效</span></td><td>若属实，说明微信对混元性能仍有保留；也意味着小微不绑定混元的迭代节奏</td></tr>
+<tr><td><strong>券商视角</strong></td><td>国盛证券：生态构建是 AI Agent 时代的核心壁垒，微信深度接入有望盘活海量用户<span class="src-badge src-2">二手</span></td><td>把护城河从「流量」重述为「可调度服务密度」</td></tr>
+<tr><td><strong>B 端侧对照</strong></td><td>中金 9/25《从 WorkBuddy 看生产力 Agent 发展》：WorkBuddy 推出以来数据反馈较好，阿里、字节近期加速整合追赶<span class="src-badge src-2">二手</span></td><td>B 端已有付费验证，C 端（小微）尚在验证前</td></tr>
+</tbody>
+</table></div>
+<h3>5.3 反面证据（必须记录）</h3>
+<ul style="padding-left:20px;font-size:13.5px;">
+<li><strong>产品收缩</strong>：雪球讨论提到腾讯<strong>关停了刚上线半年的 QClaw</strong>，「个人 Agent 正在成为 AI 应用的新战场，腾讯在此时关停了刚上线半年的 QClaw」<span class="src-badge src-3">三方</span>——说明腾讯自身在 Agent 产品形态上仍在试错与收敛，并非一路顺推。</li>
+<li><strong>元宝掉队</strong>：C 端独立 AI 助手元宝 6 月 MAU 4,984 万（第四）vs 豆包 3.82 亿，公司资源已向 WorkBuddy 倾斜。腾讯在「独立 C 端 AI 应用」上的记录并不好，小微的价值恰恰在于<strong>不必独立获客</strong>。</li>
+<li><strong>零量化披露</strong>：小微自 6 月灰度至今近 4 个月，公司<strong>未披露任何用户规模或留存指标</strong>。Muse 的热度无法替代小微自身的产品数据。</li>
+</ul>
+<div class="quote"><strong>费雪式拷问（成长的质量）：</strong>本周上涨把「微信入口重估」这一期权提前定价了。它的质量取决于三件事：① 灰度转正式的时点；② 任务完成率与用户回访率（决定它是不是「玩具」）；③ <strong>支付闭环的实际抽成/服务费口径</strong>（决定它能不能变成收入）。在 Q3 财报（11 月中旬）之前，这三项大概率仍是黑箱——这也是为什么本报告把本周行情定性为「期权定价」而非「业绩兑现」。</div>
+</div>
+
+<div class="card" id="cash">
+<h2>六、资金面 — 回购持续，但对冲的是 AI 消耗与大股东供给</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>最新数据</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>9/21 回购</td><td>23.50 万股 / <strong>1.005 亿港元</strong>（价格区间 423.2–434.2）</td><td><span class="src-badge src-s">一手</span> 公司公告</td></tr>
+<tr><td>9/22 回购</td><td>22.3 万股 / <strong>1.003 亿港元</strong>（另因购股权行使发行 4.11 万股）</td><td><span class="src-badge src-s">一手</span> 公司公告</td></tr>
+<tr><td>9/23 回购</td><td>22.7 万股 / <strong>1.004 亿港元</strong>（价格区间 438.8–453.6，追高回购）</td><td><span class="src-badge src-s">一手</span> 公司公告</td></tr>
+<tr><td>9/25 回购</td><td>23.1 万股 / <strong>1.003 亿港元</strong>（价格区间 431.4–437.0）</td><td><span class="src-badge src-s">一手</span> 公司公告</td></tr>
+<tr><td>2026 上半年回购</td><td>5,003.11 万股 / <strong>244.08 亿港元</strong>（其中 6 月单月 97.44 亿）</td><td><span class="src-badge src-s">一手</span> 中报「購買、出售或贖回本公司上市證券」附註</td></tr>
+<tr><td>年内累计回购（至 9/17）</td><td><strong>305.37 亿港元</strong>（77 次）<span class="src-badge src-t">时效</span></td><td><span class="src-badge src-2">二手</span> 证券时报数据宝</td></tr>
+<tr><td>Q2 自由现金流</td><td><strong class="metric-negative">-138 亿元</strong>（capex 528 亿 + 算力预付款 516 亿）</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>净现金变化</td><td>1,469 亿 → <strong class="metric-negative">582 亿元</strong>（单季）</td><td><span class="src-badge src-2">二手</span></td></tr>
+</tbody>
+</table></div>
+<p><strong>观察：</strong>回购是<strong>持续但不同速</strong>的。一手中报披露：2026 上半年回购 5,003.11 万股、耗资 <strong>244.08 亿港元</strong>，逐月为 1 月 63.58 亿、2 月 0、3 月 11.97 亿、4 月 26.03 亿、5 月 45.07 亿、6 月 97.44 亿——<strong>6 月单月 97 亿，约合每个交易日 4.9 亿</strong>。而 9 月以来稳定在每日约 1.00–1.005 亿港元（22–24 万股），未因股价反弹而中断，也未加码。值得注意的细节是 <strong>9/23 的回购价格区间上移到 438.8–453.6 港元</strong>，即在 9/22 大涨后的高位仍在执行回购，说明执行纪律是「按计划」而非「择时」。</p>
+<p style="font-size:13px;color:var(--text-muted);"><strong>⚠ 口径提醒：</strong>「每日约 1 亿」只描述 <strong>9 月以来</strong>，不是全年节奏。年内 77 个回购日的平均是<strong>每日约 4.0 亿</strong>（305.37 亿 ÷ 77）——把累计额与单日金额直接并列会得出「连买 305 天」的错误印象。</p>
+<p><strong>裁决指标：</strong>「回购金额 ÷ Prosus 减持金额」的比值趋势。回购完全覆盖大股东抛售 → 真实缩股；覆盖不了 → 回购只是价格托底。按年内已实现节奏（至 9/17 累计 305.37 亿，年化约 430 亿港元）相对 3.97 万亿市值，年化摊薄约 <strong>1.1%</strong>（推算）；若只按 9 月的每日 1 亿则年化约 250 亿、摊薄约 0.6%——<strong>近月速度已较上半年明显放缓，两个口径差距近一倍</strong>。但<strong>资金池正被 AI capex 挤占</strong>——FCF 转负的季度里回购仍在继续，管理层优先维持回购承诺，代价是净现金快速消耗。另需注意：因购股权行使而发行的新股（如 9/22 的 4.11 万股）会部分抵消回购的缩股效果。</p>
+</div>
+
+<div class="card" id="geopolitics">
+<h2>七、地缘与政策风险</h2>
+<p>腾讯注册于开曼、上市于香港、经营重心在中国内地，且身处 <strong>AI 这一中美博弈最敏感的行业</strong>，满足地缘分析的触发条件。按四条传导渠道拆解：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>渠道</th><th>现状（含具体政策状态）</th><th>影响强度</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>1. 行业针对性立法 / 出口管制</strong></td>
+<td>最实质的一条。腾讯的 AI 训练算力依赖英伟达高端芯片；在美方出口管制下，中国厂商通过<strong>算力租赁、第三方云、灰色转口</strong>等方式获取算力，属于监管灰区。美方若收紧「算力租赁」或对云服务商施加最终用户审查，将直接冲击腾讯的模型训练节奏；反之，若国产算力（华为昇腾等）替代顺利，冲击可控。<span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span></td>
+<td><span class="tag tag-bear">中高</span></td>
+</tr>
+<tr>
+<td><strong>2. 市场准入 / 数据与算法监管</strong></td>
+<td>国内侧反而是<strong>顺风</strong>：AI Agent 被纳入「新质生产力」政策支持范围，微信 AI 生态开放获得监管默许推进（2026/06 开放平台上线即为证据）。风险在于生成式 AI 内容合规、算法备案与未成年人保护等常态化监管——属<strong>可控的运营成本</strong>，而非生存威胁。<span class="src-badge src-2">二手</span></td>
+<td><span class="tag tag-hold">中低</span></td>
+</tr>
+<tr>
+<td><strong>3. 投资审查 / 跨境资本</strong></td>
+<td>美国对外投资限制目前主要覆盖半导体、量子、AI 三个领域，但<b>针对的是美方主体投资中国 AI 企业</b>，对腾讯这类已在港上市、以南向与亚洲资金为主的标的直接影响有限。CFIUS 对腾讯的实质约束主要体现为其在美游戏/投资资产的处置压力（如过往对 Epic、Riot 等持股的审查）。<span class="src-badge src-2">二手</span></td>
+<td><span class="tag tag-hold">中低</span></td>
+</tr>
+<tr>
+<td><strong>4. 本国政策反向承接</strong></td>
+<td>港股通/南向资金是腾讯定价的<strong>主导力量</strong>；AI 自主可控叙事下，国产模型（混元 Hy4、小微企业级 Agent）获得政策与资金双重倾斜。地缘越冷，内资承接越强——这解释了为何腾讯的估值锚更多由国内流动性而非海外风险偏好决定。<span class="src-badge src-3">三方</span></td>
+<td><span class="tag tag-bull">缓冲</span></td>
+</tr>
+</tbody>
+</table></div>
+<div class="quote"><strong>传导强度排序：</strong>算力获取（渠道 1，中高）&gt; 数据/算法常态化监管（渠道 2，中低）&gt; 投资审查（渠道 3，中低）&gt; 内资承接（渠道 4，缓冲）。<br/>
+<strong>监测清单：</strong>① 美方是否将「算力租赁」纳入管制范围或对第三方云提出最终用户审查要求；② 混元 Hy4 后续版本是否受制于算力（表现为发布节奏或参数规模不及预期）；③ 微信小微在生成式 AI 备案/合规上的推进是否顺畅；④ 南向资金对腾讯的净流入是否持续为正。</div>
+</div>
+
+<div class="card" id="valuation">
+<h2>八、估值分析 — 「期权定价」打断了逼近 52 周低点的折价测试</h2>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">15.95x</div><div class="label">P/E TTM（行情接口）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">~12.5x</div><div class="label">Non-IFRS P/E TTM<span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">~11.9x</div><div class="label">2026E Forward P/E<span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">~1.2</div><div class="label">PEG<span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">1.22%</div><div class="label">股息率（TTM 5.313）<span class="src-badge src-e">推算</span></div></div>
+<div class="summary-item"><div class="value">~25.8%</div><div class="label">投资组合/市值占比<span class="src-badge src-e">推算</span></div></div>
+</div>
+<h3>8.1 本周价格路径（一手行情）</h3>
+<div class="chart"><div class="chart-title">00700 日线收盘（港元）<small>2026/09/11 – 09/25，腾讯行情接口</small></div>
+<svg aria-label="腾讯日线收盘价折线图" role="img" style="width:100%;height:auto" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="50" x2="620" y1="200" y2="200"></line><line x1="50" x2="620" y1="155" y2="155"></line>
+<line x1="50" x2="620" y1="110" y2="110"></line><line x1="50" x2="620" y1="65" y2="65"></line>
+<line x1="50" x2="620" y1="20" y2="20"></line>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end">
+<text x="44" y="204">405</text><text x="44" y="159">420</text>
+<text x="44" y="114">435</text><text x="44" y="69">450</text><text x="44" y="24">465</text>
+</g>
+<polyline fill="none" points="50,130 107,123 164,99 221,115 278,137 335,158 392,123 449,60 506,92 563,100 620,105" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<g fill="#fff" stroke="var(--accent)" stroke-width="2">
+<circle cx="50" cy="130" r="3.5"></circle><circle cx="107" cy="123" r="3.5"></circle><circle cx="164" cy="99" r="3.5"></circle>
+<circle cx="221" cy="115" r="3.5"></circle><circle cx="278" cy="137" r="3.5"></circle><circle cx="335" cy="158" fill="var(--red)" r="4.5" stroke="var(--red)"></circle>
+<circle cx="392" cy="123" r="3.5"></circle><circle cx="449" cy="60" fill="var(--green)" r="5" stroke="var(--green)"></circle>
+<circle cx="506" cy="92" r="3.5"></circle><circle cx="563" cy="100" r="3.5"></circle><circle cx="620" cy="105" fill="var(--accent)" r="4.5" stroke="var(--accent)"></circle>
+</g>
+<g font-size="12" font-weight="600">
+<text fill="var(--text-primary)" text-anchor="start" x="50" y="122">428.40</text>
+<text fill="var(--red)" text-anchor="middle" x="335" y="176">419.00 周内低</text>
+<text fill="var(--green)" text-anchor="middle" x="449" y="52">451.60</text>
+<text fill="var(--text-primary)" text-anchor="end" x="620" y="97">436.60</text>
+</g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="middle">
+<text x="50" y="224">9/11</text>
+<text x="164" y="224">9/15</text>
+<text x="335" y="224">9/18</text>
+<text x="449" y="224">9/22</text>
+<text text-anchor="end" x="620" y="224">9/25</text>
+</g>
+</svg>
+<div class="chart-legend">9/22 单日 +5.02%（盘中最高 463.40，即自前收 430.00 起最大涨幅 +7.77%），全天成交额 <strong>321.66 亿港元</strong>，称冠港股；成交量 7,072 万股约为前一周日均的 3.5 倍。此后三个交易日回吐至 436.60，<strong>涨幅保留约 4.2%</strong>。</div></div>
+<h3>8.2 估值锚点解读</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>锚点</th><th>数值</th><th>判断</th></tr></thead>
+<tbody>
+<tr><td>P/E 历史区间</td><td>2025 年高点 ~27x → 当前 15.95x；2022 年 5 月极值 ~10–12x<span class="src-badge src-e">推算</span></td><td>仍处历史偏低区间；本周反弹后距 52 周低点 411 已拉开 +6.2%</td></tr>
+<tr><td>Non-IFRS TTM P/E</td><td>市值约 3.40 万亿元 RMB ÷ TTM 经调整净利 2,720 亿 ≈ 12.5x<span class="src-badge src-e">推算</span></td><td>TTM 口径低于行情接口的 15.95x（IFRS/静态口径差异）</td></tr>
+<tr><td>PEG</td><td>Forward ~11.9x ÷ 经调整净利增速 ~9–11%</td><td>~1.2，处于「合理」区间（1–1.5）</td></tr>
+<tr><td>股息率</td><td>TTM 股息 HK$5.313 ÷ 436.60 = 1.22%</td><td>股东回报主要靠回购而非分红；与 10 年期中美国债收益率相比无吸引力，估值支撑依赖成长与缩股。港股不做融资利率覆盖分析</td></tr>
+<tr><td>隐藏资产</td><td>投资组合 8,751 亿元 ≈ 市值 25.8%<span class="src-badge src-e">推算</span></td><td>剔除后主业隐含估值约 9.3x（Non-IFRS 口径，推算）</td></tr>
+<tr><td>本周宏观变量</td><td>美联储 9/16 加息 +25bp 至 3.75–4.00%（2023/07 以来首次，12:0 全票，点阵图转鹰）；市场定价年底前再加息概率超八成；下次议息 10/27–28<span class="src-badge src-2">二手</span></td><td>港币锚美元 → 港元拆息趋近美元息率，港股贴现率抬升，对高成长科技板块估值构成阶段性压制。<strong>本次腾讯逆势上涨正说明驱动它的是个股叙事而非流动性</strong></td></tr>
+<tr><td>汇率</td><td>USDCNY 6.7128 / USDHKD 7.8441 → HKDCNY 0.8558<span class="src-badge src-s">一手</span></td><td>人民币相对强势，对 RMB 记账盈利的 HKD 折算有轻微正贡献</td></tr>
+</tbody>
+</table></div>
+<h3>8.3 大行目标价 vs 现价（436.60 港元）</h3>
+<div class="chart">
+<div class="chart-title">券商目标价（港元）<small>二手研报，2026/08–2026/09；现价 436.60</small></div>
+<div class="bar-row"><div class="bar-label">美银证券</div><div class="bar-track"><div class="bar-fill c-main" style="width:100%"></div></div><div class="bar-value">780</div></div>
+<div class="bar-row"><div class="bar-label">花旗</div><div class="bar-track"><div class="bar-fill c-main" style="width:98.1%"></div></div><div class="bar-value">765</div></div>
+<div class="bar-row"><div class="bar-label">招商证券国际</div><div class="bar-track"><div class="bar-fill c-sub" style="width:89.7%"></div></div><div class="bar-value">700</div></div>
+<div class="bar-row"><div class="bar-label">国投证券国际</div><div class="bar-track"><div class="bar-fill c-sub" style="width:87.2%"></div></div><div class="bar-value">680</div></div>
+<div class="bar-row"><div class="bar-label">高盛</div><div class="bar-track"><div class="bar-fill c-sub" style="width:85.9%"></div></div><div class="bar-value">670</div></div>
+<div class="bar-row"><div class="bar-label">国海证券</div><div class="bar-track"><div class="bar-fill c-warn" style="width:80.4%"></div></div><div class="bar-value">627</div></div>
+<div class="bar-row"><div class="bar-label">摩根士丹利</div><div class="bar-track"><div class="bar-fill c-warn" style="width:70.5%"></div></div><div class="bar-value">550</div></div>
+<div class="bar-row"><div class="bar-label">海通国际</div><div class="bar-track"><div class="bar-fill c-neg" style="width:61.5%"></div></div><div class="bar-value">480</div></div>
+<div class="bar-row"><div class="bar-label"><strong>现价（9/25）</strong></div><div class="bar-track"><div class="bar-fill c-neg" style="width:56.0%"></div></div><div class="bar-value"><strong>436.60</strong></div></div>
+<span class="caveat-inline">目标价区间 480–780 较现价隐含 +10% ~ +79%（推算）。<strong>重要澄清：</strong>网络上流传的杰富瑞 794、基准公司 790、高盛 770 港元经核查均源自 <strong>2025 年 10 月</strong>的研报（原文明确写着「今年迄今腾讯股价上涨 51%」，与 2026 年 YTD -26.46% 不符），<strong>不是当前观点</strong>，本图已剔除。评级仍全面偏正面，但目标价分散度极大（480–780），本身即多空分歧的度量。</span>
+</div>
+<div class="quote"><strong>关键估值结论：</strong>本周估值修复的路径非常特殊——<strong>不是盈利预期上修，而是叙事资产被重新定价</strong>。9/18 时市场还在测试「逼近 52 周低点 411 的折价是否合理」（~15.3x TTM）；一周后同样的基本面数据被给予 ~15.95x + 4.2%。Q2 的 AI 账单（capex +176%、FCF -138 亿）一分未少，美联储的贴现率压制一分未减。真正变化的，是市场愿意为「微信 Agent 入口」付多少钱——而这个价格目前没有任何经营数据支撑。</div>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>九、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>Muse 验证了消费级 Agent 的胜负手是「服务密度」</strong>：Agent 本身没有壁垒，能调用多少真实服务才有。微信同时握有社交关系链、400 万+ 小程序、微信支付与商户网络，是<strong>国内唯一具备「交互–分发–支付–履约」全闭环</strong>的平台。</li>
+<li><strong>基础设施已就位，不是 PPT</strong>：小微自 6 月起灰度测试、8/12 财报正式披露；微信开放平台 6/8 起允许 AI 调用小程序；微信支付「AI 专属卡」打通支付闭环。三块拼图在同一年内集齐。</li>
+<li><strong>基本盘在加速而非失速</strong>：Q2 营收 +11% 超预期、本土游戏 +17% 环比加速、广告 +22%、云加速至「低二十几」——AI 账单之外，现金牛造血能力更强。</li>
+<li><strong>估值仍有界 + 回购托底</strong>：~12.5x Non-IFRS TTM，处于历史偏低区间；9 月以来每日约 1 亿港元回购未断，9/23 更在 438.8–453.6 高位继续执行。</li>
+<li><strong>隐藏资产厚</strong>：投资组合 8,751 亿元 ≈ 市值 25.8%，剔除后主业估值约 9.3x（推算）。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>本轮上涨是叙事的，不是业绩的</strong>：触发事件是 Meta 的 Muse，而非腾讯自身任何经营数据。腾讯对小微<strong>零量化披露</strong>——无用户量、无任务完成率、无收入口径。用「类比」给入口定价，是最容易被情绪放大的估值方式。</li>
+<li><strong>FCF 转负且未见顶</strong>：528 亿单季 capex +176%、516 亿算力预付款锁定未来投入；净现金 1,469→582 亿。管理层称「机会出现会加大投入」——回购弹药与 AI 投入在同一资金池里竞争。</li>
+<li><strong>美联储鹰派压制贴现率</strong>：9/16 加息至 3.75–4%、点阵图转鹰、年底前再加息概率超八成。港元拆息趋近美元息率，高成长科技板块估值阶段性受压。本周的逆势上涨缺乏板块支撑。</li>
+<li><strong>赛道拥挤，且腾讯在 Agent 上试错记录不佳</strong>：阿里、字节近期加速整合追赶（中金口径）；腾讯自己关停了上线半年的 QClaw；C 端元宝 MAU 仅为豆包的 1/8。小微是「必须成功」的产品，而非「已经成功」的产品。</li>
+<li><strong>技术形态仍弱</strong>：距 2025/10 高点 -35.6%、年初至今 -26.46%，9/22 冲高 463.40 后三日回吐，<strong>未能守住 460 上方</strong>——本周更像是超跌反弹 + 情绪催化，而非趋势反转。</li>
+<li><strong>大股东持续供给</strong>：Prosus 月均约 570 万股减持对冲回购效果；购股权行使增发的新股（如 9/22 的 4.11 万股）进一步稀释缩股效果。</li>
+</ol>
+</div>
+</div>
+<div class="quote"><strong>核心争议焦点：</strong>「微信作为 Agent 入口的重估」是一次<strong>真实的价值发现</strong>，还是<strong>由 Meta 热度借来的情绪</strong>？<br/>
+<strong>裁决指标（按重要性排序）：</strong>① Q3 财报（11 月中旬）中小微是否首次给出<strong>可量化指标</strong>（用户渗透、任务完成率、或支付闭环数据）；② 小微灰度转正式放量的时点与节奏；③ FCF 转正时点与 capex 指引是否见顶；④ 回购对 Prosus 抛售的覆盖率；⑤ 美联储 10/27–28 议息是否再度加息。</div>
+</div>
+
+<div class="card" id="analysts">
+<h2>十、券商分析师全景 二手</h2>
+<p>目标价为券商观点，非本报告预测。下表仅收录<strong>可核实时效</strong>的研报；无法确认归属日期的均已排除。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>评级</th><th>目标价（港元）</th><th>更新</th><th>逻辑</th></tr></thead>
+<tbody>
+<tr><td>美银证券</td><td><span class="tag tag-bull">买入</span></td><td><strong>780</strong></td><td>2026/09/23</td><td>重申首选股；7/13 上调 2026–28 capex 预测至 1,850/2,250/2,500 亿元，2027/28 EPS 下调 3%/6%；「腾讯在中国 AI 智能体编排层的领先被市场忽视，WorkBuddy 用户规模国内第一」</td></tr>
+<tr><td>花旗</td><td><span class="tag tag-bull">买入</span></td><td><strong>765</strong></td><td>2026/09/25</td><td>重申「买入」，目标价 765 港元（新浪港股 9/25 报道）。<span class="src-badge src-t">时效</span>注：市场另流传其 9 月初「降至 563」的说法，经核查 563 为花旗更早（2025 年）的目标价，存在误引，请以 9/25 的 765 为准</td></tr>
+<tr><td>招商证券国际</td><td><span class="tag tag-bull">增持</span></td><td>700</td><td>2026 年内</td><td>由 766 港元调低 8.6% 至 700，维持「增持」；下调 2026–27 盈利预测 6%，主要反映 AI 投入<span class="src-badge src-t">时效</span>日期未能精确核实</td></tr>
+<tr><td>国投证券国际</td><td><span class="tag tag-bull">买入</span></td><td>680</td><td>2026/09</td><td>强劲经营现金流足以支撑战略转型，核心业务利润增量有望覆盖 AI 投入成本；基于 2026 年预估增值服务 15xPE、广告 15xPE、金融企业及云 8xPS 及 0.9 倍估值系数。原文称较最近收市价隐含 +47.8%，对应当时股价约 460 港元（即 9/22 之后发布）</td></tr>
+<tr><td>高盛</td><td><span class="tag tag-bull">买入</span></td><td>670</td><td>2026/08</td><td>Q2 业绩大致符合预期，核心业务（广告及国内游戏）增长具韧性；因加大 AI 资本开支将压制短期 EPS，将 12 个月目标价由 700 下调至 670，维持「买入」</td></tr>
+<tr><td>国海证券</td><td><span class="tag tag-bull">买入</span></td><td>627</td><td>2026/09/25</td><td>维持「买入」，目标价 627 港元</td></tr>
+<tr><td>摩根士丹利</td><td><span class="tag tag-bull">增持</span></td><td>550</td><td>2026/08</td><td>绩后由 650 下调至 550。认为腾讯核心业务在中国互联网行业中属最强之一，具备持久竞争优势，微信/游戏/广告的 AI 赋能持续增强；加大 AI 投资影响短期盈利但长远创造价值。现价对应 2026 年预测 PE 约 13.1x，处历史低位</td></tr>
+<tr><td>海通国际</td><td><span class="tag tag-bull">买入</span></td><td>480</td><td>2026/08</td><td>绩后下调目标价，为当前覆盖区间下限</td></tr>
+</tbody>
+</table></div>
+<div class="quote"><strong>如何读这张表：</strong>目标价区间 <strong>480–780</strong>，上下相差 62%，这本身就是最诚实的信号——卖方对「AI 投入何时转化为利润」缺乏共识。分歧集中在两处：<strong>① AI capex 的容忍受限</strong>（下调方：高盛 700→670、大摩 650→550、招商 766→700，理由高度一致地指向 AI 投入侵蚀盈利）；<strong>② Agent 入口的估值溢价</strong>（上调/维持高位方：美银 780、花旗 765，理由指向微信生态的不可复制性）。注意：<strong>所有机构评级均为买入/增持</strong>——在一个 62% 目标价分歧的标的里评级高度一致，通常意味着评级本身信息量有限，应更多关注目标价的变动方向。</div>
+</div>
+
+<div class="card" id="community">
+<h2>十一、雪球 / 散户讨论 三方</h2>
+<p>社区样本量说明：以下为雪球、moomoo 讨论区与财经媒体的散户/大 V 观点转述，<strong>样本有限、不构成统计意义上的情绪指标</strong>，仅作定性参考。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>话题</th><th>讨论内容</th><th>倾向</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>中国版 Muse</strong></td>
+<td>「对标海外 Muse 破局，微信小微能否开启消费级 Agent 价值重估」——散户与机构讨论高度一致：微信生态集成社交关系链、公众号/视频号内容矩阵、小程序集群、支付与商户网络，若小微完善持久记忆、安全授权与跨服务调度，有望构建国内稀缺的「交互–分发–支付–履约」全流程闭环</td>
+<td><span class="tag tag-bull">看多</span></td>
+</tr>
+<tr>
+<td><strong>WorkBuddy 产品体验</strong></td>
+<td>雪球用户：<em>「发现 workbuddy 给的试用额度非常高，够用好几天，真的形成依赖后才能用完。而百度搭子和金山灵犀只能用一两次，还没了解就要付钱，眼光短浅。或者就是对自家产品没信心。」</em>——一条来自实际使用者的正面口碑，指向「先用后付费」的获客策略有效</td>
+<td><span class="tag tag-bull">看多</span></td>
+</tr>
+<tr>
+<td><strong>产品线收缩</strong></td>
+<td>雪球资讯流：<em>「个人 Agent 正在成为 AI 应用的新战场，腾讯在此时关停了刚上线半年的 QClaw」</em>——对腾讯 Agent 产品形态试错的质疑</td>
+<td><span class="tag tag-bear">看空/中性</span></td>
+</tr>
+<tr>
+<td><strong>回购与股东回报</strong></td>
+<td>moomoo 讨论区与 AI 解读提及「腾讯近期持续回购」「微信内测…」——散户对每日 1 亿港元的回购节奏认知度高，视为价格支撑</td>
+<td><span class="tag tag-bull">看多</span></td>
+</tr>
+<tr>
+<td><strong>长期持有派</strong></td>
+<td>雪球「价投40」等大 V 在模拟实盘组合中继续持有腾讯；亦有观点认为「今年 6 月起小微陆续开展小范围灰度测试」是长期逻辑的起点而非终点</td>
+<td><span class="tag tag-bull">看多</span></td>
+</tr>
+</tbody>
+</table></div>
+<div class="quote"><strong>社区情绪小结：</strong>本周散户情绪明显偏正面，且讨论焦点从「AI 投入侵蚀利润」（上一轮的焦虑点）<strong>切换到了「微信 Agent 入口重估」</strong>。值得警惕的是，这轮乐观情绪与机构研报的理性分歧形成反差——社区关注「叙事有多大」，卖方在争论「账单要还多久」。散户情绪在事件驱动行情中往往滞后于价格，参考价值有限。</div>
+</div>
+
+<div class="card" id="conclusion">
+<h2>十二、综合判断框架</h2>
+<h3>12.1 四情景推演</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>对股价的含义</th><th>主观概率</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="tag tag-bull">乐观：叙事变业绩</span></td>
+<td>Q3 财报首次给出小微可量化指标（用户渗透/任务完成率/支付闭环数据）；灰度转正式的时间表明确</td>
+<td>「Agent 入口」从期权变成可见收入线，估值中枢有望向 Non-IFRS 15x 以上修复</td>
+<td><strong>20%</strong></td>
+</tr>
+<tr>
+<td><span class="tag tag-hold">中性偏正：叙事延续但无数据</span></td>
+<td>Q3 财报仅延续 Q2 趋势（广告 +20% 上下、游戏双位数增长），小微仍无量化披露；回购节奏维持</td>
+<td>股价在 411–463 区间震荡，等待下一个催化（Hy4 正式版、微信 Agent 放量、或宏观转向）</td>
+<td><strong>40%</strong></td>
+</tr>
+<tr>
+<td><span class="tag tag-hold">中性偏负：叙事降温</span></td>
+<td>Muse 热度消退、无国内对标落地实证；同时 Q3 capex 继续走高、FCF 仍为负，美联储 10/27–28 再加息</td>
+<td>回吐 9/22 涨幅，重新测试 52 周低点 411 附近的「账单折价」</td>
+<td><strong>30%</strong></td>
+</tr>
+<tr>
+<td><span class="tag tag-bear">悲观：双重压制</span></td>
+<td>算力获取受限（出口管制收紧）导致模型迭代放缓 + 美联储持续加息 + AI 收入贡献持续不达预期</td>
+<td>Non-IFRS 估值向 2022 年极值（~10x）靠拢，对应股价有显著下行空间</td>
+<td><strong>10%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3>12.2 关键跟踪指标（按优先级）</h3>
+<div class="chart">
+<div class="chart-title">未来 3 个月的观察清单</div>
+<div class="bar-row"><div class="bar-label">Q3 财报（11 月中）</div><div class="bar-track"><div class="bar-fill c-main" style="width:100%"></div></div><div class="bar-value">最高</div></div>
+<div class="bar-group">└ 小微是否首次披露量化指标 · capex 指引是否见顶 · 广告/游戏增速是否延续</div>
+<div class="bar-row"><div class="bar-label">小微放量节奏</div><div class="bar-track"><div class="bar-fill c-main" style="width:92%"></div></div><div class="bar-value">极高</div></div>
+<div class="bar-group">└ 灰度 → 正式的时间点；开发者接入小程序的数量变化</div>
+<div class="bar-row"><div class="bar-label">美联储 10/27–28</div><div class="bar-track"><div class="bar-fill c-warn" style="width:78%"></div></div><div class="bar-value">高</div></div>
+<div class="bar-group">└ 是否再度加息；点阵图与长端美债走向</div>
+<div class="bar-row"><div class="bar-label">FCF 转正时点</div><div class="bar-track"><div class="bar-fill c-warn" style="width:70%"></div></div><div class="bar-value">中高</div></div>
+<div class="bar-group">└ Q3 能否回到正值；净现金能否止跌</div>
+<div class="bar-row"><div class="bar-label">回购 vs Prosus 减持</div><div class="bar-track"><div class="bar-fill c-sub" style="width:55%"></div></div><div class="bar-value">中</div></div>
+<div class="bar-row"><div class="bar-label">Hy4 正式版 / 混元迭代</div><div class="bar-track"><div class="bar-fill c-sub" style="width:48%"></div></div><div class="bar-value">中</div></div>
+<div class="bar-row"><div class="bar-label">出口管制变化</div><div class="bar-track"><div class="bar-fill c-neg" style="width:40%"></div></div><div class="bar-value">中低（尾部风险高）</div></div>
+</div>
+<h3>12.3 总结</h3>
+<p>本周腾讯上涨 4.20%，同期恒生科技下跌 2.13%——这个 6.3pct 的超额收益清楚地说明了行情的性质：<strong>这不是板块 beta，也不是业绩 alpha，而是一次借 Meta Muse 之名的「入口重估」</strong>。市场此前给腾讯的定价是「微信变现的确定性 + AI 账单的折价」；本周新增了第三项——「微信作为 Agent 入口的期权价值」。</p>
+<p>这项期权<strong>有真实的物理基础</strong>（14.39 亿 MAU × 400 万小程序 × 微信支付闭环 × 已灰度的小微），但<strong>目前完全没有量化证据</strong>。Q2 财报中 AI 账单一分未减：capex +176%、FCF -138 亿、净现金近乎腰斩。因此本报告的定性是：<strong>估值修复的方向合理，但幅度已透支了尚未兑现的证据</strong>。9/22 冲高 463.40 后三日回吐、未能守住高位，也印证了资金对「纯叙事定价」的犹豫。</p>
+<p>对长期投资者而言，真正需要盯住的不是 Muse 的热度能持续几天，而是 <strong>11 月中旬的 Q3 财报里，小微会不会第一次给出数字</strong>。在那之前，任何基于「中国版 Muse」的目标价上修都缺乏可验证的锚。当前 ~12.5x Non-IFRS / ~1.2 PEG 的估值，仍然为「叙事落空」留有一定缓冲——这是多头在缺乏证据时唯一可以依赖的东西。</p>
+<div class="quote"><strong>一句话结论：</strong>基本面（广告 +22%、游戏 +17%、12.5x Non-IFRS）支撑当前位置，但本周 4.2% 的涨幅由未经证实的叙事贡献；把它当作「具备安全边际的期权」而非「已经开始的兑现」，是更稳妥的读法。</div>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。所有估值情景和概率均为本文主观判断。</p>
+<p style="margin-top:8px;">报告生成日期：2026-09-27 · 由 Claude Code 辅助分析 · 行情截至 2026/09/25 收盘 · 财务截至 2026 Q2（2026/08/12 发布）</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="padding-left:20px;">
+<li><strong>一手</strong>：腾讯财经行情接口（qt.gtimg.cn / web.ifzq.gtimg.cn，港股 hk00700 / hkHSI / hkHSTECH）；HKEXnews 公司公告（回购、中报），本地存档 <code>标的/00700-腾讯控股/Filings/</code>；腾讯混元官方发布页（tencent.com）</li>
+<li><strong>二手</strong>：财联社、新浪港股、格隆汇、华尔街见闻、21 世纪经济报道、智通财经、证券时报·数据宝、凤凰财经、香港 01、Klaro（美联储议息日程）、国盛/中金/国投/国海等券商研报转述</li>
+<li><strong>三方</strong>：雪球（§腾讯控股讨论区）、moomoo 讨论区</li>
+<li><strong>推算</strong>：Non-IFRS TTM P/E、Forward P/E、PEG、股息率、投资组合占比、汇率折算，均基于上述一手数据计算</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E8%85%BE%E8%AE%AF%E6%8E%A7%E8%82%A1%EF%BC%8800700%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%85%BE%E8%AE%AF%E6%8E%A7%E8%82%A1%EF%BC%8800700%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-27%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

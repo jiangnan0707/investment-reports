@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>中际旭创 2026-11-07 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; overflow-wrap: anywhere; }
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; overflow-wrap: anywhere; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/300308/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E4%B8%AD%E9%99%85%E6%97%AD%E5%88%9B%EF%BC%88300308%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E4%B8%AD%E9%99%85%E6%97%AD%E5%88%9B%EF%BC%88300308%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-07%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">300308 <span>·</span> 2026-11-07 <span>·</span> PC 完整版</div><h1>中际旭创</h1><p>数据截至 2026-11-06 收盘（腾讯行情 sz300308，时间戳 20261106161454）· 财报截至 2026 年第三季度报告（2026-10-30 披露，未经审计），并纳入 11-02 Marvell 收购 Lumentum、11-03 砍单传闻与公司回应、11-06 回购注销公告等后续事件</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#disclaimer">数据可靠性声明</a></li><li><a href="#overview">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、核心指标：800G/1.6T 出货结构 × 毛利率</a></li><li><a href="#financials">四、最新财务数据</a></li><li><a href="#industry">五、行业格局与上游变局</a></li><li><a href="#policy">六、政策风险</a></li><li><a href="#market">七、上市与资金面</a></li><li><a href="#valuation">八、估值分析</a></li><li><a href="#debate">九、多空核心分歧</a></li><li><a href="#analysts">十、分析师全景</a></li><li><a href="#community">十一、社区讨论</a></li><li><a href="#conclusion">十二、综合判断框架</a></li><li><a href="#data-notes">数据说明</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="disclaimer">
+<h2 style="margin-top:0;">数据可靠性声明</h2>
+<p>本报告覆盖 <strong>A 股创业板 300308（中际旭创）</strong>，该公司 2026 年 7 月 30 日完成香港联交所 H 股上市（3308.HK），本报告以 A 股行情与估值为准。披露来源为巨潮资讯网：2025 年年度报告（2026-03-31）、2026 年半年度报告（2026-08-22）、2026 年第三季度报告（2026-10-30，未经审计）已下载至本地 <code>Filings/</code> 作为一手数据源；回购相关公告（2026-105、2026-107）亦已存档。</p>
+<p>所有数据按五级来源标注：<span class="src-badge src-s">一手</span>公司披露文件 / <span class="src-badge src-2">二手</span>媒体或机构转述 / <span class="src-badge src-3">三方</span>数据服务商 / <span class="src-badge src-e">推算</span>本报告根据披露值计算 / <span class="src-badge src-t">时效</span>数据有时效风险。</p>
+<p class="caveat-inline"><strong>时效提示：</strong>2026-11-06 收盘价 448.00 元；11 月以来该股波动剧烈（11-03 单日 −12.69%、11-04 +11.07%、11-05 −7.51%、11-06 −9.19%），报告内估值读数时效性弱于往常，引用时请注意数据时点。</p>
+</div>
+
+<div class="card" id="overview">
+<h2>一、公司速览</h2>
+<div class="two-col">
+<div>
+<div class="table-scroll"><table>
+<tr><td>公司全称</td><td>中际旭创股份有限公司（苏州旭创为核心经营主体）</td></tr>
+<tr><td>上市地</td><td>A 股创业板 300308（2012 年）；H 股 03308.HK（2026-07-30 挂牌）</td></tr>
+<tr><td>主营业务</td><td>高速光模块（400G/800G/1.6T），覆盖 10G–1.6T 全系列</td></tr>
+<tr><td>生产基地</td><td>苏州、铜陵、成都、台湾、泰国</td></tr>
+<tr><td>行业地位</td><td>据灼识咨询，2021–2025 年连续五年全球光互连解决方案市场收入规模第一 <span class="src-badge src-s">一手</span>（公司年报援引）</td></tr>
+<tr><td>控股股东</td><td>山东中际投资控股有限公司 10.31%；实控人体系无变更</td></tr>
+<tr><td>总股本</td><td>11.78 亿股（A 股 11.23 亿 + H 股 0.545 亿，H 股为超配行使前口径）</td></tr>
+<tr><td>2026 前三季营收</td><td>695.47 亿元（+178.13%）</td></tr>
+<tr><td>2026 前三季归母净利</td><td>222.38 亿元（+211.81%）</td></tr>
+</table></div>
+</div>
+<div>
+<div class="summary-grid" style="grid-template-columns:repeat(3,1fr);">
+<div class="summary-item"><div class="label">收盘价（11-06）</div><div class="value metric-negative">448.00 元</div><div class="label">单日 −9.19%</div></div>
+<div class="summary-item"><div class="label">总市值</div><div class="value">5,277 亿</div><div class="label">A股流通 4,973 亿</div></div>
+<div class="summary-item"><div class="label">PE-TTM</div><div class="value">20.37x</div><div class="label">腾讯口径 <span class="src-badge src-3">三方</span></div></div>
+<div class="summary-item"><div class="label">PB</div><div class="value">5.59x</div><div class="label">分母=Q3 归母净资产</div></div>
+<div class="summary-item"><div class="label">52 周区间（前复权）</div><div class="value">141.7–1,415.7</div><div class="label">现价距高点 −68.4%</div></div>
+<div class="summary-item"><div class="label">年初至今</div><div class="value metric-negative">−27.9%</div><div class="label">1-05 收 621.32</div></div>
+</div>
+</div>
+</div>
+<h3>1.1 当前位置：业绩创新高与股价深度回撤并存</h3>
+<p>这家公司目前最值得注意的事实，不是任何单季数字，而是<strong>两组数据的背离</strong>：一方面，2026 年前三季营收 695.47 亿元、归母净利 222.38 亿元，同比 +178%/+212%，均为历史最高；另一方面，股价从 2026 年 6 月盘中高点 1,414.71 元回落至 448.00 元，回撤约 68%，而同期基本面在继续上修（Q3 单季营收环比 +24.6%）。</p>
+<p>伴随的第三个事实：A 股股东户数从 2025-12-31 的 140,370 户增至 2026-09-30 的 237,107 户（+68.9%）<span class="src-badge src-s">一手</span>——股价下行期散户显著增多，筹码从机构向散户扩散；同期融资余额从 10-27 的 208.7 亿元降至 11-05 的 181.5 亿元 <span class="src-badge src-3">三方</span>，杠杆资金在减仓。</p>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<h3>2.1 怎么赚钱：光模块是 AI 算力网络的"接口"</h3>
+<p>光模块完成电信号与光信号的相互转换，是数据中心服务器与交换机之间、以及交换机之间互联的必需器件。AI 训练与推理集群对网络带宽的需求随 GPU 集群规模同步放大——每张 GPU 需要配套 1x–2.5x 不等速率的光模块（800G/1.6T 为当前主力速率），因此光模块的量价节奏直接挂钩云厂商资本开支。</p>
+<p>公司的商业模式是典型的<strong>高端制造 + 大客户直销</strong>：直销占收入 98.7%（2025 年）<span class="src-badge src-s">一手</span>；客户为全球头部云厂商与 AI 算力厂商，2025 年前五大客户占销售总额 75.98%<span class="src-badge src-s">一手</span>。产品按速率代际定价，新一代（1.6T）毛利显著高于上一代（800G/400G），代际切换速度决定毛利率走向。</p>
+<div class="table-scroll"><table>
+<tr><th>维度</th><th>事实（来源见标注）</th></tr>
+<tr><td>收入结构</td><td>光通信收发模块占 97.95%（2025 年）；其他（含汽车光电子等）2.05% <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>市场分布</td><td>境外占 90.58%（2025 年）→ 94.8%（2026 H1）；主要客户为北美云厂商 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>技术路线</td><td>硅光 + EML 双方案并行；全球首家推出硅光 400G/800G/1.6T（灼识咨询，公司年报援引）<span class="src-badge src-s">一手</span></td></tr>
+<tr><td>下一代产品</td><td>1.6T 已规模放量（2026 H1 出货逐季攀升）；XPO/NPO 处于定制开发；3.2T 相干 Lite 布局中 <span class="src-badge src-s">一手</span></td></tr>
+</table></div>
+<h3>2.2 护城河：代际迭代速度 + 大客户认证壁垒</h3>
+<p>光模块单看制造环节并不构成重资产壁垒（扩产周期以季度计），真正的护城河在两处：</p>
+<p><strong>其一，代际迭代卡位。</strong>每一代产品（400G→800G→1.6T→3.2T）客户都要重新认证，认证窗口期内先出货者锁定主力份额。公司为全球首家硅光 400G/800G/1.6T 量产者，1.6T 硅光模块 2026 年进入规模放量。<strong>其二，供应链组合能力。</strong>公司同时掌握硅光自研与外购 EML 两条路线，在光芯片紧缺周期中具备调配空间（三季报确认通过长协、预付款、新供应商导入锁定物料 <span class="src-badge src-s">一手</span>）。</p>
+<p class="caveat-inline">护城河的反面同样清晰：上游光芯片（EML、DSP）不自产——芯片占光模块材料成本 50% 以上 <span class="src-badge src-s">一手</span>，且主要供应商为 Marvell、Lumentum 等海外厂商。11-02 Marvell 宣布收购 Lumentum（详见第五章），正是对这一软肋的直接扰动。</p>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标：800G/1.6T 出货结构 × 毛利率</h2>
+<p>这家公司的核心指标是<strong>高速率产品（800G/1.6T）的收入占比及其对应的毛利率</strong>。光模块是代际定价生意，毛利率不取决于产能利用率，而取决于新一代产品的出货斜率——1.6T 占比每上一个台阶，综合毛利率就抬升一段。三季报确认："1.6T 产品收入进一步加速，是三季度业绩增长的重要驱动因素……产品价格和毛利率保持稳定"<span class="src-badge src-s">一手</span>（11-06 公告 2026-107）。</p>
+<h3>3.1 毛利率轨迹：代际切换的真实刻度</h3>
+<svg style="width:100%;height:auto;" viewbox="0 0 640 240">
+<line stroke="#d8e0d8" stroke-width="1" x1="52" x2="626" y1="200" y2="200"></line>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="152" y2="152"></line>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="104" y2="104"></line>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="56" y2="56"></line>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="44" y="204">30%</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="44" y="156">35%</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="44" y="108">40%</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="44" y="60">45%</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="44" y="14">50%</text>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="8" y2="8"></line>
+<polyline fill="none" points="74,170 156,171 238,165 320,158 402,127 484,93 566,88 626,85" stroke="#2d6a4f" stroke-width="2.5"></polyline>
+<circle cx="74" cy="170" fill="#2d6a4f" r="3"></circle><circle cx="238" cy="165" fill="#2d6a4f" r="3"></circle><circle cx="402" cy="127" fill="#2d6a4f" r="3"></circle><circle cx="484" cy="93" fill="#2d6a4f" r="3"></circle><circle cx="626" cy="85" fill="#2d6a4f" r="4"></circle>
+<text fill="#5a6a5a" font-size="10" text-anchor="middle" x="74" y="188">2023</text>
+<text fill="#5a6a5a" font-size="9" text-anchor="middle" x="74" y="178">全年 33.8%</text>
+<text fill="#5a6a5a" font-size="10" text-anchor="middle" x="238" y="183">2024</text>
+<text fill="#5a6a5a" font-size="9" text-anchor="middle" x="238" y="173">42.0%</text>
+<text fill="#5a6a5a" font-size="10" text-anchor="middle" x="320" y="150">25Q3</text>
+<text fill="#5a6a5a" font-size="10" text-anchor="middle" x="402" y="145">25Q4</text>
+<text fill="#c1121f" font-size="9" text-anchor="middle" x="402" y="119">39.4%<tspan fill="#5a6a5a">（推算）</tspan></text>
+<text fill="#5a6a5a" font-size="10" text-anchor="middle" x="484" y="85">26H1</text>
+<text fill="#2d6a4f" font-size="9" text-anchor="middle" x="484" y="73">46.25%</text>
+<text fill="#5a6a5a" font-size="10" text-anchor="middle" x="566" y="81">26Q1-Q3</text>
+<text fill="#2d6a4f" font-size="9" text-anchor="middle" x="566" y="69">46.39%</text>
+<text fill="#2d6a4f" font-size="10" text-anchor="middle" x="626" y="77">Q3</text>
+<text fill="#2d6a4f" font-size="9" text-anchor="middle" x="626" y="65">46.61%</text>
+</svg>
+<p class="caveat-inline">毛利率为合并口径（1 − 营业成本/营业收入），2025Q4 为推算值（2025 全年 42.04% 与 25Q1-Q3 41.4% 之差倒推），其余为披露值计算 <span class="src-badge src-e">推算</span>。2023→2025 抬升对应 400G→800G 切换；2026 三季连续抬升对应 1.6T 放量 + 硅光比例提升。</p>
+<p>毛利率从 2023 年 33.8% 抬升到 2026Q3 的 46.61%，三年抬升 12.8 个百分点——这不是降本的结果，是产品结构的结果：公司公告明确归因于"产品结构改善、硅光比例提升"<span class="src-badge src-s">一手</span>。费雪框架下，这是"产品线升级带来利润率结构性上移"的教科书样本；巴菲特框架下的问题则是：这种上移在竞争者追平代际之后还能守住多少（见第九章空方论据）。</p>
+<h3>3.2 量的刻度：单季营收环比仍在加速</h3>
+<p>2026 年三个单季营收 195.0 → 222.8 → 277.7 亿元，环比 +17.6% → +24.6%——在基数已经放大的情况下环比增速反而抬升。公司在手订单表述："主要客户订单已基本覆盖 2027 年全年，部分重点客户已给出 2028 年明确需求指引"<span class="src-badge src-s">一手</span>（11-06 公告）。产能侧，前三季购建固定资产支付现金 91.61 亿元（去年同期约 16.1 亿元），在建工程较年初 +286%<span class="src-badge src-s">一手</span>。</p>
+<p>量的约束不在需求端，在物料端：预付款项较年初 +1,068%、其他非流动资产（长期预付材料款）+2,541%<span class="src-badge src-s">一手</span>——公司用真金白银锁定上游产能，说明 EML 等关键光芯片的供给仍是产能瓶颈，这也是第五章上游变局的背景。</p>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据</h2>
+<h3>4.1 三季报总览（2026 年 1–9 月，披露值）</h3>
+<div class="table-scroll"><table>
+<tr><th>项目</th><th>2026 前三季</th><th>2025 前三季</th><th>同比</th><th>来源</th></tr>
+<tr><td>营业收入</td><td>695.47 亿</td><td>250.05 亿</td><td>+178.13%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>归母净利润</td><td>222.38 亿</td><td>71.32 亿</td><td>+211.81%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>扣非归母净利润</td><td>221.10 亿</td><td>70.83 亿</td><td>+212.12%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>经营现金流净额</td><td>80.08 亿</td><td>54.55 亿</td><td>+46.81%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>基本 EPS</td><td>19.78 元</td><td>6.48 元</td><td>+205.25%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>加权 ROE</td><td>44.26%</td><td>31.22%</td><td>+13.04pct</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>研发费用</td><td>18.63 亿</td><td>9.45 亿</td><td>+97.04%</td><td><span class="src-badge src-s">一手</span></td></tr>
+</table></div>
+<div class="col-wrap">
+<div class="col-chart" style="height:210px;">
+<div class="col"><div class="col-seg c-main" style="height:36%;"><span class="col-label">250</span></div></div>
+<div class="col"><div class="col-seg c-main" style="height:100%;"><span class="col-label">695</span></div></div>
+</div>
+<div class="col-label" style="display:flex;justify-content:space-around;"><span>2025 前三季</span><span>2026 前三季（亿元）</span></div>
+</div>
+<h3>4.2 单季节奏：营收、归母与毛利率</h3>
+<div class="table-scroll"><table>
+<tr><th>单季</th><th>营收（亿）</th><th>归母净利（亿）</th><th>净利率</th><th>口径</th></tr>
+<tr><td>2025Q3</td><td>102.16</td><td>31.37</td><td>30.7%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>2025Q4</td><td>132.35</td><td>36.65</td><td>27.7%</td><td><span class="src-badge src-s">一手</span>（年报分季度表）</td></tr>
+<tr><td>2026Q1</td><td>194.96</td><td>57.35</td><td>29.4%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>2026Q2</td><td>222.82</td><td>79.17</td><td>35.5%</td><td><span class="src-badge src-e">推算</span>（H1−Q1）</td></tr>
+<tr><td>2026Q3</td><td>277.69</td><td>85.87</td><td>30.9%</td><td><span class="src-badge src-e">推算</span>（YTD−H1，营收与季报"本报告期"披露值 277.69 一致）</td></tr>
+</table></div>
+<p>三个观察：<strong>（1）营收环比 +24.6%</strong>，Q3 单季营收为历史最高单季；<strong>（2）归母净利率从 Q2 的 35.5% 回落到 Q3 的 30.9%</strong>——回落主因不是经营恶化，而是两笔可识别的一次性损失：Q3 确认上市公司股权投资公允价值变动损失约 4.4 亿元（减少归母）、港元走弱致汇兑损失约 3.9 亿元 <span class="src-badge src-s">一手</span>；扣非口径 Q3 单季 90.18 亿反而高于归母 85.87 亿；<strong>（3）财务费用 Q3 单季约 6.8 亿汇兑损失</strong>——美元、港币走弱对这家 94.8% 收入来自境外的公司是持续性的报表噪音，需要与经营面分开读。</p>
+<h3>4.3 资产负债表：H 股募资后的三张面孔</h3>
+<div class="table-scroll"><table>
+<tr><th>项目</th><th>2025 年末</th><th>2026-09-30</th><th>变化</th><th>来源</th></tr>
+<tr><td>总资产</td><td>452.89 亿</td><td>1,297.55 亿</td><td>+186.5%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>归母净资产</td><td>297.65 亿</td><td>943.63 亿</td><td>+217.0%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>货币资金</td><td>109.87 亿</td><td>535.32 亿</td><td>+387%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>存货</td><td>126.81 亿</td><td>238.78 亿</td><td>+88.3%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>应收账款</td><td>62.77 亿</td><td>173.09 亿</td><td>+175.8%</td><td><span class="src-badge src-s">一手</span></td></tr>
+<tr><td>资产负债率</td><td>30.2%</td><td>23.5%</td><td>−6.7pct</td><td><span class="src-badge src-e">推算</span></td></tr>
+</table></div>
+<p>资产负债表的三条线索：<strong>（1）现金极度充裕</strong>——H 股募资 609 亿港币（含超配，约合人民币 557 亿）到账后，货币资金 535 亿占总资产 41%，资产负债率降至 23.5%；<strong>（2）存货与应收同步翻倍</strong>——存货 238.78 亿（+88.3%）低于营收增速（+178%），公司在公告中归因为"在手订单持续增加，为满足订单交付相应的备料增加"<span class="src-badge src-s">一手</span>，存货/近四季营收比约 26%，处于扩产期正常偏上位置，但绝对值已接近 2024 年全年营收（238.6 亿），2027 年若需求节奏变化，这是减值风险的主要存放处；<strong>（3）应收增速（+175.8%）与营收增速（+178.1%）基本同步</strong>，未见显著放宽账期的迹象。</p>
+<h3>4.4 现金流：利润与回款的裂口</h3>
+<p>前三季 OCF 80.08 亿元，仅为归母净利的 36%。裂口的构成：应收账款增加约 110 亿 + 存货增加约 112 亿，两者合计吞噬经营现金流约 222 亿 <span class="src-badge src-e">推算</span>。这不是坏账信号（客户为头部云厂商，2025 年境外回款率 98% <span class="src-badge src-s">一手</span>），而是"订单爆发期垫资扩产"的典型形态——公司同时在用预付款锁上游（预付 +1,068%）。跟踪点：2027 年若营收增速降档而存货/应收仍高位，裂口才会变成真实风险；当前阶段它更像增长的影子。</p>
+</div>
+
+<div class="card" id="industry">
+<h2>五、行业格局与上游变局</h2>
+<h3>5.1 需求侧：光互连市场的官方预测</h3>
+<p>公司中报援引 LightCounting：全球光互连市场 2025 年 248 亿美元 → 2030 年预计 1,110 亿美元，2026–2030 年 CAGR 31.6%<span class="src-badge src-2">二手</span>（公司年报转引，未独立核验原始报告）。灼识咨询：2026–2030 全球累计 AI 资本开支预计 4.7 万亿美元，为前五年五倍以上；硅光在数通光互连的渗透率从 2025 年约 38% 提升至 2030 年约 73%<span class="src-badge src-2">二手</span>。</p>
+<p>可直接核验的上游锚点：2026Q2 单季微软/亚马逊/Meta/谷歌合计资本开支 1,649 亿美元（+86%）<span class="src-badge src-2">二手</span>（中报援引）。云厂商资本开支是这家公司收入的先行变量——比任何光模块行业预测都更硬。</p>
+<h3>5.2 竞争格局：全球第一身位与"易中天"组合</h3>
+<p>按灼识咨询口径（公司年报援引），公司 2021–2025 连续五年全球光互连解决方案收入第一 <span class="src-badge src-2">二手</span>。A 股"易中天"组合（新易盛、中际旭创、天孚通信）覆盖了全球高速光模块的主要产能。可比公司 11-06 收盘读数 <span class="src-badge src-3">三方</span>：</p>
+<div class="table-scroll"><table>
+<tr><th>公司</th><th>收盘</th><th>当日</th><th>总市值（亿）</th><th>PE-TTM</th><th>PB</th><th>2026Q3 归母（亿）</th></tr>
+<tr><td>中际旭创</td><td>448.00</td><td>−9.19%</td><td>5,277</td><td>20.37</td><td>5.59</td><td>85.87（+173.7%）</td></tr>
+<tr><td>新易盛</td><td>172.10</td><td>−7.28%</td><td>2,400</td><td>16.47</td><td>8.59</td><td>38.43（+61.2%）<span class="src-badge src-2">二手</span></td></tr>
+<tr><td>天孚通信</td><td>122.00</td><td>−5.79%</td><td>1,331</td><td>50.50</td><td>20.23</td><td>—（10-29 披露）</td></tr>
+<tr><td>光迅科技</td><td>91.30</td><td>−6.16%</td><td>756</td><td>49.99</td><td>4.95</td><td>—</td></tr>
+</table></div>
+<p class="caveat-inline">新易盛 Q3 归母为新闻转述口径 <span class="src-badge src-2">二手</span>；同日三家齐跌（"易中天"集体下挫）显示波动主要来自行业贝塔（AI 算力链情绪）而非公司个体事件。</p>
+<h3>5.3 上游变局：Marvell 收购 Lumentum（2026-11-02 宣布）</h3>
+<p>这是本期行业层面最大的结构变化：Marvell（DSP 芯片龙头）宣布全股票收购 Lumentum（EML 激光器等核心光芯片主要供应商），Lumentum 股权估值约 1,025 亿美元 <span class="src-badge src-2">二手</span>（财中社报道，交易尚待监管审批）。</p>
+<p>对中际旭创的传导路径：<strong>（1）供应集中度上升</strong>——公司同时采购 Marvell DSP 与 Lumentum 激光器，合并后同一集团掌握两类核心器件，Counterpoint 评估认为光模块厂商可能需增加博通/Credo DSP 及中日激光器供应商的替代评估 <span class="src-badge src-2">二手</span>；<strong>（2）议价能力的不确定性</strong>——上游整合后采购价格与配给规则可能改变，公司"通过硅光方案 + EML 方案多元化"的应对（中报披露 <span class="src-badge src-s">一手</span>）是对冲动作，但硅光芯片的自给率公司未单独披露；<strong>（3）交易本身有审批不确定性</strong>，11 月初市场对这起并购的解读是光模块公司相对议价地位弱化的信号——这也是 11-03 至 11-06 股价巨震的行业背景之一。</p>
+<p class="caveat-inline">另一条需要区分的线：11-03 市场流传"海外云客户砍单、野村下调目标价至 330 元"，公司 11-03 晚投资者关系活动逐条回应——"绝大多数客户并未下调需求或订单，个别客户只是进行产品结构调整，部分客户对 1.6T 需求较此前有所增加"；野村回应 330 元目标价传闻不属实，其最新报告维持买入、A 股目标价 1,196 元 <span class="src-badge src-2">二手</span>。传闻与回应都来自媒体转述层，均标注二手。</p>
+</div>
+
+<div class="card" id="policy">
+<h2>六、政策风险</h2>
+<p>该公司收入 94.8% 来自境外（2026 H1 <span class="src-badge src-s">一手</span>）、终端客户以北美云厂商为主，属于中美博弈敏感产业链（AI 硬件供应链），地缘政治渠道按影响强度排序如下：</p>
+<div class="table-scroll"><table>
+<tr><th>风险项</th><th>现状（含来源）</th><th>影响强度</th></tr>
+<tr><td>客户所在国贸易/关税政策</td><td>公司年报原文："若汇率或贸易政策发生重大变化可能会导致光模块产品需求减少，关键原材料采购难度增加" <span class="src-badge src-s">一手</span>。当前未见针对光模块成品的新增关税/管制落地的披露</td><td><strong>高</strong>——需求端 94.8% 在境外，政策直接改写需求</td></tr>
+<tr><td>上游光芯片供应的地缘约束</td><td>EML/DSP 主要来自美系厂商（Marvell、Lumentum、博通）；Marvell×Lumentum 合并后供应集中度进一步上升（见 5.3）<span class="src-badge src-2">二手</span>。若对华供应政策收紧，物料瓶颈先于需求风险出现</td><td><strong>高</strong>——公司不自产 DSP，EML 有硅光替代路线但自给率未披露</td></tr>
+<tr><td>海外产能布局</td><td>泰国工厂已投产（INVESTMENT PROMOTION ACT 税收优惠 <span class="src-badge src-s">一手</span>），苏州/铜陵/成都/台湾多点布局，为关税与供应风险的对冲动作</td><td>缓冲项</td></tr>
+<tr><td>汇率政策</td><td>美元/港币走弱已致 Q3 汇兑损失约 3.9 亿元 + 前三季约 1.39 亿元 <span class="src-badge src-s">一手</span>；公司以外汇套保应对（中报披露）</td><td>中——报表噪音为主，非生存性问题</td></tr>
+<tr><td>本土政策承接</td><td>国内互联网厂商 AI 算力投入加码，公司国内收入 2026 H1 约 21.6 亿（占 5.2%），成都智禾承接国内 400G/800G 交付 <span class="src-badge src-s">一手</span></td><td>低（体量尚小，为潜在对冲）</td></tr>
+</table></div>
+<p><strong>传导强度排序一句话：</strong>需求端（客户所在国政策）与供给端（上游光芯片地缘约束）并列第一梯队，前者决定"卖多少"，后者决定"产多少"；监测信号为美国对华光电子/半导体物项管制清单变动、Marvell×Lumentum 交易审批进展、公司硅光自给相关的披露变化。</p>
+</div>
+
+<div class="card" id="market">
+<h2>七、上市与资金面</h2>
+<h3>7.1 近期股价：一轮完整的"暴涨—巨震"周期</h3>
+<svg style="width:100%;height:auto;" viewbox="0 0 640 260">
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="42.9" y2="42.9"></line>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="79.5" y2="79.5"></line>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="116.1" y2="116.1"></line>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="152.8" y2="152.8"></line>
+<line stroke="#e8eee8" stroke-width="1" x1="52" x2="626" y1="189.4" y2="189.4"></line>
+<line stroke="#d8e0d8" stroke-width="1" x1="52" x2="626" y1="226" y2="226"></line>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="46" y="46">1250</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="46" y="83">1000</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="46" y="119">750</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="46" y="156">500</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="46" y="193">250</text>
+<text fill="#8a9a8a" font-size="11" text-anchor="end" x="46" y="229">0</text>
+<line stroke="#eef2ee" stroke-width="1" x1="145" x2="145" y1="18" y2="226"></line>
+<line stroke="#eef2ee" stroke-width="1" x1="233.3" x2="233.3" y1="18" y2="226"></line>
+<line stroke="#eef2ee" stroke-width="1" x1="335.8" x2="335.8" y1="18" y2="226"></line>
+<line stroke="#eef2ee" stroke-width="1" x1="424.2" x2="424.2" y1="18" y2="226"></line>
+<line stroke="#eef2ee" stroke-width="1" x1="521.9" x2="521.9" y1="18" y2="226"></line>
+<text fill="#8a9a8a" font-size="10" text-anchor="middle" x="145" y="244">2026-01</text>
+<text fill="#8a9a8a" font-size="10" text-anchor="middle" x="233.3" y="244">2026-03</text>
+<text fill="#8a9a8a" font-size="10" text-anchor="middle" x="335.8" y="244">2026-05</text>
+<text fill="#8a9a8a" font-size="10" text-anchor="middle" x="424.2" y="244">2026-07</text>
+<text fill="#8a9a8a" font-size="10" text-anchor="middle" x="521.9" y="244">2026-09</text>
+<text fill="#8a9a8a" font-size="10" text-anchor="middle" x="620" y="244">11月</text>
+<text fill="#8a9a8a" font-size="10" x="58" y="24">2025-11 起（前复权，元）</text>
+<polyline fill="none" points="52.0,154.5 56.7,154.5 58.3,157.8 59.9,154.3 61.5,155.9 63.0,158.5 67.8,155.5 69.3,157.1 70.9,154.8 72.5,154.3 74.1,158.4 78.8,159.4 80.4,156.1 82.0,146.8 83.5,149.6 85.1,151.0 89.8,147.5 91.4,146.9 93.0,149.6 94.6,147.9 96.2,147.7 100.9,142.8 102.5,137.6 104.0,136.1 105.6,140.4 107.2,141.1 111.9,142.7 113.5,145.5 115.1,139.9 116.7,142.7 118.2,142.6 123.0,135.9 124.5,135.4 126.1,133.4 127.7,132.6 129.3,134.5 134.0,135.8 135.6,133.7 137.2,137.0 145.0,135.0 146.6,137.7 148.2,135.6 149.8,139.1 151.3,140.9 156.1,139.6 157.7,140.5 159.2,139.5 160.8,134.8 162.4,135.9 167.1,137.6 168.7,140.6 170.3,141.1 171.8,135.4 173.4,140.6 178.2,139.9 179.7,136.1 181.3,134.3 182.9,136.4 184.5,131.3 189.2,139.8 190.8,139.9 192.3,144.3 193.9,144.0 195.5,147.2 200.2,143.4 201.8,144.9 203.4,148.4 205.0,149.1 206.5,148.5 223.9,145.2 225.5,143.4 227.0,142.5 228.6,148.1 233.3,142.7 234.9,143.7 236.5,147.4 238.1,144.7 239.7,146.4 244.4,149.3 246.0,146.2 247.5,145.1 249.1,148.0 250.7,146.9 255.4,144.0 257.0,146.8 258.6,141.4 260.2,142.1 261.7,136.7 266.5,138.5 268.0,138.0 269.6,134.3 271.2,136.4 272.8,138.7 277.5,140.0 279.1,142.9 280.7,138.2 282.2,141.1 283.8,137.5 290.1,135.6 291.7,125.5 293.3,124.8 294.8,118.7 299.6,118.2 301.2,113.1 302.7,112.1 304.3,107.7 305.9,101.7 310.6,101.8 312.2,99.6 313.8,96.5 315.3,94.9 316.9,96.4 321.7,100.8 323.2,105.5 324.8,102.4 326.4,100.6 335.8,100.8 337.4,97.6 339.0,96.4 343.7,88.5 345.3,77.1 346.9,72.5 348.5,68.3 350.0,72.4 354.8,73.1 356.3,75.3 357.9,74.3 359.5,80.7 361.1,74.1 365.8,66.1 367.4,64.6 369.0,63.4 370.5,50.7 372.1,56.1 376.8,60.7 378.4,51.6 380.0,39.4 381.6,38.7 383.2,53.3 387.9,57.0 389.5,53.3 391.0,58.2 392.6,61.5 394.2,57.9 398.9,43.8 400.5,43.4 402.1,39.3 403.7,25.8 410.0,23.7 411.5,34.3 413.1,34.0 414.7,32.3 416.3,42.5 421.0,47.5 422.6,40.1 424.2,47.0 425.7,58.7 427.3,62.7 432.0,65.2 433.6,61.8 435.2,60.9 436.8,51.1 438.3,65.9 443.1,63.9 444.7,52.7 446.2,54.9 447.8,63.1 449.4,82.7 454.1,79.1 455.7,59.7 457.3,70.8 458.8,69.1 460.4,72.9 465.2,68.4 466.7,93.2 468.3,86.9 469.9,99.6 471.5,94.0 476.2,94.0 477.8,76.5 479.3,87.4 480.9,86.3 482.5,91.4 487.2,99.5 488.8,96.3 490.4,91.3 492.0,91.3 493.5,88.0 498.3,79.5 499.8,81.4 501.4,95.0 503.0,93.7 504.6,88.0 509.3,98.7 510.9,102.3 512.5,101.5 514.0,99.3 515.6,100.4 520.3,101.4 521.9,100.3 523.5,105.7 525.1,107.1 526.7,106.9 531.4,94.6 533.0,94.0 534.5,93.0 536.1,95.8 537.7,90.5 542.4,98.3 544.0,99.6 545.6,93.2 547.2,94.9 548.7,90.5 553.5,88.3 555.0,90.3 556.6,91.0 558.2,95.0 564.5,106.8 566.1,107.1 567.7,107.8 580.3,111.5 581.8,112.6 586.6,119.9 588.2,118.3 589.7,124.5 591.3,129.8 592.9,127.9 597.6,129.2 599.2,131.1 600.8,131.3 602.3,139.6 603.9,136.3 608.7,138.9 610.2,141.5 611.8,132.8 613.4,140.7 615.0,145.0 619.7,145.4 621.3,155.7 622.8,147.9 624.4,153.7 626.0,160.4" stroke="#2d6a4f" stroke-width="2"></polyline>
+<circle cx="422.6" cy="40.1" fill="#2d6a4f" r="4"></circle>
+<text fill="#2d6a4f" font-size="10" text-anchor="middle" x="422.6" y="30">6/30 高点 1268.81（盘中 1414.71）</text>
+<circle cx="626" cy="160.4" fill="#c1121f" r="4"></circle>
+<text fill="#c1121f" font-size="10" text-anchor="end" x="600" y="178">11/6 收 448.00</text>
+</svg>
+<p class="caveat-inline">数据：腾讯日 K（前复权）<span class="src-badge src-3">三方</span>，2025-11-07 至 2026-11-06，242 个交易日，x 轴按真实日期比例。</p>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">10-29</div><div class="tl-text">董事会通过回购用途变更议案（回购股份全部改为注销）</div></div>
+<div class="tl-item"><div class="tl-date">10-30</div><div class="tl-text">三季报披露；同日公告变更回购用途并注销</div></div>
+<div class="tl-item"><div class="tl-date">11-02</div><div class="tl-text">Marvell 宣布全股票收购 Lumentum（约 1,025 亿美元股权估值）</div></div>
+<div class="tl-item"><div class="tl-date">11-03</div><div class="tl-text">"砍单 + 野村 330 元目标价"传闻流传，单日 −12.69%，成交 293 亿；晚间公司投资者关系活动逐条回应</div></div>
+<div class="tl-item"><div class="tl-date">11-04</div><div class="tl-text">科技股普涨，+11.07%（盘中 469.50 为年内低点附近）</div></div>
+<div class="tl-item"><div class="tl-date">11-05</div><div class="tl-text">−7.51%；上游并购重估讨论发酵</div></div>
+<div class="tl-item"><div class="tl-date">11-06</div><div class="tl-text">−9.19% 收 448.00，成交 240 亿；午间公告回购事项（结合再贷款政策，将"通过回购等方式维护公司价值"），新易盛/天孚同步发声</div></div>
+</div>
+<p class="caveat-inline">事件链为媒体转述 + 公司公告混合口径：公告日期与内容为 <span class="src-badge src-s">一手</span>，成交额与传闻细节为 <span class="src-badge src-2">二手</span>。</p>
+<h3>7.2 回购与筹码</h3>
+<p><strong>回购链条：</strong>8-31 董事会通过回购方案（40–80 亿元，价格上限 1,200 元/股，原用途为股权激励）→ 9-01 启动 → 9-01 至 9-23 实际回购 565.3063 万股、支付 49.97 亿元（区间 806.93–944.68 元/股，均价约 883.7 元 <span class="src-badge src-e">推算</span>）→ 10-29 变更用途为<strong>注销并减少注册资本</strong> → 11-06 公告确认，注销将使总股本减少 0.48% <span class="src-badge src-s">一手</span>。从"激励"改为"注销"是股东回报姿态的实质变化；回购均价 883.7 元 vs 现价 448.00 元，意味着公司在两倍于现价的价位完成回购——对"维护价值"的表态有实际成本背书。</p>
+<p><strong>筹码结构：</strong>A 股股东户数 2025-12-31 为 140,370 → 2026-06-30 为 205,678（+33.2%）→ 2026-09-30 为 237,107（季报口径 <span class="src-badge src-s">一手</span>），散户化在股价高位回落途中加速。H 股侧，摩根士丹利 11 月初对 H 股好仓比例升至 5.32% <span class="src-badge src-2">二手</span>。</p>
+<p><strong>杠杆资金：</strong>融资余额 10-27 峰值 208.7 亿 → 11-05 降至 181.5 亿（−13%）<span class="src-badge src-3">三方</span>，下跌途中杠杆资金净减仓。</p>
+<h3>7.3 H 股上市与解禁</h3>
+<p>2026-07-30 H 股挂牌（3308.HK），全球发售 5,450 万股（超配行使前，香港公开发售 10% / 国际发售 90%），募资合计约 609 亿港币（含超配权行使）<span class="src-badge src-s">一手</span>。H 股发行摊薄了 A 股股东权益（EPS 稀释效应已体现在三季报 19.78 元/股中），同时带来 557 亿级人民币现金。H 股基础发行设有锁定期安排，控股股东（中际投资控股，A 股 10.31%）的股份质押情况：A 股前十大股东中王伟修质押 72.8 万股、苏州益兴福质押 890.2 万股、苏州云昌锦质押 353.0 万股 <span class="src-badge src-s">一手</span>（合计占总股本约 1.1%，比例不高）。</p>
+</div>
+
+<div class="card" id="valuation">
+<h2>八、估值分析</h2>
+<h3>8.1 四个口径的 PE</h3>
+<div class="table-scroll"><table>
+<tr><th>口径</th><th>算法</th><th>读数</th><th>来源</th></tr>
+<tr><td>PE-TTM</td><td>市值 5,277 亿 ÷ TTM 归母 259.03 亿</td><td><strong>20.37x</strong></td><td><span class="src-badge src-3">三方</span>（腾讯，与本报告推算一致）</td></tr>
+<tr><td>PE（2026E）</td><td>市值 ÷ 券商 EPS26 中位 29.75 × 11.78 亿股 = 350.4 亿</td><td><strong>15.1x</strong></td><td><span class="src-badge src-e">推算</span>（10 家券商 9/2–11/5 研报）</td></tr>
+<tr><td>PE（2027E）</td><td>市值 ÷ 券商 EPS27 中位 56.17 × 11.78 亿股 = 661.7 亿</td><td><strong>8.0x</strong></td><td><span class="src-badge src-e">推算</span></td></tr>
+<tr><td>TTM 归母复核</td><td>2025 全年 107.97 − 2025 前三季 71.32 + 2026 前三季 222.38</td><td>259.03 亿</td><td><span class="src-badge src-e">推算</span>（与三方 PE 隐含值一致）</td></tr>
+</table></div>
+<h3>8.2 历史区间：位置而非判断</h3>
+<p>用年末收盘（前复权）与当年归母净利（按当前总股本 11.78 亿股折算 EPS）做历年 PE 观测 <span class="src-badge src-e">推算</span>：2022 年末 15.3x → 2023 年末 42.1x → 2024 年末 27.4x → 2025 年末 66.3x → 当前 20.37x。观测区间 15.3x–66.3x，当前值位于该区间的下沿附近。口径说明：2022–2023 年公司股本与现时差异较大（转增/激励/H 股），历史观测仅为数量级参考，不构成精确分位。</p>
+<p>两面都需要摆出来：<strong>看低倍数的理由</strong>——若券商对 2026 年的一致预期（归母约 350 亿）兑现，PE 约 15x，低于历史全部年末观测；<strong>看高倍数的理由</strong>——PE-TTM 20x 的分母是暴增中的盈利，若 2027 年增速降档（行业光互连 CAGR 预测 31.6% 隐含增速中枢下移），当前倍数对应的隐含增长率假设需要重新校准；且该盈利的可持续性挂钩云厂商资本开支周期，属典型周期成长混合体，历史 PE 区间对它的约束力弱于对稳态公司。</p>
+<h3>8.3 PB 与股息</h3>
+<p>PB 5.59x（分母 Q3 末归母净资产 943.63 亿 <span class="src-badge src-s">一手</span>）。注意分母刚被 H 股募资一次性增厚（净资产 +217%），PB 读数系统性低于募资前口径，跨期比较需还原口径。</p>
+
+</div>
+
+<div class="card" id="debate">
+<h2>九、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<div class="tag tag-bull">多方论据</div>
+<ul>
+<li><strong>量价齐升仍在进行</strong>：Q3 营收环比 +24.6% 且环比增速抬升，1.6T 收入"进一步加速"；2027 年订单"基本覆盖全年"，2028 年已有重点客户给出明确指引 <span class="src-badge src-s">一手</span>。</li>
+<li><strong>毛利率结构性抬升</strong>：33.8%（2023）→ 46.61%（26Q3），归因产品结构而非一次性因素；扣非净利率 Q3 单季 32.5%。</li>
+<li><strong>估值与业绩增速的错位</strong>：PE-TTM 20.4x，对应前三季 +212% 的增速；按 2026E 中位口径 15.1x。</li>
+<li><strong>现金与产能储备</strong>：535 亿现金 + 91.6 亿 capex + 预付款锁定物料，2027 年上量准备充分；H 股募资完成后财务弹性为全行业最高之列。</li>
+<li><strong>股东回报动作升级</strong>：49.97 亿回购改注销，实控人体系无减持，Morgan Stanley H 股好仓升至 5.32% <span class="src-badge src-2">二手</span>。</li>
+<li><strong>行业预测支撑中期空间</strong>：LightCounting 口径光互连市场 2030 年 1,110 亿美元，CAGR 31.6% <span class="src-badge src-2">二手</span>。</li>
+</ul>
+</div>
+<div class="box-red">
+<div class="tag tag-bear">空方论据</div>
+<ul>
+<li><strong>盈利分母的周期属性</strong>：222 亿归母建立在云厂商 capex 高增（26Q2 四大厂 +86%）之上，AI 资本开支若边际减速，光模块是弹性最大的环节之一——收入下滑速度会与增长速度对称。</li>
+<li><strong>上游被卡位的结构性软肋</strong>：DSP/EML 不自产，Marvell×Lumentum 合并后供应商同时掌握两类核心器件 <span class="src-badge src-2">二手</span>，议价与配给风险上升；硅光自给率未披露，对冲程度不可验证。</li>
+<li><strong>客户集中度极高</strong>：前五大客户 75.98%（2025）<span class="src-badge src-s">一手</span>，任何单一大客户的结构调整（如 11-03 传闻中的"个别客户产品结构调整"）都会被放大定价。</li>
+<li><strong>股价与筹码信号</strong>：现价距年内高点 −68%、股东户数半年 +69%、融资余额下行——高位换手后散户接筹的形态。</li>
+<li><strong>回款与存货的滞后风险</strong>：OCF/归母仅 36%，存货绝对额 238.8 亿≈2024 年全年营收；一旦需求节奏放缓，减值与账期问题会滞后暴露。</li>
+<li><strong>汇兑的持续拖累</strong>：美元/港币走弱下，Q3 汇兑损失 6.78 亿 <span class="src-badge src-s">一手</span>，对 94.8% 境外收入的公司是双向敞口。</li>
+</ul>
+</div>
+</div>
+<h3>9.1 核心争议焦点</h3>
+<p>分歧不在"当前业绩好不好"（双方都承认业绩强劲），而在：<strong>AI 算力资本开支的持续时间与光模块公司在此周期中的利润留存能力</strong>。多方认为订单可见性（2027 覆盖 + 2028 指引）足以支撑当期倍数；空方认为订单可见性本身就是 capex 周期顶部的典型特征，且上游整合正在压缩模块厂的长期利润份额。</p>
+<h3>9.2 裁决指标（按可观测性排序）</h3>
+<ul>
+<li>四大云厂商季度 capex 及其指引（每个财报季，先于光模块收入 1–2 个季度）。</li>
+<li>公司单季毛利率与 1.6T 收入占比（管理层口径，每季披露/业绩说明）。</li>
+<li>Marvell×Lumentum 交易审批进展与上游器件报价（行业新闻层，随时）。</li>
+<li>存货周转与 OCF/归母比值的走向（季报，2027 年起尤为重要）。</li>
+<li>月度融资余额与股东户数变化（高频情绪/筹码指标）。</li>
+</ul>
+</div>
+
+<div class="card" id="analysts">
+<h2>十、分析师全景</h2>
+<p>东财研报库 2026-09-02 至 11-05 共收录 10 份研报，全部为买入/增持类评级，无卖出 <span class="src-badge src-3">三方</span>。EPS 预测（2026E/2027E）：</p>
+<div class="table-scroll"><table>
+<tr><th>机构</th><th>日期</th><th>评级</th><th>EPS 2026E</th><th>EPS 2027E</th></tr>
+<tr><td>华鑫证券</td><td>11-05</td><td>买入</td><td>31.05</td><td>64.38</td></tr>
+<tr><td>金元证券</td><td>11-03</td><td>增持</td><td>27.73</td><td>56.70</td></tr>
+<tr><td>招银国际</td><td>11-02</td><td>BUY</td><td>32.41</td><td>53.83</td></tr>
+<tr><td>开源证券</td><td>11-01</td><td>买入</td><td>30.35</td><td>61.65</td></tr>
+<tr><td>国金证券</td><td>11-01</td><td>买入</td><td>28.93</td><td>69.44</td></tr>
+<tr><td>东吴证券</td><td>10-31</td><td>买入</td><td>26.51</td><td>53.86</td></tr>
+<tr><td>群益证券</td><td>10-30</td><td>买进</td><td>30.13</td><td>56.17</td></tr>
+<tr><td>交银国际</td><td>09-02</td><td>买入</td><td>29.36</td><td>49.63</td></tr>
+</table></div>
+<p class="caveat-inline">2026E EPS 中位 29.75（对应 PE 15.1x）、2027E 中位 56.17（对应 PE 8.0x）均为本报告按市值推算 <span class="src-badge src-e">推算</span>；机构目标价除野村（A 股 1,196 元 / H 股 1,387 港元，媒体转述 <span class="src-badge src-2">二手</span>）外未系统采集。评级分布一边倒，自身即是一种情绪读数——sell-side 覆盖在顶部区域密集上调、底部区域沉默是历史常见形态，读数时请保留这一层折扣。</p>
+</div>
+
+<div class="card" id="community">
+<h2>十一、社区讨论</h2>
+<p>检索渠道说明：本期雪球/微博结构化抓取未成功（搜索引擎限流），社区观点以东方财富股吧/新闻评论区与财经媒体报道的投资者关切为主 <span class="src-badge src-2">二手</span>，样本量有限，以下为可验证的主题归纳而非情绪统计。</p>
+<div class="table-scroll"><table>
+<tr><th>主题</th><th>内容</th><th>层级</th></tr>
+<tr><td>砍单传闻</td><td>11-03 传闻"海外大客户下调光模块采购、部分订单取消"，公司当晚逐条否认并披露 2027 年订单覆盖情况；该传闻是本周股价波动的主导叙事</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>野村 330 元目标价截图</td><td>社群流传截图称野村下调 A 股目标价至 330 元；野村回应不属实、维持买入与 1,196 元目标价</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>上游并购重估</td><td>Marvell×Lumentum 合并后，投资者讨论集中于"模块厂议价权是否被上游侵蚀"，与砍单传闻叠加放大 11 月初跌幅</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>公司回应</td><td>"行业需求依然强劲，正在积极准备物料和产能"（11-06 公告原文）；"经营一切正常，海外客户订单及交付节奏未发生变化"（人民财讯转述）</td><td><span class="src-badge src-s">一手</span>公告 / <span class="src-badge src-2">二手</span>转述</td></tr>
+</table></div>
+<p>可观察的情绪刻度：11-06 单日成交 240 亿元、换手 4.88%，为全 A 成交额头部；股东户数季度环比持续高增。这类读数指向<strong>分歧加大而非共识形成</strong>——高换手 + 高户数是双方论据都愿意在当前价位成交的形态。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>十二、综合判断框架</h2>
+<h3>12.1 四情景推演（情景概率为本报告主观框架，非预测）</h3>
+<div class="table-scroll"><table>
+<tr><th>情景</th><th>关键假设</th><th>可观察的验证信号</th></tr>
+<tr><td><span class="tag tag-bull">景气延续</span></td><td>云厂商 capex 2027 年继续上行，1.6T 全年放量 + NPO/XPO 下半年起量，2026E 归母 350 亿级兑现，毛利率守在 45%+</td><td>每季 capex 指引上调；公司单季营收环比不转负；毛利率 ≥45%</td></tr>
+<tr><td><span class="tag tag-hold">增速降档</span></td><td>2027 年 capex 增速回落但绝对额不降，光模块增速从翻倍降至行业 CAGR（30% 级）中枢，盈利兑现但倍数向稳态回归</td><td>云厂商指引口径从"上调"转"维持"；公司营收同比增速降档至 +30–50%</td></tr>
+<tr><td><span class="tag tag-bear">周期见顶</span></td><td>AI 算力投资 2027 年出现方向性下修，光模块作为弹性环节收入利润双降，存货/应收减值滞后暴露</td><td>任一大云厂商下修 capex；公司订单表述从"覆盖全年"退为"滚动"；存货环比再增而营收环比转负</td></tr>
+<tr><td><span class="tag tag-bear">供给格局恶化</span></td><td>上游整合落地后器件配给/涨价挤压模块厂毛利，或 1.6T 代际内竞争者追平导致价格战</td><td>Marvell×Lumentum 审批通过并调整渠道政策；公司毛利率连续两季下滑 ≥3pct</td></tr>
+</table></div>
+<h3>12.2 关键跟踪指标（按时间颗粒度排序）</h3>
+<ol>
+<li>公司单季营收环比与毛利率（每季财报，10 日内可验证）。</li>
+<li>微软/亚马逊/Meta/谷歌季度 capex 与指引（每季财报季）。</li>
+<li>2027 年订单覆盖表述的变化（业绩说明会口径，注意措辞从"基本覆盖"到"部分覆盖"的转变）。</li>
+<li>存货与 OCF/归母比值（季报，检验增长的现金含量）。</li>
+<li>Marvell×Lumentum 监管审批与上游器件价格信号（事件驱动）。</li>
+<li>回购注销实施进度与后续回购动作（公告）。</li>
+<li>美国对华光电子物项管制清单变动（政策事件）。</li>
+<li>H 股/美股映射（3308.HK 与海外算力链联动，日内情绪传导）。</li>
+</ol>
+<h3>12.3 收束</h3>
+<p>回到"10 年后这家公司还在吗"——需要拆开回答：光模块作为 AI 集群互联的必需器件，10 年维度上品类不会消失；但<strong>这家公司能否守住代际卡位</strong>取决于三个可跟踪的变量：其一，硅光自给能力是否从"未披露"变为可验证的成本优势（对冲上游整合）；其二，CPO/NPO 等新形态下模块厂商在价值链中的份额走向（若光互连集成进交换机，模块厂独立价值收窄）；其三，代际切换窗口（3.2T、NPO）中是否继续先发。技术行业的在位者被颠覆有先例——光模块行业自身在 2018–2019 年就完成过一轮中国厂商对欧美在位者的替代，这个行业的"在位"从来不是静态的。</p>
+<p>本期报告的事实基座：业绩（前三季 +178%/+212%）与股价（距高点 −68%）给出了罕见的方向背离，多空分歧集中在"资本开支周期位置"这一无法在当季证伪的问题上。裁决依据已在 12.2 列出，全部可观测、有明确验证时点。</p>
+</div>
+
+<div class="card" id="data-notes">
+<h2>数据说明</h2>
+<h3>① 数据口径与方法论</h3>
+<ul>
+<li>行情与估值读数取腾讯行情接口（2026-11-06 收盘，时间戳 20261106161454）；市值/PE/PB 为三方口径 <span class="src-badge src-3">三方</span>。PE-TTM 已用披露值复核：TTM 归母 = 2025 全年 107.97 − 2025 前三季 71.32 + 2026 前三季 222.38 = 259.03 亿，5,277.04 ÷ 259.03 = 20.37，与接口一致。</li>
+<li>52 周区间用 320 个交易日前复权日 K 计算 <span class="src-badge src-e">推算</span>，与自然年 52 周略有差异。</li>
+<li>历史 PE 区间用年末前复权收盘 ÷（当年归母 ÷ 当前总股本 11.78 亿股）计算，未还原历史股本，仅作数量级参考 <span class="src-badge src-e">推算</span>。</li>
+<li>单季拆分：Q2=H1−Q1、Q3=YTD−H1（Q3 单季营收与季报"本报告期"披露值 277.69 亿一致，归母 85.87 亿亦为季报披露的单季值）。</li>
+<li>毛利率 = 1 − 营业成本/营业收入（合并口径）；2025Q4 毛利率为 2025 全年与 25Q1-Q3 之差倒推 <span class="src-badge src-e">推算</span>。</li>
+<li>股息率口径：2025 年度分红实际派发 11.14 亿（2026 年实施）+ 2026 中期预案 14.04 亿，合计对 2026-11-06 市值的比值，属滚动口径。</li>
+</ul>
+<h3>② 与上期报告的变化</h3>
+<p>本报告为该标的首期报告，无上期版本可比。</p>
+<h3>③ 取数更正记录</h3>
+<ul>
+<li>初稿曾将 52 周低点记为 394.66 元——该值来自腾讯行情串的位置字段，经与茅台双标的反查，A 股该位置字段不可靠（技能常设原则 10），已改为用日 K 序列自行计算（141.736–1,415.686，前复权）。</li>
+<li>股东户数存在两个口径：东财 datacenter（2026-06-30：205,678）与三季报披露（2026-09-30：237,107），报告采用披露值，两者时点不同不构成矛盾。</li>
+</ul>
+<h3>④ 已知局限</h3>
+<ul>
+<li>雪球/微博未完成结构化抓取（搜索引擎限流），社区情绪部分依赖财经媒体转述，样本偏窄。</li>
+<li>公司未披露硅光芯片自给率、1.6T 收入的绝对金额与客户结构明细，上游对冲程度只能定性描述。</li>
+<li>可比公司（新易盛/天孚）部分财务数据为新闻转述或未披露，可比表个别格留空。</li>
+<li>券商目标价仅采集到野村一家（媒体转述），不代表卖方一致预期。</li>
+<li>H 股募资净额的精确人民币折算未披露，本报告按 609 亿港币×0.915 估算（约 557 亿）<span class="src-badge src-e">推算</span>。</li>
+</ul>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>本报告不构成投资建议。报告基于公开披露文件与网络公开信息生成，2024–2025 年年度报告、2026 年一季度/半年度/三季度报告及回购公告已下载至本地作为一手数据源。所有估值情景与概率均为本报告的主观分析框架。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-11-07 · 由 Claude Code 辅助分析 · 数据截至 2026-11-06 收盘</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<p style="margin-top:4px;">
+    · 2025 年年度报告（巨潮资讯，2026-03-31）· 2026 年半年度报告（2026-08-22）· 2026 年第三季度报告（2026-10-30）· 2026 年一季度报告（2026-04-17）· 2024 年年度报告（2025-04-21）——均存档于 Filings/<br/>
+    · 回购事项公告 2026-107（2026-11-06）、变更回购用途并注销公告 2026-105（2026-10-30）——存档于 Filings/<br/>
+    · 腾讯行情/日 K（qt.gtimg.cn / web.ifzq.gtimg.cn，2026-11-06 收盘）· 东财研报库与 datacenter（融资融券/股东户数）· 东财个股新闻与财经媒体报道（财中社/人民财讯/证券日报/中新网）
+  </p>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E4%B8%AD%E9%99%85%E6%97%AD%E5%88%9B%EF%BC%88300308%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E4%B8%AD%E9%99%85%E6%97%AD%E5%88%9B%EF%BC%88300308%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-07%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

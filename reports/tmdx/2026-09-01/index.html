@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>TransMedics 2026-09-01 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    .card { padding: 24px 20px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 8px 10px; }
+    header { padding: 40px 20px 36px; }
+    header h1 { font-size: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media print {
+    body { background: #fff; }
+    .sidebar { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    header { background: #1a3c2a !important; -webkit-print-color-adjust: exact; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/tmdx/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+TransMedics%EF%BC%88TMDX%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ATransMedics%EF%BC%88TMDX%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-01%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">TMDX <span>·</span> 2026-09-01 <span>·</span> PC 完整版</div><h1>TransMedics</h1><p>数据截至 2026/08/31 收盘 · Q2 2026 10-Q 与盈利新闻稿（8/4）已存档本地 SEC_Filings</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、核心指标 — OCS 移植例数</a></li><li><a href="#financials">四、最新财务数据 (Q2 2026) 一手</a></li><li><a href="#cost">五、费用与利润拆解 — 利润为何「主动」收缩</a></li><li><a href="#aviation">六、航空机队与欧洲扩张 — 护城河还是吞金兽？</a></li><li><a href="#competition">七、竞争格局与技术争议 — 本期重点关注的边际变化</a></li><li><a href="#kidney">八、肾脏管线与催化剂 — 下一张牌</a></li><li><a href="#valuation">估值分析</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">华尔街分析师全景 二手</a></li><li><a href="#reddit">Reddit / 零售投资者讨论 三方</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> SEC 文件/公司公告（本地存档） |
+    <span class="src-badge src-2">二手</span> 财报电话会/研报/聚合平台 |
+    <span class="src-badge src-3">三方</span> Reddit/零售投资者/社交媒体 |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>投资分析/TMDX-TransMedics/SEC_Filings/</code> — FY2024/FY2025 10-K、2025 Q1–2026 Q2 共 5 份 10-Q、Q2 2026 盈利 8-K 及新闻稿 Exhibit 99.1（本期新增下载），共 9 份，全部一手。</p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">时效说明：财务数据取自 2026/08/04 提交的 Q2 2026 10-Q（一手）；股价/市值为 2026/08/31 收盘（yfinance，二手）；OCS 移植例数、渗透率、2027 财务可见度等运营指标未在 SEC 文件中披露，来自管理层电话会与卖方（二手），可能存在口径差异。距下一次财报（Q3 2026，预计 2026/10 底）约 8 周。</p>
+<div class="quote" style="margin-top:14px;">
+<strong>本期相对上期报告（2026-08-14）的关键更新：</strong>
+    ① 股价 $89.64（8/13）→ $84.87（8/31），8 月中旬曾反弹至 ~$95 后回落；
+    ② 空头兴趣从 ~35% 降至 <strong>23.85% of float</strong>（2026/07/31，MarketBeat），空头部分回补；
+    ③ 证券集体诉讼 2026/07/21 被法院部分驳回撤诉动议，进入证据开示（discovery）；2026/08 又有律所启动对高管的衍生调查；
+    ④ 竞争格局实质变化：OrganOx 被 Terumo 以约 $15 亿收购（2025/10）、XVIVO 获 FDA 批准 DCD 心脏 IDE 试验、NRP（常温区域灌注）路线对 OCS 的替代争议升温；
+    ⑤ 需求端隐忧：UNOS 数据显示 2025 年美国遗体捐献者十多年来首次下降（-2.5%）；
+    ⑥ <strong>修正</strong>：上期报告「净债务 -$21M」未计入财务租赁负债，本期修正为净债务约 $389M（含租赁，推算），见估值分析。
+  </div>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:22%;font-weight:650;">全称</td><td>TransMedics Group, Inc. <span class="src-badge src-s">一手</span></td></tr>
+<tr><td style="font-weight:650;">上市</td><td>NASDAQ: TMDX（2019/05 IPO，发行价 $16）</td></tr>
+<tr><td style="font-weight:650;">核心产品</td><td>Organ Care System (OCS) — 心/肺/肝便携式「温热灌注」系统，让离体器官在接近生理温度下持续供血供氧、并可评估活力</td></tr>
+<tr><td style="font-weight:650;">商业模式</td><td>OCS 一次性耗材（高毛利）+ NOP 全链条服务（外科摘取 + 灌注专家 + 自有飞机运输）+ 器官物流</td></tr>
+<tr><td style="font-weight:650;">创始人/CEO</td><td>Waleed Hassanein 博士（1998 年创立，医生出身）；CFO Gerardo Hernandez</td></tr>
+<tr><td style="font-weight:650;">总部</td><td>马萨诸塞州 Andover（正迁往 Somerville）</td></tr>
+<tr><td style="font-weight:650;">货币/披露</td><td>USD · SEC EDGAR（10-K / 10-Q），单一经营分部</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">$84.87</div><div class="label">股价 (2026/08/31 收盘)</div></div>
+<div class="summary-item"><div class="value">$2.93B</div><div class="label">市值 (3,456 万股)</div></div>
+<div class="summary-item"><div class="value">$189.9M</div><div class="label">Q2 2026 营收 (+21%)</div></div>
+<div class="summary-item"><div class="value">4.4x</div><div class="label">P/S (TTM)</div></div>
+<div class="summary-item"><div class="value metric-negative">-44%</div><div class="label">距 52 周高点 ($156)</div></div>
+<div class="summary-item"><div class="value">$472.7M</div><div class="label">现金 (2026/06/30)</div></div>
+</div>
+<p class="caveat-inline">市值/股价为 2026/08/31 收盘口径（yfinance，二手）；营收、现金为一手 SEC 数据。TTM 营收 $668.5M = FY2025 $605.5M − H1'25 $300.9M + H1'26 $363.9M（推算）。</p>
+<h3>过去 12 个月股价轨迹（月度收盘）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>月份</th><th>2025-09</th><th>10</th><th>11</th><th>12</th><th>2026-01</th><th>02</th><th>03</th><th>04</th><th>05</th><th>06</th><th>07</th><th>08</th></tr></thead>
+<tbody><tr>
+<td style="font-weight:650;">收盘价</td>
+<td>$112.2</td><td>$131.5</td><td>$146.3</td><td>$121.7</td><td>$134.0</td><td>$145.3</td><td class="metric-negative">$99.4</td><td>$100.8</td><td class="metric-negative">$67.2</td><td>$66.4</td><td>$76.5</td><td>$84.87</td>
+</tr></tbody>
+</table></div>
+<p class="caveat-inline">走势解读（二手归因）：2026/02/24 Q4'25 财报后见顶回落（激进投资计划引发利润率重定价）→ 2026/05/05 Q1'26 财报 EPS $0.30 vs 共识 $0.62 巨额 miss，单月 -33% → 6 月触底 $66 → 7-8 月修复至 $95 附近（Q2 营收超预期 + 空头回补）→ 8 月末回落至 $85。当前处于「利空消化后、催化剂真空期」。</p>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<p>TMDX 把「器官移植」从传统的「冰桶冷藏 + 抢时间」改造为「温热灌注 + 可评估 + 可运输」。收入来自三条绑定在一起的业务：</p>
+<div class="table-scroll"><table>
+<thead><tr><th>收入线</th><th>内容</th><th>毛利率特征</th><th>竞争壁垒</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:650;">OCS 一次性耗材 + 设备</td><td>灌注套件、一次性泵、传感器、溶液添加剂（每个器官一副）</td><td class="metric-positive">高（产品毛利率 ~77%，推算）</td><td>FDA/CE 注册 + 专利 + 临床证据（一手 10-K）</td></tr>
+<tr><td style="font-weight:650;">NOP 临床服务</td><td>外科摘取团队 + 灌注专家 + 器官活力评估</td><td class="metric-warn">中低（服务毛利率 ~35%，推算）</td><td>人员培训体系 + 移植中心关系网络</td></tr>
+<tr><td style="font-weight:650;">航空物流</td><td>22 架自有固定翼飞机 + 地面运输；欧洲通过 PAD Aviation 布局</td><td class="metric-negative">低（重资产折旧/租赁拖累）</td><td>自有机队，竞品公司无重资产航空能力</td></tr>
+</tbody>
+</table></div>
+<div class="quote"><strong>护城河判断（巴菲特框架）：</strong>产品线具备「注册 + 专利 + 临床证据」三重壁垒，器官级耗材收入具有「剃刀-刀片」式复购特征；自有机队是 OrganOx/XVIVO 都没有的重资产壁垒。但「服务/物流」部分壁垒相对薄弱且稀释毛利率——护城河主要在产品端，而非全链路。需要警惕的是：<strong>NRP（常温区域灌注）等替代技术路线正在医学界挑战 OCS 的增量价值</strong>（见第七节），护城河的「宽度」并非没有争议。</div>
+<h3>收入构成继续「向下漂移」</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>类别</th><th>Q2 2026</th><th>Q2 2025</th><th>YoY</th><th>占比</th></tr></thead>
+<tbody>
+<tr><td>产品收入（耗材+设备）</td><td>$111.2M</td><td>$96.1M</td><td class="metric-positive">+15.7%</td><td>58.5%</td></tr>
+<tr><td>服务收入（物流+临床）</td><td>$78.8M</td><td>$61.3M</td><td class="metric-positive">+28.6%</td><td>41.5%</td></tr>
+<tr><td style="font-weight:650;">总收入</td><td style="font-weight:650;">$189.9M</td><td>$157.4M</td><td class="metric-positive" style="font-weight:650;">+20.7%</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">其中 Q2 移植物流（航空+地面）收入约 $41M，同比 +39%、环比 +30%（二手，Q2 电话会）——服务收入里增长最快的是毛利率最低的物流。这解释了为什么营收在涨、毛利率却在跌：增长最快的那块恰好是最不赚钱的那块。这是本报告贯穿始终的核心矛盾。</p>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — OCS 移植例数</h2>
+<p>对 TMDX 而言，唯一真正重要的指标是 <strong>OCS 移植例数</strong>——每一次移植 = 一副高毛利一次性耗材 + 一单 NOP 服务 + 一趟航空物流。营收、利润、渗透率、TAM，全部由此派生。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>运营指标</th><th>数值</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>FY2025 美国 OCS 移植例数</td><td>约 5,139 例</td><td><span class="src-badge src-2">二手</span> 管理层电话会</td></tr>
+<tr><td>FY2025 OCS 占美国心/肺/肝移植比例</td><td>约 26%</td><td><span class="src-badge src-2">二手</span> 管理层/卖方</td></tr>
+<tr><td>肝脏 OCS 渗透率（2025）</td><td>约 36%</td><td><span class="src-badge src-2">二手</span> 管理层</td></tr>
+<tr><td>2026 年单季 OCS 例数</td><td><strong>未披露，未找到</strong>（公司仅定性表述 Liver/Heart NOP 利用率提升）</td><td><span class="src-badge src-t">时效</span></td></tr>
+<tr><td>管理层 2028 年目标</td><td>10,000 例（约翻倍）</td><td><span class="src-badge src-2">二手</span> 管理层指引</td></tr>
+</tbody>
+</table></div>
+<h3>例数 → 营收的拆解（一手 10-Q，按器官，美国+海外）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>器官</th><th>Q2 2026 营收</th><th>Q2 2025 营收</th><th>YoY</th><th>占比</th><th>H1 2026 YoY</th><th>趋势</th></tr></thead>
+<tbody>
+<tr><td>肝脏 (Liver)</td><td>$148.2M</td><td>$116.1M</td><td class="metric-positive">+27.7%</td><td>78.5%</td><td class="metric-positive">+27.7%</td><td>唯一增长引擎</td></tr>
+<tr><td>心脏 (Heart)</td><td>$38.0M</td><td>$35.7M</td><td class="metric-warn">+6.5%</td><td>20.1%</td><td class="metric-warn">+5.1%</td><td>明显减速</td></tr>
+<tr><td>肺 (Lung)</td><td>$2.7M</td><td>$4.6M</td><td class="metric-negative">-41.8%</td><td>1.4%</td><td class="metric-negative">-36.4%</td><td>持续萎缩</td></tr>
+<tr><td style="font-weight:650;">OCS 移植总收入</td><td style="font-weight:650;">$188.9M</td><td>$156.3M</td><td class="metric-positive" style="font-weight:650;">+20.8%</td><td>—</td><td class="metric-positive">+20.9%</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">结构高度集中：肝脏占近 8 成且仍在加速（+27.7%，渗透率 36% 仍有空间）；心脏增长减速至个位数（+6.5%）——但 Q2 环比 +23%，ENHANCE 试验若证明对冷藏优效可能重新点火；肺几乎被放弃（-41.8%，等 DENOVO 试验重启）。当前估值的「安全性」高度依赖肝脏渗透率的持续爬坡。</p>
+<h3>需求端（行业数据）：移植总量创新高，但供体出现拐点信号</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>UNOS/OPTN 2025 年美国数据</th><th>数值</th><th>信号</th></tr></thead>
+<tbody>
+<tr><td>全年器官移植总量</td><td>49,064 例（连续第 5 年创纪录）</td><td class="metric-positive">正面</td></tr>
+<tr><td>肝移植</td><td>12,344 例（纪录，+8%）</td><td class="metric-positive">正面（TMDX 主战场）</td></tr>
+<tr><td>肾移植</td><td>27,573 例（微降 102 例，首次未创新高）</td><td class="metric-warn">中性偏负（肾脏 TAM 相关）</td></tr>
+<tr><td>遗体捐献者 (deceased donors)</td><td>16,550 人，<strong>-2.5%，十多年来首次下降</strong></td><td class="metric-negative">负面（TAM 分母收缩）</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">来源：UNOS 2026/01/28 年度新闻稿（二手）。管理层在 Q1 电话会披露 Transplant Modernization Act 造成供体数量短期下滑。供体总量是 TMDX 一切业务的天花板分母——若 2026 年持续下降，将成为新的空方论据；若只是法案扰动的暂时现象，则不足为虑。这是本期新增的关键跟踪变量。</p>
+<div class="quote"><strong>核心判断：</strong>OCS 例数仍在增长（推算 +15-20%），但增长的「质量」在恶化——越来越依赖单一器官（肝脏），利润贡献被低毛利服务/物流稀释，且行业供体分母十年来首次收缩。例数增速的底线（≥15%）是多头叙事的生命线。</div>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据 (Q2 2026) <span class="src-badge src-s">一手</span></h2>
+<h3>Q2 2026 损益表（同比）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>Q2 2026</th><th>Q2 2025</th><th>变动</th></tr></thead>
+<tbody>
+<tr><td>总收入</td><td>$189.9M</td><td>$157.4M</td><td class="metric-positive">+20.7%</td></tr>
+<tr><td>毛利</td><td>$113.2M</td><td>$96.6M</td><td class="metric-positive">+17.2%</td></tr>
+<tr><td>毛利率</td><td>59.6%</td><td>61.4%</td><td class="metric-negative">-1.8pp</td></tr>
+<tr><td>研发 (R&amp;D)</td><td>$31.6M</td><td>$15.9M</td><td class="metric-negative">+98.5%</td></tr>
+<tr><td>销售管理 (SG&amp;A)</td><td>$57.8M</td><td>$44.1M</td><td class="metric-negative">+31.2%</td></tr>
+<tr><td>营业利润</td><td>$23.7M</td><td>$36.6M</td><td class="metric-negative">-35.1%</td></tr>
+<tr><td>营业利润率</td><td>12.5%</td><td>23.2%</td><td class="metric-negative">-10.7pp</td></tr>
+<tr><td>利息支出</td><td>$7.2M</td><td>$3.5M</td><td class="metric-negative">+107.9%</td></tr>
+<tr><td>净利润 (GAAP)</td><td>$14.7M</td><td>$34.9M</td><td class="metric-negative">-57.9%</td></tr>
+<tr><td>摊薄 EPS (GAAP)</td><td>$0.41</td><td>$0.92</td><td class="metric-negative">-55.4%</td></tr>
+<tr><td>调整后 EPS (非 GAAP)</td><td>$0.44</td><td>$0.92</td><td class="metric-negative">Miss 共识 ~$0.50</td></tr>
+</tbody>
+</table></div>
+<h3>上半年累计与现金流</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>H1 2026</th><th>H1 2025</th><th>变动</th></tr></thead>
+<tbody>
+<tr><td>总收入</td><td>$363.9M</td><td>$300.9M</td><td class="metric-positive">+20.9%</td></tr>
+<tr><td>营业利润</td><td>$37.0M</td><td>$64.0M</td><td class="metric-negative">-42.1%</td></tr>
+<tr><td>净利润</td><td>$22.0M</td><td>$60.6M</td><td class="metric-negative">-63.7%</td></tr>
+<tr><td>经营现金流 (OCF)</td><td>$41.8M</td><td>$88.8M</td><td class="metric-negative">-52.9%</td></tr>
+<tr><td>资本开支 (PP&amp;E)</td><td>$43.7M</td><td>$36.1M</td><td>+21.1%</td></tr>
+<tr><td>自由现金流 (推算)</td><td class="metric-negative">约 -$1.9M</td><td>$52.6M</td><td class="metric-negative">转负</td></tr>
+</tbody>
+</table></div>
+<h3>资产负债表要点 (2026/06/30 vs 2025/12/31)</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>2026/06/30</th><th>2025/12/31</th><th>信号</th></tr></thead>
+<tbody>
+<tr><td>现金</td><td>$472.7M</td><td>$488.4M</td><td>略降</td></tr>
+<tr><td>应收账款</td><td>$104.1M</td><td>$84.3M</td><td class="metric-warn">+23.6%（快于营收 +20.7%）</td></tr>
+<tr><td>存货</td><td>$54.1M</td><td>$48.9M</td><td class="metric-positive">+10.7%（低于营收增速）</td></tr>
+<tr><td>PP&amp;E 净额</td><td>$365.3M</td><td>$327.7M</td><td>机队持续扩张</td></tr>
+<tr><td>财务租赁使用权资产</td><td>$332.5M</td><td>$0</td><td class="metric-negative">半年内新增 $332M（飞机租赁资本化）</td></tr>
+<tr><td>可转债 (1.50%, 2028 到期)</td><td>$454.3M</td><td>$452.8M</td><td>主要长期负债</td></tr>
+<tr><td>长短期借款</td><td>$59.7M</td><td>$59.6M</td><td>—</td></tr>
+<tr><td>财务租赁负债</td><td>$347.7M</td><td>$0</td><td class="metric-negative">半年 +$348M</td></tr>
+<tr><td>总负债</td><td>$946.3M</td><td>$595.3M</td><td class="metric-negative">+59%</td></tr>
+<tr><td>股东权益</td><td>$518.1M</td><td>$473.1M</td><td>—</td></tr>
+</tbody>
+</table></div>
+<h3>财务异常检测（Skill 第十节标准）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>检测项</th><th>结果</th><th>分级</th></tr></thead>
+<tbody>
+<tr><td>应收账款增速 vs 营收</td><td>+23.6% vs +20.7%（未达 1.5× 阈值）</td><td class="metric-warn">🟡 轻微</td></tr>
+<tr><td>现金流背离</td><td>OCF $41.8M &gt; 净利 $22.0M（现金转换率 1.9x，健康）；但 OCF 同比 -53%</td><td class="metric-warn">🟡 中</td></tr>
+<tr><td>存货异常</td><td>+10.7%，低于营收增速</td><td class="metric-positive">🟢 正常</td></tr>
+<tr><td>杠杆异常抬升</td><td>财务租赁负债半年 0 → $348M；FCF 转负</td><td class="metric-warn">🟡 中（本期最重要变化）</td></tr>
+<tr><td>关联交易</td><td>OCS Lung 项目负责人 Dr. Amira Hassanein 为 CEO 之妹，2026 上半年薪酬 $0.3M（10-Q 披露）</td><td class="metric-warn">🟡 已披露、金额小</td></tr>
+<tr><td>股东/内部人减持</td><td>2026/06 披露内部人减持约 $722K（金额小）</td><td class="metric-warn">🟡 轻微</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">整体风险分级：<strong>🟡 中</strong>。无单项严重异常，但「租赁杠杆半年 +$348M + FCF 转负」是本期需要最高权重的观察项——本质是公司用资产负债表换增长。</p>
+</div>
+
+<div class="card" id="cost">
+<h2>五、费用与利润拆解 — 利润为何「主动」收缩</h2>
+<p>营业利润率从 Q2'25 的 23.2% 跌至 Q2'26 的 12.5%，但环比 Q1'26 的 7.6% 已修复 4.9pp——这是「投资周期的底部」还是「结构性下降的起点」，是多空博弈的胜负手。</p>
+<h3>OpEx 增量拆解（Q2，一手）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>费用项</th><th>Q2 增量 (YoY)</th><th>占 OpEx 增量</th><th>驱动因素</th></tr></thead>
+<tbody>
+<tr><td>研发 (R&amp;D)</td><td>+$15.7M (+98.5%)</td><td>53%</td><td>OCS Kidney + Gen 3.0 + ENHANCE/DENOVO 临床 + 意大利工厂</td></tr>
+<tr><td>销售管理 (SG&amp;A)</td><td>+$13.7M (+31.2%)</td><td>47%</td><td>NOP 团队扩张 + 航空机队 + 欧洲 PAD + 诉讼费用</td></tr>
+<tr><td style="font-weight:650;">合计</td><td style="font-weight:650;">+$29.5M</td><td style="font-weight:650;">100%</td><td>—</td></tr>
+</tbody>
+</table></div>
+<h3>R&amp;D 内部结构（一手 10-Q 分部费用披露）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>R&amp;D 明细（Q2）</th><th>2026</th><th>2025</th><th>变动</th></tr></thead>
+<tbody>
+<tr><td>人员相关</td><td>$7.8M</td><td>$6.0M</td><td>+30%</td></tr>
+<tr><td>实验室耗材</td><td>$6.2M</td><td>$5.2M</td><td>+19%</td></tr>
+<tr><td class="metric-warn">咨询与第三方服务</td><td class="metric-warn">$12.9M</td><td>$2.3M</td><td class="metric-negative">+459%</td></tr>
+<tr><td>临床试验成本</td><td>$1.6M</td><td>$0.3M</td><td>+506%</td></tr>
+<tr><td>设施/IT 及其他</td><td>$3.2M</td><td>$2.2M</td><td>+45%</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">研发增量几乎全部来自「咨询与第三方服务」（+$10.6M）和临床试验（+$1.3M）——即 Kidney/Gen 3.0/临床管线的外部开支，而非人头。这类开支理论上可随管线节奏快速收缩，若 2027 年投资周期结束，利润率修复弹性大；但若管线持续超预期扩张，收缩时点可以一直往后推——这正是「不可证伪」的空方论点。</p>
+<h3>2026 全年指引（Q2 电话会，二手）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>最新指引</th><th>上期指引（5/5）</th><th>方向</th></tr></thead>
+<tbody>
+<tr><td>营收（不含 PAD Aviation）</td><td>$737–757M（+22–25%）</td><td>$727–757M</td><td class="metric-positive">低端上修</td></tr>
+<tr><td>调整后营业利润率</td><td>12.5–14%</td><td>~16%（年初口径）</td><td class="metric-negative">下调</td></tr>
+<tr><td>2H 毛利率预期</td><td>~59%</td><td>—</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">指引口径不含 PAD Aviation 并表收入、不含 ENHANCE Part B / DENOVO 增量收入（保守）。管理层继续<strong>拒绝提供 2027 年利润率指引</strong>，承诺 Q4 2026 电话会给可见度——「投资周期何时结束」仍不可证伪。</p>
+</div>
+
+<div class="card" id="aviation">
+<h2>六、航空机队与欧洲扩张 — 护城河还是吞金兽？</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>维度</th><th>数据</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>机队规模</td><td>22 架自有固定翼飞机</td><td><span class="src-badge src-2">二手</span> 电话会</td></tr>
+<tr><td>NOP 航班覆盖率</td><td>约 86%（此前 61%，飞机数未增 → 利用率提升）</td><td><span class="src-badge src-2">二手</span></td></tr>
+<tr><td>航空相关资产</td><td>PP&amp;E $365M + 财务租赁 ROU $332M ≈ $697M（占总资产 ~48%）</td><td><span class="src-badge src-s">一手</span>+推算</td></tr>
+<tr><td>服务毛利率</td><td>~35%（航空重资产拖累）</td><td><span class="src-badge src-e">推算</span></td></tr>
+<tr><td>欧洲布局</td><td>2026/07/01 完成对德国 PAD Aviation 的战略投资，Q3 起并表，初期稀释毛利率与营业利润率</td><td><span class="src-badge src-s">一手</span> 8-K/新闻稿</td></tr>
+</tbody>
+</table></div>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">护城河叙事</span></h4>
+<ul>
+<li>自有飞机实现「摘取-灌注-运输」全链路闭环，OrganOx/XVIVO 短期无法复制</li>
+<li>覆盖率 61%→86% 说明单机效率在改善，重资产的固定成本正在被摊薄</li>
+<li>PAD Aviation 是欧洲器官空运网络第一步，把美国的成功模式输出到欧洲（2028 年后第二地理曲线）</li>
+<li>物流收入 +39%，需求真实且放量</li>
+</ul>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">吞金兽叙事</span></h4>
+<ul>
+<li>飞机 = 固定成本 + 折旧 + 维护 + 飞行员培训，服务毛利率仅 ~35%</li>
+<li>财务租赁负债半年 +$348M——用资产负债表换现金流，FCF 转负</li>
+<li>利息支出同比翻倍（$3.5M → $7.2M/季），利润表已在付代价</li>
+<li>若例数增速放缓，固定成本反噬；PAD 并表初期继续稀释利润率</li>
+</ul>
+</div>
+</div>
+<div class="quote"><strong>净债务口径修正（重要）：</strong>上期报告「净债务 -$21M」仅计现金减可转债，<strong>未计入财务租赁</strong>。本期修正：有息负债合计 ≈ 可转债 $454.3M + 长短期借款 $59.7M + 财务租赁 $347.7M ≈ <strong>$862M</strong>（一手），现金 $472.7M → <strong>净债务约 $389M</strong>（推算；若剔除租赁则为净现金 +$18M）。企业价值 EV ≈ $2.93B + $0.39B ≈ <strong>$3.32B</strong>（推算）。</div>
+</div>
+
+<div class="card" id="competition">
+<h2>七、竞争格局与技术争议 — 本期重点关注的边际变化</h2>
+<h3>竞争格局：从小公司缠斗升级为大厂入场</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>竞争者</th><th>进展</th><th>对 TMDX 的含义</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:650;">OrganOx（英国，肝脏 NMP metra）</td><td>2025/10/29 被 <strong>Terumo 以约 $15 亿收购</strong>；2025/09/18 metra 获 FDA 批准用于空运；NICE 支持进入 NHS 报销</td><td class="metric-warn">双刃剑：$15 亿收购价验证了器官灌注行业的价值（多头引用），但 Terumo 的渠道与资金实力使肝脏竞对从创业公司升级为巨头</td></tr>
+<tr><td style="font-weight:650;">XVIVO（瑞典）</td><td>Perfadex 占 90% 肺移植中心标准用药；收购 Organ Assist/Avionord；<strong>FDA 批准其 DCD 心脏 IDE 试验</strong>（低温非缺血灌注路线）</td><td class="metric-warn">在心脏与肺部市场正面交锋 TMDX</td></tr>
+<tr><td style="font-weight:650;">NRP（常温区域灌注）</td><td>多家美国中心采用；Duke 研究（JHLT）显示 NRP-DCD 与 OCS-DCD 心移植 1 年生存相近（91.7% vs 91.0%）；TCTMD 分析示 NRP 组院内死亡率减半（2.4% vs 5.4%）</td><td class="metric-negative">医学界对 OCS 相对 NRP 的<strong>增量价值</strong>存疑——NRP 无需离体设备，成本结构更轻</td></tr>
+<tr><td>其他</td><td>Paragonix、Bridge to Life、Until Labs；传统冰盒冷藏（cold static storage）仍是默认方案</td><td>基准方案</td></tr>
+</tbody>
+</table></div>
+<h3>OCS 的循证证据（多空各自的弹药）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>证据</th><th>内容</th><th>谁在引用</th></tr></thead>
+<tbody>
+<tr><td>OCS Heart EXPAND（2024 发表）</td><td>87% ECD 供心成功移植、2 年生存优秀</td><td class="metric-positive">多方</td></tr>
+<tr><td>FDA PMA 数据（DCD 心）</td><td>OCS 组 6 个月存活 94% vs 冷保存 DBD 组 91%</td><td class="metric-positive">多方</td></tr>
+<tr><td>OCS Liver</td><td>平均冷缺血时间降至 175 分钟</td><td class="metric-positive">多方</td></tr>
+<tr><td>INSPIRE（心脏）</td><td>仅为非劣效设计，非优效</td><td class="metric-negative">空方</td></tr>
+<tr><td>Duke NRP 对比研究</td><td>NRP-DCD 与 OCS-DCD 生存相近，成本更低</td><td class="metric-negative">空方</td></tr>
+</tbody>
+</table></div>
+<h3>公司对策：ENHANCE 试验 + CHOPS</h3>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">ENHANCE Heart（下一代 OCS）</span></h4>
+<ul>
+<li>2026/02/09 获 FDA 全额无条件 IDE 批准——公司称首个随机对照盲法供心保存试验</li>
+<li>Part B 直接对标 cold static storage，目标是证明<strong>优效性</strong>（而非非劣效）</li>
+<li>Part A 预计 2026 年内完成、Part B 2027 年初启动；若成功，重新定义心脏市场标准</li>
+</ul>
+</div>
+<div class="box-green">
+<h4><span class="tag tag-hold">CHOPS（2026/04 推出）</span></h4>
+<ul>
+<li>Controlled Hypothermic Organ Preservation System——主动低温保存设备</li>
+<li>用作 ENHANCE / DENOVO 试验的对照臂，摆脱对竞品设备做对照的依赖</li>
+<li>市场一度困惑其与 OCS 的定位关系（Q1 电话会）——既是对冲也是自我竞争的风险</li>
+</ul>
+</div>
+</div>
+<h3>支付端（CMS/Medicare）</h3>
+<p><strong>2026 年未搜到针对 OCS 的 NTAP/DRG 不利变更</strong>（时效性已核查）。结构性背景：NTAP 最长 3 年，OCS 早期 NTAP 已自然到期，现在主要依赖 DRG 打包报销与移植中心支付；公司 10-Q 风险因素持续披露对少数大客户与支付方教育的依赖。管理层认为 CMS 对心/肺/肝 OCS 一贯支持，正争取肾脏纳入标准器官获取规则（100% 覆盖预期）。</p>
+</div>
+
+<div class="card" id="kidney">
+<h2>八、肾脏管线与催化剂 — 下一张牌</h2>
+<p>肾脏是管理层口中的「公司史上最大的单一可及市场」，也是当前估值的最大期权价值所在：美国年约 21K 例逝者肾移植，另有 ~10K 例因保存限制被丢弃的肾脏——TAM 约为当前心/肺/肝总和的两倍。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>阶段（截至 2026/09）</th><th>催化剂时点</th><th>潜在贡献</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:650;">OCS Kidney</td><td>工程验证中</td><td><strong>2027 年初提交美国 IDE</strong>；2027 下半年首次临床</td><td>TAM 翻倍；单例定价 $40K–45K + 物流费，CMS 预期 100% 覆盖（二手）</td></tr>
+<tr><td>ENHANCE Heart Part B</td><td>IDE 已批（2026/02）</td><td>Part A 2026 内完成；Part B 2027 初启动</td><td>若证明对冷藏优效，覆盖 2,200+ DBD 心脏移植</td></tr>
+<tr><td>DENOVO Lung</td><td>IDE 已批，入组中</td><td>de novo 提交 2026 年内启动（FDA 掌握时间表）</td><td>重振肺灌注（当前 -42%）</td></tr>
+<tr><td>PAD Aviation（欧洲）</td><td>2026/07/01 完成</td><td>Q3 起并表</td><td>欧洲器官空运网络第一步；初期稀释利润</td></tr>
+<tr><td>NextGen OCS 3.0</td><td>开发中</td><td>—</td><td>改善毛利率</td></tr>
+<tr><td>CHOPS</td><td>已推出（2026/04）</td><td>—</td><td>试验对照臂自主化</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">来源：一手 10-Q 风险因素 + 二手（Q1/Q2 电话会摘要、PRNewswire）。肾脏试验设计已调整为 600 例自平台研究（200 CHOPS 对照 + 400 OCS）。<strong>关键权衡：</strong>肾脏是「两年后」的故事，但「两年后」的研发成本现在就要付（Q2 单季 Kidney/Gen3.0 相关约 $19M，推算）——这正是 2026 年利润被主动压缩的根本原因：用当期利润，换一个更大的 TAM 期权。</p>
+</div>
+
+<div class="card" id="valuation">
+<h2>估值分析</h2>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">4.4x</div><div class="label">P/S (TTM)</div></div>
+<div class="summary-item"><div class="value">3.9x</div><div class="label">P/S (2026 指引中值)</div></div>
+<div class="summary-item"><div class="value">5.7x</div><div class="label">P/B</div></div>
+<div class="summary-item"><div class="value">19x</div><div class="label">GAAP P/E (TTM, 失真)</div></div>
+<div class="summary-item"><div class="value">0%</div><div class="label">股息率 (不派息)</div></div>
+<div class="summary-item"><div class="value metric-warn">~$389M</div><div class="label">净债务 (含财务租赁, 推算)</div></div>
+</div>
+<h3>估值倍数拆解</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>倍数</th><th>计算</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>P/S (TTM)</td><td>$2.93B ÷ $668.5M ≈ 4.4x</td><td>TTM 营收 = FY2025 $605.5M − H1'25 $300.9M + H1'26 $363.9M <span class="src-badge src-e">推算</span></td></tr>
+<tr><td>P/S (前瞻)</td><td>$2.93B ÷ ~$747M ≈ 3.9x</td><td>取 2026 指引中值（不含 PAD）</td></tr>
+<tr><td>EV/S (TTM)</td><td>~$3.32B ÷ $668.5M ≈ 5.0x</td><td>EV = 市值 + 净债务（含租赁）<span class="src-badge src-e">推算</span></td></tr>
+<tr><td>P/B</td><td>$2.93B ÷ $518.1M ≈ 5.7x</td><td>重资产（航空资产 ~$697M），P/B 有参考意义</td></tr>
+<tr><td>GAAP P/E (TTM)</td><td>$2.93B ÷ $151.7M ≈ 19x</td><td class="metric-warn">含 FY2025 一次性税收利益 ~$83M，严重失真</td></tr>
+<tr><td>正常化 P/E</td><td>$2.93B ÷ ~$69M ≈ 43x</td><td>剔除一次性税收利益后 <span class="src-badge src-e">推算</span></td></tr>
+<tr><td>历史估值分位</td><td>定性强弱：2025 年末市值 ~$5B / TTM 收入 ~$6.1B ≈ 8x+ P/S</td><td>当前 4.4x 处于上市以来偏低区间（定性估算，美股无免费精确分位接口）<span class="src-badge src-e">推算</span></td></tr>
+</tbody>
+</table></div>
+<h3>盈利路径：账面转正 → 税收助攻 → 主动压缩</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>财年</th><th>营收</th><th>增速</th><th>营业利润</th><th>营业利润率</th><th>净利润</th></tr></thead>
+<tbody>
+<tr><td>FY2023</td><td>$241.6M</td><td>—</td><td class="metric-negative">-$28.7M</td><td>-11.9%</td><td class="metric-negative">-$25.0M</td></tr>
+<tr><td>FY2024</td><td>$441.5M</td><td class="metric-positive">+82.7%</td><td>$37.5M</td><td>8.5%</td><td>$35.5M（首年盈利）</td></tr>
+<tr><td>FY2025</td><td>$605.5M</td><td class="metric-positive">+37.1%</td><td>$108.6M</td><td>17.9%</td><td>$190.3M*（含税收利益 ~$83M）</td></tr>
+<tr><td>H1 2026</td><td>$363.9M</td><td class="metric-warn">+20.9%</td><td>$37.0M</td><td>10.2%</td><td>$22.0M</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">*FY2025 净利润含 Q4 一次性递延所得税资产释放（估值备抵转回）约 $83M，剔除后「真实」净利润约 $107M。全部为一手 10-K/10-Q 数据。营业利润（不含税收噪音）在 FY2025 触顶后正在回落。</p>
+<h3>增速与估值的匹配</h3>
+<p>营收增速 82.7% → 37.1% → 23.4%（2026 指引中值），减速斜率陡峭。以 P/S 3.9x（前瞻）买一个增速滑向 20% 区间的公司：按林奇 PEG 思路，若以正常化盈利计算 PEG 远超 1.5，属于「为成长付溢价」；以 P/S 看，处于公司历史偏低区间但并非绝对便宜（对标：Terumo 收购 OrganOx 出价约 $15 亿，OrganOx 收入规模远小于 TMDX——行业并购估值隐含对灌注赛道收入的定价并不低）。股息率 0%（成长股不派息），「股息率 &gt; 融资利率」的融资纪律逻辑不适用于本标的。安全边际主要来自：现金 $472.7M + 2028 年可转债期限结构（近两年无紧急偿付压力）。</p>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>需求真实且未被满足：</strong>Q2 营收创纪录 $189.9M（+21%），指引低端上修；肝渗透率仅 36%，2028 年 10,000 例 = 近翻倍空间</li>
+<li><strong>利润率是「主动压缩」而非恶化：</strong>Q1 7.6% → Q2 12.5% 环比修复 4.9pp；研发增量几乎全是可收缩的外部开支（咨询 +459%），投资周期一旦结束，利润率修复弹性大</li>
+<li><strong>肾脏期权巨大：</strong>TAM 翻倍（21K + 10K 例），单例 $40-45K，CMS 预期全报销；2027 初提交 IDE 节奏明确</li>
+<li><strong>竞争验证行业价值：</strong>Terumo $15 亿收购 OrganOx——器官灌注赛道获产业资本定价；TMDX 是唯一有全链路（产品+服务+航空）的公司</li>
+<li><strong>资产负债表仍厚：</strong>现金 $472.7M，可转债 2028 年才到期；空头兴趣从 35% 降至 24%，拥挤度改善</li>
+<li><strong>ENHANCE 优效设计：</strong>若 Part B 证明 OCS 对冷藏优效，心脏市场（当前仅 +6.5%）重新点火</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>增收不增利已持续两季：</strong>EPS 连续 miss（Q1 $0.30 vs $0.62；Q2 $0.44 vs $0.50），营业利润率指引从 16% 一路下调至 12.5-14%</li>
+<li><strong>增长结构单一化：</strong>近 8 成收入靠肝脏，心脏 +6.5%、肺 -42%；肝脏渗透到 36% 后基数效应显现，增速将自然回落</li>
+<li><strong>需求端分母收缩：</strong>美国遗体捐献者 -2.5%（十多年首降）+ Transplant Modernization Act 扰动——行业 TAM 的分母出现拐点信号</li>
+<li><strong>技术路线被挑战：</strong>NRP 生存数据与 OCS 相近且成本更低（Duke/TCTMD）；XVIVO DCD 心脏 IDE 获批；Terumo 入场后肝脏竞争升级</li>
+<li><strong>杠杆快速抬升：</strong>财务租赁半年 +$348M、FCF 转负、利息支出翻倍；净债务（含租赁）约 $389M</li>
+<li><strong>治理阴影未散：</strong>集体诉讼 2026/07/21 被部分驳回撤诉动议、进入 discovery；8 月再添律所衍生调查；CEO 之妹执掌肺项目（关联交易已披露）</li>
+<li><strong>2027 无指引：</strong>管理层拒绝给 2027 利润率可见度——投资周期何时结束不可证伪</li>
+</ol>
+</div>
+</div>
+<h3>核心争议焦点</h3>
+<div class="quote">一句话：<strong>2026 年 12.5-14% 的营业利润率，是「投资周期的底部」（之后利润率回升、肾脏兑现），还是「结构性下降的开始」（增速滑坡 + NRP/竞对侵蚀 + 重资产拖累 + 供体分母收缩）？</strong></div>
+<h3>裁决指标（决定多空胜负的可观测变量）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>多方胜出信号</th><th>空方胜出信号</th></tr></thead>
+<tbody>
+<tr><td>美国 OCS 例数增速</td><td>持续 ≥15%</td><td>跌破 10%</td></tr>
+<tr><td>肝脏渗透率</td><td>持续爬坡 &gt;40%</td><td>36% 附近见顶</td></tr>
+<tr><td>Q4 2026 电话会的 2027 指引</td><td>利润率回升 &gt;16%</td><td>继续回避或 &lt;12%</td></tr>
+<tr><td>供体总量（UNOS 季度数据）</td><td>2026 年恢复增长</td><td>连续第二年下降</td></tr>
+<tr><td>ENHANCE Part B 数据</td><td>证明对冷藏优效</td><td>延期或非优效</td></tr>
+<tr><td>肾脏 IDE 与临床</td><td>2027 初按时提交</td><td>延期</td></tr>
+<tr><td>自由现金流</td><td>2027 重新转正</td><td>持续为负并扩大</td></tr>
+<tr><td>集体诉讼 discovery</td><td>和解金额可控/驳回</td><td>实锤证据或高额和解</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="analysts">
+<h2>华尔街分析师全景 <span class="src-badge src-2">二手</span></h2>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>评级</th><th>目标价</th><th>日期</th><th>动向</th></tr></thead>
+<tbody>
+<tr><td>Robert W. Baird</td><td><span class="tag tag-bull">Buy</span></td><td>$122</td><td>2026/08</td><td class="metric-positive">上调（$120→$122）— 最乐观</td></tr>
+<tr><td>TD Cowen</td><td><span class="tag tag-bull">Buy</span></td><td>$120</td><td>2026/07</td><td>维持</td></tr>
+<tr><td>Needham</td><td><span class="tag tag-bull">Buy</span></td><td>$106</td><td>2026/06 下旬</td><td class="metric-negative">下调（$142→$106）</td></tr>
+<tr><td>Piper Sandler</td><td><span class="tag tag-bull">Overweight</span></td><td>$100</td><td>2026/08/05</td><td>维持</td></tr>
+<tr><td>Canaccord</td><td><span class="tag tag-bull">Buy</span></td><td>$95</td><td>2026/08</td><td class="metric-negative">下调（$124→$95）</td></tr>
+<tr><td>Evercore ISI</td><td>—</td><td>$90</td><td>2026/08</td><td class="metric-negative">下调（$100→$90）</td></tr>
+<tr><td>UBS</td><td><span class="tag tag-hold">Neutral</span></td><td>$77</td><td>2026/08/05</td><td class="metric-negative">下调（$80→$77）</td></tr>
+<tr><td>J.P. Morgan</td><td><span class="tag tag-hold">Hold</span></td><td>$73</td><td>2026/08/07</td><td>维持</td></tr>
+<tr><td>Stifel</td><td><span class="tag tag-hold">Hold</span></td><td>$65</td><td>2026/08/13</td><td class="metric-negative">下调（$85→$65）— 最悲观</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">共识：约 10-13 位分析师，平均目标价 $94-97（FactSet 均值 $97.30，Overweight），评级分布约 6 Buy / 6 Hold / 1 Sell，区间 $65-125。当前股价 $84.87 较均值折价约 15%。<strong>趋势信号：</strong>Q2 财报后多家下调目标价（Canaccord/Stifel/UBS/Evercore），仅 Baird 逆势上调——分歧在加大而非收敛。量化口径的 <strong>Zacks Rank #5（Strong Sell，2026/08）</strong>与卖方定性共识（Buy）方向相反，反映量化模型对连续 EPS miss 的动量惩罚。JPMorgan/Piper/BTIG/Craig-Hallum 6-9 月的最新动作未检索到。以上均为卖方研报（二手），存在利益冲突可能，目标价不代表本报告观点。</p>
+</div>
+
+<div class="card" id="reddit">
+<h2>Reddit / 零售投资者讨论 <span class="src-badge src-3">三方</span></h2>
+<p>按 Skill 要求，社区检索使用产品关键词（"organ transplant""OCS""warm perfusion"）而非单纯股票代码。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>来源/主题</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td>r/ValueInvesting「TMDX — 非AI的 30%+ 成长」</td><td>多头聚集帖：非 AI 中盘成长稀缺标的、刚需抗衰退、心肝肺约 20% 市占率、NOP 全链路不可复制</td></tr>
+<tr><td>r/Perfusion（灌注师社区）</td><td><strong>医疗从业者观点分化：</strong>「livers on OCS are here to stay，大多数中心很满意」vs 引用 Duke 研究认为「OCS 在 DCD 场景不优于 NRP」——这是对 OCS 增量价值最专业层面的争论</td></tr>
+<tr><td>r/investing_discussion 航空数据另类尽调</td><td>散户用 FlightRadar24 追踪 TMDX 航班架次，作为移植例数/收入的先行指标——零售端的聪明钱行为</td></tr>
+<tr><td>r/stocks 历史恐慌帖（2024/10）</td><td>Q3'24 miss 后盘后暴跌 25% 的记忆仍在，散户对「财报日」有条件反射式恐惧</td></tr>
+<tr><td>Motley Fool 讨论区</td><td>Scorpion 做空报告（2025/01）后部分老多头减仓，担忧大移植中心退出 NOP</td></tr>
+<tr><td>空头兴趣变化</td><td>35.5% of float（Q2 期间）→ <strong>23.85%</strong>（2026/07/31，7.67M 股，days-to-cover 9.5）——空头大幅回补，逼空燃料减少但拥挤度改善</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">零售社区内容为非权威三方来源，情绪化、易有幸存者偏差，仅供情绪温度参考，不构成分析依据。值得注意的是：医疗从业者社区（r/Perfusion）对 OCS 的真实评价整体正面但对 NRP 路线保持开放——与第七节的学术争议互相印证。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>综合判断框架</h2>
+<h3>四位大师框架交叉验证</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>大师</th><th>框架</th><th>对 TMDX 的判断</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:650;">巴菲特</td><td>护城河 + 安全边际</td><td>护城河真实（注册+专利+自有机队），但「收入向下漂移」（服务/物流占比升至 41.5%）侵蚀整体盈利质量；NRP 路线对护城河宽度构成学术层面挑战。P/S 3.9x（前瞻）对增速滑向 20% 的重资产公司，安全边际不充分但较 2025 年末 8x+ 已大幅释放</td></tr>
+<tr><td style="font-weight:650;">费雪</td><td>15 要点 + 管理层诚信</td><td>产品领先、研发投入果断（外部咨询 +459% 显示执行速度）是加分项；但 Scorpion 指控 → 集体诉讼进入 discovery → 律所衍生调查的链条，给「管理层诚信」持续打问号；关联交易（CEO 之妹）虽已披露仍属扣分项</td></tr>
+<tr><td style="font-weight:650;">林奇</td><td>股票分类 + PEG</td><td>快速成长股（增速 82%→23%），正常化 PEG 远超 1.5；「为成长付溢价」阶段。林奇会问：这支「快速增长股」是否正在变成「增速放缓股」——营业利润率连续两季收缩是典型警报，但收入端尚未失速</td></tr>
+<tr><td style="font-weight:650;">马克斯</td><td>第二层思维 + 周期</td><td>第一层思维：「利润压缩是主动投资，肾脏 TAM 翻倍，买入」；第二层思维：「为何管理层拒绝给 2027 指引？财务租赁 +$348M 是进攻性融资还是流动性约束的前兆？供体分母十年来首降是噪音还是周期拐点？」——8 月空头从 35% 回补至 24%，恐慌最烈时可能已过，但基本面拐点未确认</td></tr>
+</tbody>
+</table></div>
+<h3>当前局势</h3>
+<p>TMDX 是「管理层主动用当期利润换长期 TAM 期权」的逆向投资标的。与上期报告（8/14）相比，<strong>叙事未变，但三件事在边际上恶化</strong>：竞争格局升级（Terumo/OrganOx + XVIVO DCD 心脏 + NRP 争议）、需求端分母出现拐点信号（供体 -2.5%）、诉讼从程序走向实质（进入 discovery）；<strong>两件事在边际上改善</strong>：空头拥挤度大幅回落（35%→24%）、Q2 利润率环比修复且指引低端上修。股价 $84.87 处于「利空充分定价、催化剂真空」的位置——下一个决定性信息点是 Q3 财报（10 月底）与 Q4 电话会的 2027 指引。</p>
+<h3>四个情景（主观概率，非目标价）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>概率</th><th>核心假设</th><th>估值方向</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-bull">牛市</span></td><td>~15%</td><td>肝渗透续升 + ENHANCE 优效 + 肾脏 2027 按时 IDE + 2027 利润率指引回升 18%+</td><td>估值中枢上移（P/S 回升至 6x+）</td></tr>
+<tr><td><span class="tag tag-bull">基准偏乐观</span></td><td>~35%</td><td>营收 22-25% 达标 + 利润率 2027 触底回升 + 肾脏按计划 + 供体恢复增长</td><td>估值中枢温和上移（P/S 5-5.5x）</td></tr>
+<tr><td><span class="tag tag-hold">基准偏保守</span></td><td>~35%</td><td>增速 15-18% + 利润率 12-14% 徘徊 + NRP/XVIVO/Terumo 侵蚀份额</td><td>估值中枢徘徊（P/S 4-4.5x）</td></tr>
+<tr><td><span class="tag tag-bear">熊市</span></td><td>~15%</td><td>供体连续下降 + 竞争实质性夺单 + 诉讼恶化 + 肾脏延期</td><td>估值中枢下移（P/S 收缩至 3x 以下）</td></tr>
+</tbody>
+</table></div>
+<h3>关键跟踪指标（下一次决策的依据）</h3>
+<ol style="padding-left:20px;font-size:14px;">
+<li><strong>Q4 2026 电话会（2027 年指引）</strong>——管理层承诺给可见度，投资周期是否结束的分水岭；</li>
+<li><strong>美国 OCS 移植例数季度增速</strong>——是否守住 15% 底线；</li>
+<li><strong>UNOS 供体季度数据</strong>——-2.5% 是法案扰动还是趋势拐点；</li>
+<li><strong>2027 营业利润率指引</strong>——是否明确回升至 16% 以上；</li>
+<li><strong>OCS Kidney IDE 提交（2027 初）与 ENHANCE Part B 启动</strong>——两大价值期权的兑现节奏；</li>
+<li><strong>集体诉讼 discovery 进展与和解金额</strong>——治理成本是否实质化；</li>
+<li><strong>OrganOx/Terumo 与 XVIVO 在美国的商业化落地</strong>——肝脏份额是否被夺单。</li>
+</ol>
+<h3>总结</h3>
+<p>TMDX 是一家<strong>护城河真实、需求真实、但当前处于「用利润换未来」再投资周期</strong>的医疗器械公司。看多它，本质是赌「肝脏渗透 + 肾脏期权 + ENHANCE 优效」能撑起未来 2-3 年的价值重估；看空它，本质是赌「增速减速 + NRP/巨头竞争 + 重资产杠杆 + 供体拐点」会在期权兑现前先压垮估值。与上期相比，本期新增的两个变量——<strong>Terumo 入场带来的竞争升级</strong>与<strong>供体分母首次收缩</strong>——都偏向空方；而<strong>空头回补与利润率环比修复</strong>偏向多方。没有确定答案，只有需要被持续跟踪的裁决指标。本报告不提供买卖建议，不预测目标价。</p>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议。报告基于公开网络搜索与本地 SEC 文件生成，SEC 文件已下载至本地作为可信一手数据源。所有估值情景与概率均为本文主观判断。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026/09/01 · 由 Claude Code 辅助分析 · 数据截至 2026/08/31 收盘（股价）/ 2026/08/04（财务）</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="padding-left:20px;font-size:12px;line-height:1.9;">
+<li><strong>一手：</strong>TMDX Q2 2026 10-Q（2026/08/04）、Q2 2026 盈利新闻稿 8-K Ex 99.1、FY2025 10-K（2026/02/24）（本地 SEC_Filings，9 份）</li>
+<li><strong>二手：</strong>Q2/Q1/FY2025 earnings call 摘要（Yahoo Finance）、Zacks、UNOS 2025 年度数据（2026/01/28）、MarketBeat 空头兴趣（2026/07/31）、分析师评级（stockanalysis.com / MarketBeat / FactSet / yfinance）</li>
+<li><strong>二手（竞争/临床）：</strong>Terumo 收购 OrganOx（2025/10）、OrganOx metra FDA 空运批准（2025/09/18）、XVIVO DCD 心脏 IDE、ENHANCE IDE 获批（PRNewswire 2026/02/09）、Duke NRP 研究、TCTMD、FDA PMA 摘要、PubMed（OCS Heart EXPAND）</li>
+<li><strong>二手（法律）：</strong>Scott+Scott / Kessler Topaz 集体诉讼公告（2026/07/21）、Kahn Swick &amp; Foti 调查（2026/08）</li>
+<li><strong>三方：</strong>Reddit（r/ValueInvesting、r/Perfusion、r/stocks、r/investing_discussion）、Motley Fool 讨论区</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+TransMedics%EF%BC%88TMDX%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ATransMedics%EF%BC%88TMDX%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-01%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

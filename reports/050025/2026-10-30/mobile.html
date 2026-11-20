@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>博时标普500联接A 2026-10-30 · 移动版 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research compact"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/050025/index.html">披露资料</a><a href="index.html">PC 完整版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E5%8D%9A%E6%97%B6%E6%A0%87%E6%99%AE500%E8%81%94%E6%8E%A5A%EF%BC%88050025%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%8D%9A%E6%97%B6%E6%A0%87%E6%99%AE500%E8%81%94%E6%8E%A5A%EF%BC%88050025%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-30%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">050025 <span>·</span> 2026-10-30 <span>·</span> 移动精简版</div><h1>博时标普500联接A</h1></header><main class="mobile-report"><section aria-labelledby="key-data"><h2 id="key-data">关键数字</h2><div class="key-numbers"><div><span>A 类净值（10-28）</span><strong>5.5953</strong></div><div><span>年初至 10-28 净值</span><strong>+8.1%</strong></div><div><span>同期标普500（美元）</span><strong>+13.1%</strong></div><div><span>同期美元兑人民币</span><strong>−4.7%</strong></div><div><span>规模（09-30）</span><strong>100.33亿</strong></div><div><span>目标ETF 513500 溢价（10-30）</span><strong>+8.38%</strong></div></div></section><section><h2>核心图表</h2><figure class="mobile-chart"><figcaption>标普 500 vs 050025 A 类净值 vs 美元兑人民币 月末值，2025-12-31 = 100；10 月取 10-28</figcaption><div class="chart">
+<div class="chart-title">标普 500 vs 050025 A 类净值 vs 美元兑人民币 <small>月末值，2025-12-31 = 100；10 月取 10-28</small></div>
+<div class="chart-legend"><span><i style="background:#1e3a5f"></i>标普 500（美元）</span><span><i style="background:var(--accent)"></i>050025 净值（人民币）</span><span><i style="background:var(--amber)"></i>美元兑人民币</span><span><i style="background:var(--border)"></i>两线差距</span></div>
+<svg aria-label="标普500、050025净值与美元兑人民币，2025年末=100" role="img" style="width:100%;height:auto" viewbox="0 0 640 250">
+<g stroke="var(--border-light)" stroke-width="1"><line x1="60" x2="620" y1="200.0" y2="200.0"></line><line x1="60" x2="620" y1="174.3" y2="174.3"></line><line x1="60" x2="620" y1="148.6" y2="148.6"></line><line x1="60" x2="620" y1="122.9" y2="122.9"></line><line x1="60" x2="620" y1="97.1" y2="97.1"></line><line x1="60" x2="620" y1="71.4" y2="71.4"></line><line x1="60" x2="620" y1="45.7" y2="45.7"></line><line x1="60" x2="620" y1="20.0" y2="20.0"></line></g>
+<line stroke="var(--text-muted)" stroke-dasharray="3 3" stroke-width="1" x1="60" x2="620" y1="122.9" y2="122.9"></line>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end"><text x="54" y="204.0">85</text><text x="54" y="178.3">90</text><text x="54" y="152.6">95</text><text x="54" y="126.9">100</text><text x="54" y="101.1">105</text><text x="54" y="75.4">110</text><text x="54" y="49.7">115</text><text x="54" y="24.0">120</text></g>
+<path d="M60.0,122.9 114.8,115.8 166.0,120.3 224.5,146.7 279.3,95.5 332.3,67.7 390.7,73.7 447.4,74.5 504.0,59.7 558.8,62.3 610.0,55.4 610.0,81.2 558.8,85.9 504.0,80.7 447.4,94.2 390.7,91.4 332.3,85.2 279.3,107.8 224.5,152.0 166.0,127.6 114.8,120.8 60.0,122.9 Z" fill="var(--border)" opacity="0.35"></path>
+<polyline fill="none" points="60.0,122.9 114.8,126.4 166.0,134.3 224.5,129.1 279.3,134.5 332.3,138.8 390.7,137.7 447.4,140.6 504.0,142.7 558.8,144.4 610.0,147.0" stroke="var(--amber)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline>
+<g fill="#fff" stroke="var(--amber)" stroke-width="2"><circle cx="60.0" cy="122.9" r="3"></circle><circle cx="114.8" cy="126.4" r="3"></circle><circle cx="166.0" cy="134.3" r="3"></circle><circle cx="224.5" cy="129.1" r="3"></circle><circle cx="279.3" cy="134.5" r="3"></circle><circle cx="332.3" cy="138.8" r="3"></circle><circle cx="390.7" cy="137.7" r="3"></circle><circle cx="447.4" cy="140.6" r="3"></circle><circle cx="504.0" cy="142.7" r="3"></circle><circle cx="558.8" cy="144.4" r="3"></circle><circle cx="610.0" cy="147.0" r="3"></circle></g>
+<polyline fill="none" points="60.0,122.9 114.8,120.8 166.0,127.6 224.5,152.0 279.3,107.8 332.3,85.2 390.7,91.4 447.4,94.2 504.0,80.7 558.8,85.9 610.0,81.2" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline>
+<g fill="#fff" stroke="var(--accent)" stroke-width="2"><circle cx="60.0" cy="122.9" r="3"></circle><circle cx="114.8" cy="120.8" r="3"></circle><circle cx="166.0" cy="127.6" r="3"></circle><circle cx="224.5" cy="152.0" r="3"></circle><circle cx="279.3" cy="107.8" r="3"></circle><circle cx="332.3" cy="85.2" r="3"></circle><circle cx="390.7" cy="91.4" r="3"></circle><circle cx="447.4" cy="94.2" r="3"></circle><circle cx="504.0" cy="80.7" r="3"></circle><circle cx="558.8" cy="85.9" r="3"></circle><circle cx="610.0" cy="81.2" r="3"></circle></g>
+<polyline fill="none" points="60.0,122.9 114.8,115.8 166.0,120.3 224.5,146.7 279.3,95.5 332.3,67.7 390.7,73.7 447.4,74.5 504.0,59.7 558.8,62.3 610.0,55.4" stroke="#1e3a5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline>
+<g fill="#fff" stroke="#1e3a5f" stroke-width="2"><circle cx="60.0" cy="122.9" r="3"></circle><circle cx="114.8" cy="115.8" r="3"></circle><circle cx="166.0" cy="120.3" r="3"></circle><circle cx="224.5" cy="146.7" r="3"></circle><circle cx="279.3" cy="95.5" r="3"></circle><circle cx="332.3" cy="67.7" r="3"></circle><circle cx="390.7" cy="73.7" r="3"></circle><circle cx="447.4" cy="74.5" r="3"></circle><circle cx="504.0" cy="59.7" r="3"></circle><circle cx="558.8" cy="62.3" r="3"></circle><circle cx="610.0" cy="55.4" r="3"></circle></g>
+<g font-size="12" font-weight="650" text-anchor="end"><text fill="#1e3a5f" x="604.0" y="47.4">标普500 113.1</text><text fill="var(--accent)" x="604.0" y="97.2">050025 108.1</text><text fill="var(--amber)" x="604.0" y="163.0">美元兑人民币 95.3</text></g>
+<text fill="var(--red)" font-size="11" text-anchor="middle" x="224.5" y="170.0">3 月低点</text>
+<g fill="var(--text-muted)" font-size="11" text-anchor="middle"><text x="60.0" y="238">25/12</text><text x="114.8" y="238">26/01</text><text x="166.0" y="238">26/02</text><text x="224.5" y="238">26/03</text><text x="279.3" y="238">26/04</text><text x="332.3" y="238">26/05</text><text x="390.7" y="238">26/06</text><text x="447.4" y="238">26/07</text><text x="504.0" y="238">26/08</text><text x="558.8" y="238">26/09</text><text x="610.0" y="238">26/10</text></g>
+</svg>
+</div></figure><figure class="mobile-chart"><figcaption>513500 收盘价 ÷ 当日单位净值 − 1 2026-04-01 ~ 10-28，日序列，x 轴按真实日期</figcaption><div class="chart">
+<div class="chart-title">513500 收盘价 ÷ 当日单位净值 − 1 <small>2026-04-01 ~ 10-28，日序列，x 轴按真实日期</small></div>
+<svg aria-label="513500 收盘溢价率日序列" role="img" style="width:100%;height:auto" viewbox="0 0 640 250">
+<g stroke="var(--border-light)" stroke-width="1"><line x1="50" x2="620" y1="200.0" y2="200.0"></line><line x1="50" x2="620" y1="155.0" y2="155.0"></line><line x1="50" x2="620" y1="110.0" y2="110.0"></line><line x1="50" x2="620" y1="65.0" y2="65.0"></line><line x1="50" x2="620" y1="20.0" y2="20.0"></line></g>
+<g fill="var(--text-muted)" font-size="11" text-anchor="end"><text x="44" y="204.0">0%</text><text x="44" y="159.0">3%</text><text x="44" y="114.0">6%</text><text x="44" y="69.0">9%</text><text x="44" y="24.0">12%</text></g>
+<polyline fill="none" points="50.0,134.3 52.7,155.0 55.3,156.1 66.0,161.6 68.7,138.7 71.3,157.8 74.0,143.3 82.0,167.9 84.7,163.1 87.3,159.5 90.0,146.0 92.7,167.5 100.7,165.0 103.3,147.8 106.0,163.2 108.7,159.9 111.3,174.9 119.3,163.1 122.0,140.8 124.7,138.1 127.3,149.1 143.3,158.6 146.0,133.6 148.7,146.4 156.7,143.0 159.3,148.8 162.0,151.2 164.7,161.9 167.3,148.8 175.3,173.0 178.0,161.4 180.7,183.4 183.3,172.6 186.0,158.3 194.0,119.2 196.7,138.5 199.3,131.6 202.0,149.8 204.7,131.4 212.7,94.0 215.3,105.2 218.0,98.8 220.7,127.7 223.3,82.5 231.3,121.5 234.0,92.7 236.7,89.8 239.3,128.3 242.0,124.7 250.0,113.9 252.7,97.7 255.3,82.2 258.0,109.5 268.7,103.5 271.3,118.4 274.0,106.1 276.7,109.2 279.3,130.1 287.3,151.2 290.0,158.6 292.7,149.3 295.3,154.2 298.0,140.9 306.0,147.6 308.7,129.8 311.3,141.6 314.0,146.0 316.7,144.2 324.7,134.3 327.3,129.6 330.0,119.0 332.7,102.8 335.3,133.4 343.3,133.7 346.0,129.4 348.7,129.4 351.3,107.9 354.0,120.7 362.0,111.2 364.7,137.6 367.3,95.6 370.0,141.9 372.7,134.1 380.7,142.2 383.3,140.6 386.0,84.5 388.7,68.9 391.3,76.2 399.3,74.1 402.0,57.1 404.7,71.9 407.3,74.9 410.0,31.5 418.0,41.0 420.7,66.5 423.3,97.0 426.0,62.2 428.7,71.4 436.7,67.4 439.3,58.8 442.0,49.9 444.7,62.0 447.3,48.7 455.3,49.9 458.0,35.3 460.7,87.5 463.3,94.2 466.0,65.0 474.0,68.8 476.7,66.2 479.3,56.9 482.0,50.9 484.7,73.6 492.7,67.7 495.3,69.7 498.0,48.8 500.7,67.7 503.3,52.4 511.3,74.0 514.0,49.9 516.7,39.8 519.3,63.8 530.0,57.2 532.7,50.9 535.3,46.8 556.7,62.6 559.3,57.6 567.3,50.8 570.0,38.8 572.7,27.1 575.3,81.8 578.0,50.3 586.0,57.9 588.7,79.4 591.3,84.3 594.0,77.8 596.7,86.9 604.7,98.5 607.3,71.2 610.0,52.3" stroke="var(--amber)" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<circle cx="180.7" cy="183.4" fill="var(--text-primary)" r="4"></circle><text fill="var(--text-primary)" font-size="11.5" font-weight="650" text-anchor="middle" x="180.7" y="201.4">1.11%（05-20）</text>
+<circle cx="410.0" cy="31.5" fill="var(--red)" r="4"></circle><text fill="var(--red)" font-size="11.5" font-weight="650" text-anchor="middle" x="410.0" y="21.5">11.23%（08-14）</text>
+<circle cx="572.7" cy="27.1" fill="var(--red)" r="4"></circle><text fill="var(--red)" font-size="11.5" font-weight="650" text-anchor="end" x="572.7" y="17.1">11.53%（10-14）</text>
+<circle cx="610.0" cy="52.3" fill="var(--amber)" r="4"></circle><text fill="var(--amber)" font-size="11.5" font-weight="650" text-anchor="end" x="618.0" y="150.0">最新 10-28 · 9.85%</text>
+<text fill="var(--text-muted)" font-size="11" text-anchor="middle" x="50.0" y="238">04/01</text>
+<text fill="var(--text-muted)" font-size="11" text-anchor="middle" x="130.0" y="238">05/01</text>
+<text fill="var(--text-muted)" font-size="11" text-anchor="middle" x="212.7" y="238">06/01</text>
+<text fill="var(--text-muted)" font-size="11" text-anchor="middle" x="292.7" y="238">07/01</text>
+<text fill="var(--text-muted)" font-size="11" text-anchor="middle" x="380.7" y="238">08/01</text>
+<text fill="var(--text-muted)" font-size="11" text-anchor="middle" x="458.0" y="238">09/01</text>
+<text fill="var(--text-muted)" font-size="11" text-anchor="middle" x="556.7" y="238">10/01</text>
+</svg>
+</div></figure></section><section><h2>研究速读</h2><article><h3>核心判断</h3><p>美联储与 10 年期美债 ：12 月 FOMC 投票分布；10 年期能否重回 5.3% 上方（10-05 当周高点）。</p></article><article><h3>经营变化</h3><p>对已经持有 050025 的人，场内溢价不直接影响账户； 真正决定人民币回报的是「美元回报 × 汇率」这道乘法 。今年这道乘法的第二个因子一直小于 1。</p></article><article><h3>估值与风险</h3><p>本基金没有自己的估值，估值看的是标普 500 本身。以下只列位置与对照，不给高低判断。</p></article></section><section><h2>资料与出处</h2><ul class="source-list"></ul><a href="../../../sources/050025/index.html">披露资料</a></section><a class="read-complete" href="index.html">查看完整报告 <span aria-hidden="true">→</span></a></main><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E5%8D%9A%E6%97%B6%E6%A0%87%E6%99%AE500%E8%81%94%E6%8E%A5A%EF%BC%88050025%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%8D%9A%E6%97%B6%E6%A0%87%E6%99%AE500%E8%81%94%E6%8E%A5A%EF%BC%88050025%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-30%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

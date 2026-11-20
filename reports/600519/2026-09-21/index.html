@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>贵州茅台 2026-09-21 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    .card { padding: 24px 20px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 8px 10px; }
+    header { padding: 40px 20px 36px; }
+    header h1 { font-size: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  @media print {
+    body { background: #fff; }
+    .sidebar { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+    header { background: #1a3c2a !important; -webkit-print-color-adjust: exact; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/600519/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-21%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">600519 <span>·</span> 2026-09-21 <span>·</span> PC 完整版</div><h1>贵州茅台</h1><p>数据截至 2026-09-21 盘中（1252.57 元）· 半年报 2026-08-15 已披露并本地存档 · 上一版 2026-09-12</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#whatsnew">上次报告（09-12）以来发生了什么</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式</a></li><li><a href="#core-metric">三、核心指标 — 出厂价/批价 + 股息率</a></li><li><a href="#financials">四、最新财务数据（2026 半年报）</a></li><li><a href="#segments">五、业务板块深度拆解</a></li><li><a href="#valuation">估值分析</a></li><li><a href="#bull-bear">多空核心分歧</a></li><li><a href="#analysts">券商分析师全景</a></li><li><a href="#xueqiu">雪球 / 散户讨论</a></li><li><a href="#conclusion">综合判断框架</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+<strong>时效提示：</strong>本报告为 2026-09-21 版（上一版 2026-09-12）。财务数据锚定 2026-08-15 披露并本地存档的半年度报告（<span class="src-badge src-s">一手</span>）；行情为 2026-09-21 盘中数据（腾讯财经实时接口）。批价、动销、限购政策为 9 月中下旬二手聚合信息——<b>距离中秋（9/25）只剩 4 天，节前价格与动销数据逐日变化</b>，请以"今日酒价"等日频渠道为准。三季报预计 10 月下旬披露，届时本报告的"报表验证"章节需重写。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> 沪深/巨潮公告（半年报/年报/分红公告 PDF 本地存档） |
+    <span class="src-badge src-2">二手</span> 券商研报/今日酒价/财经媒体（批价、目标价、动销） |
+    <span class="src-badge src-3">三方</span> 雪球/散户/社交媒体 |
+    <span class="src-badge src-e">推算</span> PE 历史分位、TTM 净利等间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+<p style="margin-top:8px;font-size:12px;color:var(--text-muted);">本地披露文件：<code>投资分析/标的/600519-贵州茅台/Filings/</code> — 600519_2025年_年报_2026-04-17.pdf、600519_2026年_半年报_2026-08-15.pdf</p>
+</div>
+
+<div class="card" id="whatsnew">
+<h2>上次报告（09-12）以来发生了什么</h2>
+<p style="color:var(--text-secondary);">过去 9 天的关键词从"背离"变成了"<b>决断前夜</b>"：官方把旺季供给管理推到极致（自营店<b>紧急限购</b>），需求侧首次给出量化利好（9 月终端动销<b>环比约翻倍、同比 +20%</b>），而股价继续阴跌、09-16 盘中下探 1254 元一线。中秋（9/25）已成为上份报告所设"批价裁决线"的正式计时点。</p>
+<div class="table-scroll"><table>
+<thead><tr><th>日期</th><th>事件</th><th>性质</th></tr></thead>
+<tbody>
+<tr><td>09-12 ~ 09-16</td><td>股价继续走弱：1266.98（9-17 反弹 +0.71% 前）→ 09-16 收 1258.00（-1.16%），盘中低点 1254.10 元；白酒板块同步探底（9 月五粮液跌约 20%、泸州老窖跌约 30%、汾酒一度跌超 31%）<span class="src-badge src-2">二手</span></td><td class="metric-negative">股价/板块利空</td></tr>
+<tr><td>09-15</td><td>茅台江苏省区召开 Q3 市场工作会："贴地销售"——围绕近 3000 万户家庭拓展寿宴/生日宴/家庭团聚场景，拜访近 300 万家企业，以 43 度飞天切入 9-10 月婚嫁旺季<span class="src-badge src-2">二手</span></td><td class="metric-positive">需求端动员</td></tr>
+<tr><td>09-16</td><td>中信证券口径："建议<b>逢低</b>增配白酒行业头部酒企"——注意是"逢低"而非"反转"（<span class="src-badge src-3">三方</span> 转述）</td><td class="metric-warn">谨慎积极</td></tr>
+<tr><td>09-17</td><td>第三方报价：飞天散瓶批价约 1720 元、原箱 1750 元以上，"双节前窄幅震荡"；白酒 11 大单品 9-10 终端均价统计"三涨七跌一平"，飞天是上涨的三个之一<span class="src-badge src-2">二手</span></td><td class="metric-positive">批价高位企稳</td></tr>
+<tr><td>09-17</td><td><b>自营店紧急限购新政</b>：个人购 500ml 飞天单日限 1 箱（6 瓶）、年累计不超 5 箱；企业单日限 5 箱、年 50 箱，全国自营店即刻生效<span class="src-badge src-2">二手</span></td><td class="metric-warn">供给管控加强</td></tr>
+<tr><td>09-18</td><td>股价收 1257.12（-0.78%），成交 73.47 亿；当日获融资买入 7.97 亿、融资净买入 2.59 亿，融资余额回升至 <b>171.18 亿</b>（占流通市值 0.93%，超近一年 50% 分位）<span class="src-badge src-2">二手</span></td><td class="metric-positive">杠杆资金回流</td></tr>
+<tr><td>09-19</td><td>i茅台公告：新增广州、郑州两大发货仓就近发货（履约能力扩建）<span class="src-badge src-2">二手</span></td><td class="metric-positive">渠道基建</td></tr>
+<tr><td>09 月以来</td><td>公司口径：终端动销<b>环比增长约 1 倍、同比增长超 20%</b>；渠道存销比环比显著下降、"已处于良好水平"<span class="src-badge src-2">二手</span>（公司披露，需三季报验证）</td><td class="metric-positive">动销显著回暖</td></tr>
+</tbody>
+</table></div>
+<p style="color:var(--text-secondary);margin-top:12px;"><b>一句话总结：</b>上份报告记录的"渠道热、股价冷"背离仍在延续，但性质在变化——限购 + 动销翻倍同时出现，说明旺季需求是真实的（限购是为防惜售/炒作分流），而非纯粹控量表演。股价跌回 1250 一线，反而把"批价站稳 1700"的裁决框架推到了一个<b>赔率更不对称</b>的位置：下跌空间靠 4%+ 股息率与 19 倍 PE 托底，向上弹性等三季报点燃。</p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、公司速览</h2>
+<div class="table-scroll"><table>
+<tbody>
+<tr><td style="width:20%"><b>证券代码</b></td><td style="width:30%">600519.SH（上交所主板）</td><td style="width:20%"><b>总市值</b></td><td>约 1.57 万亿 RMB</td></tr>
+<tr><td><b>实控人</b></td><td>贵州省国资委（茅台集团持股约 60%）</td><td><b>总股本</b></td><td>12.50 亿股</td></tr>
+<tr><td><b>行业</b></td><td>白酒（高端酱香）</td><td><b>货币</b></td><td>人民币 RMB</td></tr>
+<tr><td><b>2025 全年</b></td><td>营收 1688.38 亿（-1.21%），归母净利 823.20 亿（-4.53%）</td><td><b>2026 H1</b></td><td>营收 922.78 亿（+1.30%），归母净利 445.17 亿（-1.95%）</td></tr>
+<tr><td><b>现价（09-21 盘中）</b></td><td>1,252.57 元（-0.36%，前收 1257.12）</td><td><b>52 周区间</b></td><td>1,131.41 – 1,539.98 元</td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">1,252.57</div><div class="label">现价（元，09-21 盘中）</div></div>
+<div class="summary-item"><div class="value">19.2x</div><div class="label">PE(TTM，腾讯口径)</div></div>
+<div class="summary-item"><div class="value">≈4.15%</div><div class="label">股息率（2025 年度，推算）</div></div>
+<div class="summary-item"><div class="value">1.57万亿</div><div class="label">总市值（RMB）</div></div>
+<div class="summary-item"><div class="value">16.75%</div><div class="label">ROE（加权，H1）</div></div>
+<div class="summary-item"><div class="value">-0.36%</div><div class="label">当日涨跌（09-21 盘中）</div></div>
+</div>
+<p style="color:var(--text-secondary);margin-top:8px;"><b>当前处境：</b>中秋前最后 4 个交易日。股价从 09-11 的 1275.16 再跌至 1252 元附近（一周 -1.8%），52 周低点已被刷新至 1131.41 元；而渠道端给出了本轮调整以来最"硬"的一组数据——动销环比翻倍 + 限购 + 批价 1700+。基本面读数与市场情绪的温差仍在扩大，这正是本版报告要重新定价的核心矛盾。</p>
+</div>
+
+<div class="card" id="business">
+<h2>二、商业模式</h2>
+<h3>怎么赚钱：一瓶酒的品牌定价权</h3>
+<p>贵州茅台卖的是<b>茅台酒</b>（飞天/生肖/精品/年份酒等）和<b>系列酒</b>（茅台1935、王子、迎宾等）。核心利润来自茅台酒：2026 H1 茅台酒收入 777.24 亿（占比 85.7%），毛利率高达 93.5%；系列酒 129.34 亿（占比 14.3%），毛利率约 76%。赚钱的本质是"品牌溢价 + 稀缺供给"——同样的高粱小麦，茅台能卖出几倍于竞品的价格。</p>
+<h3>护城河：巴菲特式"经济特许权"的教科书样本</h3>
+<ul style="padding-left:20px;color:var(--text-secondary);">
+<li style="margin-bottom:8px;"><b>品牌定价权（最强护城河）：</b>2026 年在白酒行业整体降价、奢侈品全球降价的背景下，茅台年内已<b>六度调价</b>（自营店 9-08 提至 1766 元为第六次），飞天出厂价年内两次上调（1169→1269→1369）。9 月旺季继续逆势提价并配合限购，定价权仍在的直接验证。</li>
+<li style="margin-bottom:8px;"><b>工艺 + 环境壁垒：</b>茅台镇 7.5 平方公里核心产区、12987 工艺、5 年陈酿期——产能扩张受地理和时间的硬约束，竞争对手无法快速复制。</li>
+<li><b>渠道体系收权进入"收官阶段"：</b>"4+6"渠道体系（i茅台+自营+经销+商超等）跑通后，公司开始用<b>限购</b>而非放量来管理供需——9-17 新政（个人年购上限 5 箱）把自营渠道彻底"配额化"，既保 C 端公平抢购体验，又防黄牛套利。半年报业绩说明会亦确认"随行就市、相对平稳、量价平衡、供需适配"的动态调价机制已搭建完毕。</li>
+</ul>
+<h3>渠道结构：直销占比已过半，且在继续强化</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>渠道</th><th>2026 H1 收入</th><th>同比</th><th>占比</th><th>定位</th></tr></thead>
+<tbody>
+<tr><td><b>直销</b>（i茅台+自营+代售）</td><td>519.62 亿</td><td class="metric-positive">+29.87%</td><td>57.32%</td><td>价格锚点/稳定器，直接触达 C 端</td></tr>
+<tr><td><b>批发代理</b>（经销商/商超/电商）</td><td>386.97 亿</td><td class="metric-negative">-21.58%</td><td>42.68%</td><td>转化器/放大器，B 端被压缩</td></tr>
+</tbody>
+</table></div>
+<div class="quote">
+<b>本报告的重点商业模式观察：</b>限购是"消费品化"的收官动作。金融品逻辑下放量收钱（黄牛加价是厂商的"隐性补贴"），消费品逻辑下控量保体验（让真实消费者以官方价买到 = 品牌长期心智投资）。9-17 限购新政 + i茅台新增两仓就近发货，说明茅台正在把"买到茅台"这件事本身变成产品体验的一部分。短期牺牲渠道弹性（经销商利润收窄），长期把定价权 100% 收归官方。
+  </div>
+</div>
+
+<div class="card" id="core-metric">
+<h2>三、核心指标 — 出厂价/批价 + 股息率</h2>
+<p>对茅台而言，唯一真正重要的指标是<b>飞天批价（市场真实供需的温度计）</b>和<b>股息率（相对融资成本的安全垫）</b>。本版聚焦一个时间点：距离中秋（9/25）还有 4 天，裁决线临近。</p>
+<h3>3.1 飞天价格体系（截至 2026-09-17 前后）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>价格锚</th><th>金额（元/瓶）</th><th>较上份报告（09-12）变化</th></tr></thead>
+<tbody>
+<tr><td>出厂价（合同价，2026 版）</td><td>1,369</td><td>持平（年内两次上调后未再动）</td></tr>
+<tr><td>散瓶批价（第三方综合）</td><td>约 1,720</td><td class="metric-warn">较 09-05 的 1725 微降，"双节前窄幅震荡"</td></tr>
+<tr><td>原箱批价（第三方综合）</td><td>约 1,750</td><td class="metric-positive">较 09-05 的 1740 温和上行</td></tr>
+<tr><td>i茅台零售价（2026 版）</td><td>1,639</td><td>持平（07-18 起）</td></tr>
+<tr><td>自营门店零售价（43 家）</td><td class="metric-positive">1,766</td><td>持平（09-08 第六次调价后未再动），9-17 起限购</td></tr>
+<tr><td>自营限购新政</td><td>个人日限 1 箱 / 年限 5 箱</td><td class="metric-warn">09-17 生效，企业日限 5 箱 / 年限 50 箱</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13.5px;color:var(--text-secondary);"><b>关键读数：</b>散瓶 1720 元相对出厂价 1369 元仍有约 <b>26% 的正价差</b>；原箱对散瓶价差约 30 元，收藏/礼赠属性温和存在。批价从 9 月初的"周涨 25-30 元"转为"窄幅震荡"——旺季脉冲的高点可能已过，<b>节后能否守住 1700 成为唯一悬念</b>。多家第三方平台的口径一致：飞天是 9 月 11 大单品终端均价"三涨七跌一平"中的上涨者之一（<span class="src-badge src-2">二手</span>），在行业普跌背景下价格坚挺本身就是相对优势。</p>
+<h3>3.2 动销验证：本轮改革最强的一组数据（但出自公司口径）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>读数</th><th>口径与可信度</th></tr></thead>
+<tbody>
+<tr><td>9 月终端动销</td><td class="metric-positive">环比约 +100%，同比 +20%+</td><td>公司半年度业绩说明会披露 <span class="src-badge src-t">时效</span>，需三季报验证</td></tr>
+<tr><td>渠道存销比</td><td class="metric-positive">环比显著下降，"已处于良好水平"</td><td>公司口径，方向可信、幅度未披露</td></tr>
+<tr><td>茅台1935</td><td>量价均回升，系列酒合同执行超八成</td><td><span class="src-badge src-2">二手</span> 渠道调研</td></tr>
+<tr><td>国金证券调研</td><td>飞天动销延续年初以来良好态势，次新批价回落系 i茅台投放政策调整所致、价差仍在合理区间</td><td><span class="src-badge src-2">二手</span> 券商</td></tr>
+<tr><td>西南酒商反馈</td><td>"价格企稳、动销分化、渠道理性、不囤货了"——酒商转向"开瓶为王"</td><td><span class="src-badge src-3">三方</span> 媒体调研</td></tr>
+</tbody>
+</table></div>
+<div class="stale-warning">
+<strong>第二层思维（裁决前的最后提醒）：</strong>动销"环比翻倍"有很强的季节性成分（9 月本就是旺季备货月），同比 +20% 的基数是 2025 年的疲弱同期。真正需要分辨的是：① 开瓶需求 vs 礼赠囤货——节后批价是最诚实的裁判；② "环比翻倍"若含 i茅台放量与渠道结构调整的成分，报表传导可能弱于动销读数。中酒协 86.7% 企业利润下滑的调查背景仍悬在行业头上。
+  </div>
+<h3>3.3 股息率 vs 融资利率（融资纪律锚点，仅 A 股适用）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>项目</th><th>数值</th><th>口径</th></tr></thead>
+<tbody>
+<tr><td>2025 年度每股分红合计</td><td>51.98 元/股</td><td>中期 23.957 + 年度 28.024（回购注销调整后）</td></tr>
+<tr><td><b>股息率（现价 1252.57）</b></td><td class="metric-positive">4.15%</td><td>51.98 ÷ 1252.57（推算）</td></tr>
+<tr><td>PE(TTM)</td><td>19.2x</td><td>腾讯行情口径（TTM 市盈率）</td></tr>
+<tr><td>PB</td><td>6.23x</td><td>腾讯行情口径</td></tr>
+<tr><td>2025 分红率</td><td>约 79–86%</td><td>是否含回购注销两种口径（推算）</td></tr>
+</tbody>
+</table></div>
+<div class="box-green">
+<h4>✓ 融资纪律检验通过（安全垫继续增厚）</h4>
+
+<p style="font-size:12.5px;color:var(--text-muted);margin-top:6px;">注：分红沿用 2025 年度合计 51.98 元/股；若 2026 年度分红率维持 75%+，现价对应 2026E 股息率约 4.1–4.3%（推算）。</p>
+</div>
+</div>
+
+<div class="card" id="financials">
+<h2>四、最新财务数据（2026 半年报）</h2>
+<div class="stale-warning"><strong>财报日提示：</strong>半年报于 2026-08-15 披露并本地存档，9 月无新财报。<b>2026 三季报预计 10 月下旬发布</b>——它是"动销翻倍 + 批价 1700"能否写进报表的第一份硬证据，也是本报告框架中最重要的待验证项。</div>
+<h3>4.1 利润表核心科目（2026 H1 vs 2025 H1）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>科目</th><th>2026 H1</th><th>2025 H1</th><th>同比</th></tr></thead>
+<tbody>
+<tr><td>营业总收入</td><td>922.78 亿</td><td>910.94 亿</td><td class="metric-positive">+1.30%</td></tr>
+<tr><td>营业成本</td><td>94.74 亿</td><td>77.77 亿</td><td class="metric-negative">+21.81%</td></tr>
+<tr><td>毛利率</td><td>89.56%</td><td>91.30%</td><td class="metric-negative">-1.74 pct</td></tr>
+<tr><td>归母净利润</td><td>445.17 亿</td><td>454.03 亿</td><td class="metric-negative">-1.95%</td></tr>
+<tr><td>扣非归母净利润</td><td>444.64 亿</td><td>453.90 亿</td><td class="metric-negative">-2.04%</td></tr>
+<tr><td>基本每股收益</td><td>35.57 元</td><td>36.18 元</td><td class="metric-negative">-1.68%</td></tr>
+<tr><td>加权平均 ROE</td><td>16.75%</td><td>17.89%</td><td class="metric-negative">-1.14 pct</td></tr>
+<tr><td>经营活动现金流净额</td><td>706.91 亿</td><td>131.19 亿</td><td class="metric-warn">+438.84%*</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:12.5px;color:var(--text-muted);">* 经营现金流暴增主要系集团财务公司吸收存款减少所致，非酒类经营现金流入的真实增长，需剔除扰动。</p>
+<h3>4.2 单季度拆解</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>季度</th><th>营收</th><th>归母净利</th><th>趋势</th></tr></thead>
+<tbody>
+<tr><td>2026 Q1</td><td>约 547 亿</td><td>约 272 亿</td><td>开门红</td></tr>
+<tr><td>2026 Q2</td><td>375.75 亿</td><td>172.74 亿</td><td class="metric-negative">营收 -5.23% / 净利 -6.90%（双降）</td></tr>
+<tr><td>2026 Q3（10 月下旬验证）</td><td>—</td><td>—</td><td class="metric-warn">动销同比 +20%（公司口径）+ 低基数，市场预期报表改善</td></tr>
+</tbody>
+</table></div>
+<h3>4.3 财务异常检测</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>检测项</th><th>状态</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>应收账款异常</td><td>🟢 低</td><td>先款后货，无坏账风险</td></tr>
+<tr><td>现金流背离</td><td>🟢 低</td><td>酒类经营现金流健康（+438.84% 系财务公司扰动）</td></tr>
+<tr><td>存货异常</td><td>🟡 中</td><td>库存 33.99 万吨（+9.67%），基酒库存是茅台的"存货即资产"</td></tr>
+<tr><td>毛利率异常</td><td>🟡 中</td><td>毛利率 -1.74pct，系非标降价 + 系列酒调整的主动选择</td></tr>
+<tr><td>股东户数变化</td><td class="metric-warn">🟡 中</td><td>2026-06-30 股东户数 29.64 万，较 Q1 的 24.32 万 <b>+21.9%</b>——筹码分散（散户化）</td></tr>
+<tr><td>股东减持</td><td>🟡 中→改善中</td><td>汇金/证金 Q2 退出前十，中国人寿加仓接棒</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13.5px;color:var(--text-secondary);"><b>综合财务异常分级：🟡 中。</b>无暴雷风险。9 月资金面的边际变化值得记录：9-18 融资净买入 2.59 亿、融资余额回升至 171.18 亿（此前 9 月上旬曾连续下滑至 171.9 亿以下），杠杆资金从"阶段流出"转为"试探回流"，但股东户数散户化的结构问题仍在。</p>
+</div>
+
+<div class="card" id="segments">
+<h2>五、业务板块深度拆解</h2>
+<h3>5.1 茅台酒 vs 系列酒</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>产品</th><th>2026 H1 收入</th><th>同比</th><th>最新边际变化（9 月中下旬）</th></tr></thead>
+<tbody>
+<tr><td>茅台酒</td><td>777.24 亿</td><td class="metric-positive">+2.82%</td><td>批价 1700+ 高位震荡、动销环比翻倍、自营限购保价盘</td></tr>
+<tr><td>系列酒</td><td>129.34 亿</td><td class="metric-negative">-6.02%（Q2 -25.03%）</td><td class="metric-positive">1935 量价均回升、合同执行超八成、库存趋紧</td></tr>
+</tbody>
+</table></div>
+<h3>5.2 需求结构：从"谁在买"看改革成色</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>需求来源</th><th>9 月双节的证据</th><th>成色评估</th></tr></thead>
+<tbody>
+<tr><td>家庭/宴席场景</td><td>江苏省区围绕近 3000 万户家庭做寿宴/生日宴/团聚场景，43 度飞天切入婚嫁季</td><td class="metric-positive">真实消费，改革目标客群</td></tr>
+<tr><td>企业商务场景</td><td>江苏区拜访近 300 万家企业、740 家上市公司开展商务答谢</td><td class="metric-warn">仍在恢复期，依赖宏观</td></tr>
+<tr><td>C 端平价供给</td><td>i茅台 1499 元飞天"秒空"，限购后个人年购上限 5 箱</td><td class="metric-positive">供给紧张的真实信号</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13.5px;color:var(--text-secondary);">"贴地销售"是本轮调研中最值得注意的战略信号：茅台把双节营销从"向渠道压货"改为"向场景下沉"——宴席、婚嫁、家庭团聚这些<b>开瓶率最高的场景</b>。这与"金融品 → 消费品"的转型逻辑完全一致，也是判断节后批价成色的关键：礼品酒被喝掉，批价就稳；被回流，批价就垮。</p>
+<h3>5.3 行业坐标：板块普跌中的相对韧性</h3>
+<p style="font-size:13.5px;color:var(--text-secondary);">9 月白酒板块头部酒企无一上涨：五粮液跌约 20%、泸州老窖跌约 30%、汾酒一度跌超 31%（<span class="src-badge src-2">二手</span>）。茅台同期从 1309 跌至 1252（约 -4.4%），跌幅显著小于同行，PE(TTM) 19.2x、股息率约 4.15%——在"股息率类债"定价范式下，茅台仍是板块内最抗跌、机构"逢低增配"的首选。国金证券维持"行业景气下行趋缓"判断，预计中秋国庆动销同比"跌幅收窄至微下滑甚至持平企稳"。</p>
+</div>
+
+<div class="card" id="valuation">
+<h2>估值分析</h2>
+<h3>当前倍数</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>指标</th><th>当前值</th><th>历史参照</th><th>分位（推算）</th></tr></thead>
+<tbody>
+<tr><td><b>PE(TTM)</b></td><td>19.2x</td><td>2021 高点 70x+ → 2024 约 25x → 当前 19.2x</td><td class="metric-positive">≈ 上市以来 10% 分位以下</td></tr>
+<tr><td>PB</td><td>6.23x</td><td>ROE 约 30%，PB/ROE 仍属优质</td><td class="metric-warn">中枢偏下</td></tr>
+<tr><td><b>股息率</b></td><td>≈4.15%</td><td>2026 年内 3.45%（4 月 1410）→ 4.15%</td><td class="metric-positive">历史高位区间</td></tr>
+<tr><td>PEG</td><td>&lt; 1（推算）</td><td>PE 19.2 ÷ 机构一致预期增速（2026E +3.5%~+5%）</td><td class="metric-positive">表面便宜，但增速为个位数</td></tr>
+</tbody>
+</table></div>
+<p style="font-size:12.5px;color:var(--text-muted);">PE 历史分位为推算值（按上市以来年度 EPS 与年末收盘价静态估算），非精确分位接口数据，仅供定性参考。</p>
+<div class="two-col">
+<div class="box-green">
+<h4>便宜的一面</h4>
+<ul style="font-size:13px;">
+<li>PE 19.2x 低于上市以来 90% 的时间，对应 30% 左右 ROE</li>
+
+<li>52 周低点 1131.41 元对应 PE 约 17.3x——下行空间已被上一轮恐慌定价过一次</li>
+<li>定价范式转向"股息率类债"，低利率环境下 4%+ 股息具吸引力</li>
+</ul>
+</div>
+<div class="box-red">
+<h4>贵/风险的一面</h4>
+<ul style="font-size:13px;">
+<li>分母（利润）仍在下降：Q2 营收 -5.23%、净利 -6.90%</li>
+<li>若三季报不及预期引发盈利下修，PE 会"被动抬升"</li>
+<li>增速从双位数降至个位数，成长股估值中枢已系统性下移</li>
+<li>白酒板块情绪冰点（同行月跌 20-30%），茅台难以独善其身</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4>多方论据</h4>
+<ol style="font-size:13.5px;">
+<li><b>动销首次给出量化证据：</b>9 月终端动销环比约翻倍、同比 +20%，存销比显著下降——"控量挺价"论的最强反证（若是纯控量，动销不会翻倍）。</li>
+<li><b>限购 = 供不应求的官方确认：</b>13 年来首次对个人限购，且是"旺季限购"而非"淡季控量"，指向真实需求 &gt; 官方供给。</li>
+<li><b>相对估值极低：</b>PE 19.2x ≈ 历史 10% 分位，同行月跌 20-30% 背景下茅台仅 -4%，资金避险首选。</li>
+
+<li><b>场景下沉打开增量：</b>寿宴/婚嫁/家庭团聚 + 43 度产品线，是"年轻人不喝白酒"叙事的对冲手筋。</li>
+<li><b>杠杆资金回流：</b>9-18 融资净买入 2.59 亿，余额回升至 171.18 亿（近一年 50% 分位以上）。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4>空方论据</h4>
+<ol style="font-size:13.5px;">
+<li><b>"环比翻倍"的基数陷阱：</b>9 月环比翻倍是季节性常态，同比 +20% 的分母是 2025 年疲弱基数——不构成趋势反转证据。</li>
+<li><b>批价已停止上行：</b>从"周涨 25-30 元"转为"窄幅震荡"，旺季脉冲高点或已出现，节后惯性回落风险真实存在。</li>
+<li><b>报表仍未验证：</b>动销是渠道口径，Q2 双降是报表事实——传导成立与否，10 月下旬三季报见分晓。</li>
+<li><b>限购的双刃剑：</b>压黄牛同时压流通量，若节后需求退潮，官方挂牌价（1766）与批价的倒挂压力会集中释放。</li>
+<li><b>行业出清未完成：</b>中酒协调查显示行业利润下滑面 86.7%、68.5% 企业预期下半年继续下行；茅台无法独善其身。</li>
+<li><b>长期结构性逆风未变：</b>政商务宴请收缩、代际饮酒习惯变迁，市场对这两条给的是"永久折价"而非"周期折价"。</li>
+</ol>
+</div>
+</div>
+<div class="quote">
+<b>核心争议焦点：</b>"动销翻倍"到底是<b>旺季脉冲的顶点</b>还是<b>需求拐点的确认</b>？<br/>
+<b>裁决指标（已进入计时）：</b>① 中秋（9/25）节后两周，批价能否稳在 <b>1700 元</b>以上（跌破 1650 = 转型遇阻）；② 10 月下旬三季报营收/净利能否转正或显著收窄降幅；③ 节后社会库存回流量（回收商报价是先行指标）。
+  </div>
+</div>
+
+<div class="card" id="analysts">
+<h2>券商分析师全景</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>机构</th><th>评级</th><th>目标价</th><th>核心观点 / 时效</th></tr></thead>
+<tbody>
+<tr><td>国金证券</td><td class="metric-positive">看好龙头</td><td>—</td><td>9 月周专题：飞天动销延续良好态势、批价稳中有升，行业"下行趋缓"，中秋国庆动销跌幅收窄至微下滑甚至持平</td></tr>
+<tr><td>中信证券</td><td class="metric-warn">逢低增配</td><td>—</td><td>09-11 口径："建议<b>逢低</b>增配白酒头部酒企"——是左侧介入，不是反转确认</td></tr>
+<tr><td>国海证券</td><td class="metric-positive">买入</td><td>—</td><td>2026-08-24：市场化改革推进，历史包袱逐步出清，<b>最困难时期或已过去</b></td></tr>
+<tr><td>华创证券</td><td class="metric-positive">强推</td><td>2,030 元</td><td>2026-07：维持一年目标价 2030 元<span class="src-badge src-t">时效</span></td></tr>
+<tr><td>兴业证券</td><td class="metric-positive">看好</td><td>—</td><td>2026-09-04：板块底部基本确认，"行业最差阶段已经过去"</td></tr>
+<tr><td>国泰海通</td><td class="metric-positive">增持</td><td>—</td><td>2026–2027 定义为<b>筑底期</b>，出清彻底的酒企先迎估值修复</td></tr>
+<tr><td>中信建投</td><td class="metric-positive">看好</td><td>—</td><td>利润低点 2026 全年，<b>季度拐点 Q2–Q3</b></td></tr>
+<tr><td>群益证券(香港)</td><td class="metric-warn">区间操作</td><td>≤1,430 元</td><td>2026-07-20：预测 2026 净利润 862.96 亿，谨慎<span class="src-badge src-t">时效</span></td></tr>
+</tbody>
+</table></div>
+<p style="font-size:13px;color:var(--text-secondary);"><b>一致预期（近六个月，35 家机构，<span class="src-badge src-2">二手</span> 同花顺 iFinD，2026-07-20 口径）：</b>2026E 净利润均值 863.04 亿（<b>+4.84%</b>），平均目标价 <b>1692.91 元</b>（较现价 1252.57 元隐含约 <b>+35.2%</b>）。<span class="src-badge src-t">时效</span> 9 月多家机构更新观点但未给出新目标价，且中信"逢低"措辞显示卖方内部对"底"的确认仍有保留。</p>
+</div>
+
+<div class="card" id="xueqiu">
+<h2>雪球 / 散户讨论</h2>
+<p style="font-size:13.5px;color:var(--text-secondary);">以"茅台""飞天批价""社会库存"等关键词在雪球检索，中秋前一周的散户情绪明显比机构更悲观：</p>
+<ul style="padding-left:20px;font-size:13.5px;color:var(--text-secondary);">
+<li style="margin-bottom:6px;"><b>"清算派"（看空）声音放大：</b>高热帖出现"茅台每股净资产只有二百元，股价一千多元是泡泡，回归二百元"的极端估值论——这类帖子获 16 条讨论，反映部分散户在连续阴跌后转向"资产负债表清算"式悲观。</li>
+<li style="margin-bottom:6px;"><b>社会库存争论白热化：</b>"自媒体估算流通渠道沉淀 1-2 亿瓶飞天"的说法被大量转发，散户在业绩说明会问答下追问管理层回应——社会库存从行业话题升级为估值锚争论。</li>
+<li><b>情绪结构：</b>散户悲观 vs 机构一致看好（25 家买入）的反差继续拉大。历史上这种"筹码从机构向散户扩散 + 情绪极端化"常出现在底部区域，但无法据此判断时点。</li>
+</ul>
+<p style="font-size:12.5px;color:var(--text-muted);"><span class="src-badge src-3">三方</span> 社区观点情绪化、样本有偏，仅作市场情绪参考，不构成事实依据。</p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>综合判断框架</h2>
+<h3>四情景（12 个月）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th>情景</th><th>触发条件</th><th>大概率路径</th></tr></thead>
+<tbody>
+<tr><td class="metric-positive"><b>乐观（30%）</b></td><td>节后批价稳住 1700+、Q3 报表营收转正或降幅收窄至 1% 内、四季度动销延续</td><td>动销证据获报表确认，估值修复至 PE 23–25x，向机构目标价均值（约 1693 元）靠拢</td></tr>
+<tr><td><b>中性（45%）</b></td><td>节后批价 1650–1750 震荡、Q3 报表微降</td><td>股价宽幅震荡，靠 4%+ 股息率托底，等待 2027 Q1 真实开瓶与商务场景数据</td></tr>
+<tr><td class="metric-warn"><b>偏空（20%）</b></td><td>节后批价跌破 1650、三季报继续双降、限购后渠道流转放缓</td><td>估值随盈利下修被动抬升，股价再考验 1150–1200 区间（52 周低点 1131）</td></tr>
+<tr><td class="metric-negative"><b>悲观（5%）</b></td><td>宏观需求进一步走弱 + 行业价格体系再度松动</td><td>分红率预期下调，股息率锚失效，逻辑证伪</td></tr>
+</tbody>
+</table></div>
+<h3>关键跟踪指标（按重要性）</h3>
+<ol style="padding-left:20px;font-size:13.5px;">
+<li><b>中秋后批价（未来 2 周，最紧迫）：</b>9/25 节后两周内能否稳住 1700；跌破 1650 = 转型遇阻的第一信号。</li>
+<li><b>2026 三季报（10 月下旬）：</b>"动销翻倍"是否传导为收入——营收/净利同比是本年度最重要的单条数据。</li>
+<li><b>节后回收价与社会库存回流：</b>礼品酒被喝掉还是回流，回收商报价是日频先行指标。</li>
+<li><b>2026 年度分红方案：</b>分红率能否维持 75%+（股息率安全垫的制度基础）。</li>
+<li><b>融资余额与股东户数：</b>杠杆回流的持续性、筹码分散是否见顶。</li>
+</ol>
+<div class="quote">
+<b>总结（不构成投资建议）：</b>本版记录的边际变化：① 9 月动销数据（环比翻倍/同比 +20%）首次给多方提供了量化弹药，但其季节性基数需保持警惕；② 官方以限购 + 增仓把供给管理推到极致，消费品化进入收官；③ 股价反而跌回 1250，PE 19.2x、股息率 4.15%，与渠道读数的温差达到本轮最大。<b>未来两周是"批价裁决线"（节后站稳 1700 与否）的窗口期，10 月下旬三季报则是"报表验证"的终审。</b>在此之前，1250 一带的茅台是一张"下有 4% 股息 + 17x 历史低位 PE 托底、上等三季报确认"的不对称结构——但"等确认"本身就是风险：如果 Q3 继续双降，现在的一切"便宜"都会被盈利下修重新定价。多空双方的最终答案，都已进入倒计时。
+  </div>
+</div>
+<div class="footnote">
+<p><b>数据来源：</b>一手（公司 2026 年半年报、2025 年年报、分红公告、i茅台官方公告）；二手（腾讯财经行情接口、21 世纪经济报道、界面新闻、国金/国海/中信等券商观点、今日酒价/易茅时价第三方报价）；三方（雪球散户讨论、云酒头条/微酒/酒业家调研转述）；推算（PE 历史分位、TTM 净利、股息率、分红率口径）。</p>
+<p><b>免责声明：</b>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。数据截至 2026-09-21 盘中，批价与动销数据时效性强（中秋前逐日变化），请以日频渠道为准。</p>
+<p>报告生成时间：2026-09-21 · 上一版：2026-09-12</p>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0%EF%BC%88600519%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-09-21%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

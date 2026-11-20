@@ -1,0 +1,36 @@
+.issuer-mark {
+  --mark-size: 48px;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: var(--mark-size);
+  height: var(--mark-size);
+  border: 1px solid rgb(28 55 44 / 8%);
+  border-radius: 10px;
+}
+.issuer-nameplate {
+  width: calc(var(--mark-size) * 1.6);
+  padding: 3px;
+  background: white;
+  color: #58595b;
+  font: 650 calc(var(--mark-size) * .26)/1.12 var(--archive-sans);
+  text-align: center;
+}
+.issuer-logo { background: #fff; }
+.issuer-logo img { width: 82%; height: 70%; object-fit: contain; display: block; }
+.issuer-logo.issuer-wide { width: calc(var(--mark-size) * 1.6); }
+.issuer-logo.issuer-wide img { width: 90%; }
+.issuer-logo img[src$="doordash.svg"],
+.issuer-logo img[src$="anthropic.svg"],
+.issuer-logo img[src$="circle.svg"] { width: 64%; }
+.issuer-monogram {
+  font: 700 calc(var(--mark-size) * .32)/1 ui-sans-serif, system-ui, "PingFang SC", sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.035em;
+}
+.issuer-sage { background: #e5eee8; color: #2e5543; }
+.issuer-slate { background: #e9eeee; color: #35595c; }
+.issuer-copper { background: #f3eade; color: #765735; }
+.issuer-iris { background: #eceaf2; color: #584b70; }
+.issuer-navy { background: #e7edf4; color: #3d5572; }

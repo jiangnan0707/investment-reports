@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>安硕MSCI台湾ETF 2026-10-05 · 投资研究档案</title>
+<style>
+
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-1 { background: #d4edda; color: #1e5c2e; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E5%AE%89%E7%A1%95MSCI%E5%8F%B0%E6%B9%BEETF%EF%BC%88EWT%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%AE%89%E7%A1%95MSCI%E5%8F%B0%E6%B9%BEETF%EF%BC%88EWT%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-05%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">EWT <span>·</span> 2026-10-05 <span>·</span> PC 完整版</div><h1>安硕MSCI台湾ETF</h1><p>数据截至 2026-10-02 收盘 · 美股 NYSE Arca · 计价 USD · 跟踪 MSCI Taiwan 25/50 Index</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、基金速览</a></li><li><a href="#holdings">二、持仓穿透：买到的到底是什么</a></li><li><a href="#cost">三、核心指标 — 为台股敞口付了多少额外成本</a></li><li><a href="#macro">四、底层指数与宏观驱动</a></li><li><a href="#geopolitics">五、地缘政治风险</a></li><li><a href="#bull-bear">六、多空核心分歧</a></li><li><a href="#community">七、机构观点与市场情绪</a></li><li><a href="#conclusion">八、综合判断框架</a></li><li><a href="#datanotes">◉ 数据说明</a></li></ul></aside><main class="main-content report-body">
+
+<div class="card" id="reliability" style="border-left:4px solid var(--accent)">
+<h2>◉ 数据可靠性声明</h2>
+<div class="stale-warning">
+    ⚠️ <strong>时效提示：</strong>本报告价格数据截至 <strong>2026-10-02 收盘</strong>；基金规模与折溢价取自发行商 iShares 的 <strong>2026-09-29</strong> 披露；行业权重取自 <strong>2026-09-09</strong>；持仓明细截至 <strong>2026-10-02</strong>。各口径时点不同，正文均已标注。
+    <strong>本报告是 ETF 分析，不是个股分析。</strong>ETF 没有护城河、没有 PE 历史分位可供判断便宜与否、也不能做 DCF——它该看的是四件事：<strong>① 折溢价（你比净值多付/少付了多少）② 穿透后的真实暴露（名字叫「台湾」，实际买的是什么）③ 与替代品的成本差 ④ 决定底层资金进出的宏观变量</strong>。本报告按这个框架组织。
+  </div>
+<p style="margin-top:12px;font-size:13px;">
+    数据来源分级：
+    <span class="src-badge src-s">一手</span> 发行商官网/指数编制方/交易所 |
+    <span class="src-badge src-2">二手</span> 媒体/研报 |
+    <span class="src-badge src-3">三方</span> 论坛/UGC |
+    <span class="src-badge src-e">推算</span> 间接计算 |
+    <span class="src-badge src-t">时效</span> 可能过期
+  </p>
+</div>
+
+<div class="card" id="snapshot">
+<h2>一、基金速览</h2>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">项目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>全称 / 代码</td><td>iShares MSCI Taiwan ETF（<strong>EWT</strong>），纽交所 Arca 上市 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>跟踪指数</td><td><strong>MSCI Taiwan 25/50 Index</strong>——带 25%/50% 权重上限的台湾指数 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>成立日期</td><td><strong>2000-06-20</strong>（已运作 26 年） <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>费率 / 规模</td><td>总费率 <strong>0.59%</strong>；净资产 <strong>126.9 亿美元</strong>（2026-09-29：124.2 亿） <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>成分数量</td><td><strong>76 只</strong>（iShares 官方 2026-10-02）——不是「台湾加权指数」的上千只，是一只精选篮子 <span class="src-badge src-s">一手</span></td></tr>
+<tr><td>复制方式 / 分红</td><td>实物复制（持有正股）；股息率约 <strong>0.9%</strong>（普通股利），近年为每年 12 月派发 <span class="src-badge src-2">二手</span></td></tr>
+</tbody>
+</table></div>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">116.33</div><div class="label">收盘 USD<br/>（2026-10-02）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">+80.0%</div><div class="label">近一年涨幅<br/>（$64.64 → $116.33）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">+0.32%</div><div class="label">折溢价<br/>（2026-09-29，溢价）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">75.2%</div><div class="label">信息技术权重<br/>（2026-09-09）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">21.80%</div><div class="label">台积电权重<br/>（2026-10-02）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">26.27</div><div class="label">指数 PE<br/>（2026-10-05）<span class="src-badge src-2">二手</span></div></div>
+</div>
+<div class="quote">
+<strong>大白话一句话：</strong>EWT 叫「台湾 ETF」，但你实际买到的是一只<strong>以半导体为核心的台湾科技篮子</strong>——信息技术占 75%，台积电一家 21.8%，前十只占近一半。它<strong>不是</strong>台湾加权指数（那是上千只股票、台积电权重约 35%），也<strong>不是</strong>一只分散化的「新兴市场」资产。
+    它对你真正的用处只有一个，但很实在：<strong>用 0.32% 的折溢价，替代台积电 ADR 那 18–20% 的溢价</strong>。
+  </div>
+<h3>1.1 过去一年：一趟由 AI 半导体驱动的翻倍行情</h3>
+<p>从 2025 年 12 月 17 日的低点 <strong>$60.03</strong> 到 2026 年 10 月 2 日的 <strong>$116.33</strong>，EWT 涨了约 <strong>94%</strong>。行情不是匀速的——<strong>2026 年 4 月单月从 $70.92 拉到 $89.88（+27%）</strong>是起点，此后 5、6 月连续上攻至 $108.61，7 月回撤 11%，8–9 月重拾升势，10 月初创新高。</p>
+<div class="chart">
+<div class="chart-title">EWT 近一年走势（USD）· 2025-10-01 → 2026-10-02 <small>按真实交易日比例绘制 · 253 个交易日 · 数据源：Nasdaq 官方历史行情 <span class="src-badge src-s">一手</span></small></div>
+<svg style="width:100%;height:auto;display:block;" viewbox="0 0 640 240">
+<g stroke="var(--border-light)" stroke-width="1">
+<line x1="34" x2="606" y1="206" y2="206"></line>
+<line x1="34" x2="606" y1="163" y2="163"></line>
+<line x1="34" x2="606" y1="120" y2="120"></line>
+<line x1="34" x2="606" y1="77" y2="77"></line>
+<line x1="34" x2="606" y1="34" y2="34"></line>
+</g>
+<g fill="var(--text-muted)" font-size="10.5" text-anchor="end">
+<text x="28" y="210">60</text><text x="28" y="167">75</text><text x="28" y="124">90</text>
+<text x="28" y="81">105</text><text x="28" y="38">120</text>
+</g>
+<polyline fill="none" points="34.0,194.1 35.6,194.5 37.1,192.7 41.8,191.6 43.4,192.2 44.9,189.8 46.5,192.2 48.1,201.4 52.8,192.9 54.3,195.4 55.9,191.7 57.4,191.2 59.0,191.4 63.7,188.3 65.3,189.4 66.8,191.6 68.4,189.6 69.9,187.4 74.6,186.0 76.2,185.7 77.8,185.6 79.3,187.3 80.9,186.9 85.6,186.2 87.1,190.4 88.7,188.7 90.3,191.8 91.8,192.8 96.5,189.5 98.1,190.5 99.6,190.5 101.2,194.6 102.8,191.2 107.5,196.9 109.0,198.3 110.6,198.8 112.1,201.2 113.7,200.8 118.4,198.8 120.0,198.0 121.5,195.5 124.6,193.1 129.3,194.2 130.9,192.7 132.5,192.1 134.0,193.1 135.6,190.7 140.3,190.0 141.8,189.6 143.4,186.5 145.0,189.0 146.5,194.2 151.2,194.2 152.8,202.8 154.3,205.9 155.9,203.5 157.5,201.3 162.2,200.3 163.7,198.8 165.3,198.7 168.4,197.3 173.1,196.5 174.7,195.4 176.2,195.9 179.3,192.3 184.0,190.8 185.6,189.3 187.2,190.0 188.7,190.4 190.3,189.0 195.0,187.0 196.5,188.5 198.1,187.3 199.7,185.1 201.2,185.0 207.5,187.3 209.0,184.6 210.6,182.3 212.2,178.2 216.9,177.5 218.4,173.5 220.0,173.9 221.5,177.8 223.1,182.9 227.8,180.4 229.4,180.7 230.9,182.6 232.5,183.5 234.0,177.2 238.7,175.2 240.3,173.2 241.9,167.7 243.4,170.0 245.0,168.6 251.2,169.0 252.8,168.8 254.4,169.7 255.9,164.8 260.6,168.2 262.2,160.9 263.7,157.1 265.3,159.7 266.9,161.1 271.6,162.8 273.1,173.6 274.7,172.7 276.2,176.2 277.8,178.7 282.5,175.2 284.1,176.1 285.6,171.9 287.2,178.0 288.7,177.4 293.4,171.5 295.0,168.7 296.6,173.5 298.1,171.2 299.7,178.1 304.4,171.1 305.9,175.2 307.5,170.5 309.1,177.0 310.6,178.8 315.3,180.3 316.9,174.7 318.4,172.4 320.0,175.1 326.3,173.6 327.8,172.1 329.4,159.1 330.9,159.0 332.5,157.4 337.2,153.7 338.8,148.1 340.3,146.5 341.9,144.8 343.4,139.4 348.1,138.4 349.7,138.5 351.3,130.9 352.8,136.5 354.4,125.5 359.1,127.6 360.6,127.9 362.2,128.1 363.8,120.3 365.3,120.1 370.0,118.8 371.6,112.1 373.1,106.1 374.7,107.6 376.3,102.5 381.0,99.5 382.5,109.2 384.1,106.1 385.6,104.3 387.2,116.3 391.9,115.0 393.5,120.5 395.0,114.5 396.6,107.2 398.1,100.4 404.4,85.2 406.0,82.8 407.5,84.6 409.1,83.4 413.8,72.9 415.3,71.0 416.9,71.6 418.5,74.8 420.0,96.8 424.7,90.1 426.3,89.0 427.8,97.1 429.4,84.3 431.0,83.8 435.7,73.1 437.2,80.5 438.8,76.7 440.3,62.7 446.6,58.3 448.2,76.3 449.7,77.8 451.3,77.3 452.8,83.3 457.5,74.7 459.1,66.7 460.7,75.0 462.2,77.4 468.5,70.5 470.0,85.9 471.6,80.2 473.2,76.9 474.7,73.6 479.4,85.9 481.0,85.9 482.5,84.2 484.1,90.9 485.7,99.0 490.3,103.0 491.9,89.7 493.5,86.5 495.0,91.8 496.6,97.0 501.3,97.6 502.9,108.7 504.4,121.7 506.0,108.5 507.5,101.2 512.2,97.1 513.8,85.0 515.4,86.5 516.9,85.7 518.5,82.5 523.2,85.1 524.7,80.0 526.3,73.6 527.9,69.8 529.4,71.1 534.1,69.0 535.7,78.7 537.2,77.9 538.8,79.7 540.4,79.0 545.0,81.8 546.6,75.9 548.2,73.0 549.7,66.6 551.3,68.7 556.0,68.3 557.6,63.4 559.1,64.3 560.7,62.3 562.2,56.4 568.5,58.3 570.1,57.6 571.6,65.8 573.2,60.1 577.9,70.7 579.4,72.2 581.0,67.3 582.6,60.8 584.1,58.0 588.8,46.5 590.4,48.0 591.9,55.5 593.5,53.8 595.1,49.0 599.7,50.7 601.3,50.9 602.9,54.4 604.4,54.7 606.0,44.5" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></polyline>
+<circle cx="34.0" cy="194.1" fill="var(--text-muted)" r="3.4"></circle>
+<circle cx="154.3" cy="205.9" fill="var(--red)" r="3.6"></circle>
+<circle cx="606.0" cy="44.5" fill="var(--green)" r="3.8"></circle>
+<g font-size="10.5" font-weight="700">
+<text fill="var(--text-muted)" x="40" y="188">起点 $64.14</text>
+<text fill="var(--red)" x="118" y="220">12/17 低 $60.03</text>
+<text fill="var(--green)" x="512" y="36">10/2 新高 $116.33</text>
+</g>
+<g fill="var(--text-muted)" font-size="10" text-anchor="middle">
+<text x="34" y="234">25/10</text><text x="180" y="234">26/1</text><text x="330" y="234">26/4</text>
+<text x="480" y="234">26/7</text><text x="606" y="234">26/10</text>
+</g>
+</svg>
+<span class="caveat-inline">两个可读的形态：<strong>① 涨幅集中在两段</strong>——2026 年 4 月（+27%）与 8–10 月（+21%），中间有 3 月和 7 月两次约 −11% 的回撤；<strong>② 波动是真实的</strong>：253 个交易日里只有 2 天单日涨跌超 6%，绝大多数日子在 ±2% 内，但一年下来累计振幅近 2 倍。这条曲线看起来「毛刺多」不是数据问题，是把 253 天压进 572 像素的正常结果。<span class="src-badge src-s">一手</span> Nasdaq</span>
+</div>
+</div>
+
+<div class="card" id="holdings">
+<h2>二、持仓穿透：买到的到底是什么</h2>
+<h3>2.1 前十大持仓：一半的仓位压在少数几只票上<span class="src-badge src-s">一手</span></h3>
+<p>截至 2026-10-02，前十大持仓合计 <strong>49.41%</strong>。其中八只是半导体或电子硬体，两只（南亚塑胶、以及随后出现的金融股）才属于其他行业。</p>
+<div class="chart">
+<div class="chart-title">前十大持仓权重 <small>2026-10-02 · 占基金净资产比例 <span class="src-badge src-s">一手</span> iShares / 持仓明细</small></div>
+<div class="bar-row"><div class="bar-label"><strong>台积电</strong> 2330</div><div class="bar-track"><div class="bar-fill c-main" style="width:100%"></div></div><div class="bar-value">21.80%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>联发科</strong> 2454</div><div class="bar-track"><div class="bar-fill c-main" style="width:32.7%"></div></div><div class="bar-value">7.13%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>台达电</strong> 2308</div><div class="bar-track"><div class="bar-fill c-main" style="width:17.6%"></div></div><div class="bar-value">3.84%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>鸿海</strong> 2317</div><div class="bar-track"><div class="bar-fill c-main" style="width:14.6%"></div></div><div class="bar-value">3.18%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>日月光投控</strong> 3711</div><div class="bar-track"><div class="bar-fill c-main" style="width:13.6%"></div></div><div class="bar-value">2.96%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>欣兴电子</strong> 3037</div><div class="bar-track"><div class="bar-fill c-main" style="width:10.9%"></div></div><div class="bar-value">2.38%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>联电</strong> 2303</div><div class="bar-track"><div class="bar-fill c-main" style="width:10.5%"></div></div><div class="bar-value">2.29%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>南亚塑胶</strong> 1303</div><div class="bar-track"><div class="bar-fill c-warn" style="width:9.6%"></div></div><div class="bar-value">2.10%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>精英材料</strong> 2383</div><div class="bar-track"><div class="bar-fill c-main" style="width:8.9%"></div></div><div class="bar-value">1.94%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>奇鋐科技</strong> 3017</div><div class="bar-track"><div class="bar-fill c-main" style="width:8.2%"></div></div><div class="bar-value">1.79%</div></div>
+<span class="caveat-inline">绿色＝半导体/电子硬体，橙色＝非电子（南亚塑胶属材料/塑化）。<strong>台积电一家 21.80%，是第二名的 3 倍</strong>——你买 EWT，本质上是「21.8% 的台积电 + 28% 的其他台股电子链 + 约 50% 的长尾」。<span class="src-badge src-s">一手</span></span>
+</div>
+<h3>2.2 行业权重：这是半导体 ETF，不是「台湾大盘」<span class="src-badge src-s">一手</span></h3>
+<div class="chart">
+<div class="chart-title">行业权重构成 <small>2026-09-09 · 占基金市值比 <span class="src-badge src-s">一手</span> iShares 官方披露</small></div>
+<div class="stacked-bar">
+<div class="c-main" style="width:75.16%">信息技术 75.16%</div>
+<div class="c-sub" style="width:14.34%">金融 14.34%</div>
+<div class="c-warn" style="width:3.69%">材料 3.69%</div>
+<div style="width:6.81%;background:#c8d6cc;color:#33513f;display:flex;align-items:center;justify-content:center;font-size:11px;">其他 6.81%</div>
+</div>
+<span class="caveat-inline">其他 = 工业 2.65% + 通信服务 1.61% + 其余零散行业 2.55%。<strong>信息技术 75.16% 意味着这只 ETF 的涨跌几乎完全由半导体与电子硬体决定</strong>；金融股的 14.34% 提供了有限的缓冲，但不足以改变资产性质。相较之下，台湾加权指数（TAIEX）的电子类权重约六成——<strong>EWT 比台湾大盘更集中于科技</strong>。<span class="src-badge src-e">推算</span>（MSCI 25/50 为上限编制，结构上必然偏大盘科技股）</span>
+</div>
+<h3>2.3 三件容易被忽略的事</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:24%">容易误解的点</th><th>实际情况</th></tr></thead>
+<tbody>
+<tr>
+<td>「买台湾 ETF 就分散了」</td>
+<td><strong>不成立。</strong>信息技术 75%、前十占 49%、台积电 21.8%——你买的是一只高集中度的单一行业篮子。它与费城半导体指数（SOX）的相关性，会远高于它与「新兴市场」的相关性。</td>
+</tr>
+<tr>
+<td>「EWT 就是台积电」</td>
+<td><strong>也不完全对。</strong>台积电 21.8% 是 MSCI 25/50 规则<strong>上限压缩后</strong>的结果——在台湾加权指数里台积电权重约 35%+。所以<strong>EWT 相对于台湾大盘是「低配台积电」的</strong>。如果你想精确表达「看好台积电」，EWT 反而会稀释你的判断；如果不想让单一公司占三成仓，这个上限是优点。</td>
+</tr>
+<tr>
+<td>「76 只成分＝分散」</td>
+<td>76 只听起来比 0050 的 50 只多，但<strong>有效分散度取决于权重分布</strong>：台积电 21.8% + 联发科 7.1% 已占近三成，其余 79 只分剩下的七成，其中大量是权重 0.5% 以下的长尾。<strong>第 20 名之后的持仓对净值几乎没有影响。</strong></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="cost">
+<h2>三、核心指标 — 为台股敞口付了多少额外成本</h2>
+<h3>3.1 为什么「成本」才是这只 ETF 的核心指标</h3>
+<p>对一只跟踪指数的 ETF，你无法通过"选股"创造超额收益——<strong>你能控制的只有成本</strong>。而 EWT 在这个维度上有一个非常特殊的处境：它的<strong>替代品（台积电 ADR，TSM）贵了约 20%</strong>。这使它成为本次对话的起点，也使它成为整份报告里最值得量化的那件事。</p>
+<div class="chart">
+<div class="chart-title">同一份台积电敞口，三条路径的成本 <small>溢价＝相对对应净值的偏离 · 单位为占投资额的比例 <span class="src-badge src-e">推算</span></small></div>
+<div class="bar-row"><div class="bar-label"><strong>TSM ADR</strong><br/><span style="font-size:11px;color:var(--text-muted)">相对台股正股</span></div><div class="bar-track"><div class="bar-fill c-warn" style="width:100%"></div></div><div class="bar-value">+20.5%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>EWT</strong><br/><span style="font-size:11px;color:var(--text-muted)">相对基金净值</span></div><div class="bar-track"><div class="bar-fill c-main" style="width:1.6%"></div></div><div class="bar-value">+0.32%</div></div>
+<span class="caveat-inline"><strong>这两个数字性质不同，但都真实扣你的钱</strong>：ADR 溢价是你买入时就"多付"的价差（且它未必收敛）；ETF 折溢价是二级市场价格相对净值的偏离（对大型开放式 ETF 通常很小，且可申赎套利会拉平）。<strong>20.5% ÷ 0.32% ≈ 64 倍</strong>——这就是「用 EWT 替代 TSM」在买入瞬间省下的量级。<br/>
+<strong>ADR 溢价的算法</strong>（可自行复核）：2330.TW 2026-10-02 收 NT$2,500 → 1 ADR = 5 股 = NT$12,500 → 按 USDTWD 31.87 折 <strong>$392.20</strong>；TSM ADR 同日收 <strong>$472.78</strong> → 溢价 <strong>+20.5%</strong>。<span class="src-badge src-s">一手</span> 台股收盘价来自台湾证交所；ADR 价来自 Nasdaq；汇率来自公开汇率 API<br/><strong>EWT 的折溢价另有一个独立印证</strong>：Yahoo Finance 显示其 NAV 为 <strong>$116.23</strong>，与 2026-10-02 收盘价 $116.33 相比，隐含折溢价 <strong>+0.09%</strong>——与发行商口径的 +0.32%（9-29）同属「几乎贴着净值」的量级，说明这个数字是稳的，不是某个日期的偶发。</span>
+</div>
+<h3>3.2 但这个「省下 20%」有一个前提条件</h3>
+<p class="caveat-inline">ADR 溢价衡量的是<strong>「同一份台积电」</strong>的价格差。而 EWT 给你的<strong>不是同一份东西</strong>——台积电只占它 21.8%，另外 78.2% 是联发科、鸿海、台达电、金融股等。所以严格说：<strong>你没有"省下 20% 买到同样的东西"，而是"用接近净值的价格买到了一个不同的篮子"</strong>。如果你的目标只是台积电，EWT 会显著稀释它；如果你的目标是「台湾科技链整体」，ADR 本来就不是对标的工具。</p>
+<h3>3.3 费率：EWT 在这个维度上并不便宜 <span class="src-badge src-s">一手</span></h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:26%">产品</th><th style="width:16%">总费率</th><th style="width:18%">规模</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>EWT</strong>（iShares MSCI Taiwan）</td><td class="metric-warn"><strong>0.59%</strong></td><td>126.9 亿美元</td><td>本报告标的；成立 2000 年，流动性最好</td></tr>
+<tr><td><strong>FLTW</strong>（Franklin FTSE Taiwan）</td><td class="metric-positive"><strong>0.19%</strong></td><td>约 37.5 亿美元</td><td>同类中费率最低；跟踪 FTSE Taiwan（非 MSCI）</td></tr>
+<tr><td>TSM ADR（单一股票）</td><td>0%</td><td>—</td><td>无管理费，但承担约 20% 的 ADR 溢价</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>0.59% 是一个需要解释的数字</strong>：对一只美国上市的新兴市场单一国家 ETF，这个费率偏高（同类常在 0.4–0.6%，而 FLTW 用 0.19% 就能做到）。它的合理性建立在<strong>流动性</strong>上——EWT 日均成交约 730 万股、规模 126.9 亿美元，这是 FLTW 无法比的。<strong>代价是每年固定 0.59% 的拖累</strong>：持有 5 年约损耗 2.9%（未计复利），10 年约 5.7%。相比省下的 20.5% 溢价，这笔账在买入瞬间就赚回来了——<strong>但要明确：费率是每年付，溢价是一次性省</strong>。<span class="src-badge src-s">一手</span> iShares / <span class="src-badge src-2">二手</span> FLTW 数据来自发行商与第三方数据源</p>
+<h3>3.4 股息与税务：还有一层 21% 的隐性成本</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:26%">环节</th><th>机制</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>台湾端预扣</strong></td>
+<td>台湾对<strong>非居民</strong>的股利所得按 <strong>21%</strong> 扣缴。EWT 作为外资持有台股，在<strong>基金层面</strong>就要先被扣掉这 21%——你收到的派息是税后金额。<span class="src-badge src-s">一手</span> 台湾财政部（mof.gov.tw）</td>
+</tr>
+<tr>
+<td><strong>基金派息</strong></td>
+<td>EWT 的<strong>经常性股息率约 0.9%</strong>。⚠️ <strong>这里有一个容易被数据平台误导的地方</strong>：2025-12-16 那次派发合计 <strong>$2.816/股</strong>，但其中 <strong>$1.796 是长期资本利得分配</strong>、只有 <strong>$1.014 是普通股利</strong>。部分数据平台把两者相加得出"股息率 2.42%"——<strong>那是一次性的资本利得，不是可持续的收益</strong>。按普通股利计算并经台湾端 21% 预扣后，净收益率更低。<span class="src-badge src-2">二手</span></td>
+</tr>
+<tr>
+<td>美国端</td>
+<td>EWT 是美国注册基金，向非美国居民派息通常还需按美国规则预扣（税率取决于你的税务居民身份与能否适用税收协定）。<strong>这一层本报告未能核实到适用于大陆居民的确定税率，建议自行确认。</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>对这只 ETF 而言，股息不是重点</strong>：0.9% 的经常性股息率相对近一年 80% 的涨幅可以忽略（这也是它<strong>不适合当收息工具</strong>的原因）。但如果你是为收息而配置，<strong>21% 的台湾预扣 + 可能的美国预扣会吃掉相当一部分</strong>——这种情况下港股版（03074）在税务链条上更短。<span class="src-badge src-2">二手</span></p>
+</div>
+
+<div class="card" id="macro">
+<h2>四、底层指数与宏观驱动</h2>
+<h3>4.1 跟踪的是什么指数</h3>
+<p>EWT 跟踪 <strong>MSCI Taiwan 25/50 Index</strong>。名字里的「25/50」是权重上限规则：<strong>单一成分股不超过 25%，权重超过 5% 的成分股合计不超过 50%</strong>。这条规则正是台积电权重被压到 21.8%（而非台湾加权指数里的约 35%）的原因。</p>
+<p class="caveat-inline"><strong>「capped（有上限）」这件事有两个后果</strong>：① 好消息是它避免了单一公司占三成仓的极端集中；② 坏消息是<strong>它让 EWT 在台积电大涨时系统性跑输台湾加权指数</strong>——如果台积电是领涨主力（过去一年正是如此），上限机制会持续拖累相对表现。好在实测差距很小（见 4.3）。<span class="src-badge src-e">推算</span></p>
+<h3>4.2 决定这只 ETF 的宏观变量</h3>
+<p>ETF 不做个股式财务分析，但要找出<strong>决定国际资金进出这个市场的 1–3 个变量</strong>。对台湾，排在最前面的只有一个。</p>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">变量</th><th style="width:26%">为什么它决定 EWT</th><th>看什么信号</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>① AI 半导体资本开支周期</strong><br/><span class="src-badge src-2">二手</span></td>
+<td><strong>这是第一位的变量，且与其他变量不在一个量级。</strong>信息技术占 EWT 75%，台积电 21.8%、联发科 7.1%、日月光 3.0%、联电 2.3%——它们共同的上游需求是<strong>全球 AI 训练/推理的算力资本开支</strong>。台股这一轮 +80% 的行情，本质是 AI 链条对台湾代工、封测、IC 设计、电源与散热的全面拉动。</td>
+<td>台积电月度营收与法说会指引；先进封装（CoWoS 等）产能扩张；主要云厂商的资本开支指引；AI 服务器出货量</td>
+</tr>
+<tr>
+<td><strong>② 美元与新台币汇率</strong><br/><span class="src-badge src-2">二手</span></td>
+<td>台湾是出口导向经济体，新台币走弱通常利于出口企业报表；同时<strong>美元强弱决定外资（FINI）进出新兴市场的意愿</strong>。对持有 EWT 的美国投资者，台币贬值会直接吃掉美元计价的收益。</td>
+<td>USD/TWD 汇率；美联储利率路径与美元指数；外资在台股的净买卖超</td>
+</tr>
+<tr>
+<td><strong>③ 台海地缘政治</strong><br/><span class="src-badge src-3">见第五章</span></td>
+<td>它不是日常波动的来源，但<strong>是唯一的尾部风险</strong>——一旦兑现，前面两个变量都不重要。这是持有台湾资产与持有其他新兴市场最本质的区别。</td>
+<td>见第五章的地缘政治专章</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4.3 基准对比：过去一年它赢得很彻底</h3>
+<div class="chart">
+<div class="chart-title">近一年总回报对比 <small>2025-10-01 → 2026-10-02 · 价格回报，不含股息 <span class="src-badge src-s">一手</span> Nasdaq 官方历史行情</small></div>
+<div class="bar-row"><div class="bar-label"><strong>EWT</strong><br/><span style="font-size:11px;color:var(--text-muted)">本报告标的</span></div><div class="bar-track"><div class="bar-fill c-main" style="width:98.8%"></div></div><div class="bar-value">+80.0%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>标普500</strong><br/><span style="font-size:11px;color:var(--text-muted)">SPY 代理</span></div><div class="bar-track"><div class="bar-fill c-main" style="width:18.6%"></div></div><div class="bar-value">+15.1%</div></div>
+<div class="bar-row"><div class="bar-label"><strong>沪深300</strong><br/><span style="font-size:11px;color:var(--text-muted)">A 股宽基</span></div><div class="bar-track"></div><div class="bar-value" style="color:var(--red)">−7.5%（负回报，无正向柱）</div></div>
+<span class="caveat-inline">三个可读的结论：<strong>① 它跑赢标普500 约 65 个百分点</strong>；<strong>② 同期沪深300 是负回报</strong>——对内地投资者，过去一年台湾敞口与 A 股敞口几乎没有正相关可言，纯粹是方向性差异；<strong>③ 涨幅高度集中于半导体</strong>（见 2.2 的 75% 信息技术权重）。<br/>EWT / SPY 涨幅为 <span class="src-badge src-s">一手</span> 逐日收盘价计算（Nasdaq 官方）；沪深300 起止日为 2025-10-09 → 2026-09-30。<strong>台湾加权指数未列入本图</strong>：其近一年涨幅在不同来源间为 +81% 至 +86%（口径与汇率处理不一），而 2026 年 YTD 为 <strong>+67.4%</strong>（2025 年末封关 28,963.60 → 10/05 收 49,666.41，据二手数据推算）。<strong>EWT 与台湾大盘走势高度同步</strong>，但精确差值请以编制方口径复核。</span>
+</div>
+<h3>4.4 估值：PE 26.3 倍，需要和盈利增速一起看</h3>
+<p>MSCI 台湾指数的滚动 PE 约 <strong>26.27 倍</strong>（2026-10-05）。单看这个数字"偏贵不偏贵"没有意义——对一个由 AI 半导体驱动的市场，<strong>关键是盈利增速能否跟上</strong>：如果台积电及其供应链的盈利以 30%+ 增长，26 倍 PE 会被快速消化；如果 AI 资本开支见顶，26 倍就是高位。</p>
+</div>
+
+<div class="card" id="geopolitics">
+<h2>五、地缘政治风险</h2>
+<p><strong>触发条件核对：</strong>台湾资产是「地缘政治风险」这个词的定义性案例——不是因为它身处敏感行业，而是因为<strong>它的政治地位本身就是全球市场持续定价的变量</strong>。因此本章不是「有没有地缘风险」的讨论，而是<strong>「这个风险现在被定价了多少、以及它值多少钱」</strong>。</p>
+<h3>5.1 已经发生的事（不是推演）<span class="src-badge src-2">二手</span>（经多源交叉）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">时间</th><th>事件</th></tr></thead>
+<tbody>
+<tr><td>2022-08 起</td><td>累计 <strong>7 次</strong>「围台」军演。2025 年两次：4 月「<strong>海峡雷霆-2025A</strong>」、12 月「<strong>正义使命-2025</strong>」——后者划设 5 个演训区、部分贴近台湾 12 海里基线，禁航范围被称为「史上最大」，实质干扰本岛—离岛海空交通。</td></tr>
+<tr><td>2026 年以来</td><td>以<strong>常态化「联合战备警巡」</strong>为主，未查到新的命名环台军演。例：2026-09-30 有 15 架次军机越过海峡中线；9-18 单日峰值 28 架次（台防务部门每日公布）。</td></tr>
+<tr><td>经济工具</td><td>中止 <strong>146 项 ECFA 货品优惠关税</strong>；对「台独企业」制裁、反倾销等工具化使用。</td></tr>
+<tr><td>美国侧</td><td><strong>2025-12-17/18：约 111 亿美元对台军售（史上最大单笔）</strong>；2026-03 台立院授权先签 4 项发价书；2026-09-23 美批准近 7 亿美元先进导弹系统。军售<strong>交付积欠约 215 亿美元</strong>。</td></tr>
+<tr><td>芯片政策</td><td><strong>2026-01-14 美国对进口半导体/设备征 232 条款关税，台湾适用 15%</strong>（不叠加 MFN）；赴美设厂可豁免。台积电在美投资由 1,650 亿美元<strong>增至约 4,650 亿美元</strong>。</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline">⚠️ 有一处<strong>未能核实</strong>：检索中出现 2026-09-30 外媒关于「环台军演」的标题，但<strong>无法确认演习代号与日期，疑与 2025-12 的演习报道混同</strong>，故未写入上表。</p>
+<h3>5.2 市场现在为它定价了多少：四个可观测的信号</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:26%">信号</th><th>当前读数</th><th style="width:16%">来源等级</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>台积电 ADR 溢价</strong></td>
+<td><strong>18–22%</strong>（2026 年以来持续；季度均值创 2009 年以来最高，春节期间一度达 30%）。有卖方（摩根士丹利、高盛）把这一溢价解读为<strong>地缘风险的定价载体</strong>——即境外投资者为持有台湾资产所要求的额外补偿。</td>
+<td><span class="src-badge src-3">三方转述二手</span></td>
+</tr>
+<tr>
+<td><strong>外资持股占台股市值</strong></td>
+<td>2025 年末 <strong>45.40%</strong> → 2026-04-27 一度触及 <strong>49.99%</strong> → 2026-06-02 为 49.14%（金管会口径）。<strong>接近一半的台股市值由外资持有</strong>——这既是「硅盾」的资金面支撑，也是冲突情景下最脆弱的资金。</td>
+<td><span class="src-badge src-s">一手</span> 金管会</td>
+</tr>
+<tr>
+<td><strong>台版恐慌指数 VIXTWN</strong></td>
+<td>2026-03-03 冲上 <strong>32.42</strong>，为 2025-05 以来最高（当月发生外资单月卖超 9,683 亿元、史上第一）。平时低位运行——<strong>说明地缘风险是「脉冲式」而非「持续溢价」</strong>。</td>
+<td><span class="src-badge src-2">二手</span></td>
+</tr>
+<tr>
+<td><strong>国安基金护盘</strong></td>
+<td>2025-04-09 进场护盘，<strong>2026-01-12 决议退场（护盘 279 天，史上最长）</strong>，5 月全数出清，其中约 63% 资金投在台积电。这条说明<strong>台湾当局有明确的股市维稳工具箱，且实际使用过</strong>。</td>
+<td><span class="src-badge src-s">一手</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.3 尾部情景的规模：为什么这是「不能分散掉」的风险</h3>
+<div class="quote">
+<strong>三个数字说明这条风险的量级：</strong><br/>
+    ① 外资持有台湾股债加台币存款合计约 <strong>1.9 万亿美元</strong>（台湾央行 2026-05 口径，相当于台湾外汇存底的 313%）；<br/>
+    ② 若按台股总市值约 4.95 万亿美元 × 外资持股约 49% 估算，<strong>外资持有的台股市值约 2.4 万亿美元</strong>（<span class="src-badge src-e">推算</span>）；<br/>
+    ③ Bloomberg 2024 年的情景推演估计，台海冲突的<strong>全球经济损失约 10 万亿美元（约全球 GDP 的 10%）</strong>。
+  </div>
+<p class="caveat-inline"><strong>对 EWT 持有者的具体含义</strong>：EWT 是外资持有台股的一条通道。在极端情景下，它面临的不是「净值下跌」这一个问题，而是<strong>① 台湾市场可能停市或限制交易 ② 资金汇出可能受限 ③ EWT 作为美国上市 ETF 会出现巨大的折价（因为标的资产无法交易或转移）</strong>。这不是理论担忧——2022 年俄乌冲突后，持有俄罗斯资产的 ETF 就经历过从「净值归零」到「无法赎回」的完整链条。<strong>ETF 结构无法对冲主权级别的市场关闭风险。</strong><span class="src-badge src-e">推算</span></p>
+<h3>5.4 传导强度排序与监测清单</h3>
+<div class="quote">
+<strong>一句话排序：</strong>日常波动由 <strong>AI 半导体周期</strong>决定（占 75% 权重的信息技术）；地缘风险<strong>平时被市场忽略、脉冲式爆发</strong>；但一旦兑现，它是唯一能让前面所有分析失效的变量——<strong>且 EWT 的 ETF 结构并不能保护你</strong>。
+  </div>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:34%">监测信号</th><th>看什么</th></tr></thead>
+<tbody>
+<tr><td>① 台积电 ADR 溢价的变化</td><td>当前 18–22%。<strong>若溢价显著扩大，说明地缘担忧在上升</strong>（境外投资者要求更多补偿）；若持续收窄，说明风险偏好在改善。这是一个<strong>高频、可实时观察的地缘温度计</strong>。</td></tr>
+<tr><td>② 外资净买卖超与净汇入</td><td>2026 年至 7/24 累计卖超已破 1.61 兆元（史上单年新高，口径有分歧）；8 月单月转为净汇入 167 亿美元。<strong>转向的持续性比单月数字更重要。</strong></td></tr>
+<tr><td>③ 军演命名与演训区范围</td><td>关注是否有新的命名演习、演训区是否进一步贴近本岛、是否涉及实弹与禁航。</td></tr>
+<tr><td>④ 台湾当局维稳工具的动用</td><td>国安基金是否再度进场（2026-03 崩盘时财长称须符合法定条件并经委员会决议，<strong>未见 2026 年再次进场的确证</strong>）。</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<div class="card" id="bull-bear">
+<h2>六、多空核心分歧</h2>
+<div class="two-col">
+<div class="box-green">
+<h4><span class="tag tag-bull">多方逻辑</span></h4>
+<ol>
+<li><strong>AI 周期是真实的、且数字很硬</strong>：台积电 2026 年 8 月营收 5,148.6 亿元（<strong>+53.3% YoY，单月首破 5,000 亿</strong>），1–8 月累计 +39.3%；全年美元营收增速指引上调至约 <strong>40%</strong>，资本支出上调至 <strong>600–640 亿美元</strong>。这不是叙事，是已公布的报表。</li>
+<li><strong>台湾出口是这台机器的读数</strong>：2026 年 8 月出口 824 亿美元（<strong>+41.0% YoY，连 34 个月正成长</strong>），其中电子零组件首破 300 亿美元（+58.0%）；电子＋资通合计占 1–8 月出口 <strong>78.7%</strong>。</li>
+<li><strong>宏观基本面被连续上修</strong>：台湾央行 2026-09 把全年 GDP 预测上修至 <strong>11.48%</strong>（2027 年 5.82%），Q1 实际 +14.55%；政策利率维持 2.000%（连 10 冻），无加息压力。</li>
+<li><strong>相对 TSM ADR 有 20 个百分点的成本优势</strong>：EWT 折溢价 +0.32%，ADR 溢价约 +20.5%。买入瞬间的价差是实打实的。</li>
+<li><strong>「硅盾」提供了非经济层面的支撑</strong>：台积电全球产能的不可替代性，使各方都有动机避免台海现状被打破；外资持股近半即是这一逻辑的资金面体现。</li>
+</ol>
+</div>
+<div class="box-red">
+<h4><span class="tag tag-bear">空方逻辑</span></h4>
+<ol>
+<li><strong>集中度已经不是「风险」而是「结构」</strong>：台积电在台湾加权指数占 <strong>41.12%</strong>、在未设上限的 MSCI 台湾指数占 <strong>54.00%</strong>；2026 年以来多次出现「台积电独涨、逾 1,300 家收黑」。<strong>EWT 的 21.8% 上限反而使它系统性跑输大盘的领涨主力。</strong></li>
+<li><strong>估值已到长期区间上缘</strong>：台股大盘 PE 约 25.6 倍、PB <strong>4.03 倍</strong>（长期常态约 1.6–1.9 倍）、现金殖利率仅 1.60%；MSCI 台湾 25/50 指数 PE 28.41 倍。有本地研究指出三项指标「全部超出长期区间上缘」。</li>
+<li><strong>杠杆创历史新高</strong>：台股融资余额 2026 年 6 月底<strong>突破 8,000 亿元</strong>，为历史最高。杠杆资金在回撤中会放大跌幅。</li>
+<li><strong>暴跌已经发生过，且不止一次</strong>：<strong>2026-07-17 台股单日跌 2,953.71 点（史上最大跌点）</strong>，收 42,671.27，当日外资卖超 1,890 亿元（史上最大）；2026-03-09 亦跌 1,489 点。两次都发生在「AI 泡沫疑虑」的语境下。</li>
+<li><strong>外资在做结构性减持</strong>：2026 年至 7/24 累计卖超突破 1.61 兆元（史上单年新高）。其中台积电一档卖超逾 1.62 兆元——<strong>部分原因是外资因持股比例上限被迫减持，属机械性卖出，与基本面无关</strong>，但价格影响是真实的。</li>
+<li><strong>地缘尾部风险无法分散</strong>：见第五章。ETF 结构不能对冲市场关闭风险。</li>
+</ol>
+</div>
+</div>
+<p style="margin-top:20px;"><strong>核心争议焦点：</strong>① <strong>AI 资本开支的可持续性</strong>——台积电把资本支出上调到 600–640 亿美元是「需求确定」的证据，还是「周期顶部扩张」的信号？这是全部多空分歧的根；② <strong>26–28 倍 PE 是否已透支</strong>——需要盈利增速持续 30%+ 才能消化；③ <strong>地缘风险该不该被定价</strong>——它现在是脉冲式的，还是应该在估值里长期折价？<strong>裁决指标：</strong>台积电月度营收与法说指引、云厂商资本开支指引、外资净买卖超的持续性、融资余额是否继续攀升。</p>
+</div>
+
+<div class="card" id="community">
+<h2>七、机构观点与市场情绪</h2>
+<h3>7.1 外资：从史上最大卖超到转向买超</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:22%">期间</th><th>外资（FINI）动向</th></tr></thead>
+<tbody>
+<tr><td>2026-01 / 02</td><td>买超 87 亿 / 1,259 亿元</td></tr>
+<tr><td>2026-03</td><td class="metric-negative"><strong>卖超 9,683 亿元——史上第一大单月卖超</strong>（背景：美伊战事）。当月 VIXTWN 冲上 32.42</td></tr>
+<tr><td>2026-04 / 05</td><td>各买超逾 2,000 亿元（回补）</td></tr>
+<tr><td>2026-06</td><td class="metric-negative">再转为卖超 6,017 亿元</td></tr>
+<tr><td>累计至 2026-07-24</td><td class="metric-negative"><strong>累计卖超突破 1.61 兆元</strong>（史上单年新高）</td></tr>
+<tr><td>2026-08</td><td class="metric-positive">8/5 单日买超 903.08 亿元（<strong>史上第 3 大</strong>）；单月<strong>净汇入 167 亿美元</strong></td></tr>
+<tr><td>2026-09</td><td><strong>未取得确证</strong>——9 月数据由金管会于 10-05 公布，本报告撰写时未见具体数</td></tr>
+</tbody>
+</table></div>
+<h3>7.2 散户杠杆：融资余额创历史新高</h3>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">8,000亿+</div><div class="label">台股融资余额<br/>（2026-06 底，历史新高）<span class="src-badge src-s">一手</span></div></div>
+<div class="summary-item"><div class="value">1.60%</div><div class="label">台股现金殖利率<br/>（大盘，2026-08）<span class="src-badge src-2">二手</span></div></div>
+<div class="summary-item"><div class="value">4.03倍</div><div class="label">台股 PB<br/>（长期常态约 1.6–1.9 倍）<span class="src-badge src-2">二手</span></div></div>
+<div class="summary-item"><div class="value">279天</div><div class="label">上一轮国安基金护盘时长<br/>（2025-04 至 2026-01，史上最长）<span class="src-badge src-s">一手</span></div></div>
+</div>
+<p class="caveat-inline">杠杆、低殖利率、高 PB 三项同时出现，是典型的<strong>行情后段特征</strong>——它们不构成「见顶」的证据（牛市可以在这种状态下持续很久），但它们说明<strong>这个市场的下行缓冲很薄</strong>：融资盘在回撤中会被强制平仓，而 1.6% 的殖利率提供不了收益托底。</p>
+<h3>7.3 社区讨论：Reddit（美股投资者的台湾敞口）<span class="src-badge src-3">三方</span></h3>
+<p><strong>样本说明：</strong>EWT 的讨论主体是<strong>美国/国际投资者</strong>（它是美股 ETF），不是中国散户。本节取自 Reddit 的 RSS 端点，覆盖 2025-10 至 2026-09 的相关讨论。<strong>Reddit 对本机限流严重（约 2–3 次请求成功 1 次）</strong>，因此多数帖子只取到标题与首帖摘要，仅其中一个帖取到完整评论——下文已逐条标明<strong>哪条是完整讨论、哪条只有标题</strong>。</p>
+<div class="quote">
+<p><strong>一个完整的多空对撞（r/ETFs，2026-04-14，标题「$EWT Taiwan ETF surges to all-time highs」）：</strong></p>
+<p style="margin-top:8px;">发帖人：「台积电是它最大持仓，EWT 本周继续创历史新高。」</p>
+<p style="margin-top:6px;">评论一（地缘派）：「<em>hmm I wonder why. 我本以为美国把军事资产从台湾调往中东、加上中国措辞强硬，会让台股下跌。</em>」</p>
+<p style="margin-top:6px;">评论二（基本面派）：「<em>你是不是想太多了？台积电涨是因为先进封装需求增加，鸿海涨是因为 AI 服务器组件扩张，联发科是和 Google 合作后大涨。</em>」</p>
+<p style="margin-top:6px;">评论一：「<em>好吧——但你这回答跟 EWT 上涨没有关系。</em>」</p>
+<p style="margin-top:8px;"><strong>这段对话本身就是本报告 5.4 节的民间版本</strong>：地缘派认为政治事件应该主导价格，基本面派认为 AI 资本开支才是定价变量。<strong>过去一年的实际结果是基本面派赢了</strong>——但也正因为如此，地缘风险在股价里没有被定价，这恰恰是尾部风险的来源。</p>
+</div>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:14%">时间</th><th style="width:34%">帖子标题</th><th>反映的情绪</th></tr></thead>
+<tbody>
+<tr><td>2026-02-25</td><td>「Lifeboats (ETF) in case of Chinese invasion of Taiwan」（r/investing）<span class="src-badge src-3">仅标题+首帖</span></td><td><strong>地缘恐惧是真实存在的散户议题。</strong>首帖：「我刚读到中国可能在 2027 年入侵台湾的说法，想搞清楚那会对市场造成什么影响。」</td></tr>
+<tr><td>2026-02-13</td><td>「Taiwan im Faktor-Check: iShares MSCI Taiwan ETF – Halbleiter-Wette oder unterschätzter Qualitäts-ETF」（r/ProFactorInvest，德语）<span class="src-badge src-3">仅标题</span></td><td><strong>「半导体赌注，还是被低估的优质 ETF？」</strong>——标题本身就抓住了 EWT 的身份争议，与本报告第二章结论一致。</td></tr>
+<tr><td>2026-04-14</td><td>「$EWT Taiwan ETF surges to all-time highs」（r/ETFs）<span class="src-badge src-3">完整讨论</span></td><td><strong>追高情绪 + 上述多空对撞。</strong>发帖以「创历史新高」为卖点，属典型的动量型发帖。</td></tr>
+<tr><td>2026-05-14</td><td>「Is there a good mutual fund concentrating on Taiwan or any semi conductor ETFs where i can invest?」（r/IndianStreetBets）<span class="src-badge src-3">仅标题</span></td><td><strong>有人在主动寻找台湾敞口的载体</strong>——说明这类需求存在，但投资者对「用什么工具」并不清楚。</td></tr>
+<tr><td>2026-06-28</td><td>「MSCI TAIWAN ETF」（r/ETFs）<span class="src-badge src-3">仅标题+首帖</span></td><td>首帖：「大家觉得这只 ETF 怎么样？亚洲国家表现这么强，我在考虑配置。」——<strong>同样是动量驱动，且对具体标的缺乏了解。</strong></td></tr>
+<tr><td>2026-07-14</td><td>「EM ETFs that exclude South Korea &amp; Taiwan?」（r/ETFs）<span class="src-badge src-3">仅标题+首帖</span></td><td><strong>反面需求：有人明确想在新兴市场配置里剔除台湾</strong>（首帖理由是想降低集中度）。这是「AI 集中度」担忧在配置层面的体现。</td></tr>
+<tr><td>2026-07-17</td><td>「ICYMI Japan and Taiwan markets plunged 6.5% and 4% respectively on Friday」（r/XGramatikInsights）<span class="src-badge src-3">仅标题</span></td><td><strong>与第五章记录的 2026-07-17 台股史上最大跌点吻合</strong>——该事件在英文社区被当作区域事件讨论（日股同期跌 6.5%）。</td></tr>
+<tr><td>2025-11-18</td><td>「Defiance Launches STSM: The First 2X Short ETF for Taiwan Semiconductor」（r/Quantisnow）<span class="src-badge src-3">仅标题</span></td><td><strong>衍生品已出现（2 倍做空台积电的 STSM）</strong>——说明这个主题的讨论热度与交易需求已足以支撑结构化产品。</td></tr>
+</tbody>
+</table></div>
+<p class="caveat-inline"><strong>这组样本能说明什么、不能说明什么</strong>：能说明的是<strong>「地缘恐惧」与「AI 动量」这两种相反的叙事在散户端同时存在且都很活跃</strong>，并且<strong>大多数讨论停留在「要不要买台湾」的层面，而非「EWT 与替代品的成本比较」</strong>——后者正是本报告第三章的内容，在社区里几乎无人讨论。不能说明的是<strong>多空比例</strong>：只有 1 个帖子取到完整评论，其余仅标题，据此统计"看多/看空占比"会是编造。<span class="src-badge src-3">三方</span></p>
+<h3>7.4 卖方观点</h3>
+<p>本报告<strong>未检索到针对 EWT 这一 ETF 的系统性卖方评级</strong>——这是正常的：卖方一般不覆盖 ETF 本身，而是覆盖其成分股（台积电、联发科等）。可参考的间接信号有两个：<strong>① 摩根士丹利、高盛等把台积电 ADR 溢价解读为地缘风险定价</strong>（见 5.2）；<strong>② 台积电自身在 2026-07-16 法说会上把全年美元营收增速上调至约 40%、资本支出上调至 600–640 亿美元</strong>——这是对 EWT 底层盈利最直接的指引。<span class="src-badge src-2">二手</span></p>
+</div>
+
+<div class="card" id="conclusion">
+<h2>八、综合判断框架</h2>
+<h3>8.1 四情景推演（不构成预测）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:18%">情景</th><th style="width:30%">触发条件</th><th>对 EWT 的含义 <span class="src-badge src-e">推算</span></th><th style="width:12%">主观概率感</th></tr></thead>
+<tbody>
+<tr><td>乐观：AI 周期延续</td><td>台积电 2026 全年营收增速兑现 40%，2027 年云厂商资本开支继续增长，2nm/先进封装产能顺利放量</td><td>底层盈利消化当前 26–28 倍 PE，指数继续上行；EWT 因 21.8% 上限，涨幅仍略小于大盘</td><td>~30%</td></tr>
+<tr><td>中性：高位震荡</td><td>AI 需求增速放缓但不失速，外资在买卖超之间反复，台股在历史高位区间宽幅震荡</td><td>EWT 跟随大盘震荡，波动大于标普500；持有体验取决于入场点位</td><td>~35%</td></tr>
+<tr><td>中性偏负：估值回归</td><td>AI 资本开支见顶迹象出现，或台积电指引低于预期；融资盘去杠杆放大跌幅</td><td>PE 从 26–28 倍向长期区间（约 13–23 倍）回归，对应指数下跌 15–35%；EWT 同步</td><td>~25%</td></tr>
+<tr><td>悲观：地缘事件</td><td>台海出现实质性军事冲突或封锁；台湾市场停市、资金汇出受限</td><td>EWT 可能出现<strong>远超指数的折价甚至无法正常交易</strong>——ETF 结构无法对冲主权级市场关闭风险（参考 2022 年俄罗斯资产 ETF 的先例）</td><td>~10%</td></tr>
+</tbody>
+</table></div>
+<span class="caveat-inline">概率为主观判断，且<strong>悲观情景的概率无法从公开数据中校准</strong>——本报告未找到台湾主权 CDS、台股风险溢价或冲突预测市场的可靠读数，那个 10% 是主观赋值而非测算结果，引用时请当作「不可忽视但不可精确量化」。</span>
+<h3>8.2 关键跟踪指标（按重要性排序）</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:36%">指标</th><th style="width:14%">频率</th><th>信号意义</th></tr></thead>
+<tbody>
+<tr><td><strong>① 外资（FINI）净买卖超与净汇入的持续性</strong></td><td>每日 / 每月</td><td><strong>资金面是这只 ETF 的领先变量</strong>：外资占台股市值近半，其转向（如 8 月单月净汇入 167 亿美元）往往先于价格。9 月数据待金管会公布。</td></tr>
+<tr><td><strong>② 台积电月度营收与法说会指引</strong></td><td>每月 / 每季</td><td>占 EWT 21.8%、占台湾大盘 41%、占 MSCI 母指数 54%——这一个数字基本决定指数的方向。8 月 +53.3% YoY 为最新读数。</td></tr>
+<tr><td>③ 台积电 ADR 溢价</td><td>实时</td><td>高频地缘温度计（当前 18–22%）。<strong>同时它也是本报告的起点</strong>：若这个溢价收敛，用 EWT 替代 ADR 的收益就消失了。</td></tr>
+<tr><td>④ 台股融资余额</td><td>每日</td><td>已破 8,000 亿创历史新高。继续攀升＝风险累积；快速下降＝去杠杆开始，通常伴随下跌。</td></tr>
+<tr><td>⑤ 主要云厂商资本开支指引</td><td>每季</td><td>台积电需求的上游。AI 资本开支见顶是空方逻辑的核心触发条件。</td></tr>
+<tr><td>⑥ EWT 自身折溢价</td><td>实时</td><td>下单前核对。当前 +0.32%，正常；<strong>若出现显著折价（尤其在地缘紧张时），是流动性或申赎机制承压的信号</strong>。</td></tr>
+</tbody>
+</table></div>
+<h3>8.3 对齐个人投资体系</h3>
+<div class="table-scroll"><table>
+<thead><tr><th style="width:20%">原则</th><th>检验结果</th></tr></thead>
+<tbody>
+<tr><td>好公司（护城河）</td><td><strong>本条对 ETF 不适用</strong>——ETF 没有护城河，它的「质地」等于底层成分的质地。可替代的问法是：<strong>底层那 76 家公司 10 年后还在吗？</strong>台积电（代工工艺与规模壁垒）、联发科（IC 设计）的护城河是真实的；但这不是买 EWT 的理由，只是它不会归零的理由。</td></tr>
+<tr><td>好价格</td><td><strong>存在两套不同的「价格」判断，不要混淆</strong>：<strong>① 买入成本</strong>——EWT 相对 TSM ADR 便宜约 20 个百分点，这一项明确有利；<strong>② 底层估值</strong>——台股 PE 25.6 倍、PB 4.03 倍（长期常态 1.6–1.9 倍），处于历史区间上缘，这一项明确不利。<strong>便宜的通道 ≠ 便宜的资产。</strong></td></tr>
+<tr><td>分散纪律</td><td><strong>这是 EWT 最需要提醒的一项</strong>：信息技术 75%、台积电 21.8%、前十 49%——它是<strong>单一行业的高集中度敞口，不是分散化工具</strong>。若组合里已有美股半导体（如 SOX 成分、英伟达、台积电 ADR），买 EWT 会显著叠加同一因子的暴露。<strong>把它当「行业仓位」而不是「地区配置」来管理，是更诚实的做法。</strong></td></tr>
+<tr><td>融资纪律</td><td>美股 ETF，不做融资利率分析（该框架仅适用 A 股）。经常性股息率仅约 <strong>0.9%</strong>（2025-12 那次含大额资本利得分配，不应计入经常性收益），台湾端 21% 预扣后更低——<strong>不适合作为收息工具</strong>。</td></tr>
+<tr><td>卖出条件映射</td><td>① 核心逻辑证伪 = AI 资本开支见顶、台积电月营收增速转负；② 极端高估 = PB 进一步脱离长期区间而盈利增速未跟上；③ <strong>机会成本 = ADR 溢价显著收窄（EWT 的成本优势消失）</strong>；④ 地缘信号恶化 = ADR 溢价扩大 + 外资持续净汇出。</td></tr>
+</tbody>
+</table></div>
+<div class="quote" style="margin-top:24px;">
+<strong>一句话总结：</strong>EWT 解决的是一个<strong>很具体的问题</strong>——你想拿台湾半导体敞口，但不想付台积电 ADR 那 20% 的溢价。它确实解决了：+0.32% 的折溢价、0.59% 的年费、日本 ETF 之外最成熟的台湾 ETF 通道。但它<strong>没有解决你另外三个问题</strong>：<strong>① 它给的不是台积电，是 76 只台股的篮子</strong>（台积电被上限压到 21.8%，比台湾大盘还低）；<strong>② 它买的是一个 PB 4 倍、融资余额历史新高、单一公司占大盘四成的市场</strong>；<strong>③ 它仍然是台湾资产</strong>——ETF 的壳换不掉地缘风险的实质，在极端情景下这个结构甚至会成为负担。
+    <strong>所以最诚实的结论是：EWT 是一把好用的工具，不是一笔便宜的资产。</strong>它值得作为「台湾科技链」这个行业观点的表达方式；它不值得被当成「新兴市场分散配置」或「便宜的台积电」来买——这两个标签都不成立。
+  </div>
+</div>
+
+<div class="card" id="datanotes">
+<h2>◉ 数据说明</h2>
+<p>本节收录<strong>口径、跨期对比与取数记录</strong>——它们影响你怎么用这份报告，但不影响正文的阅读。正文只保留分析与结论。</p>
+<h3>一、数据口径与方法论</h3>
+<p class="caveat-inline"><strong>口径提示</strong>：外资累计卖超金额在不同来源间打架（证交所「至 7/24 为 1.61 兆」vs 金管会「1–8 月为 1.27 兆」vs 另有来源称「今年来 2.2 兆」）。三者统计基础（集中市场 / 上市+上柜）与日期不同，<strong>本报告只采用有明确日期与机构归属的前两个，第三个未能核对原文故不采用</strong>。<span class="src-badge src-2">二手</span></p>
+<p class="caveat-inline"><strong>估值口径：</strong>本报告的价格回报对比（EWT / SPY / 沪深300）均为<strong>不含股息的纯价格回报</strong>，起止日为 2025-10-01 → 2026-10-02（沪深300 为 2025-10-09 → 2026-09-30，因数据源起始日不同）。<span class="src-badge src-s">一手</span> Nasdaq / 腾讯行情接口</p>
+<h3>二、与上期报告的变化</h3>
+<p><strong>本报告为 EWT 的首次覆盖，没有上期可对比。</strong>后续每期在本节记录跨期变化。</p>
+<h3>三、取数更正记录</h3>
+<p class="caveat-inline"><strong>一处需要说明的数据事故：</strong>iShares 官网的 product id <code>239665</code> 经核实是 <strong>iShares MSCI 日本 ETF（EWJ）</strong>，而非台湾。本对话早期曾据此给出「EWT 费率 0.49%、规模 240 亿美元、168 只成分、1996 年成立」——<strong>那四个数字全是日本 ETF 的</strong>。本报告已全部更正为 EWT 的真实数据（0.59% / 126.9 亿美元 / 81 只 / 2000 年），并保留此处备忘，提醒任何引用 iShares 数据的人核对 product id 与页面内链。</p>
+<h3>四、已知局限</h3>
+<p class="caveat-inline"><strong>ETF 没有有意义的「历史 PE 分位」可比</strong><strong>估值分位不可得：</strong>本报告未能取得 MSCI 台湾指数可靠的长期 PE 分位序列，因此<strong>不给出「便宜/贵」的分位判断</strong>，只提供当前绝对水平。这是本报告的一处信息缺口。<span class="src-badge src-2">二手</span> PE 数据来源为第三方数据平台，非指数编制方官方。</p>
+<p class="caveat-inline">① <strong>社区情绪取样受限</strong>——Reddit 对本次访问限流严重（约 2–3 次成功 1 次），多数帖子仅取到标题与首帖、只有 1 帖取到完整评论，故<strong>未对多空比例作任何统计</strong>（样本不足，统计即为编造）；② 台湾加权指数的近一年涨幅在不同来源间为 +81%–+86%（口径与汇率处理不一），故未列入对比图；③ 外资累计卖超金额存在 1.27 兆 / 1.61 兆 / 2.2 兆三个口径，本报告只采用前两个；④ 未取得 MSCI 台湾指数的可靠长期 PE 分位序列，故不给估值分位判断；⑤ 未找到台湾主权 CDS、台股风险溢价或冲突预测市场的可靠读数，地缘概率为主观赋值；⑥ 2026 年 9 月的外资动向、台湾出口与台积电营收在撰写时均未公布。</p>
+</div>
+
+<div class="footnote">
+<p><strong>免责声明：</strong>不构成投资建议。报告基于公开信息生成。所有估值情景和概率均为本文主观判断。投资决策请以个人独立尽职调查和持牌专业意见为准。</p>
+<p style="margin-top:8px;">报告生成日期：2026-10-05 · 由 Claude Code 辅助分析 · 价格数据截至 2026-10-02 收盘</p>
+<p style="margin-top:8px;"><strong>主要数据源：</strong></p>
+<ul style="padding-left:20px;font-size:12px;line-height:1.9;color:var(--text-muted);">
+<li><span class="src-badge src-s">一手</span> iShares / BlackRock：EWT 费率 0.59%、规模 126.9 亿美元、成立 2000-06-20、76 只成分、折溢价 +0.32%（2026-09-29）、行业权重（2026-09-09）</li>
+<li><span class="src-badge src-s">一手</span> MSCI：MSCI Taiwan 25/50 Index 编制方法论（25%/50% 上限、10% buffer、组合优化 capping）、成分数 74、台积电权重 21.94% vs 母指数 54.00%（2026-09-30）</li>
+<li><span class="src-badge src-s">一手</span> Nasdaq 官方 API：EWT / SPY / FLTW 逐日收盘价与现价</li>
+<li><span class="src-badge src-s">一手</span> 台湾证券交易所 MIS 行情接口：2330 台积电收盘、发行量加权股价指数点位；台湾财政部：非居民股利扣缴率 21%</li>
+<li><span class="src-badge src-s">一手</span> 台积电（pr.tsmc.com / investor.tsmc.com）：2026 年 8 月营收 5,148.6 亿元（+53.3%）、1–8 月 +39.3%、Q2 法说指引与资本支出上调</li>
+<li><span class="src-badge src-s">一手</span> 台湾财政部统计处：2026 年 8 月出口 824 亿美元（+41.0%）；台湾央行：政策利率 2.000%、2026 GDP 预测上修至 11.48%；金管会：外资持股占台股市值比重</li>
+<li><span class="src-badge src-2">二手</span> 财经媒体与券商：外资买卖超与融资余额统计、2026-07-17 台股史上最大跌点、2025-12 对台军售约 111 亿美元、232 条款关税台湾适用 15%、国安基金护盘与退场</li>
+<li><span class="src-badge src-3">三方</span> 数据平台与论坛：EWT 持仓明细与部分基金指标（已尽量以发行商官方数据交叉核对）</li>
+</ul>
+</div>
+</main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+%E5%AE%89%E7%A1%95MSCI%E5%8F%B0%E6%B9%BEETF%EF%BC%88EWT%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%AE%89%E7%A1%95MSCI%E5%8F%B0%E6%B9%BEETF%EF%BC%88EWT%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-10-05%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

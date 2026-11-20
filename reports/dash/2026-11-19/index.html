@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>DoorDash 2026-11-19 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/dash/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+DoorDash%EF%BC%88DASH%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ADoorDash%EF%BC%88DASH%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-19%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">DASH <span>·</span> 2026-11-19 <span>·</span> PC 完整版</div><h1>DoorDash</h1><p>美东 11 月 18 日收盘 · 2026 Q3 财报 · Instacart 交易与平台竞争</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">◉ 数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、商业模式与护城河</a></li><li><a href="#core-metric">三、核心指标：平台总订单额 GOV</a></li><li><a href="#financials">四、最新财务数据</a></li><li><a href="#instacart">五、Instacart：收购如何改变现金流与竞争</a></li><li><a href="#competition">六、竞争：Prime 和商家自有入口</a></li><li><a href="#policy">七、政策风险</a></li><li><a href="#valuation">八、估值与历史位置</a></li><li><a href="#bull-bear">九、多空核心分歧</a></li><li><a href="#analysts">十、华尔街分析师全景</a></li><li><a href="#community">十一、Reddit 与 X 讨论</a></li><li><a href="#conclusion">十二、综合判断框架</a></li><li><a href="#notes">数据说明</a></li></ul></aside><main class="main-content report-body"><div class="card" id="reliability"><h2>◉ 数据可靠性声明</h2>
+<p><span class="src-badge src-t">时效</span> 报告日期为北京时间 2026-11-19。行情采用美东 11 月 18 日常规交易收盘，财务以最新公布的 2026 Q3 为准，交易状态核至 11 月 19 日检索时点。</p>
+<p><span class="src-badge src-s">一手</span> SEC、公司 IR、监管机构及管理层电话会原话　<span class="src-badge src-2">二手</span> 行情与卖方资料公开转述　<span class="src-badge src-3">三方</span> 社区样本　<span class="src-badge src-e">推算</span> 依据公开数据计算　<span class="src-badge src-t">时效</span> 对日期敏感。</p>
+<p>本地披露档案位于 <code>SEC_Filings/</code>，含 DASH FY2024/FY2025 10-K、2026 Q3 10-Q、季度业绩文件、CART 8-K 和 Q3 10-Q、10 月 29 日电话会转写。两份 11 月 Rule 425 通讯的正文也已在该目录归档。</p></div>
+<div class="card" id="snapshot"><h2>一、公司速览</h2>
+<div class="summary-grid"><div class="summary-item"><div class="value">$166.80</div><div class="label">11 月 18 日收盘</div></div><div class="summary-item"><div class="value">$72.72B</div><div class="label">市值 · 推算</div></div><div class="summary-item"><div class="value">$33.94B</div><div class="label">Q3 平台总订单额 · 一手</div></div><div class="summary-item"><div class="value">4.26×</div><div class="label">滚动市销率 · 推算</div></div><div class="summary-item"><div class="value">68.4×</div><div class="label">滚动市盈率 · 推算</div></div><div class="summary-item"><div class="value">3.03%</div><div class="label">滚动自由现金流收益率 · 推算</div></div></div>
+<p>纳斯达克 DASH · 美元计价 · 本地商业平台。11 月 18 日涨 1.15%，较 11 月 6 日收盘跌 7.16%。从经营端看，剔除 Deliveroo 后，Q3 平台总订单额仍增 23%。市场需要验证的是，竞争加码后这些订单还能带来多少现金，以及 Instacart 并购会在多长时间内占用资本。<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span><span class="src-badge src-e">推算</span></p>
+<p>来源 <a href="https://ir.doordash.com/news/news-details/2026/DoorDash-Releases-Third-Quarter-2026-Financial-Results/default.aspx">DoorDash Q3 业绩</a>、<a href="https://stockcharted.com/dash/12-months">DASH 日线</a>、<a href="https://www.sec.gov/Archives/edgar/data/1792789/000179278926000070/dash-20260930.htm">DoorDash Q3 10-Q</a>。</p></div>
+<div class="card" id="business"><h2>二、商业模式与护城河</h2>
+<h3>2.1 从餐厅交易抽成延伸至广告与商户服务</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">业务</th><th scope="col">收入来源</th><th scope="col">检验条件</th></tr></thead><tbody><tr><td>DoorDash、Wolt、Deliveroo 平台</td><td>商户佣金、消费者费用、会员订阅、广告</td><td>区域订单密度能否提高拼单率、降低单均履约成本</td></tr><tr><td>DashPass、Wolt+、Deliveroo Plus</td><td>订阅费及会员复购带来的平台交易</td><td>扣除免配送费及促销后，会员每年贡献的利润</td></tr><tr><td>Drive、DashMart、商户软件</td><td>白标配送、零售履约及商户工具</td><td>商户能否保留自有渠道，同时让平台获得稳定履约量</td></tr><tr><td>零售媒体</td><td>餐厅和消费品牌购买流量与销售归因</td><td>广告转化和复购能否提高，且消费者仍能高效找到商品</td></tr></tbody></table></div>
+<h3>2.2 巴菲特与费雪：网络密度能否经得住多平台经营</h3>
+<p>新平台可复制搜索、促销和下单界面，但要在同个街区同时提供足够的商户、订单与可用骑手，需要本地规模。餐厅和骑手可以同时使用多个平台，消费者也可比价，因此密度优势取决于配送时长、取消率和每单成本能否持续领先。零售的缺货与替代品处理又需要门店库存数据和拣货执行，现有餐饮网络只能解决其中一部分。</p>
+<p>费雪式验证需要看商户真实留存、广告续投和会员使用频率。Tony Xu 在电话会把自营库存履约的准确率与第三方门店相比较，认为差距仍具实质性。长期判断可拆成美国餐饮是否守住履约效率、杂货能否降低缺货率、海外统一系统能否提升转化三个问题。<span class="src-badge src-s">一手</span> <a href="https://www.sec.gov/Archives/edgar/data/1792789/000114036126041195/ef20084600_425.htm">10 月 29 日电话会转写</a>。</p></div>
+<div class="card" id="core-metric"><h2>三、核心指标：平台总订单额 GOV</h2>
+<div class="chart"><div class="chart-title">季度平台总订单额 <small>十亿美元</small></div><svg aria-label="季度平台总订单额" role="img" style="display:block;width:100%;height:auto" viewbox="0 0 640 236"><g fill="var(--text-secondary)" font-size="15"><line stroke="var(--border-light)" x1="65" x2="575" y1="180" y2="180"></line><text text-anchor="end" x="56" y="184">20</text><line stroke="var(--border-light)" x1="65" x2="575" y1="145" y2="145"></line><text text-anchor="end" x="56" y="149">24</text><line stroke="var(--border-light)" x1="65" x2="575" y1="110" y2="110"></line><text text-anchor="end" x="56" y="114">28</text><line stroke="var(--border-light)" x1="65" x2="575" y1="75" y2="75"></line><text text-anchor="end" x="56" y="79">32</text><line stroke="var(--border-light)" x1="65" x2="575" y1="40" y2="40"></line><text text-anchor="end" x="56" y="44">36</text><polyline fill="none" points="65.0,136.1 193.5,95.3 319.3,78.5 446.5,65.6 575.0,58.0" stroke="var(--accent)" stroke-width="3"></polyline><circle cx="65.0" cy="136.1" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="65.0" y="124.1">25.02</text><text text-anchor="middle" x="65.0" y="207">25 Q3</text><circle cx="193.5" cy="95.3" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="193.5" y="116.3">29.68</text><text text-anchor="middle" x="193.5" y="223">25 Q4</text><circle cx="319.3" cy="78.5" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="319.3" y="66.5">31.6</text><text text-anchor="middle" x="319.3" y="207">26 Q1</text><circle cx="446.5" cy="65.6" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="446.5" y="86.6">33.08</text><text text-anchor="middle" x="446.5" y="223">26 Q2</text><circle cx="575.0" cy="58.0" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="575.0" y="46.0">33.94</text><text text-anchor="middle" x="575.0" y="207">26 Q3</text></g></svg><p class="caveat-inline"><span class="src-badge src-s">一手</span> <a href="https://ir.doordash.com/news/news-details/2026/DoorDash-Releases-Third-Quarter-2026-Financial-Results/default.aspx">DoorDash Q3 业绩</a>。</p></div>
+<h3>3.1 订单增加与客单价提升共同驱动</h3>
+<p>Q3 总订单 9.93 亿单，同比增 28%，剔除 Deliveroo 后增 17%。GOV 报告同比增 36%，剔除 Deliveroo 后增 23%。合并口径下，GOV ÷ 总订单这一代理读数从约 $32.24 升至 $34.18。公司称美国餐厅业务增速较 Q2 小幅加快，杂货和零售增速超过餐厅两倍。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></p>
+<h3>3.2 变现率回落，单位交易利润略升</h3>
+<p>营收/GOV 由 13.8% 降至 13.6%，主要受 Deliveroo 并表影响。GAAP 营业利润/GOV 从约 1.03% 升至 1.30%，调整后 EBITDA/GOV 从约 3.01% 升至 3.12%。竞争压力如首先体现在免配送费和促销，会先影响变现率或单位交易利润。到 Q4，Deliveroo 并表满一年，公司预计停报剔除 Deliveroo 的读数。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></p></div>
+<div class="card" id="financials"><h2>四、最新财务数据</h2>
+<h3>4.1 Q3 同比与利润质量</h3>
+<div class="chart"><div class="chart-title">收入、毛利、调整后 EBITDA 与归母净利 <small>百万美元，共用零起点</small></div><svg aria-label="收入、毛利、调整后 EBITDA 与归母净利" role="img" style="display:block;width:100%;height:auto" viewbox="0 0 640 210"><g fill="var(--text-secondary)" font-size="15" text-anchor="middle"><line stroke="var(--border-light)" x1="35" x2="612" y1="165" y2="165"></line><text x="95" y="190">营收</text><rect fill="#739583" height="89.6" width="36" x="56" y="75.4"></rect><text x="74" y="69.4">3,446</text><rect fill="#2d6a4f" height="120.0" width="36" x="98" y="45.0"></rect><text x="116" y="39.0">4,616</text><text x="242" y="190">毛利</text><rect fill="#739583" height="43.9" width="36" x="203" y="121.1"></rect><text x="221" y="115.1">1,689</text><rect fill="#2d6a4f" height="60.1" width="36" x="245" y="104.9"></rect><text x="263" y="98.9">2,311</text><text x="389" y="190">调整后 EBITDA</text><rect fill="#739583" height="19.6" width="36" x="350" y="145.4"></rect><text x="368" y="139.4">754</text><rect fill="#2d6a4f" height="27.6" width="36" x="392" y="137.4"></rect><text x="410" y="131.4">1,060</text><text x="536" y="190">归母净利</text><rect fill="#739583" height="6.3" width="36" x="497" y="158.7"></rect><text x="515" y="152.7">244</text><rect fill="#2d6a4f" height="12.1" width="36" x="539" y="152.9"></rect><text x="557" y="146.9">466</text></g></svg><div class="chart-legend"><span><i style="background:#739583"></i>2025 Q3</span><span><i style="background:#2d6a4f"></i>2026 Q3</span></div></div>
+<div class="table-scroll"><table><thead><tr><th scope="col">百万美元，EPS 除外</th><th scope="col">2025 Q3</th><th scope="col">2026 Q3</th><th scope="col">同比</th></tr></thead><tbody><tr><td>营收</td><td>3,446</td><td>4,616</td><td>+34%</td></tr><tr><td>GAAP 营业利润</td><td>258</td><td>442</td><td>+71%</td></tr><tr><td>GAAP 摊薄 EPS</td><td>$0.55</td><td>$1.06</td><td>+93%</td></tr><tr><td>经营现金流</td><td>871</td><td>994</td><td>+14%</td></tr><tr><td>自由现金流</td><td>723</td><td>787</td><td>+9%</td></tr></tbody></table></div>
+<p>营业利润增加 $184M，其他损益由 −$81M 转为 +$5M，净利息收入从 $71M 回落至 $37M。调整后 EBITDA 与 GAAP 营业利润相差 $618M，折旧摊销为 $312M，股权激励及部分工资税调整为 $269M。自由现金流增速低于净利，前三季度经营现金流仍由 $2.01B 升至 $2.53B。<span class="src-badge src-s">一手</span> <a href="https://ir.doordash.com/news/news-details/2026/DoorDash-Releases-Third-Quarter-2026-Financial-Results/default.aspx">DoorDash Q3 业绩</a>、<a href="https://www.sec.gov/Archives/edgar/data/1792789/000179278926000070/dash-20260930.htm">DoorDash Q3 10-Q</a>。</p>
+<h3>4.2 资产负债与异常筛查</h3>
+<p>9 月末现金与投资合计 $6.79B，可转债账面额 $2.73B，简化净现金 $4.06B。应收账款较 2025 年末增 9.4%，以期点对比观察，未见跃升。Q3 GAAP 毛利率约 50.1%，上年同期约 49.0%。存货未在资产负债表单列，关联交易比例未作量化。年初至 10 月 28 日回购约 680 万股、耗资约 $1.0B，Q3 摊薄股数同比下降约 0.3%。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span></p>
+<h3>4.3 Q4 指引与营运资金</h3>
+<div class="summary-grid"><div class="summary-item"><div class="value">$35.4–36.4B</div><div class="label">GOV 公司指引</div></div><div class="summary-item"><div class="value">$0.9–1.1B</div><div class="label">调整后 EBITDA 指引</div></div><div class="summary-item"><div class="value">−$0.7–0.8B</div><div class="label">全年 FCF 付款时点影响</div></div></div>
+<p>GOV 指引对应同比约 +19% 至 +23%，调整后 EBITDA 对应同比约 +15% 至 +41%。年末商户付款的时点预计压低 2026 年自由现金流，跨年现金变化可用于判断该影响是否回转。全年股权激励与折旧摊销均预计约 $1.2B。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span> <a href="https://ir.doordash.com/news/news-details/2026/DoorDash-Releases-Third-Quarter-2026-Financial-Results/default.aspx">DoorDash Q3 业绩</a>。</p></div>
+<div class="card" id="instacart"><h2>五、Instacart：收购如何改变现金流与竞争</h2>
+<h3>5.1 交易条件与资本结构</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">事项</th><th scope="col">读数和含义</th></tr></thead><tbody><tr><td>对价</td><td>约 $17B 公告股权价值。每股现金选项 $65，股票选项为 0.3372 股 DASH，混合选项为 $48.75 加 0.0843 股 DASH，均受协议约定与比例分配约束。整体至少 75% 现金，最多 25% 股票。</td></tr><tr><td>融资</td><td>现金来源含账上资金和债务。364 天无抵押过桥融资承诺上限 $13B，实际提款、长期融资利率和期限待披露。</td></tr><tr><td>如交易终止</td><td>CART 在特定情形支付 $650M，DASH 在特定监管相关终止情形支付 $1.25B。</td></tr><tr><td>交割</td><td>公司预计 2027 年末或 2028 年上半年，取决于 CART 股东批准、美国 HSR 等候期、加拿大和以色列等审批及其他约定条件。</td></tr></tbody></table></div>
+<p><span class="src-badge src-s">一手</span> <a href="https://ir.doordash.com/news/news-details/2026/DoorDash-to-Acquire-Instacart-to-Help-Local-Stores-Win/default.aspx">双方并购公告</a>、<a href="https://www.sec.gov/Archives/edgar/data/1579091/000114036126041119/ef20084547_425.htm">交易协议及 8-K 摘要</a>、<a href="https://www.sec.gov/Archives/edgar/data/1792789/000179278926000070/dash-20260930.htm">DoorDash Q3 10-Q</a>。</p>
+<h3>5.2 协同取决于履约和广告留存</h3>
+<p>Instacart Q3 交易总额 $10.53B，同比 +15%，营收 $1.095B，同比 +17%，其中广告及其他收入 $331M，同比 +23%。其 Q3 调整后 EBITDA $342M，GAAP 净利 $147M，FCF $307M。DoorDash 可把餐厅供给接进 Instacart，也可将 Instacart 商户软件、广告客户和拣货能力接入自身网络。若商户退出或预算在两套广告系统之间迁移，收入协同会打折。<span class="src-badge src-s">一手</span> <a href="https://s25.q4cdn.com/251036341/files/doc_financials/2026/q3/CART-Q3-26-Earnings-Results-and-DoorDash-Acquisition-Press-Release.pdf">Instacart Q3 业绩</a>。</p>
+<p>CFO Ravi Inukonda 在 10 月 29 日电话会上预计交割后第一年以再投入为主，第二年逐步改善，第三年达到约 $500M 年度净协同。若最终新增长期债务 $10B，平均融资成本每变动 100 个基点，年度税前利息变动约 $100M，约为该协同目标的五分之一。<span class="src-badge src-s">一手</span><span class="src-badge src-e">推算</span> <a href="https://www.sec.gov/Archives/edgar/data/1792789/000114036126041195/ef20084600_425.htm">10 月 29 日电话会转写</a>。</p>
+<h3>5.3 监管沟通与交易价差</h3>
+<p>11 月 13 日文件收录区域杂货商与零售协会对合并的支持，11 月 17 日文件为宣传短片文稿。两份通讯阐述交易理由。按 DoorDash 的 EDGAR 提交索引，截至本次检索尚未见该交易的 S-4 或交割公告。<span class="src-badge src-s">一手</span><span class="src-badge src-t">时效</span> <a href="../../../sources/dash/SEC_Filings/DASH_2026-11-13_Form425.htm">11 月 13 日 425（本地）</a>、<a href="../../../sources/dash/SEC_Filings/DASH_2026-11-17_Form425.htm">11 月 17 日 425（本地）</a>、<a href="https://data.sec.gov/submissions/CIK0001792789.json">EDGAR 提交索引</a>。</p>
+<p>CART 11 月 18 日收 $58.66。以同期 DASH $166.80 计算，协议混合选项的标示价值约 $62.81，CART 较其低约 6.6%，较 $65 现金选项低约 9.8%。期限、分配、股价变化及交易失败时 CART 独立估值都会影响价差。<span class="src-badge src-2">二手</span><span class="src-badge src-e">推算</span> <a href="https://stockanalysis.com/stocks/cart/history/">CART 日线</a>、<a href="https://www.sec.gov/Archives/edgar/data/1579091/000114036126041119/ef20084547_425.htm">交易协议及 8-K 摘要</a>。</p></div>
+<div class="card" id="competition"><h2>六、竞争：Prime 和商家自有入口</h2>
+<div class="chart"><div class="chart-title">DASH 选定交易日收盘价 <small>美元</small></div><svg aria-label="DASH 选定交易日收盘价" role="img" style="display:block;width:100%;height:auto" viewbox="0 0 640 236"><g fill="var(--text-secondary)" font-size="15"><line stroke="var(--border-light)" x1="65" x2="575" y1="180" y2="180"></line><text text-anchor="end" x="56" y="184">155</text><line stroke="var(--border-light)" x1="65" x2="575" y1="145" y2="145"></line><text text-anchor="end" x="56" y="149">167.5</text><line stroke="var(--border-light)" x1="65" x2="575" y1="110" y2="110"></line><text text-anchor="end" x="56" y="114">180</text><line stroke="var(--border-light)" x1="65" x2="575" y1="75" y2="75"></line><text text-anchor="end" x="56" y="79">192.5</text><line stroke="var(--border-light)" x1="65" x2="575" y1="40" y2="40"></line><text text-anchor="end" x="56" y="44">205</text><polyline fill="none" points="65.0,57.9 101.4,110.2 137.9,110.9 356.4,130.8 502.1,138.6 538.6,152.3 575.0,147.0" stroke="var(--accent)" stroke-width="3"></polyline><circle cx="65.0" cy="57.9" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="65.0" y="45.9">198.59</text><text text-anchor="middle" x="65.0" y="207">11/04</text><circle cx="101.4" cy="110.2" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="101.4" y="131.2">179.92</text><text text-anchor="middle" x="101.4" y="223">11/05</text><circle cx="137.9" cy="110.9" fill="var(--accent)" r="4"></circle><circle cx="356.4" cy="130.8" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="356.4" y="151.8">172.58</text><text text-anchor="middle" x="356.4" y="223">11/12</text><circle cx="502.1" cy="138.6" fill="var(--accent)" r="4"></circle><circle cx="538.6" cy="152.3" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="538.6" y="173.3">164.91</text><text text-anchor="middle" x="538.6" y="223">11/17</text><circle cx="575.0" cy="147.0" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="575.0" y="135.0">166.8</text><text text-anchor="middle" x="575.0" y="207">11/18</text></g></svg><p class="caveat-inline"><span class="src-badge src-2">二手</span> <a href="https://stockcharted.com/dash/12-months">DASH 日线</a>、<a href="https://ir.doordash.com/stock-information/default.aspx">DoorDash IR 行情</a>。</p></div>
+<h3>6.1 Amazon Prime 给 Uber Eats 带来分发入口</h3>
+<p>11 月 5 日开始，美国 Prime 会员可从 Amazon 网站和购物应用进入 Uber Eats，符合条件的满 $25 餐厅订单免配送费。服务费、税费及小费仍可能产生。DASH 当日收跌约 9.4%，至 11 月 18 日较 11 月 4 日跌约 16.0%。价格变化包含同期市场因素，合作带来的增量订单及会员迁移尚待披露。<span class="src-badge src-s">一手</span><span class="src-badge src-2">二手</span><span class="src-badge src-e">推算</span> <a href="https://investor.uber.com/news-events/news/press-release-details/2026/Amazon-Launches-Partnership-with-Uber-Eats-Featuring-0-Delivery-Fee-for-Prime-Members-2026-afY0fIEoo1/default.aspx">Amazon 与 Uber 联合公告</a>、<a href="https://stockcharted.com/dash/12-months">DASH 日线</a>。</p>
+<h3>6.2 麦当劳自有渠道与 Uber 配送互相补强</h3>
+<p>11 月 9 日 Uber 与麦当劳宣布覆盖 14 个市场的多年合作扩展。Uber Eats 在参与市场成为麦当劳自有应用订单的优选集成履约伙伴。对 DoorDash 的检验在于大型连锁自有应用导流后，DoorDash 还能在平台获客、白标配送和广告中保留多少交易。Uber Q3 配送交易额 $28.54B，同比 +22%，反映合作推出前的竞争规模。<span class="src-badge src-s">一手</span> <a href="https://investor.uber.com/news-events/news/press-release-details/2026/McDonalds-and-Uber-Expand-Global-Partnership-Across-Delivery-and-Loyalty-in-14-Markets/default.aspx">麦当劳与 Uber 联合公告</a>、<a href="https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Results-for-Third-Quarter-2026/default.aspx">Uber Q3 业绩</a>。</p></div>
+<div class="card" id="policy"><h2>七、政策风险</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">风险项</th><th scope="col">公开状态</th><th scope="col">强度与传导</th></tr></thead><tbody><tr><td>并购反垄断</td><td>美国 HSR 等候期及加拿大、以色列等审批属于交割条件。<a href="https://www.sec.gov/Archives/edgar/data/1579091/000114036126041119/ef20084547_425.htm">交易协议及 8-K 摘要</a>。</td><td>高 · 影响交割、可能附带条件及特定终止付款</td></tr><tr><td>配送员最低报酬</td><td>纽约市自 2026 年 4 月 1 日起适用 $22.13/小时、不含小费的最低报酬标准，覆盖餐厅及杂货配送应用，计酬依规则指定的方法。<a href="https://www.nyc.gov/site/dca/workers/workersrights/food-delivery-worker-laws-faqs.page">纽约市 DCWP 规则</a>。</td><td>中 · 报酬和配送费通过单均利润与订单需求传导</td></tr><tr><td>英国与欧洲经营</td><td>Deliveroo 和 Wolt 增加各地用工规则、消费者定价与汇率敞口。</td><td>中 · 通过履约成本及美元折算传导</td></tr></tbody></table></div>
+<p><span class="src-badge src-s">一手</span> 监管强度首先体现为交易条件，其次体现在城市用工成本。观察 S-4、各地正式监管文件、商户合同的排他条款，以及工资规则变化后当地费用和订单留存。</p></div>
+<div class="card" id="valuation"><h2>八、估值与历史位置</h2>
+<h3>8.1 独立经营口径</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">指标</th><th scope="col">DASH 推算</th><th scope="col">分母或定义</th></tr></thead><tbody><tr><td>市销率</td><td>4.26×</td><td>TTM 营收 $17.061B</td></tr><tr><td>市盈率</td><td>68.4×</td><td>TTM GAAP 归母净利 $1.063B</td></tr><tr><td>市净率</td><td>6.79×</td><td>9 月末股东权益 $10.717B</td></tr><tr><td>EV/调整后 EBITDA</td><td>19.6×</td><td>简化 EV $68.66B，TTM 调整后 EBITDA $3.508B</td></tr><tr><td>FCF 收益率</td><td>3.03%</td><td>公司 TTM 自由现金流 $2.203B</td></tr><tr><td>股息收益率</td><td>0%</td><td>无常规现金股息</td></tr></tbody></table></div>
+<p><span class="src-badge src-e">推算</span> 股本取最新 10-Q 封面 4.3598 亿股。计算维持 DoorDash 独立口径，Instacart 债务、股数与盈利均留在交易情景中。</p>
+<h3>8.2 历史位置与同行</h3>
+<div class="chart"><div class="chart-title">DASH 市销率年度观测 <small>倍</small></div><svg aria-label="DASH 市销率年度观测" role="img" style="display:block;width:100%;height:auto" viewbox="0 0 640 236"><g fill="var(--text-secondary)" font-size="15"><line stroke="var(--border-light)" x1="65" x2="575" y1="180" y2="180"></line><text text-anchor="end" x="56" y="184">2</text><line stroke="var(--border-light)" x1="65" x2="575" y1="145" y2="145"></line><text text-anchor="end" x="56" y="149">4.5</text><line stroke="var(--border-light)" x1="65" x2="575" y1="110" y2="110"></line><text text-anchor="end" x="56" y="114">7</text><line stroke="var(--border-light)" x1="65" x2="575" y1="75" y2="75"></line><text text-anchor="end" x="56" y="79">9.5</text><line stroke="var(--border-light)" x1="65" x2="575" y1="40" y2="40"></line><text text-anchor="end" x="56" y="44">12</text><polyline fill="none" points="65.0,61.7 169.1,167.7 273.2,144.2 378.5,117.0 482.9,108.3 575.0,148.4" stroke="var(--accent)" stroke-width="3"></polyline><circle cx="65.0" cy="61.7" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="65.0" y="49.7">10.45</text><text text-anchor="middle" x="65.0" y="207">2021</text><circle cx="169.1" cy="167.7" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="169.1" y="188.7">2.88</text><text text-anchor="middle" x="169.1" y="223">2022</text><circle cx="273.2" cy="144.2" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="273.2" y="132.2">4.56</text><text text-anchor="middle" x="273.2" y="207">2023</text><circle cx="378.5" cy="117.0" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="378.5" y="138.0">6.5</text><text text-anchor="middle" x="378.5" y="223">2024</text><circle cx="482.9" cy="108.3" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="482.9" y="96.3">7.12</text><text text-anchor="middle" x="482.9" y="207">2025</text><circle cx="575.0" cy="148.4" fill="var(--accent)" r="4"></circle><text text-anchor="middle" x="575.0" y="169.4">4.26</text><text text-anchor="middle" x="575.0" y="223">11/18</text></g></svg><p class="caveat-inline"><span class="src-badge src-2">二手</span> <a href="https://stockanalysis.com/stocks/dash/financials/ratios/">DASH 历史倍数</a>。</p></div>
+<p>同源市销率 4.26×，近五个年末读数中有一个低于现值。盈利年度的同源市盈率为 2024 年末 566.53×、2025 年末 104.40×、当前 69.23×。亏损年份退出市盈率样本，可比年末点只有两个。<span class="src-badge src-2">二手</span> <a href="https://stockanalysis.com/stocks/dash/financials/ratios/">DASH 历史倍数</a>。</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">数据商统一口径</th><th scope="col">DASH</th><th scope="col">UBER</th></tr></thead><tbody><tr><td>滚动市销率</td><td>4.26×</td><td>2.48×</td></tr><tr><td>滚动市盈率</td><td>69.23×</td><td>41.04×</td></tr><tr><td>预期市盈率</td><td>24.10×</td><td>16.63×</td></tr></tbody></table></div>
+<p>Uber 合并口径含出行和货运，且权益投资重估扰动当期利润。DASH 的林奇式 PEG 敏感性用预期 P/E 24.10 除以公开共识下一年 EPS 增速 29.69，得到约 0.81。该算式混用两个预测窗口，可用来观察增速假设的影响。<span class="src-badge src-2">二手</span><span class="src-badge src-e">推算</span> <a href="https://stockanalysis.com/stocks/dash/statistics/">DASH 数据商快照</a>、<a href="https://stockanalysis.com/stocks/uber/statistics/">UBER 数据商快照</a>、<a href="https://stockanalysis.com/stocks/dash/forecast/">S&amp;P Global 共识快照</a>。</p>
+<h3>8.3 估值对利润率和资本成本的依赖</h3>
+<p>以 11 月 18 日市值作简单倒推，若长期股权现金流折现率与永续增速相差 5 个百分点，单阶段模型对应约 $3.64B 的下一年自由现金流，约为报告期 TTM 自由现金流的 1.65 倍。模型忽略过渡期、收购和股份稀释。长端利率上行会提高折现率，也会通过并购再融资传到税前利息。</p></div>
+<div class="card" id="bull-bear"><h2>九、多空核心分歧</h2>
+<div class="two-col"><div class="box-green"><h4><span class="tag tag-bull">多方</span></h4><ul><li>Q3 剔除 Deliveroo 的 GOV 同比仍增 23%，GAAP 营业利润同比增 71%。</li><li>广告与更高订单密度可抵消部分免配送费和促销投入。</li><li>Instacart 的拣货能力、商家软件和广告可拓展 DoorDash 商户业务。</li></ul></div><div class="box-red"><h4><span class="tag tag-bear">空方</span></h4><ul><li>Prime 和麦当劳自有应用削弱平台对下单入口的控制，商户和骑手可以跨平台经营。</li><li>履约成本、股份支付、软件资本化和营运资金时点使调整后利润与每股现金流出现差距。</li><li>反垄断条件、过桥融资转换及整合投入可能延长资本回收期。</li></ul></div></div>
+<p>按芒格的逆向方法，观察 GOV 增长的同时，检查 GAAP 营业利润/GOV 是否连续下行、回购后每股现金流是否停滞。若订单增长主要来自短期优惠，促销退出后的复购率会比订单总量更早给出证据。</p></div>
+<div class="card" id="analysts"><h2>十、华尔街分析师全景</h2>
+<p><span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span> 11 月 18 日附近的 S&amp;P Global 快照覆盖 41 位分析师，目标价均值 $250.39、中位 $250、区间 $200–340。评级分布为 28 位强烈买入、8 位买入、5 位持有。<a href="https://stockanalysis.com/stocks/dash/forecast/">S&amp;P Global 共识快照</a>。</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">机构</th><th scope="col">日期</th><th scope="col">公开评级</th><th scope="col">目标价</th></tr></thead><tbody><tr><td>Rosenblatt</td><td>11/13</td><td>买入，维持</td><td>$225 → $210</td></tr><tr><td>MoffettNathanson</td><td>11/11</td><td>买入，维持</td><td>$277 → $239</td></tr><tr><td>Wedbush</td><td>11/02</td><td>中性上调至跑赢大盘</td><td>$220 → $230</td></tr><tr><td>UBS</td><td>11/02</td><td>持有，维持</td><td>$213</td></tr><tr><td>Bernstein SocGen</td><td>10/30</td><td>跑赢大盘，维持</td><td>$270 → $250</td></tr><tr><td>Susquehanna</td><td>10/30</td><td>买入，维持</td><td>$250</td></tr><tr><td>RBC Capital</td><td>10/30</td><td>买入，维持</td><td>$270</td></tr><tr><td>Cantor Fitzgerald</td><td>10/30</td><td>买入，重申</td><td>$240</td></tr></tbody></table></div>
+<p>Rosenblatt 的连续下调反映其对竞争压力的重新评估，Wedbush 的评级变化纳入了其对并购的看法。评级调整均为机构观点。<a href="https://www.investing.com/news/analyst-ratings/rosenblatt-cuts-doordash-stock-price-target-on-competition-concerns-93CH-5025043">Rosenblatt 等公开研报转述</a>、<a href="https://stockanalysis.com/stocks/dash/forecast/">S&amp;P Global 共识快照</a>。</p></div>
+<div class="card" id="community"><h2>十一、Reddit 与 X 讨论</h2>
+<p><span class="src-badge src-3">三方</span> Reddit 小样本显示，消费者在意结账总价和权益兑现。11 月 9 日有 DashPass 用户报告同一商家、同一订单的两个账户显示不同配送费，另一个 Uber Eats 社区帖子报告同篮子 DoorDash 更划算。并购讨论串中，购物者关注商户非排他安排。可观察的验证项是同城同篮子总价、优惠结束后的复购和会员实际节省。</p>
+<p><a href="https://www.reddit.com/r/doordash/comments/1xs2eo9/same_order_one_account_has_dash_pass_how_does/">DashPass 结账讨论</a>、<a href="https://www.reddit.com/r/UberEATS/comments/1xtxziw/doordash_is_consistently_cheaper_now/">跨平台价格讨论</a>、<a href="https://www.reddit.com/r/InstacartShoppers/comments/1xjeuen/doordash_agreement_to_acquire_instacart_weekly/">Instacart 购物者讨论</a>。</p>
+<p>Reddit RSS 请求被拦，以上来自可核对的搜索索引样本。检索了 X 上与 Prime 外卖和 Instacart 相关的讨论，独立可核实样本不足以汇总情绪。</p></div>
+<div class="card" id="conclusion"><h2>十二、综合判断框架</h2>
+<h3>12.1 四个可观察情景</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">情景</th><th scope="col">运营与交易条件</th><th scope="col">确认信号</th></tr></thead><tbody><tr><td>核心业务走强，交易按协议推进</td><td>竞争加剧期间利润率稳定，履约密度与广告贡献抵消投入</td><td>美国餐厅成交增速稳定，GAAP 营业利润/GOV 维持，登记及监管进度更新</td></tr><tr><td>核心业务稳定，交易延迟或停止</td><td>独立平台仍增长，审批等待延长或出现附加条件</td><td>GOV 和每股 FCF 改善，协议时间表或条款调整</td></tr><tr><td>核心业务承压，交易继续推进</td><td>促销和运力投入增加，同时承担融资与整合开支</td><td>GOV 扩张但利润转化下滑，融资价格或再投资支出上修</td></tr><tr><td>核心业务承压，交易延迟或停止</td><td>入口份额受挤压，同时可能发生特定终止付款</td><td>连续季度利润率下行，并出现监管程序、终止或费用披露</td></tr></tbody></table></div>
+<h3>12.2 季度跟踪与持有逻辑复核</h3>
+<ul><li>先看 GOV、美国餐厅订单增速和单位交易的营业利润，验证局部密度能否维持。</li><li>再看自由现金流、股权激励和摊薄股数，核对经营现金流落到每股的比例。</li><li>跟踪 S-4、正式监管进展、商户留存及过桥融资的替代安排。</li><li>复核业务假设、历史估值位置、同风险机会成本和单股/行业集中度。P/E 盈利样本过短，无法确认历史 90% 分位触发条件。</li></ul>
+<p>最新季度表明网络规模仍在扩大。未来两个披露窗口应回答两件事：Prime 入口推出后，美国餐厅交易增长是否需要更多补贴，以及并购条件能否保留管理层描述的商户与履约协同。</p></div>
+<div class="card" id="notes"><h2>数据说明</h2>
+<h3>① 数据口径与方法论</h3>
+<p>TTM 营收 = 2025 全年 $13.717B + 2026 前三季 $13.106B − 2025 前三季 $9.762B。TTM 归母净利 = $935M + $850M − $722M。简化 EV = 市值 − 现金和短长期投资 + 可转债账面额。两家公司 GOV/GTV 的纳入项目存在差异，各自列示。GOV/总订单是客单价代理，订单统计覆盖范围可能不同。</p>
+<p>历史图与同行表用数据商统一系列。独立测算用实际股数与已存档财报，数据商的利润分母及自由现金流定义有差异，分别保留来源。</p>
+<h3>② 与 2026-11-09 报告的变化</h3>
+<p>收盘锚点由 11 月 6 日的 $179.67 滚动至 11 月 18 日的 $166.80。补入两份 Rule 425 通讯、Prime 和麦当劳合作的官方条款及刷新后的卖方覆盖。财报基期继续采用 2026 Q3。</p>
+<h3>③ 取数更正记录</h3>
+<p>Rosenblatt 11 月 13 日目标价按明确正文与 MarketBeat 的一致记录采用 $225 → $210，部分摘要的变动方向存在冲突。季度股权激励 $269M 采用调整后 EBITDA 对账口径，包含部分工资税。</p>
+<h3>④ 已知局限</h3>
+<p>公司未单独披露 DASH 餐饮、杂货、按地区广告利润与 Prime 导流订单。历史 GAAP 市盈率缺少足够的盈利样本，情景没有赋予概率。</p></div><div class="footnote"><p>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p><p>主要披露 <a href="https://ir.doordash.com/news/news-details/2026/DoorDash-Releases-Third-Quarter-2026-Financial-Results/default.aspx">DoorDash Q3 业绩</a>、<a href="https://www.sec.gov/Archives/edgar/data/1792789/000179278926000070/dash-20260930.htm">DoorDash Q3 10-Q</a>、<a href="https://ir.doordash.com/news/news-details/2026/DoorDash-to-Acquire-Instacart-to-Help-Local-Stores-Win/default.aspx">双方并购公告</a>、<a href="https://www.sec.gov/Archives/edgar/data/1579091/000114036126041119/ef20084547_425.htm">交易协议及 8-K 摘要</a>、<a href="https://www.sec.gov/Archives/edgar/data/1792789/000114036126041195/ef20084600_425.htm">10 月 29 日电话会转写</a>、<a href="https://s25.q4cdn.com/251036341/files/doc_financials/2026/q3/CART-Q3-26-Earnings-Results-and-DoorDash-Acquisition-Press-Release.pdf">Instacart Q3 业绩</a>、<a href="../../../sources/dash/SEC_Filings/DASH_2026-11-13_Form425.htm">11 月 13 日 425（本地）</a>（<a href="https://www.sec.gov/Archives/edgar/data/1792789/000114036126043739/ef20085648_425.htm">SEC 原文</a>）、<a href="../../../sources/dash/SEC_Filings/DASH_2026-11-17_Form425.htm">11 月 17 日 425（本地）</a>（<a href="https://www.sec.gov/Archives/edgar/data/1579091/000114036126044489/ef20085820_425.htm">SEC 原文</a>）。</p></div></main></div><footer class="research-footer"><a class="report-request" href="https://github.com/jiangnan0707/investment-reports/issues/new?title=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A+%7C+DoorDash%EF%BC%88DASH%EF%BC%89&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ADoorDash%EF%BC%88DASH%EF%BC%89%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-19%0A%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0A">申请更新报告</a><p>登录 GitHub 后可向作者提交公开请求。</p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>
