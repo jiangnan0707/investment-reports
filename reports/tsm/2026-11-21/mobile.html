@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>台积电 2026-11-21 · 移动版 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+
+.main-content p {margin: 13px 0;line-height:1.84;}
+.main-content a {color:#215f49;text-underline-offset:3px;text-decoration-thickness:1px}
+.main-content .refs {font-size:12px;line-height:1.9;margin:12px 0 0;color:#475e51}
+.card {scroll-margin-top:18px}
+.summary-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+.summary-item .label {font-size:12px;color:#4e6557}
+.table-scroll,.plot-scroll {max-width:100%;overflow-x:auto}
+.table-scroll table {display:table;overflow:visible;width:100%;font-size:13px}
+.table-scroll caption {text-align:left;font-weight:600;color:#3c5647;padding:0 0 7px}
+.table-scroll tbody th {text-align:left;font-weight:600;color:#253e30;padding:10px 12px;border-bottom:1px solid #e5ece6;line-height:1.6}
+.table-scroll tbody tr:nth-child(even) th {background:var(--bg-stripe)}
+.table-scroll th,.table-scroll td {text-align:left;vertical-align:top}
+.table-scroll thead th {white-space:normal}
+.table-scroll tbody td {line-height:1.64}
+.chart .chart-legend {gap:9px 16px;flex-wrap:wrap;justify-content:flex-start}
+.chart svg {display:block;width:100%;height:auto;max-width:840px;margin:auto;font-family:inherit}
+.chart {margin:19px 0}
+.plot-scroll svg {min-width:410px}
+#sources .table-scroll:last-of-type td:last-child {min-width:105px}
+#sources h3 {margin-top:28px}
+.sidebar-group a {line-height:1.4}
+@media(max-width:900px){.page-layout{align-items:stretch}.sidebar{box-sizing:border-box}.main-content{width:100%}}
+@media(max-width:640px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.summary-item .value{font-size:19px}.table-scroll table{min-width:475px}.chart .plot-scroll{padding-bottom:3px}.sidebar{position:static}.plot-scroll svg{min-width:410px}.refs a{white-space:normal}.table-scroll tbody th,.table-scroll tbody td{padding:8px}.main-content p{line-height:1.8}}
+@media print{.table-scroll,.plot-scroll{overflow:visible}.plot-scroll svg{min-width:0}.main-content{width:100%}}</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research compact"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/tsm/index.html">披露资料</a><a href="index.html">PC 完整版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">TSM <span>·</span> 2026-11-21 <span>·</span> 移动精简版</div><h1>台积电</h1></header><main class="mobile-report"><section aria-labelledby="key-data"><h2 id="key-data">关键数字</h2><div class="key-numbers"><div><span>2026-11-20 · 11/20 美股常规收盘</span><strong>318.71 美元</strong></div><div><span>2026-11-20 · 台股 2330 收盘</span><strong>2,000 新台币</strong></div><div><span>11/20 · ADR 较五股普通股溢价</span><strong>4.97%</strong></div><div><span>2026 Q3 · 2nm＋3nm 占晶圆收入</span><strong>40.97%</strong></div><div><span>2026 年 10 月 · 合并营收同比</span><strong>+59.7%</strong></div><div><span>11/20 · ADR 滚动市盈率¹</span><strong>21.37 倍</strong></div></div></section><section><h2>核心图表</h2><figure class="mobile-chart"><figcaption>合并营收</figcaption><div class="measure-chart"><div class="measure-row"><span>2025 Q3</span><div class="measure-track " aria-hidden="true"><i class="" style="left:0.00%;width:66.25%"></i></div><strong>989.92</strong></div><div class="measure-row"><span>2026 Q3</span><div class="measure-track " aria-hidden="true"><i class="" style="left:0.00%;width:100.00%"></i></div><strong>1,494.24</strong></div></div></figure><figure class="mobile-chart"><figcaption>晶圆收入的节点构成｜2026 Q2 与 Q3</figcaption><figure class="chart"><figcaption class="chart-title">晶圆收入的节点构成｜2026 Q2 与 Q3</figcaption><div class="chart-legend"><span><i style="background:#174d34"></i>2nm</span><span><i style="background:#39815b"></i>3nm</span><span><i style="background:#77aa8c"></i>5nm</span><span><i style="background:#abcdb6"></i>7nm</span><span><i style="background:#e0ece2"></i>更早节点</span></div><div class="plot-scroll"><svg role="img" viewbox="0 0 850 450"><title id="fig1t">晶圆收入的节点构成｜2026 Q2 与 Q3</title><desc id="fig1d">纵轴为各季晶圆销售收入百分比。2nm从2.97%升至8.45%，3nm从29.86%升至32.52%，各节点精确金额见表。</desc><rect fill="#f9fcf9" height="450" rx="10" width="850"></rect><line stroke="#dce8dd" x1="95" x2="755" y1="370.0" y2="370.0"></line><text fill="#344c3c" font-size="13" text-anchor="end" x="85.00" y="375.00">0%</text><line stroke="#dce8dd" x1="95" x2="755" y1="292.5" y2="292.5"></line><text fill="#344c3c" font-size="13" text-anchor="end" x="85.00" y="297.50">25%</text><line stroke="#dce8dd" x1="95" x2="755" y1="215.0" y2="215.0"></line><text fill="#344c3c" font-size="13" text-anchor="end" x="85.00" y="220.00">50%</text><line stroke="#dce8dd" x1="95" x2="755" y1="137.5" y2="137.5"></line><text fill="#344c3c" font-size="13" text-anchor="end" x="85.00" y="142.50">75%</text><line stroke="#dce8dd" x1="95" x2="755" y1="60.0" y2="60.0"></line><text fill="#344c3c" font-size="13" text-anchor="end" x="85.00" y="65.00">100%</text><rect fill="#174d34" height="9.22003295160544" width="125" x="170" y="360.77996704839455"></rect><text fill="#344c3c" font-size="13" text-anchor="end" x="158.00" y="370.39">3.0%</text><rect fill="#39815b" height="92.55143929488024" width="125" x="170" y="268.2285277535143"></rect><text fill="#fff" font-size="14" text-anchor="middle" x="232.50" y="319.50">29.9% </text><rect fill="#77aa8c" height="101.08422826894369" width="125" x="170" y="167.14429948457064"></rect><text fill="#173e29" font-size="14" text-anchor="middle" x="232.50" y="222.69">32.6% </text><rect fill="#abcdb6" height="35.18255456693491" width="125" x="170" y="131.96174491763574"></rect><text fill="#173e29" font-size="14" text-anchor="middle" x="232.50" y="154.55">11.3% </text><rect fill="#e0ece2" height="71.9617449176357" width="125" x="170" y="60.00000000000006"></rect><text fill="#173e29" font-size="14" text-anchor="middle" x="232.50" y="100.98">23.2% </text><text fill="#344c3c" font-size="16" text-anchor="middle" x="232.50" y="405.00">Q2 2026</text><rect fill="#174d34" height="26.210023526638434" width="125" x="550" y="343.78997647336155"></rect><text fill="#fff" font-size="14" text-anchor="middle" x="612.50" y="361.89">8.5% </text><rect fill="#39815b" height="100.79918159381397" width="125" x="550" y="242.99079487954762"></rect><text fill="#fff" font-size="14" text-anchor="middle" x="612.50" y="298.39">32.5% </text><rect fill="#77aa8c" height="85.67546159449392" width="125" x="550" y="157.3153332850537"></rect><text fill="#173e29" font-size="14" text-anchor="middle" x="612.50" y="205.15">27.6% </text><rect fill="#abcdb6" height="31.29605983109605" width="125" x="550" y="126.01927345395762"></rect><text fill="#173e29" font-size="14" text-anchor="middle" x="612.50" y="146.67">10.1% </text><rect fill="#e0ece2" height="66.01927345395762" width="125" x="550" y="60.0"></rect><text fill="#173e29" font-size="14" text-anchor="middle" x="612.50" y="98.01">21.3% </text><text fill="#344c3c" font-size="16" text-anchor="middle" x="612.50" y="405.00">Q3 2026</text><line stroke="#8ba491" stroke-dasharray="5 5" x1="295" x2="550" y1="370" y2="370"></line><line stroke="#8ba491" stroke-dasharray="5 5" x1="295" x2="550" y1="360.77996704839455" y2="343.78997647336155"></line><line stroke="#8ba491" stroke-dasharray="5 5" x1="295" x2="550" y1="268.2285277535143" y2="242.99079487954762"></line><line stroke="#8ba491" stroke-dasharray="5 5" x1="295" x2="550" y1="167.14429948457064" y2="157.3153332850537"></line><line stroke="#8ba491" stroke-dasharray="5 5" x1="295" x2="550" y1="131.96174491763574" y2="126.01927345395762"></line><line stroke="#8ba491" stroke-dasharray="5 5" x1="295" x2="550" y1="60.00000000000006" y2="60.0"></line><text fill="#344c3c" font-size="14" text-anchor="start" x="95.00" y="32.00">占晶圆销售收入比例</text></svg></div></figure></figure></section><section><h2>研究速读</h2><article><h3>核心判断</h3><p>2026 年 11/20 美股常规收盘为 318.71 美元。 相较上期采用的 11/13 收盘 398.73 美元，每份 ADR 下跌 80.02 美元，跌幅 20.07%。同周 2330 普通股下跌 14.89%，ADR 对五股普通股美元等值的收盘溢价由 11.43% 缩至 4.97%。</p></article><article><h3>经营变化</h3><p>2nm 与 3nm 合计占晶圆销售收入的比例从 32.83% 升至 40.97%。 同一期间，全公司晶圆收入由 1,073.71 十亿新台币升至 1,219.77 十亿。由于分母也在增长，这次份额提升对应实际销售增加。三季度两个节点合计 499.75 十亿新台币，折合公司合并收入的约 33.45%。</p></article><article><h3>估值与风险</h3><p>以 318.71 美元收盘价计算，ADR 按统一新台币盈利、当日汇率折算的滚动市盈率为 21.37 倍 ，普通股为 20.36 倍 。相同盈利对应的倍数差约为 4.97%，与同日收盘溢价相符。若直接加总公司四季在发布日披露的美元 ADR 盈利，则市盈率为 20.51 倍。</p></article></section><section><h2>资料与出处</h2><ul class="source-list"><li><a href="https://investor.tsmc.com/english/quarterly-results/2026/q3">台积电三季度业绩资料</a></li><li><a href="https://data.sec.gov/submissions/CIK0001046179.json">SEC 申报索引</a></li><li><a href="https://stockanalysis.com/stocks/tsm/history/">Stock Analysis 历史日线</a></li><li><a href="https://finance.yahoo.com/quote/TSM/history/">Yahoo Finance 未复权日线</a></li><li><a href="https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=TSM:NYQ">Financial Times / Markit 历史日线</a></li><li><a href="https://citiadr.factsetdigitalsolutions.com/stocks/profile.idms?cusip=874039100&amp;pageId=15&amp;subpageID=151">Citi 存托行 / FactSet 带量报价</a></li><li><a href="https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20261104&amp;response=html&amp;stockNo=2330">台湾证交所 2330</a></li><li><a href="https://www.cbc.gov.tw/tw/lp-645-1-1-60.html">央行收盘汇率</a></li></ul><a href="../../../sources/tsm/index.html">披露资料</a></section><a class="read-complete" href="index.html">查看完整报告 <span aria-hidden="true">→</span></a></main><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89%20%7C%202026-11-21&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E5%8F%B0%E7%A7%AF%E7%94%B5%EF%BC%88TSM%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-21%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

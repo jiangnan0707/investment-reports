@@ -1,0 +1,43 @@
+{
+  "issuer": "台灣積體電路製造股份有限公司",
+  "ticker": "2330",
+  "document_type": "公開資訊觀測站重大訊息交易數據摘錄",
+  "currency": "USD",
+  "timezone": "Asia/Taipei",
+  "source_platform": "公開資訊觀測站（上市公司自行申報）",
+  "disclosures": [
+    {
+      "filing_date": "2026-11-19",
+      "filing_time": "16:09:03",
+      "transaction_date": "2026-11-19",
+      "subsidiary": "TSMC Partners, Ltd.",
+      "investee": "Anthropic, PBC",
+      "security": "N 類普通股",
+      "shares_acquired": 6024096,
+      "unit_price_usd": 83,
+      "reported_transaction_amount_usd": 499999968,
+      "amount_is_approximate": false,
+      "reported_ownership_after": "0.03%",
+      "reported_purpose": "股權投資",
+      "source_url": "https://mopsov.twse.com.tw/mops/web/ajax_t05st01?step=2&firstin=1&off=1&queryName=co_id&inpuType=co_id&TYPEK=sii&co_id=2330&seq_no=1&spoke_date=20261119&spoke_time=160903",
+      "retrieved_html_sha256": "823c601005dab2595669ad1e9dc9586a05851983b8be4f4eca5f9f01571a68ef"
+    },
+    {
+      "filing_date": "2026-11-20",
+      "filing_time": "16:50:44",
+      "transaction_date": "2026-11-20",
+      "subsidiary": "Emerging Fund, L.P.",
+      "investee": "Element Labs Ltd.",
+      "security": "無到期日、具轉換權的特別股",
+      "shares_acquired": 360461,
+      "unit_price_usd": 27.74,
+      "reported_transaction_amount_usd": 10000000,
+      "amount_is_approximate": true,
+      "reported_ownership_after": "低於 10%",
+      "reported_purpose": "長期投資",
+      "source_url": "https://mopsov.twse.com.tw/mops/web/ajax_t05st01?step=2&firstin=1&off=1&queryName=co_id&inpuType=co_id&TYPEK=sii&co_id=2330&seq_no=1&spoke_date=20261120&spoke_time=165044",
+      "retrieved_html_sha256": "53fa9b317d09a381c13ab406b55e3ffcd9a8654fa201e3a326dd007d37e9c473"
+    }
+  ],
+  "retrieved_at": "2026-11-21T05:16:01+08:00"
+}
