@@ -1,0 +1,111 @@
+{
+  "issuer": "泡泡瑪特國際集團有限公司",
+  "ticker": "09992.HK",
+  "currency": "HKD",
+  "period": [
+    "2026-10-29",
+    "2026-11-20"
+  ],
+  "source_type": "由港交所披露易原始翌日披露報表整理",
+  "method": "逐日取第二章節A的本日購回總股數與付出價格總額，每日計一次。授權數量及已發行股本取11月20日報表；擬註銷股份尚在已發行股數內。",
+  "as_of": "2026-11-20",
+  "cumulative_shares": 6690000,
+  "cumulative_consideration_hkd": 932498280,
+  "weighted_average_hkd": 139.3869,
+  "issued_shares_excluding_treasury": 1331779203,
+  "treasury_shares": 0,
+  "shares_purchased_under_2026_05_13_mandate": 6690000,
+  "percent_of_issued_shares_at_mandate_date": 0.4989,
+  "transactions": [
+    {
+      "date": "2026-10-29",
+      "shares": 1280000,
+      "consideration_hkd": 165354740,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1029/2026102900727_c.pdf"
+    },
+    {
+      "date": "2026-10-30",
+      "shares": 370000,
+      "consideration_hkd": 49717020,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1030/2026103001137_c.pdf"
+    },
+    {
+      "date": "2026-11-02",
+      "shares": 360000,
+      "consideration_hkd": 48902520,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1102/2026110202443_c.pdf"
+    },
+    {
+      "date": "2026-11-04",
+      "shares": 360000,
+      "consideration_hkd": 49456220,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1104/2026110401093_c.pdf"
+    },
+    {
+      "date": "2026-11-06",
+      "shares": 350000,
+      "consideration_hkd": 49544500,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1106/2026110600624_c.pdf"
+    },
+    {
+      "date": "2026-11-09",
+      "shares": 340000,
+      "consideration_hkd": 48750520,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1109/2026110900415_c.pdf"
+    },
+    {
+      "date": "2026-11-10",
+      "shares": 340000,
+      "consideration_hkd": 49819040,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1110/2026111000549_c.pdf"
+    },
+    {
+      "date": "2026-11-11",
+      "shares": 410000,
+      "consideration_hkd": 59756740,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1111/2026111100451_c.pdf"
+    },
+    {
+      "date": "2026-11-12",
+      "shares": 460000,
+      "consideration_hkd": 65714540,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1112/2026111200387_c.pdf"
+    },
+    {
+      "date": "2026-11-13",
+      "shares": 350000,
+      "consideration_hkd": 49896860,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1113/2026111300540_c.pdf"
+    },
+    {
+      "date": "2026-11-16",
+      "shares": 340000,
+      "consideration_hkd": 48972020,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1116/2026111600567_c.pdf"
+    },
+    {
+      "date": "2026-11-17",
+      "shares": 340000,
+      "consideration_hkd": 49180000,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1117/2026111700471_c.pdf"
+    },
+    {
+      "date": "2026-11-18",
+      "shares": 410000,
+      "consideration_hkd": 59049680,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1118/2026111800587_c.pdf"
+    },
+    {
+      "date": "2026-11-19",
+      "shares": 490000,
+      "consideration_hkd": 69659520,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1119/2026111900479_c.pdf"
+    },
+    {
+      "date": "2026-11-20",
+      "shares": 490000,
+      "consideration_hkd": 68724360,
+      "source_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1120/2026112000481_c.pdf"
+    }
+  ]
+}
