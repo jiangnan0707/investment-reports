@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="referrer" content="no-referrer"><title>SpaceX 2026-11-22 · 投资研究档案</title>
+<meta name="referrer" content="no-referrer"><meta name="report-updated-at" content="2026-11-22T21:41:38.667240+08:00"><title>SpaceX 2026-11-22 · 投资研究档案</title>
 <style>
   :root {
     --bg-page:       #f2f7f2;
@@ -33,7 +33,7 @@
   }
   .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
 
-
+  
   header {
     background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
     color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
@@ -50,7 +50,7 @@
   header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
   header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
 
-
+  
   .page-layout { display: flex; gap: 36px; align-items: flex-start; }
   .sidebar {
     position: sticky; top: 28px; width: 300px; flex-shrink: 0;
@@ -79,7 +79,7 @@
   .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
   .main-content { flex: 1; min-width: 0; }
 
-
+  
   .card {
     background: var(--bg-card); border: 1px solid var(--border-light);
     border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
@@ -95,7 +95,7 @@
   .card h3:first-of-type { margin-top: 0; }
   .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
 
-
+  
   table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
   thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
   tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
@@ -103,28 +103,28 @@
   tbody tr:hover td { background: var(--bg-hover); }
   tbody tr:last-child td { border-bottom: none; }
 
-
+  
   .metric-positive { color: var(--green); font-weight: 650; }
   .metric-negative { color: var(--red); font-weight: 650; }
   .metric-warn     { color: var(--amber); font-weight: 650; }
 
-
+  
   .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
   .tag-bull { background: #d8f3dc; color: #1b5e20; }
   .tag-bear { background: #fce4e4; color: #8b0e18; }
   .tag-hold { background: #fef3cd; color: #7a5a10; }
 
-
+  
   .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
   .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
   .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
   .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
   .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
 
-
+  
   .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
 
-
+  
   .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
   .src-s { background: #d8f3dc; color: #1b5e20; }
   .src-2 { background: #fff3cd; color: #7a5800; }
@@ -133,10 +133,10 @@
   .src-t { background: #f3e8f5; color: #5c007a; }
   .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
 
-
+  
   .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
 
-
+  
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
   .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
   .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
@@ -147,10 +147,10 @@
   .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
   .box-red li { margin-bottom: 6px; line-height: 1.65; }
 
-
+  
   .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
 
-
+  
   .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
   .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
   .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
@@ -170,9 +170,9 @@
   .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
   .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
   .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
 
-
-
+  
   .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
   .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
   .tl-item { position: relative; margin-top: 30px; }
@@ -184,7 +184,7 @@
   .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
   .tl-text strong { color: var(--text-primary); }
 
-
+  
   .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
   .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
   .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
@@ -192,11 +192,11 @@
   .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
   .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
 
-
+  
   h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-
-
+  
+  
   @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 900px) {
     .page-layout { flex-direction: column; }
@@ -233,7 +233,7 @@
   }
   @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
 
-
+  
   @media print {
     @page { size: A4; margin: 12mm 11mm; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -248,7 +248,7 @@
     .card h2 { font-size: 16.5px; break-after: avoid; }
     .card h3 { font-size: 13.5px; break-after: avoid; }
     table { font-size: 10.5px; margin: 12px 0; }
-
+    
     table { display: table !important; width: 100% !important; overflow: visible !important; }
     thead th { white-space: normal; padding: 6px 7px; }
     thead { display: table-header-group; }
@@ -279,10 +279,10 @@
 .source-line a,.card a{overflow-wrap:anywhere}.bar-value,.summary-item .value{font-variant-numeric:tabular-nums}
 @media(max-width:680px){.bar-label{flex:0 0 80px;text-align:left}.bar-value{flex:0 0 55px}.chart{padding:12px}.bar-row{gap:6px}.sidebar{display:none}.page-layout{display:block}.card .table-wrap th,.card .table-wrap td{min-width:72px}.card .table-wrap td{max-width:260px}}
 </style><link rel="stylesheet" href="../../../assets/site.css">
-</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/spcx/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20SpaceX%EF%BC%88SPCX%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ASpaceX%EF%BC%88SPCX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">SPCX <span>·</span> 2026-11-22 <span>·</span> PC 完整版</div><h1>SpaceX</h1><p>2026年11月22日 · 纳斯达克 · 股价截至11月20日收盘 · 财务截至9月30日</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#conclusion">一、现在买入，依靠什么赚钱？</a></li><li><a href="#model">二、一股 SPCX 买到了哪些业务</a></li><li><a href="#core-metric">三、收入和资本开支流向哪里</a></li><li><a href="#starlink">四、Starlink 订阅增加，定价和利润率能否保持</a></li><li><a href="#space">五、Space 的价值，有多少已体现在 Starlink</a></li><li><a href="#compute">六、算力合同的期限，比合同总额更有信息量</a></li><li><a href="#compute-pricing">七、数据中心审批趋严，谁能把算力卖得更贵？</a></li><li><a href="#cash">八、资金能支撑多久</a></li><li><a href="#valuation">九、127.79 美元隐含怎样的增长</a></li><li><a href="#risk">十、竞争、政策和普通股股东的权利</a></li><li><a href="#musk-oversight">十一、民主党拟调查 Elon Musk，哪些政府收入会受影响？</a></li><li><a href="#debate">十二、多空分歧怎样验证</a></li><li><a href="#framework">十三、未来两个财报季看什么</a></li><li><a href="#data">十四、数据与复算</a></li></ul></aside><main class="main-content report-body"><section class="card" id="conclusion"><h2>一、现在买入，依靠什么赚钱？</h2><p><strong>三季度，Connectivity（含 Starlink）贡献集团约 85% 的营业利润，Super Intelligence（SI）占资本开支约 84%。</strong>审批收紧有利于已通电容量提价，也可能推迟新机房收费。参院已就 Starshield 问询 SpaceX，众院民主党拟调查 Musk 在 DOGE 的工作。2025 年联邦客户约占集团收入五分之一。</p>
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/spcx/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20SpaceX%EF%BC%88SPCX%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ASpaceX%EF%BC%88SPCX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">SPCX <span>·</span> 2026-11-22 <span>·</span> PC 完整版</div><h1>SpaceX</h1><p>2026年11月22日 · 纳斯达克 · 股价截至11月20日收盘 · 财务截至9月30日</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#conclusion">一、现在买入，依靠什么赚钱？</a></li><li><a href="#model">二、一股 SPCX 买到了哪些业务</a></li><li><a href="#core-metric">三、收入和资本开支流向哪里</a></li><li><a href="#starlink">四、Starlink 订阅增加，定价和利润率能否保持</a></li><li><a href="#space">五、Space 的价值，有多少已体现在 Starlink</a></li><li><a href="#compute">六、算力合同的期限，比合同总额更有信息量</a></li><li><a href="#compute-pricing">七、数据中心审批趋严，谁能把算力卖得更贵？</a></li><li><a href="#cash">八、资金能支撑多久</a></li><li><a href="#valuation">九、127.79 美元要求怎样的现金流</a></li><li><a href="#risk">十、竞争、政策和普通股股东的权利</a></li><li><a href="#musk-oversight">十一、国会问询如何影响政府合同</a></li><li><a href="#debate">十二、多空分歧怎样验证</a></li><li><a href="#framework">十三、投资论点与未来两个财报季的验证</a></li><li><a href="#data">十四、数据与复算</a></li></ul></aside><main class="main-content report-body"><section class="card" id="conclusion"><h2>一、现在买入，依靠什么赚钱？</h2><p><strong>SpaceX 股东在用 Starlink 的盈利，为一轮回收期更长的 AI 建设提供资金。</strong>三季度 Connectivity 贡献集团约 85% 的营业利润，Super Intelligence（SI）占资本开支约 84%。要支撑 127.79 美元的收盘价，以下五年建设情景在第六年需要约 <strong>1,890 亿美元企业自由现金流</strong>。设备利用率、续租价格和新机房交付节奏，决定了这个门槛有多远。</p>
 <div class="summary-grid"><div class="summary-item"><div class="value">$127.79</div><div class="label">11月20日常规收盘</div></div><div class="summary-item"><div class="value">1.74 万亿美元</div><div class="label">估算全部普通股市值</div></div><div class="summary-item"><div class="value">54.2 倍</div><div class="label">滚动十二个月市销率</div></div><div class="summary-item"><div class="value">23.67 亿美元</div><div class="label">Q3 Connectivity 营业利润</div></div><div class="summary-item"><div class="value">83.9%</div><div class="label">Q3 SI 资本开支占比</div></div><div class="summary-item"><div class="value">−349.72 亿美元</div><div class="label">前三季简化自由现金流</div></div></div>
-<p>以当前约 1.74 万亿美元股权市值，SPCX 仍适合列入观察名单。上调判断需要看到同一批算力提价后继续满租、待建容量如期开始收费，以及集团自由现金流缺口收窄。对政治风险，先看问询是否改变授标或续约条件，再调整收入预测。</p>
-<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">三季度业绩与分部数据</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">第三季 Form 10-Q</a> · <a href="https://dorseywright.nasdaq.com/chart/performance/symbol/SPCX">Nasdaq Dorsey Wright 收盘数据</a> · <a href="https://stockanalysis.com/stocks/spcx/history/">逐日价格记录</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_US_Senate_Starshield_Inquiry_2026-10-22.pdf">参院致 Musk 函</a> · <a href="https://s23.q4cdn.com/440135859/files/doc_downloads/2026/10/Oracle-Investor-Day-Meeting/vFinal/2026-Investor-Day-CFO-presentation.pdf">Oracle GPU 续约资料</a> · <a href="https://investors.coreweave.com/news/news-details/2026/CoreWeave-Continues-to-Contract-New-Compute-Capacity-at-Higher-Prices/default.aspx">CoreWeave 短约公告</a></p></section>
+<p>先看三个能改变判断的节点。11 月 30 日是两名美国参议员要求 Musk 和 SpaceX 书面回应 Starlink / Starshield 问题的期限。12 月是 Anthropic 预计约定算力全部交付的窗口。2027 年 1 月与 3 月是两项协议初始不可取消期的终点。前者关系政府合同风险，后两者关系收费规模与续租价格。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">三季度业绩与分部数据</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">第三季 Form 10-Q</a> · <a href="https://dorseywright.nasdaq.com/chart/performance/symbol/SPCX">Nasdaq Dorsey Wright 收盘数据</a> · <a href="https://stockanalysis.com/stocks/spcx/history/">逐日价格记录</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_US_Senate_Starshield_Inquiry_2026-10-22.pdf">参院致 Musk 函</a> · <a href="https://s23.q4cdn.com/440135859/files/doc_downloads/2026/10/Oracle-Investor-Day-Meeting/vFinal/2026-Investor-Day-CFO-presentation.pdf">Oracle GPU 续约资料</a> · <a href="https://investors.coreweave.com/news/news-details/2026/CoreWeave-Continues-to-Contract-New-Compute-Capacity-at-Higher-Prices/default.aspx">CoreWeave 短约公告</a> · <a href="https://ir.spacex.com/stock-information/">公司历史股价</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_Senate_Starshield_Preservation_Letter_2026-11-13.pdf">11 月 13 日参院原函</a> · 估值底稿</p></section>
 <section class="card" id="model"><h2>二、一股 SPCX 买到了哪些业务</h2><p>Space Exploration Technologies Corp. 于 2026 年 6 月在纳斯达克上市，SPCX 对应 A 类普通股。以下沿用三季报的三个分部名：Space 经营发射和航天器项目，Connectivity 经营 Starlink 网络及相关服务，Super Intelligence（下称 SI，原称 AI）涵盖云算力、Grok、Cursor 和 X。xAI 是集团旗下公司。下文按财报分部列示数字，讨论产品或具体合同时沿用其各自名称。除特别说明外，金额均为美元。</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">2026年第三季度 · 亿美元</th><th scope="col">对外收入</th><th scope="col">营业利润</th><th scope="col">营业利润率</th><th scope="col">资本开支</th></tr></thead><tbody><tr><th scope="row">Space</th><td>17.67</td><td>−0.07</td><td>−0.4%</td><td>16.06</td></tr><tr><th scope="row">Connectivity</th><td>52.48</td><td>23.67</td><td>45.1%</td><td>15.43</td></tr><tr><th scope="row">SI</th><td>75.60</td><td>4.31</td><td>5.7%</td><td>164.44</td></tr><tr><th scope="row">集团</th><td>145.75</td><td>27.91</td><td>19.1%</td><td>195.93</td></tr></tbody></table></div>
 <p>火箭降低自建卫星网络的部署成本，卫星网络销售宽带和专网服务；这两项业务直接共享资产和需求。SI 本季收入的主要增量来自地面云算力和软件。把轨道数据中心、火星运输写进盈利预测，目前缺少可以核验的订单、单位成本与现金回报。</p>
@@ -320,22 +320,16 @@
 <p>若从 9 月末起保持前三季月均约 38.86 亿美元的简化现金缺口，898.55 亿美元相当于约 23 个月。这个静态压力测试既未预留还债资金，也未加入新融资；购建开支会随交付而变化。管理层 10 月给出的四季度资本开支指引已升至 350–400 亿美元，上一季度实际为 195.93 亿美元，历史速度可能低估短期用款。</p>
 <p>10 月公告披露，Apollo 等方承诺安排约 400 亿美元 GPU 设备融资，每批设备的初始租期为 5 至 5.25 年。11 月 20 日，Apollo 与高盛宣布同一项目约 440 亿美元优先及次级票据已定价，预计 2027 年上半年随设备交付开始起租。两笔数字属于同一融资安排的不同阶段。设备融资改善采购能力，也使客户终止服务后留下的租金义务更值得关注。</p>
 <p>利率上升会抬高后续设备融资的价格，也会压低远期股东现金流的现值。电力接入、站点许可或设备交付延误则先推迟服务确认。可观察结果是应收和资本开支先升、收入及经营现金流兑现较慢。</p>
-<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · 现金流量表及流动性</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_8-K_Apollo_2026-10-26.htm">10/26 GPU 融资 8-K</a> · <a href="https://www.apollo.com/insights-news/pressreleases/2026/11/apollo-and-goldman-sachs-announce-pricing-of-44-billion-spacex-gpu-financing-3407671">11/20 Apollo 与高盛定价公告</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">业绩会 · 四季度资本开支指引</a></p></section>
-<section class="card" id="valuation"><h2>九、127.79 美元隐含怎样的增长</h2><p>按 11 月 20 日收盘价和 10 月 15 日披露的两类普通股合计 135.81 亿股，估算股权市值约 1.74 万亿美元，相当于滚动收入的 54.2 倍。即使把增长最快的第三季度直接乘四，市销率仍为 29.8 倍。</p>
-<p>分母分别为过去十二个月 320.43 亿美元（2025 年全年 186.74 亿，加本年前三季 270.83 亿，减上年前三季 137.14 亿），以及三季度年化 583 亿美元。二者均包含集团三个分部。A 类和 B 类按 1:1 经济权益合并，股数未计尚未行权或归属的奖励。11 月 20 日收盘较 135 美元 IPO 价格低 5.3%；上市仅五个月，缺少跨周期估值分位。</p>
-<p>从未来回报倒推：假定投资者以今天的价格持有五年、要求年化 10%，期间无分红、股数不变，则第五年需要约 2.80 万亿美元股权价值。以不同的终值股权现金流倍数和成熟期现金流率反推所需规模，下表为敏感性分析。</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">第五年股权现金流倍数</th><th scope="col">股权现金流率</th><th scope="col">所需年现金流（亿美元）</th><th scope="col">所需年收入（亿美元）</th><th scope="col">从当前滚动收入起的年复合增速</th></tr></thead><tbody><tr><th scope="row">20 倍</th><td>15%</td><td>1,398</td><td>9,317</td><td>96.2%</td></tr><tr><th scope="row">30 倍</th><td>20%</td><td>932</td><td>4,658</td><td>70.8%</td></tr><tr><th scope="row">40 倍</th><td>25%</td><td>699</td><td>2,795</td><td>54.2%</td></tr></tbody></table></div>
-<p>中间情景要求第五年约 932 亿美元可分配给普通股股东的年度现金流。按 20% 现金流率，对应约 4,658 亿美元收入。若以增长更快的第三季度收入年化值 583 亿美元为起点，也需五年复合增长约 51.5%。若公司达到管理层提出的 1,000 亿美元年化收入目标，第五年所需规模仍约为该目标的 4.7 倍。若期间新增股数 10%，同等每股回报所需的第五年股权价值也提高 10%。反过来看，即使第五年收入做到 3,000 亿美元，若股权现金流率为 20%、终值为 30 倍，则股权市值约 1.80 万亿美元；在股数不变、期间无分红的假设下，五年年化回报仅约 0.7%。</p>
-<p>终值的股权现金流率假设考虑经营、维持及增长投资和融资后可分配给股东的现金。前文使用的经营现金流减现金购建支出是观察历史资金需求的简化口径，两者不可直接套用同一倍数。终值倍数、现金流率和 10% 回报是研究假设，没有为这些情景赋予概率。</p>
-<p class="source-line">资料来源　<a href="https://dorseywright.nasdaq.com/chart/performance/symbol/SPCX">Nasdaq Dorsey Wright · 11月20日行情</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · A/B 股数量及报告期收入</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.htm">招股书 · 2025财年及股权结构</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">10月业绩会 · 年化收入口径</a></p></section>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · 现金流量表及流动性</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_8-K_Apollo_2026-10-26.htm">10/26 GPU 融资 8-K</a> · <a href="https://www.apollo.com/insights-news/pressreleases/2026/11/apollo-and-goldman-sachs-announce-pricing-of-44-billion-spacex-gpu-financing-3407671">11/20 Apollo 与高盛定价公告</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">业绩会 · 四季度资本开支指引</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_Apollo_GPU_Notes_Pricing_2026-11-20.pdf">11 月 20 日 Apollo / 高盛定价公告 PDF</a></p></section>
+<section class="card" id="valuation"><h2>九、127.79 美元要求怎样的现金流</h2><p>按 11 月 20 日收盘价和 10 月 15 日披露的两类普通股合计 135.81 亿股，估算股权市值约 1.74 万亿美元，相当于滚动收入的 54.2 倍。即使把增长最快的第三季度直接乘四，市销率仍为 29.8 倍。</p><p>分母分别为过去十二个月 320.43 亿美元（2025 年全年 186.74 亿，加本年前三季 270.83 亿，减上年前三季 137.14 亿），以及三季度年化 583 亿美元。二者均包含集团三个分部。A 类和 B 类按 1:1 经济权益合并，股数未计尚未行权或归属的奖励。11 月 20 日收盘较 135 美元 IPO 价格低 5.3%；上市仅五个月，缺少跨周期估值分位。</p><p>从市值还原企业价值。以 9 月末数据计算，现金及可交易证券减债务和融资租赁后，净现金为 510.11 亿美元。从 17,355 亿美元股权价值中扣除这笔净现金，得到约 <strong>16,845 亿美元企业价值</strong>。这里假设现金和证券均可按账面全额动用，且股数维持不变。若集团需要预留更多经营现金或增发股票，相同股价对经营现金流的要求会上升。</p><h3>9.1 先给建设期留足现金，再反推第六年的门槛</h3><p>以 2026 年第三季度收入年化为出发点，设未来五年集团收入依次增长 70%、50%、40%、30%、20%。假设投资高峰后资本开支占收入由 78% 降至约 18%，营业利润率由 16% 升至 32%。以下为经营情景，实际能否实现，取决于同批设备的利用率、单价以及补充设备所需投入。模型以税后营业利润加折旧、减资本开支和新增营运资金计算企业自由现金流（FCFF）。</p><div class="table-wrap"><table><thead><tr><th scope="col">建设情景 · 亿美元</th><th scope="col">第 1 年</th><th scope="col">第 2 年</th><th scope="col">第 3 年</th><th scope="col">第 4 年</th><th scope="col">第 5 年</th></tr></thead><tbody><tr><th scope="row">集团收入</th><td>991</td><td>1,487</td><td>2,081</td><td>2,706</td><td>3,247</td></tr><tr><th scope="row">FCFF</th><td>−478</td><td>−223</td><td>46</td><td>363</td><td>665</td></tr></tbody></table></div><p>按 10% 加权平均资本成本折现，上述五年 FCFF 现值合计约 76 亿美元。假设从第六年起现金流长期增长 3%，以当期企业价值反推，<strong>第六年需要 1,890 亿美元 FCFF</strong>。给定第六年现金流率，即可计算企业要做到多大。用过去四季和最近一季年化作收入起点，会得出两组不同的增长要求。</p><div class="table-wrap"><table><thead><tr><th scope="col">第六年 FCFF 率</th><th scope="col">所需第六年营收（亿美元）</th><th scope="col">从近四季 320.43 亿起算的六年复合增速</th><th scope="col">从 Q3 年化 583 亿起算的六年复合增速</th></tr></thead><tbody><tr><th scope="row">15%</th><td>12,603</td><td>84.4%</td><td>66.9%</td></tr><tr><th scope="row">20.48%（建设期末假设）</th><td>9,231</td><td>75.1%</td><td>58.5%</td></tr><tr><th scope="row">25%</th><td>7,562</td><td>69.4%</td><td>53.3%</td></tr><tr><th scope="row">30%</th><td>6,301</td><td>64.3%</td><td>48.7%</td></tr></tbody></table></div><p>反过来，若第六年收入只沿建设路径增长 3%，约为 3,344 亿美元，要支撑现价就需要 <strong>56.5% 的 FCFF 率</strong>。若现金流率为 20.48%，这条路径的估值为 49.05 美元/股，约 98.8% 的企业价值来自五年以后的现金流。若 Starlink、Grok 或对外出租算力能维持更长的高速增长，五年后进入稳态的假设会低估价值。</p><p><strong>结论对资金成本敏感。</strong>在各年经营现金流和 3% 永续增长率相同的条件下，资本成本取 8%、10%、12%，所需第六年 FCFF 分别为 1,229 亿、1,890 亿和 2,666 亿美元。若股数增加 10%，净现金和建设期经营现金流均不变，10% 资本成本下的门槛升到约 2,086 亿美元。现实中增发所得资金或购入的资产会改变净现金和经营结果。</p><p>另一种做法是给第五年股东可分配现金一个退出倍数。假设持有五年、年化要求回报 10%、不分红、股数不变，且退出时市场仍愿付 30 倍股权现金流，所需第五年股权现金流约为 932 亿美元。这个结果依赖未来仍有买家愿付 30 倍；上面的 1,890 亿按第六年企业现金流和 3% 长期增长计算。对再投资和终值倍数的判断足以改变结果。</p><p class="source-line">资料来源　<a href="https://dorseywright.nasdaq.com/chart/performance/symbol/SPCX">Nasdaq Dorsey Wright · 11月20日行情</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · A/B 股数量及报告期收入</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.htm">招股书 · 2025财年及股权结构</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">10月业绩会 · 年化收入口径</a> · 本期估值假设与逐年现金流（JSON）</p></section>
 <section class="card" id="risk"><h2>十、竞争、政策和普通股股东的权利</h2><p>与 Starlink 业务相近的有 Eutelsat OneWeb 与 Amazon Leo。Eutelsat 同期低轨业务收入为 7,090 万欧元，主要覆盖企业、政府及渠道客户；Amazon 仍在部署和拓展渠道。Starlink 已拥有规模化消费者网络和自有发射能力。作为 Space 的参照，Rocket Lab 同季集团收入约 2.68 亿美元，其中航天系统约占八成。用这些公司的集团市销率为整个 SPCX 定价，会混入业务结构差异。</p>
 <p>航天地面设施及发射节奏受许可和客户项目周期制约，卫星通信受频谱与各地运营许可制约，AI 机房则受电力和环境许可制约。以 Starlink Mobile 为例，收购 800 MHz 频谱的协议预计 2027 年上半年完成，仍待审批等条件满足。政策变化先看具体许可、订单及预算的日期和条件。</p>
 <p>公开交易的 A 类股每股一票，B 类每股十票。2026 年 10 月 SpaceX 与 Tesla 分别宣布设立特别委员会，评估潜在合并。截至 11 月 22 日，公开文件未给出最终交易协议、换股比例或完成时点。本期估值按独立上市的 SpaceX 计算。若出现确定对价，需要重新计算每股权益和负债。</p>
 <p>关联交易同样影响盈利质量。三季报列示，9 月底与 Valor 相关的设备融资负债为 128.97 亿美元，已包含在账面债务及融资租赁内；与 The Boring Company 有关的投资当季产生 5.61 亿美元未实现收益。判断经常性盈利时应分开看设备融资成本、经营利润和估值变动。</p>
 <p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">SpaceX 10-Q · 关联方、频谱及期后事项</a> · <a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026066775/tsla-20260930.htm">Tesla 三季报 · 潜在合并评估</a> · <a href="https://www.eutelsat.com/system/files/2026-10/DOC_Investors-Q1-2026-27-Presentation_ENFR_291026_1.pdf">Eutelsat 同期投资者演示</a> · <a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts">Rocket Lab 三季度业绩</a> · <a href="https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates">Amazon · Leo 部署进度</a></p></section>
-<section class="card" id="musk-oversight"><h2>十一、民主党拟调查 Elon Musk，哪些政府收入会受影响？</h2><p><strong>国会监督给 SPCX 增加了一项独立于数据中心审批的下行风险。</strong>选后部分民主党议员准备调查 Elon Musk 在 DOGE（政府效率部）的工作；另有已经直接发给 SpaceX 的书面问询。两条线的对象、进度和财务影响不同。</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">时间与状态</th><th scope="col">谁采取了什么行动</th><th scope="col">与 SpaceX 的关系</th></tr></thead><tbody><tr><th scope="row">2025/2/5 · 已致函公司</th><td>参议员 Richard Blumenthal 以参院常设调查小组民主党首席议员身份，要求 SpaceX 保存和提供有关 Musk 参与 DOGE 及潜在利益冲突的材料。</td><td>这封初步调查函将公共职务和联邦承包商的关系放在同一审查范围。</td></tr><tr><th scope="row">2026/10/22 · 已就公司业务发起问询</th><td>Blumenthal 公开致函 Musk 和国防部门，询问 Starlink / Starshield 服务控制权和政府合同，要求 SpaceX 提供书面答复及简报。</td><td>公司被要求回答具体合同问题。公开信息中对个别决定由谁作出存在争议，函件没有认定责任。</td></tr><tr><th scope="row">2026/11 · 新一届国会的调查意向</th><td>11 月 8 日，众院监督委员会民主党首席议员 Robert Garcia 公开谈及拟审视 Musk 与 DOGE，涉及联邦裁员及政府数据访问。11 月 16 日，众院预算委员会民主党首席议员 Brendan Boyle 谈及调查 DOGE 对国会批准支出的影响，称必要时会使用传票权。</td><td>2027 年 1 月新一届国会上任后可推进。这些表态本身未显示本轮已向 Musk 送达传票，也没有裁定 SpaceX 违法。</td></tr></tbody></table></div>
-<p class="source-line">资料来源　<a href="https://www.hsgac.senate.gov/wp-content/uploads/2025-02-05-Letter-from-Blumenthal-to-Space-Exploration-Technologies.pdf">2025年参院致 SpaceX 的 DOGE 调查函</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_US_Senate_Starshield_Inquiry_2026-10-22.pdf">2026年参院致 Musk 的函件原件</a> · <a href="https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-announces-congressional-inquiry-into-starlink-and-starshield">参院公开说明及两封函件</a> · <a href="https://www.washingtonpost.com/politics/2026/11/08/democrats-weigh-probes-trump-family-doge-elon-musk-key-lawmaker-says/">Garcia 11月8日采访报道</a> · <a href="https://nymag.com/intelligencer/article/democrats-house-trump-corruption-garcia-raskin-crypto-epstein-jared-ballroom.html">Boyle 11月16日采访</a></p>
+<section class="card" id="musk-oversight"><h2>十一、国会问询如何影响政府合同</h2><p><strong>针对 SpaceX 自身业务的国会监督已经进入有明确答复期限的阶段。</strong>11 月 13 日，参议院外交关系委员会民主党首席议员 Jeanne Shaheen 与参议员 Chris Coons 致函 Elon Musk，要求立即保全涉及乌克兰使用 Starlink 和 Starshield 的文件与通信，并在 11 月 30 日前书面确认保全措施、回答有关限制服务与决策权的问题。众院议员关于调查 DOGE 的表态另有对象和进程。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">时间与状态</th><th scope="col">谁采取了什么行动</th><th scope="col">与 SpaceX 的关系</th></tr></thead><tbody><tr><th scope="row">2025/2/5 · 已致函公司</th><td>参议员 Richard Blumenthal 以参院常设调查小组民主党首席议员身份，要求 SpaceX 保存和提供有关 Musk 参与 DOGE 及潜在利益冲突的材料。</td><td>这封初步调查函将公共职务和联邦承包商的关系放在同一审查范围。</td></tr><tr><th scope="row">2026/10/22 · 已就公司业务发起问询</th><td>Blumenthal 公开致函 Musk 和国防部门，询问 Starlink / Starshield 服务控制权和政府合同，要求 SpaceX 提供书面答复及简报。</td><td>公司被要求回答具体合同问题。公开信息中对个别决定由谁作出存在争议，函件没有认定责任。</td></tr><tr><th scope="row">2026/11/13 · 保全与书面答复要求</th><td>Shaheen、Coons 要求 Musk 及 SpaceX 保存记录，并说明限制决定、参与人以及与政府的沟通情况。</td><td>11 月 30 日为函件所列答复期限。投资者可跟踪公开回应及后续程序；到期未见公开文件，仍无法判断公司是否已私下答复。</td></tr><tr><th scope="row">2026/11 · 新一届国会的调查意向</th><td>11 月 8 日，众院监督委员会民主党首席议员 Robert Garcia 公开谈及拟审视 Musk 与 DOGE，涉及联邦裁员及政府数据访问。11 月 16 日，众院预算委员会民主党首席议员 Brendan Boyle 谈及调查 DOGE 对国会批准支出的影响，称必要时会使用传票权。</td><td>2027 年 1 月新一届国会上任后可推进。这些表态本身未显示本轮已向 Musk 送达传票，也没有裁定 SpaceX 违法。</td></tr></tbody></table></div>
+<p class="source-line">资料来源　<a href="https://www.hsgac.senate.gov/wp-content/uploads/2025-02-05-Letter-from-Blumenthal-to-Space-Exploration-Technologies.pdf">2025年参院致 SpaceX 的 DOGE 调查函</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_US_Senate_Starshield_Inquiry_2026-10-22.pdf">2026年参院致 Musk 的函件原件</a> · <a href="https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-announces-congressional-inquiry-into-starlink-and-starshield">参院公开说明及两封函件</a> · <a href="https://www.washingtonpost.com/politics/2026/11/08/democrats-weigh-probes-trump-family-doge-elon-musk-key-lawmaker-says/">Garcia 11月8日采访报道</a> · <a href="https://nymag.com/intelligencer/article/democrats-house-trump-corruption-garcia-raskin-crypto-epstein-jared-ballroom.html">Boyle 11月16日采访</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_Senate_Starshield_Preservation_Letter_2026-11-13.pdf">11 月 13 日参院原函 PDF</a> · <a href="https://www.foreign.senate.gov/press/dem/release/ranking-member-shaheen-senator-coons-demand-elon-musk-preserve-documents-regarding-ukraines-access-to-starlink-and-starshield/">参院外交关系委员会公告</a></p>
 <p>招股书披露，<strong>2025 年约五分之一的集团收入来自美国联邦机构</strong>。这是历史客户敞口。个人接受问询首先消耗管理层时间并增加合规成本；若采购机关推迟新授标、增加合同约束或不行使续约选择权，才会进一步改变 Space、Connectivity 等分部的收入和收款节奏。不能把这五分之一直接算作潜在损失，也不应因政治表态直接下调 Google 或 Anthropic 的商业合同收入。</p>
 <p>11 月 20 日签署的行政命令 EO 14438 又增加了一道程序：联邦承包商收到涉及行政部门工作的国会调阅，应通知白宫和签约机构并配合处理特权信息。现阶段可追踪正式传票或听证通知、采购机构是否修改招标与续约条件、SpaceX 后续披露的订单和回款变化。若只出现听证而合同照常执行，影响主要在费用和投资者要求的风险补偿。</p>
 <p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.pdf">SpaceX 招股书 · Government Contracts</a> · <a href="https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/">白宫行政命令 EO 14438</a></p></section>
@@ -343,9 +337,9 @@
 <p>外部研究也把分歧指向资本回报。晨星在 10 月 28 日发表的分析给出每股 70 美元的长期公允价值，认可传统业务的成本优势，担心 AI 再投资回报。11 月 16 日市场报道显示，RBC 维持 225 美元目标价，看重上面级回收提高发射频次的可能性。公允价值与券商目标价的期限和方法不同，用二者均值推算胜率没有依据。</p>
 <p>Flight 15 后的投资者论坛讨论同时出现对技术进展的乐观和对估值、融资的疑问。它提供了需要求证的问题；投资结论仍取决于公司披露的利润、资本支出和回款。</p>
 <p class="source-line">资料来源　<a href="https://www.morningstar.com/stocks/spacex-earnings-we-raise-our-fair-value-estimate-scaling-data-centers-is-stock-buy">晨星研究 · 公允价值及资本回报</a> · <a href="https://www.investing.com/news/analyst-ratings/rbc-capital-maintains-spacex-stock-rating-on-starship-progress-93CH-5030076">RBC 观点报道 · 11月16日</a> · <a href="https://www.reddit.com/r/SPCXInvestors/comments/1xwrh3t/just_bought_5000_of_spcx/">Reddit · Flight 15 后的投资者讨论</a></p></section>
-<section class="card" id="framework"><h2>十三、未来两个财报季看什么</h2><div class="table-wrap"><table><thead><tr><th scope="col">验证窗口</th><th scope="col">已知起点或管理层目标</th><th scope="col">哪些变化值得调整判断</th></tr></thead><tbody><tr><th scope="row">2026 年第四季</th><td>9 月底 nameplate compute 为 1.7 GW，年底目标 2.5–3 GW；12 月单月收入乘 12 的目标为 1,000 亿美元。</td><td>核对按期交付的可计费容量、当季确认收入和回款。该目标既非全年销售额，也不等于不可取消的经常性收入。</td></tr><tr><th scope="row">第四季资金需求</th><td>管理层预计资本开支 350–400 亿美元；预计毛利率回到更接近二季度的水平。</td><td>若开支接近上限而交付推迟，追问现金缺口、租约及新增融资来源。</td></tr><tr><th scope="row">2027 年第一季</th><td>管理层给出的集团季度收入区间为 330–370 亿美元。</td><td>实际收入达到区间且经营现金流跟上，更支持扩张论点；同时跟踪合同通知期、应收账款、客户集中度。</td></tr><tr><th scope="row">2027 年初 · 算力续约与交付</th><td>Google、Anthropic 已披露可解约窗口；设备融资租期约五年。</td><td>核对同批 GPU 的续约价格、可收费月份和已验收容量，比较新增租金与延期少收的收入。</td></tr><tr><th scope="row">国会与采购机关</th><td>已有针对公司的问询。2027 年 1 月新一届国会上任。</td><td>区分文件调阅、正式传票与采购决定，记录新增授标、续约选择权及履约条件是否真的改变。</td></tr><tr><th scope="row">Starlink 与 Space</th><td>Q3 Starlink Consumer Subscribers 为 1,360 万，Consumer ARPU 为 69 美元/月，Connectivity 营业利润率为 45.1%。</td><td>跟踪企业及政府收入、每户收入和补网开支。对 Starship 看重复使用与容量变现。</td></tr></tbody></table></div>
+<section class="card" id="framework"><h2>十三、投资论点与未来两个财报季的验证</h2><p>本期在同一财务截止日上核对已有判断。新材料改变了监管监督的进展和融资的条件，续约价格与利用率仍需后续经营数据验证。</p><div class="table-wrap"><table><thead><tr><th scope="col">投资论点</th><th scope="col">当前证据与判断</th><th scope="col">可能推翻判断的证据</th></tr></thead><tbody><tr><th scope="row">短约能带来更高的现金回报</th><td>部分已投运容量续签时提价。未披露可重新报价的比例，集团净收益方向仍待观察。</td><td>同批 GPU 续价提高但收费月份明显减少，或新机房延期收入超过存量提价收益。</td></tr><tr><th scope="row">Starlink 可以为扩建提供利润</th><td>Connectivity 单季营业利润 23.67 亿美元，资本开支 15.43 亿美元。回款和补网投资仍决定可供集团调拨的现金。</td><td>每户收入下行、补网开支上升，分部营业现金贡献随订阅增长而下降。</td></tr><tr><th scope="row">联邦收入可能承压</th><td>监督已推进至文件保全和书面答复阶段，目前尚无证据显示相应订单或回款已减少。</td><td>若采购方照常续约付款，则现金流折价依据减弱。若更改授标、验收或续约条件，按相关合同重估。</td></tr></tbody></table></div><h3>13.1 事件日历</h3><div class="table-wrap"><table><thead><tr><th scope="col">验证窗口</th><th scope="col">已知起点或管理层目标</th><th scope="col">哪些变化值得调整判断</th></tr></thead><tbody><tr><th scope="row">11 月 30 日 · 参议员所列期限</th><td>Shaheen、Coons 要求保全记录、书面确认并回答有关服务限制的问题。</td><td>看两名议员或公司是否公开回应、是否启动后续程序，以及采购方有无对应动作。</td></tr><tr><th scope="row">2026 年第四季</th><td>9 月底 nameplate compute 为 1.7 GW，年底目标 2.5–3 GW；12 月单月收入乘 12 的目标为 1,000 亿美元。</td><td>核对按期交付的可计费容量、当季确认收入和回款。该目标既非全年销售额，也不等于不可取消的经常性收入。</td></tr><tr><th scope="row">第四季资金需求</th><td>管理层预计资本开支 350–400 亿美元；预计毛利率回到更接近二季度的水平。</td><td>若开支接近上限而交付推迟，追问现金缺口、租约及新增融资来源。</td></tr><tr><th scope="row">2027 年第一季</th><td>管理层给出的集团季度收入区间为 330–370 亿美元。</td><td>实际收入达到区间且经营现金流跟上，更支持扩张论点；同时跟踪合同通知期、应收账款、客户集中度。</td></tr><tr><th scope="row">2026 年 12 月至 2027 年 3 月 · 合同窗口</th><td>Anthropic 预计 12 月交齐约定容量。Google 在 12 月 31 日后、Anthropic 两项合约各自于 1 月和 3 月最初承诺期后，双方可按条款提前 90 天书面通知。</td><td>按月核对验收、收费、续约或另售情况。2027 年上半年设备预计分批交付起租，租期长于客户初始锁定期。</td></tr><tr><th scope="row">Starlink 与 Space</th><td>Q3 Starlink Consumer Subscribers 为 1,360 万，Consumer ARPU 为 69 美元/月，Connectivity 营业利润率为 45.1%。</td><td>跟踪企业及政府收入、每户收入和补网开支。对 Starship 看重复使用与容量变现。</td></tr></tbody></table></div>
 <p>若上述目标兑现、客户续用且现金缺口持续收窄，今天较高的估值有更多经营数据可以支撑。若收入达标但资本支出和稀释更快，可能出现公司规模扩大、每股回报有限的结果。若续用和价格同步走弱，Starlink 网络仍有价值，但靠 Connectivity 现有盈利较难支撑集团当前价格。对于希望分散 AI 风险的投资者，新增 SPCX 会同时增加算力客户和基础设施融资敞口。</p>
-<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">公司业绩会第8页 · 前瞻指引</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">季度财报 · 已实现数据</a></p></section>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">公司业绩会第8页 · 前瞻指引</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">季度财报 · 已实现数据</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_Senate_Starshield_Preservation_Letter_2026-11-13.pdf">参院书面答复期限</a> · <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">Anthropic 对交付及解约期限的披露</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_Apollo_GPU_Notes_Pricing_2026-11-20.pdf">设备融资定价公告</a></p></section>
 <section class="card" id="data"><h2>十四、数据与复算</h2><p>研究日为 2026 年 11 月 22 日。行情采用 11 月 20 日美股常规收盘。已实现财务及分部数据截至 9 月 30 日，普通股股数披露日为 10 月 15 日。正文中的倍数、现金流、集中度占比和情景数值由披露原始数字计算，四舍五入可能造成尾差。</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">数据</th><th scope="col">复算口径</th></tr></thead><tbody><tr><th scope="row">股权市值</th><td>127.79 美元 ×（8,246,541,218 股 A 类＋5,334,522,491 股 B 类）。未使用自由流通市值。</td></tr><tr><th scope="row">收入及开支</th><td>分部与集团取自同一季报；表格以亿美元列示。Q3 同比 +161.4%，上年同期 55.76 亿美元，本期 145.75 亿美元。</td></tr><tr><th scope="row">现金流缺口</th><td>当期经营现金流减当期现金购建固定资产，排除证券买卖。2026 年三季度单季经营现金流 96.31 亿、现金购建 195.93 亿，缺口 99.62 亿美元。</td></tr><tr><th scope="row">情景倒算</th><td>第五年股权价值 = 当前基本股权市值 × 1.10⁵；所需收入 = 第五年股权价值 ÷ 终值股权现金流倍数 ÷ 股权现金流率。</td></tr><tr><th scope="row">来源层级</th><td>已实现数据采用 SEC 与发行人材料；前瞻数字单独注明为管理层目标或合同条件。机构意见及社区观点列出具体来源。</td></tr></tbody></table></div>
-<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.pdf">SpaceX 招股书 · 完整带图 PDF</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">SpaceX 第三季度业绩及分部运营表</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">SpaceX 业绩会原文</a> · <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm">SpaceX 第二季 10-Q · 现金流比较</a> · <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm">SEC · 第三季 10-Q 原文</a> · <a href="https://ir.spacex.com/investors/">SpaceX 投资者关系</a></p></section></main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20SpaceX%EF%BC%88SPCX%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ASpaceX%EF%BC%88SPCX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>
+<div class="table-wrap"><table><thead><tr><th scope="col">数据</th><th scope="col">复算口径</th></tr></thead><tbody><tr><th scope="row">股权市值</th><td>127.79 美元 ×（8,246,541,218 股 A 类＋5,334,522,491 股 B 类）。未使用自由流通市值。</td></tr><tr><th scope="row">收入及开支</th><td>分部与集团取自同一季报；表格以亿美元列示。Q3 同比 +161.4%，上年同期 55.76 亿美元，本期 145.75 亿美元。</td></tr><tr><th scope="row">现金流缺口</th><td>当期经营现金流减当期现金购建固定资产，排除证券买卖。2026 年三季度单季经营现金流 96.31 亿、现金购建 195.93 亿，缺口 99.62 亿美元。</td></tr><tr><th scope="row">现金流与收入反推</th><td>企业价值＝股权市值＋净债务。第六年所需 FCFF＝（企业价值－前五年 FCFF 现值）×1.10⁵×（10%－3%）。所需第六年收入＝所需 FCFF÷假设现金流率。基期至第六年的年增速＝（所需收入÷基期收入）^(1/6)－1。</td></tr><tr><th scope="row">来源层级</th><td>已实现数据采用 SEC 与发行人材料；前瞻数字单独注明为管理层目标或合同条件。机构意见及社区观点列出具体来源。</td></tr></tbody></table></div>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.pdf">SpaceX 招股书 · 完整带图 PDF</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">SpaceX 第三季度业绩及分部运营表</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">SpaceX 业绩会原文</a> · <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm">SpaceX 第二季 10-Q · 现金流比较</a> · <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm">SEC · 第三季 10-Q 原文</a> · <a href="https://ir.spacex.com/investors/">SpaceX 投资者关系</a> · 估值底稿（金额十亿美元，股数十亿股）</p></section></main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20SpaceX%EF%BC%88SPCX%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ASpaceX%EF%BC%88SPCX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

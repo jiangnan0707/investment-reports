@@ -10,7 +10,9 @@
     grids[group.dataset.view].set(group.dataset.group, group.querySelector('.asset-grid'));
   }
   const cards = [...document.querySelectorAll('.asset-card')].sort((a, b) =>
-    b.dataset.date.localeCompare(a.dataset.date) || a.dataset.ticker.localeCompare(b.dataset.ticker));
+    (b.dataset.updated || b.dataset.date).localeCompare(a.dataset.updated || a.dataset.date)
+    || (b.dataset.edition || b.dataset.date).localeCompare(a.dataset.edition || a.dataset.date)
+    || a.dataset.ticker.localeCompare(b.dataset.ticker));
   const empty = document.querySelector('#empty');
   const expand = document.querySelector('#expand-scope');
   const clear = document.querySelector('#clear-filters');
