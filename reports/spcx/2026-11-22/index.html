@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>SpaceX 2026-11-22 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+
+
+
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+.table-wrap{max-width:100%;overflow-x:auto}.card .table-wrap table{width:100%}
+.source-line{font-size:.88em;line-height:1.85;margin-top:14px}
+.source-line a,.card a{overflow-wrap:anywhere}.bar-value,.summary-item .value{font-variant-numeric:tabular-nums}
+@media(max-width:680px){.bar-label{flex:0 0 62px;text-align:left}.bar-value{flex:0 0 55px}.chart{padding:12px}.bar-row{gap:6px}.sidebar{display:none}.page-layout{display:block}.card .table-wrap th,.card .table-wrap td{min-width:72px}.card .table-wrap td{max-width:260px}}
+</style><link rel="stylesheet" href="../../../assets/site.css">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/spcx/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20SpaceX%EF%BC%88SPCX%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ASpaceX%EF%BC%88SPCX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">SPCX <span>·</span> 2026-11-22 <span>·</span> PC 完整版</div><h1>SpaceX</h1><p>2026年11月22日 · 纳斯达克 · 股价截至11月20日收盘 · 财务截至9月30日</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#conclusion">一、现在买入，依靠什么赚钱？</a></li><li><a href="#model">二、一股 SPCX 买到了哪些业务</a></li><li><a href="#core-metric">三、收入和资本开支流向哪里</a></li><li><a href="#starlink">四、Starlink 订阅增加，定价和利润率能否保持</a></li><li><a href="#space">五、航天业务的价值，有多少已体现在 Starlink</a></li><li><a href="#compute">六、算力合同的期限，比合同总额更有信息量</a></li><li><a href="#cash">七、资金能支撑多久</a></li><li><a href="#valuation">八、127.79 美元隐含怎样的增长</a></li><li><a href="#risk">九、竞争、政策和普通股股东的权利</a></li><li><a href="#debate">十、多空分歧怎样验证</a></li><li><a href="#framework">十一、未来两个财报季看什么</a></li><li><a href="#data">十二、数据与复算</a></li></ul></aside><main class="main-content report-body"><section class="card" id="conclusion"><h2>一、现在买入，依靠什么赚钱？</h2><p><strong>Starlink 已经能盈利，但以 1.74 万亿美元买下整个集团，还需要 AI 算力在多年扩建后持续产生现金。</strong>三季度，连接业务贡献集团约 85% 的营业利润，AI 业务占约 84% 的资本开支。两者衡量的是不同的事，也决定了研究这只股票要盯住哪两张报表。</p>
+<div class="summary-grid"><div class="summary-item"><div class="value">$127.79</div><div class="label">11月20日常规收盘</div></div><div class="summary-item"><div class="value">1.74 万亿美元</div><div class="label">估算全部普通股市值</div></div><div class="summary-item"><div class="value">54.2 倍</div><div class="label">滚动十二个月市销率</div></div><div class="summary-item"><div class="value">23.67 亿美元</div><div class="label">Q3 连接业务营业利润</div></div><div class="summary-item"><div class="value">83.9%</div><div class="label">Q3 AI 资本开支占比</div></div><div class="summary-item"><div class="value">−349.72 亿美元</div><div class="label">前三季简化自由现金流</div></div></div>
+<p>以当前价格，SPCX 更适合列入观察名单。能改变判断的证据有两项：大客户进入可解约期后，仍以相近价格续用算力；集团扩张时，每美元收入所需的资本支出持续下降。单次火箭回收成功，或股价跌破发行价，都不足以单独满足这两个条件。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">三季度业绩与分部数据</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">第三季 Form 10-Q</a> · <a href="https://dorseywright.nasdaq.com/chart/performance/symbol/SPCX">Nasdaq Dorsey Wright 收盘数据</a> · <a href="https://stockanalysis.com/stocks/spcx/history/">逐日价格记录</a></p></section>
+<section class="card" id="model"><h2>二、一股 SPCX 买到了哪些业务</h2><p>Space Exploration Technologies Corp. 于 2026 年 6 月在纳斯达克上市，SPCX 对应 A 类普通股。集团拥有运载火箭、Starlink 网络，并通过 xAI 及其旗下产品经营算力、软件和广告。这里所有财务数字均为美元。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">2026年第三季度 · 亿美元</th><th scope="col">对外收入</th><th scope="col">营业利润</th><th scope="col">营业利润率</th><th scope="col">资本开支</th></tr></thead><tbody><tr><th scope="row">航天 Space</th><td>17.67</td><td>−0.07</td><td>−0.4%</td><td>16.06</td></tr><tr><th scope="row">连接 Connectivity</th><td>52.48</td><td>23.67</td><td>45.1%</td><td>15.43</td></tr><tr><th scope="row">超级智能 SI</th><td>75.60</td><td>4.31</td><td>5.7%</td><td>164.44</td></tr><tr><th scope="row">集团</th><td>145.75</td><td>27.91</td><td>19.1%</td><td>195.93</td></tr></tbody></table></div>
+<p>火箭降低自建卫星网络的部署成本，卫星网络销售宽带和专网服务；这两项业务直接共享资产和需求。AI 的近期收入来自地面算力和软件。把轨道数据中心、火星运输写进盈利预测，目前缺少可以核验的订单、单位成本与现金回报。</p>
+<p>2026 年 2 月，SpaceX 完成同一控制下的 xAI 换股合并，按准则追溯列报，X 已在 xAI 体系内。8 月 14 日收购 Cursor 后才开始确认其损益。三季收入增幅同时包含新云合同启动与 Cursor 并表。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · 会计政策、合并与分部注释</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.htm">发行招股书 · A类股及集团业务</a></p></section>
+<section class="card" id="core-metric"><h2>三、收入和资本开支流向哪里</h2><p>三季度 AI 贡献 51.9% 的收入、15.4% 的营业利润，却占用 83.9% 的资本开支。连接业务的营业利润率为 45.1%，能为集团扩张提供部分资金。</p>
+<div aria-label="三季度各业务收入（亿美元）" class="chart" role="group"><div class="chart-title">三季度各业务收入（亿美元）</div><div class="bar-row"><span class="bar-label">航天</span><div class="bar-track"><div class="bar-fill" style="width:17.67%;background:#35678a"></div></div><strong class="bar-value">17.67</strong></div><div class="bar-row"><span class="bar-label">连接</span><div class="bar-track"><div class="bar-fill" style="width:52.48%;background:#35678a"></div></div><strong class="bar-value">52.48</strong></div><div class="bar-row"><span class="bar-label">超级智能</span><div class="bar-track"><div class="bar-fill" style="width:75.60%;background:#35678a"></div></div><strong class="bar-value">75.60</strong></div><div class="chart-legend">三项合计 145.75 亿美元。来源为公司季度分部报表。</div></div>
+<div aria-label="三季度各业务资本开支（亿美元）" class="chart" role="group"><div class="chart-title">三季度各业务资本开支（亿美元）</div><div class="bar-row"><span class="bar-label">航天</span><div class="bar-track"><div class="bar-fill" style="width:8.03%;background:#b06b3d"></div></div><strong class="bar-value">16.06</strong></div><div class="bar-row"><span class="bar-label">连接</span><div class="bar-track"><div class="bar-fill" style="width:7.71%;background:#b06b3d"></div></div><strong class="bar-value">15.43</strong></div><div class="bar-row"><span class="bar-label">超级智能</span><div class="bar-track"><div class="bar-fill" style="width:82.22%;background:#b06b3d"></div></div><strong class="bar-value">164.44</strong></div><div class="chart-legend">三项合计 195.93 亿美元。两张图的横轴上限分别为 100 和 200 亿美元。</div></div>
+<div class="table-wrap"><table><thead><tr><th scope="col">集团 · 亿美元</th><th scope="col">2025年Q3</th><th scope="col">2026年Q2</th><th scope="col">2026年Q3</th></tr></thead><tbody><tr><th scope="row">营业收入</th><td>55.76</td><td>78.14</td><td>145.75</td></tr><tr><th scope="row">航天营业利润</th><td>2.59</td><td>−5.42</td><td>−0.07</td></tr><tr><th scope="row">连接营业利润</th><td>11.90</td><td>16.56</td><td>23.67</td></tr><tr><th scope="row">超级智能营业利润</th><td>−17.22</td><td>−12.57</td><td>4.31</td></tr><tr><th scope="row">集团营业利润</th><td>−2.73</td><td>−1.43</td><td>27.91</td></tr><tr><th scope="row">集团资本开支</th><td>68.80</td><td>183.69</td><td>195.93</td></tr></tbody></table></div>
+<p>本季 44.04 亿美元合并净利润超过营业利润，受利息收入、投资估值收益和 3.90 亿美元所得税收益影响。前三季集团营业利润为 7.05 亿美元，合并净亏损 4.13 亿美元，计入视同股息后普通股股东应占亏损 10.84 亿美元。把单季净利润乘四计算市盈率会放大这季的获利水平。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">第三季度业绩 · 三个期间同口径经营指标</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · 损益与现金流</a></p></section>
+<section class="card" id="starlink"><h2>四、Starlink 订阅增加，定价和利润率能否保持</h2><div class="table-wrap"><table><thead><tr><th scope="col">运营指标</th><th scope="col">2025年Q3</th><th scope="col">2026年Q2</th><th scope="col">2026年Q3</th></tr></thead><tbody><tr><th scope="row">期末消费者订阅（万）</th><td>720</td><td>1,200</td><td>1,360</td></tr><tr><th scope="row">消费者月均每户收入（美元）</th><td>83</td><td>66</td><td>69</td></tr><tr><th scope="row">消费者收入（亿美元）</th><td>19.86</td><td>24.85</td><td>31.21</td></tr><tr><th scope="row">企业及政府收入（亿美元）</th><td>11.11</td><td>18.06</td><td>21.27</td></tr></tbody></table></div>
+<p>单季新增 160 万个消费者订阅。月均每户收入较上年同期下降约 17%，公司解释为国际市场和低价套餐扩张；与上季相比则回升了 3 美元。企业及政府客户贡献分部收入的 40.5%，其中航空客户接入带动增长。这两组数据比只看订阅量更能说明定价和客户结构。</p>
+<p>优势来自可重复使用的发射运力、持续补网和自有终端形成的部署能力。竞争的约束也很实际：在地面宽带成熟地区，消费者会比较价格；新地区渗透往往降低户均收入；卫星有寿命，发射和补网需要重复投入。管理层披露，三季度连接业务毛利率亦受关税退款等一次性因素提振。</p>
+<p>值得上调判断的组合是订阅继续增加、月均每户收入稳定、企业客户收入增长，同时连接分部资本开支低于其经营收益。若新增订阅主要靠降价，或补网开支同步上升，用户增长对股东价值的贡献会小于收入增长。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">公司业绩表 · Connectivity</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">业绩会 · 客户结构与关税退款</a></p></section>
+<section class="card" id="space"><h2>五、航天业务的价值，有多少已体现在 Starlink</h2><p>三季度完成 35 次发射，其中 12 次为客户任务、23 次为内部任务。航天分部对外发射服务收入 11.30 亿美元，发射及开发收入 6.37 亿美元。集团把大量运力用于自己的星座，若给内部发射按公开报价计收入、又给 Starlink 的同一网络完整估值，就会重复计算。</p>
+<p>11 月 13–14 日的第 15 次 Starship 飞行搭载了 26 颗 V3 卫星，并首次回收上面级；本次助推器未回收。它降低了上面级能否回收的技术不确定性。要看到财务收益，还需验证同一飞行器再飞的周转时间、每次任务维护成本，以及新增网络容量能否售出。</p>
+<p>外部客户订单和 Starship 研发进度具有波动性。三季度航天接近营业盈亏平衡，前三季营业亏损 12.11 亿美元。研判这一分部时，同时看外部订单交付和单位有效通信容量的部署成本，可以少受单次飞行新闻影响。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">运营数据 · 客户及内部发射</a> · <a href="https://www.spacex.com/launches/starship-flight-15/">SpaceX · Flight 15 任务页</a> · <a href="https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/">Spaceflight Now · 飞行结果与回收现场记录</a></p></section>
+<section class="card" id="compute"><h2>六、算力合同的期限，比合同总额更有信息量</h2><p>三季度超级智能分部收入为 75.60 亿美元。其中 70.22 亿来自解决方案与基础设施，5.38 亿来自广告。公司把云算力、Grok、Cursor 等合并列示，无法从中算出 Grok 单独的收入或利润。Cursor 自 8 月 14 日并表至季末贡献 6.08 亿美元。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">合同或指标</th><th scope="col">已披露条款</th><th scope="col">对股东的意义</th></tr></thead><tbody><tr><th scope="row">Anthropic 算力协议</th><td>至 2029 年名义最高 1,205 亿美元；全量交付后，2026 年 12 月预计约 31 亿美元/月。</td><td>不同协议的不可取消期分别至 2027 年 1 月和 3 月，之后双方可提前 90 天通知终止。续用率比上限金额更有参考价值。</td></tr><tr><th scope="row">Google 算力协议</th><td>全部交付约 9.20 亿美元/月，约定服务窗口延至 2029 年 6 月。</td><td>交付短缺可能导致降费或终止。2026 年 12 月 31 日后双方可提前 90 天通知终止。</td></tr><tr><th scope="row">客户集中度</th><td>三季度客户 B 占集团收入 34.5%，全部来自 SI；客户 A 跨三个分部，占 16.6%。</td><td>B 相当于当季 SI 收入的约三分之二，财报未说明其是否为 Anthropic。另有一名客户占应收账款净额 27.7%，身份亦未披露。</td></tr><tr><th scope="row">已签未确认收入</th><td>截至 9 月底，集团披露在手订单 629.59 亿美元，含递延收入 175.20 亿；约 67% 预计一年内确认。</td><td>这是整个集团 9 月末的数据。Anthropic 上限来自后续文件，范围有重叠且可取消，两个数字不可相加。</td></tr></tbody></table></div>
+<p>9 月底额定算力为 1.7 GW，上季为 1.4 GW。铭牌容量衡量装机规模。云合同按可用预留容量和服务期限计费，实际使用率、客户付费能力及续约价格决定新增设备最终能赚多少。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">第三季 10-Q · 收入确认、客户集中度与积压订单</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_FWP_Google_2026-06-05.htm">SpaceX · Google 协议披露</a> · <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">Anthropic 最终招股书 · SpaceXAI Arrangements</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">第三季业绩会 · 算力交付</a></p></section>
+<section class="card" id="cash"><h2>七、资金能支撑多久</h2><div class="table-wrap"><table><thead><tr><th scope="col">亿美元</th><th scope="col">2025年前三季</th><th scope="col">2026年前三季</th></tr></thead><tbody><tr><th scope="row">经营现金流</th><td>41.20</td><td>130.97</td></tr><tr><th scope="row">现金购建固定资产</th><td>138.46</td><td>480.69</td></tr><tr><th scope="row">简化自由现金流（前两行相减）</th><td>−97.26</td><td>−349.72</td></tr></tbody></table></div>
+<p>9 月末现金及等价物 512.94 亿美元，可交易证券 385.61 亿美元，两者合计 898.55 亿美元；账面债务与融资租赁合计 388.44 亿美元。六月 IPO 提供净现金 856.75 亿美元。经营现金流还受预收款影响，前三季递延收入变动贡献 49.22 亿美元。资金充足与业务能够自我融资是两个独立判断。</p>
+<p>若从 9 月末起保持前三季月均约 38.86 亿美元的简化现金缺口，898.55 亿美元相当于约 23 个月。这个静态压力测试既未预留还债资金，也未加入新融资；购建开支会随交付而变化。管理层 10 月给出的四季度资本开支指引已升至 350–400 亿美元，上一季度实际为 195.93 亿美元，历史速度可能低估短期用款。</p>
+<p>10 月公告披露，Apollo 等方承诺安排约 400 亿美元 GPU 设备融资，每批设备的初始租期为 5 至 5.25 年。11 月 20 日，Apollo 与高盛宣布同一项目约 440 亿美元优先及次级票据已定价，预计 2027 年上半年随设备交付开始起租。两笔数字属于同一融资安排的不同阶段。设备融资改善采购能力，也使客户终止服务后留下的租金义务更值得关注。</p>
+<p>利率上升会抬高后续设备融资的价格，也会压低远期股东现金流的现值。电力接入、站点许可或设备交付延误则先推迟服务确认。可观察结果是应收和资本开支先升、收入及经营现金流兑现较慢。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · 现金流量表及流动性</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_8-K_Apollo_2026-10-26.htm">10/26 GPU 融资 8-K</a> · <a href="https://www.apollo.com/insights-news/pressreleases/2026/11/apollo-and-goldman-sachs-announce-pricing-of-44-billion-spacex-gpu-financing-3407671">11/20 Apollo 与高盛定价公告</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">业绩会 · 四季度资本开支指引</a></p></section>
+<section class="card" id="valuation"><h2>八、127.79 美元隐含怎样的增长</h2><p>按 11 月 20 日收盘价和 10 月 15 日披露的两类普通股合计 135.81 亿股，估算股权市值约 1.74 万亿美元，相当于滚动收入的 54.2 倍。即使把增长最快的第三季度直接乘四，市销率仍为 29.8 倍。</p>
+<p>分母分别为过去十二个月 320.43 亿美元（2025 年全年 186.74 亿，加本年前三季 270.83 亿，减上年前三季 137.14 亿），以及三季度年化 583 亿美元。二者均包含集团三个分部。A 类和 B 类按 1:1 经济权益合并，股数未计尚未行权或归属的奖励。11 月 20 日收盘较 135 美元 IPO 价格低 5.3%；上市仅五个月，缺少跨周期估值分位。</p>
+<p>从未来回报倒推：假定投资者以今天的价格持有五年、要求年化 10%，期间无分红、股数不变，则第五年需要约 2.80 万亿美元股权价值。以不同的终值股权现金流倍数和成熟期现金流率反推所需规模，下表为敏感性分析。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">第五年股权现金流倍数</th><th scope="col">股权现金流率</th><th scope="col">所需年现金流（亿美元）</th><th scope="col">所需年收入（亿美元）</th><th scope="col">从当前滚动收入起的年复合增速</th></tr></thead><tbody><tr><th scope="row">20 倍</th><td>15%</td><td>1,398</td><td>9,317</td><td>96.2%</td></tr><tr><th scope="row">30 倍</th><td>20%</td><td>932</td><td>4,658</td><td>70.8%</td></tr><tr><th scope="row">40 倍</th><td>25%</td><td>699</td><td>2,795</td><td>54.2%</td></tr></tbody></table></div>
+<p>中间情景要求第五年约 932 亿美元可分配给普通股股东的年度现金流。按 20% 现金流率，对应约 4,658 亿美元收入。若以增长更快的第三季度收入年化值 583 亿美元为起点，也需五年复合增长约 51.5%。若公司达到管理层提出的 1,000 亿美元年化收入目标，第五年所需规模仍约为该目标的 4.7 倍。若期间新增股数 10%，同等每股回报所需的第五年股权价值也提高 10%。反过来看，即使第五年收入做到 3,000 亿美元，若股权现金流率为 20%、终值为 30 倍，则股权市值约 1.80 万亿美元；在股数不变、期间无分红的假设下，五年年化回报仅约 0.7%。</p>
+<p>终值的股权现金流率假设考虑经营、维持及增长投资和融资后可分配给股东的现金。前文使用的经营现金流减现金购建支出是观察历史资金需求的简化口径，两者不可直接套用同一倍数。终值倍数、现金流率和 10% 回报是研究假设，没有为这些情景赋予概率。</p>
+<p class="source-line">资料来源　<a href="https://dorseywright.nasdaq.com/chart/performance/symbol/SPCX">Nasdaq Dorsey Wright · 11月20日行情</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">10-Q · A/B 股数量及报告期收入</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.htm">招股书 · 2025财年及股权结构</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">10月业绩会 · 年化收入口径</a></p></section>
+<section class="card" id="risk"><h2>九、竞争、政策和普通股股东的权利</h2><p>对星链，近似可比对象包括 Eutelsat OneWeb 与 Amazon Leo。Eutelsat 同期低轨业务收入为 7,090 万欧元，主要覆盖企业、政府及渠道客户；Amazon 仍在部署和拓展渠道。Starlink 已拥有规模化消费者网络和自有发射能力。对航天，Rocket Lab 同季集团收入约 2.68 亿美元，其中航天系统约占八成。用这些公司的集团市销率为整个 SPCX 定价，会混入业务结构差异。</p>
+<p>航天地面设施及发射节奏受许可和客户项目周期制约，卫星通信受频谱与各地运营许可制约，AI 机房则受电力和环境许可制约。以星链移动业务为例，收购 800 MHz 频谱的协议预计 2027 年上半年完成，仍待审批等条件满足。政策变化先看具体许可、订单及预算的日期和条件。</p>
+<p>公开交易的 A 类股每股一票，B 类每股十票。2026 年 10 月 SpaceX 与 Tesla 分别宣布设立特别委员会，评估潜在合并。截至 11 月 22 日，公开文件未给出最终交易协议、换股比例或完成时点。本期估值按独立上市的 SpaceX 计算。若出现确定对价，需要重新计算每股权益和负债。</p>
+<p>关联交易同样影响盈利质量。三季报列示，9 月底与 Valor 相关的设备融资负债为 128.97 亿美元，已包含在账面债务及融资租赁内；与 The Boring Company 有关的投资当季产生 5.61 亿美元未实现收益。判断经常性盈利时应分开看设备融资成本、经营利润和估值变动。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">SpaceX 10-Q · 关联方、频谱及期后事项</a> · <a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026066775/tsla-20260930.htm">Tesla 三季报 · 潜在合并评估</a> · <a href="https://www.eutelsat.com/system/files/2026-10/DOC_Investors-Q1-2026-27-Presentation_ENFR_291026_1.pdf">Eutelsat 同期投资者演示</a> · <a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts">Rocket Lab 三季度业绩</a> · <a href="https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates">Amazon · Leo 部署进度</a></p></section>
+<section class="card" id="debate"><h2>十、多空分歧怎样验证</h2><div class="table-wrap"><table><thead><tr><th scope="col">分歧</th><th scope="col">看多需要成立的条件</th><th scope="col">会削弱这一判断的事实</th></tr></thead><tbody><tr><th scope="row">Starlink 的利润能否延续</th><td>订阅、企业客户继续增长，每户收入趋稳，补网成本随运载效率下降。</td><td>价格折让持续，或同等网络容量的更新成本抬升。</td></tr><tr><th scope="row">AI 的先发供给能否变成长期现金流</th><td>客户在可解约窗口后仍购买预留算力，新客户分担收入、回款和设备利用风险。</td><td>一名客户便占三分之一以上集团收入；客户释放机位、同类算力降价而设备租金继续发生。</td></tr><tr><th scope="row">快速增长值多少倍</th><td>已部署算力在可接受回收期内带来持续现金流，盈利和每股现金流同步。</td><td>增长主要靠资本开支和发行股票，单股能分到的现金改善慢。</td></tr></tbody></table></div>
+<p>外部研究也把分歧指向资本回报。晨星在 10 月 28 日发表的分析给出每股 70 美元的长期公允价值，认可传统业务的成本优势，担心 AI 再投资回报。11 月 16 日市场报道显示，RBC 维持 225 美元目标价，看重上面级回收提高发射频次的可能性。公允价值与券商目标价的期限和方法不同，用二者均值推算胜率没有依据。</p>
+<p>Flight 15 后的投资者论坛讨论同时出现对技术进展的乐观和对估值、融资的疑问。它提供了需要求证的问题；投资结论仍取决于公司披露的利润、资本支出和回款。</p>
+<p class="source-line">资料来源　<a href="https://www.morningstar.com/stocks/spacex-earnings-we-raise-our-fair-value-estimate-scaling-data-centers-is-stock-buy">晨星研究 · 公允价值及资本回报</a> · <a href="https://www.investing.com/news/analyst-ratings/rbc-capital-maintains-spacex-stock-rating-on-starship-progress-93CH-5030076">RBC 观点报道 · 11月16日</a> · <a href="https://www.reddit.com/r/SPCXInvestors/comments/1xwrh3t/just_bought_5000_of_spcx/">Reddit · Flight 15 后的投资者讨论</a></p></section>
+<section class="card" id="framework"><h2>十一、未来两个财报季看什么</h2><div class="table-wrap"><table><thead><tr><th scope="col">验证窗口</th><th scope="col">已知起点或管理层目标</th><th scope="col">哪些变化值得调整判断</th></tr></thead><tbody><tr><th scope="row">2026 年第四季</th><td>9 月底额定算力 1.7 GW，年底目标 2.5–3 GW；12 月单月收入乘 12 的目标为 1,000 亿美元。</td><td>核对按期交付的可计费容量、当季确认收入和回款。该目标既非全年销售额，也不等于不可取消的经常性收入。</td></tr><tr><th scope="row">第四季资金需求</th><td>管理层预计资本开支 350–400 亿美元；预计毛利率回到更接近二季度的水平。</td><td>若开支接近上限而交付推迟，追问现金缺口、租约及新增融资来源。</td></tr><tr><th scope="row">2027 年第一季</th><td>管理层给出的集团季度收入区间为 330–370 亿美元。</td><td>实际收入达到区间且经营现金流跟上，更支持扩张论点；同时跟踪合同通知期、应收账款、客户集中度。</td></tr><tr><th scope="row">星链和发射</th><td>Q3 消费者订阅 1,360 万、月均每户收入 69 美元、分部营业利润率 45.1%。</td><td>跟踪企业及政府收入、每户收入和补网开支。对 Starship 看重复使用与容量变现。</td></tr></tbody></table></div>
+<p>若上述目标兑现、客户续用且现金缺口持续收窄，今天较高的估值有更多经营数据可以支撑。若收入达标但资本支出和稀释更快，可能出现公司规模扩大、每股回报有限的结果。若续用和价格同步走弱，Starlink 仍有价值，但很难独自支撑集团当前价格。对于希望分散 AI 风险的投资者，新增 SPCX 会同时增加算力客户和基础设施融资敞口。</p>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">公司业绩会第8页 · 前瞻指引</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_10-Q_2026-10-22.htm">季度财报 · 已实现数据</a></p></section>
+<section class="card" id="data"><h2>十二、数据与复算</h2><p>研究日为 2026 年 11 月 22 日。行情采用 11 月 20 日美股常规收盘。已实现财务及分部数据截至 9 月 30 日，普通股股数披露日为 10 月 15 日。正文中的倍数、现金流、集中度占比和情景数值由披露原始数字计算，四舍五入可能造成尾差。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">数据</th><th scope="col">复算口径</th></tr></thead><tbody><tr><th scope="row">股权市值</th><td>127.79 美元 ×（8,246,541,218 股 A 类＋5,334,522,491 股 B 类）。未使用自由流通市值。</td></tr><tr><th scope="row">收入及开支</th><td>分部与集团取自同一季报；表格以亿美元列示。Q3 同比 +161.4%，上年同期 55.76 亿美元，本期 145.75 亿美元。</td></tr><tr><th scope="row">现金流缺口</th><td>当期经营现金流减当期现金购建固定资产，排除证券买卖。2026 年三季度单季经营现金流 96.31 亿、现金购建 195.93 亿，缺口 99.62 亿美元。</td></tr><tr><th scope="row">情景倒算</th><td>第五年股权价值 = 当前基本股权市值 × 1.10⁵；所需收入 = 第五年股权价值 ÷ 终值股权现金流倍数 ÷ 股权现金流率。</td></tr><tr><th scope="row">来源层级</th><td>已实现数据采用 SEC 与发行人材料；前瞻数字单独注明为管理层目标或合同条件。机构意见及社区观点列出具体来源。</td></tr></tbody></table></div>
+<p class="source-line">资料来源　<a href="../../../sources/spcx/SEC_Filings/SPCX_2026_424B4_2026-06-12.pdf">SpaceX 招股书 · 完整带图 PDF</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Earnings_Release_2026-10-20.pdf">SpaceX 第三季度业绩及分部运营表</a> · <a href="../../../sources/spcx/SEC_Filings/SPCX_2026Q3_Webcast_Transcript_2026-10-20.pdf">SpaceX 业绩会原文</a> · <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm">SpaceX 第二季 10-Q · 现金流比较</a> · <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm">SEC · 第三季 10-Q 原文</a> · <a href="https://ir.spacex.com/investors/">SpaceX 投资者关系</a></p></section></main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20SpaceX%EF%BC%88SPCX%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9ASpaceX%EF%BC%88SPCX%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer></body></html>

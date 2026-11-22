@@ -57,3 +57,7 @@ https://mmx.prnewswire.com/media/MS233956/TransMedics-Logo.jpg?id=OA2942136
 PDD 拼多多（PDD Holdings）　集团名称字标。公司 2025 年 Form 20-F 封面和集团官网使用公司名称，未核实独立的集团图形 Logo。
 https://www.sec.gov/Archives/edgar/data/1737806/000110465926050727/pdd-20251231x20f.htm
 https://www.pddholdings.com/
+
+SPCX SpaceX　2026 年第三季度业绩公告页眉中的黑色 SpaceX 字标。保留字标比例，裁去白边，缩小为灰度 PNG。
+https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm
+https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spacex-wordmark1.jpg
