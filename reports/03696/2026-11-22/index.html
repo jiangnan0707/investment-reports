@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>英矽智能 2026-11-22 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+.card p+p {margin-top:12px} .main-content {width:100%}
+.refs {font-size:12px;color:var(--text-muted);margin-top:14px;line-height:1.8}
+.refs a,details a {color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}
+figure {padding:17px 15px;margin:16px 0 20px;border:1px solid var(--border-light);border-radius:10px;background:var(--bg-stripe)}
+figure svg {display:block;width:100%;max-width:680px;height:auto;margin:5px auto}
+figure svg text {font:14px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;fill:#4a5a4e} figure svg text.sv-num {font-weight:700;fill:#194e33}
+figcaption {font-weight:650;color:#234f35}
+.chart-note {font-size:13px;color:#4a5a4e;margin-top:9px}
+.legend {display:flex;justify-content:center;flex-wrap:wrap;gap:5px 15px;color:#485c4e;font-size:12px}.legend i {display:inline-block;width:10px;height:10px;margin-right:4px;border-radius:2px}
+.note {padding:15px 17px;background:#f0f6f1;border-left:3px solid #47775c;margin:16px 0}.note strong {color:#234d32}.note p {margin-top:5px}
+.arguments {display:grid;grid-template-columns:1fr 1fr;gap:14px}.arguments .note {margin:0 0 14px}.neg {border-color:#a75d45;background:#fcf5f0}.neg strong {color:#88432c}
+.table-frame {max-width:100%;overflow-x:auto}.table-frame table {display:table}td,th {text-align:left;vertical-align:top;overflow-wrap:break-word}
+thead th {white-space:normal}.summary-grid {grid-template-columns:repeat(3,minmax(0,1fr))}.summary-item .value {color:#1b5439}
+.nav-title {font-weight:700;color:var(--accent);margin-bottom:12px}
+details {margin:12px 0;font-size:13px;}summary {cursor:pointer;color:var(--accent)}details ul {padding:8px 0 0 20px}
+header .meta {opacity:.85}.footer-note {color:var(--text-secondary);font-size:13px}.card {box-shadow:var(--shadow-sm),var(--shadow-md),var(--shadow-lg)}
+@media(max-width:900px){.page-layout{align-items:stretch}}
+@media(max-width:640px){.summary-grid {grid-template-columns:repeat(2,minmax(0,1fr))}.arguments {grid-template-columns:1fr;gap:0}.sidebar-group {margin-bottom:5px}.table-frame table{min-width:390px}.table-frame {margin:6px 0}.table-frame td {padding:8px}figure{padding:11px 8px}.refs{font-size:12px}}
+</style><link rel="stylesheet" href="../../../assets/site.css?v=reading2">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/03696/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E8%8B%B1%E7%9F%BD%E6%99%BA%E8%83%BD%EF%BC%8803696%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%8B%B1%E7%9F%BD%E6%99%BA%E8%83%BD%EF%BC%8803696%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">03696 <span>·</span> 2026-11-22 <span>·</span> PC 完整版</div><h1>英矽智能</h1><p>2026 年 11 月 22 日 · 香港主板 · 收盘 11 月 20 日 / 财报 6 月 30 日</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">数据可靠性声明</a></li><li><a href="#snapshot">一、公司速览</a></li><li><a href="#business">二、收入从哪里来</a></li><li><a href="#clinical">三、Rentosertib 的 52 周肺功能</a></li><li><a href="#financials">四、利润、现金流与收入质量</a></li><li><a href="#licensing">五、授权交易与临床管线</a></li><li><a href="#funding">六、资金能否覆盖临床验证期</a></li><li><a href="#policy">七、政策风险</a></li><li><a href="#valuation">八、市场定价与赔率</a></li><li><a href="#debate">九、多空分歧与验证方法</a></li><li><a href="#analysts">十、券商分析师观点</a></li><li><a href="#community">十一、个人投资者讨论</a></li><li><a href="#outlook">十二、四种情景与跟踪次序</a></li><li><a href="#notes">数据说明</a></li></ul></aside><main class="main-content report-body"><div class="card" id="reliability"><h2>数据可靠性声明</h2><p>报告日期为 2026 年 11 月 22 日（周日）。行情取 11 月 20 日收盘，股本取 11 月 19 日收市后披露，损益及资产负债取 6 月 30 日中报。其后公告核对至 11 月 22 日。</p><p><span class="src-badge src-s">一手</span> 法定披露、登记、原始研究及管理层发言　<span class="src-badge src-2">二手</span> 行情或卖方转述　<span class="src-badge src-3">三方</span> 个人讨论　<span class="src-badge src-e">推算</span> 报告计算　<span class="src-badge src-t">时效</span> 估计或较早快照</p><details><summary>本地披露与业绩会记录（16 份）</summary><ul><li><a href="../../../sources/03696/Filings/03696_2025%E5%B9%B4_%E5%B9%B4%E6%8A%A5_2026-04-28.pdf">2025年_年报_2026-04-28</a></li><li><a href="../../../sources/03696/Filings/03696_2025%E5%B9%B4%E5%BA%A6_%E4%B8%9A%E7%BB%A9%E5%85%AC%E5%91%8A_2026-03-29.pdf">2025年度_业绩公告_2026-03-29</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E4%B8%AD%E6%9C%9F_%E4%B8%9A%E7%BB%A9%E5%85%AC%E5%91%8A_2026-08-26.pdf">2026中期_业绩公告_2026-08-26</a></li><li><a href="https://stockanalysis.com/quote/hkg/3696/transcripts/731451-q2-2026/">2026中期_业绩电话会记录_2026-08-26</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_ISM6331%E9%A6%96%E6%AC%A1%E4%BA%BA%E4%BD%93%E4%B8%B4%E5%BA%8A%E6%95%B0%E6%8D%AE_2026-10-27.pdf">2026年_ISM6331首次人体临床数据_2026-10-27</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_ISM9528%E6%8E%A2%E7%B4%A2%E6%80%A7%E8%AF%95%E9%AA%8C%E9%A6%96%E4%BE%8B%E7%BB%99%E8%8D%AF_2026-11-17.pdf">2026年_ISM9528探索性试验首例给药_2026-11-17</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_Rentosertib%E4%B8%AD%E5%9B%BDIII%E6%9C%9F%E9%A6%96%E4%BE%8B%E7%BB%99%E8%8D%AF_2026-09-10.pdf">2026年_Rentosertib中国III期首例给药_2026-09-10</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E4%B8%AD%E6%9C%9F%E6%8A%A5%E5%91%8A_2026-08-26.pdf">2026年_中期报告_2026-08-26</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E5%8D%81%E6%9C%88%E8%AF%81%E5%88%B8%E5%8F%98%E5%8A%A8%E6%9C%88%E6%8A%A5%E8%A1%A8_2026-11-04.pdf">2026年_十月证券变动月报表_2026-11-04</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E5%8F%82%E4%B8%8E%E8%AE%BE%E7%AB%8B%E6%8A%95%E8%B5%84%E5%9F%BA%E9%87%91_2026-11-03.pdf">2026年_参与设立投资基金_2026-11-03</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E5%8F%AF%E8%BD%AC%E5%80%BA%E5%8F%91%E8%A1%8C%E5%AE%8C%E6%88%90_2026-09-03.pdf">2026年_可转债发行完成_2026-09-03</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E5%8F%AF%E8%BD%AC%E5%80%BA%E5%AE%9A%E4%BB%B7_2026-08-28.pdf">2026年_可转债定价_2026-08-28</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E6%8A%95%E8%B5%84%E8%80%85%E6%BC%94%E7%A4%BA_2026-10.pdf">2026年_投资者演示_2026-10</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E6%96%BD%E7%BB%B4%E9%9B%85%E5%90%88%E4%BD%9C%E9%87%8C%E7%A8%8B%E7%A2%91_2026-10-20.pdf">2026年_施维雅合作里程碑_2026-10-20</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E7%BD%97%E6%AC%A3%E8%8D%AF%E4%B8%9A%E6%88%98%E7%95%A5%E5%90%88%E4%BD%9C_2026-11-13.pdf">2026年_罗欣药业战略合作_2026-11-13</a></li><li><a href="../../../sources/03696/Filings/03696_2026%E5%B9%B4_%E7%BF%8C%E6%97%A5%E6%8A%AB%E9%9C%B2%E6%8A%A5%E8%A1%A8_2026-11-19.pdf">2026年_翌日披露报表_2026-11-19</a></li></ul></details><p class="refs"><a href="https://www1.hkexnews.hk/search/titlesearch.xhtml?category=0&amp;lang=EN&amp;market=SEHK&amp;stockId=1000285671">港交所公告索引</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://www.warrants.hangseng.com/en-hk/market/stock/code/03696">11 月 20 日收盘行情</a></p></div>
+<div class="card" id="snapshot"><h2>一、公司速览</h2><p><strong>英矽智能的验证期长于其最新一笔债券的期限。</strong> 肺纤维化药物 Rentosertib 已在中国进入 III 期，登记预计 2029 年主要完成。2027 年可转债先到期。在两者之间，合作伙伴是否继续付款，将决定公司有多少自有资金可投入后续临床。</p><div class="summary-grid"><div class="summary-item"><div class="value">30.60</div><div class="label">11/20 收盘 · 港元</div></div><div class="summary-item"><div class="value">179.42 亿</div><div class="label">股权市值 · 港元</div></div><div class="summary-item"><div class="value">16.94 倍</div><div class="label">滚动市销率</div></div><div class="summary-item"><div class="value">1.063 亿</div><div class="label">上半年收入 · 美元</div></div><div class="summary-item"><div class="value">3,554 万</div><div class="label">上半年净利 · 美元</div></div><div class="summary-item"><div class="value">320 人</div><div class="label">中国 III 期计划入组</div></div></div><p>英矽智能（InSilico Medicine Cayman TopCo）2014 年创立，开曼注册，2025 年 12 月 30 日在港交所主板上市，发行价 24.05 港元。公司用自研平台 Pharma.AI 发现和开发候选药，可将权益授权药企、共同研发或出售软件订阅。股票以港元交易，财务报表以美元列示。</p><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1229/2025122902396_c.pdf">配发结果</a> · <a href="https://www.warrants.hangseng.com/en-hk/market/stock/code/03696">11 月 20 日收盘行情</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1119/2026111901270_c.pdf">11 月 19 日股本与回购</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a></p></div>
+<div class="card" id="business"><h2>二、收入从哪里来</h2><figure><figcaption>收入增加集中在药物发现及管线开发</figcaption><svg aria-label="半年分部收入对比，百万美元。药物发现及管线开发由23.909升至103.131" role="img" viewbox="0 0 560 260"><title>2025及2026上半年收入构成，百万美元</title><line stroke="#dce9de" x1="45" x2="535" y1="212.0" y2="212.0"></line><text text-anchor="end" x="37" y="216.0">0</text><line stroke="#dce9de" x1="45" x2="535" y1="172.75" y2="172.75"></line><text text-anchor="end" x="37" y="176.75">25</text><line stroke="#dce9de" x1="45" x2="535" y1="133.5" y2="133.5"></line><text text-anchor="end" x="37" y="137.5">50</text><line stroke="#dce9de" x1="45" x2="535" y1="94.25" y2="94.25"></line><text text-anchor="end" x="37" y="98.25">75</text><line stroke="#dce9de" x1="45" x2="535" y1="55.0" y2="55.0"></line><text text-anchor="end" x="37" y="59.0">100</text><rect fill="#23684a" height="37.54" width="88" x="95" y="174.46"></rect><rect fill="#82b4a0" height="3.17" width="88" x="95" y="171.29"></rect><rect fill="#c2a162" height="2.40" width="88" x="95" y="168.89"></rect><text class="sv-num" text-anchor="middle" x="139" y="160.89">27.456</text><text text-anchor="middle" x="139" y="239">2025 H1</text><text style="fill:white" text-anchor="middle" x="139" y="197.23">23.909</text><rect fill="#23684a" height="161.92" width="88" x="382" y="50.08"></rect><rect fill="#82b4a0" height="4.23" width="88" x="382" y="45.85"></rect><rect fill="#c2a162" height="0.75" width="88" x="382" y="45.10"></rect><text class="sv-num" text-anchor="middle" x="426" y="37.10">106.303</text><text text-anchor="middle" x="426" y="239">2026 H1</text><text style="fill:white" text-anchor="middle" x="426" y="135.04">103.131</text><line stroke="#9ab2a0" stroke-dasharray="3 3" stroke-width="0.85" x1="183" x2="382" y1="212.00" y2="212.00"></line><line stroke="#9ab2a0" stroke-dasharray="3 3" stroke-width="0.85" x1="183" x2="382" y1="174.46" y2="50.08"></line><line stroke="#9ab2a0" stroke-dasharray="3 3" stroke-width="0.85" x1="183" x2="382" y1="171.29" y2="45.85"></line><line stroke="#9ab2a0" stroke-dasharray="3 3" stroke-width="0.85" x1="183" x2="382" y1="168.89" y2="45.10"></line><text class="sv-num" text-anchor="middle" x="283" y="174">+331.3%</text></svg><div class="legend"><span><i style="background:#23684a"></i>药物发现及管线开发</span><span><i style="background:#82b4a0"></i>软件</span><span><i style="background:#c2a162"></i>其他</span></div><p class="chart-note">两期收入增加 78.847 百万美元，其中药物发现及管线开发增加 79.222 百万美元。软件增加 0.679 百万美元，其他发现减少 1.054 百万美元。</p></figure><p>药物发现及管线开发的收入占比从 2025 年上半年的 87.1% 升至 2026 年同期的 <b>97.0%</b>。该项涵盖自有资产授权、保留部分权益的共同开发，以及按药企委托进行的研究。软件解决方案收入 2.697 百万美元，占 2.5%。即使模型更好用，股东从中获得多少收益，仍要看合同给英矽保留多少权益。</p><p><b>护城河怎么验证。</b> 沿用费雪的客户访查思路，可以观察合作方是否愿意为下一阶段付费。施维雅首个项目触发付款，支持英矽能交付合同约定成果。施维雅还与 Iktos 并行合作，说明客户有能力同时采购不同平台。按巴菲特的转换成本框架，重复付款比合作伙伴名单更有说服力。</p><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1020/2026102000130_c.pdf">施维雅里程碑公告</a> · <a href="https://servier.com/en/newsroom/research-two-new-partnerships/">施维雅对两项合作的披露</a></p></div>
+<div class="card" id="clinical"><h2>三、Rentosertib 的 52 周肺功能</h2><p>对于特发性肺纤维化（IPF），公司需要证明药物能在一年内减缓肺功能下降。中国 III 期预设的主要终点是 <b>52 周内用力肺活量（FVC）的年下降速率</b>。这个指标及其安全性结果决定该适应症能否形成注册证据。</p><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">证据</th><th scope="col">已经观察到什么</th><th scope="col">下一步看什么</th></tr></thead><tbody><tr><td>IIa 期·已发表</td><td>71 人、12 周。60 mg 每日一次组 FVC 平均变化 +98.4 mL（95% CI 10.9 至 185.9），安慰剂组 −20.3 mL（−116.1 至 75.6）。</td><td>主要终点为安全性，FVC 为次要终点。最高剂量组 6 人提前停止用药、安慰剂组 2 人。小样本的短期差值需要长期试验重验。</td></tr><tr><td>中国 III 期·招募中</td><td>9 月 9 日实际启动，次日公司披露首例给药。登记列出 47 个中国中心，计划入组 320 人，双盲、随机、安慰剂对照。</td><td>登记在 10 月 13 日更新，预计主要完成日为 2029 年 10 月 30 日。实际入组总数及终点结果尚待披露。<span class="src-badge src-t">时效</span></td></tr><tr><td>美国路径·单独核实</td><td>中报称口服 Rentosertib 在美研究性新药申请（IND）因研发策略调整处于非活跃状态。</td><td>美国试验恢复、监管沟通或有地域权限的授权条款，均会改变海外商业化假设。</td></tr></tbody></table></div></div><p>竞争已进入临床现实。那米司特（nerandomilast）在 2025 年 10 月先后获美国和中国批准用于成人 IPF。未来的产品差异要看长期 FVC、停药及背景治疗下的表现，早期试验间的绝对数值受人群和随访时间影响。</p><p class="refs"><a href="https://doi.org/10.1038/s41591-025-03743-2">IIa 期随机对照研究</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0910/2026091000093.pdf">中国 III 期首例给药公告</a> · <a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://www.fda.gov/drugs/news-events-human-drugs/fda-approves-drug-treat-idiopathic-pulmonary-fibrosis">FDA 批准那米司特</a> · <a href="https://www.boehringer-ingelheim.cn/renleijiankang/neranomilast">勃林格殷格翰中国上市公告</a></p></div>
+<div class="card" id="financials"><h2>四、利润、现金流与收入质量</h2><p class="refs"><span class="src-badge src-s">一手</span> 中期报告 · 截至 6 月 30 日止六个月</p><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">百万美元</th><th scope="col">2025 H1</th><th scope="col">2026 H1</th><th scope="col">读数</th></tr></thead><tbody><tr><td>收入</td><td>27.456</td><td>106.303</td><td>同比 +287.2%</td></tr><tr><td>毛利</td><td>23.019</td><td>95.965</td><td>毛利率从 83.8% 升至 90.3%</td></tr><tr><td>研发开支</td><td>35.571</td><td>49.328</td><td>同比 +38.7%</td></tr><tr><td>净利润／亏损</td><td>−19.215</td><td>35.537</td><td>半年扭亏</td></tr><tr><td>调整后净利润／亏损</td><td>−15.409</td><td>51.227</td><td>非 IFRS。本期加回股份薪酬 15.690</td></tr><tr><td>经营活动现金流净额</td><td>−36.842</td><td>78.985</td><td>旧应收收回、合同预收增加</td></tr></tbody></table></div></div><p>经营现金流超过净利润 43.448 百万美元。贸易应收净额从 2025 年末的 21.284 降至 4.466 百万美元，合同负债从 2.109 升至 29.184 百万美元。收回旧款和提前收到项目款均有助现金，但预收款对应未来履约。美国客户贡献 95.913 百万美元，占半年收入 90.2%，客户地域和确认节奏会放大波动。</p><p>2025 年全年收入 56.239 百万美元，低于 2024 年的 85.834 百万美元。全年净亏 352.316 百万美元含金融负债公允价值变动损失 296.701 百万美元，调整后仍亏 43.834 百万美元。2026 年中期业绩会上，管理层因交易时点不确定，未给出全年收入或利润指引。</p><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="../../../sources/03696/Filings/03696_2025%E5%B9%B4_%E5%B9%B4%E6%8A%A5_2026-04-28.pdf">2025 年报</a> · <a href="https://stockanalysis.com/quote/hkg/3696/transcripts/731451-q2-2026/">中期业绩会实录</a></p></div>
+<div class="card" id="licensing"><h2>五、授权交易与临床管线</h2><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">项目及状态</th><th scope="col">已披露的经济事实</th><th scope="col">下一次可验证的变化</th></tr></thead><tbody><tr><td>美纳里尼集团 · 已收款</td><td>ISM9682 首例患者给药里程碑款已收。10 月路演资料列该项目累计收到首付 2,000 万美元、里程碑 800 万美元。</td><td>后续达到何种合同条件，实际到账多少。</td></tr><tr><td>礼来 · 合同约定</td><td>3 月交易约定首付款 1.15 亿美元，潜在总额约 27.5 亿美元。中报未单列全额到账日期或归属于该合同的收入。</td><td>确认收入、应收及合同负债如何随履约变化。</td></tr><tr><td>施维雅 · 已触发付款</td><td>10 月 20 日公告称两个项目完成靶点提名，其中首个达到合同标准，触发金额未披露的早期里程碑。</td><td>实际到账、下一阶段付款，以及第二个项目能否达到标准。</td></tr><tr><td>罗欣药业 · 战略框架</td><td>11 月 13 日披露聚焦消化和代谢等慢性病的合作，具体项目须另签正式协议。公告未给出对价。</td><td>项目名称、正式协议及付费条款。</td></tr></tbody></table></div></div><p>8 月 26 日业绩会上，公司资本市场主管披露，截至 6 月 30 日历年合作累计收到约 3.08 亿美元。公司另列累计潜在交易总额约 110 亿美元，其中多数款项要等未来研发、审批或销售条件达成才可能兑现。</p><p>10 月公司演示材料列示累计提名 35 个临床前候选药物（PCC）。这些候选物处于不同阶段。股东的经济权益取决于项目是否由公司保留、由谁承担后续费用，以及能否取得对照数据。</p><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">近期临床进展</th><th scope="col">解读</th></tr></thead><tbody><tr><td>ISM6331 · 10 月 27 日公布 I 期数据</td><td>36 人入组。在 30 至 130 mg 剂量范围内可评价的 22 名间皮瘤患者中，4 人缓解（18.2%），首次评估疾病控制率 68.2%。截至 8 月 14 日的早期单臂观察，仍需随访缓解持续时间和更大队列。</td></tr><tr><td>ISM9528 · 11 月 17 日披露首次人体给药</td><td>非阿片镇痛候选药进入探索性人体研究，公告所述首例为健康志愿者。后续扩大研究及患者中的镇痛疗效仍待验证。</td></tr></tbody></table></div></div><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://ir.insilico.com/media/lsogxltb/ism_2026-corporate-deck_en_2026-oct-wo-appendix.pdf">10 月公司路演材料</a> · <a href="https://stockanalysis.com/quote/hkg/3696/transcripts/731451-q2-2026/">8 月业绩会实录</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1020/2026102000130_c.pdf">施维雅里程碑公告</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1113/2026111300278_c.pdf">罗欣战略合作公告</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1027/2026102700060.pdf">ISM6331 的 ESMO 数据</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1117/2026111701273.pdf">ISM9528 探索性试验公告</a></p></div>
+<div class="card" id="funding"><h2>六、资金能否覆盖临床验证期</h2><p>6 月底银行结余及现金为 3.576 亿美元。加上原到期超过三个月的定存 1.090 亿美元、货币市场基金 1.083 亿美元，三项合计 <b>5.749 亿美元</b>。扣除银行借款与租赁负债，余额为 5.552 亿美元。此后发生三项资本配置变化。</p><div class="timeline"><div class="tl-item"><div class="tl-date">9 月 3 日</div><div class="tl-text"><strong>可转债发行完成</strong>　本金 3.05 亿美元，扣费净筹约 3.016 亿美元。10 月底全额本金仍在外，转换价每股 58.07 港元。</div></div><div class="tl-item"><div class="tl-date">11 月 3 日</div><div class="tl-text"><strong>认缴投资基金</strong>　集团承诺出资 3.025 亿元人民币，基金成立时总认缴额 6.10 亿元。按通知分两期各缴 50%，基金不并表。实际缴付时间影响可用现金。</div></div><div class="tl-item"><div class="tl-date">11 月 19 日</div><div class="tl-text"><strong>回购与期权同时发生</strong>　公司购回 18 万股作库存，支付 601.57 万港元，同日因行权发行 14,812 股。至当日累计购回 179 万股。</div></div></div><div class="note"><strong>2027 年先面对本金，2029 年才到临床登记里程碑</strong><p>债券在 2027 年 9 月 1 日前后到期，届时尚未转换或提前赎回的部分按本金偿还。按初始条款，全额转股可发行约 4,117 万股。11 月 20 日股价 30.60 港元，低于转股价。未来现金需求取决于届时实际转股、偿还与再融资情况。单个经营现金流为正的半年不足以推算现金可支撑的年数。</p></div><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800034_c.pdf">可转债条款</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090302432_c.pdf">可转债发行完成</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1104/2026110401207_c.pdf">10 月证券变动月报</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1103/2026110302212_c.pdf">基金出资及缴付条款</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1119/2026111901270_c.pdf">11 月 19 日股本与回购</a> · <a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a></p></div>
+<div class="card" id="policy"><h2>七、政策风险</h2><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">风险与传导</th><th scope="col">截至 11 月 22 日的状态</th><th scope="col">影响判断</th></tr></thead><tbody><tr><td>海外注册与药品准入</td><td>中国 III 期已启动，美国口服 IND 在中报披露为非活跃。美国与中国均已有该适应症获批新疗法。</td><td>高。海外权益估值取决于注册路径、对照数据与合作条款。</td></tr><tr><td>美国联邦采购</td><td>2025 年 12 月 18 日成法的 FY2026 NDAA 第 851 条，针对受关注生物技术公司的特定设备、服务以及相关联邦合同与资助。名单和采购细则分阶段落实。未查到英矽被正式点名的依据。</td><td>有条件。先查客户是否涉及受约束的政府合同，再判断对其采购的影响。</td></tr><tr><td>美国对外投资审查</td><td>财政部于 2026 年 10 月公布拟议规则，将部分生物技术活动纳入拟议范围。意见征集截止 12 月 7 日，具体覆盖以最终规则为准。</td><td>有条件。美国投资者的特定交易可能受限，融资与商业授权有各自的适用条件。</td></tr><tr><td>境内科研合作与资金</td><td>罗欣合作的具体项目和付款条款待正式签约。境内基金已签署合伙协议，集团须按缴款通知出资。</td><td>缓冲有限，取决于正式付费合同与现金到账。</td></tr></tbody></table></div></div><p>传导顺序上，境外注册证据直接影响核心产品的地域权益。联邦采购条款和资本规则须结合名单、交易及客户类型判断。后续核对美国 IND、联邦名单、财政部最终规则，以及美国客户新增与续约情况。</p><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a> · <a href="https://ofac.treasury.gov/system/files/2025-12/NDAA_FY2026.pdf">美国公法 119-60 第 851 条</a> · <a href="https://home.treasury.gov/policy-issues/international/outbound-investment-program">美国财政部对外投资规则进度</a> · <a href="https://www.govinfo.gov/content/pkg/FR-2026-10-26/html/2026-21786.htm">10 月 26 日《联邦公报》拟议规则</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1113/2026111300278_c.pdf">罗欣战略合作公告</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1103/2026110302212_c.pdf">基金出资及缴付条款</a></p></div>
+<div class="card" id="valuation"><h2>八、市场定价与赔率</h2><figure><figcaption>股价接近上市以来的收盘低位</figcaption><svg aria-label="2025年12月30日至2026年11月20日逐日收盘价，2月16日高点76.90港元，11月20日收30.60港元" role="img" viewbox="0 0 610 222"><title>上市以来的收盘价，港元</title><line stroke="#d8e5da" x1="47" x2="565" y1="183.0" y2="183.0"></line><text text-anchor="end" x="38" y="187.0">20</text><line stroke="#d8e5da" x1="47" x2="565" y1="139.0" y2="139.0"></line><text text-anchor="end" x="38" y="143.0">40</text><line stroke="#d8e5da" x1="47" x2="565" y1="95.0" y2="95.0"></line><text text-anchor="end" x="38" y="99.0">60</text><line stroke="#d8e5da" x1="47" x2="565" y1="51.0" y2="51.0"></line><text text-anchor="end" x="38" y="55.0">80</text><polyline fill="none" points="49.0,161.0 50.6,145.3 53.7,144.3 58.4,144.8 60.0,143.1 61.6,137.9 63.1,128.2 64.7,123.6 69.4,107.1 71.0,109.7 72.5,99.5 74.1,105.7 75.7,105.6 80.4,112.5 82.0,110.3 83.5,101.6 85.1,97.4 86.7,89.3 91.4,102.4 92.9,93.5 94.5,95.7 96.1,82.9 97.6,88.6 102.4,94.4 103.9,75.2 105.5,75.0 107.1,77.4 108.6,90.3 113.3,79.3 114.9,68.0 116.5,66.0 118.0,65.0 119.6,65.3 124.3,57.8 130.6,65.7 135.3,76.7 136.9,82.8 138.4,90.0 140.0,88.7 141.6,90.7 146.3,98.1 147.9,107.8 149.4,113.4 151.0,103.6 152.6,104.9 157.3,96.2 158.8,82.1 160.4,86.5 162.0,93.1 163.6,105.7 168.3,102.4 169.8,105.0 171.4,102.0 173.0,108.4 174.5,106.2 179.2,118.7 180.8,111.9 182.4,112.5 184.0,116.3 185.5,101.2 190.2,97.9 191.8,103.8 193.4,93.2 194.9,101.0 204.4,97.1 205.9,90.5 207.5,90.4 212.2,93.8 213.8,94.2 215.3,94.2 216.9,89.7 218.5,93.2 223.2,74.4 224.8,76.6 226.3,61.4 227.9,69.6 229.5,71.3 234.2,82.1 235.7,90.2 237.3,85.5 238.9,88.3 245.2,85.5 246.7,89.9 248.3,92.1 249.9,83.1 251.4,85.5 256.1,77.0 257.7,85.5 259.3,96.1 260.8,98.8 262.4,110.5 267.1,111.8 268.7,113.5 270.3,121.0 271.8,126.2 273.4,116.1 279.7,120.8 281.2,121.2 282.8,125.1 284.4,135.5 289.1,139.9 290.7,138.5 292.2,137.4 293.8,141.8 295.4,143.4 300.1,148.4 301.6,153.5 303.2,154.1 304.8,151.3 306.4,152.6 311.1,151.1 312.6,154.7 314.2,152.9 315.8,142.7 322.0,139.0 323.6,132.7 325.2,134.2 326.8,126.9 328.3,142.9 333.0,136.0 334.6,139.8 337.7,143.4 339.3,144.8 344.0,146.0 345.6,147.8 347.2,145.6 348.7,139.4 350.3,132.8 355.0,128.1 356.6,125.1 358.1,114.8 359.7,119.2 361.3,132.0 366.0,128.9 367.6,129.7 369.1,127.0 370.7,120.4 372.3,123.5 377.0,121.9 378.5,132.6 380.1,131.3 381.7,134.5 383.2,126.5 388.0,134.6 389.5,133.6 391.1,135.5 392.7,136.8 394.2,127.0 398.9,120.3 400.5,121.4 402.1,125.8 403.6,125.0 405.2,129.0 409.9,128.0 411.5,135.7 413.1,140.3 414.6,129.8 416.2,137.6 420.9,138.1 422.5,125.1 424.0,123.6 425.6,123.6 427.2,125.1 431.9,130.8 433.5,128.0 435.0,128.1 436.6,123.6 438.2,119.7 442.9,122.1 444.4,115.1 446.0,110.4 447.6,108.4 449.2,115.9 453.9,112.8 455.4,115.6 457.0,116.3 458.6,108.8 460.1,93.2 464.8,86.5 466.4,86.9 468.0,98.0 469.6,103.1 471.1,104.6 475.8,108.6 477.4,105.1 479.0,94.8 482.1,100.3 486.8,101.6 488.4,96.5 490.0,110.4 491.5,120.9 493.1,119.2 497.8,122.9 499.4,131.0 500.9,135.5 502.5,144.2 504.1,141.0 510.4,140.2 511.9,142.1 513.5,147.8 515.1,146.8 519.8,146.7 521.3,147.4 522.9,144.2 524.5,146.4 526.0,147.8 530.8,145.0 532.3,146.3 533.9,140.4 535.5,140.4 537.0,144.6 541.7,143.4 543.3,141.3 544.9,140.1 546.4,140.8 548.0,143.8 552.7,148.8 554.3,151.8 555.9,150.8 557.4,153.4 559.0,159.7" stroke="#287550" stroke-linejoin="round" stroke-width="2.5"></polyline><circle cx="49.0" cy="161.0" fill="#1b6041" r="4"></circle><text class="sv-num" text-anchor="start" x="49.0" y="152.0">29.98</text><circle cx="124.3" cy="57.8" fill="#1b6041" r="4"></circle><text class="sv-num" text-anchor="middle" x="124.3" y="45.8">76.90</text><circle cx="559.0" cy="159.7" fill="#1b6041" r="4"></circle><text class="sv-num" text-anchor="end" x="559.0" y="146.7">30.60</text><text text-anchor="start" x="49.0" y="208">12/30</text><text text-anchor="middle" x="191.8" y="208">3/31</text><text text-anchor="middle" x="334.6" y="208">6/30</text><text text-anchor="middle" x="479.0" y="208">9/30</text><text text-anchor="end" x="559.0" y="208">11/20</text></svg><p class="chart-note"><span class="src-badge src-e">推算</span> 221 个交易日中，只有上市首日收盘价低于 11 月 20 日的 30.60 港元。以 2 月 16 日收盘高点 76.90 港元计，回落 60.2%。以发行价 24.05 港元计，上涨 27.2%。</p></figure><p>11 月 20 日单日跌 8.55%，全周较 11 月 13 日收盘跌 19.1%。同期有首次人体给药与回购公告，尚无新的 Rentosertib III 期疗效读数。仅凭这些消息与价格先后，无法判断资金流出的原因。</p><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">同一市值的不同分母<span class="src-badge src-e">推算</span></th><th scope="col">计算结果</th><th scope="col">投资含义</th></tr></thead><tbody><tr><td>滚动市销率（TTM）</td><td>16.94 倍</td><td>截至 6 月的连续十二个月收入 1.351 亿美元。2025 全年收入作分母则为 40.70 倍。收入确认时点显著影响倍数。</td></tr><tr><td>市净率（6 月末权益）</td><td>4.18 倍</td><td>权益 5.471 亿美元。临床阶段资产的大量研发支出已费用化，账面净资产不能单独估计药物权利价值。</td></tr><tr><td>企业价值／滚动收入（融资静态测算）</td><td>12.86 倍</td><td>以半年末资产负债加可转债发行一项测算，企业价值约 17.37 亿美元。下半年经营、基金出资、回购及资产价格变化会改变结果。</td></tr><tr><td>滚动市盈率与股息</td><td>滚动亏损。H1 无中期股息</td><td>过去十二个月净亏 2.976 亿美元，受上市前优先股重估影响。上市不足一年，缺乏有经济意义的多年盈利估值分位。</td></tr></tbody></table></div></div><h3>8.1 同行估值受收入结构影响</h3><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">11 月 20 日收盘</th><th scope="col">市值（亿港元）</th><th scope="col">滚动市销率</th><th scope="col">分母的区别</th></tr></thead><tbody><tr><td>英矽智能 03696</td><td>179.42</td><td>16.94 倍</td><td>管线开发及药物发现为主，半年收入 97.0% 来自这一合并类别。</td></tr><tr><td>晶泰控股 02228</td><td>206.23</td><td>25.87 倍</td><td>滚动收入约 6.791 亿元人民币。2026 上半年 AI 科学智能解决方案收入约 1.935 亿元，约占总收入一半。</td></tr></tbody></table></div></div><p>两家公司的滚动收入都受大额授权时点影响，晶泰还提供更多科学智能解决方案服务。倍数差异本身无法给两家的临床成功率定价。另一家同类公司 Recursion 于 11 月 18 日披露与 FDA 就 REC-4881 注册 III 期设计达成一致，预计 2027 年下半年启动。其适应症和试验进度与英矽不同。</p><h3>8.2 市场给临床与平台留下多少价值</h3><p>扣除上述净资金后，约 17.37 亿美元的静态企业价值对应保留的药物权益、未来授权和软件业务。若将这一金额全部归给单一药物，会遗漏其他项目。若把潜在里程碑全额加回，又会忽略失败概率与后续研发成本。资产级估值还需地域权益、未来净销售、分成率、开发成本和各阶段成功率。这些条件不足以推出可信的单一目标价。</p><p class="refs"><a href="https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=hk03696,day,2025-12-30,2026-11-20,320,">腾讯历史日线</a> · <a href="https://www.warrants.hangseng.com/en-hk/market/stock/code/03696">11 月 20 日收盘行情</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1119/2026111901270_c.pdf">11 月 19 日股本与回购</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1229/2025122902396_c.pdf">配发结果</a> · <a href="https://data-api.ecb.europa.eu/service/data/EXR/D.CNY+HKD+USD.EUR.SP00.A?startPeriod=2026-11-20&amp;endPeriod=2026-11-20&amp;format=csvdata">欧洲央行 11 月 20 日参考汇率</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="../../../sources/03696/Filings/03696_2025%E5%B9%B4_%E5%B9%B4%E6%8A%A5_2026-04-28.pdf">2025 年报</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090302432_c.pdf">可转债发行完成</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0417/2026041701551.pdf">晶泰 2025 年报</a> · <a href="https://static.cninfo.com.cn/finalpage/2026-08-19/1225483061.PDF">晶泰中期业绩</a> · <a href="https://qt.gtimg.cn/q=hk02228">晶泰行情</a> · <a href="https://ir.recursion.com/news-releases/news-release-details/recursion-announces-alignment-fda-registrational-phase-3-trial">Recursion 的 11 月 18 日公告</a></p></div>
+<div class="card" id="debate"><h2>九、多空分歧与验证方法</h2><div class="arguments"><div class="note pos"><strong>多方依据</strong><p>不同合作方已为项目支付首付和后续里程碑。另有自有项目进入关键性试验。若多个项目在不同半年继续带来到账，授权现金流对单笔新签约的依赖会下降。</p></div><div class="note neg"><strong>空方依据</strong><p>H1 项目收入集中，III 期仍在招募，海外注册路径待定。临床开支、基金缴款和可转债偿还可能先于主要结果，形成资金需求。</p></div></div><p><b>裁决分歧的证据。</b> 对平台，看已签项目能否持续触发并收到后续款项。对药物，看预设 52 周终点、置信区间及停药情况。对资金，看剔除融资流入后仍可支配的净流动资金。按马克斯关于永久损失的框架，这三个环节若同时走弱，单看股价回撤会低估融资稀释和权益损失。</p><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1020/2026102000130_c.pdf">施维雅里程碑公告</a> · <a href="https://ir.insilico.com/media/lsogxltb/ism_2026-corporate-deck_en_2026-oct-wo-appendix.pdf">10 月公司路演材料</a> · <a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800034_c.pdf">可转债条款</a></p></div>
+<div class="card" id="analysts"><h2>十、券商分析师观点</h2><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">机构与记录日期</th><th scope="col">评级／目标价（港元）</th><th scope="col">适用边界</th></tr></thead><tbody><tr><td>美银 · 11 月 13 日</td><td>买入／50.00</td><td>经济通香港口径，11 月较近的公开记录。</td></tr><tr><td>富瑞 · 9 月 24 日</td><td>买入／100.00</td><td>关注管线授权及存量合作里程碑的转化。</td></tr><tr><td>摩根大通 · 9 月 21 日</td><td>增持／71.00</td><td>报道采用分部估值，药物权益和平台业务的价值假设会影响结果。</td></tr><tr><td>花旗 · 9 月 3 日</td><td>买入／85.00</td><td>S&amp;P Global 汇总记录，早于 10 月临床披露。</td></tr><tr><td>瑞银 · 8 月 28 日</td><td>买入／77.00</td><td>中期业绩发布后的历史记录。</td></tr></tbody></table></div></div><p>S&amp;P Global 汇总页记录 12 名分析师，目标价中位数 77.00 港元。目标价取决于未来收入和临床读出的假设。公开记录较早，部分报告未覆盖 11 月基金出资、合作框架与回购。本表列机构原有观点。<span class="src-badge src-2">二手</span><span class="src-badge src-t">时效</span></p><p class="refs"><a href="https://www.etnet.com.hk/www/tc/stocks/realtime/quote_profit.php?code=03696">经济通券商预测</a> · <a href="https://stockanalysis.com/quote/hkg/3696/forecast/">S&amp;P Global 评级汇总</a> · <a href="https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-24/doc-inisxhpf0430768.shtml">富瑞观点报道</a> · <a href="https://cn.investing.com/news/stock-market-news/article-3575356">摩根大通观点报道</a></p></div>
+<div class="card" id="community"><h2>十一、个人投资者讨论</h2><p>雪球可辨识的 11 月讨论中，一名发帖人关注 ISM9528 从 7 月提名到 11 月首次人体给药的间隔，另一名关注股价走势与估值分母。前一个问题可以用公告日期回答。评估患者受益仍须等待临床证据。后一个问题可回到股本和滚动收入复算。<span class="src-badge src-3">三方</span></p><p>9 月 Reddit 的一条公开讨论质疑衰老标志物变化能否代表临床获益。该质疑与 IPF 投资研究的联系在于，应将疾病相关终点与探索性标志物分别评估。雪球样本有限，X 未取得可复核的独立样本，无法据此判断散户整体立场。</p><p class="refs"><a href="https://xueqiu.com/S/03696">雪球个股讨论</a> · <a href="https://www.reddit.com/r/Futurology/comments/1wf7t37/a_drug_designed_with_the_help_of_ai_made_the/">9 月独立讨论原帖</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1117/2026111701273.pdf">ISM9528 探索性试验公告</a> · <a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a></p></div>
+<div class="card" id="outlook"><h2>十二、四种情景与跟踪次序</h2><div class="table-frame"><div class="table-scroll"><table><thead><tr><th scope="col">核心资产与授权收款</th><th scope="col">经营结果会怎样</th><th scope="col">可观察的信号</th></tr></thead><tbody><tr><td>临床证据增强 · 付款连续</td><td>保留权益和平台两部分均获额外支持，自筹后续研发的空间扩大。</td><td>III 期达到预设终点且耐受性可接受。多个项目连续实收。</td></tr><tr><td>临床证据增强 · 付款间歇</td><td>核心资产潜在价值提高，全球开发和商业化仍可能需要融资或出让区域权益。</td><td>有对照数据或注册实质进展。同期项目收款放缓、资金余额下降。</td></tr><tr><td>临床受挫 · 付款连续</td><td>旗舰资产折损，平台其余项目能否独立产生收入变得清晰。</td><td>终点未达或出现安全问题。合作伙伴仍续约并支付后续款。</td></tr><tr><td>临床受挫 · 付款间歇</td><td>资产权益和资金缓冲同时缩小，融资条款会决定每股保留的价值。</td><td>研发延迟或停止。里程碑推迟、到期债务需再融资。</td></tr></tbody></table></div></div><p><b>跟踪次序。</b> 先看中国 III 期招募进度、登记变更及预设终点，再看已签合作的触发、到账和收入确认，随后核对可转债余额、基金实缴及净流动资金。下一份财报还应能回答，半年扭亏是否延续，以及新收款是否来自多个项目。</p><p class="refs"><a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800034_c.pdf">可转债条款</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1104/2026110401207_c.pdf">10 月证券变动月报</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1103/2026110302212_c.pdf">基金出资及缴付条款</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1020/2026102000130_c.pdf">施维雅里程碑公告</a></p></div>
+<div class="card" id="notes"><h2>数据说明</h2><h3>数据口径与方法论</h3><p>财务表单位为百万美元。中报原表以千美元列示，本文除以 1,000。TTM 收入 = 56.239 + 106.303 − 27.456 = 135.086。TTM 净利润 = −352.316 + 35.537 − (−19.215) = −297.564。2026 H1 有 105.805 百万美元收入随时间确认。首付约定、现金到账及按履约确认收入的时间可以不同。累计收款和潜在交易额的时点与合同范围也不同，两者的比值无法表示临床或收款成功率。</p><p>市值 = 30.60 港元 × 586,351,956 股（剔除库存 179 万股）= 179.4237 亿港元。欧洲央行同日参考值为每欧元 8.615 港元、1.099 美元和 7.3388 元人民币，推得每美元 7.83894 港元。市值折合 22.889 亿美元。晶泰的滚动收入用全年 802.6 + 本期 393.6 − 基期 517.1（百万元人民币）。两家公司市销率分子同日、分母均截至 6 月。</p><p>静态测算单位为百万美元。6 月末资金余额 357.617 + 108.950 + 108.338 = 574.905，排除上市股票。减去借款 14.682、租赁负债 4.974 后得 555.249。9 月可转债按本金加债务 305、按净筹资加现金 301.6，净资金静态变为 551.849。企业价值约 2,288.876 − 551.849 = 1,737.027。该测算未反映其余期后现金变动，用作估值参照。</p><h3>与上期报告的变化</h3><p>10 月 9 日报告采用当日上午的盘中价。此次采用 11 月 20 日收盘价，更新 10 月 13 日临床登记、ESMO 数据、施维雅里程碑、罗欣框架、基金协议及 11 月股本。股价折线使用全部 221 个交易日的不复权收盘价，盘中高低未混入该序列。</p><h3>取数更正记录</h3><p>上期将多项以千美元列示的原表数值标为万美元。本期统一单位并复核损益及现金流量表。上期对 III 期读出作 2027—2028 年的推算，现采用登记的 2029 年预计主要完成日，该日与公告读出日的含义不同。估值中加入单列的定存，区分货币基金与股票，并同时计入期后可转债的本金和净募资。</p><h3>已知局限</h3><p>截至本报告日，最新定期财务报表为 6 月中报。公开定期报表尚未提供 6 月末以后的合并现金余额。中国 III 期实际累计入组人数与主要终点结果亦待披露。8 月 26 日中期业绩会转写的末段问答发言人标注不全。机构样本及个人讨论并不覆盖全部市场参与者。</p><p class="refs"><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600543_c.pdf">2026 中期报告</a> · <a href="../../../sources/03696/Filings/03696_2025%E5%B9%B4_%E5%B9%B4%E6%8A%A5_2026-04-28.pdf">2025 年报</a> · <a href="https://data-api.ecb.europa.eu/service/data/EXR/D.CNY+HKD+USD.EUR.SP00.A?startPeriod=2026-11-20&amp;endPeriod=2026-11-20&amp;format=csvdata">欧洲央行 11 月 20 日参考汇率</a> · <a href="https://stockanalysis.com/quote/hkg/3696/transcripts/731451-q2-2026/">中期业绩会实录</a> · <a href="https://clinicaltrials.gov/study/NCT07687459">III 期登记 NCT07687459</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1104/2026110401207_c.pdf">10 月证券变动月报</a> · <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090302432_c.pdf">可转债发行完成</a></p></div><footer class="footer-note"><p>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p></footer></main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E8%8B%B1%E7%9F%BD%E6%99%BA%E8%83%BD%EF%BC%8803696%EF%BC%89%20%7C%202026-11-22&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E8%8B%B1%E7%9F%BD%E6%99%BA%E8%83%BD%EF%BC%8803696%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-22%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer><a class="report-back-top" href="#"><span aria-hidden="true">↑</span> 回到顶部</a></body></html>
