@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta name="report-updated-at" content="2026-11-25T18:48:05+08:00"><title>日经225指数 2026-11-25 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+.mobile-toc{display:none}.chart svg{display:block;width:100%;height:auto}.chart svg text{font:15px system-ui;fill:#264738}.bar-label{white-space:normal}@media(max-width:768px){.mobile-toc{display:block;margin:0 0 16px}.mobile-toc a{display:block;padding:4px 0}.sidebar{display:none}.bar-label{flex:0 0 98px}.bar-value{flex:0 0 76px}}</style><link rel="stylesheet" href="../../../assets/site.css?v=reading2">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/n225/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E6%97%A5%E7%BB%8F225%E6%8C%87%E6%95%B0%EF%BC%88N225%EF%BC%89%20%7C%202026-11-25&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%97%A5%E7%BB%8F225%E6%8C%87%E6%95%B0%EF%BC%88N225%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-25%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">N225 <span>·</span> 2026-11-25 <span>·</span> PC 完整版</div><h1>日经225指数</h1><p>2026-11-25 分析报告 · 东京收盘</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#reliability">一、数据可靠性声明</a></li><li><a href="#snapshot">二、指数速览</a></li><li><a href="#structure">三、成分结构与加权方式</a></li><li><a href="#drivers">四、当日贡献与权重股盈利</a></li><li><a href="#valuation">五、估值与股息</a></li><li><a href="#macro">六、利率、日元与政策风险</a></li><li><a href="#implementation">七、基准与人民币持有路径</a></li><li><a href="#debate">八、多空核心分歧</a></li><li><a href="#sentiment">九、机构观点与市场讨论</a></li><li><a href="#framework">十、综合判断框架</a></li><li><a href="#notes">十一、数据说明</a></li></ul></aside><main class="main-content report-body"><details class="card mobile-toc"><summary>报告目录</summary><a href="#reliability">一、数据可靠性声明</a><a href="#snapshot">二、指数速览</a><a href="#structure">三、成分结构与加权方式</a><a href="#drivers">四、当日贡献与权重股盈利</a><a href="#valuation">五、估值与股息</a><a href="#macro">六、利率、日元与政策风险</a><a href="#implementation">七、基准与人民币持有路径</a><a href="#debate">八、多空核心分歧</a><a href="#sentiment">九、机构观点与市场讨论</a><a href="#framework">十、综合判断框架</a><a href="#notes">十一、数据说明</a></details><section class="card" id="reliability"><h2>一、数据可靠性声明</h2>
+<p>行情与权重截至 <strong>2026-11-25 东京收盘</strong>，外汇截至当日 17:00 JST。财报主要为截至 2026-09-30 的半年报。<span class="src-badge src-s">一手</span> 来自编制方、交易所、央行及发行人。<span class="src-badge src-e">推算</span> 为根据公开读数复算。机构观点与论坛发言按各自来源解读。</p>
+<p>本地研究材料见标的目录 Filings，包括日经日线与日度摘要摘录、交易所收盘表、日银汇市资料和国会陈述，以及成分股财报与说明会资料。原始链接列于页末。</p>
+</section><section class="card" id="snapshot"><h2>二、指数速览</h2>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">57,011.62</div><div class="label">日经225收盘 · 点</div></div>
+<div class="summary-item"><div class="value">−2.78%</div><div class="label">单日 · TOPIX −0.50%</div></div>
+<div class="summary-item"><div class="value">−9.92%</div><div class="label">11月以来 · 日元价格回报</div></div>
+<div class="summary-item"><div class="value">+13.25%</div><div class="label">年初至今 · 日元价格回报</div></div>
+<div class="summary-item"><div class="value">43.88%</div><div class="label">前十大合计权重</div></div>
+<div class="summary-item"><div class="value">17.60 倍</div><div class="label">指数口径预期市盈率</div></div>
+</div>
+<p>指数距离 6 月 25 日收盘高点 72,366.34 点回落 <strong>21.22%</strong>。11 月 24 日反弹至 58,644.63 点，次日回吐 1,633.01 点。尽管当天日经225跌幅比 TOPIX 多约 2.28 个百分点，日经225仍有 127 只上涨、96 只下跌、2 只持平。指数权重解释了这组差异。</p>
+<figure class="chart"><figcaption class="chart-title">日经225收盘走势 · 10 月 29 日至 11 月 25 日</figcaption><svg aria-label="日经225从 64,659.47 点跌至 57,011.62 点" role="img" viewbox="0 0 740 228"><line stroke="#dce9e0" x1="72" x2="682" y1="170.91" y2="170.91"></line><text text-anchor="end" x="62" y="174.91">56,000</text><line stroke="#dce9e0" x1="72" x2="682" y1="142.73" y2="142.73"></line><text text-anchor="end" x="62" y="146.73">58,000</text><line stroke="#dce9e0" x1="72" x2="682" y1="114.55" y2="114.55"></line><text text-anchor="end" x="62" y="118.55">60,000</text><line stroke="#dce9e0" x1="72" x2="682" y1="86.36" y2="86.36"></line><text text-anchor="end" x="62" y="90.36">62,000</text><line stroke="#dce9e0" x1="72" x2="682" y1="58.18" y2="58.18"></line><text text-anchor="end" x="62" y="62.18">64,000</text><line stroke="#dce9e0" x1="72" x2="682" y1="30.00" y2="30.00"></line><text text-anchor="end" x="62" y="34.00">66,000</text><text text-anchor="middle" x="72.00" y="210">10-29</text><text text-anchor="middle" x="252.74" y="210">11-06</text><text text-anchor="middle" x="478.67" y="210">11-16</text><text text-anchor="middle" x="682.00" y="210">11-25</text><polyline fill="none" points="72.00,48.89 94.59,68.18 162.37,71.12 207.56,83.71 230.15,99.36 252.74,150.69 320.52,131.80 343.11,108.07 365.70,96.95 388.30,103.00 410.89,98.45 478.67,119.31 501.26,130.60 523.85,128.29 546.44,122.38 569.04,164.76 659.41,133.64 682.00,156.65" stroke="#2d6a4f" stroke-width="3"></polyline><circle cx="72.00" cy="48.89" fill="#2d6a4f" r="4"></circle><text text-anchor="start" x="80.00" y="38.89">64,659.47</text><circle cx="682.00" cy="156.65" fill="#2d6a4f" r="4"></circle><text text-anchor="end" x="674.00" y="146.65">57,011.62</text></svg></figure>
+<p class="caveat-inline">来源 <a href="https://indexes.nikkei.co.jp/en/nkave/archives/data">日经官方历史行情</a>、<a href="https://www.jpx.co.jp/markets/equities/volume-and-value/tvdivq000000derc-att/2_20261125.pdf">JPX 收盘统计</a>。</p>
+</section><section class="card" id="structure"><h2>三、成分结构与加权方式</h2>
+<p>日经225选取东证 Prime 市场 225 只股票。编制方将股价乘以各自的股价换算系数，加总后除以指数除数。权重随调整后价格变化。截至 11 月 25 日，迅销、爱德万测试和东京电子合计占 <strong>28.16%</strong>。爱德万测试、东京电子、软银集团合计占 <strong>19.76%</strong>，覆盖芯片测试、晶圆设备及 AI 股权投资三种风险。</p>
+<h3>3.1 权重前十</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">成分股</th><th scope="col">主营产品或服务</th><th scope="col">权重</th></tr></thead><tbody><tr><td>迅销 Fast Retailing（9983）</td><td>优衣库及 GU 服装零售</td><td>12.23%</td></tr><tr><td>爱德万测试 Advantest（6857）</td><td>半导体测试设备</td><td>8.99%</td></tr><tr><td>东京电子 Tokyo Electron（8035）</td><td>晶圆制造设备</td><td>6.94%</td></tr><tr><td>软银集团 SoftBank Group（9984）</td><td>科技股权投资、Arm 业务敞口</td><td>3.83%</td></tr><tr><td>瑞可利 Recruit（6098）</td><td>招聘平台、人力资源服务</td><td>3.02%</td></tr><tr><td>KDDI（9433）</td><td>移动通信、宽带和企业通信</td><td>2.00%</td></tr><tr><td>TDK（6762）</td><td>电子元件、传感器和电池</td><td>1.90%</td></tr><tr><td>科乐美 Konami（9766）</td><td>电子游戏及娱乐</td><td>1.84%</td></tr><tr><td>信越化学 Shin-Etsu（4063）</td><td>半导体硅片、化工材料</td><td>1.62%</td></tr><tr><td>发那科 FANUC（6954）</td><td>数控系统和工业机器人</td><td>1.51%</td></tr></tbody></table></div>
+<h3>3.2 日经七大板块</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">板块</th><th scope="col">权重</th></tr></thead><tbody><tr><td>技术</td><td>36.25%</td></tr><tr><td>信息通信</td><td>10.30%</td></tr><tr><td>金融</td><td>3.39%</td></tr><tr><td>消费品</td><td>28.30%</td></tr><tr><td>原材料</td><td>12.18%</td></tr><tr><td>工业／资本品及其他</td><td>7.96%</td></tr><tr><td>公用事业与运输</td><td>1.62%</td></tr></tbody></table></div>
+<p>技术及信息通信合计 <strong>46.55%</strong>。这两个官方类别还包括通信、游戏等业务，直接用其合计度量 AI 敞口会扩大口径。TOPIX 按自由流通市值加权，同一天两种指数对高权重股波动的反应可以明显不同。<a href="https://indexes.nikkei.co.jp/en/nkave/archives/summary">日经官方日度摘要</a> · <a href="https://www.jpx.co.jp/english/markets/indices/topix/index.html">JPX TOPIX 编制说明</a></p>
+</section><section class="card" id="drivers"><h2>四、当日贡献与权重股盈利</h2>
+<h3>4.1 技术板块贡献 −1,799.71 点</h3>
+<div class="chart"><div class="chart-title">各板块对当日涨跌的贡献 · 点</div><div class="bar-row"><div class="bar-label">技术</div><div class="bar-track"><div class="bar-fill" style="width:100.00%;background:var(--red)"></div></div><div class="bar-value">−1,799.71</div></div><div class="bar-row"><div class="bar-label">消费品</div><div class="bar-track"><div class="bar-fill" style="width:23.71%;background:var(--accent)"></div></div><div class="bar-value">+426.68</div></div><div class="bar-row"><div class="bar-label">信息通信</div><div class="bar-track"><div class="bar-fill" style="width:14.66%;background:var(--red)"></div></div><div class="bar-value">−263.88</div></div><div class="bar-row"><div class="bar-label">原材料</div><div class="bar-track"><div class="bar-fill" style="width:3.56%;background:var(--red)"></div></div><div class="bar-value">−64.00</div></div><div class="bar-row"><div class="bar-label">工业／资本品及其他</div><div class="bar-track"><div class="bar-fill" style="width:2.04%;background:var(--accent)"></div></div><div class="bar-value">+36.72</div></div><div class="bar-row"><div class="bar-label">金融</div><div class="bar-track"><div class="bar-fill" style="width:0.96%;background:var(--accent)"></div></div><div class="bar-value">+17.22</div></div><div class="bar-row"><div class="bar-label">公用事业与运输</div><div class="bar-track"><div class="bar-fill" style="width:0.78%;background:var(--accent)"></div></div><div class="bar-value">+13.96</div></div></div>
+<p>技术和信息通信合计拖累 2,063.59 点，其他板块合计抵消 430.58 点。消费品贡献 +426.68 点。多数成分上涨与指数大跌可以同时发生。上期按八只股票拆解 10 月回撤，本节采用日经七大板块的官方单日归因，两者覆盖范围不同。<a href="https://indexes.nikkei.co.jp/en/nkave/archives/summary">日经官方日度摘要</a></p>
+<h3>4.2 半导体设备与 AI 投资的财务传导</h3>
+<p><strong>爱德万测试</strong>的 Test System Business Segment（半导体测试系统）半年销售额从 4,780 亿增至 7,702 亿日元，分部利润从 2,406 亿增至 4,556 亿日元。先进封装及高性能芯片复杂度提升，增加测试需求。全公司约 570 亿日元金融收益主要来自投资证券估值变动，追踪主营宜使用分部利润。<a href="https://www.advantest.com/en/investors/financial-highlights/review/">爱德万测试半年业绩</a></p>
+<p><strong>东京电子</strong>在 10 月 30 日说明会上将客户要求提前交付及追加采购与 AI 服务器需求联系起来，全年营业利润指引为 1.169 万亿日元。前道设备收入取决于交付验收。后续若客户推迟交货，订单和收入可能在不同季度转弱。<a href="https://www.tel.com/ir/irta3a00000006g5-att/fy27q2transcript-e.pdf">东京电子业绩说明会</a></p>
+<p><strong>软银集团</strong>经 SoftBank Vision Fund 2 于 10 月 1 日执行 100 亿美元 OpenAI 后续投资的最后一批，并于 11 月 10 日披露半年报。股权估值、投资退出与借款融资都会影响资产净值及其波动，和设备商订单属于不同的财务传导。<a href="https://group.softbank/en/news/press/20261001">交割公告</a> · <a href="https://group.softbank/en/event/earnings_2026q2">软银半年业绩</a></p>
+<p><strong>铠侠</strong>于 10 月 30 日发布二季业绩，随后披露半年证券报告。企业级 SSD 需求与 NAND 报价会影响盈利，扩产的现金支出与量产后的供给也会改变周期。<a href="https://www.kioxia-holdings.com/en-jp/ir/news.html">铠侠 IR 公告</a></p>
+</section><section class="card" id="valuation"><h2>五、估值与股息</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">指标</th><th scope="col">10 月 29 日</th><th scope="col">11 月 25 日</th></tr></thead><tbody>
+<tr><td>指数口径预期 P/E</td><td>21.18 倍</td><td>17.60 倍</td></tr>
+<tr><td>市值口径预期 P/E</td><td>16.79 倍</td><td>14.74 倍</td></tr>
+<tr><td>两口径之差</td><td>4.39 倍</td><td>2.86 倍</td></tr>
+<tr><td>指数口径股息率</td><td>1.54%</td><td>1.83%</td></tr>
+<tr><td>收盘 ÷ 指数口径 P/E（推算）</td><td>3,053</td><td>3,239</td></tr>
+</tbody></table></div>
+<p>同期指数跌 11.83%，指数口径倍数下降 16.90%，而由指数除以倍数得到的隐含盈利读数增加约 6.11%。这一分解表明期间倍数变化的影响大于隐含盈利变化，后者也受编制权重、预测更新及倍数四舍五入影响。两种 P/E 的差从 4.39 倍收窄至 2.86 倍，呈现价格加权相对市值口径的倍数差。<a href="https://indexes.nikkei.co.jp/en/nkave/archives/summary">11 月官方数据</a> · <a href="https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=10292026&amp;idx=nk225">10 月官方摘要存档</a> · <a href="https://indexes.nikkei.co.jp/nkave/archives/file/users_guide_jp.pdf">指标口径</a></p>
+</section><section class="card" id="macro"><h2>六、利率、日元与政策风险</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">变量</th><th scope="col">已核实状态</th><th scope="col">对指数的传导</th></tr></thead><tbody>
+<tr><td>日银政策利率</td><td>1.25%。10 月 30 日维持，11 月 19 日植田和男在参议院重申将依经济、物价与金融条件调整。</td><td>日元融资重定价与估值折现先受预期影响。下次会议为 12 月 17–18 日。</td></tr>
+<tr><td>美联储及政策利差</td><td>10 月 28 日联邦基金目标区间 3.75%–4.00%，较日银政策利率高 2.50–2.75 个百分点。</td><td>利差仍支持部分日元融资交易。融资者的实际回报还取决于汇率、对冲及交易成本。</td></tr>
+<tr><td>美元兑日元</td><td>11 月 25 日 17:00 JST 报 159.21–159.23，9:00 JST 报 159.25–159.27。</td><td>当天两个时点中间价仅差 0.04 日元。同日价格表现更直接支持股票板块集中冲击，套息头寸变化仍待资金与衍生品数据验证。</td></tr>
+<tr><td>10 年期国债</td><td>11 月 24 日日本 2.781%，美国 4.91%，同日相差约 2.13 个百分点。</td><td>日经指数股息率 1.83%，与日本 10 年期国债收益率相差约 0.95 个百分点。股票回报亦含盈利变动和估值重定价。<br/><a href="https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv">日本财务省</a> · <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&amp;type=daily_treasury_yield_curve">美国财政部</a></td></tr>
+<tr><td>日银 ETF 处置</td><td>已决定自 2027 年 1 月起将年度账面卖出节奏从约 3,300 亿提高至约 8,600 亿日元，可视市场状况调整。</td><td>被动供给和政策预期会影响边际需求。实际冲击取决于执行规模及同期全市场流动性。</td></tr>
+</tbody></table></div>
+<p>套息平仓可由日本短端利率上升、美元利率回落或汇率冲击触发。借日元买风险资产的投资者在日元升值时面临偿债成本上升，减仓可能放大波动。跟踪时可联看日元急升、短端利差收窄与股市跌势扩散。<a href="https://www.boj.or.jp/en/mopo/diet/d_state/dst261119a.htm">日银国会陈述</a> · <a href="https://www.boj.or.jp/en/statistics/market/forex/fxdaily/fxlist/fx261125.pdf">日银汇率</a> · <a href="https://www.federalreserve.gov/monetarypolicy/fomcpresconf20261028.htm">美联储会议</a> · <a href="../../../sources/n225/Filings/BOJ_ETF%E5%8D%96%E5%87%BA%E8%8A%82%E5%A5%8F%E5%8F%98%E6%9B%B4_20261030.pdf">日银 ETF 处置决定存档</a></p>
+</section><section class="card" id="implementation"><h2>七、基准与人民币持有路径</h2>
+<p>11 月 25 日 TOPIX 收 3,746.20 点、跌 0.50%，提供同市场同日对照。比较长期分散效果时，需对日经225、TOPIX 与其他持仓使用同频、同币种、同为价格或总回报的序列。同持日经与半导体资产时，芯片资本开支仍是共同因子。</p>
+<p>对 159866 等 QDII，人民币持有体验同时受日元计价资产、日元兑人民币、基金费用与跟踪差、交易溢折价影响。场内溢价按同一交易日的场内收盘价除以人民币单位净值减一，净值确认前单列其日期。以净值持平为例，若溢价由 4% 回到 0%，场内价格变化约 −3.85%（推算）。指数点位和美元兑日元本身无法替代人民币净值回报。<a href="https://www.jpx.co.jp/markets/equities/volume-and-value/tvdivq000000derc-att/2_20261125.pdf">JPX 收盘统计</a></p>
+</section><section class="card" id="debate"><h2>八、多空核心分歧</h2>
+<div class="two-col"><div class="box-green"><h3>8.1 多方依据</h3><ul><li>测试系统量价与组合改善已反映在爱德万分部利润，东京电子披露了客户催交与追加采购。</li><li>当天消费品为正贡献，多数成分上涨，部分内需股具备独立驱动。</li><li>指数口径预期 P/E 从 21.18 倍降至 17.60 倍，当前倍数对应的收益率可与盈利兑现程度一起观察。</li></ul></div>
+<div class="box-red"><h3>8.2 空方依据</h3><ul><li>设备订单向前拉动会抬高对比基数。客户融资受限或验收推迟时，设备盈利和估值可能同向下调。</li><li>软银的 AI 敞口兼具私人资产估值及融资风险，价格波动可能先于报表反映。</li><li>日银收紧和日元快速升值若同时发生，风险会由技术板块扩散到出口企业及资金面。</li></ul></div></div>
+<p><strong>裁决指标</strong>为权重股盈利指引及其交付证据、技术与信息通信贡献占比、日经相对 TOPIX 表现、日元与短端利差。如果盈利兑现且非技术板块连续参与上涨，改善的证据会更充分。如果盈利下修与汇率冲击同现，则集中度和宏观风险会相互放大。</p>
+</section><section class="card" id="sentiment"><h2>九、机构观点与市场讨论</h2>
+<p>野村证券 11 月 9 日披露的观点下调日经225展望，并将再创新高时点推后至 2028 年底以后。其 11 月 24 日更新另提到利率压力与 AI 预期分化，并列出 12 月 1 日 WSTS 半导体预测发布节点。这是单家机构的观点。<a href="https://new2-www.nomura.co.jp/wealthstyle/article/0938/">野村展望调整</a> · <a href="https://www.nomura.co.jp/wealthstyle/article/0914/index.html">野村事件跟踪</a></p>
+<p>Yahoo! 日本 11 月 25 日的日经讨论中，有人担心半导体回调会持续，也有人把 AI 股调整与日本经济表现分开看。讨论为自选样本，英文散户检索仅见零散当日帖，样本不足以代表整体情绪。<a href="https://finance.yahoo.co.jp/cm/message/1998407/ffc7pjbf6q3t2a?unread=2819">Yahoo! 日本讨论串</a> · <a href="https://finance.yahoo.co.jp/cm/message/1998407/ffc7pjbf6q3t2a?unread=3074">前一讨论串</a></p>
+</section><section class="card" id="framework"><h2>十、综合判断框架</h2>
+<h3>10.1 四种可验证情景</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">情景</th><th scope="col">触发证据</th><th scope="col">指数传导</th></tr></thead><tbody>
+<tr><td>盈利兑现并扩散</td><td>高权重设备股维持指引，交付如期，消费与工业对上涨的贡献持续增加</td><td>指数收益更多来自多个行业，依赖少数权重股的程度下降</td></tr>
+<tr><td>指引稳定、估值反复</td><td>业绩数字稳定，AI 股风险偏好及相对估值持续摆动</td><td>日经相对 TOPIX 的波幅扩大</td></tr>
+<tr><td>设备需求降温</td><td>客户资本开支削减，设备交付延后且销售指引下修</td><td>隐含盈利下降，股价加权放大权重股调整</td></tr>
+<tr><td>货币政策冲击</td><td>日元快速升值，短端利差收窄，风险资产减仓同时出现</td><td>估值和出口收入折算承压，人民币回报仍取决于日元兑人民币</td></tr>
+</tbody></table></div>
+<h3>10.2 上期跟踪项复核</h3>
+<div class="table-scroll"><table><thead><tr><th scope="col">观察项</th><th scope="col">本期结果</th><th scope="col">下一节点</th></tr></thead><tbody>
+<tr><td>日银与套息交易</td><td>政策仍为 1.25%，11 月 19 日国会陈述延续条件式收紧表述</td><td>12 月 17–18 日会后利率、短端利差及日元反应</td></tr>
+<tr><td>AI 链盈利和融资</td><td>东京电子及软银已披露，铠侠实际在 10 月 30 日发布。本期缺可比的 AI 云服务商信用利差</td><td>12 月 1 日 WSTS 预测、下一轮客户资本开支及设备商交付</td></tr>
+<tr><td>涨跌贡献</td><td>11 月 25 日技术与信息通信拖累 2,063.59 点，非同口径八股归因</td><td>连续交易日的相对回报、板块贡献与上涨家数</td></tr>
+<tr><td>估值差</td><td>指数口径比市值口径高 2.86 倍，10 月 29 日为 4.39 倍</td><td>同口径 P/E 和隐含盈利，观察倍数与盈利哪项改变</td></tr>
+<tr><td>QDII 成本</td><td>当期尚缺同日可核实收盘价与净值组合</td><td>基金管理人净值与交易所收盘价配对后复算</td></tr>
+</tbody></table></div>
+<h3>10.3 三种投资框架的交叉检验</h3>
+<p><strong>格雷厄姆</strong>看估值分母的稳定性与股息相对国债收益，<strong>达利欧</strong>看日美政策分化如何经日元融资传导，<strong>马克斯</strong>看预期在交付与融资数据改变前被价格计入了多少。11 月 25 日最直接的证据来自板块贡献，同日外汇读数和半年报提供进一步检验。</p>
+</section><section class="card" id="notes"><h2>十一、数据说明</h2>
+<h3>11.1 数据口径与方法论</h3>
+<p>回报取日经官方日线的收盘价比值减一，年内以 2025-12-30 为起点，月内以 2026-10-30 为起点。折线横轴按日历日定位。成分板块权重与当日贡献用当期官方快照。P/E 为日经披露的预期口径。隐含盈利由收盘点位除以指数口径 P/E 得出，适合与同公式读数比较。</p>
+<h3>11.2 与上期报告的变化</h3>
+<p>以上一期 2026-10-30 版使用的 10 月 29 日官方快照为对照，前十大权重 47.48% → 43.88%，技术与信息通信合计 53.44% → 46.55%，指数口径 P/E 21.18 → 17.60 倍。上期八股归因覆盖 10 月回撤，本期使用 11 月 25 日官方板块贡献核验当日集中冲击。</p>
+<h3>11.3 取数更正记录</h3>
+<p>上一期将铠侠列为 11 月财报观察项。发行人 IR 日历及公告均显示二季业绩实际发布于 10 月 30 日。</p>
+<h3>11.4 已知局限</h3>
+<p>历史估值仅列同口径离散观测。多市场长期相关性、完整资金流、八股累计贡献、AI 云服务商信用利差和当日 QDII 溢价缺少本次可核实的匹配序列，因此保留为跟踪项。报告分析的是现货价格指数，指数回报与 ETF 实得回报存在汇率、费用和分红差异。</p>
+</section><div class="footnote"><p>不构成投资建议，基于公开信息生成，投资决策以个人独立尽调为准。</p><p>核心原件 <a href="https://indexes.nikkei.co.jp/en/nkave/archives/summary">日经日度摘要</a> · <a href="https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=11252026&amp;idx=nk225">本期摘要存档</a> · <a href="https://group.softbank/media/Project/sbg/sbg/pdf/ir/presentations/2026/earnings-conference-call_q2fy2026_01_en.pdf">软银说明会问答</a> · <a href="../../../reports/n225/2026-10-30/index.html">上一期报告</a></p></div></main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E6%97%A5%E7%BB%8F225%E6%8C%87%E6%95%B0%EF%BC%88N225%EF%BC%89%20%7C%202026-11-25&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%97%A5%E7%BB%8F225%E6%8C%87%E6%95%B0%EF%BC%88N225%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-25%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer><a class="report-back-top" href="#"><span aria-hidden="true">↑</span> 回到顶部</a></body></html>
