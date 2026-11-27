@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta name="report-updated-at" content="2026-11-27T11:20:18+08:00"><title>铠侠 2026-11-27 · 投资研究档案</title>
+<style>
+  :root {
+    --bg-page:       #f2f7f2;
+    --bg-card:       #ffffff;
+    --text-primary:  #1a2a1e;
+    --text-secondary:#4a5a4e;
+    --text-muted:    #6b7d6f;
+    --accent:        #2d6a4f;
+    --accent-light:  #40916c;
+    --accent-subtle: #d8f3dc;
+    --border:        #cfe0d2;
+    --border-light:  #e4efe6;
+    --green:         #2d6a4f;
+    --red:           #c1121f;
+    --amber:         #bc6c25;
+    --bg-hover:      #f6faf6;
+    --bg-stripe:     #f9fcf9;
+    --shadow-sm:     0 1px 2px rgba(26,42,30,0.04);
+    --shadow-md:     0 2px 8px rgba(26,42,30,0.06);
+    --shadow-lg:     0 4px 16px rgba(26,42,30,0.08);
+    --radius-sm:     6px;
+    --radius-md:     10px;
+    --radius-lg:     14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg-page); color: var(--text-primary); line-height: 1.72; font-size: 15px;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 32px 80px; }
+
+  
+  header {
+    background: linear-gradient(160deg, #143621 0%, #1b4d30 35%, #2d6a4f 70%, #1a3c2a 100%);
+    color: #fff; padding: 56px 32px 48px; text-align: center; margin-bottom: 36px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 80%, rgba(64,145,108,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(45,106,79,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 10px; position: relative; }
+  header .subtitle { font-size: 16px; opacity: 0.82; font-weight: 400; position: relative; }
+  header .meta { font-size: 13px; opacity: 0.55; margin-top: 12px; font-weight: 400; position: relative; }
+
+  
+  .page-layout { display: flex; gap: 36px; align-items: flex-start; }
+  .sidebar {
+    position: sticky; top: 28px; width: 300px; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-sm); max-height: calc(100vh - 56px); overflow-y: auto; font-size: 13.5px;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .sidebar h3 {
+    font-size: 12px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border-light);
+  }
+  .sidebar-group { margin-bottom: 16px; }
+  .sidebar-group-title {
+    font-size: 11.5px; font-weight: 700; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; padding: 4px 0;
+  }
+  .sidebar-group a {
+    display: block; padding: 5px 10px; margin: 1px 0; color: var(--text-secondary);
+    text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 460;
+    transition: all 0.15s ease; border-left: 2px solid transparent;
+  }
+  .sidebar-group a:hover,
+  .sidebar-group a.active { background: var(--accent-subtle); color: var(--accent); border-left-color: var(--accent); font-weight: 550; }
+  .main-content { flex: 1; min-width: 0; }
+
+  
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg); padding: 36px 38px; margin-bottom: 28px;
+    box-shadow: var(--shadow-sm); transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  .card h2 {
+    font-size: 21px; font-weight: 700; color: var(--accent);
+    padding-bottom: 14px; margin-bottom: 24px; border-bottom: 2px solid var(--accent-subtle); position: relative;
+  }
+  .card h2::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 48px; height: 2px; background: var(--accent); }
+  .card h3 { font-size: 17px; font-weight: 650; margin: 28px 0 12px; color: var(--text-primary); letter-spacing: -0.2px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card h4 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text-secondary); }
+
+  
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; font-size: 14px; font-variant-numeric: tabular-nums; border: 1px solid var(--border-light); border-radius: var(--radius-sm); overflow: hidden; }
+  thead th { background: var(--accent-subtle); color: #1a3c2a; font-weight: 650; font-size: 13px; letter-spacing: 0.2px; padding: 12px 14px; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border-light); color: var(--text-primary); }
+  tbody tr:nth-child(even) td { background: var(--bg-stripe); }
+  tbody tr:hover td { background: var(--bg-hover); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  
+  .metric-positive { color: var(--green); font-weight: 650; }
+  .metric-negative { color: var(--red); font-weight: 650; }
+  .metric-warn     { color: var(--amber); font-weight: 650; }
+
+  
+  .tag { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11.5px; font-weight: 650; letter-spacing: 0.3px; margin-right: 5px; line-height: 1.5; }
+  .tag-bull { background: #d8f3dc; color: #1b5e20; }
+  .tag-bear { background: #fce4e4; color: #8b0e18; }
+  .tag-hold { background: #fef3cd; color: #7a5a10; }
+
+  
+  .summary-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 20px 0; }
+  .summary-item { background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 18px 14px 16px; text-align: center; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .summary-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .summary-item .value { font-size: 22px; font-weight: 750; color: var(--text-primary); letter-spacing: -0.3px; font-variant-numeric: tabular-nums; }
+  .summary-item .label { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; font-weight: 450; letter-spacing: 0.1px; }
+
+  
+  .quote { border-left: 3px solid var(--accent-light); padding: 14px 20px; margin: 18px 0; color: var(--text-secondary); font-size: 14px; background: var(--bg-stripe); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.65; }
+
+  
+  .src-badge { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 700; margin-left: 5px; vertical-align: middle; cursor: help; letter-spacing: 0.3px; }
+  .src-s { background: #d8f3dc; color: #1b5e20; }
+  .src-2 { background: #fff3cd; color: #7a5800; }
+  .src-3 { background: #ffcdd2; color: #880e10; }
+  .src-e { background: #dbeafe; color: #1e3a5f; }
+  .src-t { background: #f3e8f5; color: #5c007a; }
+  .caveat-inline { font-size: 12px; color: var(--text-muted); font-style: italic; display: block; margin-top: 6px; line-height: 1.5; }
+
+  
+  .stale-warning { background: #fff8e1; border: 1px solid #ffcc02; border-radius: var(--radius-sm); padding: 12px 16px; margin: 14px 0; font-size: 13px; color: #6d4c00; line-height: 1.6; }
+
+  
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 22px 0; }
+  .box-green { background: #f2faf4; border: 1px solid #d8f3dc; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-green h4 { color: var(--accent); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-green ol, .box-green ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-green li { margin-bottom: 6px; line-height: 1.65; }
+  .box-red { background: #fef5f5; border: 1px solid #fce4e4; border-radius: var(--radius-md); padding: 22px 24px; }
+  .box-red h4 { color: var(--red); margin-bottom: 10px; font-size: 15px; font-weight: 700; }
+  .box-red ol, .box-red ul { padding-left: 20px; font-size: 13.5px; color: var(--text-primary); }
+  .box-red li { margin-bottom: 6px; line-height: 1.65; }
+
+  
+  .footnote { font-size: 12px; color: var(--text-muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 20px; line-height: 1.8; }
+
+  
+  .chart { margin: 20px 0; padding: 16px 20px 12px; background: var(--bg-stripe); border: 1px solid var(--border-light); border-radius: var(--radius-md); }
+  .chart-title { font-size: 13.5px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .chart-title small { font-weight: 450; color: var(--text-muted); margin-left: 6px; font-size: 11.5px; }
+  .chart-legend { display: flex; gap: 18px; font-size: 11.5px; color: var(--text-muted); margin: 0 0 8px; justify-content: flex-end; }
+  .chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 12.5px; }
+  .bar-label { flex: 0 0 165px; text-align: right; color: var(--text-secondary); }
+  .bar-label strong { color: var(--text-primary); }
+  .bar-track { flex: 1; height: 18px; background: #e9f1eb; border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; }
+  .bar-value { flex: 0 0 96px; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+  .c-main { background: var(--accent); }
+  .c-sub  { background: #9ec3ad; }
+  .c-neg  { background: #cf6f6f; }
+  .c-warn { background: var(--amber); }
+  .bar-group { font-size: 11.5px; font-weight: 700; color: var(--text-muted); margin: 10px 0 2px; letter-spacing: 0.5px; }
+  .stacked-bar { display: flex; height: 26px; border-radius: 5px; overflow: hidden; font-size: 11.5px; color: #fff; font-weight: 650; }
+  .stacked-bar div { display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .stacked-bar + .stacked-bar { margin-top: 8px; }
+  
+
+  
+  .timeline { position: relative; margin: 18px 0 6px; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--border-light); }
+  .tl-item { position: relative; margin-top: 30px; }
+  .tl-item:first-child { margin-top: 0; }
+  .tl-item::before { content: ""; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--accent); }
+  .tl-item.tl-future::before { border-color: var(--amber); border-style: dashed; }
+  .tl-date { font-size: 12px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .tl-item.tl-future .tl-date { color: var(--amber); }
+  .tl-text { font-size: 12.5px; color: var(--text-secondary); margin-top: 1px; }
+  .tl-text strong { color: var(--text-primary); }
+
+  
+  .col-chart { display: flex; align-items: flex-end; gap: 30px; height: 250px; margin: 18px 0 4px; padding: 0 6px; }
+  .col-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .col { display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; }
+  .col-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 650; color: #fff; white-space: nowrap; }
+  .col-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-top: 8px; }
+  .col-label small { display: block; font-weight: 450; color: var(--text-muted); font-size: 11px; }
+
+  
+  h2 svg.h2-ico { width: 18px; height: 18px; vertical-align: -3.5px; margin-right: 8px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  
+  
+  @media (max-width: 1100px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { position: static; width: 100%; max-height: none; padding: 18px 16px; margin-bottom: 20px; }
+    .sidebar-group a { display: inline-block; margin: 2px 4px; }
+  }
+  @media (max-width: 768px) {
+    body { font-size: 14px; line-height: 1.65; }
+    .container { padding: 20px 14px 60px; }
+    .card { padding: 22px 16px; margin-bottom: 20px; }
+    .card h2 { font-size: 19px; }
+    .card h3 { font-size: 16px; }
+    .chart { padding: 12px 12px 8px; }
+    .bar-row { gap: 6px; font-size: 11px; }
+    .bar-label { flex: 0 0 84px; font-size: 10.5px; }
+    .bar-value { flex: 0 0 80px; font-size: 11px; }
+    .bar-track { height: 15px; }
+    .stacked-bar div { font-size: 10px; }
+    h2 svg.h2-ico { width: 15px; height: 15px; vertical-align: -3px; margin-right: 6px; }
+    table { font-size: 13px; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    thead th, tbody td { padding: 9px 10px; }
+    header { padding: 36px 16px 32px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 14px; }
+    .two-col { grid-template-columns: 1fr; }
+    thead th { white-space: normal; }
+    .main-content { min-width: 0; max-width: 100%; }
+    code { overflow-wrap: anywhere; }
+    .quote { padding: 12px 14px; font-size: 13.5px; }
+    .summary-item { padding: 14px 10px 12px; }
+    .summary-item .value { font-size: 19px; }
+    table::-webkit-scrollbar { height: 4px; }
+    table::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  }
+  @media (max-width: 640px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  
+  @media print {
+    @page { size: A4; margin: 12mm 11mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 12px; line-height: 1.6; }
+    .container { max-width: 100%; padding: 0; }
+    .sidebar { display: none; }
+    header { background: #1a3c2a !important; padding: 26px 20px 22px; margin-bottom: 16px; }
+    header h1 { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
+    header .meta { font-size: 11px; }
+    .card { box-shadow: none; border: 1px solid #cfcfcf; break-inside: auto; padding: 16px 18px; margin-bottom: 14px; }
+    .card h2 { font-size: 16.5px; break-after: avoid; }
+    .card h3 { font-size: 13.5px; break-after: avoid; }
+    table { font-size: 10.5px; margin: 12px 0; }
+    
+    table { display: table !important; width: 100% !important; overflow: visible !important; }
+    thead th { white-space: normal; padding: 6px 7px; }
+    thead { display: table-header-group; }
+    tbody td { padding: 6px 7px; }
+    tr, td, th { break-inside: avoid; }
+    .summary-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .summary-item { padding: 10px 6px 8px; }
+    .summary-item .value { font-size: 15px; }
+    .two-col { gap: 14px; }
+    .box-green li, .box-red li { font-size: 11.5px; }
+    .quote { font-size: 11px; padding: 10px 14px; }
+    .stale-warning { font-size: 11px; }
+    .src-badge { font-size: 8px; padding: 1px 5px; }
+    .tag { font-size: 9px; }
+    .footnote { font-size: 10.5px; }
+    a { color: inherit; text-decoration: none; }
+    .chart { break-inside: avoid; padding: 10px 12px 8px; margin: 12px 0; }
+    .chart-title { font-size: 12px; }
+    .bar-row { font-size: 11px; margin: 4px 0; }
+    .bar-label { flex: 0 0 150px; }
+    .bar-track { height: 14px; }
+    .bar-value { flex: 0 0 84px; }
+    h2 svg.h2-ico { width: 14px; height: 14px; vertical-align: -2.5px; margin-right: 6px; }
+  }
+
+
+.report-lead {font-size:1.16rem; line-height:1.8}
+.source-note {font-size:.85rem;color:var(--text-muted);margin-top:12px;overflow-wrap:anywhere}
+.source-note a {color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.report-table {max-width:100%;overflow-x:auto;margin:16px 0}
+.report-table table {min-width:580px;margin:0}
+.report-table tbody th {text-align:left;padding:10px;background:var(--bg-stripe);font-weight:600}
+.k-chart{margin:18px 0;background:#f7faf7;border:1px solid var(--border-light);padding:14px;border-radius:8px}
+.k-chart figcaption {font-weight:650}
+.k-chart figcaption span {display:inline-block;font-weight:400}
+.k-chart svg {display:block;width:100%;height:auto}
+.revenue-key{color:#347553}.profit-key{color:#a66f43}
+.callout{border-left:4px solid var(--accent);background:#edf5ef;padding:12px 16px;margin:16px 0}
+.mobile-toc {display:none}
+@media(max-width:880px){
+ .mobile-toc {display:block;margin:15px 0;background:var(--bg-card);padding:12px 16px;border:1px solid var(--border);border-radius:8px}
+ .mobile-toc summary{color:var(--accent);font-weight:650}
+ .mobile-toc ol{margin:12px 0 0 18px}
+ .report-table table {display:table;overflow:visible;}
+}
+</style><link rel="stylesheet" href="../../../assets/site.css?v=reading2">
+</head><body class="research full"><div class="archive-bar"><a class="archive-brand" href="../../../index.html"><span aria-hidden="true">∿</span> 投资研究档案</a><nav class="edition-switch"><a href="../../../sources/kxiay/index.html">披露资料</a><a href="mobile.html">手机精简版</a><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E9%93%A0%E4%BE%A0%EF%BC%88KXIAY%EF%BC%89%20%7C%202026-11-27&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E9%93%A0%E4%BE%A0%EF%BC%88KXIAY%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-27%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a></nav></div><header class="report-heading"><div class="report-meta">KXIAY <span>·</span> 2026-11-27 <span>·</span> PC 完整版</div><h1>铠侠</h1><p>KXIAY / 东证 285A · 2026 年 11 月 27 日 · 首次覆盖</p></header><div class="research-layout"><aside class="report-toc"><h2>目录</h2><ul><li><a href="#snapshot">一、铠侠的利润拐点在哪里</a></li><li><a href="#business">二、铠侠卖什么，AI 如何传导到订单</a></li><li><a href="#core-metric">三、核心指标是 NAND 每比特平均售价</a></li><li><a href="#financials">四、高利润怎样变成可留存现金</a></li><li><a href="#events">五、扩产、股权和交易事件</a></li><li><a href="#valuation">六、估值反推周期过后要赚多少</a></li><li><a href="#adr">七、KXIAY 报价、换算与交易差异</a></li><li><a href="#bull-bear">八、多空分歧要靠哪些指标裁决</a></li><li><a href="#sentiment">九、机构与个人投资者在争什么</a></li><li><a href="#conclusion">十、首次覆盖建立三项验证基线</a></li><li><a href="#notes">十一、数据口径与原始材料</a></li></ul></aside><main class="main-content report-body">
+<details class="mobile-toc"><summary>章节目录</summary><ol><li><a href="#snapshot">一、铠侠的利润拐点在哪里</a></li><li><a href="#business">二、铠侠卖什么，AI 如何传导到订单</a></li><li><a href="#core-metric">三、核心指标是 NAND 每比特平均售价</a></li><li><a href="#financials">四、高利润怎样变成可留存现金</a></li><li><a href="#events">五、扩产、股权和交易事件</a></li><li><a href="#valuation">六、估值反推周期过后要赚多少</a></li><li><a href="#adr">七、KXIAY 报价、换算与交易差异</a></li><li><a href="#bull-bear">八、多空分歧要靠哪些指标裁决</a></li><li><a href="#sentiment">九、机构与个人投资者在争什么</a></li><li><a href="#conclusion">十、首次覆盖建立三项验证基线</a></li><li><a href="#notes">十一、数据口径与原始材料</a></li></ol></details>
+<section class="card" id="snapshot"><h2>一、铠侠的利润拐点在哪里</h2>
+<p class="report-lead">铠侠是日本的 NAND 闪存和 SSD 厂商。AI 推理与数据中心扩容拉高了高性能、大容量 SSD 的需求，叠加全行业涨价，把铠侠最新单季营业利润率推到 <strong>80.4%</strong>。现在最需要回答的是：<strong>供给追上来之后，铠侠每年还能留下多少自由现金流？</strong></p>
+<div class="summary-grid">
+<div class="summary-item"><div class="value">¥7,762</div><div class="label">东证 285A · 11 月 26 日收盘</div></div>
+<div class="summary-item"><div class="value">$4.38</div><div class="label">KXIAY · 美东 11 月 25 日末笔</div></div>
+<div class="summary-item"><div class="value">¥2.480 万亿</div><div class="label">FY2026 Q2 收入 · 环比 +40.3%</div></div>
+<div class="summary-item"><div class="value">¥1.438 万亿</div><div class="label">FY2026 Q2 核心自由现金流 · 公司口径</div></div>
+</div>
+<p>11 月 27 日 10:43（日本时间），野村行情快照报 8,289 日元，较前收涨 6.78%。估值统一取 11 月 26 日正式收盘。与 10 月 29 日收盘 14,505 日元相比，11 月 26 日已回撤约 46.5%。财报改善和远期周期担忧可以同时成立，单日反弹不足以裁决。</p>
+<p class="source-note"><a href="https://www.jpx.co.jp/automation/markets/statistics-equities/daily/files/202611/stq_20261126.pdf">JPX 11 月 26 日日表</a> · <a href="https://quote.nomura.co.jp/nomura/cgi-bin/parser.pl?MKTN=T&amp;QCODE=285A&amp;TEMPLATE=nomura_tp_kabu_01">野村盘中报价</a> · <a href="https://www.otcmarkets.com/stock/KXIAY/quote">OTC Markets 成交</a> · <a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/216829/00.pdf">公司业绩说明</a></p></section>
+<section class="card" id="business"><h2>二、铠侠卖什么，AI 如何传导到订单</h2>
+<p>铠侠源于东芝存储业务，2024 年 12 月登上东京证券交易所 Prime 市场。公司只有一个可报告分部 <strong>Memory（存储器）</strong>，以下三行是财报按用途列示的收入。NAND 用于掉电后仍要保留的数据；企业 SSD 则把闪存颗粒、控制器、固件及整机验证组合成交付。AI 推理中的 KV 缓存有机会使用高性能 SSD，更大的数据集、日志和较低频数据也增加高容量 SSD 需求。GPU 上的 HBM 属于另一类存储器。</p>
+<div aria-label="销售用途，可横向滚动" class="report-table" role="region"><div class="table-scroll"><table><thead><tr><th scope="col">销售用途</th><th scope="col">FY26 Q1 万亿日元</th><th scope="col">FY26 Q2 万亿日元</th><th scope="col">Q2 占比</th><th scope="col">用途</th></tr></thead><tbody><tr><th scope="row">SSD &amp; Storage</th><td>1.1747</td><td>1.6160</td><td>65.2%</td><td>数据中心、企业和 PC 的 SSD 及存储产品</td></tr><tr><th scope="row">Smart Devices</th><td>0.5257</td><td>0.7889</td><td>31.8%</td><td>手机、平板、车载及工业嵌入式存储</td></tr><tr><th scope="row">Other</th><td>0.0667</td><td>0.0752</td><td>约 3%</td><td>存储卡、U 盘及与 Sandisk 合资相关的销售等</td></tr></tbody></table></div></div>
+<p><strong>护城河来自成本、规模和认证。</strong> 与 Sandisk 联合研发并运营日本制造体系，四日市合资框架延至 2034 年。BiCS FLASH 的层数、单位面积容量、良率和功耗共同影响每比特成本。企业 SSD 还需要客户对控制器、固件、耐久性和延迟进行认证。公司已披露 245TB LC9 QLC 系列进入量产、客户认证推进。11 月 26 日公布的 GP2 则仍在开发，送样窗口为 2027 年下半年，量产和营收仍待验证。</p>
+<p><strong>技术壁垒可以保份额，定价权却会随供需变化。</strong> 可替代供应来自 Samsung、SK hynix/Solidigm、Micron 等。Sandisk 既是制造伙伴，也是下游市场的独立竞争者。TrendForce 的 2026 年二季度 NAND 收入排名中，铠侠为第四、份额 13.6%，三季度摘要显示已超过 Micron。SSD &amp; Storage 的 65.2% 包含 PC 等用途，不能直接当成 AI 收入。</p>
+<p class="source-note"><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2902678/00.pdf">业绩公告·收入用途</a> · <a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/216831/00.pdf">官方业绩会问答</a> · <a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2878650/00.pdf">Sandisk 联合投资及合资协议</a> · <a href="https://europe.kioxia.com/content/dam/kioxia/en-europe/business/news/2026/asset/KIE_PR_20261126-1_EN.pdf">GP2 公告</a> · <a href="https://www.trendforce.com/presscenter/news/20260818-13186.html">二季度份额</a> · <a href="https://www.trendforce.com/research/download/RP261118ID">三季度排名摘要</a></p></section>
+<section class="card" id="core-metric"><h2>三、核心指标是 NAND 每比特平均售价</h2>
+<p><strong>看得最早的是混合每比特平均售价（ASP）环比。</strong> FY2026 Q2（2026 年 7–9 月）混合 ASP 环比上升约 25%，按可比产品口径上涨约 30% 出头，位元出货增长约 10% 出头。收入环比增 40.3%，涨价是重要驱动力，产品结构和汇率也会影响总收入。盯混合 ASP 时要和同类产品售价、位元出货配对，避免把结构变化误判为行业涨价。</p>
+<div class="callout"><strong>量增可以被降价抵消。</strong> 假设位元出货增 20%、混合 ASP 降 20%，同币种、其余条件相同，销售额的简单量价乘积是 1.20 × 0.80＝0.96，即降 4%。此时若设备投入或单位成本降得不够快，利润和现金流跌幅可能更大。</div>
+<p><strong>公司和产业调研对 2027 年的预期相反。</strong> 10 月 30 日，铠侠说自然年 2027 产能已基本分配，2028 年以 GB 计的预计出货量中，已有过半纳入多年协议。官方问答预计 2027 年仍供不应求。11 月 19 日，TrendForce 下调 2026 年四季度 NAND 合约价格增幅至 8%–13%，估计 2027 年一季度环比下跌 0%–5%，二季度各品类转入下行，理由包括中国云厂商下调采购、消费端疲软和全行业位元供给增加。11 月 25 日的更新延续了这条推演。两者分别描述铠侠自身产能和全行业价格，可以同时出现「铠侠产能已分配、行业价格转弱」。</p>
+<p>公开问答交代了协议覆盖量，未披露能用于估算收入底线的固定价格、保底采购金额、取消条件或违约赔偿。后续要看实际交付、每比特成交价和客户回款。</p>
+<p class="source-note"><a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/216829/00.pdf">官方财报会讲稿，页 9、18</a> · <a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/216831/00.pdf">官方财报会问答</a> · <a href="https://www.trendforce.com/presscenter/news/20261119-13314.html">TrendForce 11 月 19 日调研</a> · <a href="https://www.trendforce.com/presscenter/news/20261125-13321.html">11 月 25 日更新</a></p></section>
+<section class="card" id="financials"><h2>四、高利润怎样变成可留存现金</h2><figure class="k-chart"><figcaption>近六季业绩 · 万亿日元 <span><b class="revenue-key">■</b> 收入　<b class="profit-key">■</b> IFRS 营业利润</span></figcaption><svg role="img" viewbox="0 0 640 275"><title id="chart-title">铠侠近六季收入和 IFRS 营业利润，单位万亿日元</title><line stroke="#dce5df" x1="49" x2="626" y1="224" y2="224"></line><text fill="#45564a" font-size="12" text-anchor="end" x="43" y="228">0</text><line stroke="#dce5df" x1="49" x2="626" y1="189.0" y2="189.0"></line><text fill="#45564a" font-size="12" text-anchor="end" x="43" y="193.0">0.5</text><line stroke="#dce5df" x1="49" x2="626" y1="154" y2="154"></line><text fill="#45564a" font-size="12" text-anchor="end" x="43" y="158">1</text><line stroke="#dce5df" x1="49" x2="626" y1="119.0" y2="119.0"></line><text fill="#45564a" font-size="12" text-anchor="end" x="43" y="123.0">1.5</text><line stroke="#dce5df" x1="49" x2="626" y1="84" y2="84"></line><text fill="#45564a" font-size="12" text-anchor="end" x="43" y="88">2</text><line stroke="#dce5df" x1="49" x2="626" y1="49.0" y2="49.0"></line><text fill="#45564a" font-size="12" text-anchor="end" x="43" y="53.0">2.5</text><rect fill="#347553" height="24.01" rx="3" width="24" x="62" y="199.99"></rect><rect fill="#a66f43" height="3.15" rx="3" width="24" x="92" y="220.85"></rect><text fill="#293c31" font-size="13" text-anchor="middle" x="89" y="244">25Q1</text><rect fill="#347553" height="31.36" rx="3" width="24" x="157" y="192.64"></rect><rect fill="#a66f43" height="6.02" rx="3" width="24" x="187" y="217.98"></rect><text fill="#293c31" font-size="13" text-anchor="middle" x="184" y="244">25Q2</text><rect fill="#347553" height="38.08" rx="3" width="24" x="252" y="185.92"></rect><rect fill="#a66f43" height="10.01" rx="3" width="24" x="282" y="213.99"></rect><text fill="#293c31" font-size="13" text-anchor="middle" x="279" y="244">25Q3</text><rect fill="#347553" height="70.21" rx="3" width="24" x="347" y="153.79"></rect><rect fill="#a66f43" height="41.79" rx="3" width="24" x="377" y="182.21"></rect><text fill="#293c31" font-size="13" text-anchor="middle" x="374" y="244">25Q4</text><rect fill="#347553" height="123.69" rx="3" width="24" x="442" y="100.31"></rect><rect fill="#a66f43" height="88.90" rx="3" width="24" x="472" y="135.10"></rect><text fill="#293c31" font-size="13" text-anchor="middle" x="469" y="244">26Q1</text><rect fill="#347553" height="173.60" rx="3" width="24" x="537" y="50.40"></rect><rect fill="#a66f43" height="139.65" rx="3" width="24" x="567" y="84.35"></rect><text fill="#293c31" font-size="13" text-anchor="middle" x="564" y="244">26Q2</text></svg></figure><div aria-label="万亿日元，除比率，可横向滚动" class="report-table" role="region"><div class="table-scroll"><table><thead><tr><th scope="col">万亿日元，除比率</th><th scope="col">FY2025 全年</th><th scope="col">FY2026 Q1</th><th scope="col">FY2026 Q2</th><th scope="col">FY2026 Q3 指引</th></tr></thead><tbody><tr><th scope="row">收入</th><td>2.338</td><td>1.767</td><td>2.480</td><td>2.500</td></tr><tr><th scope="row">IFRS 营业利润</th><td>0.870</td><td>1.270</td><td>1.995</td><td>1.995</td></tr><tr><th scope="row">IFRS 营业利润率</th><td>37.2%</td><td>71.9%</td><td>80.4%</td><td>79.8%</td></tr><tr><th scope="row">IFRS 归母净利</th><td>0.5545</td><td>0.8422</td><td>1.3557</td><td>1.360</td></tr><tr><th scope="row">公司口径核心自由现金流¹</th><td>0.3955</td><td>0.8272</td><td>1.4380</td><td>未给</td></tr></tbody></table></div></div>
+<p>¹ 采用 10 月 30 日财报会历史序列。核心自由现金流为经营活动现金流减净资本开支，净资本开支已经抵减补助和设备出售款。Q2 IFRS 毛利约 2.053 万亿日元，毛利率 82.8%。公司披露的 80.2% 为 Non-GAAP 营业利润率，报告估值以 IFRS 归母净利和单列现金假设为主。</p>
+<p><strong>卖出货的速度快于收钱。</strong> 上半年（2026 年 4–9 月）合并经营现金流 2.380 万亿日元，较去年同期 0.175 万亿大幅上升；其中应收项目变动净占用约 1.014 万亿。现金流量表半年现金所得税约 0.111 万亿，期末应交所得税 0.975 万亿。管理层明确保留现金准备缴税。两项都应随下一期现金流核实，不能将 Q2 核心现金流 1.438 万亿简单乘四作为稳态。</p>
+<p><strong>下半年设备开支将更集中。</strong> 公司计划 FY2026 总资本开支约 4,700 亿日元，其中 2026 年 10 月至 2027 年 3 月约 3,300 亿日元，包含提前实施部分下一财年项目。9 月末 1.397 万亿日元现金，借款及债券 0.604 万亿、租赁负债 0.199 万亿。扣借款与租赁后的净现金约 5,946 亿日元。供应商融资另披露约 2,159 亿日元，基础估值未重分类，若视作额外净债务，企业价值相应提高。</p>
+<p class="source-note"><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2902678/00.pdf">合并财务公告，现金流与资产负债表</a> · <a href="https://www.kioxia-holdings.com/content/dam/kioxia-hd/en-jp/ir/library/securities/asset/Semi-Annual-Securities-Report-FY2026-EN.pdf">半期证券报告附注</a> · <a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/216829/00.pdf">官方讲稿，页 12、26</a> · <a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/216831/00.pdf">管理层回应现金税与资本开支</a> · <a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/204020/00.pdf">FY2025 财报会</a></p></section>
+<section class="card" id="events"><h2>五、扩产、股权和交易事件</h2>
+<div aria-label="日期，可横向滚动" class="report-table" role="region"><div class="table-scroll"><table><thead><tr><th scope="col">日期</th><th scope="col">已披露事项</th><th scope="col">下一步应验证</th></tr></thead><tbody><tr><th scope="row">2026-08-27</th><td>铠侠与 Sandisk 预计至 2032 年合计在日本投资约 5 万亿日元，以政府支持为条件。</td><td>日本经产省既有项目已公布认定资料。新投资计划需跟踪对应项目批准、补贴金额、双方出资和投产节奏。</td></tr><tr><th scope="row">2026-10-30</th><td>8 月回购约 8,000 亿日元后推出首次中期股息。登记日 9 月 30 日，每股 90 日元为拆股前口径，等价拆后 30 日元。</td><td>12 月 8 日计划派息，年末股息待定。中长期回报政策以优先满足投资并维持净现金后的剩余资金为基准。</td></tr><tr><th scope="row">2026-11-20</th><td>SK hynix 公告拟转换持有的特设公司 SPC2 可转债，并受让 Bain 关联方的 SPC2 股份。两步完成后间接持有约 14.1% 铠侠股权。</td><td>可转债所涉主体是 SPC2，预计 12 月 4 日取得，实际日期可能改变。跟踪完成公告与铠侠主要股东变动。</td></tr><tr><th scope="row">2026-11-25</th><td>控股公司预计 11 月 27 日从全资经营子公司收到 2.2149 万亿日元股息。</td><td>集团内部划转，合并报表影响为零。对外再分配需另有董事会决议。</td></tr><tr><th scope="row">2026-11 月末</th><td>JPX 将铠侠 TOPIX 计算所用自由流通因子从首阶段 0.325 提至 0.50。</td><td>指数权重调整会改变被动交易需求，独立于经营现金流。</td></tr></tbody></table></div></div>
+<p>截至 9 月末，Bain 相关实体和东芝的普通股持股分别约 14.53% 和 12.43%，之后持股可能变化。半期报告同时披露 Viasat 专利案仍在上诉，相关已计预计负债约 360 亿日元。盈利预测避免把股权调整、内部派息或指数成交重复计作经营增量。</p>
+<p class="source-note"><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2878650/00.pdf">联合投资原件</a> · <a href="https://www.meti.go.jp/policy/mono_info_service/joho/laws/semiconductor/semiconductor_plan/nintei_tokuteihandoutai_keikaku05.pdf">日本经产省已认定项目</a> · <a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2902682/00.pdf">对股东分红公告</a> · <a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2922022/00.pdf">子公司分红公告</a> · <a href="https://www.sec.gov/Archives/edgar/data/2120882/000119312526469266/d79768d6k.htm">SK hynix 6-K</a> · <a href="https://www.jpx.co.jp/news/6030/20260710-01.html">JPX 浮动股比原文</a> · <a href="https://www.kioxia-holdings.com/content/dam/kioxia-hd/en-jp/ir/library/securities/asset/Semi-Annual-Securities-Report-FY2026-EN.pdf">持股与诉讼附注</a></p></section>
+<section class="card" id="valuation"><h2>六、估值反推周期过后要赚多少</h2>
+<p>普通股收盘价 <strong>7,762 日元</strong> × 估计流通在外股数约 15.982 亿股＝股权价值约 <strong>12.41 万亿日元</strong>。股数用 JPX 10 月末发行股数 16.466 亿股扣除 9 月末库存股 0.484 亿股，作为跨期近似。扣除约 0.595 万亿净现金后，企业价值约 <strong>11.81 万亿日元</strong>。归母净资产约 2.929 万亿，静态 P/B 约 4.24 倍。</p>
+<p>近四季 IFRS 归母净利约 2.693 万亿日元，静态 P/E 约 <strong>4.6 倍</strong>。若仍用同一市值，利润回到 FY2025 全年的 0.5545 万亿，P/E 则约 <strong>22.4 倍</strong>。两个倍数的差别来自利润分母。上市满约两年，期间经历盈利急剧跃升和拆股，历史 PE 分位的参考意义有限。</p>
+<h3>6.1 先把高景气年和后续恢复年分开</h3>
+<p>用当前企业价值反推。五个完整年度企业自由现金流（FCFF）假设分别为 <strong>2.70、1.45、1.00、1.05、1.10 万亿日元</strong>。首年仍承接高价和既有订单，同时考虑所得税以及扩产；随后假设降价拉低现金产出，再部分恢复。它们是估值条件，供读者替换。10% 资本成本、1% 永续增长下，第六年须达到约 <strong>0.87 万亿日元</strong>的稳态 FCFF。</p>
+<div aria-label="稳态 FCFF 率假设，可横向滚动" class="report-table" role="region"><div class="table-scroll"><table><thead><tr><th scope="col">稳态 FCFF 率假设</th><th scope="col">需要的第六年收入 · 万亿日元</th><th scope="col">与过去四季 5.79 万亿对照</th></tr></thead><tbody><tr><th scope="row">12%</th><td>7.25</td><td>+25.2%</td></tr><tr><th scope="row">18%</th><td>4.84</td><td>-16.5%</td></tr><tr><th scope="row">25%</th><td>3.48</td><td>-39.9%</td></tr></tbody></table></div></div>
+<p>同样的显式期现金流和 1% 永续增长，资本成本取 9% 至 11%，第六年现金流门槛约 0.72 至 1.03 万亿日元。若前五年每年现金流都少 0.30 万亿，10% 资本成本下，稳态门槛从约 0.87 升至约 1.04 万亿。净现金以期末账面现金估计，现金税进入经营现金流，经营现金缓冲及投资股权未单列。把稳态 0.87 万亿与公司 FY2025 核心自由现金流 0.3955 万亿相比，可以看到门槛的量级，两个指标的融资和补助口径有差异。</p>
+<p class="source-note"><a href="https://www.jpx.co.jp/listing/co/t13vrt000000nsy7-att/HP-2026.10.pdf">JPX 10 月股数</a> · <a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2902678/00.pdf">公司 IFRS 财务表</a> · <a href="https://ssl4.eir-parts.net/doc/285A/ir_material_for_fiscal_ym4/216829/00.pdf">季度现金流序列</a> · 下载估值底稿 JSON</p></section>
+<section class="card" id="adr"><h2>七、KXIAY 报价、换算与交易差异</h2>
+<p><strong>1 股东京普通股对应 10 份 KXIAY ADR</strong>，因此每份 ADR 代表 0.1 股。KXIAY 在美国 OTC 报价，铠侠同时在准备潜在的美国交易所 ADS 上市。公司 9 月 15 日称时间、市场和方式尚未决定，也可能不推进。已存在的 KXIAY 与潜在的新上市属于两项安排。</p>
+<div aria-label="市场与时间，可横向滚动" class="report-table" role="region"><div class="table-scroll"><table><thead><tr><th scope="col">市场与时间</th><th scope="col">观察值</th><th scope="col">解释</th></tr></thead><tbody><tr><th scope="row">美东 11 月 25 日 15:59:59</th><td>KXIAY $4.38</td><td>OTC Markets 末笔。与东京同日收盘并非同一时刻。</td></tr><tr><th scope="row">东京 11 月 25 日收盘 / 17:00 FX</th><td>¥6,895 / 159.22</td><td>东京同日锚约 $4.33。$4.38 比换算值约高 1.1%，仅为非同步快照。</td></tr><tr><th scope="row">东京 11 月 26 日收盘 / 17:00 FX</th><td>¥7,762 / 159.17</td><td>理论换算约 $4.88 每 ADR。它对应东京新收盘，未用前一日的 OTC 价格计算当日折价。</td></tr></tbody></table></div></div>
+<p>换算公式为「东京股价 ÷ 每美元日元数 ÷ 10」。美元投资者同时暴露于日元汇率。下单时以券商可执行报价核对买卖价差、成交深度、存托费与分红处理。10 月 1 日普通股 1 拆 3，本文的普通股股价、股数和 EPS 采用拆后口径。中期分红登记日早于拆股，实际 ADR 金额按存托行通知。</p>
+<p class="source-note"><a href="https://depositaryreceipts.citi.com/adr/guides/pgm_dispabook.aspx?cusip=49726J108&amp;pageId=15&amp;subpageID=111">Citi 存托比例</a> · <a href="https://www.otcmarkets.com/stock/KXIAY/quote">OTC 成交明细</a> · <a href="https://www.boj.or.jp/statistics/market/forex/fxdaily/fxlist/fx261125.pdf">日本银行 11 月 25 日</a> · <a href="https://www.boj.or.jp/statistics/market/forex/fxdaily/fxlist/fx261126.pdf">11 月 26 日</a> · <a href="https://www.kioxia-holdings.com/en-jp/news/2026/20260915-1.html">潜在 ADS 上市公告</a> · <a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2902682/00.pdf">拆股前后分红口径</a></p></section>
+<section class="card" id="bull-bear"><h2>八、多空分歧要靠哪些指标裁决</h2><div aria-label="看多依据，可横向滚动" class="report-table" role="region"><div class="table-scroll"><table><thead><tr><th scope="col">看多依据</th><th scope="col">看空依据</th><th scope="col">用什么验证</th></tr></thead><tbody><tr><th scope="row">AI 企业盘增长，长期协议提高出货可见度。</th><td>行业扩产、良率上升和 QLC 渗透增加位元供给。即使公司产能分配完，合同价格仍可能受行业周期影响。</td><td>混合 ASP、同类 ASP、位元出货三项联看。</td></tr><tr><th scope="row">与 Sandisk 共享制造投入，企业盘认证和固件构成门槛。</th><td>市场仍有多家 NAND 厂，单位成本降幅跟不上 ASP 时，毛利回吐。</td><td>企业盘的客户认证转量产、单位成本与产品组合。</td></tr><tr><th scope="row">资产负债表较上期改善，财报已兑现高现金产生能力。</th><td>实际缴税、应收占用、新厂设备开支会改变股东能拿到的现金。</td><td>滚动十二个月核心自由现金流，另看扣除补贴后的口径。</td></tr></tbody></table></div></div>
+<p><strong>巴菲特</strong>会问客户认证和低成本能维持多少定价优势。<strong>马克斯</strong>会把当前营业利润率与供给恢复后的中周期利润分开。<strong>芒格</strong>会反过来算位元出货增长被降价抵消的幅度。<strong>费雪</strong>会追到客户认证、量产和回款，检验企业盘的真实竞争力。四个视角最终都指向同一个问题：价格回落时，铠侠能留下多少现金。</p>
+</section>
+<section class="card" id="sentiment"><h2>九、机构与个人投资者在争什么</h2>
+<p>日本行情聚合商 MINKABU 的 11 月 26 日快照列出 9 名强力买入、6 名买入、1 名卖出。聚合页未逐条提供原始研报及拆股调整时间，且显示的不同目标价口径不一致，本报告仅记录评级分布。</p>
+<p>11 月 26–27 日检索的 Yahoo! Finance 日本语讨论样本有两条可验证的议题。其一是 TOPIX 权重调整引来被动需求的预期，指数规则可以回查 JPX。其二是对 NAND 跌价、东芝继续出售以及日本扩产的分歧。帖子是情绪样本，资金规模、订单或新的回购计划需由成交与公告验证。</p>
+<p class="source-note"><a href="https://minkabu.jp/stock/285A/analyst_consensus">MINKABU 评级汇总</a> · <a href="https://finance.yahoo.co.jp/quote/285A.T/forum">日本 Yahoo! Finance 讨论</a> · <a href="https://www.jpx.co.jp/news/6030/20260710-01.html">JPX 规则</a></p></section>
+<section class="card" id="conclusion"><h2>十、首次覆盖建立三项验证基线</h2>
+<p><strong>公司已经证明 AI 存储需求和涨价能迅速转化为利润；下一阶段要证明的是，价格涨幅回落后，长期合同、成本和现金转化是否能撑住中周期回报。</strong> 目前对企业盘需求的证据较强，对多年度合同的实际售价与回款底线证据有限。</p>
+<div aria-label="经营问题，可横向滚动" class="report-table" role="region"><div class="table-scroll"><table><thead><tr><th scope="col">经营问题</th><th scope="col">当前支持与反证</th><th scope="col">下一次验证</th></tr></thead><tbody><tr><th scope="row">ASP 放缓是短期组合变化，还是周期转向？</th><td>FY2026 Q3 公司指引收入 2.50 万亿，环比 +0.8%，位元量预期大体持平。TrendForce 预计自然年 2027 Q1 价格转弱。</td><td>FY2026 Q3（截至 2026 年 12 月）财报，IR 常规窗口 2027 年 2 月；看销量、ASP 和 FYQ4 指引三项。</td></tr><tr><th scope="row">企业盘能否兑现长期合同？</th><td>2027 产能基本分配，2028 出货 GB 过半已有多年协议，但价格及取消条款不透明。</td><td>关注客户认证转量产和实际确认收入；若位元交付增加、ASP 仍转负，重新评估合同保护力度。</td></tr><tr><th scope="row">自由现金流能否覆盖资本开支和补税？</th><td>核心现金流高，但应收和应交所得税均上升，且下半财年计划增加资本开支。</td><td>下次财报比较应收周转、现金税、净资本开支和补助；以后用滚动年度对照约 0.87 万亿稳态条件。</td></tr></tbody></table></div></div></section>
+<section class="card" id="notes"><h2>十一、数据口径与原始材料</h2>
+<p>报告首次覆盖。研究日为北京时间 2026 年 11 月 27 日。东京估值锚为 11 月 26 日大引，另列 11 月 27 日能核实的延时盘中快照。ADR 最新已核成交为美东 11 月 25 日。发行人 FY2026 为 2026 年 4 月至 2027 年 3 月，本文所有 FY 季度遵循公司口径。财务来自 IFRS 公告及半期报告，管理层自定义口径标明。产业研究是当时预测，估值为研究假设。已归档官方讲稿与问答摘要，可查官方回放。报告未获得带逐笔、同一时点跨市汇率的 ADR 套利快照。</p>
+<ul>
+<li><a href="../../../sources/kxiay/Filings/285A_FY2026H1_%E8%AF%81%E5%88%B8%E6%8A%A5%E5%91%8A_2026-11-06.pdf">半期证券报告（本地 PDF）</a></li>
+<li><a href="../../../sources/kxiay/Filings/285A_FY2026H1_%E4%B8%9A%E7%BB%A9%E5%85%AC%E5%91%8A_2026-10-30.pdf">业绩公告及三表（本地 PDF）</a></li>
+<li><a href="../../../sources/kxiay/Filings/285A_FY2026Q2_%E8%B4%A2%E6%8A%A5%E4%BC%9A%E5%AE%98%E6%96%B9%E8%AE%B2%E7%A8%BF_2026-10-30.pdf">财报会官方讲稿（本地 PDF）</a> · <a href="../../../sources/kxiay/Filings/285A_FY2026Q2_%E8%B4%A2%E6%8A%A5%E4%BC%9A%E5%AE%98%E6%96%B9%E9%97%AE%E7%AD%94_2026-10-30.pdf">官方问答（本地 PDF）</a></li>
+<li><a href="https://c-hotline.net/Viewer/Default/6529e71aee7ff9f456209ec17f108e630995">业绩会官方录像</a> · <a href="https://www.kioxia-holdings.com/en-jp/ir/library/presentation.html">公司业绩资料库</a></li>
+<li><a href="../../../sources/kxiay/Filings/KXIAY_%E6%91%A9%E6%A0%B9%E5%A4%A7%E9%80%9AADR%E5%85%AC%E5%91%8A_2026-03-09.pdf">摩根大通存托公告（本地 PDF）</a> · <a href="../../../sources/kxiay/Filings/285A_JPX%E6%94%B6%E7%9B%98%E8%A1%8C%E6%83%85_2026-11-26.pdf">JPX 原始收盘表（本地 PDF）</a></li>
+</ul>
+<p><strong>不构成投资建议。基于公开信息生成，投资决策以个人独立尽调为准。</strong></p>
+</section>
+</main></div><footer class="research-footer"><a class="report-request" href="mailto:jiangnathen@gmail.com?subject=%E7%94%B3%E8%AF%B7%E6%9B%B4%E6%96%B0%E6%8A%A5%E5%91%8A%20%7C%20%E9%93%A0%E4%BE%A0%EF%BC%88KXIAY%EF%BC%89%20%7C%202026-11-27&amp;body=%E6%8A%A5%E5%91%8A%EF%BC%9A%E9%93%A0%E4%BE%A0%EF%BC%88KXIAY%EF%BC%89%0D%0A%E6%89%80%E8%AF%BB%E6%8A%A5%E5%91%8A%E6%97%A5%E6%9C%9F%EF%BC%9A2026-11-27%0D%0A%0D%0A%E5%B8%8C%E6%9C%9B%E6%9B%B4%E6%96%B0%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A" title="通过邮件申请更新">申请更新报告</a><p>点击可打开邮件应用，也可复制邮箱发送反馈：<span class="feedback-email">jiangnathen@gmail.com</span></p>基于公开资料的历史研究，仅供参考。投资决策请以独立尽调为准。</footer><a class="report-back-top" href="#"><span aria-hidden="true">↑</span> 回到顶部</a></body></html>
